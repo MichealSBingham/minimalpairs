@@ -89,6 +89,17 @@ describe('Firestore isolation and server-owned entitlement rules', { skip: !host
   it('accepts valid own ABX sessions with explicit schema version', async () => {
     await assertSucceeds(setDoc(doc(owner, 'users', 'buyer', 'sessions', 'session-abx'), { ...abxSession, id: 'session-abx' }));
   });
+  it('accepts identification schema2 and preserves its purpose', async () => {
+    const id = 'identification'; const ref = doc(owner, 'users', 'buyer', 'sessions', id);
+    await assertSucceeds(setDoc(ref, { ...abxSession, id, mode: 'word-identification', textHintsUsed: true, purpose: 'focused' }));
+    assert.equal((await getDoc(ref)).data().purpose, 'focused');
+    for (const db of [stranger, unverified, anonymous]) await assertFails(setDoc(doc(db, 'users', 'buyer', 'sessions', 'forged-identification'), { ...abxSession, id: 'forged-identification', mode: 'word-identification', textHintsUsed: true, purpose: 'focused' }));
+  });
+  for (const patch of [{schemaVersion: 1}, {textHintsUsed: false}, {purpose: 'unknown'}]) {
+    it(`rejects unsupported identification ${JSON.stringify(patch)}`, async () => {
+      await assertFails(setDoc(doc(owner, 'users', 'buyer', 'sessions', 'bad-identification'), { ...abxSession, id: 'bad-identification', mode: 'word-identification', textHintsUsed: true, ...patch }));
+    });
+  }
   it('accepts and preserves either boolean text-hint value on ABX sessions', async () => {
     for (const textHintsUsed of [false, true]) {
       const id = `hints-${textHintsUsed}`;
@@ -97,9 +108,9 @@ describe('Firestore isolation and server-owned entitlement rules', { skip: !host
       assert.equal((await getDoc(ref)).data().textHintsUsed, textHintsUsed);
     }
   });
-  it('keeps older sessions without a text-hint field writable', async () => {
+  it('rejects new writes in the legacy unspecified schema', async () => {
     const id = 'legacy-no-hints';
-    await assertSucceeds(setDoc(doc(owner, 'users', 'buyer', 'sessions', id), { ...validSession, id }));
+    await assertFails(setDoc(doc(owner, 'users', 'buyer', 'sessions', id), { ...validSession, id }));
   });
   it('preserves an optional declared audio collection without inferring older sources', async () => {
     const id = 'human-audio-session';
@@ -125,7 +136,7 @@ describe('Firestore isolation and server-owned entitlement rules', { skip: !host
   });
   it('denies session writes across users and for unverified accounts', async () => {
     for (const db of [stranger, unverified, anonymous]) {
-      await assertFails(setDoc(doc(db, 'users', 'buyer', 'sessions', 'forged'), { ...validSession, id: 'forged' }));
+      await assertFails(setDoc(doc(db, 'users', 'buyer', 'sessions', 'forged'), { ...abxSession, id: 'forged' }));
       await assertFails(updateDoc(doc(db, 'users', 'buyer', 'sessions', 'session-1'), { correct: 10 }));
       await assertFails(deleteDoc(doc(db, 'users', 'buyer', 'sessions', 'session-1')));
     }

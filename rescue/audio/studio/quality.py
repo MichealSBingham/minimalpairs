@@ -101,6 +101,8 @@ def serve(port):
                 fresh=json.loads((PRIVATE/'quality-report.json').read_text());clips.clear();clips.update({r['id']:r for r in fresh['clips']})
                 layer=json.loads((PRIVATE/'layer2-report.json').read_text()) if (PRIVATE/'layer2-report.json').exists() else {}
                 second={(r['id'],r['sha']):r for r in layer.get('clips',[])}
+                triage_path=PRIVATE/'triage-review.json'
+                triage={(r['id'],r['sha']):r for r in json.loads(triage_path.read_text()).get('clips',[])} if triage_path.exists() else {}
                 next_rows=json.loads((PRIVATE/'next-review.json').read_text()) if (PRIVATE/'next-review.json').exists() else []
                 next_ids={(r['id'],r['sha']) for r in next_rows}
                 sample_path=PRIVATE/'launch-sample.json'
@@ -112,6 +114,7 @@ def serve(port):
                 for r in db.execute('SELECT * FROM decisions ORDER BY sequence'):decisions[(r['clip_id'],r['sha'])]=dict(r)
                 db.close();items=[{**{k:v for k,v in c.items() if k not in ('path','expected_sha')},'review':decisions.get((c['id'],c['sha']),{}).get('decision','unreviewed')} for c in clips.values()]
                 for item in items:
+                    item['triage']=triage.get((item['id'],item['sha']))
                     item['launchSample']=(item['id'],item['sha']) in sample_ids
                     item['nextReview']=(item['id'],item['sha']) in next_ids
                     if customer_times.get((item['id'],item['sha']),0)>decisions.get((item['id'],item['sha']),{}).get('created',0):item['review']='unreviewed'

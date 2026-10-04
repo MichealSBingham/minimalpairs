@@ -1,12 +1,14 @@
 import type { PracticeSession, Progress } from '../components/ui';
 
-/** Accept only the completed ABX schema this app can safely synchronize. */
+/** Accept only the completed current session schema this app can safely synchronize. */
 export function normalizeSession(value: unknown): PracticeSession | null {
   if (!value || typeof value !== 'object') return null;
   const item = value as Record<string, unknown>;
   const identifier = (text: unknown) => typeof text === 'string' && /^[A-Za-z0-9_-]{1,160}$/.test(text);
   if (!identifier(item.id) || !identifier(item.languageId) || !identifier(item.contrastId)
-    || item.mode !== 'abx-cross-word' || item.schemaVersion !== 2
+    || !['abx-cross-word', 'word-identification'].includes(item.mode as string) || item.schemaVersion !== 2
+    || (item.mode === 'word-identification' && item.textHintsUsed !== true)
+    || (item.purpose !== undefined && !['focused', 'mixed', 'diagnostic'].includes(item.purpose as string))
     || typeof item.completedAt !== 'string' || !/^\d{4}-\d{2}-\d{2}T/.test(item.completedAt) || !Number.isFinite(Date.parse(item.completedAt))
     || !Number.isInteger(item.correct) || !Number.isInteger(item.total)
     || (item.total as number) < 1 || (item.total as number) > 100
@@ -22,7 +24,8 @@ export function normalizeSession(value: unknown): PracticeSession | null {
     mistakes.push({ pairId: mistake.pairId, word: mistake.word, chosenWord: mistake.chosenWord });
   }
   return {
-    id: item.id as string, mode: 'abx-cross-word', schemaVersion: 2,
+    id: item.id as string, mode: item.mode as PracticeSession['mode'], schemaVersion: 2,
+    ...(item.purpose ? { purpose: item.purpose as PracticeSession['purpose'] } : {}),
     completedAt: new Date(item.completedAt).toISOString(), languageId: item.languageId as string,
     contrastId: item.contrastId as string, correct: item.correct as number, total: item.total as number,
     mistakes, ...(typeof item.textHintsUsed === 'boolean' ? { textHintsUsed: item.textHintsUsed } : {}),

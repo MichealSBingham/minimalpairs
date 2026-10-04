@@ -1,3 +1,7 @@
+import CourseProgress from './CourseProgress';
+import {nextCourseStep} from '../lib/course-progress';
+import {buildIdentificationSession} from '../lib/identification';
+import {identificationText} from '../lib/identification-i18n';
 import { localizedSound, publicCopy } from '../lib/localized-public';
 import { tr, trainerPath, type TrainerLocale } from '../lib/trainer-i18n';
 import { runAnswerFeedback, answerCue } from '../lib/answer-feedback';
@@ -6,7 +10,7 @@ import type {PlayedRecording} from '../lib/audio';
 import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from 'react';
 import { completeMeasuredPractice, measuredAudioFailure, measuredFirstAnswer, startMeasuredPractice } from '../lib/measurement';
 import { recommendReview, type ReviewRecommendation } from '../lib/review-recommendation';
-import { journeyStats, selectJourneyContrasts, type JourneyMode } from '../lib/journey';
+import { selectJourneyContrasts, type JourneyMode } from '../lib/journey';
 import {assignAvailableVoices, referenceVoices, wordVoices, type AvailableClip} from '../lib/round-voices';
 import MembershipPanel from './MembershipPanel';
 import ReviewSuggestion from './ReviewSuggestion';
@@ -29,6 +33,8 @@ const nativeLanguageIds: Record<string, string> = { English: 'en', French: 'fr',
 
 export default function Trainer({ locale = 'en', languages = [], initialLanguage, initialContrast, audioManifestPath, audioCollectionId = 'qwen-starter-v1', headerContent, signedIn = false, exerciseAccess = 'paid', onRetryAccess }: { locale?: TrainerLocale; languages: Language[]; initialLanguage?: string; initialContrast?: string; audioManifestPath?: string; audioCollectionId?: string; headerContent?: ReactNode; signedIn?: boolean; exerciseAccess?: 'checking' | 'free' | 'paid' | 'lifetime' | 'error'; onRetryAccess?: () => void }) {
   const t = (text: string, values: Record<string,string|number> = {}) => tr(locale, text, values);
+  const it = (index: number) => identificationText(locale,index);
+  const [activityMode,setActivityMode] = useState<'abx-cross-word'|'word-identification'>('abx-cross-word');
   const path = (url: string) => trainerPath(locale, url);
   const [languageId, setLanguageId] = useState(initialLanguage || languages[0]?.id || '');
   const language = languages.find(item => item.id === languageId) || languages[0];
@@ -40,10 +46,10 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
   const [sessionRounds, setSessionRounds] = useState(12);
   const [checkRounds, setCheckRounds] = useState(4);
   const [journeyMode, setJourneyMode] = useState<JourneyMode>('focused');
+  const identifying = activityMode === 'word-identification' && journeyMode !== 'diagnostic';
   const [history, setHistory] = useState<PracticeSession[]>([]);
-  const selectedContrasts = selectJourneyContrasts(language?.contrasts || [], history, language?.id || '', fullAccess, journeyMode, contrast?.id || '');
+  const selectedContrasts = selectJourneyContrasts(language?.contrasts || [], history, language?.id || '', fullAccess, journeyMode, contrast?.id || '', activityMode);
   const roundsPerGroup = journeyMode === 'focused' ? sessionRounds : journeyMode === 'diagnostic' ? checkRounds : Math.max(2, Math.floor(sessionRounds / Math.max(1, selectedContrasts.length)));
-  const plannedTotal = roundsPerGroup * selectedContrasts.length;
   const locked = journeyMode === 'focused' && !fullAccess && (language?.contrasts.findIndex(item => item.id === contrast?.id) ?? 0) >= 3;
   const [nativeLanguage, setNativeLanguage] = useState('');
   const [audioRevision, setAudioRevision] = useState(0);
@@ -82,6 +88,7 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const saved = readProgress(); setHistory(saved.sessions);
+    setActivityMode(params.get('mode') === 'identify' ? 'word-identification' : 'abx-cross-word');
     const selected = languages.find(item => item.id === (params.get('language') || initialLanguage || saved.preferredLanguage)) || language;
     if (selected) {
       setLanguageId(selected.id);
@@ -107,7 +114,7 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
     return () => { cancelled = true; };
   }, [audioKey]);
   useEffect(() => {
-    const back = () => { const params = new URLSearchParams(location.search); const chosen = languages.find(l => l.id === params.get('language')) || languages[0]; if(chosen){reset();setJourneyMode('focused');setLanguageId(chosen.id);setContrastId(chosen.contrasts.find(c => c.id === params.get('contrast'))?.id || chosen.contrasts[0].id);} };
+    const back = () => { const params = new URLSearchParams(location.search); const chosen = languages.find(l => l.id === params.get('language')) || languages[0]; if(chosen){reset();setActivityMode(params.get('mode')==='identify'?'word-identification':'abx-cross-word');setJourneyMode('focused');setLanguageId(chosen.id);setContrastId(chosen.contrasts.find(c => c.id === params.get('contrast'))?.id || chosen.contrasts[0].id);} };
     window.addEventListener('popstate',back); return () => window.removeEventListener('popstate',back);
   }, [languages]);
   function cancelPlayback() { playbackGeneration.current += 1; stopAudio(); busy.current = false; setPlaying(null); setSequencePlaying(false); }
@@ -137,7 +144,7 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
     if (!item || busy.current) return;
     busy.current = true; const token = ++playbackGeneration.current; setAudioError(''); setSequencePlaying(true);
     try {
-      for (const sample of ['a', 'b', 'x'] as Sample[]) {
+      for (const sample of (identifying ? ['x'] : ['a', 'b', 'x']) as Sample[]) {
         if (token !== playbackGeneration.current) break;
         await playSample(item, sample, token);
         if (sample !== 'x') await new Promise(resolve => setTimeout(resolve, 350));
@@ -149,23 +156,24 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
     if (locked || exerciseAccess === 'checking' || !contrast || busy.current || !audioPrepared || !voices.length) return;
     let blocks: JourneyQuestion[][];
     try { blocks = selectedContrasts.map(c => {
-      if(audioManifestPath) return assignSessionVoices(buildSession(c.pairs,roundsPerGroup),voices.map(v=>v.id)).map(q=>({...q,contrastId:c.id}));
+      if(audioManifestPath) return assignSessionVoices((identifying ? buildIdentificationSession(c.pairs,roundsPerGroup) : buildSession(c.pairs,roundsPerGroup)),voices.map(v=>v.id)).map(q=>({...q,contrastId:c.id}));
       const pairs=c.pairs.filter(p=>p.words.every(w=>wordVoices(availableClips,language.id,w).length>=2));
-      return assignAvailableVoices(buildSession(pairs,roundsPerGroup,Math.random,p=>referenceVoices(availableClips,language.id,p).length>0),availableClips,language.id).map(q=>({...q,contrastId:c.id}));
+      return assignAvailableVoices(identifying ? buildIdentificationSession(pairs.filter(p=>referenceVoices(availableClips,language.id,p).length>0),roundsPerGroup) : buildSession(pairs,roundsPerGroup,Math.random,p=>referenceVoices(availableClips,language.id,p).length>0),availableClips,language.id).map(q=>({...q,contrastId:c.id}));
     }); } catch { setAudioError(t("This session needs updated recordings. Refresh to retry or choose another lesson.")); return; }
     if (blocks.some(block => !block.length)) { setAudioError(t("A sound group is not ready for this session yet. Choose a focused exercise.")); return; }
     const queue = Array.from({length: roundsPerGroup}, (_,i) => blocks.flatMap(block => block[i] ? [block[i]] : [])).flat();
     if (!queue.length) { setAudioError(t("This exercise needs more examples before practice can start.")); return; }
     completingId.current = null; setCloudSave('disabled'); setReviewSuggestion(null);
-    hintsUsed.current = journeyMode === 'diagnostic' ? false : textHints;
+    hintsUsed.current = journeyMode === 'diagnostic' ? false : identifying || textHints;
     sessionAudioCollection.current = actualSessionAudioCollection(!audioManifestPath ? `chatterbox-${language.id === 'en' ? 'us' : language.id}-four-voices-v1` : audioCollectionId, queue.flatMap(item => [item.referenceVoiceId, item.testVoiceId]));
     attemptId.current = `${journeyMode}-${globalThis.crypto?.randomUUID?.() || Date.now()}`;
     startMeasuredPractice(attemptId.current, { language_id: language.id, contrast_id: contrast.id, audio_collection: sessionAudioCollection.current, text_hints_used: hintsUsed.current, total: queue.length });
     setQuestions(queue); setIndex(0); setAnswer(null); setRoundRevealed(false); setAttempts([]); setHeard(unheard()); setCompletedSession(null); setStorageError(false); setPhase('practice'); void listenSequence(queue[0], 1);
   }
-  function continueLesson(id: string) {
+  function continueLesson(id: string, mode: 'abx-cross-word'|'word-identification' = activityMode) {
+    setActivityMode(mode);
     reset(); setJourneyMode('focused'); setContrastId(id); setPendingLesson(id);
-    const url = new URL(window.location.href); url.searchParams.set('language', language.id); url.searchParams.set('contrast', id); window.history.pushState(null, '', url);
+    const url = new URL(window.location.href); url.searchParams.set('language', language.id); url.searchParams.set('contrast', id); url.searchParams.set('mode',mode==='word-identification'?'identify':'match'); window.history.pushState(null, '', url);
   }
   useEffect(() => {
     if (!pendingLesson || contrast?.id !== pendingLesson || journeyMode !== 'focused' || phase !== 'ready' || !audioPrepared || exerciseAccess === 'checking') return;
@@ -182,20 +190,20 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
     requestAnimationFrame(() => document.querySelector('.trainer-card')?.scrollIntoView({behavior:'smooth', block:'start'}));
   }, [pendingDiagnostic, journeyMode, phase, audioPrepared, exerciseAccess, voices]);
   function choose(reference: WordIndex) {
-    if (!question || answer !== null || !heard.a || !heard.b || !heard.x || busy.current) return;
+    if (!question || answer !== null || (!identifying && (!heard.a || !heard.b)) || !heard.x || busy.current) return;
     const category = question.order[reference]; const correct = category === question.target;
     if (index === 0) measuredFirstAnswer(attemptId.current, hintsUsed.current);
     busy.current = true;
     if (journeyMode !== 'diagnostic') answerCue(correct);
     setAnswer(reference);
     setAttempts(previous => [...previous, { contrastId: question.contrastId, pairId: question.pair.id, word: sampleWord(question, 'x').text, chosenWord: question.pair.words[category].text, correct }]);
-    if (!correct && journeyMode === 'focused') setQuestions(previous => {const revised=revisitMistake(previous,index);return (audioManifestPath ? revised : revised.map((q,i) => q.pair === previous[i].pair && q.testPair === previous[i].testPair ? previous[i] : assignAvailableVoices([q],availableClips,language.id)[0])).map(q=>({...q,contrastId:contrast.id}));});
+    if (!correct && journeyMode === 'focused' && !identifying) setQuestions(previous => {const revised=revisitMistake(previous,index);return (audioManifestPath ? revised : revised.map((q,i) => q.pair === previous[i].pair && q.testPair === previous[i].testPair ? previous[i] : assignAvailableVoices([q],availableClips,language.id)[0])).map(q=>({...q,contrastId:contrast.id}));});
   }
   function next() {
     if (answer === null || busy.current) return;
     if (index + 1 < questions.length) { const item = questions[index + 1]; setIndex(value => value + 1); setAnswer(null); setRoundRevealed(false); setHeard(unheard()); setAudioError(''); void listenSequence(item, index + 2); }
     else {
-      const session: PracticeSession = { id: attemptId.current, mode: 'abx-cross-word', schemaVersion: 2, audioCollectionId: sessionAudioCollection.current, textHintsUsed: hintsUsed.current, completedAt: new Date().toISOString(), languageId: language.id, contrastId: contrast.id, correct: attempts.filter(item => item.correct).length, total: attempts.length, mistakes: attempts.filter(item => !item.correct).map(({ correct: _, ...item }) => item) };
+      const session: PracticeSession = { id: attemptId.current, mode: identifying ? 'word-identification' : 'abx-cross-word', purpose: journeyMode, schemaVersion: 2, audioCollectionId: sessionAudioCollection.current, textHintsUsed: hintsUsed.current, completedAt: new Date().toISOString(), languageId: language.id, contrastId: contrast.id, correct: attempts.filter(item => item.correct).length, total: attempts.length, mistakes: attempts.filter(item => !item.correct).map(({ correct: _, ...item }) => item) };
       const records = language.contrasts.filter(c => attempts.some(a => a.contrastId === c.id)).map(c => { const subset = attempts.filter(a => a.contrastId === c.id); return {...session, id: `${session.id}-${c.id}`, contrastId: c.id, total: subset.length, correct: subset.filter(a => a.correct).length, mistakes: subset.filter(a => !a.correct).map(({correct, contrastId, ...a}) => a)}; }).filter(s => s.total > 0);
       const saved = readProgress(); const updated = [...saved.sessions, ...records].slice(-1000); setHistory(previous => [...new Map([...previous, ...updated].map(s => [s.id,s])).values()]); setStorageError(!writeProgress({ ...saved, preferredLanguage: language.id, nativeLanguage, sessions: updated })); setCompletedSession(session); setPhase('complete');
       completeMeasuredPractice(attemptId.current, { correct: session.correct, total: session.total, text_hints_used: session.textHintsUsed, first_device_completion: !saved.sessions.some(item => item.mode === 'abx-cross-word') });
@@ -232,7 +240,7 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
       if (phase !== 'practice' || ['INPUT', 'TEXTAREA', 'SELECT'].includes(element.tagName) || element.isContentEditable || event.altKey || event.ctrlKey || event.metaKey) return;
       if (event.repeat) return;
       if (['ArrowLeft', 'ArrowRight', '1', '2'].includes(event.key)) { event.preventDefault(); choose(event.key === 'ArrowLeft' || event.key === '1' ? 0 : 1); }
-      else if (['a', 'b', 'x'].includes(event.key.toLowerCase())) { event.preventDefault(); void listen(event.key.toLowerCase() as Sample); }
+      else if ((identifying ? ['x'] : ['a', 'b', 'x']).includes(event.key.toLowerCase())) { event.preventDefault(); void listen(event.key.toLowerCase() as Sample); }
       else if (event.code === 'Space' && (!['BUTTON', 'A'].includes(element.tagName) || !!element.closest('.active-session'))) { event.preventDefault(); void listenSequence(); }
       else if (event.key === 'Enter' && answer !== null && !['BUTTON', 'A'].includes(element.tagName)) { event.preventDefault(); next(); }
     }
@@ -244,15 +252,14 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
   const title = journeyMode === 'diagnostic' ? t("Find your starting point") : journeyMode === 'mixed' ? t("Mixed review") : textHints ? contrastLabel : `${t("Exercise")} ${String(contrastNumber).padStart(2, '0')}`;
   const targetReference = question?.order.indexOf(question.target);
   const correct = answer === targetReference;
-  const allHeard = heard.a && heard.b && heard.x;
+  const allHeard = heard.x && (identifying || (heard.a && heard.b));
   const progress = phase === 'ready' ? 0 : phase === 'complete' ? 100 : (index + (answer !== null ? 1 : 0)) / questions.length * 100;
   const languageNote = contrast.l1Notes?.find(item => item.nativeLanguage.toLowerCase() === nativeLanguage.toLowerCase() || item.nativeLanguage === nativeLanguageIds[nativeLanguage]);
   const isPlaying = playing !== null || sequencePlaying;
   const roundContrast = language.contrasts.find(c => c.id === question?.contrastId) || contrast;
-  const stats = journeyStats(language.contrasts, history, language.id);
-  const nextLesson = stats.filter((s,i) => !s.practiced && (fullAccess || i < 3)).sort((a,b) => (a.rate ?? 1) - (b.rate ?? 1))[0]?.contrast;
+  const nextStep = nextCourseStep(language.contrasts, history, language.id, fullAccess);
   const targetFocus = practiceFocus(roundContrast, phase === 'practice' ? question?.pair : undefined);
-  const showRoundWords = journeyMode !== 'diagnostic' && (textHints || (answer !== null && roundRevealed));
+  const showRoundWords = !identifying && journeyMode !== 'diagnostic' && (textHints || (answer !== null && roundRevealed));
   const correctCount = attempts.filter(item => item.correct).length;
   const sessionAccuracy = attempts.length ? Math.round(correctCount / attempts.length * 100) : null;
   return <><Header active="practice" locale={locale} />{headerContent}
@@ -269,13 +276,13 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
       </aside>}
       <section className="practice-main">
         <div className="practice-breadcrumb"><a href={path("/practice")}>{t("Practice")}</a><span>/</span><span>{t(language.name)}</span><span className="dialect-pill">{t(language.dialect || language.nativeName)}</span></div>
-        <div className="practice-heading"><div><span className="eyebrow">{phase === 'complete' ? t("YOUR SESSION") : t("LISTEN A LITTLE CLOSER")}</span><h1>{phase === 'complete' ? t("A good listen.") : t("Train your ear.")}</h1></div><span className="session-length">{textHints && journeyMode !== 'diagnostic' ? t("Text hints on") : t("Sound first. Words later.")}</span></div>
-        {phase === 'ready' && !audioManifestPath && <section className="journey-panel" aria-label={t("Your learning path")}><div className="journey-top"><div><span className="eyebrow">{t("YOUR PATH")} · {t(language.name)}</span><h2>{t("{done} of {total} lessons practiced", {done: stats.filter(s => s.practiced).length, total: stats.length})}</h2></div><button className="text-button" disabled={pendingDiagnostic || exerciseAccess === 'checking'} onClick={() => {reset(); setJourneyMode('diagnostic'); setPendingDiagnostic(true);}}>{pendingDiagnostic ? t("Loading…") : t("Check my listening")}</button></div><div className="journey-track" aria-label={t("Section progress")}>{Array.from({length: Math.ceil(stats.length / 3)}, (_,stage) => {const items = stats.slice(stage*3,stage*3+3); const done = items.every(s => s.practiced); const current = items.some(s => s.contrast.id === nextLesson?.id); return <span className={`journey-node ${done ? 'is-done' : current ? 'is-current' : ''}`} key={stage} aria-label={t("Section {number}: {done} of {total} lessons practiced", {number: stage+1, done: items.filter(s => s.practiced).length, total: items.length})}><span>{done ? <Icon name="check" size={15} /> : stage+1}</span></span>;})}</div><div className="journey-actions">{nextLesson && <button className="button button-dark" disabled={Boolean(pendingLesson) || exerciseAccess === 'checking'} onClick={() => continueLesson(nextLesson.id)}>{pendingLesson ? t("Loading…") : t("Continue my path")}<Icon name="arrow" /></button>}<button className="text-button" onClick={() => {reset(); setJourneyMode('mixed');}}>{t("Mixed review")}</button></div></section>}
+        <div className="practice-heading"><div><span className="eyebrow">{phase === 'complete' ? t("YOUR SESSION") : t("LISTEN A LITTLE CLOSER")}</span><h1>{phase === 'complete' ? t("A good listen.") : t("Train your ear.")}</h1></div><span className="session-length">{identifying ? it(1) : textHints && journeyMode !== 'diagnostic' ? t("Text hints on") : t("Sound first. Words later.")}</span></div>
+        {phase === 'ready' && !audioManifestPath && <><CourseProgress locale={locale} language={language} sessions={history} fullAccess={fullAccess} disabled={Boolean(pendingLesson)||exerciseAccess==='checking'} onStart={continueLesson}/><div className="journey-actions"><button className="text-button" disabled={pendingDiagnostic||exerciseAccess==='checking'} onClick={()=>{reset();setJourneyMode('diagnostic');setPendingDiagnostic(true);}}>{it(11)}</button><button className="text-button" onClick={()=>{reset();setJourneyMode('mixed');}}>{it(12)}</button></div></>}
         {phase === 'ready' && !locked && <details className="session-settings"><summary>{t("Session settings")}</summary><label>{journeyMode === 'diagnostic' ? t("Rounds per sound group") : t("Session length")}<select value={journeyMode === 'diagnostic' ? checkRounds : sessionRounds} onChange={event => {const value = Number(event.target.value); if(journeyMode === 'diagnostic') setCheckRounds(value); else setSessionRounds(value); try {localStorage.setItem('minimalpairs.session-settings',JSON.stringify({rounds:journeyMode === 'diagnostic' ? sessionRounds : value,checkRounds:journeyMode === 'diagnostic' ? value : checkRounds}));}catch{}}}>{(journeyMode === 'diagnostic' ? [4,8] : [6,12,24]).map(n => <option key={n} value={n}>{n} {t("rounds")}</option>)}</select></label></details>}
         <div className="training-area">
           <div className="trainer-stage">
             <div className="trainer-card">
-              <div className="trainer-card-top"><div><span className="eyebrow">{t(language.name)}</span><h2>{title}</h2></div><div className="trainer-round-tools"><span className="round-counter" hidden={locked || phase === 'ready'}>{phase === 'ready' ? '' : phase === 'complete' ? t("Session complete") : `${index + 1} / ${questions.length}`}</span>{phase === 'practice' && <button className="end-session" onClick={reset}><Icon name="close" size={14} /> {t("End session")}</button>}</div></div>
+              <div className="trainer-card-top"><div><span className="eyebrow">{t(language.name)}</span><h2>{title}</h2>{journeyMode!=='diagnostic' && <span className="quiet-label">{it(identifying?1:0)}</span>}</div><div className="trainer-round-tools"><span className="round-counter" hidden={locked || phase === 'ready'}>{phase === 'ready' ? '' : phase === 'complete' ? t("Session complete") : `${index + 1} / ${questions.length}`}</span>{phase === 'practice' && <button className="end-session" onClick={reset}><Icon name="close" size={14} /> {t("End session")}</button>}</div></div>
               <div className="session-progress" role="progressbar" aria-label={t("Session progress")} aria-valuenow={Math.round(progress)} aria-valuemin={0} aria-valuemax={100}><span style={{ width: `${phase === 'ready' ? 0 : progress}%` }} /></div>
               {exerciseAccess === 'checking' ? <div className="session-ready"><p role="status">{t("Loading…")}</p></div> : locked ? <div className="session-ready">
                 <Icon name="lock" size={28} />
@@ -286,36 +293,39 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
                 <a className="text-button" href="#lesson-plans">{t("View plans")}</a>
                 <p className="quiet-label">{t("The first three exercises in each language are free.")}</p>
               </div> : phase === 'ready' ? <div className="session-ready">
+                {journeyMode !== 'diagnostic' && <div className="activity-picker" role="group" aria-label={it(9)}>{(['abx-cross-word','word-identification'] as const).map((mode,i)=><button className={activityMode===mode?'is-selected':''} aria-pressed={activityMode===mode} key={mode} onClick={()=>{setActivityMode(mode);const url=new URL(location.href);url.searchParams.set('mode',mode==='word-identification'?'identify':'match');window.history.replaceState(null,'',url);}}>{it(i)}</button>)}</div>}
+                {identifying ? <><Icon name="headphones" size={42}/><h3>{it(2)}</h3><p>{it(3)}</p></> : <>
                 <div className="abx-ready-diagram" aria-hidden="true"><span>A</span><span>B</span><span className="is-x">X</span></div>
                 <h3>{t("Three listens.")}<br />{t("One small difference.")}</h3>
                 <ol className="ready-listening-steps"><li><strong>{t("Listen to A and B.")}</strong><span>{t("Hear two different sounds.")}</span></li><li><strong>{t("Listen to X.")}</strong><span>{t("A new word, with one of those sounds.")}</span></li><li><strong>{t("Choose A or B.")}</strong><span>{t("Which one shares X’s sound? Replay as often as you like.")}</span></li></ol>
+                </>}
                 {targetFocus && <p className="abx-focus-note">{locale !== "en" && t(targetFocus) === targetFocus ? t("Listen for the target sound in each word.") : t(targetFocus)}</p>}
-                <button className="button button-dark start-button" onClick={startSession} disabled={contrast.pairs.length < 2 || !audioPrepared || !voices.length}>{t("Start with A, B & X")}<Icon name="arrow" /></button>
+                <button className="button button-dark start-button" onClick={startSession} disabled={contrast.pairs.length < 2 || !audioPrepared || !voices.length}>{identifying ? it(6) : t("Start with A, B & X")}<Icon name="arrow" /></button>
                 
                 {audioError && <p className="audio-error" role="alert">{audioError}</p>}
               </div> : phase === 'practice' && question ? <div className="active-session abx-active">
-                <div className="abx-players">{(['a', 'b', 'x'] as Sample[]).map(sample => <div className={`abx-sample is-${sample}`} key={sample}>
+                <div className="abx-players">{((identifying ? ['x'] : ['a', 'b', 'x']) as Sample[]).map(sample => <div className={`abx-sample is-${sample}`} key={sample}>
                   <button className={`abx-sound-button ${playing === sample ? 'is-playing' : ''} ${heard[sample] ? 'is-heard' : ''}`} onClick={() => void listen(sample)} disabled={isPlaying} aria-label={`${t("Play")} ${sample.toUpperCase()}`}>
-                    <span className="abx-letter">{sample.toUpperCase()}</span><span className="sample-play-copy"><span className="abx-play-label"><Icon name={playing === sample ? 'volume' : heard[sample] ? 'replay' : 'play'} size={15} />{playing === sample ? t("Listening…") : heard[sample] ? t("Replay") : t("Tap to play")}</span><span className="abx-sample-label">{sample === 'x' ? t("The new word") : t("Listen and compare")}</span></span>
+                    <span className="abx-letter">{identifying ? <Icon name="volume" size={30}/> : sample.toUpperCase()}</span><span className="sample-play-copy"><span className="abx-play-label"><Icon name={playing === sample ? 'volume' : heard[sample] ? 'replay' : 'play'} size={15} />{playing === sample ? t("Listening…") : heard[sample] ? t("Replay") : t("Tap to play")}</span><span className="abx-sample-label">{identifying ? it(1) : sample === 'x' ? t("The new word") : t("Listen and compare")}</span></span>
                     {heard[sample] && <span className="abx-heard-mark"><Icon name="check" size={12} /></span>}
                   </button>
                   <ReportRecording locale={locale} clip={playedClips[sample]} label={t("Report")+" "+sample.toUpperCase()} />{showRoundWords && <div className="abx-word-hint"><strong>{sampleWord(question, sample).text}</strong><span>{sampleWord(question, sample).ipa}</span>{locale === 'en' && <small>{sampleWord(question, sample).meaning}</small>}</div>}
                 </div>)}</div>
-                <div className="listening-prompt"><h3>{t("Does X share A’s sound or B’s?")}</h3>{targetFocus && <p className="abx-focus-note">{locale !== "en" && t(targetFocus) === targetFocus ? t("Listen for the target sound in each word.") : t(targetFocus)}</p>}</div>
+                <div className="listening-prompt"><h3>{identifying ? it(4) : t("Does X share A’s sound or B’s?")}</h3>{targetFocus && <p className="abx-focus-note">{locale !== "en" && t(targetFocus) === targetFocus ? t("Listen for the target sound in each word.") : t(targetFocus)}</p>}</div>
                 <div className="answer-options abx-answer-options">{([0, 1] as WordIndex[]).map(reference => <button key={reference} className={`answer-card ${journeyMode !== 'diagnostic' && answer !== null && reference === targetReference ? 'is-correct' : ''} ${journeyMode !== 'diagnostic' && answer === reference && !correct ? 'is-incorrect' : ''}`} onClick={() => choose(reference)} disabled={answer !== null || !allHeard || isPlaying}>
-                  <span className="answer-key" aria-hidden="true">{reference === 0 ? '←' : '→'}</span><strong>{t('X shares {reference}’s sound', {reference: reference === 0 ? 'A' : 'B'})}</strong>{journeyMode !== 'diagnostic' && answer !== null && reference === targetReference && <span className="answer-marker"><Icon name="check" size={19} /></span>}{journeyMode !== 'diagnostic' && answer === reference && !correct && <span className="answer-marker"><Icon name="close" size={17} /></span>}
+                  <span className="answer-key" aria-hidden="true">{reference === 0 ? '←' : '→'}</span><strong>{identifying ? <span lang={language.locale}>{question.pair.words[question.order[reference]].text}{question.pair.words[0].text===question.pair.words[1].text && <small> {question.pair.words[question.order[reference]].ipa}</small>}</span> : t('X shares {reference}’s sound', {reference: reference === 0 ? 'A' : 'B'})}</strong>{journeyMode !== 'diagnostic' && answer !== null && reference === targetReference && <span className="answer-marker"><Icon name="check" size={19} /></span>}{journeyMode !== 'diagnostic' && answer === reference && !correct && <span className="answer-marker"><Icon name="close" size={17} /></span>}
                 </button>)}</div>
-                <button className="abx-sequence-button" onClick={() => void listenSequence()} disabled={isPlaying}><Icon name={sequencePlaying ? 'volume' : 'replay'} size={15} />{sequencePlaying ? answer !== null ? t("Continuing…") : t("Playing A → B → X") : t("Replay A → B → X · Space")}</button>
+                <button className="abx-sequence-button" onClick={() => void listenSequence()} disabled={isPlaying}><Icon name={sequencePlaying ? 'volume' : 'replay'} size={15} />{sequencePlaying ? answer !== null ? t("Continuing…") : identifying ? t("Listening…") : t("Playing A → B → X") : identifying ? it(5) : t("Replay A → B → X · Space")}</button>
                 {audioError && <p className="audio-error trainer-audio-error" role="alert">{audioError} <button className="text-button" onClick={reset}>{t("Reload recordings")}</button></p>}
-                <div className="feedback-space" aria-live="polite">{answer !== null ? journeyMode === 'diagnostic' ? <p>{t("Answer recorded.")}</p> : <div className={`answer-feedback ${correct ? 'is-correct' : 'needs-listen'}`}><span className="feedback-symbol"><Icon name={correct ? 'check' : 'headphones'} size={21} /></span><div><strong>{correct ? t("You heard the shared sound.") : t('X shares {reference}’s sound', {reference: targetReference === 0 ? 'A' : 'B'})}</strong><p>{t("Listen to the matching sounds.")}</p></div></div> : <p className="answer-hint">{!allHeard ? t("Listen to A, B and X to unlock your choices.") : ''}</p>}</div>
-                {answer !== null && <><div className="round-follow-up">{journeyMode !== 'diagnostic' && !textHints && <button className="round-reveal" aria-expanded={roundRevealed} onClick={() => { setRoundRevealed(value => !value); if (!roundRevealed) hintsUsed.current = true; }}>{roundRevealed ? t("Hide these words") : t("Reveal these words")}<Icon name={roundRevealed ? 'close' : 'book'} size={15} /></button>}<button className="button button-dark next-button" onClick={next} disabled={isPlaying}>{index + 1 === questions.length ? t("See your session") : t("Next round")}<Icon name="arrow" /></button></div>{locale === 'en' && journeyMode !== 'diagnostic' && textHints && question.pair.note && <p className="pair-note">{question.pair.note}</p>}</>}
+                <div className="feedback-space" aria-live="polite">{answer !== null ? journeyMode === 'diagnostic' ? <p>{t("Answer recorded.")}</p> : <div className={`answer-feedback ${correct ? 'is-correct' : 'needs-listen'}`}><span className="feedback-symbol"><Icon name={correct ? 'check' : 'headphones'} size={21} /></span><div><strong>{identifying ? `${it(7)}: ${sampleWord(question,'x').text}` : correct ? t("You heard the shared sound.") : t('X shares {reference}’s sound', {reference: targetReference === 0 ? 'A' : 'B'})}</strong><p>{identifying ? it(8) : t("Listen to the matching sounds.")}</p></div></div> : <p className="answer-hint">{!allHeard ? identifying ? it(3) : t("Listen to A, B and X to unlock your choices.") : ''}</p>}</div>
+                {answer !== null && <><div className="round-follow-up">{!identifying && journeyMode !== 'diagnostic' && !textHints && <button className="round-reveal" aria-expanded={roundRevealed} onClick={() => { setRoundRevealed(value => !value); if (!roundRevealed) hintsUsed.current = true; }}>{roundRevealed ? t("Hide these words") : t("Reveal these words")}<Icon name={roundRevealed ? 'close' : 'book'} size={15} /></button>}<button className="button button-dark next-button" onClick={next} disabled={isPlaying}>{index + 1 === questions.length ? t("See your session") : t("Next round")}<Icon name="arrow" /></button></div>{locale === 'en' && journeyMode !== 'diagnostic' && textHints && question.pair.note && <p className="pair-note">{question.pair.note}</p>}</>}
               </div> : completedSession ? <div className="session-complete">
                 <span className="complete-kicker">{t("SESSION COMPLETE")}</span><h3>{t("You made time to listen.")}</h3><p>{t("Keep noticing the small differences.")}</p>
                 <div className="session-results"><div><strong>{completedSession.correct}<span>/{completedSession.total}</span></strong><span>{t("correct matches")}</span></div><div><strong>{completedSession.total}</strong><span>{t("listening rounds")}</span></div><div><strong>{Math.round(completedSession.correct / completedSession.total * 100)}<span>%</span></strong><span>{t("session accuracy")}</span></div></div>
                 <p className="score-note">{t("This is one practice session, not a measure of fluency.")}{completedSession.textHintsUsed ? t(" Words were shown during this session.") : t(" You practiced with sound alone.")}</p>
                 {journeyMode !== 'focused' && <div className="journey-results"><h3>{journeyMode === 'diagnostic' ? t("Your starting profile") : t("Your sound groups")}</h3><p>{t("These results are an early signal. Keep practicing to build a clearer picture.")}</p>{language.contrasts.filter(c => attempts.some(a => a.contrastId === c.id)).sort((a,b) => attempts.filter(x => x.contrastId === a.id && x.correct).length - attempts.filter(x => x.contrastId === b.id && x.correct).length).map(c => {const group = attempts.filter(a => a.contrastId === c.id); const score = group.filter(a => a.correct).length; return <div className="journey-result" key={c.id}><span>{c.phonemes.map(p => `/${p}/`).join(' vs ')} <strong>{score}/{group.length}</strong></span><button className="text-button" onClick={() => {reset(); setJourneyMode('focused'); setContrastId(c.id);}}>{t("Practice this sound →")}</button></div>;})}</div>}
                 {reviewSuggestion && <ReviewSuggestion locale={locale} recommendation={reviewSuggestion} compact />}
-                <div className="complete-actions">{!audioManifestPath && nextLesson && <button className="button button-dark" disabled={Boolean(pendingLesson)} onClick={() => continueLesson(nextLesson.id)}>{t("Continue my path")}<Icon name="arrow" /></button>}<button className="button button-light" onClick={() => {reset();setPendingDiagnostic(true);}}>{t("Listen again")}<Icon name="replay" size={17} /></button><a className="text-button" href={path("/account")}>{t("View your history")}<Icon name="arrow" size={16} /></a><a className="text-button" href={path("/account#listening-plan")}>{t("Your listening plan")}<Icon name="arrow" size={16} /></a></div>
+                <div className="complete-actions">{!audioManifestPath && nextStep && <button className="button button-dark" disabled={Boolean(pendingLesson)} onClick={() => continueLesson(nextStep.contrast.id,nextStep.mode)}>{t("Continue my path")}<Icon name="arrow" /></button>}<button className="button button-light" onClick={() => {reset();setPendingDiagnostic(true);}}>{t("Listen again")}<Icon name="replay" size={17} /></button><button className="text-button" onClick={reset}>{it(10)}</button><a className="text-button" href={path("/account")}>{t("View your history")}<Icon name="arrow" size={16} /></a><a className="text-button" href={path("/account#listening-plan")}>{t("Your listening plan")}<Icon name="arrow" size={16} /></a></div>
                 <p className={`save-note ${storageError ? 'audio-error' : ''}`}><Icon name={storageError ? 'close' : 'check'} size={15} />{storageError ? t("This browser could not save your session. Your results are shown above.") : t("Session saved on this device.")}</p>
                 <p className={`cloud-save-note ${cloudSave === 'error' ? 'audio-error' : ''}`} role="status">{cloudSave === 'pending' ? t("Checking account saving…") : cloudSave === 'saved' ? t("Also saved to your account.") : cloudSave === 'error' ? storageError ? t("Account saving could not be confirmed. Your results remain visible on this page.") : <>{t("Account saving could not be confirmed.")}<a href={path("/account")}>{t("Retry from your history page.")}</a></> : <>{t("Want this history on another device?")}<a href={path("/account")}>{t("Sign in to save your progress.")}</a></>}</p>
                 <SessionFeedback locale={locale} key={completedSession.id} session={completedSession} />
@@ -328,9 +338,9 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
             </aside>}
           </div>
           {locked && exerciseAccess !== 'checking' && <div id="lesson-plans" className="lesson-plans"><MembershipPanel locale={locale} storefront embedded /></div>}
-          <div className="practice-settings"><label className="toggle-label"><input type="checkbox" disabled={journeyMode === 'diagnostic'} checked={journeyMode !== 'diagnostic' && textHints} onChange={event => { setTextHints(event.target.checked); if (phase === 'practice' && event.target.checked) hintsUsed.current = true; }} /><span className="toggle-switch" /><span>{t("Show text hints")}</span></label></div>
+          {!identifying && <div className="practice-settings"><label className="toggle-label"><input type="checkbox" disabled={journeyMode === 'diagnostic'} checked={journeyMode !== 'diagnostic' && textHints} onChange={event => { setTextHints(event.target.checked); if (phase === 'practice' && event.target.checked) hintsUsed.current = true; }} /><span className="toggle-switch" /><span>{t("Show text hints")}</span></label></div>}
           {textHints && journeyMode !== 'diagnostic' && <div className="contrast-explainer"><div><span className="eyebrow">{t("ABOUT THESE SOUNDS")}</span><h3>{contrastLabel}</h3><p>{locale === 'en' ? contrast.description : publicCopy(locale).compare}</p><div className="native-language-field"><label htmlFor="native-language">{t("A language you already speak")}</label><select id="native-language" value={nativeLanguage} onChange={event => { setNativeLanguage(event.target.value); writeProgress({ ...readProgress(), nativeLanguage: event.target.value }); }}><option value="">{t("Choose for a tailored note")}</option>{nativeLanguages.map(item => <option key={item} value={item}>{t(item)}</option>)}</select></div>{locale === 'en' && languageNote && <p className="learner-note"><strong>{t("For {language} speakers:", {language: t(nativeLanguage)})}</strong> {languageNote.note}</p>}{contrast.sources?.length ? <details className="source-details"><summary>{t("More about these sounds")}</summary><ul>{contrast.sources.map((source, i) => <li key={i}>{/^https?:\/\//.test(source) ? <a href={source} target="_blank" rel="noopener noreferrer">{t("Reference")} {i + 1} <span aria-hidden="true">↗</span></a> : source}</li>)}</ul></details> : null}</div></div>}
-          <div className="practice-bottom-note"><span><Icon name="lock" size={13} /> {t("Your progress saves automatically when you’re signed in.")}</span><span className="keyboard-hint"><kbd>A</kbd><kbd>B</kbd><kbd>X</kbd> {t("replay")}<kbd>1</kbd><kbd>2</kbd> {t("answer")}</span></div>
+          <div className="practice-bottom-note"><span><Icon name="lock" size={13} /> {t("Your progress saves automatically when you’re signed in.")}</span><span className="keyboard-hint">{!identifying && <><kbd>A</kbd><kbd>B</kbd></>}<kbd>X</kbd> {t("replay")}<kbd>1</kbd><kbd>2</kbd> {t("answer")}</span></div>
         </div>
       </section>
     </main></>;

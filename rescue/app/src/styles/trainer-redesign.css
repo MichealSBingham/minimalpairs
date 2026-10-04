@@ -232,3 +232,10 @@
 
 /* A small visual overview; the sidebar remains the full lesson catalogue. */
 .journey-panel{padding:20px 24px}.journey-top h2{font-size:19px;margin:8px 0 0}.journey-track{display:flex;align-items:center;width:100%;margin:22px 0;gap:0}.journey-node{display:flex;align-items:center;flex:1;color:#8b8b83}.journey-node:last-child{flex:0}.journey-node:not(:last-child)::after{content:"";height:2px;background:#e6e4dd;flex:1}.journey-node>span{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border:1px solid #dedbd2;background:#faf9f6;border-radius:50%;font-size:12px;flex-shrink:0}.journey-node.is-current>span{background:#edf2f7;border:2px solid #416582;color:#315879}.journey-node.is-done>span{background:#e8f0e8;border-color:#759179;color:#47664d}.journey-node.is-done::after{background:#759179}.journey-actions{display:flex;align-items:center;gap:24px}.journey-actions .button{padding:12px 18px}.round-counter[hidden]{display:none}.trainer-card{scroll-margin-top:24px}@media(max-width:600px){.journey-panel{padding:18px}.journey-node>span{width:24px;height:24px;font-size:11px}.journey-actions{gap:18px;flex-wrap:wrap}.journey-top{gap:12px}.journey-top h2{font-size:18px}}
+
+.activity-picker{display:flex;gap:6px;padding:5px;border:1px solid var(--ed-border,#ded7c9);border-radius:12px;margin:0 auto 28px;max-width:480px;flex-wrap:wrap}.activity-picker button{flex:1;background:transparent;border:0;border-radius:8px;padding:12px 18px;color:inherit;cursor:pointer;font:inherit}.activity-picker .is-selected{background:#25241e;color:white}.activity-picker button:focus-visible{outline:2px solid #315e8a;outline-offset:2px}.answer-card strong small{display:block;font-size:.85em;font-weight:400}.abx-players:has(>.abx-sample:only-child){grid-template-columns:minmax(140px,230px);justify-content:center}
+
+/* Keep focus on long completion actions from horizontally scrolling the clipped card. */
+.practice-layout .trainer-card{overflow:clip}
+.practice-layout .complete-actions{flex-wrap:wrap}
+.journey-actions{margin-bottom:16px}

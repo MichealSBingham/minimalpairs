@@ -66,7 +66,7 @@ function client({ account = verified('alice'), remote = [], enabledFor, readFail
 
 test('progress data rejects old identification, malformed scores, unsafe document IDs and false text flags', () => {
   for (const patch of [
-    { mode: 'word-identification' }, { schemaVersion: 1 }, { id: '../someone-else' },
+    { mode: 'word-identification', schemaVersion: 1 }, { mode: 'word-identification', textHintsUsed: false }, { purpose: 'unknown' }, { schemaVersion: 1 }, { id: '../someone-else' },
     { correct: 13 }, { correct: -1 }, { total: 0 }, { total: 101 }, { correct: 2.5 },
     { textHintsUsed: 'false' }, { audioCollectionId: '../unknown' }, { completedAt: 'not-a-date' }, { mistakes: ['word'] },
     { mistakes: [{ pairId: 'p', word: 'x'.repeat(121), chosenWord: 'y' }] },
@@ -160,4 +160,15 @@ test('a failed opt-out is reported instead of falsely claiming automatic saves a
   const subject = client({ enabledFor: 'alice', removeFailure: true });
   assert.throws(() => subject.api.disconnectDeviceHistory('alice'), /could not turn off/);
   assert.equal(subject.storage.get('minimalpairs.account-sync.v1'), 'alice');
+});
+
+test('identification schema2 preserves mode and purpose through verified account sync', async () => {
+  const session = sample('identify', { mode: 'word-identification', textHintsUsed: true, purpose: 'focused' });
+  assert.deepEqual(data.normalizeSession(session), session);
+  const subject = client();
+  assert.equal(await subject.api.saveCompletedSession(session), 'saved');
+  assert.equal(subject.writes[0].value.mode, 'word-identification');
+  assert.equal(subject.writes[0].value.purpose, 'focused');
+  assert.equal((await subject.api.loadAccountProgress({sessions: []})).progress.sessions[0].mode, 'word-identification');
+  for (const purpose of ['focused', 'mixed', 'diagnostic']) assert.equal(data.normalizeSession(sample(purpose, {purpose})).purpose, purpose);
 });
