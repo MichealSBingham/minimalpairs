@@ -2,16 +2,19 @@
 import '../styles/global.css';
 import '../styles/product-redesign.css';
 import AnalyticsChoice from '../components/AnalyticsChoice';
-interface Props { title: string; description: string; noindex?: boolean; analytics?: boolean; }
-const { title, description, noindex = false, analytics = true } = Astro.props;
+import {locales, localeNames, ogLocales, localPath, unlocalizedPath, hasTranslations} from '../lib/locales';
+interface Props { title: string; description: string; noindex?: boolean; analytics?: boolean; locale?: string; alternates?: {locale: string; path: string}[]; }
+const { title, description, noindex = false, analytics = true, locale = 'en', alternates: suppliedAlternates } = Astro.props;
 const base = import.meta.env.SITE_URL || 'https://minimalpairs.co';
+const pagePath = unlocalizedPath(Astro.url.pathname);
+const alternates = suppliedAlternates || (hasTranslations(pagePath) ? [...locales.map(language => ({locale:language, path:localPath(language,pagePath)})), {locale:'x-default',path:pagePath}] : []);
 const canonical = new URL(Astro.url.pathname, base).toString();
 const indexable = import.meta.env.PUBLIC_SITE_INDEXABLE === 'true' && !noindex;
 const measurementId = analytics && import.meta.env.PUBLIC_ANALYTICS_ENABLED === 'true' && !Astro.url.pathname.startsWith('/auth/') ? import.meta.env.PUBLIC_GA_MEASUREMENT_ID || '' : '';
 const measurementEnvironment = import.meta.env.PUBLIC_MEASUREMENT_ENVIRONMENT === 'production' ? 'production' : 'preview';
 ---
 <!doctype html>
-<html lang="en" data-measurement-id={measurementId} data-measurement-environment={measurementEnvironment}>
+<html lang={locale} data-measurement-id={measurementId} data-measurement-environment={measurementEnvironment}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -20,6 +23,9 @@ const measurementEnvironment = import.meta.env.PUBLIC_MEASUREMENT_ENVIRONMENT ==
     <meta name="description" content={description} />
     <meta name="robots" content={indexable ? 'index,follow' : 'noindex,follow'} />
     <link rel="canonical" href={canonical} />
+    {alternates.map(alternate => <link rel="alternate" hreflang={alternate.locale} href={new URL(alternate.path, base).toString()} />)}
+    <meta property="og:locale" content={ogLocales[locale] || 'en_US'} />
+    {alternates.filter(a=>a.locale!==locale && a.locale!=='x-default').map(a=><meta property="og:locale:alternate" content={ogLocales[a.locale]} />)}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="MinimalPairs" />
@@ -28,5 +34,19 @@ const measurementEnvironment = import.meta.env.PUBLIC_MEASUREMENT_ENVIRONMENT ==
     <meta property="og:url" content={canonical} />
     <meta name="twitter:card" content="summary" />
   </head>
-  <body><slot />{measurementId && <AnalyticsChoice client:load />}</body>
+  <body><slot /><details class="interface-language"><summary>🌐 {localeNames[locale] || 'English'}</summary><nav aria-label="Language">{locales.map(language=><a href={localPath(language,hasTranslations(pagePath)?pagePath:'/')} lang={language} hreflang={language} aria-current={language===locale?'page':undefined}>{localeNames[language]}</a>)}</nav></details>{measurementId && <AnalyticsChoice locale={locale} client:load />}</body>
 </html>
+
+<style is:global>
+.interface-language{position:fixed;right:14px;bottom:14px;z-index:40;font:13px/1.4 system-ui;background:#fffdf7;border:1px solid #d8d1c3;border-radius:8px;box-shadow:0 2px 8px #0001}.interface-language summary{padding:9px 12px;cursor:pointer}.interface-language nav{display:grid;max-height:65vh;overflow:auto;padding:4px 10px 10px}.interface-language a{padding:7px 12px;text-decoration:none;color:#24241f}.interface-language a[aria-current=page]{font-weight:700;background:#efe9dc;border-radius:4px}
+</style>
+
+<script>
+  document.querySelectorAll<HTMLAnchorElement>('.interface-language a').forEach(link=>link.addEventListener('click',()=>{
+    const url=new URL(link.href);
+    url.search=window.location.search;
+    url.hash=window.location.hash;
+    link.href=url.toString();
+    try{localStorage.setItem('minimalpairs.interface-language',link.hreflang);}catch{}
+  }));
+</script>

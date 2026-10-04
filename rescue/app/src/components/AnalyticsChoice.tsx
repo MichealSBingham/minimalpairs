@@ -1,7 +1,9 @@
+import {feedbackText} from '../lib/feedback-i18n';
 import { useEffect, useState } from 'react';
 import { analyticsChoice, browserDeclinesAnalytics, initializeMeasurement, measurementAvailable, setAnalyticsChoice, watchAnalyticsChoice } from '../lib/measurement';
 
-export default function AnalyticsChoice() {
+export default function AnalyticsChoice({locale='en'}:{locale?:string}) {
+  const t=(index:number)=>feedbackText(locale,index);
   const [available, setAvailable] = useState(false);
   const [open, setOpen] = useState(false);
   const [choice, setChoice] = useState<ReturnType<typeof analyticsChoice>>(null);
@@ -15,5 +17,5 @@ export default function AnalyticsChoice() {
   }, []);
   if (!available) return null;
   function choose(value: 'allowed' | 'declined') { setError(!setAnalyticsChoice(value)); }
-  return <>{open ? <section className="analytics-choice" aria-label="Usage analytics choices"><div><strong>Help us improve the listening experience?</strong><p>Optional Google Analytics measures visits and practice use. No microphone recordings or account emails are sent. You can practice either way.</p>{browserDeclines && <p>Your browser requests no tracking. Analytics is off.</p>}<a href="/privacy#analytics">How this works</a></div><div className="analytics-actions"><button className="button button-light" onClick={() => choose('declined')}>Keep analytics off</button>{!browserDeclines && <button className="button button-dark" onClick={() => choose('allowed')}>Allow usage analytics</button>}{(choice || browserDeclines) && <button className="text-button" onClick={() => setOpen(false)}>Close</button>}</div>{error && <p role="alert">Your browser could not save this choice. Analytics is off on this page; the choice could not be remembered.</p>}</section> : <button className="analytics-settings" onClick={() => setOpen(true)}>Analytics choices</button>}</>;
+  return <>{open ? <section className="analytics-choice" aria-label={t(9)}><div><strong>{t(10)}</strong><p>{t(11)}</p>{browserDeclines && <p>{t(12)}</p>}<a href="/privacy#analytics">{t(13)}</a></div><div className="analytics-actions"><button className="button button-light" onClick={() => choose('declined')}>{t(14)}</button>{!browserDeclines && <button className="button button-dark" onClick={() => choose('allowed')}>{t(15)}</button>}{(choice || browserDeclines) && <button className="text-button" onClick={() => setOpen(false)}>{t(16)}</button>}</div>{error && <p role="alert">{t(17)}</p>}</section> : <button className="analytics-settings" onClick={() => setOpen(true)}>{t(9)}</button>}</>;
 }

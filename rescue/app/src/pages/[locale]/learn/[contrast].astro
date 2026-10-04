@@ -1,0 +1,12 @@
+---
+import Base from '../../../layouts/Base.astro';
+import {absoluteUrl,safeJsonLd} from '../../../lib/seo';
+import LocalizedPublic from '../../../components/LocalizedPublic.astro';
+import {publicLocales,publicCopy,localizedLanguage,localizedSound,type PublicLocale} from '../../../lib/localized-public';
+import {getGuideLanguages} from '../../../lib/content';
+export function getStaticPaths(){return publicLocales.flatMap(locale=>getGuideLanguages().flatMap(language=>language.contrasts.map(contrast=>({params:{locale,contrast:contrast.id},props:{language,contrast}}))));}
+const locale=Astro.params.locale as PublicLocale,{language,contrast}=Astro.props,t=publicCopy(locale),name=localizedLanguage(language.id,locale);
+const label=contrast.phonemes.map((s:string)=>localizedSound(s,locale)).join(' — '), examples=contrast.pairs[0].words.map((w:{text:string})=>w.text).join(' · ');
+const schema={'@context':'https://schema.org','@type':'LearningResource',name:`${name}: ${label}`,description:`${examples}. ${t.compare}`,inLanguage:locale,url:absoluteUrl(`/${locale}/learn/${contrast.id}`),about:{'@type':'Thing',name:`${name}: ${label}`}};
+---
+<Base locale={locale} title={`${name}: ${label} · ${t.minimal} | MinimalPairs`} description={`${name}: ${label}. ${examples}. ${t.compare}`}><script type="application/ld+json" set:html={safeJsonLd(schema)} /><LocalizedPublic locale={locale} language={language} contrast={contrast}/></Base>

@@ -24,6 +24,7 @@ for (const relative of ['index.html', 'account/index.html', 'practice/index.html
   if (shouldIndex ? !/name="robots" content="index,follow/.test(html) : !/name="robots" content="[^"]*noindex/.test(html)) throw new Error('Unexpected indexing policy: ' + relative);
 }
 run(process.execPath, ['scripts/audit-discovery.mjs', output, production ? 'production' : 'preview']);
+run(process.execPath, ['scripts/audit-localization.mjs', output]);
 const { hosting } = JSON.parse(fs.readFileSync(path.join(app, 'firebase.json'), 'utf8'));
 if (hosting.site !== 'minimalpairs') throw new Error('Unexpected preview Hosting site.');
 const config = path.join(staging, 'firebase.json');

@@ -1,0 +1,9 @@
+---
+import Base from '../../layouts/Base.astro';
+import LocalizedPublic from '../../components/LocalizedPublic.astro';
+import {publicLocales,publicCopy,localizedLanguage,type PublicLocale} from '../../lib/localized-public';
+import {getGuideLanguages,slugFor} from '../../lib/content';
+export function getStaticPaths(){return publicLocales.flatMap(locale=>getGuideLanguages().map(language=>({params:{locale,language:slugFor(language)},props:{language}})));}
+const locale=Astro.params.locale as PublicLocale, {language}=Astro.props, t=publicCopy(locale),name=localizedLanguage(language.id,locale);
+---
+<Base locale={locale} title={`${name} · ${t.minimal} | MinimalPairs`} description={`${name}: ${language.contrasts.length} ${t.contrasts}. ${t.hub}`}><LocalizedPublic locale={locale} language={language}/></Base>

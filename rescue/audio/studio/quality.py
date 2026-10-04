@@ -103,6 +103,8 @@ def serve(port):
                 second={(r['id'],r['sha']):r for r in layer.get('clips',[])}
                 next_rows=json.loads((PRIVATE/'next-review.json').read_text()) if (PRIVATE/'next-review.json').exists() else []
                 next_ids={(r['id'],r['sha']) for r in next_rows}
+                sample_path=PRIVATE/'launch-sample.json'
+                sample_ids={(r['id'],r['sha']) for r in json.loads(sample_path.read_text())} if sample_path.exists() else set()
                 customer=json.loads((PRIVATE/'customer-reports.json').read_text()).get('reports',[]) if (PRIVATE/'customer-reports.json').exists() else []
                 next_ids.update((r['clipId'],r['sha256']) for r in customer)
                 customer_times={(r['clipId'],r['sha256']):max(datetime.datetime.fromisoformat(x['lastSeen']).timestamp() for x in customer if x['clipId']==r['clipId'] and x['sha256']==r['sha256']) for r in customer}
@@ -110,6 +112,7 @@ def serve(port):
                 for r in db.execute('SELECT * FROM decisions ORDER BY sequence'):decisions[(r['clip_id'],r['sha'])]=dict(r)
                 db.close();items=[{**{k:v for k,v in c.items() if k not in ('path','expected_sha')},'review':decisions.get((c['id'],c['sha']),{}).get('decision','unreviewed')} for c in clips.values()]
                 for item in items:
+                    item['launchSample']=(item['id'],item['sha']) in sample_ids
                     item['nextReview']=(item['id'],item['sha']) in next_ids
                     if customer_times.get((item['id'],item['sha']),0)>decisions.get((item['id'],item['sha']),{}).get('created',0):item['review']='unreviewed'
                     audit=second.get((item['id'],item['sha']))

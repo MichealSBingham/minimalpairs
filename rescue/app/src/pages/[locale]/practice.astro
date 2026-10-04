@@ -1,0 +1,12 @@
+---
+import Base from '../../layouts/Base.astro';
+import PracticeLibrary from '../../components/PracticeLibrary';
+import {getPracticeLanguages} from '../../lib/content';
+import {locales,navCopy} from '../../lib/locales';
+export function getStaticPaths(){return locales.filter(locale=>locale!=='en').map(locale=>({params:{locale}}));}
+const {locale}=Astro.params;
+const copy=navCopy[locale!];
+---
+<Base title={`${copy[5]} — MinimalPairs`} description={copy[10]} locale={locale} noindex>
+<PracticeLibrary languages={getPracticeLanguages()} locale={locale} client:load />
+</Base>

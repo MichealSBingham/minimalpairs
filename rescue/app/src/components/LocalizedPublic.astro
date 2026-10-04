@@ -1,0 +1,40 @@
+---
+import {Header,Footer} from './ui';
+import GuideWordAudio from './GuideWordAudio';
+import {getGuideLanguages, getPracticeLanguages, slugFor} from '../lib/content';
+import {guideAudioStatus} from '../lib/guide-audio-status';
+import {publicCopy,localizedLanguage,localizedSound,soundCue, type PublicLocale} from '../lib/localized-public';
+import type {Language,Contrast,Word} from '../lib/types';
+interface Props {locale:PublicLocale; language?:Language; contrast?:Contrast}
+const {locale,language,contrast}=Astro.props;
+const t=publicCopy(locale), languages=getGuideLanguages();
+const name=language?localizedLanguage(language.id,locale):'';
+const label=(s:string)=>localizedSound(s,locale);
+const sounds=(c:Contrast)=>c.phonemes.map(label).join(' — ');
+const groups=[new Map<string,Word>(),new Map<string,Word>()];
+if(contrast) for(const pair of contrast.pairs) pair.words.forEach((w,i)=>groups[pair.abx?.categoryByWordIndex?.[i]??i]?.set(`${w.text}\0${w.ipa}`,w));
+const audio=language&&contrast?guideAudioStatus(language.id,contrast):null;
+const playable=language&&contrast&&getPracticeLanguages().find(l=>l.id===language.id)?.contrasts.some(c=>c.id===contrast.id);
+const practice=playable?`/${locale}/practice?language=${language!.id}&contrast=${contrast!.id}`:`/${locale}/practice`;
+const category=contrast?((contrast.id.includes('-tone-') || contrast.phonemes.some(p=>/[˥˦˧˨˩]/.test(p)))?'tone':(contrast.id.includes('stress') || contrast.phonemes.some(p=>/stress|long|single|length|σ/.test(p)))?'rhythm':contrast.phonemes.every(p=>/^[iyɪʏɯuʊeoɛœøɔæaɑɒʌəɐɤɨɜɚɝː̃ˑ]+$/u.test(p))?'vowel':'consonant'):null;
+---
+<Header locale={locale}/>
+<main class="localized-public">
+<nav class="crumb"><a href={`/${locale}`}>{t.home}</a>{language&&<><span> / </span><a href={`/${locale}/${slugFor(language)}`}>{name}</a></>}</nav>
+{!language ? <>
+<header class="hero"><p class="eyebrow">MinimalPairs</p><h1>{t.hero}</h1><h2>{t.tagline}</h2><p>{t.intro}</p><a class="primary" href={`/${locale}/practice`}>{t.start} →</a></header>
+<section id="languages"><h2>{t.languages}</h2><div class="cards">{languages.map(l=><a class="card" href={`/${locale}/${slugFor(l)}`}><h3>{localizedLanguage(l.id,locale)}</h3><span lang={l.locale}>{l.nativeName}</span><p>{l.contrasts.length} {t.contrasts}</p><span aria-hidden="true">→</span></a>)}</div></section>
+<section class="how" id="how-it-works"><h2>{t.how}</h2><p>{t.instructions}</p><p>{t.feedback}</p></section>
+</> : !contrast ? <>
+<header><p class="eyebrow">{t.guides}</p><h1>{name} · {t.minimal}</h1><p>{t.hub}</p><p>{language.contrasts.length} {t.contrasts}</p></header>
+<div class="cards">{language.contrasts.map(c=><a class="card" href={`/${locale}/learn/${c.id}`}><h2>{sounds(c)}</h2><p lang={language.locale}>{c.pairs[0]?.words.map(w=>w.text).join(' · ')}</p><span aria-hidden="true">→</span></a>)}</div>
+</> : <>
+<header><p class="eyebrow">{name} · {t.minimal}</p><h1>{sounds(contrast)}</h1><p>{t.compare}</p></header>
+<section><h2>{t.listen}</h2><div class="word-groups">{groups.map((g,i)=><div class="word-group"><h3>{label(contrast.phonemes[i])}</h3>{!contrast.phonemes[i].includes(' ')&&soundCue(contrast.phonemes[i],locale)&&<p>{soundCue(contrast.phonemes[i],locale)}</p>}<ul>{[...g.values()].map(w=><li><span lang={language.locale}><strong>{w.text}</strong><small>/{w.ipa.replace(/^\/|\/$/g,'')}/</small></span><GuideWordAudio client:visible locale={locale} languageId={language.id} word={w.text} ipa={w.ipa} requiredWords={[w.text]} hasCachedAudio={Boolean(audio?.hasCachedAudio)} side={i}/></li>)}</ul></div>)}</div></section>
+<section class="how" id="how-it-works"><h2>{t.how}</h2><p>{category&&t[category]}</p><p>{t.instructions}</p><p>{t.feedback}</p><a class="primary" href={practice}>{t.practice} →</a></section>
+<section><h2>{t.guides} · {name}</h2><div class="related">{language.contrasts.filter(c=>c.id!==contrast.id).map(c=><a href={`/${locale}/learn/${c.id}`}>{sounds(c)}</a>)}</div></section>
+</>}
+</main><Footer locale={locale}/>
+<style>
+.localized-public{max-width:1120px;margin:auto;padding:32px 24px 80px}.crumb{font-size:.9rem;margin-bottom:42px;color:#657461}.localized-public header{max-width:780px;margin-bottom:48px}.localized-public h1{font-family:Georgia,serif;font-size:clamp(2.5rem,6vw,4.8rem);line-height:1.12;margin:14px 0 24px}.localized-public h2{font-family:Georgia,serif;font-size:1.9rem;line-height:1.3}.localized-public p{line-height:1.8;color:#625f56}.eyebrow{letter-spacing:.12em;font-size:.8rem}.hero{padding:30px 0}.primary{display:inline-block;padding:15px 22px;background:#24231d;color:white;border-radius:5px;margin-top:16px;text-decoration:none}.localized-public section{margin:60px 0}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}.card{display:block;text-decoration:none;border:1px solid #ded7c8;border-radius:7px;padding:25px;background:#faf8f1}.card:hover{border-color:#2d5584}.card h3{font-family:Georgia,serif;font-size:1.7rem;margin:0 0 15px}.card h2{font-size:1.7rem}.word-groups{display:grid;grid-template-columns:1fr 1fr;gap:24px}.word-group{background:#faf8f1;border:1px solid #ded7c8;border-radius:8px;padding:24px}.word-group h3{font-size:2rem;color:#2d5584}.word-group:nth-child(2) h3{color:#b6472d}.word-group ul{list-style:none;margin:0;padding:0}.word-group li{display:flex;align-items:center;justify-content:space-between;border-top:1px solid #e5decf;padding:16px 0;gap:16px}.word-group li>span:first-child{min-width:0;overflow-wrap:anywhere}.word-group :global(.guide-word-audio){flex-shrink:0}.word-group :global(.guide-play){width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center;border:1px solid #2d5584;border-radius:50%;color:#2d5584;background:transparent;cursor:pointer}.word-group:nth-child(2) :global(.guide-play){border-color:#b6472d;color:#b6472d}.word-group :global(.guide-play:disabled){opacity:.45;cursor:default}.word-group :global(.guide-play:focus-visible){outline:3px solid #2d5584;outline-offset:3px}.word-group :global(.guide-word-audio){display:flex;flex-direction:column;gap:6px;max-width:110px;font-size:.75rem}.word-group strong{font-size:1.2rem;display:block}.word-group small{display:block;color:#77716b;margin-top:6px}.how{max-width:740px}.related{display:flex;gap:12px;flex-wrap:wrap}.related a{padding:12px 16px;border:1px solid #ded7c8;border-radius:6px}@media(max-width:600px){.word-groups{grid-template-columns:1fr}.localized-public{padding:24px 18px}.localized-public section{margin:40px 0}}
+</style>

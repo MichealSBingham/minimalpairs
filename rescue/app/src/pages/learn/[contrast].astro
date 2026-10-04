@@ -5,7 +5,7 @@ import GuideWordAudio from '../../components/GuideWordAudio';
 import { getGuideLanguages as getLanguages, getPracticeLanguages, slugFor } from '../../lib/content';
 import { guideAudioStatus } from '../../lib/guide-audio-status';
 import { absoluteUrl, abxFor, guideCopy, kindLabel, l1Label, practiceUrl, readingFor, safeJsonLd } from '../../lib/seo';
-import type { Contrast, Language } from '../../lib/types';
+import type { Contrast, Language, Word } from '../../lib/types';
 import '../../styles/guide-redesign.css';
 
 export function getStaticPaths() {
@@ -21,6 +21,12 @@ const abx = abxFor(contrast);
 const audioStatus = guideAudioStatus(language.id, contrast);
 const requiredWords = contrast.pairs.flatMap(pair => pair.words.map(word => word.text));
 const categories = contrast.abx?.categoryLabels || contrast.phonemes;
+const wordGroups = [new Map<string, Word>(), new Map<string, Word>()];
+for (const pair of contrast.pairs) pair.words.forEach((word, index) => {
+  const category = pair.abx?.categoryByWordIndex?.[index] ?? index;
+  wordGroups[category]?.set(`${word.text}\u0000${word.ipa}`, word);
+});
+const uniqueWords = wordGroups.map(group => [...group.values()]);
 const symbolic = (sound: string) => !sound.includes(' ');
 const soundLabel = (sound: string) => symbolic(sound) ? `/${sound}/` : sound;
 const pairTitle = (item: Contrast) => item.pairs[0].words.map(word => word.text).join(' · ');
@@ -108,10 +114,10 @@ const schema = { '@context': 'https://schema.org', '@type': 'LearningResource', 
         <section class="guide-explainer" aria-labelledby="guide-listen-for"><div><p class="guide-eyebrow">WHAT TO LISTEN FOR</p><h2 id="guide-listen-for">A small change.<br /> <em>A different word.</em></h2></div><div><p>{copy?.focus || contrast.description}</p>{abx.targetSoundFocus && <p class="guide-focus-line">{abx.targetSoundFocus}</p>}</div></section>
         {copy?.trap && <section class="guide-trap" aria-labelledby="guide-trap-title"><h2 id="guide-trap-title">A common trap</h2><p>{copy.trap}</p></section>}
 
-        <section class="guide-examples" aria-labelledby="guide-pairs-title"><div class="guide-section-heading"><h2 id="guide-pairs-title">{kind === 'tone' ? 'Same syllable, different tone.' : kind === 'stress' ? 'Same sounds, different stress.' : 'Minimal pairs'}</h2><span>{audioStatus.hasCachedAudio ? 'Tap to hear each word' : 'Cached recordings are being prepared'}</span></div>
+        <section class="guide-examples" aria-labelledby="guide-pairs-title"><div class="guide-section-heading"><h2 id="guide-pairs-title">Sound examples</h2><span>{audioStatus.hasCachedAudio ? 'Tap to hear each word' : 'Cached recordings are being prepared'}</span></div>
           <div class="guide-pair-columns" aria-hidden="true"><span>{soundLabel(categories[0])}</span><span>{soundLabel(categories[1])}</span></div>
-          <div class="guide-pair-list">{contrast.pairs.map(pair => <div class="guide-pair-row"><div class="guide-pair-words">{pair.words.map((word, side) => <div class:list={{ 'guide-word': true, 'is-second': side === 1 }}><GuideWordAudio client:load languageId={language.id} word={word.text} ipa={word.ipa} requiredWords={requiredWords} pairWords={pair.words} hasCachedAudio={audioStatus.hasCachedAudio} side={side} /><div class="guide-word-name"><strong lang={language.locale}>{word.text}</strong>{readingFor(word) && <span class="guide-reading">{readingFor(word)}</span>}</div><span class="guide-ipa">{word.ipa}</span><span class="guide-meaning">{word.meaning}</span></div>)}</div>{pair.note && <p class="guide-pair-note">{pair.note}</p>}</div>)}</div>
-          <p class="guide-example-note">{contrast.pairs.length} word examples. Words and IPA appear in this guide. During listening practice, they stay hidden until you choose text hints or reveal the words after answering.</p>
+          <div class="guide-pair-words guide-word-groups">{uniqueWords.map((words, side) => <div aria-label={soundLabel(categories[side])}>{words.map(word => <div class="guide-pair-row"><div class:list={{ 'guide-word': true, 'is-second': side === 1 }}><GuideWordAudio client:load languageId={language.id} word={word.text} ipa={word.ipa} requiredWords={requiredWords} hasCachedAudio={audioStatus.hasCachedAudio} side={side} /><div class="guide-word-name"><strong lang={language.locale}>{word.text}</strong>{readingFor(word) && <span class="guide-reading">{readingFor(word)}</span>}</div><span class="guide-ipa">{word.ipa}</span><span class="guide-meaning">{word.meaning}</span></div></div>)}</div>)}</div>
+          <p class="guide-example-note">{uniqueWords.reduce((total, words) => total + words.length, 0)} words. Words stay hidden during practice unless you choose to reveal them.</p>
           {!audioStatus.hasCachedAudio && <p class="guide-device-note">This guide is free to read. Recordings for these examples are not available yet.</p>}
         </section>
 

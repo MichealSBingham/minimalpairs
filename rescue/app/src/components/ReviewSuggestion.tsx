@@ -1,9 +1,11 @@
+import { commerce, commercePath } from '../lib/commerce-i18n';
 import { useEffect, useRef, type MouseEvent } from 'react';
 import type { ReviewRecommendation } from '../lib/review-recommendation';
 import { analyticsChoice, browserDeclinesAnalytics, openMeasuredRecommendation, trackMeasurement, watchAnalyticsChoice } from '../lib/measurement';
 import { Icon } from './ui';
 
-export default function ReviewSuggestion({ recommendation, compact = false }: { recommendation: ReviewRecommendation; compact?: boolean }) {
+export default function ReviewSuggestion({ recommendation, compact = false, locale = 'en' }: { recommendation: ReviewRecommendation; compact?: boolean; locale?: string }) {
+  const t = commerce(locale);
   const element = useRef<HTMLElement>(null);
   const recommendationId = useRef('');
   const shownId = useRef('');
@@ -30,12 +32,12 @@ export default function ReviewSuggestion({ recommendation, compact = false }: { 
     const sameTab = event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey;
     openMeasuredRecommendation({ ...data, recommendation_id: recommendationId.current }, sameTab);
   }
-  return <section ref={element} className={`review-suggestion${compact ? ' is-compact' : ''}`} aria-label="Your next listening suggestion">
-    <span className="eyebrow">A USEFUL NEXT LISTEN</span>
-    <h3>{recommendation.title}</h3>
-    <span className="review-sound-label">{recommendation.languageName} · {recommendation.soundLabel}</span>
-    <p>{recommendation.reason}</p>
-    <a className="button button-dark" href={recommendation.href} onClick={follow} onAuxClick={event => { if (event.button === 1) { recordShown(); openMeasuredRecommendation({ ...data, recommendation_id: recommendationId.current }, false); } }}>{recommendation.action}<Icon name="arrow" size={16} /></a>
-    <details><summary>Why this suggestion?</summary><p>{recommendation.explanation}</p></details>
+  return <section ref={element} className={`review-suggestion${compact ? ' is-compact' : ''}`} aria-label={t('suggestion')}>
+    <span className="eyebrow">{t('suggestion')}</span>
+    <h3>{locale === 'en' ? recommendation.title : t('continue')}</h3>
+    <span className="review-sound-label">{new Intl.DisplayNames([locale], { type: 'language' }).of(recommendation.languageId) || recommendation.languageName} · {recommendation.soundLabel.replace(/^Sound contrast /, `${t('startingSound')} `)}</span>
+    <p>{locale === 'en' ? recommendation.reason : t('reviewReason')}</p>
+    <a className="button button-dark" href={commercePath(locale, recommendation.href)} onClick={follow} onAuxClick={event => { if (event.button === 1) { recordShown(); openMeasuredRecommendation({ ...data, recommendation_id: recommendationId.current }, false); } }}>{locale === 'en' ? recommendation.action : t('practice')}<Icon name="arrow" size={16} /></a>
+    <details><summary>{t('whySuggestion')}</summary><p>{locale === 'en' ? recommendation.explanation : t('reviewExplanation')}</p></details>
   </section>;
 }

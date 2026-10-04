@@ -1,3 +1,5 @@
+import {localizedLanguage,type PublicLocale} from '../lib/localized-public';
+import { navCopy, localPath } from '../lib/locales';
 import type { ReactNode } from 'react';
 
 export type { Word, Pair, Contrast, Language } from '../lib/types';
@@ -40,17 +42,19 @@ export function Icon({ name, size = 20, ...props }: { name: string; size?: numbe
   return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" {...props}>{paths[name] || paths.arrow}</svg>;
 }
 
-export function Brand() {
-  return <a className="brand" href="/" aria-label="MinimalPairs home"><span>Minimal<em>Pairs</em></span><span className="brand-ipa" aria-hidden="true">/ˈmɪnɪməl pɛəz/</span></a>;
+export function Brand({locale = 'en'}: {locale?: string} = {}) {
+  return <a className="brand" href={localPath(locale,'/')} aria-label="MinimalPairs home"><span>Minimal<em>Pairs</em></span><span className="brand-ipa" aria-hidden="true">/ˈmɪnɪməl pɛəz/</span></a>;
 }
 
-export function Header({ active }: { active?: 'practice' | 'account' }) {
-  return <header className="site-header"><div className="header-inner"><Brand /><nav className="header-nav" aria-label="Main navigation"><a href="/#how-it-works">How it works</a><a href="/#languages">Languages</a><a href="/french-minimal-pairs">Sound guides</a></nav><div className="header-actions"><a className={`account-link ${active === 'account' ? 'is-active' : ''}`} href="/account"><span>My account</span></a><a className="button button-dark header-start" href="/practice" aria-current={active === 'practice' ? 'page' : undefined}>Lessons <Icon name="arrow" size={15} /></a></div><details className="mobile-nav"><summary aria-label="Open navigation"><span aria-hidden="true">☰</span></summary><nav aria-label="Mobile navigation"><a href="/practice">Lessons</a><a href="/#how-it-works">How it works</a><a href="/#languages">Languages</a><a href="/french-minimal-pairs">Sound guides</a><a href="/account">My account</a></nav></details></div></header>;
+export function Header({ active, locale = 'en' }: { active?: 'practice' | 'account'; locale?: string }) {
+  const t=navCopy[locale]||navCopy.en, href=(p:string)=>localPath(locale,p);
+  return <header className="site-header"><div className="header-inner"><Brand locale={locale}/><nav className="header-nav" aria-label={t[1]}><a href={href('/')+'#how-it-works'}>{t[0]}</a><a href={href('/')+'#languages'}>{t[1]}</a><a href={href('/french-minimal-pairs')}>{t[2]}</a></nav><div className="header-actions"><a className={`account-link ${active === 'account' ? 'is-active' : ''}`} href={href('/account')}><span>{t[3]}</span></a><a className="button button-dark header-start" href={href('/practice')} aria-current={active === 'practice' ? 'page' : undefined}>{t[4]} <Icon name="arrow" size={15}/></a></div><details className="mobile-nav"><summary aria-label={t[4]}><span aria-hidden="true">☰</span></summary><nav aria-label={t[1]}><a href={href('/practice')}>{t[4]}</a><a href={href('/')+'#how-it-works'}>{t[0]}</a><a href={href('/')+'#languages'}>{t[1]}</a><a href={href('/french-minimal-pairs')}>{t[2]}</a><a href={href('/account')}>{t[3]}</a></nav></details></div></header>;
 }
 
-export function Footer() {
-  const guides = [ ['English', 'english'], ['French', 'french'], ['German', 'german'], ['Spanish', 'spanish'], ['Italian', 'italian'], ['Mandarin Chinese', 'mandarin-chinese'], ['Portuguese', 'portuguese'], ['Russian', 'russian'] ];
-  return <footer className="site-footer"><div className="footer-library"><span className="eyebrow">EXPLORE THE SOUND LIBRARY</span><nav aria-label="Language guides">{guides.map(([name, slug]) => <a href={`/${slug}-minimal-pairs`} key={slug}>{name}</a>)}</nav></div><div className="footer-inner"><div><Brand /><p>Small sounds. A world of difference.</p></div><nav aria-label="Footer navigation"><a href="/practice">Practice</a><a href="/method">The method</a><a href="/pricing">Plans</a><a href="/teachers">For teachers</a><a href="/account">Your account</a><a href="/support">Help & contact</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a></nav></div></footer>;
+export function Footer({locale = 'en'}: {locale?: string} = {}) {
+  const t=navCopy[locale]||navCopy.en, href=(p:string)=>localPath(locale,p);
+  const guides=[['en','English','english'],['fr','French','french'],['de','German','german'],['es','Spanish','spanish'],['it','Italian','italian'],['zh','Mandarin Chinese','mandarin-chinese'],['pt','Portuguese','portuguese'],['ru','Russian','russian'],['ja','Japanese','japanese']];
+  return <footer className="site-footer"><div className="footer-library"><span className="eyebrow">{t[2]}</span><nav aria-label={t[2]}>{guides.map(([id,name,slug])=><a href={href(`/${slug}-minimal-pairs`)} key={id}>{locale==='en'?name:localizedLanguage(id,locale as PublicLocale)}</a>)}</nav></div><div className="footer-inner"><div><Brand locale={locale}/><p>{t[10]}</p></div><nav aria-label={t[7]}><a href={href('/practice')}>{t[5]}</a><a href={href('/pricing')}>{t[6]}</a><a href={href('/account')}>{t[3]}</a><a href={href('/support')}>{t[7]}</a>{locale==='en'&&<><a href="/method">The method</a><a href="/teachers">For teachers</a></>}<a href="/privacy" lang="en">{t[8]}{locale!=='en'?' (English)':''}</a><a href="/terms" lang="en">{t[9]}{locale!=='en'?' (English)':''}</a></nav></div></footer>;
 }
 
 export function Waveform({ active = false, compact = false }: { active?: boolean; compact?: boolean }) {

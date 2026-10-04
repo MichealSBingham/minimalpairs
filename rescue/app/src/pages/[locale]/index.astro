@@ -1,0 +1,8 @@
+---
+import Base from '../../layouts/Base.astro';
+import LocalizedPublic from '../../components/LocalizedPublic.astro';
+import {publicLocales,publicCopy,type PublicLocale} from '../../lib/localized-public';
+export function getStaticPaths(){return publicLocales.map(locale=>({params:{locale}}));}
+const locale=Astro.params.locale as PublicLocale, t=publicCopy(locale);
+---
+<Base locale={locale} title={`${t.hero} · ${t.minimal} | MinimalPairs`} description={t.intro}><LocalizedPublic locale={locale}/></Base>

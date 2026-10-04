@@ -1,0 +1,16 @@
+---
+import Base from '../../layouts/Base.astro';
+import { Header, Footer } from '../../components/ui';
+import SupportForm from '../../components/SupportForm';
+import { commerce, commerceLocales } from '../../lib/commerce-i18n';
+import '../../styles/business.css';
+export function getStaticPaths() { return commerceLocales.filter(locale => locale !== 'en').map(locale => ({ params: { locale } })); }
+const locale = Astro.params.locale!;
+const t = commerce(locale);
+---
+<Base title={`${t('support')} | MinimalPairs`} description={t('supportDescription')} locale={locale}>
+<Header locale={locale} /><main class="editorial-wrap"><p class="eyebrow">{t('support')}</p><h1>{t('helpTitle')}</h1>
+<section><h2>{t('faq')}</h2><details><summary>{t('lifetime')}</summary><p>{t('restoreBody')}</p><a href={`/${locale}/account`}>{t('account')} →</a></details><details><summary>{t('cancelQuestion')}</summary><p>{t('cancelAnswer')}</p><a href={`/${locale}/account`}>{t('manage')} →</a></details><details><summary>{t('audioQuestion')}</summary><p>{t('audioAnswer')}</p></details></section>
+<section><h2>{t('needHelp')}</h2><SupportForm locale={locale} client:load /></section><p><a href={`/${locale}/practice`}>← {t('backLessons')}</a> · <a href={`/${locale}/account`}>{t('account')}</a></p></main><Footer locale={locale} />
+</Base>
+<style>details{padding:1rem 0;border-bottom:1px solid #ddd5c5}summary{cursor:pointer;font-weight:600}:global(.support-form label){display:grid;gap:.5rem;margin:1rem 0}:global(.support-form input),:global(.support-form select),:global(.support-form textarea){font:inherit;padding:.8rem;border:1px solid #cfc6b4;border-radius:5px;background:#fff;width:100%;box-sizing:border-box}</style>

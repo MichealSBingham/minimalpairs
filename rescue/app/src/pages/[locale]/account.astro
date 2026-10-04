@@ -1,0 +1,17 @@
+---
+import Base from '../../layouts/Base.astro';
+import AccountPanel from '../../components/AccountPanel';
+import { authReady } from '../../lib/auth';
+import { getPracticeLanguages } from '../../lib/content';
+import { getListeningPlanCatalog } from '../../lib/listening-plan-catalog';
+import { commerce, commerceLocales } from '../../lib/commerce-i18n';
+export function getStaticPaths() { return commerceLocales.filter(locale => locale !== 'en').map(locale => ({ params: { locale } })); }
+const locale = Astro.params.locale!;
+const t = commerce(locale);
+const displayNames = new Intl.DisplayNames([locale], { type: 'language' });
+const languages = getPracticeLanguages().map(language => ({ ...language, name: displayNames.of(language.id) || language.name }));
+const planCatalog = getListeningPlanCatalog(languages);
+---
+<Base title={`${t('account')} | MinimalPairs`} description={t('accountDescription')} locale={locale} noindex>
+<AccountPanel languages={languages} planCatalog={planCatalog} authEnabled={authReady} locale={locale} client:load />
+</Base>
