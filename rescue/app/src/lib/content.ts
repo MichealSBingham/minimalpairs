@@ -10,7 +10,7 @@ export function getLanguages(): Language[] {
   const languages: Language[] = Array.isArray(data) ? data : data.languages || [];
   return languages;
 }
-export const slugFor = (language: Language) => `${language.name.toLowerCase().replace(/\s+/g, '-')}-minimal-pairs`;
+export const slugFor = (language: Language) => language.id === 'zh' ? 'mandarin-chinese-minimal-pairs' : `${language.name.toLowerCase().replace(/\s+/g, '-')}-minimal-pairs`;
 
 export function getPracticeLanguages(): Language[] {
   return [usEnglish as Language, ...['fr','de','es','it','zh','pt','ru','ja'].map(bank => JSON.parse(fs.readFileSync(path.resolve(`src/data/${bank}-chatterbox-curriculum.json`),'utf8')) as Language)];

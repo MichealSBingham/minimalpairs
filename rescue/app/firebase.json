@@ -304,6 +304,51 @@
         "source": "/english/aw-vs-o",
         "destination": "/learn/en-thought-lot-gb",
         "type": 301
+      },
+      {
+        "source": "/mandarin-minimal-pairs",
+        "destination": "/mandarin-chinese-minimal-pairs",
+        "type": 301
+      },
+      {
+        "source": "/es/mandarin-minimal-pairs",
+        "destination": "/es/mandarin-chinese-minimal-pairs",
+        "type": 301
+      },
+      {
+        "source": "/fr/mandarin-minimal-pairs",
+        "destination": "/fr/mandarin-chinese-minimal-pairs",
+        "type": 301
+      },
+      {
+        "source": "/pt/mandarin-minimal-pairs",
+        "destination": "/pt/mandarin-chinese-minimal-pairs",
+        "type": 301
+      },
+      {
+        "source": "/de/mandarin-minimal-pairs",
+        "destination": "/de/mandarin-chinese-minimal-pairs",
+        "type": 301
+      },
+      {
+        "source": "/it/mandarin-minimal-pairs",
+        "destination": "/it/mandarin-chinese-minimal-pairs",
+        "type": 301
+      },
+      {
+        "source": "/ru/mandarin-minimal-pairs",
+        "destination": "/ru/mandarin-chinese-minimal-pairs",
+        "type": 301
+      },
+      {
+        "source": "/ja/mandarin-minimal-pairs",
+        "destination": "/ja/mandarin-chinese-minimal-pairs",
+        "type": 301
+      },
+      {
+        "source": "/zh/mandarin-minimal-pairs",
+        "destination": "/zh/mandarin-chinese-minimal-pairs",
+        "type": 301
       }
     ],
     "headers": [
