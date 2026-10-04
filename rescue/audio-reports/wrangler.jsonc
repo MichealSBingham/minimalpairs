@@ -1,1 +1,32 @@
-{"name":"minimalpairs-audio-reports","main":"worker.mjs","compatibility_date":"2026-09-26","workers_dev":true,"preview_urls":false,"send_metrics":false,"observability":{"enabled":false},"durable_objects":{"bindings":[{"name":"REPORTS","class_name":"ReportInbox"}]},"migrations":[{"tag":"v1","new_sqlite_classes":["ReportInbox"]}]}
+{
+  "name": "minimalpairs-audio-reports",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-09-26",
+  "workers_dev": true,
+  "preview_urls": false,
+  "send_metrics": false,
+  "observability": {
+    "enabled": false
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "REPORTS",
+        "class_name": "ReportInbox"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": [
+        "ReportInbox"
+      ]
+    }
+  ],
+  "vars": {
+    "NOTIFICATIONS_ENABLED": "false",
+    "NOTIFY_TO": "sirmichealbingham@gmail.com",
+    "NOTIFY_FROM": "support@minimalpairs.co"
+  }
+}

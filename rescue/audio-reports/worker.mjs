@@ -1,12 +1,22 @@
+import {queueNotification, deliverNext, notificationStatus} from './notifications.mjs';
 const origins=new Set(['https://minimalpairs.web.app','https://minimalpairs.co','https://www.minimalpairs.co']);
 const hex=/^[a-f0-9]{64}$/;
 export function validReport(x){return x&&Object.keys(x).every(k=>['clipId','sha256','languageId','voiceId','reason'].includes(k))&&hex.test(x.clipId)&&hex.test(x.sha256)&&/^[a-zA-Z0-9-]{1,24}$/.test(x.languageId)&&/^[a-zA-Z0-9_-]{1,100}$/.test(x.voiceId)&&['pronunciation','repetition','noise','playback'].includes(x.reason);}
-export function validSupport(x){return x&&Object.keys(x).every(k=>['email','topic','message','requestId'].includes(k))&&typeof x.email==='string'&&x.email.length<=254&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(x.email)&&['account','billing','audio','other'].includes(x.topic)&&typeof x.message==='string'&&x.message.trim().length>=5&&x.message.length<=4000&&/^[a-f0-9-]{36}$/.test(x.requestId);}
+export function validSupport(x){return x&&Object.keys(x).every(k=>['email','topic','message','requestId'].includes(k))&&typeof x.email==='string'&&x.email.length<=254&&!/[<>,;\"\r\n]/.test(x.email)&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(x.email)&&['account','billing','audio','other'].includes(x.topic)&&typeof x.message==='string'&&x.message.trim().length>=5&&x.message.length<=4000&&/^[a-f0-9-]{36}$/.test(x.requestId);}
 const json=(data,status=200)=>Response.json(data,{status});
 export class ReportInbox{
  constructor(ctx,env){this.ctx=ctx;this.env=env;}
  async fetch(request){
   const u=new URL(request.url),s=this.ctx.storage;
+  if(u.pathname==='/admin/notifications'){
+   if(!this.env.ADMIN_TOKEN||request.headers.get('Authorization')!=='Bearer '+this.env.ADMIN_TOKEN)return json({error:'Unauthorized'},401);
+   if(request.method==='POST'){
+    for(const r of (await s.list({prefix:'support:',limit:10000})).values())await s.transaction(tx=>queueNotification(tx,r.ticketId,'support',r));
+    for(const r of (await s.list({prefix:'report:',limit:10000})).values())await s.transaction(tx=>queueNotification(tx,r.clipId+'-'+r.sha256+'-'+r.reason,'report',r));
+    await s.setAlarm(Date.now()+2000);
+   }else if(request.method!=='GET')return json({error:'Method not allowed'},405);
+   return json(await notificationStatus(s,this.env));
+  }
   if(u.pathname==='/admin/support'){
    if(!this.env.ADMIN_TOKEN||request.headers.get('Authorization')!=='Bearer '+this.env.ADMIN_TOKEN)return json({error:'Unauthorized'},401);
    if(request.method!=='GET')return json({error:'Method not allowed'},405);
@@ -33,8 +43,8 @@ export class ReportInbox{
    const key='support:'+hash+':'+body.requestId,existing=await tx.get(key);
    if(existing)return json({saved:true,ticketId:existing.ticketId});
    const total=await tx.get('supportTotal')||0;if(total>=10000)return json({error:'Please try again later'},503);
-   const ticketId=crypto.randomUUID();await tx.put(key,{ticketId,email:body.email.trim(),topic:body.topic,message:body.message.trim(),createdAt:new Date().toISOString()});
-   await tx.put('supportTotal',total+1);await tx.put(rateKey,n+1);await tx.setAlarm(Date.now()+86400000);return json({saved:true,ticketId});
+   const ticketId=crypto.randomUUID(),ticket={ticketId,email:body.email.trim(),topic:body.topic,message:body.message.trim(),createdAt:new Date().toISOString()};await tx.put(key,ticket);
+   await tx.put('supportTotal',total+1);await tx.put(rateKey,n+1);await queueNotification(tx,ticketId,'support',ticket);return json({saved:true,ticketId});
   });
   return s.transaction(async tx=>{
    const rateKey='rate:'+day+':'+hash,n=await tx.get(rateKey)||0;
@@ -46,17 +56,18 @@ export class ReportInbox{
    if(!old&&total>=10000)return json({error:'Please try again later'},503);
    await tx.put(rateKey,n+1);await tx.put(duplicate,true);
    await tx.put(key,{...body,count:(old?.count||0)+1,firstSeen:old?.firstSeen||new Date().toISOString(),lastSeen:new Date().toISOString()});
-   if(!old)await tx.put('total',total+1);
-   await tx.setAlarm(Date.now()+86400000);return json({saved:true});
+   if(!old){await tx.put('total',total+1);await queueNotification(tx,body.clipId+'-'+body.sha256+'-'+body.reason,'report',{...body,firstSeen:new Date().toISOString()});}
+   else await tx.setAlarm(Date.now()+2000);return json({saved:true});
   });
  }
  async alarm(){
   const s=this.ctx.storage,today=new Date().toISOString().slice(0,10);
   for(const prefix of ['rate:','seen:']){let cursor;do{const rows=await s.list({prefix,limit:500,...(cursor?{startAfter:cursor}:{})});if(!rows.size)break;cursor=[...rows.keys()].at(-1);for(const key of rows.keys())if(!key.startsWith(prefix+today+':'))await s.delete(key);}while(cursor);}
+  await deliverNext(s,this.env);
  }
 }
 export default{async fetch(request,env){
- const origin=request.headers.get('Origin');const admin=['/admin/reports','/admin/support'].includes(new URL(request.url).pathname);
+ const origin=request.headers.get('Origin');const admin=['/admin/reports','/admin/support','/admin/notifications'].includes(new URL(request.url).pathname);
  if(!admin&&!origins.has(origin))return json({error:'Origin not allowed'},403);
  if(request.method==='OPTIONS')return new Response(null,{status:204,headers:{'Access-Control-Allow-Origin':origin,'Access-Control-Allow-Methods':'POST','Access-Control-Allow-Headers':'Content-Type','Vary':'Origin'}});
  const response=await env.REPORTS.getByName('inbox').fetch(request);const headers=new Headers(response.headers);headers.set('Cache-Control','no-store');if(origins.has(origin)){headers.set('Access-Control-Allow-Origin',origin);headers.set('Vary','Origin');}return new Response(response.body,{status:response.status,headers});
