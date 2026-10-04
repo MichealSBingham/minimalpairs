@@ -1,0 +1,283 @@
+{
+  "passed": true,
+  "errors": [],
+  "contrasts": 4,
+  "pairs": 12,
+  "uniqueWords": 24,
+  "eligibleReferencePairXWordCategoryCombinations": 48,
+  "requiredCompleteCollectionClips": 48,
+  "pairChecks": [
+    {
+      "pairId": "en-pen-pun",
+      "differingTokenIndices": [
+        1
+      ],
+      "xChoicesByCategory": [
+        [
+          "ten",
+          "hem"
+        ],
+        [
+          "ton",
+          "hum"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-ten-ton",
+      "differingTokenIndices": [
+        1
+      ],
+      "xChoicesByCategory": [
+        [
+          "pen",
+          "hem"
+        ],
+        [
+          "pun",
+          "hum"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-hem-hum",
+      "differingTokenIndices": [
+        1
+      ],
+      "xChoicesByCategory": [
+        [
+          "pen",
+          "ten"
+        ],
+        [
+          "pun",
+          "ton"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-kin-king",
+      "differingTokenIndices": [
+        2
+      ],
+      "xChoicesByCategory": [
+        [
+          "pin",
+          "win"
+        ],
+        [
+          "ping",
+          "wing"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-pin-ping",
+      "differingTokenIndices": [
+        2
+      ],
+      "xChoicesByCategory": [
+        [
+          "kin",
+          "win"
+        ],
+        [
+          "king",
+          "wing"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-win-wing",
+      "differingTokenIndices": [
+        2
+      ],
+      "xChoicesByCategory": [
+        [
+          "kin",
+          "pin"
+        ],
+        [
+          "king",
+          "ping"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-tip-dip",
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "tie",
+          "town"
+        ],
+        [
+          "die",
+          "down"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-tie-die",
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "tip",
+          "town"
+        ],
+        [
+          "dip",
+          "down"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-town-down",
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "tip",
+          "tie"
+        ],
+        [
+          "dip",
+          "die"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-rut-rot",
+      "differingTokenIndices": [
+        1
+      ],
+      "xChoicesByCategory": [
+        [
+          "hut",
+          "nut"
+        ],
+        [
+          "hot",
+          "not"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-hut-hot",
+      "differingTokenIndices": [
+        1
+      ],
+      "xChoicesByCategory": [
+        [
+          "rut",
+          "nut"
+        ],
+        [
+          "rot",
+          "not"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-nut-not",
+      "differingTokenIndices": [
+        1
+      ],
+      "xChoicesByCategory": [
+        [
+          "rut",
+          "hut"
+        ],
+        [
+          "rot",
+          "hot"
+        ]
+      ]
+    }
+  ],
+  "mutationChecks": [
+    {
+      "name": "reversed category order",
+      "rejected": true,
+      "expectedError": "category phoneme"
+    },
+    {
+      "name": "second changed phoneme",
+      "rejected": true,
+      "expectedError": "one-phoneme substitution"
+    },
+    {
+      "name": "diphthong split into two tokens",
+      "rejected": true,
+      "expectedError": "tokenization"
+    },
+    {
+      "name": "extra stop after final velar nasal",
+      "rejected": true,
+      "expectedError": "one-phoneme substitution"
+    },
+    {
+      "name": "isolated X trial group",
+      "rejected": true,
+      "expectedError": "insufficient different X words"
+    },
+    {
+      "name": "medial target mislabeled as final",
+      "rejected": true,
+      "expectedError": "target position"
+    },
+    {
+      "name": "reserved spelling",
+      "rejected": true,
+      "expectedError": "reserved text"
+    },
+    {
+      "name": "reserved homophone under another spelling",
+      "rejected": true,
+      "expectedError": "reserved IPA"
+    },
+    {
+      "name": "dictionary pronunciation altered",
+      "rejected": true,
+      "expectedError": "dictionary normalization mismatch"
+    },
+    {
+      "name": "missing requested word",
+      "rejected": true,
+      "expectedError": "audio inventory mismatch"
+    },
+    {
+      "name": "audio category swapped",
+      "rejected": true,
+      "expectedError": "audio category binding"
+    },
+    {
+      "name": "invented approved clip",
+      "rejected": true,
+      "expectedError": "invented audio approval"
+    },
+    {
+      "name": "already staged contrast",
+      "rejected": true,
+      "expectedError": "existing contrast"
+    },
+    {
+      "name": "wrong legacy phoneme mapping",
+      "rejected": true,
+      "expectedError": "legacy phoneme mismatch"
+    }
+  ],
+  "date": "2026-09-28",
+  "inputSha256": {
+    "candidates.json": "c696a612f46f6a897647497832771d686a4409d6741f82dbf52ad1d27b996298",
+    "source-audit.json": "0bc30fde49246228addd3163b39aa9bcc004553da367844b99d1205577879333",
+    "audio-request.json": "6a89c1fc9948523672d15ac908d61a96a14c6ab0ac18ae403e6eea180fe5e8e2",
+    "selection-evidence.json": "36c74ccb42874282a59f01130638d12eac10263652a48ddaeaab89e02c54a774"
+  },
+  "limitation": "Offline integrity and current exclusion checks; manual source reading is recorded separately. No audio or learning efficacy is validated."
+}

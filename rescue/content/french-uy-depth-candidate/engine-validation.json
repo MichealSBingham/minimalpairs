@@ -1,0 +1,56 @@
+{
+  "checkedAt": "2026-09-30T19:22:06.623Z",
+  "passed": true,
+  "candidateSha256": "8500d696a436a98e61a9b945c2b61e53cf9eab5cb5eff5916623f982d704b726",
+  "engineSha256": "1edcd7803a6ad89c980c494ab7fed8ad01c1d8c989d79495477c27511153b3ce",
+  "sessions": [
+    {
+      "scope": "fr-u-y-depth-final-v1",
+      "sessions": 50,
+      "questions": 600,
+      "observedCells": 48,
+      "expectedCells": 48,
+      "revisitChecks": 450
+    },
+    {
+      "scope": "fr-u-y-depth-medial-v1",
+      "sessions": 50,
+      "questions": 600,
+      "observedCells": 48,
+      "expectedCells": 48,
+      "revisitChecks": 450
+    },
+    {
+      "scope": "mixed-engine-only",
+      "sessions": 50,
+      "questions": 600,
+      "observedCells": 96,
+      "expectedCells": 96,
+      "revisitChecks": 450
+    }
+  ],
+  "forcedMappings": 96,
+  "negativeControls": [
+    {
+      "name": "X repeats reference pair",
+      "rejected": true
+    },
+    {
+      "name": "X comes from wrong focus set",
+      "rejected": true
+    },
+    {
+      "name": "same voice for references and X",
+      "rejected": true
+    },
+    {
+      "name": "X uses reference word token index",
+      "rejected": true
+    }
+  ],
+  "limitations": [
+    "No app content import, playback, rendering, real profile coverage or listening review.",
+    "The engine preserves groups. Current Trainer focus is contrast-wide; a mixed revisit must implement per-reference-set focus before release.",
+    "Both words in each pair must retain the declared category ordering. Engine metadata does not repair incorrectly ordered content."
+  ]
+}

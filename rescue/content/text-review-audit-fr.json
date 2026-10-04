@@ -1,0 +1,142 @@
+{
+  "languageId": "fr",
+  "status": "preliminary-text-audit",
+  "reviewedAt": "2026-09-30T21:04:07Z",
+  "summary": "All 23 current French contrasts and 70 pairs pass internal text/phoneme consistency and cross-word eligibility checks. No definite lexical, IPA-category or category-order correction was established in this bounded pass. Six needs-review items concern explicit dialect/transcription choices or instructional grouping, including caveats already present in the curriculum. These are questions for owner review, not six proven bad pairs. This is not full linguistic certification or audio approval.",
+  "curriculumSha256": "9e75f976f8b72d0df1f6b5da4c6afda06074d4f13ae91a533c0a77ebe7fe1db6",
+  "counts": {
+    "contrasts": 23,
+    "pairs": 70,
+    "uniqueWordSpellings": 103,
+    "knownCorrections": 0,
+    "needsReviewFindings": 6
+  },
+  "checksPerformed": [
+    {
+      "check": "All current French pair text and metadata read",
+      "result": "23 contrasts, 70 pairs, 103 unique word spellings; meanings, focus wording, notes, category order and dialect caveats inspected."
+    },
+    {
+      "check": "Internal phonemic minimality",
+      "result": "70/70 authored phoneme arrays differ at exactly one token; that token equals targetTokenIndex and the declared contrast categories in words[0]/words[1] order. Joined tokens exactly match each stored IPA. This tests the authored transcription, not whether a speaker actually realizes it."
+    },
+    {
+      "check": "Repeated vocabulary and identifiers",
+      "result": "No duplicate French pair IDs and no repeated word spelling with conflicting stored IPA."
+    },
+    {
+      "check": "Cross-word compatibility against current engine rules",
+      "result": "Every pair has a different-pair, different-word X candidate for either category within its trialGroup. Exhaustive candidate enumeration yields 576 reference-pair/category/X-pair/answer-side combinations. Actual buildSession run: 1150 seeded sessions, 13800 questions, all 70 pairs used as references, zero wrong-category, same-word, incompatible-group or declared same-position violations. No audio was loaded or generated."
+    },
+    {
+      "check": "Position and focus review",
+      "result": "Stored target positions agree with token positions. Mixed-position groups: fr-s-z (medial/final), fr-y-i (medial/final), fr-eh-eu-open (initial/medial). The last group retains the same vowel-before-final-r environment and its focus instruction remains accurate for air/heure; mixed word position alone is not evidence of an invalid pair."
+    },
+    {
+      "check": "Targeted primary dictionary review",
+      "result": "Read TLFi entry bodies and pronunciation sections through the public Portail lexical API for bas/basse, base, saute, sot/sotte, taie, dais, pré, prêt, lait, raie, geai, chai, pagne, fée, preux and paume. Selected /tɛ/, /dɛ/, /ʒɛ/, /ʃɛ/, /fe/, /pʁø/, /sot/ and /sɔt/ categories are supported. Historic vowel-length/backness notation requires the broad-transcription caveat below; words were not rejected merely for being uncommon.",
+      "sources": [
+        "https://www.portail-lexical.fr/api/word/bas/adjectif",
+        "https://www.portail-lexical.fr/api/word/base/nom",
+        "https://www.portail-lexical.fr/api/word/saute/nom",
+        "https://www.portail-lexical.fr/api/word/sot/adjectif",
+        "https://www.portail-lexical.fr/api/word/taie/nom",
+        "https://www.portail-lexical.fr/api/word/dais/nom",
+        "https://www.portail-lexical.fr/api/word/pr%C3%A9/nom",
+        "https://www.portail-lexical.fr/api/word/pr%C3%AAt/adjectif",
+        "https://www.portail-lexical.fr/api/word/lait/nom",
+        "https://www.portail-lexical.fr/api/word/raie/nom",
+        "https://www.portail-lexical.fr/api/word/geai/nom",
+        "https://www.portail-lexical.fr/api/word/chai/nom",
+        "https://www.portail-lexical.fr/api/word/pagne/nom",
+        "https://www.portail-lexical.fr/api/word/f%C3%A9e/nom",
+        "https://www.portail-lexical.fr/api/word/preux/adjectif",
+        "https://www.portail-lexical.fr/api/word/paume/nom"
+      ]
+    },
+    {
+      "check": "Primary phonetics and dialect references",
+      "result": "Reviewed the Parisian-based IPA illustration; Eychenne’s Southern French mid-vowel/schwa analysis; and the published EPG study’s evidence for speaker/variety differences in the palatal-nasal category. They support retaining explicit variety and broad-phonemic qualifications, not certifying all Metropolitan French speakers as identical.",
+      "sources": [
+        "https://doi.org/10.1017/S0025100300004874",
+        "https://julieneychenne.info/files/pdf/Eychenne2014_JFLS_VF.pdf",
+        "https://doi.org/10.1017/S0959269523000212"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "contrastId": "fr-s-z",
+      "pairId": "fr-basse-base",
+      "severity": "needs-review",
+      "message": "Transcription-convention question, not a confirmed wrong pair: the selected /bas/–/baz/ uses merged broad /a/. TLFi’s historical body gives both basse and base a back long vowel; base also records a front-vowel transcription. Do not treat the portal header or historical length notation as an automatic instruction to change only one member. The current pair can be valid under an explicitly selected modern merged-low-vowel reference.",
+      "suggestedCorrection": "Document the chosen broad /a/ convention and matching vowel category for both members when approving the list; retain or replace the pair only after that choice. No automatic IPA replacement is recommended.",
+      "sources": [
+        "https://www.portail-lexical.fr/api/word/bas/adjectif",
+        "https://www.portail-lexical.fr/api/word/base/nom",
+        "https://doi.org/10.1017/S0025100300004874"
+      ]
+    },
+    {
+      "contrastId": "fr-s-z",
+      "severity": "needs-review",
+      "message": "Instructional grouping question: poisson/poison and coussin/cousin target an intervocalic consonant, while basse/base targets a final consonant, all in trialGroup all. The existing caution acknowledges this. Every pair is internally minimal under its selected IPA and the engine can generate cross-position X trials; decide whether that transfer is intended at this stage.",
+      "suggestedCorrection": "Either explicitly keep mixed-position transfer, or curate enough distinct-word pairs per position before splitting trial groups. Splitting the lone final pair by itself would make it ineligible for cross-word practice.",
+      "sources": [
+        "rescue/content/curriculum.json",
+        "rescue/app/src/lib/practice-engine.ts"
+      ]
+    },
+    {
+      "contrastId": "fr-y-i",
+      "severity": "needs-review",
+      "message": "Instructional grouping question: rue/riz has an open syllable and a word-final target, while bulle/bile and pur/pire have vowels before final consonants. The generic instruction to attend to the vowel is accurate; these are not structurally invalid pairs. Confirm that mixed-environment generalization is intended for this lesson.",
+      "suggestedCorrection": "Keep the deliberate mixed-context lesson or add sufficient same-position vocabulary before splitting groups; do not isolate rue/riz as a singleton.",
+      "sources": [
+        "rescue/content/curriculum.json",
+        "rescue/app/src/lib/practice-engine.ts"
+      ]
+    },
+    {
+      "contrastId": "fr-e-e-open",
+      "severity": "needs-review",
+      "message": "Reference-variety approval remains necessary. The written pré/prêt, thé/taie and dé/dais pairs are dictionary-supported, but word-final /e/–/ɛ/ is not a preserved contrast for every Metropolitan French variety. The current northern-reference caveat is appropriate and should survive owner review; the generic language label alone is insufficient.",
+      "suggestedCorrection": "Approve an explicit contrast-preserving reference variety alongside these words and IPA. Do not mark a regional merger as a misspelling or universally wrong French pronunciation.",
+      "sources": [
+        "https://www.portail-lexical.fr/api/word/pr%C3%A9/nom",
+        "https://www.portail-lexical.fr/api/word/pr%C3%AAt/adjectif",
+        "https://www.portail-lexical.fr/api/word/taie/nom",
+        "https://www.portail-lexical.fr/api/word/dais/nom",
+        "https://julieneychenne.info/files/pdf/Eychenne2014_JFLS_VF.pdf"
+      ]
+    },
+    {
+      "contrastId": "fr-o-o-open",
+      "severity": "needs-review",
+      "message": "Reference-variety/transcription approval remains necessary. Paume/pomme, côte/cote and saute/sotte target the selected northern /o/–/ɔ/ distinction; Southern French may neutralize the categories. Historic TLFi notation marks length in paume and saute, while the stored IPA is broad and omits it. Existing wording partly documents this; it is not evidence that saute is invented or that /sot/ is a typo.",
+      "suggestedCorrection": "Retain explicit northern-reference and broad-IPA qualifications when approving the text set; keep the noun sense of saute and the feminine form sotte visible in the owner checklist.",
+      "sources": [
+        "https://www.portail-lexical.fr/api/word/paume/nom",
+        "https://www.portail-lexical.fr/api/word/saute/nom",
+        "https://www.portail-lexical.fr/api/word/sot/adjectif",
+        "https://julieneychenne.info/files/pdf/Eychenne2014_JFLS_VF.pdf"
+      ]
+    },
+    {
+      "contrastId": "fr-n-gn",
+      "severity": "needs-review",
+      "message": "Broad-category question already acknowledged in the curriculum: /ɲ/ is a conventional phonemic label, not a guarantee that every selected French speaker uses the same single palatal closure. Current peine/peigne, panne/pagne and reine/règne are internally valid final-position comparisons. Published articulatory work reports speaker- and variety-dependent realizations; this audit does not warrant silently rewriting gn as /nj/ or rejecting /ɲ/.",
+      "suggestedCorrection": "Keep the broad /ɲ/ convention and explicit realization caveat in the owner-approved text specification; defer the exact speaker realization decision to a later independent audio review.",
+      "sources": [
+        "https://www.portail-lexical.fr/api/word/pagne/nom",
+        "https://doi.org/10.1017/S0959269523000212"
+      ]
+    }
+  ],
+  "limitations": [
+    "Only the current French curriculum was audited; other languages, isolated depth candidates and reserved assessment pools were not changed or certified.",
+    "All 70 pairs received structural/text inspection, but only 16 selected dictionary headwords received a fresh primary-source lookup in this bounded pass. This is not a full independent dictionary attestation of all 103 words.",
+    "No audio was played, generated, analyzed, approved or rejected by this text audit. A structurally valid pair does not establish recording correctness.",
+    "Owner approval of word lists, meanings, reference variety and pedagogical grouping remains pending. No curriculum/product changes were made."
+  ]
+}

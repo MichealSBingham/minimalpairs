@@ -1,0 +1,9 @@
+{
+  "id": "text-bank-v2",
+  "label": "Text bank v2",
+  "status": "frozen-for-audio-planning",
+  "frozenAt": "2026-10-01T18:49:55.498Z",
+  "libraryFingerprint": "baa80a01dbbc75f7e28395829cb9b4c9d471da93220f7b7f0fe05f36ccafd768",
+  "scope": "Mandarin correction: balanced syllable frames across all six citation-tone comparisons, 58 training tone words and eight separate assessment words. Other language banks preserved from v1. Small voice audition authorized separately; text selection does not certify pronunciation or approve recordings.",
+  "audioGenerated": 0
+}

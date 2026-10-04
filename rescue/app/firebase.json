@@ -1,0 +1,488 @@
+{
+  "hosting": {
+    "site": "minimalpairs",
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "cleanUrls": true,
+    "trailingSlash": false,
+    "redirects": [
+      {
+        "source": "/french/ou-vs-u",
+        "destination": "/learn/fr-u-y",
+        "type": 301
+      },
+      {
+        "source": "/french/an-vs-on",
+        "destination": "/learn/fr-an-on",
+        "type": 301
+      },
+      {
+        "source": "/french/z-vs-s",
+        "destination": "/learn/fr-s-z",
+        "type": 301
+      },
+      {
+        "source": "/english/short-i-vs-long-ee",
+        "destination": "/learn/en-i-ih",
+        "type": 301
+      },
+      {
+        "source": "/english/l-vs-r",
+        "destination": "/learn/en-r-l",
+        "type": 301
+      },
+      {
+        "source": "/english/voiceless-th-vs-s",
+        "destination": "/learn/en-th-s",
+        "type": 301
+      },
+      {
+        "source": "/chinese-minimal-pairs",
+        "destination": "/mandarin-chinese-minimal-pairs",
+        "type": 301
+      },
+      {
+        "source": "/login",
+        "destination": "/account",
+        "type": 302
+      },
+      {
+        "source": "/french/an-vs-in",
+        "destination": "/learn/fr-an-in",
+        "type": 301
+      },
+      {
+        "source": "/french/in-vs-on",
+        "destination": "/learn/fr-in-on",
+        "type": 301
+      },
+      {
+        "source": "/french/e-vs-e-ouvert",
+        "destination": "/learn/fr-e-e-open",
+        "type": 301
+      },
+      {
+        "source": "/french/o-vs-o-ouvert",
+        "destination": "/learn/fr-o-o-open",
+        "type": 301
+      },
+      {
+        "source": "/french/b-vs-p",
+        "destination": "/learn/fr-b-p",
+        "type": 301
+      },
+      {
+        "source": "/french/j-vs-ch",
+        "destination": "/learn/fr-zh-sh",
+        "type": 301
+      },
+      {
+        "source": "/french/u-vs-eu",
+        "destination": "/learn/fr-y-oe",
+        "type": 301
+      },
+      {
+        "source": "/french/ou-vs-eu",
+        "destination": "/learn/fr-u-oe",
+        "type": 301
+      },
+      {
+        "source": "/french/u-vs-i",
+        "destination": "/learn/fr-y-i",
+        "type": 301
+      },
+      {
+        "source": "/french/e-vs-eu",
+        "destination": "/learn/fr-e-oe",
+        "type": 301
+      },
+      {
+        "source": "/french/e-ouvert-vs-eu-ouvert",
+        "destination": "/learn/fr-eh-eu-open",
+        "type": 301
+      },
+      {
+        "source": "/french/d-vs-t",
+        "destination": "/learn/fr-d-t",
+        "type": 301
+      },
+      {
+        "source": "/french/g-vs-k",
+        "destination": "/learn/fr-g-k",
+        "type": 301
+      },
+      {
+        "source": "/french/v-vs-f",
+        "destination": "/learn/fr-v-f",
+        "type": 301
+      },
+      {
+        "source": "/french/b-vs-v",
+        "destination": "/learn/fr-b-v",
+        "type": 301
+      },
+      {
+        "source": "/french/ch-vs-s",
+        "destination": "/learn/fr-sh-s",
+        "type": 301
+      },
+      {
+        "source": "/french/l-vs-r",
+        "destination": "/learn/fr-l-r",
+        "type": 301
+      },
+      {
+        "source": "/french/n-vs-gn",
+        "destination": "/learn/fr-n-gn",
+        "type": 301
+      },
+      {
+        "source": "/french/o-vs-ou",
+        "destination": "/learn/fr-o-u",
+        "type": 301
+      },
+      {
+        "source": "/french/o-vs-on",
+        "destination": "/learn/fr-o-on",
+        "type": 301
+      },
+      {
+        "source": "/learn/it-length",
+        "destination": "/italian-minimal-pairs",
+        "type": 301
+      },
+      {
+        "source": "/learn/ru-hard-soft",
+        "destination": "/russian-minimal-pairs",
+        "type": 301
+      },
+      {
+        "source": "/french/eu-open-vs-closed",
+        "destination": "/learn/fr-eu-closed-open",
+        "type": 301
+      },
+      {
+        "source": "/french/o-ouvert-vs-ou",
+        "destination": "/learn/fr-o-open-u",
+        "type": 301
+      },
+      {
+        "source": "/french/u-vs-eu-ouvert",
+        "destination": "/learn/fr-y-eu-open",
+        "type": 301
+      },
+      {
+        "source": "/french/a-vs-an",
+        "destination": "/learn/fr-a-an",
+        "type": 301
+      },
+      {
+        "source": "/french/e-vs-in",
+        "destination": "/learn/fr-e-in",
+        "type": 301
+      },
+      {
+        "source": "/french/a-vs-e",
+        "destination": "/learn/fr-a-e",
+        "type": 301
+      },
+      {
+        "source": "/french/i-vs-e",
+        "destination": "/learn/fr-i-e",
+        "type": 301
+      },
+      {
+        "source": "/french/a-vs-e-ouvert",
+        "destination": "/learn/fr-a-eh",
+        "type": 301
+      },
+      {
+        "source": "/english/short-u-vs-long-oo",
+        "destination": "/learn/en-foot-goose",
+        "type": 301
+      },
+      {
+        "source": "/english/voiceless-th-vs-f",
+        "destination": "/learn/en-th-f",
+        "type": 301
+      },
+      {
+        "source": "/english/voiced-th-vs-d",
+        "destination": "/learn/en-dh-d",
+        "type": 301
+      },
+      {
+        "source": "/english/voiced-th-vs-z",
+        "destination": "/learn/en-dh-z",
+        "type": 301
+      },
+      {
+        "source": "/english/v-vs-w",
+        "destination": "/learn/en-v-w",
+        "type": 301
+      },
+      {
+        "source": "/english/s-vs-z",
+        "destination": "/learn/en-s-z",
+        "type": 301
+      },
+      {
+        "source": "/english/f-vs-v",
+        "destination": "/learn/en-f-v",
+        "type": 301
+      },
+      {
+        "source": "/english/ae-vs-e",
+        "destination": "/learn/en-trap-dress",
+        "type": 301
+      },
+      {
+        "source": "/english/ae-vs-uh",
+        "destination": "/learn/en-ae-strut",
+        "type": 301
+      },
+      {
+        "source": "/english/e-vs-uh",
+        "destination": "/learn/en-dress-strut",
+        "type": 301
+      },
+      {
+        "source": "/english/k-vs-g",
+        "destination": "/learn/en-k-g",
+        "type": 301
+      },
+      {
+        "source": "/english/n-vs-ng",
+        "destination": "/learn/en-n-ng",
+        "type": 301
+      },
+      {
+        "source": "/english/p-vs-b",
+        "destination": "/learn/en-p-b",
+        "type": 301
+      },
+      {
+        "source": "/english/sh-vs-s",
+        "destination": "/learn/en-sh-s",
+        "type": 301
+      },
+      {
+        "source": "/english/sh-vs-ch",
+        "destination": "/learn/en-sh-ch",
+        "type": 301
+      },
+      {
+        "source": "/english/t-vs-d",
+        "destination": "/learn/en-t-d",
+        "type": 301
+      },
+      {
+        "source": "/english/uu-vs-uh",
+        "destination": "/learn/en-foot-strut",
+        "type": 301
+      },
+      {
+        "source": "/english/uh-vs-ah",
+        "destination": "/learn/en-strut-ah",
+        "type": 301
+      },
+      {
+        "source": "/english/v-vs-b",
+        "destination": "/learn/en-v-b",
+        "type": 301
+      },
+      {
+        "source": "/english/zh-vs-j",
+        "destination": "/learn/en-zh-j",
+        "type": 301
+      },
+      {
+        "source": "/english/aw-vs-o",
+        "destination": "/learn/en-thought-lot-gb",
+        "type": 301
+      }
+    ],
+    "headers": [
+      {
+        "source": "/data/*.json",
+        "headers": [
+          {
+            "key": "X-Robots-Tag",
+            "value": "noindex"
+          }
+        ]
+      },
+      {
+        "source": "**",
+        "headers": [
+          {
+            "key": "X-Content-Type-Options",
+            "value": "nosniff"
+          },
+          {
+            "key": "Referrer-Policy",
+            "value": "strict-origin-when-cross-origin"
+          },
+          {
+            "key": "X-Frame-Options",
+            "value": "SAMEORIGIN"
+          },
+          {
+            "key": "Cross-Origin-Opener-Policy",
+            "value": "same-origin-allow-popups"
+          },
+          {
+            "key": "Permissions-Policy",
+            "value": "microphone=(), camera=(), geolocation=()"
+          },
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=0,must-revalidate"
+          }
+        ]
+      },
+      {
+        "source": "/audio/clips/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=31536000,immutable"
+          }
+        ]
+      },
+      {
+        "source": "/_astro/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=31536000,immutable"
+          }
+        ]
+      },
+      {
+        "source": "/audio/manifest.json",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=60"
+          }
+        ]
+      },
+      {
+        "source": "/audio/human-fr-u-y/clips/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=31536000,immutable"
+          }
+        ]
+      },
+      {
+        "source": "/audio/human-fr-u-y/manifest.json",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=60"
+          }
+        ]
+      },
+      {
+        "source": "/audio/human-en-i-ih/clips/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=31536000,immutable"
+          }
+        ]
+      },
+      {
+        "source": "/audio/fixed-speaker-pilot/clips/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=31536000,immutable"
+          }
+        ]
+      },
+      {
+        "source": "/audio/comparison/*.json",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=60"
+          }
+        ]
+      },
+      {
+        "source": "/audio/fixed-speaker-pilot/*.json",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=60"
+          }
+        ]
+      },
+      {
+        "source": "/audio/human-en-i-ih/manifest.json",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=60"
+          }
+        ]
+      },
+      {
+        "source": "/audio/human-en-ae-strut/clips/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=31536000,immutable"
+          }
+        ]
+      },
+      {
+        "source": "/audio/human-de-i-length/clips/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=31536000,immutable"
+          }
+        ]
+      },
+      {
+        "source": "/audio/human-library.json",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=60"
+          }
+        ]
+      },
+      {
+        "source": "/audio/fixed-reference-expansion/clips/**",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=31536000,immutable"
+          }
+        ]
+      },
+      {
+        "source": "/audio/fixed-reference-expansion/*.json",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public,max-age=60"
+          }
+        ]
+      }
+    ]
+  },
+  "firestore": {
+    "rules": "firestore.rules"
+  }
+}

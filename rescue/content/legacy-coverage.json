@@ -1,0 +1,782 @@
+{
+  "date": "2026-09-28",
+  "scope": "Contrast coverage inventory; not a redirect configuration or claim of full paid-product restoration.",
+  "counts": {
+    "fr": {
+      "legacyContrasts": 31,
+      "starterContrastsPresent": 23,
+      "missing": 8
+    },
+    "en": {
+      "legacyContrasts": 24,
+      "starterContrastsPresent": 6,
+      "missing": 18
+    }
+  },
+  "routes": [
+    {
+      "legacyUrl": "https://minimalpairs.co/",
+      "legacyPath": "/",
+      "language": null,
+      "status": "non-contrast-route",
+      "contrastId": null,
+      "proposedGuidePath": null
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french-minimal-pairs",
+      "legacyPath": "/french-minimal-pairs",
+      "language": null,
+      "status": "non-contrast-route",
+      "contrastId": null,
+      "proposedGuidePath": null
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english-minimal-pairs",
+      "legacyPath": "/english-minimal-pairs",
+      "language": null,
+      "status": "non-contrast-route",
+      "contrastId": null,
+      "proposedGuidePath": null
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/terms",
+      "legacyPath": "/terms",
+      "language": null,
+      "status": "non-contrast-route",
+      "contrastId": null,
+      "proposedGuidePath": null
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/privacy",
+      "legacyPath": "/privacy",
+      "language": null,
+      "status": "non-contrast-route",
+      "contrastId": null,
+      "proposedGuidePath": null
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/ou-vs-u",
+      "legacyPath": "/french/ou-vs-u",
+      "language": "fr",
+      "status": "starter-contrast-present",
+      "contrastId": "fr-u-y",
+      "proposedGuidePath": "/learn/fr-u-y",
+      "scope": "Same contrast has a new starter guide and pair set; this does not establish full old-library equivalence or audio approval.",
+      "legacyDeclaredLabel": "ou vs u (/u/ vs /y/)",
+      "legacyDeclaredPhonemes": [
+        "u",
+        "y"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component Jj; declaration only, not validation of old examples"
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/u-vs-eu",
+      "legacyPath": "/french/u-vs-eu",
+      "language": "fr",
+      "status": "starter-contrast-present",
+      "contrastId": "fr-y-oe",
+      "proposedGuidePath": "/learn/fr-y-oe",
+      "caution": "Exact /ø/ or /œ/ target is confirmed against the legacy page declaration; these categories are kept separate from schwa.",
+      "legacyDeclaredLabel": "u vs eu (/y/ vs /ø/)",
+      "legacyDeclaredPhonemes": [
+        "y",
+        "ø"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component w4; declaration only, not validation of old examples",
+      "scope": "Same declared contrast has a new independently curated starter guide and three pairs; this does not establish full old-library equivalence or audio approval."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/ou-vs-eu",
+      "legacyPath": "/french/ou-vs-eu",
+      "language": "fr",
+      "status": "starter-contrast-present",
+      "contrastId": "fr-u-oe",
+      "proposedGuidePath": "/learn/fr-u-oe",
+      "caution": "Exact /ø/ or /œ/ target is confirmed against the legacy page declaration; these categories are kept separate from schwa.",
+      "legacyDeclaredLabel": "ou vs eu (/u/ vs /ø/)",
+      "legacyDeclaredPhonemes": [
+        "u",
+        "ø"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component S4; declaration only, not validation of old examples",
+      "scope": "Same declared contrast has a new independently curated starter guide and three pairs; this does not establish full old-library equivalence or audio approval."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/eu-open-vs-closed",
+      "legacyPath": "/french/eu-open-vs-closed",
+      "language": "fr",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice.",
+      "caution": "Specify /ø/, /œ/ or schwa accurately; verify lexical contrast and regional neutralization.",
+      "legacyDeclaredLabel": "eu closed vs open (/ø/ vs /œ/)",
+      "legacyDeclaredPhonemes": [
+        "ø",
+        "œ"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component _4; declaration only, not validation of old examples"
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/an-vs-in",
+      "legacyPath": "/french/an-vs-in",
+      "language": "fr",
+      "status": "starter-contrast-present",
+      "contrastId": "fr-an-in",
+      "proposedGuidePath": "/learn/fr-an-in",
+      "scope": "Same contrast has a new starter guide and pair set; this does not establish full old-library equivalence or audio approval.",
+      "legacyDeclaredLabel": "an vs in (/ɑ̃/ vs /ɛ̃/)",
+      "legacyDeclaredPhonemes": [
+        "ɑ̃",
+        "ɛ̃"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component I4; declaration only, not validation of old examples"
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/an-vs-on",
+      "legacyPath": "/french/an-vs-on",
+      "language": "fr",
+      "status": "starter-contrast-present",
+      "contrastId": "fr-an-on",
+      "proposedGuidePath": "/learn/fr-an-on",
+      "scope": "Same contrast has a new starter guide and pair set; this does not establish full old-library equivalence or audio approval.",
+      "legacyDeclaredLabel": "an vs on (/ɑ̃/ vs /ɔ̃/)",
+      "legacyDeclaredPhonemes": [
+        "ɑ̃",
+        "ɔ̃"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component O4; declaration only, not validation of old examples"
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/in-vs-on",
+      "legacyPath": "/french/in-vs-on",
+      "language": "fr",
+      "status": "starter-contrast-present",
+      "contrastId": "fr-in-on",
+      "proposedGuidePath": "/learn/fr-in-on",
+      "scope": "Same contrast has a new starter guide and pair set; this does not establish full old-library equivalence or audio approval.",
+      "legacyDeclaredLabel": "in vs on (/ɛ̃/ vs /ɔ̃/)",
+      "legacyDeclaredPhonemes": [
+        "ɛ̃",
+        "ɔ̃"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component U4; declaration only, not validation of old examples"
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/u-vs-i",
+      "legacyPath": "/french/u-vs-i",
+      "language": "fr",
+      "status": "starter-contrast-present",
+      "contrastId": "fr-y-i",
+      "proposedGuidePath": "/learn/fr-y-i",
+      "legacyDeclaredLabel": "u vs i (/y/ vs /i/)",
+      "legacyDeclaredPhonemes": [
+        "y",
+        "i"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component G4; declaration only, not validation of old examples",
+      "scope": "Same declared contrast has a new independently curated starter guide and three pairs; this does not establish full old-library equivalence or audio approval."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/e-vs-e-ouvert",
+      "legacyPath": "/french/e-vs-e-ouvert",
+      "language": "fr",
+      "status": "starter-contrast-present",
+      "contrastId": "fr-e-e-open",
+      "proposedGuidePath": "/learn/fr-e-e-open",
+      "scope": "Same contrast has a new starter guide and pair set; this does not establish full old-library equivalence or audio approval.",
+      "legacyDeclaredLabel": "é vs è (/e/ vs /ɛ/)",
+      "legacyDeclaredPhonemes": [
+        "e",
+        "ɛ"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component t1; declaration only, not validation of old examples"
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/o-vs-o-ouvert",
+      "legacyPath": "/french/o-vs-o-ouvert",
+      "language": "fr",
+      "status": "starter-contrast-present",
+      "contrastId": "fr-o-o-open",
+      "proposedGuidePath": "/learn/fr-o-o-open",
+      "scope": "Same contrast has a new starter guide and pair set; this does not establish full old-library equivalence or audio approval.",
+      "legacyDeclaredLabel": "o closed vs o open (/o/ vs /ɔ/)",
+      "legacyDeclaredPhonemes": [
+        "o",
+        "ɔ"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component i1; declaration only, not validation of old examples"
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/e-vs-eu",
+      "legacyPath": "/french/e-vs-eu",
+      "language": "fr",
+      "status": "starter-contrast-present",
+      "contrastId": "fr-e-oe",
+      "proposedGuidePath": "/learn/fr-e-oe",
+      "legacyDeclaredLabel": "é vs eu (/e/ vs /ø/)",
+      "legacyDeclaredPhonemes": [
+        "e",
+        "ø"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component h1; declaration only, not validation of old examples",
+      "scope": "Same declared contrast has a new independently curated starter guide and three pairs; this does not establish full old-library equivalence or audio approval.",
+      "caution": "Exact /ø/ or /œ/ target is confirmed against the legacy page declaration; these categories are kept separate from schwa."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/e-ouvert-vs-eu-ouvert",
+      "legacyPath": "/french/e-ouvert-vs-eu-ouvert",
+      "language": "fr",
+      "status": "starter-contrast-present",
+      "contrastId": "fr-eh-eu-open",
+      "proposedGuidePath": "/learn/fr-eh-eu-open",
+      "legacyDeclaredLabel": "è vs eu ouvert (/ɛ/ vs /œ/)",
+      "legacyDeclaredPhonemes": [
+        "ɛ",
+        "œ"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component p1; declaration only, not validation of old examples",
+      "scope": "Same declared contrast has a new independently curated starter guide and three pairs; this does not establish full old-library equivalence or audio approval.",
+      "caution": "Exact /ø/ or /œ/ target is confirmed against the legacy page declaration; these categories are kept separate from schwa."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/o-vs-ou",
+      "legacyPath": "/french/o-vs-ou",
+      "language": "fr",
+      "status": "starter-contrast-present",
+      "contrastId": "fr-o-u",
+      "proposedGuidePath": "/learn/fr-o-u",
+      "legacyDeclaredLabel": "o vs ou (/o/ vs /u/)",
+      "legacyDeclaredPhonemes": [
+        "o",
+        "u"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component v1; declaration only, not validation of old examples",
+      "scope": "Source-checked three-pair preview; complete cached profiles, with pronunciation and speaker consistency unreviewed."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/o-ouvert-vs-ou",
+      "legacyPath": "/french/o-ouvert-vs-ou",
+      "language": "fr",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice.",
+      "legacyDeclaredLabel": "o ouvert vs ou (/ɔ/ vs /u/)",
+      "legacyDeclaredPhonemes": [
+        "ɔ",
+        "u"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component A1; declaration only, not validation of old examples"
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/u-vs-eu-ouvert",
+      "legacyPath": "/french/u-vs-eu-ouvert",
+      "language": "fr",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice.",
+      "legacyDeclaredLabel": "u vs eu ouvert (/y/ vs /œ/)",
+      "legacyDeclaredPhonemes": [
+        "y",
+        "œ"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component C1; declaration only, not validation of old examples"
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/a-vs-an",
+      "legacyPath": "/french/a-vs-an",
+      "language": "fr",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice.",
+      "legacyDeclaredLabel": "a vs an (/a/ vs /ɑ̃/)",
+      "legacyDeclaredPhonemes": [
+        "a",
+        "ɑ̃"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component B1; declaration only, not validation of old examples"
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/e-vs-in",
+      "legacyPath": "/french/e-vs-in",
+      "language": "fr",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice.",
+      "legacyDeclaredLabel": "é vs in (/e/ vs /ɛ̃/)",
+      "legacyDeclaredPhonemes": [
+        "e",
+        "ɛ̃"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component W1; declaration only, not validation of old examples"
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/o-vs-on",
+      "legacyPath": "/french/o-vs-on",
+      "language": "fr",
+      "status": "starter-contrast-present",
+      "contrastId": "fr-o-on",
+      "proposedGuidePath": "/learn/fr-o-on",
+      "legacyDeclaredLabel": "o vs on (/o/ vs /ɔ̃/)",
+      "legacyDeclaredPhonemes": [
+        "o",
+        "ɔ̃"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component X1; declaration only, not validation of old examples",
+      "scope": "Source-checked three-pair preview; complete cached profiles, with pronunciation and speaker consistency unreviewed."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/a-vs-e",
+      "legacyPath": "/french/a-vs-e",
+      "language": "fr",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice.",
+      "legacyDeclaredLabel": "a vs é (/a/ vs /e/)",
+      "legacyDeclaredPhonemes": [
+        "a",
+        "e"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component J1; declaration only, not validation of old examples"
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/i-vs-e",
+      "legacyPath": "/french/i-vs-e",
+      "language": "fr",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice.",
+      "legacyDeclaredLabel": "i vs é (/i/ vs /e/)",
+      "legacyDeclaredPhonemes": [
+        "i",
+        "e"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component r5; declaration only, not validation of old examples"
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/a-vs-e-ouvert",
+      "legacyPath": "/french/a-vs-e-ouvert",
+      "language": "fr",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice.",
+      "legacyDeclaredLabel": "a vs è (/a/ vs /ɛ/)",
+      "legacyDeclaredPhonemes": [
+        "a",
+        "ɛ"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component l5; declaration only, not validation of old examples"
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/b-vs-p",
+      "legacyPath": "/french/b-vs-p",
+      "language": "fr",
+      "status": "starter-contrast-present",
+      "contrastId": "fr-b-p",
+      "proposedGuidePath": "/learn/fr-b-p",
+      "scope": "Same contrast has a new starter guide and pair set; this does not establish full old-library equivalence or audio approval.",
+      "legacyDeclaredLabel": "b vs p (/b/ vs /p/)",
+      "legacyDeclaredPhonemes": [
+        "b",
+        "p"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component m5; declaration only, not validation of old examples"
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/d-vs-t",
+      "legacyPath": "/french/d-vs-t",
+      "language": "fr",
+      "status": "starter-contrast-present",
+      "contrastId": "fr-d-t",
+      "proposedGuidePath": "/learn/fr-d-t",
+      "legacyDeclaredLabel": "d vs t (/d/ vs /t/)",
+      "legacyDeclaredPhonemes": [
+        "d",
+        "t"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component f5; declaration only, not validation of old examples",
+      "scope": "Same declared contrast has a new independently curated starter guide and three pairs; this does not establish full old-library equivalence or audio approval."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/g-vs-k",
+      "legacyPath": "/french/g-vs-k",
+      "language": "fr",
+      "status": "starter-contrast-present",
+      "contrastId": "fr-g-k",
+      "proposedGuidePath": "/learn/fr-g-k",
+      "legacyDeclaredLabel": "g vs k (/ɡ/ vs /k/)",
+      "legacyDeclaredPhonemes": [
+        "ɡ",
+        "k"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component k5; declaration only, not validation of old examples",
+      "scope": "Same declared contrast has a new independently curated starter guide and three pairs; this does not establish full old-library equivalence or audio approval."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/v-vs-f",
+      "legacyPath": "/french/v-vs-f",
+      "language": "fr",
+      "status": "starter-contrast-present",
+      "contrastId": "fr-v-f",
+      "proposedGuidePath": "/learn/fr-v-f",
+      "legacyDeclaredLabel": "v vs f (/v/ vs /f/)",
+      "legacyDeclaredPhonemes": [
+        "v",
+        "f"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component T5; declaration only, not validation of old examples",
+      "scope": "Same declared contrast has a new independently curated starter guide and three pairs; this does not establish full old-library equivalence or audio approval."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/z-vs-s",
+      "legacyPath": "/french/z-vs-s",
+      "language": "fr",
+      "status": "starter-contrast-present",
+      "contrastId": "fr-s-z",
+      "proposedGuidePath": "/learn/fr-s-z",
+      "scope": "Same contrast has a new starter guide and pair set; this does not establish full old-library equivalence or audio approval.",
+      "legacyDeclaredLabel": "z vs s (/z/ vs /s/)",
+      "legacyDeclaredPhonemes": [
+        "z",
+        "s"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component z5; declaration only, not validation of old examples"
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/j-vs-ch",
+      "legacyPath": "/french/j-vs-ch",
+      "language": "fr",
+      "status": "starter-contrast-present",
+      "contrastId": "fr-zh-sh",
+      "proposedGuidePath": "/learn/fr-zh-sh",
+      "scope": "Same contrast has a new starter guide and pair set; this does not establish full old-library equivalence or audio approval.",
+      "legacyDeclaredLabel": "j vs ch (/ʒ/ vs /ʃ/)",
+      "legacyDeclaredPhonemes": [
+        "ʒ",
+        "ʃ"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component L5; declaration only, not validation of old examples"
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/b-vs-v",
+      "legacyPath": "/french/b-vs-v",
+      "language": "fr",
+      "status": "starter-contrast-present",
+      "contrastId": "fr-b-v",
+      "proposedGuidePath": "/learn/fr-b-v",
+      "legacyDeclaredLabel": "b vs v (/b/ vs /v/)",
+      "legacyDeclaredPhonemes": [
+        "b",
+        "v"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component $5; declaration only, not validation of old examples",
+      "scope": "Same declared contrast has a new independently curated starter guide and three pairs; this does not establish full old-library equivalence or audio approval."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/ch-vs-s",
+      "legacyPath": "/french/ch-vs-s",
+      "language": "fr",
+      "status": "starter-contrast-present",
+      "contrastId": "fr-sh-s",
+      "proposedGuidePath": "/learn/fr-sh-s",
+      "legacyDeclaredLabel": "ch vs s (/ʃ/ vs /s/)",
+      "legacyDeclaredPhonemes": [
+        "ʃ",
+        "s"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component Y5; declaration only, not validation of old examples",
+      "scope": "Same declared contrast has a new independently curated starter guide and three pairs; this does not establish full old-library equivalence or audio approval."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/l-vs-r",
+      "legacyPath": "/french/l-vs-r",
+      "language": "fr",
+      "status": "starter-contrast-present",
+      "contrastId": "fr-l-r",
+      "proposedGuidePath": "/learn/fr-l-r",
+      "legacyDeclaredLabel": "l vs r (/l/ vs /ʁ/)",
+      "legacyDeclaredPhonemes": [
+        "l",
+        "ʁ"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component K5; declaration only, not validation of old examples",
+      "scope": "Same declared contrast has a new independently curated starter guide and three pairs; this does not establish full old-library equivalence or audio approval."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/french/n-vs-gn",
+      "legacyPath": "/french/n-vs-gn",
+      "language": "fr",
+      "status": "starter-contrast-present",
+      "contrastId": "fr-n-gn",
+      "proposedGuidePath": "/learn/fr-n-gn",
+      "legacyDeclaredLabel": "n vs gn (/n/ vs /ɲ/)",
+      "legacyDeclaredPhonemes": [
+        "n",
+        "ɲ"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component s6; declaration only, not validation of old examples",
+      "scope": "Same declared contrast has a new independently curated starter guide and three pairs; this does not establish full old-library equivalence or audio approval.",
+      "caution": "Traditional /ɲ/ notation; actual realization varies. All new targets are final and require listening review without an added final schwa."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/short-u-vs-long-oo",
+      "legacyPath": "/english/short-u-vs-long-oo",
+      "language": "en",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice.",
+      "caution": "Legacy spelling labels do not fix a unique IPA target. Inspect the old inventory and dialect before authoring or mapping."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/voiceless-th-vs-s",
+      "legacyPath": "/english/voiceless-th-vs-s",
+      "language": "en",
+      "status": "starter-contrast-present",
+      "contrastId": "en-th-s",
+      "proposedGuidePath": "/learn/en-th-s",
+      "scope": "Same contrast has a new starter guide and pair set; this does not establish full old-library equivalence or audio approval."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/voiceless-th-vs-f",
+      "legacyPath": "/english/voiceless-th-vs-f",
+      "language": "en",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/voiced-th-vs-d",
+      "legacyPath": "/english/voiced-th-vs-d",
+      "language": "en",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/voiced-th-vs-z",
+      "legacyPath": "/english/voiced-th-vs-z",
+      "language": "en",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/v-vs-w",
+      "legacyPath": "/english/v-vs-w",
+      "language": "en",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/s-vs-z",
+      "legacyPath": "/english/s-vs-z",
+      "language": "en",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/f-vs-v",
+      "legacyPath": "/english/f-vs-v",
+      "language": "en",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/ae-vs-e",
+      "legacyPath": "/english/ae-vs-e",
+      "language": "en",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/ae-vs-uh",
+      "legacyPath": "/english/ae-vs-uh",
+      "language": "en",
+      "status": "starter-contrast-present",
+      "contrastId": "en-ae-strut",
+      "proposedGuidePath": "/learn/en-ae-strut",
+      "legacyDeclaredLabel": "ae vs uh (/æ/ vs /ʌ/)",
+      "legacyDeclaredPhonemes": [
+        "æ",
+        "ʌ"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component ZN; declaration only, not validation of old examples",
+      "scope": "Three independently curated American minimal pairs for the stated readings, with a guide and ABX metadata; not full former-library equivalence or audio approval.",
+      "priorityEvidence": {
+        "searchClicks90Days": 11,
+        "window": "2026-06-26 through 2026-09-25",
+        "source": "research/revenue-operation-2026-09-27.md"
+      }
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/e-vs-uh",
+      "legacyPath": "/english/e-vs-uh",
+      "language": "en",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/short-i-vs-long-ee",
+      "legacyPath": "/english/short-i-vs-long-ee",
+      "language": "en",
+      "status": "starter-contrast-present",
+      "contrastId": "en-i-ih",
+      "proposedGuidePath": "/learn/en-i-ih",
+      "scope": "Same contrast has a new starter guide and pair set; this does not establish full old-library equivalence or audio approval."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/k-vs-g",
+      "legacyPath": "/english/k-vs-g",
+      "language": "en",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/l-vs-r",
+      "legacyPath": "/english/l-vs-r",
+      "language": "en",
+      "status": "starter-contrast-present",
+      "contrastId": "en-r-l",
+      "proposedGuidePath": "/learn/en-r-l",
+      "scope": "Same contrast has a new starter guide and pair set; this does not establish full old-library equivalence or audio approval."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/n-vs-ng",
+      "legacyPath": "/english/n-vs-ng",
+      "language": "en",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/aw-vs-o",
+      "legacyPath": "/english/aw-vs-o",
+      "language": "en",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice.",
+      "caution": "Legacy spelling labels do not fix a unique IPA target. Inspect the old inventory and dialect before authoring or mapping."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/p-vs-b",
+      "legacyPath": "/english/p-vs-b",
+      "language": "en",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/sh-vs-s",
+      "legacyPath": "/english/sh-vs-s",
+      "language": "en",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/sh-vs-ch",
+      "legacyPath": "/english/sh-vs-ch",
+      "language": "en",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/t-vs-d",
+      "legacyPath": "/english/t-vs-d",
+      "language": "en",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/uu-vs-uh",
+      "legacyPath": "/english/uu-vs-uh",
+      "language": "en",
+      "status": "starter-contrast-present",
+      "contrastId": "en-foot-strut",
+      "proposedGuidePath": "/learn/en-foot-strut",
+      "legacyDeclaredLabel": "uu vs uh (/ʊ/ vs /ʌ/)",
+      "legacyDeclaredPhonemes": [
+        "ʊ",
+        "ʌ"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component e4; declaration only, not validation of old examples",
+      "scope": "Three independently curated American minimal pairs for the stated readings, with a guide and ABX metadata; not full former-library equivalence or audio approval.",
+      "priorityEvidence": {
+        "searchClicks90Days": 16,
+        "window": "2026-06-26 through 2026-09-25",
+        "source": "research/revenue-operation-2026-09-27.md"
+      }
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/uh-vs-ah",
+      "legacyPath": "/english/uh-vs-ah",
+      "language": "en",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice.",
+      "caution": "Legacy spelling labels do not fix a unique IPA target. Inspect the old inventory and dialect before authoring or mapping."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/v-vs-b",
+      "legacyPath": "/english/v-vs-b",
+      "language": "en",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/zh-vs-j",
+      "legacyPath": "/english/zh-vs-j",
+      "language": "en",
+      "status": "starter-contrast-present",
+      "contrastId": "en-zh-j",
+      "proposedGuidePath": "/learn/en-zh-j",
+      "legacyDeclaredLabel": "zh vs j (/ʒ/ vs /dʒ/)",
+      "legacyDeclaredPhonemes": [
+        "ʒ",
+        "dʒ"
+      ],
+      "legacyLabelEvidence": "rescue/discovery/legacy-bundle.js; page component g4; declaration only, not validation of old examples",
+      "scope": "Three independently curated American minimal pairs for the stated readings, with a guide and ABX metadata; not full former-library equivalence or audio approval.",
+      "priorityEvidence": {
+        "searchClicks90Days": 32,
+        "window": "2026-06-26 through 2026-09-25",
+        "source": "research/revenue-operation-2026-09-27.md"
+      },
+      "caution": "Three selected American minimal pairs. Version/virgin uses the final-schwa readings documented in Webster’s New World; other American dictionary entries give /ɪ/ in virgin. The pair is not minimal in every US pronunciation, and audio must match the stated shared-vowel reading."
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+---
+import Base from '../layouts/Base.astro';
+import PracticeLibrary from '../components/PracticeLibrary';
+import { getPracticeLanguages } from '../lib/content';
+---
+<Base title="Your listening practice — MinimalPairs" description="A focused listening session built around the sounds you want to hear more clearly." noindex>
+  <PracticeLibrary languages={getPracticeLanguages()} client:load />
+</Base>

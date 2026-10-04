@@ -1,0 +1,12 @@
+{
+  "name": "minimalpairs-billing-disabled",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test core.test.mjs providers/*.test.mjs runtime/*.test.mjs operator/*.test.mjs",
+    "test:runtime": "node --test runtime/*.test.mjs",
+    "dev:local": "wrangler dev --local --ip 127.0.0.1"
+  },
+  "dependencies": { "jose": "6.2.12" },
+  "devDependencies": { "esbuild": "0.28.2", "miniflare": "5.20260926.0-alpha", "wrangler": "4.143.0" }
+}

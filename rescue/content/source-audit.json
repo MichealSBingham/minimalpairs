@@ -1,0 +1,1914 @@
+{
+  "date": "2026-09-28",
+  "limitations": "Reachability check, not independent linguistic validation. Source rights remain with publishers; no source audio imported.",
+  "sources": [
+    {
+      "url": "https://assets.cambridge.org/97805216/03980/excerpt/9780521603980_excerpt.htm",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "status": "not-fetched",
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "url": "https://dicionario.priberam.org/asa",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dicionario.priberam.org/pt-pt/asa",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Significado de asa - Dicionário Priberam da Língua Portuguesa",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dicionario.priberam.org/assar",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dicionario.priberam.org/pt-pt/assar",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Significado de assar - Dicionário Priberam da Língua Portuguesa",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dicionario.priberam.org/bala",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dicionario.priberam.org/pt-pt/bala",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Significado de bala - Dicionário Priberam da Língua Portuguesa",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dicionario.priberam.org/bata",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dicionario.priberam.org/pt-pt/bata",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Significado de bata - Dicionário Priberam da Língua Portuguesa",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dicionario.priberam.org/bater",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dicionario.priberam.org/pt-pt/bater",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Significado de bater - Dicionário Priberam da Língua Portuguesa",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dicionario.priberam.org/ca%C3%A7a",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dicionario.priberam.org/pt-pt/ca%C3%A7a",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Significado de caça - Dicionário Priberam da Língua Portuguesa",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dicionario.priberam.org/ca%C3%A7ar",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dicionario.priberam.org/pt-pt/ca%C3%A7ar",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Significado de caçar - Dicionário Priberam da Língua Portuguesa",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dicionario.priberam.org/casa",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dicionario.priberam.org/pt-pt/casa",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Significado de casa - Dicionário Priberam da Língua Portuguesa",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dicionario.priberam.org/caso",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dicionario.priberam.org/pt-pt/caso",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Significado de caso - Dicionário Priberam da Língua Portuguesa",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dicionario.priberam.org/faca",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dicionario.priberam.org/pt-pt/faca",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Significado de faca - Dicionário Priberam da Língua Portuguesa",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dicionario.priberam.org/fala",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dicionario.priberam.org/pt-pt/fala",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Significado de fala - Dicionário Priberam da Língua Portuguesa",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dicionario.priberam.org/fila",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dicionario.priberam.org/pt-pt/fila",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Significado de fila - Dicionário Priberam da Língua Portuguesa",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dicionario.priberam.org/pala",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dicionario.priberam.org/pt-pt/pala",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Significado de pala - Dicionário Priberam da Língua Portuguesa",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dicionario.priberam.org/pata",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dicionario.priberam.org/pt-pt/pata",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Significado de pata - Dicionário Priberam da Língua Portuguesa",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dicionario.priberam.org/pato",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dicionario.priberam.org/pt-pt/pato",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Significado de pato - Dicionário Priberam da Língua Portuguesa",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dicionario.priberam.org/vaca",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dicionario.priberam.org/pt-pt/vaca",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Significado de vaca - Dicionário Priberam da Língua Portuguesa",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dicionario.priberam.org/vala",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dicionario.priberam.org/pt-pt/vala",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Significado de vala - Dicionário Priberam da Língua Portuguesa",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dicionario.priberam.org/vila",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dicionario.priberam.org/pt-pt/vila",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Significado de vila - Dicionário Priberam da Língua Portuguesa",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dictionary.cambridge.org/dictionary/english/feel",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dictionary.cambridge.org/dictionary/english/feel",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "FEEL | English meaning - Cambridge Dictionary",
+      "ipaTokens": [
+        "fiːl",
+        "fil",
+        "felt",
+        "ˈfi·lɪŋ"
+      ],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dictionary.cambridge.org/dictionary/english/fill",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dictionary.cambridge.org/dictionary/english/fill",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "FILL | English meaning - Cambridge Dictionary",
+      "ipaTokens": [
+        "fɪl"
+      ],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dictionary.cambridge.org/dictionary/english/lice",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dictionary.cambridge.org/dictionary/english/lice",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "LICE | English meaning - Cambridge Dictionary",
+      "ipaTokens": [
+        "laɪs",
+        "lɑɪs"
+      ],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dictionary.cambridge.org/dictionary/english/light",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dictionary.cambridge.org/dictionary/english/light",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "LIGHT | English meaning - Cambridge Dictionary",
+      "ipaTokens": [
+        "laɪt",
+        "lɑɪt",
+        "lɪt"
+      ],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dictionary.cambridge.org/dictionary/english/load",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dictionary.cambridge.org/dictionary/english/load",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "LOAD | English meaning - Cambridge Dictionary",
+      "ipaTokens": [
+        "ləʊd",
+        "loʊd",
+        "-ləʊd",
+        "-loʊd"
+      ],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dictionary.cambridge.org/dictionary/english/rice",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dictionary.cambridge.org/dictionary/english/rice",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "RICE | English meaning - Cambridge Dictionary",
+      "ipaTokens": [
+        "raɪs",
+        "rɑɪs"
+      ],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dictionary.cambridge.org/dictionary/english/right",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dictionary.cambridge.org/dictionary/english/right",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "RIGHT | English meaning - Cambridge Dictionary",
+      "ipaTokens": [
+        "raɪt",
+        "rɑɪt"
+      ],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dictionary.cambridge.org/dictionary/english/road",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dictionary.cambridge.org/dictionary/english/road",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "ROAD | English meaning - Cambridge Dictionary",
+      "ipaTokens": [
+        "rəʊd",
+        "roʊd"
+      ],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dictionary.cambridge.org/dictionary/english/seat",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dictionary.cambridge.org/dictionary/english/seat",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "SEAT | English meaning - Cambridge Dictionary",
+      "ipaTokens": [
+        "siːt",
+        "-siːt",
+        "sit"
+      ],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dictionary.cambridge.org/dictionary/english/sheep",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dictionary.cambridge.org/dictionary/english/sheep",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "SHEEP | English meaning - Cambridge Dictionary",
+      "ipaTokens": [
+        "ʃiːp",
+        "ʃip"
+      ],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dictionary.cambridge.org/dictionary/english/ship",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dictionary.cambridge.org/dictionary/english/ship",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "SHIP | English meaning - Cambridge Dictionary",
+      "ipaTokens": [
+        "ʃɪp",
+        "-ʃɪp"
+      ],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dictionary.cambridge.org/dictionary/english/sick",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dictionary.cambridge.org/dictionary/english/sick",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "SICK | English meaning - Cambridge Dictionary",
+      "ipaTokens": [
+        "sɪk"
+      ],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dictionary.cambridge.org/dictionary/english/sigh",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dictionary.cambridge.org/dictionary/english/sigh",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "SIGH | English meaning - Cambridge Dictionary",
+      "ipaTokens": [
+        "saɪ",
+        "sɑɪ"
+      ],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dictionary.cambridge.org/dictionary/english/sin",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dictionary.cambridge.org/dictionary/english/sin",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "SIN | English meaning - Cambridge Dictionary",
+      "ipaTokens": [
+        "sɪn",
+        "ˌes.aɪˈen"
+      ],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dictionary.cambridge.org/dictionary/english/sit",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dictionary.cambridge.org/dictionary/english/sit",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "SIT | English meaning - Cambridge Dictionary",
+      "ipaTokens": [
+        "sɪt",
+        "sæt"
+      ],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dictionary.cambridge.org/dictionary/english/thick",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dictionary.cambridge.org/dictionary/english/thick",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "THICK | English meaning - Cambridge Dictionary",
+      "ipaTokens": [
+        "θɪk"
+      ],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dictionary.cambridge.org/dictionary/english/thigh",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dictionary.cambridge.org/dictionary/english/thigh",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "THIGH | English meaning - Cambridge Dictionary",
+      "ipaTokens": [
+        "θaɪ",
+        "θɑɪ"
+      ],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dictionary.cambridge.org/dictionary/english/thin",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dictionary.cambridge.org/dictionary/english/thin",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "THIN | English meaning - Cambridge Dictionary",
+      "ipaTokens": [
+        "θɪn"
+      ],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dictionary.cambridge.org/dictionary/german-english/rot",
+      "date": "2026-09-28",
+      "status": "web-indexed-excerpt-read",
+      "contentValidation": "Indexed entry exposes /roːt/; direct open returned 403. Regular inflected rote IPA is editorially derived."
+    },
+    {
+      "url": "https://dictionary.cambridge.org/help/phonetics.html",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dictionary.cambridge.org/help/phonetics.html",
+      "contentType": "text/html;charset=UTF-8",
+      "title": "Help - Phonetics",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dle.rae.es/bala",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dle.rae.es/bala",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "bala | Definición | Diccionario de la lengua española | RAE - ASALE",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dle.rae.es/bata",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dle.rae.es/bata",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "bata | Definición | Diccionario de la lengua española | RAE - ASALE",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dle.rae.es/beso",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dle.rae.es/beso",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "beso | Definición | Diccionario de la lengua española | RAE - ASALE",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dle.rae.es/cantar",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dle.rae.es/cantar",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "cantar | Definición | Diccionario de la lengua española | RAE - ASALE",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dle.rae.es/caro",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dle.rae.es/caro",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "caro, cara | Definición | Diccionario de la lengua española | RAE - ASALE",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dle.rae.es/carro",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dle.rae.es/carro",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "carro, carra | Definición | Diccionario de la lengua española | RAE - ASALE",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dle.rae.es/coro",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dle.rae.es/coro",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "coro | Definición | Diccionario de la lengua española | RAE - ASALE",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dle.rae.es/correr",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dle.rae.es/correr",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "correr | Definición | Diccionario de la lengua española | RAE - ASALE",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dle.rae.es/hablar",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dle.rae.es/hablar",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "hablar | Definición | Diccionario de la lengua española | RAE - ASALE",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dle.rae.es/pala",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dle.rae.es/pala",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "pala | Definición | Diccionario de la lengua española | RAE - ASALE",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dle.rae.es/pata",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dle.rae.es/pata",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "pata | Definición | Diccionario de la lengua española | RAE - ASALE",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dle.rae.es/pero",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dle.rae.es/pero",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "pero | Definición | Diccionario de la lengua española | RAE - ASALE",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dle.rae.es/perro",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dle.rae.es/perro",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "perro, perra | Definición | Diccionario de la lengua española | RAE - ASALE",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dle.rae.es/peso",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dle.rae.es/peso",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "peso | Definición | Diccionario de la lengua española | RAE - ASALE",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://dle.rae.es/tomar",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://dle.rae.es/tomar",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "tomar | Definición | Diccionario de la lengua española | RAE - ASALE",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://doi.org/10.1017/S0025100300004084",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/german/D74393072AA2D66032B8A6E58BE15082",
+      "contentType": "text/html; charset=utf-8",
+      "title": "German | Journal of the International Phonetic Association | Cambridge Core",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://doi.org/10.1017/S0025100300004874",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/french/E2BC8B1DD975FE4B272B088B8345B933",
+      "contentType": "text/html; charset=utf-8",
+      "title": "French | Journal of the International Phonetic Association | Cambridge Core",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://doi.org/10.1017/S0025100314000395",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/russian/55589EC639ADEF1764B5ECD0B76970FA",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Russian | Journal of the International Phonetic Association | Cambridge Core",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://doi.org/10.1017/S0025100316000232",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/mexico-city-spanish/C35C97AE9A19C9C222FD614D2D4125AA",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Mexico City Spanish | Journal of the International Phonetic Association | Cambridge Core",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://en.langenscheidt.com/german-english/rohr",
+      "date": "2026-09-28",
+      "status": "web-indexed-excerpt-read",
+      "contentValidation": "Indexed dictionary entry exposes /roːr/ and plural Rohre; regular inflected IPA is editorially derived."
+    },
+    {
+      "url": "https://gramota.ru/poisk?query=%D0%B4%D0%BE%D0%BC&mode=slovari",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "status": "not-fetched",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://gramota.ru/poisk?query=%D0%B4%D0%BE%D1%87%D0%BA%D0%B0&mode=slovari",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "status": "not-fetched",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://gramota.ru/poisk?query=%D0%BB%D1%83%D0%BA&mode=slovari",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "status": "not-fetched",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://gramota.ru/poisk?query=%D0%BB%D1%8E%D0%BA&mode=slovari",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "status": "not-fetched",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://gramota.ru/poisk?query=%D0%BC%D0%B0%D1%82%D1%8C&mode=slovari",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "status": "not-fetched",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://gramota.ru/poisk?query=%D0%BC%D0%B0%D1%82&mode=slovari",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://gramota.ru/poisk?query=%D0%BC%D0%B0%D1%82&mode=slovari",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "«мат» в словарях портала | Поиск по Грамоте",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://gramota.ru/poisk?query=%D0%BD%D0%B5%D1%81%D1%82%D0%B8&mode=slovari",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "status": "not-fetched",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://gramota.ru/poisk?query=%D0%BD%D0%BE%D1%81&mode=slovari",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "status": "not-fetched",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://gramota.ru/poisk?query=%D1%81%D0%BE%D0%BA&mode=slovari",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "status": "not-fetched",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://gramota.ru/poisk?query=%D1%81%D1%83%D1%82%D0%BA%D0%B8&mode=slovari",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://gramota.ru/poisk?query=%D1%81%D1%83%D1%82%D0%BA%D0%B8&mode=slovari",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "«сутки» в словарях портала | Поиск по Грамоте",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://gramota.ru/poisk?query=%D1%82%D0%BE%D0%BC&mode=slovari",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "status": "not-fetched",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://gramota.ru/poisk?query=%D1%82%D0%BE%D1%87%D0%BA%D0%B0&mode=slovari",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "status": "not-fetched",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://gramota.ru/poisk?query=%D1%83%D0%B3%D0%BE%D0%BB%D1%8C&mode=slovari",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "status": "not-fetched",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://gramota.ru/poisk?query=%D1%83%D0%B3%D0%BE%D0%BB&mode=slovari",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://gramota.ru/poisk?query=%D1%83%D0%B3%D0%BE%D0%BB&mode=slovari",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "«угол» в словарях портала | Поиск по Грамоте",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://gramota.ru/poisk?query=%D1%88%D0%BE%D0%BA&mode=slovari",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://gramota.ru/poisk?query=%D1%88%D0%BE%D0%BA&mode=slovari",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "«шок» в словарях портала | Поиск по Грамоте",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://gramota.ru/poisk?query=%D1%88%D1%83%D1%82%D0%BA%D0%B0&mode=slovari",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "status": "not-fetched",
+      "error": "HTTP Error 429: Too Many Requests"
+    },
+    {
+      "url": "https://ricerca.sns.it/retrieve/bf9bc2cf-6ebc-4f8b-a0fc-6f081b2d64e4/98_Bertinetto%26Loporcaro_Italian_JIPA_post%20review.pdf",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://ricerca.sns.it/retrieve/bf9bc2cf-6ebc-4f8b-a0fc-6f081b2d64e4/98_Bertinetto%26Loporcaro_Italian_JIPA_post%20review.pdf",
+      "contentType": "application/pdf;charset=UTF-8",
+      "status": "pdf-fetched"
+    },
+    {
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/brazilian-portuguese/8EE69D52AE2D06C1EDA2841EA2E14FEC",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/brazilian-portuguese/8EE69D52AE2D06C1EDA2841EA2E14FEC",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Brazilian Portuguese | Journal of the International Phonetic Association | Cambridge Core",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.cnrtl.fr/definition/banc",
+      "date": "2026-09-28",
+      "contentValidation": "Empty app shell observed; lexical text not verified from this HTTP retrieval.",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cnrtl.fr/definition/banc",
+      "contentType": "text/html",
+      "title": "Portail lexical",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.cnrtl.fr/definition/bas",
+      "date": "2026-09-28",
+      "contentValidation": "Empty app shell observed; lexical text not verified from this HTTP retrieval.",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cnrtl.fr/definition/bas",
+      "contentType": "text/html",
+      "title": "Portail lexical",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.cnrtl.fr/definition/base",
+      "date": "2026-09-28",
+      "contentValidation": "Empty app shell observed; lexical text not verified from this HTTP retrieval.",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cnrtl.fr/definition/base",
+      "contentType": "text/html",
+      "title": "Portail lexical",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.cnrtl.fr/definition/boire",
+      "date": "2026-09-28",
+      "contentValidation": "Empty app shell observed; lexical text not verified from this HTTP retrieval.",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cnrtl.fr/definition/boire",
+      "contentType": "text/html",
+      "title": "Portail lexical",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.cnrtl.fr/definition/bon",
+      "date": "2026-09-28",
+      "contentValidation": "Empty app shell observed; lexical text not verified from this HTTP retrieval.",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cnrtl.fr/definition/bon",
+      "contentType": "text/html",
+      "title": "Portail lexical",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.cnrtl.fr/definition/bout",
+      "date": "2026-09-28",
+      "contentValidation": "Empty app shell observed; lexical text not verified from this HTTP retrieval.",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cnrtl.fr/definition/bout",
+      "contentType": "text/html",
+      "title": "Portail lexical",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.cnrtl.fr/definition/cousin",
+      "date": "2026-09-28",
+      "contentValidation": "Empty app shell observed; lexical text not verified from this HTTP retrieval.",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cnrtl.fr/definition/cousin",
+      "contentType": "text/html",
+      "title": "Portail lexical",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.cnrtl.fr/definition/coussin",
+      "date": "2026-09-28",
+      "contentValidation": "Empty app shell observed; lexical text not verified from this HTTP retrieval.",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cnrtl.fr/definition/coussin",
+      "contentType": "text/html",
+      "title": "Portail lexical",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.cnrtl.fr/definition/pan",
+      "date": "2026-09-28",
+      "contentValidation": "Empty app shell observed; lexical text not verified from this HTTP retrieval.",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cnrtl.fr/definition/pan",
+      "contentType": "text/html",
+      "title": "Portail lexical",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.cnrtl.fr/definition/poison",
+      "date": "2026-09-28",
+      "contentValidation": "Empty app shell observed; lexical text not verified from this HTTP retrieval.",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cnrtl.fr/definition/poison",
+      "contentType": "text/html",
+      "title": "Portail lexical",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.cnrtl.fr/definition/poisson",
+      "date": "2026-09-28",
+      "contentValidation": "Empty app shell observed; lexical text not verified from this HTTP retrieval.",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cnrtl.fr/definition/poisson",
+      "contentType": "text/html",
+      "title": "Portail lexical",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.cnrtl.fr/definition/pont",
+      "date": "2026-09-28",
+      "contentValidation": "Empty app shell observed; lexical text not verified from this HTTP retrieval.",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cnrtl.fr/definition/pont",
+      "contentType": "text/html",
+      "title": "Portail lexical",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.cnrtl.fr/definition/roue",
+      "date": "2026-09-28",
+      "contentValidation": "Empty app shell observed; lexical text not verified from this HTTP retrieval.",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cnrtl.fr/definition/roue",
+      "contentType": "text/html",
+      "title": "Portail lexical",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.cnrtl.fr/definition/rue",
+      "date": "2026-09-28",
+      "contentValidation": "Empty app shell observed; lexical text not verified from this HTTP retrieval.",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cnrtl.fr/definition/rue",
+      "contentType": "text/html",
+      "title": "Portail lexical",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.cnrtl.fr/definition/tant",
+      "date": "2026-09-28",
+      "contentValidation": "Empty app shell observed; lexical text not verified from this HTTP retrieval.",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cnrtl.fr/definition/tant",
+      "contentType": "text/html",
+      "title": "Portail lexical",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.cnrtl.fr/definition/ton",
+      "date": "2026-09-28",
+      "contentValidation": "Empty app shell observed; lexical text not verified from this HTTP retrieval.",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cnrtl.fr/definition/ton",
+      "contentType": "text/html",
+      "title": "Portail lexical",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.cnrtl.fr/definition/tout",
+      "date": "2026-09-28",
+      "contentValidation": "Empty app shell observed; lexical text not verified from this HTTP retrieval.",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cnrtl.fr/definition/tout",
+      "contentType": "text/html",
+      "title": "Portail lexical",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.cnrtl.fr/definition/tu",
+      "date": "2026-09-28",
+      "contentValidation": "Empty app shell observed; lexical text not verified from this HTTP retrieval.",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cnrtl.fr/definition/tu",
+      "contentType": "text/html",
+      "title": "Portail lexical",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.cnrtl.fr/definition/voir",
+      "date": "2026-09-28",
+      "contentValidation": "Empty app shell observed; lexical text not verified from this HTTP retrieval.",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cnrtl.fr/definition/voir",
+      "contentType": "text/html",
+      "title": "Portail lexical",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.cnrtl.fr/definition/vous",
+      "date": "2026-09-28",
+      "contentValidation": "Empty app shell observed; lexical text not verified from this HTTP retrieval.",
+      "httpStatus": 200,
+      "finalUrl": "https://www.cnrtl.fr/definition/vous",
+      "contentType": "text/html",
+      "title": "Portail lexical",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.duden.de/rechtschreibung/Miete_Pacht",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.duden.de/rechtschreibung/Miete_Pacht",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Miete ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.duden.de/rechtschreibung/Mitte",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.duden.de/rechtschreibung/Mitte",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Mitte ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.duden.de/rechtschreibung/Muse",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.duden.de/rechtschreibung/Muse",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Muse ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+      "ipaTokens": [
+        "[ˈmuːzə]"
+      ],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.duden.de/rechtschreibung/Musze",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.duden.de/rechtschreibung/Musze",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Muße ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+      "ipaTokens": [
+        "[ˈmuːsə]"
+      ],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.duden.de/rechtschreibung/Mutter_Frau",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.duden.de/rechtschreibung/Mutter_Frau",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Mutter ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.duden.de/rechtschreibung/Roehre",
+      "date": "2026-09-28",
+      "status": "web-page-read",
+      "contentValidation": "Lexical entry and IPA /ˈrøːrə/ confirmed."
+    },
+    {
+      "url": "https://www.duden.de/rechtschreibung/Roete",
+      "date": "2026-09-28",
+      "status": "web-page-read",
+      "contentValidation": "Lexical entry and IPA /ˈrøːtə/ confirmed."
+    },
+    {
+      "url": "https://www.duden.de/rechtschreibung/Rohr",
+      "date": "2026-09-28",
+      "status": "web-page-read",
+      "contentValidation": "Lexical entry and plural Rohre confirmed; this response does not expose IPA."
+    },
+    {
+      "url": "https://www.duden.de/rechtschreibung/Schiff",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.duden.de/rechtschreibung/Schiff",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Schiff ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.duden.de/rechtschreibung/bieten",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.duden.de/rechtschreibung/bieten",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "bieten ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.duden.de/rechtschreibung/bitten",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.duden.de/rechtschreibung/bitten",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "bitten ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.duden.de/rechtschreibung/muessen",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.duden.de/rechtschreibung/muessen",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Duden | Wie schreibt man „müssen“? | Rechtschreibung",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.duden.de/rechtschreibung/reisen",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.duden.de/rechtschreibung/reisen",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "reisen ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.duden.de/rechtschreibung/reiszen",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.duden.de/rechtschreibung/reiszen",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "reißen ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.duden.de/rechtschreibung/rot",
+      "date": "2026-09-28",
+      "status": "web-page-read",
+      "contentValidation": "Lexical entry and inflected rote examples confirmed."
+    },
+    {
+      "url": "https://www.duden.de/rechtschreibung/schief",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.duden.de/rechtschreibung/schief",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "schief ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.duden.de/rechtschreibung/schoen",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.duden.de/rechtschreibung/schoen",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "schön ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+      "ipaTokens": [
+        "[ʃøːn]"
+      ],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.duden.de/rechtschreibung/schon_bereits_eh_laengst",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.duden.de/rechtschreibung/schon_bereits_eh_laengst",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "schon ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.duden.de/rechtschreibung/weise",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.duden.de/rechtschreibung/weise",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "weise ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.duden.de/rechtschreibung/weisz_hell_hellhaeutig_bleich",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.duden.de/rechtschreibung/weisz_hell_hellhaeutig_bleich",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "weiß ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.duden.de/rechtschreibung/werden_Hilfsverb",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.duden.de/rechtschreibung/werden_Hilfsverb",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "werden ▶ Rechtschreibung, Bedeutung, Definition, Herkunft | Duden",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.fundeu.es/noticia/la-erre/",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.fundeu.es/noticia/la-erre/",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "La erre | FundéuRAE",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E4%B9%A6",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E4%B9%A6",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Word dictionary - 书 - MDBG Chinese Dictionary",
+      "ipaTokens": [],
+      "status": "page-fetched",
+      "retrievalPolicy": "No further scripted access; publisher restriction observed. References only, no imported content or recordings."
+    },
+    {
+      "url": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E5%85%AB",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E5%85%AB",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Word dictionary - 八 - MDBG Chinese Dictionary",
+      "ipaTokens": [],
+      "status": "page-fetched",
+      "retrievalPolicy": "No further scripted access; publisher restriction observed. References only, no imported content or recordings."
+    },
+    {
+      "url": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E5%8C%B9",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E5%8C%B9",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Word dictionary - 匹 - MDBG Chinese Dictionary",
+      "ipaTokens": [],
+      "status": "page-fetched",
+      "retrievalPolicy": "No further scripted access; publisher restriction observed. References only, no imported content or recordings."
+    },
+    {
+      "url": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E5%8D%81",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E5%8D%81",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Word dictionary - 十 - MDBG Chinese Dictionary",
+      "ipaTokens": [],
+      "status": "page-fetched",
+      "retrievalPolicy": "No further scripted access; publisher restriction observed. References only, no imported content or recordings."
+    },
+    {
+      "url": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E5%A6%88",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E5%A6%88",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Word dictionary - 妈 - MDBG Chinese Dictionary",
+      "ipaTokens": [],
+      "status": "page-fetched",
+      "retrievalPolicy": "No further scripted access; publisher restriction observed. References only, no imported content or recordings."
+    },
+    {
+      "url": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E6%8B%94",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E6%8B%94",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Word dictionary - 拔 - MDBG Chinese Dictionary",
+      "ipaTokens": [],
+      "status": "page-fetched",
+      "retrievalPolicy": "No further scripted access; publisher restriction observed. References only, no imported content or recordings."
+    },
+    {
+      "url": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E6%A0%91",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E6%A0%91",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Word dictionary - 树 - MDBG Chinese Dictionary",
+      "ipaTokens": [],
+      "status": "page-fetched",
+      "retrievalPolicy": "No further scripted access; publisher restriction observed. References only, no imported content or recordings."
+    },
+    {
+      "url": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E6%B1%A4",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E6%B1%A4",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Word dictionary - 汤 - MDBG Chinese Dictionary",
+      "ipaTokens": [],
+      "status": "page-fetched",
+      "retrievalPolicy": "No further scripted access; publisher restriction observed. References only, no imported content or recordings."
+    },
+    {
+      "url": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E7%83%AB",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E7%83%AB",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Word dictionary - 烫 - MDBG Chinese Dictionary",
+      "ipaTokens": [],
+      "status": "page-fetched",
+      "retrievalPolicy": "No further scripted access; publisher restriction observed. References only, no imported content or recordings."
+    },
+    {
+      "url": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E7%9A%AE",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E7%9A%AE",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Word dictionary - 皮 - MDBG Chinese Dictionary",
+      "ipaTokens": [],
+      "status": "page-fetched",
+      "retrievalPolicy": "No further scripted access; publisher restriction observed. References only, no imported content or recordings."
+    },
+    {
+      "url": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E8%AF%97",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E8%AF%97",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Word dictionary - 诗 - MDBG Chinese Dictionary",
+      "ipaTokens": [],
+      "status": "page-fetched",
+      "retrievalPolicy": "No further scripted access; publisher restriction observed. References only, no imported content or recordings."
+    },
+    {
+      "url": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E9%9B%A8",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E9%9B%A8",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Word dictionary - 雨 - MDBG Chinese Dictionary",
+      "ipaTokens": [],
+      "status": "page-fetched",
+      "retrievalPolicy": "No further scripted access; publisher restriction observed. References only, no imported content or recordings."
+    },
+    {
+      "url": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E9%A9%AC",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E9%A9%AC",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Word dictionary - 马 - MDBG Chinese Dictionary",
+      "ipaTokens": [],
+      "status": "page-fetched",
+      "retrievalPolicy": "No further scripted access; publisher restriction observed. References only, no imported content or recordings."
+    },
+    {
+      "url": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E9%AA%82",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E9%AA%82",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Word dictionary - 骂 - MDBG Chinese Dictionary",
+      "ipaTokens": [],
+      "status": "page-fetched",
+      "retrievalPolicy": "No further scripted access; publisher restriction observed. References only, no imported content or recordings."
+    },
+    {
+      "url": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E9%B1%BC",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E9%B1%BC",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Word dictionary - 鱼 - MDBG Chinese Dictionary",
+      "ipaTokens": [],
+      "status": "page-fetched",
+      "retrievalPolicy": "No further scripted access; publisher restriction observed. References only, no imported content or recordings."
+    },
+    {
+      "url": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E9%BA%BB",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E9%BA%BB",
+      "contentType": "text/html; charset=UTF-8",
+      "title": "Word dictionary - 麻 - MDBG Chinese Dictionary",
+      "ipaTokens": [],
+      "status": "page-fetched",
+      "retrievalPolicy": "No further scripted access; publisher restriction observed. References only, no imported content or recordings."
+    },
+    {
+      "url": "https://www.open.edu/openlearn/mod/oucontent/view.php?id=106435&section=2",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "status": "not-fetched",
+      "error": "HTTP Error 403: Forbidden"
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/bain/nom",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/bain/nom",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/banc/nom",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/banc/nom",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/beau",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/beau/",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/bon",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/bon/",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/boule/nom",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/boule/nom",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/c%C3%B4te",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/c%C3%B4te/",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/chai",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/chai/",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/champ",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/champ/",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/chou/nom",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/chou/nom",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/cote/nom",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/cote/nom",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/d%C3%A9",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/d%C3%A9/",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/dais",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/dais/",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/geai",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/geai/",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/gens",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/gens/",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/joue",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/joue/",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/pain",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/pain/",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/pan/nom",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/pan/nom",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/paume",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/paume/",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/peau",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/peau/",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/pin",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/pin/",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/pomme",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/pomme/",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/pont",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/pont/",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/poule",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/poule/",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/pr%C3%A9",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/pr%C3%A9/",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/pr%C3%AAt/adjectif",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/pr%C3%AAt/adjectif",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/saute",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/saute/",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/sot/adjectif",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/sot/adjectif",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/taie",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/taie/",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/teint/nom",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/teint/nom",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/temps",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/temps/",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/th%C3%A9",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/th%C3%A9/",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.portail-lexical.fr/definition/tlfi/ton/nom",
+      "date": "2026-09-28",
+      "status": "official-public-lookup-read",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/ton/nom",
+      "contentValidation": "Actual TLFi lexical entry and pronunciation section retrieved; details in french-expansion-source-audit.json. Header IPA may combine portal resources."
+    },
+    {
+      "url": "https://www.treccani.it/vocabolario/banca/",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.treccani.it/vocabolario/banca/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Banca - Significato ed etimologia - Vocabolario - Treccani",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.treccani.it/vocabolario/bastare/",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.treccani.it/vocabolario/bastare/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Bastare - Significato ed etimologia - Vocabolario - Treccani",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.treccani.it/vocabolario/bello/",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.treccani.it/vocabolario/bello/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Bèllo - Significato ed etimologia - Vocabolario - Treccani",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.treccani.it/vocabolario/faro/",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.treccani.it/vocabolario/faro/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Faro - Significato ed etimologia - Vocabolario - Treccani",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.treccani.it/vocabolario/fato/",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.treccani.it/vocabolario/fato/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Fato - Significato ed etimologia - Vocabolario - Treccani",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.treccani.it/vocabolario/fatto2/",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.treccani.it/vocabolario/fatto2/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Fatto² - Significato ed etimologia - Vocabolario - Treccani",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.treccani.it/vocabolario/fino1/",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.treccani.it/vocabolario/fino1/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Fino¹ - Significato ed etimologia - Vocabolario - Treccani",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.treccani.it/vocabolario/finto/",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.treccani.it/vocabolario/finto/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Finto - Significato ed etimologia - Vocabolario - Treccani",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.treccani.it/vocabolario/pala1/",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.treccani.it/vocabolario/pala1/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Pala¹ - Significato ed etimologia - Vocabolario - Treccani",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.treccani.it/vocabolario/palla1/",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.treccani.it/vocabolario/palla1/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Palla¹ - Significato ed etimologia - Vocabolario - Treccani",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.treccani.it/vocabolario/panca/",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.treccani.it/vocabolario/panca/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Panca - Significato ed etimologia - Vocabolario - Treccani",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.treccani.it/vocabolario/pasta/",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.treccani.it/vocabolario/pasta/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Pasta - Significato ed etimologia - Vocabolario - Treccani",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.treccani.it/vocabolario/pelle/",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.treccani.it/vocabolario/pelle/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Pèlle - Significato ed etimologia - Vocabolario - Treccani",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.treccani.it/vocabolario/pena/",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.treccani.it/vocabolario/pena/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Péna - Significato ed etimologia - Vocabolario - Treccani",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.treccani.it/vocabolario/penna/",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.treccani.it/vocabolario/penna/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Pénna - Significato ed etimologia - Vocabolario - Treccani",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.treccani.it/vocabolario/varo2/",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.treccani.it/vocabolario/varo2/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Varo² - Significato ed etimologia - Vocabolario - Treccani",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.treccani.it/vocabolario/vino/",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.treccani.it/vocabolario/vino/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Vino - Significato ed etimologia - Vocabolario - Treccani",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    },
+    {
+      "url": "https://www.treccani.it/vocabolario/vinto/",
+      "date": "2026-09-28",
+      "contentValidation": "not-implied-by-http-status",
+      "httpStatus": 200,
+      "finalUrl": "https://www.treccani.it/vocabolario/vinto/",
+      "contentType": "text/html; charset=utf-8",
+      "title": "Vinto - Significato ed etimologia - Vocabolario - Treccani",
+      "ipaTokens": [],
+      "status": "page-fetched"
+    }
+  ]
+}

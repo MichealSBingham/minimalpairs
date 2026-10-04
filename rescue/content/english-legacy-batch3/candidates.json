@@ -1,0 +1,991 @@
+{
+  "date": "2026-09-28",
+  "status": "isolated-text-candidate-audio-unapproved",
+  "languageId": "en",
+  "locale": "en-US",
+  "dialect": "Selected rhotic American English dictionary citation forms; recordings unreviewed",
+  "contrasts": [
+    {
+      "id": "en-s-z",
+      "label": "Sip or zip?",
+      "phonemes": [
+        "s",
+        "z"
+      ],
+      "description": "Listen for the first consonant in each word: /s/ or /z/. The rest of each reference pair stays the same.",
+      "l1Notes": [],
+      "dialectNote": "Selected rhotic American dictionary citation forms. Keep /s/ and /z/ distinct in all three lexical frames. Sink and zinc end in /ŋk/; the target is their first consonant.",
+      "pairs": [
+        {
+          "id": "en-sip-zip",
+          "words": [
+            {
+              "text": "sip",
+              "ipa": "/sɪp/",
+              "meaning": "drink a little at a time",
+              "phonemes": [
+                "s",
+                "ɪ",
+                "p"
+              ]
+            },
+            {
+              "text": "zip",
+              "ipa": "/zɪp/",
+              "meaning": "fasten a zipper",
+              "phonemes": [
+                "z",
+                "ɪ",
+                "p"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/sip",
+            "https://www.collinsdictionary.com/us/dictionary/english/zip"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        },
+        {
+          "id": "en-seal-zeal",
+          "words": [
+            {
+              "text": "seal",
+              "ipa": "/sil/",
+              "meaning": "a marine mammal",
+              "phonemes": [
+                "s",
+                "i",
+                "l"
+              ]
+            },
+            {
+              "text": "zeal",
+              "ipa": "/zil/",
+              "meaning": "strong enthusiasm",
+              "phonemes": [
+                "z",
+                "i",
+                "l"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/seal",
+            "https://www.collinsdictionary.com/us/dictionary/english/zeal"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        },
+        {
+          "id": "en-sink-zinc",
+          "words": [
+            {
+              "text": "sink",
+              "ipa": "/sɪŋk/",
+              "meaning": "go below the surface",
+              "phonemes": [
+                "s",
+                "ɪ",
+                "ŋ",
+                "k"
+              ]
+            },
+            {
+              "text": "zinc",
+              "ipa": "/zɪŋk/",
+              "meaning": "a metallic element",
+              "phonemes": [
+                "z",
+                "ɪ",
+                "ŋ",
+                "k"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/sink",
+            "https://www.collinsdictionary.com/us/dictionary/english/zinc"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        }
+      ],
+      "sources": [
+        "https://www.collinsdictionary.com/us/dictionary/english/seal",
+        "https://www.collinsdictionary.com/us/dictionary/english/sink",
+        "https://www.collinsdictionary.com/us/dictionary/english/sip",
+        "https://www.collinsdictionary.com/us/dictionary/english/zeal",
+        "https://www.collinsdictionary.com/us/dictionary/english/zinc",
+        "https://www.collinsdictionary.com/us/dictionary/english/zip"
+      ],
+      "targetSoundFocus": "Listen to the first consonant in each word.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the first consonant in each word.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "s",
+          "z"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "presentation": "audio-only-until-answer-or-explicit-text-assist"
+      }
+    },
+    {
+      "id": "en-f-v",
+      "label": "Fan or van?",
+      "phonemes": [
+        "f",
+        "v"
+      ],
+      "description": "Compare the first consonant in fan and van, then match the first sound of a different word.",
+      "l1Notes": [],
+      "dialectNote": "Selected rhotic American dictionary citation forms. Use the ordinary English words: lowercase vat is a container, not a spelled-out tax abbreviation. Fat is a cooking-substance noun. Preserve /f/ versus /v/ in every profile.",
+      "pairs": [
+        {
+          "id": "en-fan-van",
+          "words": [
+            {
+              "text": "fan",
+              "ipa": "/fæn/",
+              "meaning": "a device that moves air",
+              "phonemes": [
+                "f",
+                "æ",
+                "n"
+              ]
+            },
+            {
+              "text": "van",
+              "ipa": "/væn/",
+              "meaning": "an enclosed road vehicle",
+              "phonemes": [
+                "v",
+                "æ",
+                "n"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/fan",
+            "https://www.collinsdictionary.com/us/dictionary/english/van"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        },
+        {
+          "id": "en-fat-vat",
+          "words": [
+            {
+              "text": "fat",
+              "ipa": "/fæt/",
+              "meaning": "a substance used in cooking",
+              "phonemes": [
+                "f",
+                "æ",
+                "t"
+              ]
+            },
+            {
+              "text": "vat",
+              "ipa": "/væt/",
+              "meaning": "a large vessel for liquids",
+              "phonemes": [
+                "v",
+                "æ",
+                "t"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/fat",
+            "https://www.collinsdictionary.com/us/dictionary/english/vat"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        },
+        {
+          "id": "en-fail-veil",
+          "words": [
+            {
+              "text": "fail",
+              "ipa": "/feɪl/",
+              "meaning": "not succeed",
+              "phonemes": [
+                "f",
+                "eɪ",
+                "l"
+              ]
+            },
+            {
+              "text": "veil",
+              "ipa": "/veɪl/",
+              "meaning": "a covering of thin fabric",
+              "phonemes": [
+                "v",
+                "eɪ",
+                "l"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/fail",
+            "https://www.collinsdictionary.com/us/dictionary/english/veil"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        }
+      ],
+      "sources": [
+        "https://www.collinsdictionary.com/us/dictionary/english/fail",
+        "https://www.collinsdictionary.com/us/dictionary/english/fan",
+        "https://www.collinsdictionary.com/us/dictionary/english/fat",
+        "https://www.collinsdictionary.com/us/dictionary/english/van",
+        "https://www.collinsdictionary.com/us/dictionary/english/vat",
+        "https://www.collinsdictionary.com/us/dictionary/english/veil"
+      ],
+      "targetSoundFocus": "Listen to the first consonant in each word.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the first consonant in each word.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "f",
+          "v"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "presentation": "audio-only-until-answer-or-explicit-text-assist"
+      }
+    },
+    {
+      "id": "en-p-b",
+      "label": "Pea or bee?",
+      "phonemes": [
+        "p",
+        "b"
+      ],
+      "description": "Listen to the beginning of the word, including how the stop releases into the vowel. Pea and bee share the vowel but begin differently.",
+      "l1Notes": [],
+      "dialectNote": "Selected rhotic American dictionary citation forms. These are stressed initial stops. English release timing and aspiration contribute to the distinction; do not coach only throat vibration or use fixed millisecond thresholds. Keep the vowel matched within each pair.",
+      "pairs": [
+        {
+          "id": "en-pea-bee",
+          "words": [
+            {
+              "text": "pea",
+              "ipa": "/pi/",
+              "meaning": "a small edible seed",
+              "phonemes": [
+                "p",
+                "i"
+              ]
+            },
+            {
+              "text": "bee",
+              "ipa": "/bi/",
+              "meaning": "a pollen-gathering insect",
+              "phonemes": [
+                "b",
+                "i"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/pea",
+            "https://www.collinsdictionary.com/us/dictionary/english/bee"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        },
+        {
+          "id": "en-peg-beg",
+          "words": [
+            {
+              "text": "peg",
+              "ipa": "/pɛɡ/",
+              "meaning": "a short pin used for fastening",
+              "phonemes": [
+                "p",
+                "ɛ",
+                "ɡ"
+              ]
+            },
+            {
+              "text": "beg",
+              "ipa": "/bɛɡ/",
+              "meaning": "ask earnestly",
+              "phonemes": [
+                "b",
+                "ɛ",
+                "ɡ"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/peg",
+            "https://www.collinsdictionary.com/us/dictionary/english/beg"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        },
+        {
+          "id": "en-peach-beach",
+          "words": [
+            {
+              "text": "peach",
+              "ipa": "/pitʃ/",
+              "meaning": "a fruit with fuzzy skin",
+              "phonemes": [
+                "p",
+                "i",
+                "tʃ"
+              ]
+            },
+            {
+              "text": "beach",
+              "ipa": "/bitʃ/",
+              "meaning": "a sandy or pebbly shore",
+              "phonemes": [
+                "b",
+                "i",
+                "tʃ"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/peach",
+            "https://www.collinsdictionary.com/us/dictionary/english/beach"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        }
+      ],
+      "sources": [
+        "https://www.collinsdictionary.com/us/dictionary/english/beach",
+        "https://www.collinsdictionary.com/us/dictionary/english/bee",
+        "https://www.collinsdictionary.com/us/dictionary/english/beg",
+        "https://www.collinsdictionary.com/us/dictionary/english/pea",
+        "https://www.collinsdictionary.com/us/dictionary/english/peach",
+        "https://www.collinsdictionary.com/us/dictionary/english/peg"
+      ],
+      "targetSoundFocus": "Listen to the first consonant in each word.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the first consonant in each word.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "p",
+          "b"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "presentation": "audio-only-until-answer-or-explicit-text-assist"
+      }
+    },
+    {
+      "id": "en-k-g",
+      "label": "Coat or goat?",
+      "phonemes": [
+        "k",
+        "ɡ"
+      ],
+      "description": "Focus on the first consonant, /k/ or /ɡ/, across three different word endings.",
+      "l1Notes": [],
+      "dialectNote": "Selected rhotic American dictionary citation forms. Use rhotic American curl and girl with matched /ɝl/. Stressed initial /k/ and /ɡ/ differ in release and voice-onset patterns; do not require every /ɡ/ to have voicing throughout its closure.",
+      "pairs": [
+        {
+          "id": "en-coat-goat",
+          "words": [
+            {
+              "text": "coat",
+              "ipa": "/koʊt/",
+              "meaning": "an outer garment",
+              "phonemes": [
+                "k",
+                "oʊ",
+                "t"
+              ]
+            },
+            {
+              "text": "goat",
+              "ipa": "/ɡoʊt/",
+              "meaning": "a horned hoofed animal",
+              "phonemes": [
+                "ɡ",
+                "oʊ",
+                "t"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/coat",
+            "https://www.collinsdictionary.com/us/dictionary/english/goat"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        },
+        {
+          "id": "en-curl-girl",
+          "words": [
+            {
+              "text": "curl",
+              "ipa": "/kɝl/",
+              "meaning": "twist into a coil",
+              "phonemes": [
+                "k",
+                "ɝ",
+                "l"
+              ]
+            },
+            {
+              "text": "girl",
+              "ipa": "/ɡɝl/",
+              "meaning": "a female child",
+              "phonemes": [
+                "ɡ",
+                "ɝ",
+                "l"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/curl",
+            "https://www.collinsdictionary.com/us/dictionary/english/girl"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        },
+        {
+          "id": "en-came-game",
+          "words": [
+            {
+              "text": "came",
+              "ipa": "/keɪm/",
+              "meaning": "past tense of come",
+              "phonemes": [
+                "k",
+                "eɪ",
+                "m"
+              ]
+            },
+            {
+              "text": "game",
+              "ipa": "/ɡeɪm/",
+              "meaning": "an activity played for amusement",
+              "phonemes": [
+                "ɡ",
+                "eɪ",
+                "m"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/came",
+            "https://www.collinsdictionary.com/us/dictionary/english/game"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        }
+      ],
+      "sources": [
+        "https://www.collinsdictionary.com/us/dictionary/english/came",
+        "https://www.collinsdictionary.com/us/dictionary/english/coat",
+        "https://www.collinsdictionary.com/us/dictionary/english/curl",
+        "https://www.collinsdictionary.com/us/dictionary/english/game",
+        "https://www.collinsdictionary.com/us/dictionary/english/girl",
+        "https://www.collinsdictionary.com/us/dictionary/english/goat"
+      ],
+      "targetSoundFocus": "Listen to the first consonant in each word.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the first consonant in each word.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "k",
+          "ɡ"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "presentation": "audio-only-until-answer-or-explicit-text-assist"
+      }
+    },
+    {
+      "id": "en-sh-s",
+      "label": "Shell or sell?",
+      "phonemes": [
+        "ʃ",
+        "s"
+      ],
+      "description": "Listen to the first hissing sound: /ʃ/ as in shell or /s/ as in sell.",
+      "l1Notes": [],
+      "dialectNote": "Selected rhotic American dictionary citation forms. Shell is the noun /ʃɛl/, not the contraction she’ll. Shock and sock use the selected American /ɑ/ citation vowel, matched within each profile.",
+      "pairs": [
+        {
+          "id": "en-shack-sack",
+          "words": [
+            {
+              "text": "shack",
+              "ipa": "/ʃæk/",
+              "meaning": "a roughly built small dwelling",
+              "phonemes": [
+                "ʃ",
+                "æ",
+                "k"
+              ]
+            },
+            {
+              "text": "sack",
+              "ipa": "/sæk/",
+              "meaning": "a large bag",
+              "phonemes": [
+                "s",
+                "æ",
+                "k"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/shack",
+            "https://www.collinsdictionary.com/us/dictionary/english/sack"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        },
+        {
+          "id": "en-shell-sell",
+          "words": [
+            {
+              "text": "shell",
+              "ipa": "/ʃɛl/",
+              "meaning": "a protective outer casing",
+              "phonemes": [
+                "ʃ",
+                "ɛ",
+                "l"
+              ]
+            },
+            {
+              "text": "sell",
+              "ipa": "/sɛl/",
+              "meaning": "exchange for money",
+              "phonemes": [
+                "s",
+                "ɛ",
+                "l"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/shell",
+            "https://www.collinsdictionary.com/us/dictionary/english/sell"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        },
+        {
+          "id": "en-shock-sock",
+          "words": [
+            {
+              "text": "shock",
+              "ipa": "/ʃɑk/",
+              "meaning": "a sudden emotional jolt",
+              "phonemes": [
+                "ʃ",
+                "ɑ",
+                "k"
+              ]
+            },
+            {
+              "text": "sock",
+              "ipa": "/sɑk/",
+              "meaning": "a knitted foot covering",
+              "phonemes": [
+                "s",
+                "ɑ",
+                "k"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/shock",
+            "https://www.collinsdictionary.com/us/dictionary/english/sock"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        }
+      ],
+      "sources": [
+        "https://www.collinsdictionary.com/us/dictionary/english/sack",
+        "https://www.collinsdictionary.com/us/dictionary/english/sell",
+        "https://www.collinsdictionary.com/us/dictionary/english/shack",
+        "https://www.collinsdictionary.com/us/dictionary/english/shell",
+        "https://www.collinsdictionary.com/us/dictionary/english/shock",
+        "https://www.collinsdictionary.com/us/dictionary/english/sock"
+      ],
+      "targetSoundFocus": "Listen to the first consonant in each word.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the first consonant in each word.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "ʃ",
+          "s"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "presentation": "audio-only-until-answer-or-explicit-text-assist"
+      }
+    },
+    {
+      "id": "en-sh-ch",
+      "label": "Shoe or chew?",
+      "phonemes": [
+        "ʃ",
+        "tʃ"
+      ],
+      "description": "Compare the continuous start of /ʃ/ with the stop-and-release start of /tʃ/. Match the initial category even when the rest of X is different.",
+      "l1Notes": [],
+      "dialectNote": "Selected rhotic American dictionary citation forms. Treat /tʃ/ as one affricate category. Preserve the closure/release cue in chop, chin and chew; do not clip it in trimming. Shin is the body part /ʃɪn/, not the letter-name reading /ʃin/.",
+      "pairs": [
+        {
+          "id": "en-shop-chop",
+          "words": [
+            {
+              "text": "shop",
+              "ipa": "/ʃɑp/",
+              "meaning": "a small store",
+              "phonemes": [
+                "ʃ",
+                "ɑ",
+                "p"
+              ]
+            },
+            {
+              "text": "chop",
+              "ipa": "/tʃɑp/",
+              "meaning": "cut with sharp blows",
+              "phonemes": [
+                "tʃ",
+                "ɑ",
+                "p"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/shop",
+            "https://www.collinsdictionary.com/us/dictionary/english/chop"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        },
+        {
+          "id": "en-shin-chin",
+          "words": [
+            {
+              "text": "shin",
+              "ipa": "/ʃɪn/",
+              "meaning": "the front of the lower leg",
+              "phonemes": [
+                "ʃ",
+                "ɪ",
+                "n"
+              ]
+            },
+            {
+              "text": "chin",
+              "ipa": "/tʃɪn/",
+              "meaning": "the lower part of the face",
+              "phonemes": [
+                "tʃ",
+                "ɪ",
+                "n"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/shin",
+            "https://www.collinsdictionary.com/us/dictionary/english/chin"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        },
+        {
+          "id": "en-shoe-chew",
+          "words": [
+            {
+              "text": "shoe",
+              "ipa": "/ʃu/",
+              "meaning": "an item of footwear",
+              "phonemes": [
+                "ʃ",
+                "u"
+              ]
+            },
+            {
+              "text": "chew",
+              "ipa": "/tʃu/",
+              "meaning": "break food with the teeth",
+              "phonemes": [
+                "tʃ",
+                "u"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/shoe",
+            "https://www.collinsdictionary.com/us/dictionary/english/chew"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        }
+      ],
+      "sources": [
+        "https://www.collinsdictionary.com/us/dictionary/english/chew",
+        "https://www.collinsdictionary.com/us/dictionary/english/chin",
+        "https://www.collinsdictionary.com/us/dictionary/english/chop",
+        "https://www.collinsdictionary.com/us/dictionary/english/shin",
+        "https://www.collinsdictionary.com/us/dictionary/english/shoe",
+        "https://www.collinsdictionary.com/us/dictionary/english/shop"
+      ],
+      "targetSoundFocus": "Listen to the first consonant in each word.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the first consonant in each word.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "ʃ",
+          "tʃ"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "presentation": "audio-only-until-answer-or-explicit-text-assist"
+      }
+    }
+  ]
+}

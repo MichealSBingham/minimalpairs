@@ -1,0 +1,25 @@
+# MinimalPairs
+
+Private source repository for the rebuilt MinimalPairs listening product.
+
+- `rescue/app`: Astro/React website, lesson player, guides and Firebase configuration.
+- `rescue/content`: phoneme/word banks and content validation.
+- `rescue/billing`: Stripe integration running on Cloudflare Workers.
+- `rescue/audio-reports`: private recording-report and support endpoint.
+- `rescue/audio/studio`: local generation and audio QA tools.
+
+## Local development
+
+From `rescue/app`, run `npm ci`, create `.env` using `.env.example`, then run `npm run dev`.
+Run `npm test` and `npm run check` for application checks.
+
+Recordings, model weights, credentials, customer data and QA databases are intentionally excluded. Published recordings remain on Firebase Hosting; original recordings and QA databases are on the owner's Mac. The JSON audio manifests are included. A fresh clone needs the corresponding audio files before audio tests or publishing can pass.
+
+## Deployment
+
+Deployment is manual. This repository has no automatic production publishing or paid CI enabled.
+`npm run deploy:preview` publishes a noindex preview using local environment configuration.
+`node scripts/deploy-preview.mjs --production --build-only` builds and audits the production release without publishing.
+The same command without `--build-only` publishes; use only after the domain, authentication and billing configuration are ready.
+
+The initial GitHub commit is a clean source snapshot. Earlier local Git history remains on the owner's Mac and was not uploaded.

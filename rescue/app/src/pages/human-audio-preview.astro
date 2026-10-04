@@ -1,0 +1,14 @@
+---
+import Base from '../layouts/Base.astro';
+import Trainer from '../components/Trainer';
+import { getLanguages } from '../lib/content';
+import { humanLibraryLanguages, HUMAN_LIBRARY_COLLECTION } from '../lib/human-library';
+const languages = humanLibraryLanguages(getLanguages());
+---
+<Base title="Human audio practice — MinimalPairs" description="Listening practice with different words and voices." noindex>
+  <div class="pilot-notice"><span><strong>Listening practice</strong> · French, English and German. Pronunciation and voice consistency are under review.</span><a href="/audio-credits">Recording credits</a></div>
+  <Trainer languages={languages} initialLanguage="fr" initialContrast="fr-u-y" audioManifestPath="/audio/human-library.json" audioCollectionId={HUMAN_LIBRARY_COLLECTION} client:load />
+</Base>
+<style>
+  .pilot-notice{display:flex;align-items:center;justify-content:center;gap:20px;padding:13px 24px;background:#e8efe2;color:#3c5140;font-size:13px;line-height:1.5;flex-wrap:wrap}.pilot-notice a{text-decoration:underline;text-underline-offset:3px;white-space:nowrap}.pilot-notice strong{font-weight:600}@media(max-width:600px){.pilot-notice{font-size:12px;justify-content:flex-start;gap:5px;padding:12px 20px}}
+</style>

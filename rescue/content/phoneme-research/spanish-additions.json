@@ -1,0 +1,2426 @@
+{
+  "languageIds": [
+    "es"
+  ],
+  "searchedAt": "2026-10-01T16:54:03.663592Z",
+  "searchLog": [
+    {
+      "query": "Mexico City Spanish Illustrations IPA Avelino",
+      "outcome": "Read primary eight-page illustration: five vowels, contrastive stress, consonant inventory, contextual lenition and dialect constraints."
+    },
+    {
+      "query": "Spanish vowel perception English listeners Fox Flege Munro 1995",
+      "outcome": "Read author-hosted primary paper. Only /i e a/ Spanish CV stimuli; no ten-way curriculum or training-efficacy claim."
+    },
+    {
+      "query": "Spanish vowels Quechua learners mid high perception",
+      "outcome": "Read Pérez Silva 2017 theoretical article and its discussion of prior work. Supports a conditional L1-sensitive screening rationale, not a new intervention result."
+    },
+    {
+      "query": "Collins Spanish–English entries for the 30 selected words; RAE mono fallback",
+      "outcome": "Directly checked lexical entries/senses. Collins mono retrieval failed; RAE mono sense 5 succeeded. Full IPA was not exposed by these Spanish dictionary text extracts, so IPA remains explicitly editorial."
+    },
+    {
+      "query": "Spanish phonetic training talker variability stop consonants Languages 11(1)1",
+      "outcome": "Located a 2026 title but publisher returned 429. Not used as supporting evidence or to justify extra consonant lessons."
+    }
+  ],
+  "sources": [
+    {
+      "id": "es-add-avelino-2018",
+      "title": "Avelino (2018; online 2017), Mexico City Spanish",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/C35C97AE9A19C9C222FD614D2D4125AA/S0025100316000232a.pdf/mexico_city_spanish.pdf",
+      "kind": "phonology",
+      "locator": "pp.223–229; vowel inventory and stress pp.227–228",
+      "whatItSupports": "Five vowel phonemes; stress, contextual variation, and the selected Mexico City reference variety.",
+      "limitations": "Descriptive six-speaker illustration, not an L2-training intervention. It supports the inventory, not the effectiveness or full lexical IPA of this draft."
+    },
+    {
+      "id": "es-add-fox-flege-munro-1995",
+      "title": "Fox, Flege & Munro (1995), The perception of English and Spanish vowels by native English and Spanish listeners",
+      "url": "https://bpb-us-w2.wpmucdn.com/u.osu.edu/dist/e/28739/files/2017/10/Fox_Flege_Munro_1995-yh368k.pdf",
+      "kind": "l2-study",
+      "locator": "Methods pp.2541–2543; dissimilarity task and MDS results",
+      "whatItSupports": "Cross-language perception of Spanish /i e a/ among English monolingual and Spanish–English bilingual listeners.",
+      "limitations": "Dissimilarity-rating study, not Spanish HVPT or efficacy evidence. Spanish stressed CV syllables were excised from words; the full words below are not its administered stimuli. No /o u/ results from this experiment are claimed."
+    },
+    {
+      "id": "es-add-perez-silva-2017",
+      "title": "Pérez Silva (2017), La adquisición de oposiciones en bilingües castellano–quechua y quechua–castellano",
+      "url": "https://www.scielo.org.pe/scielo.php?pid=S0254-92392017000100005&script=sci_arttext",
+      "kind": "phonology",
+      "locator": "Discussion of vowel inventories and acquisition, Figures 3–10",
+      "whatItSupports": "Explains why the Spanish mid/high split can require a new distinction for some Quechua-background learners.",
+      "limitations": "Theoretical analysis discussing prior production/perception work; not an independent validation of these words or a Mexican-Spanish training trial. Quechua varieties and bilingual experience differ."
+    },
+    {
+      "id": "es-add-collins-masa",
+      "title": "Collins Spanish–English: masa",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/masa",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-pala",
+      "title": "Collins Spanish–English: pala",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/pala",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-casa",
+      "title": "Collins Spanish–English: casa",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/casa",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-pato",
+      "title": "Collins Spanish–English: pato",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/pato",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-mano",
+      "title": "Collins Spanish–English: mano",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/mano",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-palo",
+      "title": "Collins Spanish–English: palo",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/palo",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-mesa",
+      "title": "Collins Spanish–English: mesa",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/mesa",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-pena",
+      "title": "Collins Spanish–English: pena",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/pena",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-tela",
+      "title": "Collins Spanish–English: tela",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/tela",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-peso",
+      "title": "Collins Spanish–English: peso",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/peso",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-pelo",
+      "title": "Collins Spanish–English: pelo",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/pelo",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-dedo",
+      "title": "Collins Spanish–English: dedo",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/dedo",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-misa",
+      "title": "Collins Spanish–English: misa",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/misa",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-pila",
+      "title": "Collins Spanish–English: pila",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/pila",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-rima",
+      "title": "Collins Spanish–English: rima",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/rima",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-piso",
+      "title": "Collins Spanish–English: piso",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/piso",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-pino",
+      "title": "Collins Spanish–English: pino",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/pino",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-tipo",
+      "title": "Collins Spanish–English: tipo",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/tipo",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-cosa",
+      "title": "Collins Spanish–English: cosa",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/cosa",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-sopa",
+      "title": "Collins Spanish–English: sopa",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/sopa",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-copa",
+      "title": "Collins Spanish–English: copa",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/copa",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-polo",
+      "title": "Collins Spanish–English: polo",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/polo",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-tomo",
+      "title": "Collins Spanish–English: tomo",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/tomo",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-rae-mono",
+      "title": "RAE–ASALE, Diccionario de la lengua española: mono",
+      "url": "https://dle.rae.es/mono",
+      "kind": "dictionary",
+      "locator": "mono1, sense 5",
+      "whatItSupports": "Directly checked headword and animal sense.",
+      "limitations": "Entry does not supply IPA; broad phonemic transcription is editorial."
+    },
+    {
+      "id": "es-add-collins-suma",
+      "title": "Collins Spanish–English: suma",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/suma",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-cuna",
+      "title": "Collins Spanish–English: cuna",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/cuna",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-luna",
+      "title": "Collins Spanish–English: luna",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/luna",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-puro",
+      "title": "Collins Spanish–English: puro",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/puro",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-tubo",
+      "title": "Collins Spanish–English: tubo",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/tubo",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    },
+    {
+      "id": "es-add-collins-cubo",
+      "title": "Collins Spanish–English: cubo",
+      "url": "https://www.collinsdictionary.com/dictionary/spanish-english/cubo",
+      "kind": "dictionary",
+      "locator": "Headword and selected sense, directly retrieved in this pass",
+      "whatItSupports": "Attests spelling and the selected lexical meaning.",
+      "limitations": "Retrieved Spanish entries do not expose full IPA. IPA/stress below is an editorial broad transcription for human review, not falsely claimed as a quoted dictionary pronunciation."
+    }
+  ],
+  "contrasts": [
+    {
+      "id": "es-a-e",
+      "languageId": "es",
+      "dialect": "Mexico City Spanish; careful citation forms; seseo and yeísmo",
+      "label": "/a/ versus /e/",
+      "categories": [
+        {
+          "label": "/a/",
+          "ipa": "a"
+        },
+        {
+          "label": "/e/",
+          "ipa": "e"
+        }
+      ],
+      "evidenceLevel": "study-contrast",
+      "sourceIds": [
+        "es-add-avelino-2018",
+        "es-add-fox-flege-munro-1995"
+      ],
+      "learnerL1s": [
+        "en-US"
+      ],
+      "rationale": "Optional coverage: retain this valid comparison for diagnosis or mixed review; no evidence here establishes it as a common learner bottleneck.",
+      "scopeNote": "One member of the complete ten-comparison grid for five vowels. This grid is inventory coverage, not ten equally difficult or equally research-supported lessons.",
+      "contextNotes": [
+        "Target only the stressed vowel of the first syllable. Every candidate is a disyllable with an open first syllable; spelling and meaning are review metadata.",
+        "Two groups match the unstressed final vowel: final /a/ and final /o/. Each group has three lexical items in each category; keep A/B/X in the same group to avoid a category-correlated final-vowel cue.",
+        "targetSegment names the category and targetOccurrence=1 selects its first occurrence, including repeated vowels in casa, masa, pala, polo, tomo and mono. A later occurrence or opposing vowel is not the target.",
+        "Consonantal frames still vary. Group balance removes one obvious nuisance cue, not every coarticulatory or lexical confound; actual item/talker validation is still needed."
+      ],
+      "pools": [
+        [
+          {
+            "text": "masa",
+            "ipa": "/ˈmasa/",
+            "meaning": "dough",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-masa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "a",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "pala",
+            "ipa": "/ˈpala/",
+            "meaning": "shovel",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-pala"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "a",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "casa",
+            "ipa": "/ˈkasa/",
+            "meaning": "house",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-casa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "a",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "pato",
+            "ipa": "/ˈpato/",
+            "meaning": "duck",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-pato"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "a",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "mano",
+            "ipa": "/ˈmano/",
+            "meaning": "hand",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-mano"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "a",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "palo",
+            "ipa": "/ˈpalo/",
+            "meaning": "stick",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-palo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "a",
+            "targetOccurrence": 1
+          }
+        ],
+        [
+          {
+            "text": "mesa",
+            "ipa": "/ˈmesa/",
+            "meaning": "table",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-mesa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "pena",
+            "ipa": "/ˈpena/",
+            "meaning": "sorrow or regret",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-pena"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "tela",
+            "ipa": "/ˈtela/",
+            "meaning": "cloth",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-tela"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "peso",
+            "ipa": "/ˈpeso/",
+            "meaning": "weight",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-peso"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "pelo",
+            "ipa": "/ˈpelo/",
+            "meaning": "hair",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-pelo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "dedo",
+            "ipa": "/ˈdedo/",
+            "meaning": "finger",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-dedo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          }
+        ]
+      ],
+      "minimalPairs": [
+        {
+          "left": "masa",
+          "right": "mesa",
+          "sourceIds": [
+            "es-add-collins-masa",
+            "es-add-collins-mesa"
+          ]
+        },
+        {
+          "left": "palo",
+          "right": "pelo",
+          "sourceIds": [
+            "es-add-collins-palo",
+            "es-add-collins-pelo"
+          ]
+        }
+      ],
+      "reviewNotes": [
+        "All entries are drafts for human text review. Dictionary checking confirms these are real words and selected senses; it does not certify the editorial IPA or any audio.",
+        "Pools are independent category banks; row alignment does not assert minimal pairing. Only minimalPairs lists single-segment substitutions under the selected broad IPA. An empty list is intentional.",
+        "No words are tagged as published experiment stimuli. Even pato, named as a source word by Fox et al., supplied an excised CV rather than a whole-word stimulus.",
+        "ABX is the intended product interaction, not an intervention proven superior by these citations. Research and pronunciation validation must not be inferred from inventory completeness."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "es-a-i",
+      "languageId": "es",
+      "dialect": "Mexico City Spanish; careful citation forms; seseo and yeísmo",
+      "label": "/a/ versus /i/",
+      "categories": [
+        {
+          "label": "/a/",
+          "ipa": "a"
+        },
+        {
+          "label": "/i/",
+          "ipa": "i"
+        }
+      ],
+      "evidenceLevel": "study-contrast",
+      "sourceIds": [
+        "es-add-avelino-2018",
+        "es-add-fox-flege-munro-1995"
+      ],
+      "learnerL1s": [
+        "en-US"
+      ],
+      "rationale": "Optional coverage: retain this valid comparison for diagnosis or mixed review; no evidence here establishes it as a common learner bottleneck.",
+      "scopeNote": "One member of the complete ten-comparison grid for five vowels. This grid is inventory coverage, not ten equally difficult or equally research-supported lessons.",
+      "contextNotes": [
+        "Target only the stressed vowel of the first syllable. Every candidate is a disyllable with an open first syllable; spelling and meaning are review metadata.",
+        "Two groups match the unstressed final vowel: final /a/ and final /o/. Each group has three lexical items in each category; keep A/B/X in the same group to avoid a category-correlated final-vowel cue.",
+        "targetSegment names the category and targetOccurrence=1 selects its first occurrence, including repeated vowels in casa, masa, pala, polo, tomo and mono. A later occurrence or opposing vowel is not the target.",
+        "Consonantal frames still vary. Group balance removes one obvious nuisance cue, not every coarticulatory or lexical confound; actual item/talker validation is still needed."
+      ],
+      "pools": [
+        [
+          {
+            "text": "masa",
+            "ipa": "/ˈmasa/",
+            "meaning": "dough",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-masa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "a",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "pala",
+            "ipa": "/ˈpala/",
+            "meaning": "shovel",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-pala"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "a",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "casa",
+            "ipa": "/ˈkasa/",
+            "meaning": "house",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-casa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "a",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "pato",
+            "ipa": "/ˈpato/",
+            "meaning": "duck",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-pato"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "a",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "mano",
+            "ipa": "/ˈmano/",
+            "meaning": "hand",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-mano"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "a",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "palo",
+            "ipa": "/ˈpalo/",
+            "meaning": "stick",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-palo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "a",
+            "targetOccurrence": 1
+          }
+        ],
+        [
+          {
+            "text": "misa",
+            "ipa": "/ˈmisa/",
+            "meaning": "Mass, a religious service",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-misa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "pila",
+            "ipa": "/ˈpila/",
+            "meaning": "battery",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-pila"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "rima",
+            "ipa": "/ˈrima/",
+            "meaning": "rhyme",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-rima"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "piso",
+            "ipa": "/ˈpiso/",
+            "meaning": "floor",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-piso"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "pino",
+            "ipa": "/ˈpino/",
+            "meaning": "pine tree",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-pino"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "tipo",
+            "ipa": "/ˈtipo/",
+            "meaning": "type or kind",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-tipo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          }
+        ]
+      ],
+      "minimalPairs": [
+        {
+          "left": "masa",
+          "right": "misa",
+          "sourceIds": [
+            "es-add-collins-masa",
+            "es-add-collins-misa"
+          ]
+        },
+        {
+          "left": "pala",
+          "right": "pila",
+          "sourceIds": [
+            "es-add-collins-pala",
+            "es-add-collins-pila"
+          ]
+        }
+      ],
+      "reviewNotes": [
+        "All entries are drafts for human text review. Dictionary checking confirms these are real words and selected senses; it does not certify the editorial IPA or any audio.",
+        "Pools are independent category banks; row alignment does not assert minimal pairing. Only minimalPairs lists single-segment substitutions under the selected broad IPA. An empty list is intentional.",
+        "No words are tagged as published experiment stimuli. Even pato, named as a source word by Fox et al., supplied an excised CV rather than a whole-word stimulus.",
+        "ABX is the intended product interaction, not an intervention proven superior by these citations. Research and pronunciation validation must not be inferred from inventory completeness."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "es-a-o",
+      "languageId": "es",
+      "dialect": "Mexico City Spanish; careful citation forms; seseo and yeísmo",
+      "label": "/a/ versus /o/",
+      "categories": [
+        {
+          "label": "/a/",
+          "ipa": "a"
+        },
+        {
+          "label": "/o/",
+          "ipa": "o"
+        }
+      ],
+      "evidenceLevel": "phonology",
+      "sourceIds": [
+        "es-add-avelino-2018"
+      ],
+      "learnerL1s": [],
+      "rationale": "Optional coverage: retain this valid comparison for diagnosis or mixed review; no evidence here establishes it as a common learner bottleneck.",
+      "scopeNote": "One member of the complete ten-comparison grid for five vowels. This grid is inventory coverage, not ten equally difficult or equally research-supported lessons.",
+      "contextNotes": [
+        "Target only the stressed vowel of the first syllable. Every candidate is a disyllable with an open first syllable; spelling and meaning are review metadata.",
+        "Two groups match the unstressed final vowel: final /a/ and final /o/. Each group has three lexical items in each category; keep A/B/X in the same group to avoid a category-correlated final-vowel cue.",
+        "targetSegment names the category and targetOccurrence=1 selects its first occurrence, including repeated vowels in casa, masa, pala, polo, tomo and mono. A later occurrence or opposing vowel is not the target.",
+        "Consonantal frames still vary. Group balance removes one obvious nuisance cue, not every coarticulatory or lexical confound; actual item/talker validation is still needed."
+      ],
+      "pools": [
+        [
+          {
+            "text": "masa",
+            "ipa": "/ˈmasa/",
+            "meaning": "dough",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-masa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "a",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "pala",
+            "ipa": "/ˈpala/",
+            "meaning": "shovel",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-pala"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "a",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "casa",
+            "ipa": "/ˈkasa/",
+            "meaning": "house",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-casa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "a",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "pato",
+            "ipa": "/ˈpato/",
+            "meaning": "duck",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-pato"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "a",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "mano",
+            "ipa": "/ˈmano/",
+            "meaning": "hand",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-mano"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "a",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "palo",
+            "ipa": "/ˈpalo/",
+            "meaning": "stick",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-palo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "a",
+            "targetOccurrence": 1
+          }
+        ],
+        [
+          {
+            "text": "cosa",
+            "ipa": "/ˈkosa/",
+            "meaning": "thing",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-cosa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "sopa",
+            "ipa": "/ˈsopa/",
+            "meaning": "soup",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-sopa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "copa",
+            "ipa": "/ˈkopa/",
+            "meaning": "drinking glass",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-copa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "polo",
+            "ipa": "/ˈpolo/",
+            "meaning": "pole, such as a magnetic pole",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-polo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "tomo",
+            "ipa": "/ˈtomo/",
+            "meaning": "volume of a book",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-tomo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "mono",
+            "ipa": "/ˈmono/",
+            "meaning": "monkey",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-rae-mono"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          }
+        ]
+      ],
+      "minimalPairs": [
+        {
+          "left": "casa",
+          "right": "cosa",
+          "sourceIds": [
+            "es-add-collins-casa",
+            "es-add-collins-cosa"
+          ]
+        },
+        {
+          "left": "mano",
+          "right": "mono",
+          "sourceIds": [
+            "es-add-collins-mano",
+            "es-add-rae-mono"
+          ]
+        },
+        {
+          "left": "palo",
+          "right": "polo",
+          "sourceIds": [
+            "es-add-collins-palo",
+            "es-add-collins-polo"
+          ]
+        }
+      ],
+      "reviewNotes": [
+        "All entries are drafts for human text review. Dictionary checking confirms these are real words and selected senses; it does not certify the editorial IPA or any audio.",
+        "Pools are independent category banks; row alignment does not assert minimal pairing. Only minimalPairs lists single-segment substitutions under the selected broad IPA. An empty list is intentional.",
+        "No words are tagged as published experiment stimuli. Even pato, named as a source word by Fox et al., supplied an excised CV rather than a whole-word stimulus.",
+        "ABX is the intended product interaction, not an intervention proven superior by these citations. Research and pronunciation validation must not be inferred from inventory completeness."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "es-a-u",
+      "languageId": "es",
+      "dialect": "Mexico City Spanish; careful citation forms; seseo and yeísmo",
+      "label": "/a/ versus /u/",
+      "categories": [
+        {
+          "label": "/a/",
+          "ipa": "a"
+        },
+        {
+          "label": "/u/",
+          "ipa": "u"
+        }
+      ],
+      "evidenceLevel": "phonology",
+      "sourceIds": [
+        "es-add-avelino-2018"
+      ],
+      "learnerL1s": [],
+      "rationale": "Optional coverage: retain this valid comparison for diagnosis or mixed review; no evidence here establishes it as a common learner bottleneck.",
+      "scopeNote": "One member of the complete ten-comparison grid for five vowels. This grid is inventory coverage, not ten equally difficult or equally research-supported lessons.",
+      "contextNotes": [
+        "Target only the stressed vowel of the first syllable. Every candidate is a disyllable with an open first syllable; spelling and meaning are review metadata.",
+        "Two groups match the unstressed final vowel: final /a/ and final /o/. Each group has three lexical items in each category; keep A/B/X in the same group to avoid a category-correlated final-vowel cue.",
+        "targetSegment names the category and targetOccurrence=1 selects its first occurrence, including repeated vowels in casa, masa, pala, polo, tomo and mono. A later occurrence or opposing vowel is not the target.",
+        "Consonantal frames still vary. Group balance removes one obvious nuisance cue, not every coarticulatory or lexical confound; actual item/talker validation is still needed."
+      ],
+      "pools": [
+        [
+          {
+            "text": "masa",
+            "ipa": "/ˈmasa/",
+            "meaning": "dough",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-masa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "a",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "pala",
+            "ipa": "/ˈpala/",
+            "meaning": "shovel",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-pala"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "a",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "casa",
+            "ipa": "/ˈkasa/",
+            "meaning": "house",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-casa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "a",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "pato",
+            "ipa": "/ˈpato/",
+            "meaning": "duck",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-pato"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "a",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "mano",
+            "ipa": "/ˈmano/",
+            "meaning": "hand",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-mano"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "a",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "palo",
+            "ipa": "/ˈpalo/",
+            "meaning": "stick",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-palo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "a",
+            "targetOccurrence": 1
+          }
+        ],
+        [
+          {
+            "text": "suma",
+            "ipa": "/ˈsuma/",
+            "meaning": "sum",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-suma"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "u",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "cuna",
+            "ipa": "/ˈkuna/",
+            "meaning": "cradle",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-cuna"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "u",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "luna",
+            "ipa": "/ˈluna/",
+            "meaning": "moon",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-luna"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "u",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "puro",
+            "ipa": "/ˈpuɾo/",
+            "meaning": "pure, masculine adjective",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-puro"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "u",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "tubo",
+            "ipa": "/ˈtubo/",
+            "meaning": "tube",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-tubo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "u",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "cubo",
+            "ipa": "/ˈkubo/",
+            "meaning": "bucket",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-cubo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "u",
+            "targetOccurrence": 1
+          }
+        ]
+      ],
+      "minimalPairs": [],
+      "reviewNotes": [
+        "All entries are drafts for human text review. Dictionary checking confirms these are real words and selected senses; it does not certify the editorial IPA or any audio.",
+        "Pools are independent category banks; row alignment does not assert minimal pairing. Only minimalPairs lists single-segment substitutions under the selected broad IPA. An empty list is intentional.",
+        "No words are tagged as published experiment stimuli. Even pato, named as a source word by Fox et al., supplied an excised CV rather than a whole-word stimulus.",
+        "ABX is the intended product interaction, not an intervention proven superior by these citations. Research and pronunciation validation must not be inferred from inventory completeness."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "es-e-i",
+      "languageId": "es",
+      "dialect": "Mexico City Spanish; careful citation forms; seseo and yeísmo",
+      "label": "/e/ versus /i/",
+      "categories": [
+        {
+          "label": "/e/",
+          "ipa": "e"
+        },
+        {
+          "label": "/i/",
+          "ipa": "i"
+        }
+      ],
+      "evidenceLevel": "study-contrast",
+      "sourceIds": [
+        "es-add-avelino-2018",
+        "es-add-fox-flege-munro-1995",
+        "es-add-perez-silva-2017"
+      ],
+      "learnerL1s": [
+        "en-US"
+      ],
+      "rationale": "Conditional priority: screen the mid/high distinction for learners whose L1 or observed errors warrant it. Do not infer difficulty from nationality or assign this lesson automatically to all learners.",
+      "scopeNote": "One member of the complete ten-comparison grid for five vowels. This grid is inventory coverage, not ten equally difficult or equally research-supported lessons.",
+      "contextNotes": [
+        "Target only the stressed vowel of the first syllable. Every candidate is a disyllable with an open first syllable; spelling and meaning are review metadata.",
+        "Two groups match the unstressed final vowel: final /a/ and final /o/. Each group has three lexical items in each category; keep A/B/X in the same group to avoid a category-correlated final-vowel cue.",
+        "targetSegment names the category and targetOccurrence=1 selects its first occurrence, including repeated vowels in casa, masa, pala, polo, tomo and mono. A later occurrence or opposing vowel is not the target.",
+        "Consonantal frames still vary. Group balance removes one obvious nuisance cue, not every coarticulatory or lexical confound; actual item/talker validation is still needed."
+      ],
+      "pools": [
+        [
+          {
+            "text": "mesa",
+            "ipa": "/ˈmesa/",
+            "meaning": "table",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-mesa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "pena",
+            "ipa": "/ˈpena/",
+            "meaning": "sorrow or regret",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-pena"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "tela",
+            "ipa": "/ˈtela/",
+            "meaning": "cloth",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-tela"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "peso",
+            "ipa": "/ˈpeso/",
+            "meaning": "weight",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-peso"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "pelo",
+            "ipa": "/ˈpelo/",
+            "meaning": "hair",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-pelo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "dedo",
+            "ipa": "/ˈdedo/",
+            "meaning": "finger",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-dedo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          }
+        ],
+        [
+          {
+            "text": "misa",
+            "ipa": "/ˈmisa/",
+            "meaning": "Mass, a religious service",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-misa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "pila",
+            "ipa": "/ˈpila/",
+            "meaning": "battery",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-pila"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "rima",
+            "ipa": "/ˈrima/",
+            "meaning": "rhyme",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-rima"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "piso",
+            "ipa": "/ˈpiso/",
+            "meaning": "floor",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-piso"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "pino",
+            "ipa": "/ˈpino/",
+            "meaning": "pine tree",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-pino"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "tipo",
+            "ipa": "/ˈtipo/",
+            "meaning": "type or kind",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-tipo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          }
+        ]
+      ],
+      "minimalPairs": [
+        {
+          "left": "mesa",
+          "right": "misa",
+          "sourceIds": [
+            "es-add-collins-mesa",
+            "es-add-collins-misa"
+          ]
+        },
+        {
+          "left": "peso",
+          "right": "piso",
+          "sourceIds": [
+            "es-add-collins-peso",
+            "es-add-collins-piso"
+          ]
+        }
+      ],
+      "reviewNotes": [
+        "All entries are drafts for human text review. Dictionary checking confirms these are real words and selected senses; it does not certify the editorial IPA or any audio.",
+        "Pools are independent category banks; row alignment does not assert minimal pairing. Only minimalPairs lists single-segment substitutions under the selected broad IPA. An empty list is intentional.",
+        "No words are tagged as published experiment stimuli. Even pato, named as a source word by Fox et al., supplied an excised CV rather than a whole-word stimulus.",
+        "ABX is the intended product interaction, not an intervention proven superior by these citations. Research and pronunciation validation must not be inferred from inventory completeness."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "es-e-o",
+      "languageId": "es",
+      "dialect": "Mexico City Spanish; careful citation forms; seseo and yeísmo",
+      "label": "/e/ versus /o/",
+      "categories": [
+        {
+          "label": "/e/",
+          "ipa": "e"
+        },
+        {
+          "label": "/o/",
+          "ipa": "o"
+        }
+      ],
+      "evidenceLevel": "phonology",
+      "sourceIds": [
+        "es-add-avelino-2018"
+      ],
+      "learnerL1s": [],
+      "rationale": "Diagnostic coverage: compare front/back categories when learner results suggest a need. This is an editorial screening priority, not a published ranking.",
+      "scopeNote": "One member of the complete ten-comparison grid for five vowels. This grid is inventory coverage, not ten equally difficult or equally research-supported lessons.",
+      "contextNotes": [
+        "Target only the stressed vowel of the first syllable. Every candidate is a disyllable with an open first syllable; spelling and meaning are review metadata.",
+        "Two groups match the unstressed final vowel: final /a/ and final /o/. Each group has three lexical items in each category; keep A/B/X in the same group to avoid a category-correlated final-vowel cue.",
+        "targetSegment names the category and targetOccurrence=1 selects its first occurrence, including repeated vowels in casa, masa, pala, polo, tomo and mono. A later occurrence or opposing vowel is not the target.",
+        "Consonantal frames still vary. Group balance removes one obvious nuisance cue, not every coarticulatory or lexical confound; actual item/talker validation is still needed."
+      ],
+      "pools": [
+        [
+          {
+            "text": "mesa",
+            "ipa": "/ˈmesa/",
+            "meaning": "table",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-mesa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "pena",
+            "ipa": "/ˈpena/",
+            "meaning": "sorrow or regret",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-pena"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "tela",
+            "ipa": "/ˈtela/",
+            "meaning": "cloth",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-tela"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "peso",
+            "ipa": "/ˈpeso/",
+            "meaning": "weight",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-peso"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "pelo",
+            "ipa": "/ˈpelo/",
+            "meaning": "hair",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-pelo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "dedo",
+            "ipa": "/ˈdedo/",
+            "meaning": "finger",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-dedo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          }
+        ],
+        [
+          {
+            "text": "cosa",
+            "ipa": "/ˈkosa/",
+            "meaning": "thing",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-cosa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "sopa",
+            "ipa": "/ˈsopa/",
+            "meaning": "soup",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-sopa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "copa",
+            "ipa": "/ˈkopa/",
+            "meaning": "drinking glass",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-copa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "polo",
+            "ipa": "/ˈpolo/",
+            "meaning": "pole, such as a magnetic pole",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-polo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "tomo",
+            "ipa": "/ˈtomo/",
+            "meaning": "volume of a book",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-tomo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "mono",
+            "ipa": "/ˈmono/",
+            "meaning": "monkey",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-rae-mono"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          }
+        ]
+      ],
+      "minimalPairs": [
+        {
+          "left": "pelo",
+          "right": "polo",
+          "sourceIds": [
+            "es-add-collins-pelo",
+            "es-add-collins-polo"
+          ]
+        }
+      ],
+      "reviewNotes": [
+        "All entries are drafts for human text review. Dictionary checking confirms these are real words and selected senses; it does not certify the editorial IPA or any audio.",
+        "Pools are independent category banks; row alignment does not assert minimal pairing. Only minimalPairs lists single-segment substitutions under the selected broad IPA. An empty list is intentional.",
+        "No words are tagged as published experiment stimuli. Even pato, named as a source word by Fox et al., supplied an excised CV rather than a whole-word stimulus.",
+        "ABX is the intended product interaction, not an intervention proven superior by these citations. Research and pronunciation validation must not be inferred from inventory completeness."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "es-e-u",
+      "languageId": "es",
+      "dialect": "Mexico City Spanish; careful citation forms; seseo and yeísmo",
+      "label": "/e/ versus /u/",
+      "categories": [
+        {
+          "label": "/e/",
+          "ipa": "e"
+        },
+        {
+          "label": "/u/",
+          "ipa": "u"
+        }
+      ],
+      "evidenceLevel": "phonology",
+      "sourceIds": [
+        "es-add-avelino-2018"
+      ],
+      "learnerL1s": [],
+      "rationale": "Optional coverage: retain this valid comparison for diagnosis or mixed review; no evidence here establishes it as a common learner bottleneck.",
+      "scopeNote": "One member of the complete ten-comparison grid for five vowels. This grid is inventory coverage, not ten equally difficult or equally research-supported lessons.",
+      "contextNotes": [
+        "Target only the stressed vowel of the first syllable. Every candidate is a disyllable with an open first syllable; spelling and meaning are review metadata.",
+        "Two groups match the unstressed final vowel: final /a/ and final /o/. Each group has three lexical items in each category; keep A/B/X in the same group to avoid a category-correlated final-vowel cue.",
+        "targetSegment names the category and targetOccurrence=1 selects its first occurrence, including repeated vowels in casa, masa, pala, polo, tomo and mono. A later occurrence or opposing vowel is not the target.",
+        "Consonantal frames still vary. Group balance removes one obvious nuisance cue, not every coarticulatory or lexical confound; actual item/talker validation is still needed."
+      ],
+      "pools": [
+        [
+          {
+            "text": "mesa",
+            "ipa": "/ˈmesa/",
+            "meaning": "table",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-mesa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "pena",
+            "ipa": "/ˈpena/",
+            "meaning": "sorrow or regret",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-pena"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "tela",
+            "ipa": "/ˈtela/",
+            "meaning": "cloth",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-tela"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "peso",
+            "ipa": "/ˈpeso/",
+            "meaning": "weight",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-peso"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "pelo",
+            "ipa": "/ˈpelo/",
+            "meaning": "hair",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-pelo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "dedo",
+            "ipa": "/ˈdedo/",
+            "meaning": "finger",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-dedo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          }
+        ],
+        [
+          {
+            "text": "suma",
+            "ipa": "/ˈsuma/",
+            "meaning": "sum",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-suma"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "u",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "cuna",
+            "ipa": "/ˈkuna/",
+            "meaning": "cradle",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-cuna"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "u",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "luna",
+            "ipa": "/ˈluna/",
+            "meaning": "moon",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-luna"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "u",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "puro",
+            "ipa": "/ˈpuɾo/",
+            "meaning": "pure, masculine adjective",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-puro"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "u",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "tubo",
+            "ipa": "/ˈtubo/",
+            "meaning": "tube",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-tubo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "u",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "cubo",
+            "ipa": "/ˈkubo/",
+            "meaning": "bucket",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-cubo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "u",
+            "targetOccurrence": 1
+          }
+        ]
+      ],
+      "minimalPairs": [],
+      "reviewNotes": [
+        "All entries are drafts for human text review. Dictionary checking confirms these are real words and selected senses; it does not certify the editorial IPA or any audio.",
+        "Pools are independent category banks; row alignment does not assert minimal pairing. Only minimalPairs lists single-segment substitutions under the selected broad IPA. An empty list is intentional.",
+        "No words are tagged as published experiment stimuli. Even pato, named as a source word by Fox et al., supplied an excised CV rather than a whole-word stimulus.",
+        "ABX is the intended product interaction, not an intervention proven superior by these citations. Research and pronunciation validation must not be inferred from inventory completeness."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "es-i-o",
+      "languageId": "es",
+      "dialect": "Mexico City Spanish; careful citation forms; seseo and yeísmo",
+      "label": "/i/ versus /o/",
+      "categories": [
+        {
+          "label": "/i/",
+          "ipa": "i"
+        },
+        {
+          "label": "/o/",
+          "ipa": "o"
+        }
+      ],
+      "evidenceLevel": "phonology",
+      "sourceIds": [
+        "es-add-avelino-2018"
+      ],
+      "learnerL1s": [],
+      "rationale": "Optional coverage: retain this valid comparison for diagnosis or mixed review; no evidence here establishes it as a common learner bottleneck.",
+      "scopeNote": "One member of the complete ten-comparison grid for five vowels. This grid is inventory coverage, not ten equally difficult or equally research-supported lessons.",
+      "contextNotes": [
+        "Target only the stressed vowel of the first syllable. Every candidate is a disyllable with an open first syllable; spelling and meaning are review metadata.",
+        "Two groups match the unstressed final vowel: final /a/ and final /o/. Each group has three lexical items in each category; keep A/B/X in the same group to avoid a category-correlated final-vowel cue.",
+        "targetSegment names the category and targetOccurrence=1 selects its first occurrence, including repeated vowels in casa, masa, pala, polo, tomo and mono. A later occurrence or opposing vowel is not the target.",
+        "Consonantal frames still vary. Group balance removes one obvious nuisance cue, not every coarticulatory or lexical confound; actual item/talker validation is still needed."
+      ],
+      "pools": [
+        [
+          {
+            "text": "misa",
+            "ipa": "/ˈmisa/",
+            "meaning": "Mass, a religious service",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-misa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "pila",
+            "ipa": "/ˈpila/",
+            "meaning": "battery",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-pila"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "rima",
+            "ipa": "/ˈrima/",
+            "meaning": "rhyme",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-rima"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "piso",
+            "ipa": "/ˈpiso/",
+            "meaning": "floor",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-piso"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "pino",
+            "ipa": "/ˈpino/",
+            "meaning": "pine tree",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-pino"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "tipo",
+            "ipa": "/ˈtipo/",
+            "meaning": "type or kind",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-tipo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          }
+        ],
+        [
+          {
+            "text": "cosa",
+            "ipa": "/ˈkosa/",
+            "meaning": "thing",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-cosa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "sopa",
+            "ipa": "/ˈsopa/",
+            "meaning": "soup",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-sopa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "copa",
+            "ipa": "/ˈkopa/",
+            "meaning": "drinking glass",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-copa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "polo",
+            "ipa": "/ˈpolo/",
+            "meaning": "pole, such as a magnetic pole",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-polo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "tomo",
+            "ipa": "/ˈtomo/",
+            "meaning": "volume of a book",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-tomo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "mono",
+            "ipa": "/ˈmono/",
+            "meaning": "monkey",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-rae-mono"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          }
+        ]
+      ],
+      "minimalPairs": [],
+      "reviewNotes": [
+        "All entries are drafts for human text review. Dictionary checking confirms these are real words and selected senses; it does not certify the editorial IPA or any audio.",
+        "Pools are independent category banks; row alignment does not assert minimal pairing. Only minimalPairs lists single-segment substitutions under the selected broad IPA. An empty list is intentional.",
+        "No words are tagged as published experiment stimuli. Even pato, named as a source word by Fox et al., supplied an excised CV rather than a whole-word stimulus.",
+        "ABX is the intended product interaction, not an intervention proven superior by these citations. Research and pronunciation validation must not be inferred from inventory completeness."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "es-i-u",
+      "languageId": "es",
+      "dialect": "Mexico City Spanish; careful citation forms; seseo and yeísmo",
+      "label": "/i/ versus /u/",
+      "categories": [
+        {
+          "label": "/i/",
+          "ipa": "i"
+        },
+        {
+          "label": "/u/",
+          "ipa": "u"
+        }
+      ],
+      "evidenceLevel": "phonology",
+      "sourceIds": [
+        "es-add-avelino-2018"
+      ],
+      "learnerL1s": [],
+      "rationale": "Diagnostic coverage: compare front/back categories when learner results suggest a need. This is an editorial screening priority, not a published ranking.",
+      "scopeNote": "One member of the complete ten-comparison grid for five vowels. This grid is inventory coverage, not ten equally difficult or equally research-supported lessons.",
+      "contextNotes": [
+        "Target only the stressed vowel of the first syllable. Every candidate is a disyllable with an open first syllable; spelling and meaning are review metadata.",
+        "Two groups match the unstressed final vowel: final /a/ and final /o/. Each group has three lexical items in each category; keep A/B/X in the same group to avoid a category-correlated final-vowel cue.",
+        "targetSegment names the category and targetOccurrence=1 selects its first occurrence, including repeated vowels in casa, masa, pala, polo, tomo and mono. A later occurrence or opposing vowel is not the target.",
+        "Consonantal frames still vary. Group balance removes one obvious nuisance cue, not every coarticulatory or lexical confound; actual item/talker validation is still needed."
+      ],
+      "pools": [
+        [
+          {
+            "text": "misa",
+            "ipa": "/ˈmisa/",
+            "meaning": "Mass, a religious service",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-misa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "pila",
+            "ipa": "/ˈpila/",
+            "meaning": "battery",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-pila"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "rima",
+            "ipa": "/ˈrima/",
+            "meaning": "rhyme",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-rima"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "piso",
+            "ipa": "/ˈpiso/",
+            "meaning": "floor",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-piso"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "pino",
+            "ipa": "/ˈpino/",
+            "meaning": "pine tree",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-pino"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "tipo",
+            "ipa": "/ˈtipo/",
+            "meaning": "type or kind",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-tipo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          }
+        ],
+        [
+          {
+            "text": "suma",
+            "ipa": "/ˈsuma/",
+            "meaning": "sum",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-suma"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "u",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "cuna",
+            "ipa": "/ˈkuna/",
+            "meaning": "cradle",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-cuna"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "u",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "luna",
+            "ipa": "/ˈluna/",
+            "meaning": "moon",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-luna"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "u",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "puro",
+            "ipa": "/ˈpuɾo/",
+            "meaning": "pure, masculine adjective",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-puro"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "u",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "tubo",
+            "ipa": "/ˈtubo/",
+            "meaning": "tube",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-tubo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "u",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "cubo",
+            "ipa": "/ˈkubo/",
+            "meaning": "bucket",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-cubo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "u",
+            "targetOccurrence": 1
+          }
+        ]
+      ],
+      "minimalPairs": [],
+      "reviewNotes": [
+        "All entries are drafts for human text review. Dictionary checking confirms these are real words and selected senses; it does not certify the editorial IPA or any audio.",
+        "Pools are independent category banks; row alignment does not assert minimal pairing. Only minimalPairs lists single-segment substitutions under the selected broad IPA. An empty list is intentional.",
+        "No words are tagged as published experiment stimuli. Even pato, named as a source word by Fox et al., supplied an excised CV rather than a whole-word stimulus.",
+        "ABX is the intended product interaction, not an intervention proven superior by these citations. Research and pronunciation validation must not be inferred from inventory completeness."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "es-o-u",
+      "languageId": "es",
+      "dialect": "Mexico City Spanish; careful citation forms; seseo and yeísmo",
+      "label": "/o/ versus /u/",
+      "categories": [
+        {
+          "label": "/o/",
+          "ipa": "o"
+        },
+        {
+          "label": "/u/",
+          "ipa": "u"
+        }
+      ],
+      "evidenceLevel": "phonology",
+      "sourceIds": [
+        "es-add-avelino-2018",
+        "es-add-perez-silva-2017"
+      ],
+      "learnerL1s": [],
+      "rationale": "Conditional priority: screen the mid/high distinction for learners whose L1 or observed errors warrant it. Do not infer difficulty from nationality or assign this lesson automatically to all learners.",
+      "scopeNote": "One member of the complete ten-comparison grid for five vowels. This grid is inventory coverage, not ten equally difficult or equally research-supported lessons.",
+      "contextNotes": [
+        "Target only the stressed vowel of the first syllable. Every candidate is a disyllable with an open first syllable; spelling and meaning are review metadata.",
+        "Two groups match the unstressed final vowel: final /a/ and final /o/. Each group has three lexical items in each category; keep A/B/X in the same group to avoid a category-correlated final-vowel cue.",
+        "targetSegment names the category and targetOccurrence=1 selects its first occurrence, including repeated vowels in casa, masa, pala, polo, tomo and mono. A later occurrence or opposing vowel is not the target.",
+        "Consonantal frames still vary. Group balance removes one obvious nuisance cue, not every coarticulatory or lexical confound; actual item/talker validation is still needed."
+      ],
+      "pools": [
+        [
+          {
+            "text": "cosa",
+            "ipa": "/ˈkosa/",
+            "meaning": "thing",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-cosa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "sopa",
+            "ipa": "/ˈsopa/",
+            "meaning": "soup",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-sopa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "copa",
+            "ipa": "/ˈkopa/",
+            "meaning": "drinking glass",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-copa"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "polo",
+            "ipa": "/ˈpolo/",
+            "meaning": "pole, such as a magnetic pole",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-polo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "tomo",
+            "ipa": "/ˈtomo/",
+            "meaning": "volume of a book",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-tomo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "mono",
+            "ipa": "/ˈmono/",
+            "meaning": "monkey",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-rae-mono"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          }
+        ],
+        [
+          {
+            "text": "suma",
+            "ipa": "/ˈsuma/",
+            "meaning": "sum",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-suma"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "u",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "cuna",
+            "ipa": "/ˈkuna/",
+            "meaning": "cradle",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-cuna"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "u",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "luna",
+            "ipa": "/ˈluna/",
+            "meaning": "moon",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-a",
+            "sourceIds": [
+              "es-add-collins-luna"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "u",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "puro",
+            "ipa": "/ˈpuɾo/",
+            "meaning": "pure, masculine adjective",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-puro"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "u",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "tubo",
+            "ipa": "/ˈtubo/",
+            "meaning": "tube",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-tubo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "u",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "cubo",
+            "ipa": "/ˈkubo/",
+            "meaning": "bucket",
+            "position": "first-syllable nucleus",
+            "group": "stressed-open-first-final-o",
+            "sourceIds": [
+              "es-add-collins-cubo"
+            ],
+            "stimulusSourceIds": [],
+            "targetSegment": "u",
+            "targetOccurrence": 1
+          }
+        ]
+      ],
+      "minimalPairs": [],
+      "reviewNotes": [
+        "All entries are drafts for human text review. Dictionary checking confirms these are real words and selected senses; it does not certify the editorial IPA or any audio.",
+        "Pools are independent category banks; row alignment does not assert minimal pairing. Only minimalPairs lists single-segment substitutions under the selected broad IPA. An empty list is intentional.",
+        "No words are tagged as published experiment stimuli. Even pato, named as a source word by Fox et al., supplied an excised CV rather than a whole-word stimulus.",
+        "ABX is the intended product interaction, not an intervention proven superior by these citations. Research and pronunciation validation must not be inferred from inventory completeness."
+      ],
+      "status": "draft"
+    }
+  ],
+  "gaps": [
+    "Integration note: es-e-i is a deeper replacement for the earlier two-word-per-category draft. The other nine IDs are new comparisons. Deduplicate by ID when merging; do not count es-e-i twice.",
+    "Ten is the full set of binary comparisons among five vowel categories, not a claim that Spanish has only ten useful sound contrasts or that every comparison is equally difficult.",
+    "No audio is approved or generated. All word IPA remains subject to human review; newly linked dictionaries were checked for headwords and senses, not full displayed IPA.",
+    "Reference variety is Mexico City. Its seseo means /s–θ/ is not a contrast here; distinción needs a separate variety bank. Yeísmo means ll/y is not a universal opposition. Written b/v must not become a Mexican /b–v/ lesson.",
+    "Mexico City voiced-stop lenition and unstressed vowel reduction occur naturally. Broad /b d ɡ/ labels do not demand stop realizations between vowels; tubo/cubo and dedo require consistent natural allophony. The target vowel stays stressed in this pack.",
+    "Consonant coverage remains incomplete: review useful /f/, /s/, /x/, /tʃ/, /l/, nasal and rhotic comparisons against particular learners and dialects. This bounded pass closes the vowel-grid gap only.",
+    "Connected-speech vowel sequences, hiatus/diphthongs, unstressed-vowel variation and additional stress contexts require separate pools; they are not silently treated as isolated monophthong contrasts.",
+    "This small inventory is reused across comparisons. It is not 120 independent lexical items, and the words cannot simultaneously serve as unseen transfer-assessment items.",
+    "L1-specific priority still needs diagnostic validation. The cited English-listener study used ratings, not Spanish training; the Quechua discussion is not uniform evidence for every bilingual speaker."
+  ]
+}

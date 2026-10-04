@@ -1,0 +1,355 @@
+{
+  "date": "2026-09-28",
+  "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+  "retrieval": "All 24 selected American IPA and sense entries manually read through the web tool on this date. Other publishers and homographs on the same page are not interchangeable evidence.",
+  "normalization": "Webster /r/ becomes /ɹ/. Preserve the dictionary vowels and diphthongs. No dictionary vowel category is changed. The legacy /ʌ–ɑː/ topic is explicitly adapted to the American /ʌ–ɑ/ contrast using LOT words; this involves dialect-specific lexical incidence, not merely notation compression. The original non-rhotic cup–carp example is not reused.",
+  "licensing": "Factual word/pronunciation checking and original short meaning labels. No dictionary paragraphs, chart artwork or dictionary audio copied or licensed for redistribution.",
+  "words": [
+    {
+      "word": "pen",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/pen",
+      "selectedEntry": "pen in American English 2; noun, sense 2",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "pɛn"
+      ],
+      "editorialBroadIpa": "pɛn",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "pun",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/pun",
+      "selectedEntry": "pun in American English; noun",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "pʌn"
+      ],
+      "editorialBroadIpa": "pʌn",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "ten",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/ten",
+      "selectedEntry": "ten in American English; numeral",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "tɛn"
+      ],
+      "editorialBroadIpa": "tɛn",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "ton",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/ton",
+      "selectedEntry": "ton in American English 1; weight, not the fashion borrowing",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "tʌn"
+      ],
+      "editorialBroadIpa": "tʌn",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "hem",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/hem",
+      "selectedEntry": "hem in American English 1; noun, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "hɛm"
+      ],
+      "editorialBroadIpa": "hɛm",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "hum",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/hum",
+      "selectedEntry": "hum in American English 1; verb, not the interjection /həm/",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "hʌm"
+      ],
+      "editorialBroadIpa": "hʌm",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "kin",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/kin",
+      "selectedEntry": "kin in American English; noun, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "kɪn"
+      ],
+      "editorialBroadIpa": "kɪn",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "king",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/king",
+      "selectedEntry": "king in American English; common noun, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "kɪŋ"
+      ],
+      "editorialBroadIpa": "kɪŋ",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "pin",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/pin",
+      "selectedEntry": "pin in American English; noun, sense 2",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "pɪn"
+      ],
+      "editorialBroadIpa": "pɪn",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "ping",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/ping",
+      "selectedEntry": "ping in American English; noun, sense 1a",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "pɪŋ"
+      ],
+      "editorialBroadIpa": "pɪŋ",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "win",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/win",
+      "selectedEntry": "win in American English; intransitive verb, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "wɪn"
+      ],
+      "editorialBroadIpa": "wɪn",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "wing",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/wing",
+      "selectedEntry": "wing in American English; noun, sense 1a",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "wɪŋ"
+      ],
+      "editorialBroadIpa": "wɪŋ",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "tip",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/tip",
+      "selectedEntry": "tip in American English 1; noun, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "tɪp"
+      ],
+      "editorialBroadIpa": "tɪp",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "dip",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/dip",
+      "selectedEntry": "dip in American English; transitive verb, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "dɪp"
+      ],
+      "editorialBroadIpa": "dɪp",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "tie",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/tie",
+      "selectedEntry": "tie in American English; transitive verb, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "taɪ"
+      ],
+      "editorialBroadIpa": "taɪ",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "die",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/die",
+      "selectedEntry": "die in American English 2; noun, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "daɪ"
+      ],
+      "editorialBroadIpa": "daɪ",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "town",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/town",
+      "selectedEntry": "town in American English; noun, sense 2",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "taʊn"
+      ],
+      "editorialBroadIpa": "taʊn",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "down",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/down",
+      "selectedEntry": "down in American English 1; adverb, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "daʊn"
+      ],
+      "editorialBroadIpa": "daʊn",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "rut",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/rut",
+      "selectedEntry": "rut in American English 1; noun, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "rʌt"
+      ],
+      "editorialBroadIpa": "ɹʌt",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "rot",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/rot",
+      "selectedEntry": "rot in American English; intransitive verb, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "rɑt"
+      ],
+      "editorialBroadIpa": "ɹɑt",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "hut",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/hut",
+      "selectedEntry": "hut in American English; noun, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "hʌt"
+      ],
+      "editorialBroadIpa": "hʌt",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "hot",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/hot",
+      "selectedEntry": "hot in American English; adjective, sense 1a",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "hɑt"
+      ],
+      "editorialBroadIpa": "hɑt",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "nut",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/nut",
+      "selectedEntry": "nut in American English; common noun, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "nʌt"
+      ],
+      "editorialBroadIpa": "nʌt",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "not",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/not",
+      "selectedEntry": "not in American English; adverb, not the combining form /noʊt/",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "nɑt"
+      ],
+      "editorialBroadIpa": "nɑt",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    }
+  ],
+  "phoneticsSources": [
+    {
+      "url": "https://www.haskinslaboratories.org/vot",
+      "support": "Institutional account of stop release/voice-onset timing and the original experiment; no acoustic threshold is imported."
+    },
+    {
+      "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics/chapter/3-5-aspirated-stops-in-english/",
+      "support": "Author textbook explains aspiration in stressed English stop onsets; not evidence for this product’s learning efficacy."
+    },
+    {
+      "url": "https://www.internationalphoneticassociation.org/IPAcharts/IPA_charts_TI/IPA_charts_TI.html",
+      "support": "Official symbols and optional affricate tie-bar notation. No chart or audio reused."
+    }
+  ],
+  "exclusions": [
+    {
+      "candidate": "ran–rang",
+      "reason": "Primary Webster entries /ræn/ and /ræŋ/ were read; a defensible broad pair, but not selected because three /ɪ/-vowel frames keep this starter pool more consistent. No claim that ran–rang is invalid."
+    },
+    {
+      "candidate": "sin–sing / thin–thing",
+      "reason": "Sin and thin already occur in current training; avoid reuse for this batch."
+    },
+    {
+      "candidate": "reserved bin/bean/bid/bead/lick/leak",
+      "reason": "Reserved transfer words and same-variety homophones remain excluded."
+    }
+  ],
+  "unsupportedClaims": [
+    "No pronunciation or voice identity approval",
+    "No exact-waveform equivalence",
+    "No demonstrated ABX advantage or unseen-word transfer",
+    "No route demand or revenue ranking"
+  ]
+}

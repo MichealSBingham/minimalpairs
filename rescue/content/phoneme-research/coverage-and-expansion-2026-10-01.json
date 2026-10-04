@@ -1,0 +1,121 @@
+{
+  "date": "2026-10-01",
+  "status": "bounded-research-audit",
+  "scope": "Contrast coverage, lexical depth, English reference varieties and next-language acquisition priorities. This is not a systematic exhaustive review or a measured revenue forecast.",
+  "answers": {
+    "allResearchContrastsCovered": false,
+    "whyNot": "Studies differ by learner L1, target variety, target position, task and use of words versus nonwords. A contrast inventory alone cannot certify a universal curriculum. Keep each literature connection and outstanding family explicit.",
+    "minimumVocabulary": "At least four distinct written word forms per sound category, aiming for five or more; also inspect compatible context groups. This is a product threshold, not a demonstrated optimum.",
+    "english": "Separate General American and Standard Southern British banks under one English product. The selected text bank has 27 American and 22 British contrasts; neither claims every accent or an exhaustive inventory.",
+    "expansion": "Owner selected Japanese as the ninth language for text-bank v1; it now has 10 contrasts and 100 words. Korean remains a later candidate. No new recordings are generated or pronunciation-approved.",
+    "acquisition": "Use the existing French and English search footprint while repairing all promised languages. Test new-language demand with an actually usable diagnostic once its words and audio pass review. Evaluate exercise starts, completions and subsequent paid conversion by target language and learner L1.",
+    "revenue": "No higher revenue forecast follows from a larger contrast or language count alone."
+  },
+  "sources": [
+    {
+      "id": "robert-fun",
+      "url": "https://dictionnaire.lerobert.com/definition/fun",
+      "access": "direct primary dictionary record",
+      "finding": "The word is recorded in French and explicitly marked as an anglicism. Lexical inclusion in a dictionary does not make it a good core training choice."
+    },
+    {
+      "id": "duolingo-2025",
+      "url": "https://blog.duolingo.com/2025-duolingo-language-report/",
+      "access": "official company usage report",
+      "finding": "Japanese ranks fourth and Korean sixth among languages studied on Duolingo in its 2025 reporting period. Expanded course availability contributed to growth.",
+      "limit": "Platform-specific activity, not total market size, search volume, adult pronunciation-tool demand or paid conversion."
+    },
+    {
+      "id": "jpf-2024",
+      "url": "https://www.jpf.go.jp/j/about/press/2025/dl/2025-031-03.pdf",
+      "access": "official survey summary, pp.6–7",
+      "finding": "The 2024 survey counted 4,000,750 Japanese learners at institutions abroad across 143 countries/regions.",
+      "limit": "Institutional survey excludes individual self-study; this is not the addressable paid customer count for MinimalPairs."
+    },
+    {
+      "id": "sonu-2011",
+      "url": "https://www.isca-archive.org/interspeech_2011/sonu11_interspeech.html",
+      "access": "primary proceedings abstract inspected",
+      "finding": "Korean-background learners trained on Japanese vowel length in isolated words or sentences; both improved, with broader contextual improvement under sentence training.",
+      "limit": "Supports Japanese duration as a research-grounded candidate; does not supply an approved product word bank or validate our exact ABX algorithm."
+    },
+    {
+      "id": "okuno-hardison-2016",
+      "url": "https://www.lltjournal.org/item/10125-44461/",
+      "access": "primary journal bibliographic record inspected",
+      "finding": "A technology-based Japanese vowel-duration training paper is available for further stimulus retrieval.",
+      "limit": "Only the record was inspected in this pass; no unseen stimulus lists or outcomes imported."
+    },
+    {
+      "id": "korean-stops-2021",
+      "url": "https://www.kci.go.kr/kciportal/landing/article.kci?arti_id=ART002798042",
+      "access": "primary article abstract via Korean academic index",
+      "finding": "A perception-training study examined lenis and aspirated Korean stops in Chinese-background learners.",
+      "limit": "Limited population and contrasts; not an approved three-way product curriculum."
+    },
+    {
+      "id": "korean-hvpt-2025",
+      "url": "https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003253412",
+      "access": "indexed primary abstract; direct fetch timed out",
+      "finding": "A study trained English-background beginners on Korean three-way stop identification with speaking-rate variation.",
+      "limit": "No full methods or stimulus lists claimed as inspected; not evidence that ABX or more variability always wins."
+    },
+    {
+      "id": "routledge-english-varieties",
+      "url": "https://routledgetextbooks.com/textbooks/9780415722766/audio.php",
+      "access": "publisher teaching-material record",
+      "finding": "Pronunciation teaching materials explicitly distinguish Standard Southern British and General American examples.",
+      "limit": "Reference-model precedent, not evidence that only two English accents exist or that recordings may be commercially reused."
+    },
+    {
+      "id": "site-evidence-snapshot",
+      "path": "research/site-business-audit-2026-09-16.md",
+      "access": "existing owner-authorized account audit, not refreshed live in this turn",
+      "finding": "French and English already had site-specific search visibility in the dated audit.",
+      "limit": "Historical site evidence, not a fresh Search Console query or proof of current conversion."
+    }
+  ],
+  "newLanguageQueue": [
+    {
+      "language": "Japanese",
+      "priority": 1,
+      "candidateFamilies": [
+        "Vowel duration",
+        "Singleton versus geminate consonants",
+        "Mora timing and later phrase transfer",
+        "Pitch-accent perception as a separately scoped, context-controlled extension"
+      ],
+      "hasApprovedWordBank": false,
+      "hasAuditedAudio": false,
+      "commercialStatus": "Market hypothesis; prioritize a small coherent diagnostic and course over a broad availability claim."
+    },
+    {
+      "language": "Korean",
+      "priority": 2,
+      "candidateFamilies": [
+        "Lenis, aspirated and tense stop categories",
+        "Other consonant distinctions after variety-specific review",
+        "Vowel and coda patterns supported by selected learner-L1 evidence"
+      ],
+      "hasApprovedWordBank": false,
+      "hasAuditedAudio": false,
+      "commercialStatus": "Research exists and platform interest is substantial; validate lexical and acoustic cue choices before promising a course."
+    }
+  ],
+  "accentScope": "Minimal-pair perception is one part of pronunciation learning. Word/sentence stress, rhythm, reduction, linking, intonation and transfer to speech require additional tasks and evaluation. Childhood clinical minimal-pair work is not automatically evidence for adult L2 accent acquisition.",
+  "implementationUpdate": {
+    "ownerDecision": "Separate English banks, add Japanese, and settle the inventory before discussing audio generation.",
+    "selectedRelease": "text-bank-v1",
+    "english": {
+      "generalAmericanContrasts": 27,
+      "standardSouthernBritishContrasts": 22
+    },
+    "japanese": {
+      "contrasts": 10,
+      "distinctWords": 100,
+      "scope": "Vowel lengths i/u/e/o; consonant lengths k/t/s; initial k/g, t/d and s/sh. Pitch accent and other gaps remain explicit."
+    },
+    "remainingExpansion": "Korean stays outside this settled version.",
+    "audioGenerated": 0
+  }
+}

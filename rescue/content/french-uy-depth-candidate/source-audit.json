@@ -1,0 +1,280 @@
+{
+  "preparedAt": "2026-09-30",
+  "words": [
+    {
+      "word": "dessous",
+      "referenceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/dessous/adverbe",
+        "https://www.collinsdictionary.com/dictionary/french-english/dessous"
+      ],
+      "selectedSource": "ATILF / TLFi lexical portal",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/dessous/adverbe",
+      "selectedEntry": "DESSOUS1, II.A, autonomous adverb",
+      "selectedTlfiEntry": 0,
+      "rawSelectedIpa": "d(ə)su",
+      "editorialIpa": "dəsu",
+      "otherDocumentedForms": [
+        "dsu"
+      ],
+      "normalization": "TLFi and Collins explicitly mark schwa optional. This candidate selects the schwa-present form in BOTH words; its absence in only one take is not an accepted pair realization. Historical dental /ḓ/ is rendered broad /d/ in dessus; Collins independently gives /d(ə)sy/.",
+      "meaning": "underneath",
+      "checkedAt": "2026-09-30",
+      "sourceStatus": "primary-pronunciation-and-intended-sense-read",
+      "audioStatus": "not-generated-or-reviewed",
+      "dictionaryForm": "independent-headword-not-added-inflection"
+    },
+    {
+      "word": "dessus",
+      "referenceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/dessus/adverbe",
+        "https://www.collinsdictionary.com/dictionary/french-english/dessus"
+      ],
+      "selectedSource": "ATILF / TLFi lexical portal",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/dessus/adverbe",
+      "selectedEntry": "DESSUS1, II.A.1, adverb",
+      "selectedTlfiEntry": 0,
+      "rawSelectedIpa": "ḓ(ə)sy",
+      "editorialIpa": "dəsy",
+      "otherDocumentedForms": [
+        "dsy"
+      ],
+      "normalization": "TLFi and Collins explicitly mark schwa optional. This candidate selects the schwa-present form in BOTH words; its absence in only one take is not an accepted pair realization. Historical dental /ḓ/ is rendered broad /d/ in dessus; Collins independently gives /d(ə)sy/.",
+      "meaning": "on top",
+      "checkedAt": "2026-09-30",
+      "sourceStatus": "primary-pronunciation-and-intended-sense-read",
+      "audioStatus": "not-generated-or-reviewed",
+      "dictionaryForm": "independent-headword-not-added-inflection"
+    },
+    {
+      "word": "égout",
+      "referenceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/%C3%A9gout/nom",
+        "https://www.collinsdictionary.com/dictionary/french-english/%C3%A9gout"
+      ],
+      "selectedSource": "ATILF / TLFi lexical portal",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/%C3%A9gout/nom",
+      "selectedEntry": "ÉGOUT, B.1.b, usual underground drainage channel",
+      "selectedTlfiEntry": 0,
+      "rawSelectedIpa": "egu",
+      "editorialIpa": "eɡu",
+      "otherDocumentedForms": [],
+      "normalization": "No segment change except historical TLFi /ʀ/→broad /ʁ/ and /g/→/ɡ/ where present.",
+      "meaning": "a sewer",
+      "checkedAt": "2026-09-30",
+      "sourceStatus": "primary-pronunciation-and-intended-sense-read",
+      "audioStatus": "not-generated-or-reviewed",
+      "dictionaryForm": "independent-headword-not-added-inflection"
+    },
+    {
+      "word": "aigu",
+      "referenceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/aigu/adjectif",
+        "https://www.collinsdictionary.com/dictionary/french-english/aigu"
+      ],
+      "selectedSource": "ATILF / TLFi lexical portal",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/aigu/adjectif",
+      "selectedEntry": "AIGU, I.A.1, pointed or sharp object",
+      "selectedTlfiEntry": 0,
+      "rawSelectedIpa": "egy",
+      "editorialIpa": "eɡy",
+      "otherDocumentedForms": [
+        "ɛɡy"
+      ],
+      "normalization": "TLFi also records an initial /ɛ/ variant. Select /eɡy/, independently corroborated by current Collins; /ɛɡy/ with /eɡu/ would introduce a second vowel difference.",
+      "meaning": "sharp or pointed",
+      "checkedAt": "2026-09-30",
+      "sourceStatus": "primary-pronunciation-and-intended-sense-read",
+      "audioStatus": "not-generated-or-reviewed",
+      "dictionaryForm": "independent-headword-not-added-inflection"
+    },
+    {
+      "word": "écrou",
+      "referenceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/%C3%A9crou/nom"
+      ],
+      "selectedSource": "ATILF / TLFi lexical portal",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/%C3%A9crou/nom",
+      "selectedEntry": "ÉCROU1, A, mechanical fastener; not the prison record",
+      "selectedTlfiEntry": 0,
+      "rawSelectedIpa": "ekʀu",
+      "editorialIpa": "ekʁu",
+      "otherDocumentedForms": [],
+      "normalization": "No segment change except historical TLFi /ʀ/→broad /ʁ/ and /g/→/ɡ/ where present.",
+      "meaning": "a nut used with a screw or bolt",
+      "checkedAt": "2026-09-30",
+      "sourceStatus": "primary-pronunciation-and-intended-sense-read",
+      "audioStatus": "not-generated-or-reviewed",
+      "dictionaryForm": "independent-headword-not-added-inflection"
+    },
+    {
+      "word": "écru",
+      "referenceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/%C3%A9cru/adjectif"
+      ],
+      "selectedSource": "ATILF / TLFi lexical portal",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/%C3%A9cru/adjectif",
+      "selectedEntry": "ÉCRU, B.1, usual textile sense; not the obsolete general sense",
+      "selectedTlfiEntry": 0,
+      "rawSelectedIpa": "ekʀy",
+      "editorialIpa": "ekʁy",
+      "otherDocumentedForms": [],
+      "normalization": "No segment change except historical TLFi /ʀ/→broad /ʁ/ and /g/→/ɡ/ where present.",
+      "meaning": "unbleached, describing cloth",
+      "checkedAt": "2026-09-30",
+      "sourceStatus": "primary-pronunciation-and-intended-sense-read",
+      "audioStatus": "not-generated-or-reviewed",
+      "dictionaryForm": "independent-headword-not-added-inflection"
+    },
+    {
+      "word": "bouche",
+      "referenceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/bouche/nom"
+      ],
+      "selectedSource": "ATILF / TLFi lexical portal",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/bouche/nom",
+      "selectedEntry": "BOUCHE, ordinary human mouth",
+      "selectedTlfiEntry": 0,
+      "rawSelectedIpa": "buʃ",
+      "editorialIpa": "buʃ",
+      "otherDocumentedForms": [],
+      "normalization": "No segment change except historical TLFi /ʀ/→broad /ʁ/ and /g/→/ɡ/ where present.",
+      "meaning": "a mouth",
+      "checkedAt": "2026-09-30",
+      "sourceStatus": "primary-pronunciation-and-intended-sense-read",
+      "audioStatus": "not-generated-or-reviewed",
+      "dictionaryForm": "independent-headword-not-added-inflection"
+    },
+    {
+      "word": "bûche",
+      "referenceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/b%C3%BBche/nom"
+      ],
+      "selectedSource": "ATILF / TLFi lexical portal",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/b%C3%BBche/nom",
+      "selectedEntry": "BÛCHE1, A, piece of firewood",
+      "selectedTlfiEntry": 0,
+      "rawSelectedIpa": "byʃ",
+      "editorialIpa": "byʃ",
+      "otherDocumentedForms": [],
+      "normalization": "TLFi gives /byʃ/ and separately notes historical half-length in Passy 1914. The candidate selects the explicit broad citation form; the circumflex is not an instruction to manufacture a duration contrast. Natural realization still requires listening review.",
+      "meaning": "a log for a fire",
+      "checkedAt": "2026-09-30",
+      "sourceStatus": "primary-pronunciation-and-intended-sense-read",
+      "audioStatus": "not-generated-or-reviewed",
+      "dictionaryForm": "independent-headword-not-added-inflection"
+    },
+    {
+      "word": "joute",
+      "referenceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/joute/nom"
+      ],
+      "selectedSource": "ATILF / TLFi lexical portal",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/joute/nom",
+      "selectedEntry": "JOUTE, B, extended competition/rivalry sense; not only medieval jousting",
+      "selectedTlfiEntry": 0,
+      "rawSelectedIpa": "ʒut",
+      "editorialIpa": "ʒut",
+      "otherDocumentedForms": [],
+      "normalization": "No segment change except historical TLFi /ʀ/→broad /ʁ/ and /g/→/ɡ/ where present.",
+      "meaning": "a contest or verbal sparring match",
+      "checkedAt": "2026-09-30",
+      "sourceStatus": "primary-pronunciation-and-intended-sense-read",
+      "audioStatus": "not-generated-or-reviewed",
+      "dictionaryForm": "independent-headword-not-added-inflection"
+    },
+    {
+      "word": "jute",
+      "referenceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/jute/nom"
+      ],
+      "selectedSource": "ATILF / TLFi lexical portal",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/jute/nom",
+      "selectedEntry": "JUTE, metonymic textile-fibre sense",
+      "selectedTlfiEntry": 0,
+      "rawSelectedIpa": "ʒyt",
+      "editorialIpa": "ʒyt",
+      "otherDocumentedForms": [],
+      "normalization": "No segment change except historical TLFi /ʀ/→broad /ʁ/ and /g/→/ɡ/ where present.",
+      "meaning": "jute fibre used in sacks and rope",
+      "checkedAt": "2026-09-30",
+      "sourceStatus": "primary-pronunciation-and-intended-sense-read",
+      "audioStatus": "not-generated-or-reviewed",
+      "dictionaryForm": "independent-headword-not-added-inflection"
+    },
+    {
+      "word": "bouleau",
+      "referenceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/bouleau/nom",
+        "https://www.collinsdictionary.com/dictionary/french-english/bouleau"
+      ],
+      "selectedSource": "ATILF / TLFi lexical portal",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/bouleau/nom",
+      "selectedEntry": "BOULEAU, A, tree; not the homophone boulot",
+      "selectedTlfiEntry": 0,
+      "rawSelectedIpa": "bulo",
+      "editorialIpa": "bulo",
+      "otherDocumentedForms": [],
+      "normalization": "No segment change except historical TLFi /ʀ/→broad /ʁ/ and /g/→/ɡ/ where present.",
+      "meaning": "a birch tree",
+      "checkedAt": "2026-09-30",
+      "sourceStatus": "primary-pronunciation-and-intended-sense-read",
+      "audioStatus": "not-generated-or-reviewed",
+      "dictionaryForm": "independent-headword-not-added-inflection"
+    },
+    {
+      "word": "bulot",
+      "referenceUrls": [
+        "https://www.larousse.fr/dictionnaires/francais-anglais/bulot/1004826",
+        "https://www.larousse.fr/dictionnaires/college/bulot/5767"
+      ],
+      "selectedSource": "Larousse French-English Dictionary",
+      "lookupUrl": null,
+      "selectedEntry": "Larousse French-English, masculine noun, whelk",
+      "selectedTlfiEntry": null,
+      "rawSelectedIpa": "bylo",
+      "editorialIpa": "bylo",
+      "otherDocumentedForms": [],
+      "normalization": "No segment change except historical TLFi /ʀ/→broad /ʁ/ and /g/→/ɡ/ where present.",
+      "meaning": "a whelk shellfish",
+      "checkedAt": "2026-09-30",
+      "sourceStatus": "primary-pronunciation-and-intended-sense-read",
+      "audioStatus": "not-generated-or-reviewed",
+      "dictionaryForm": "independent-headword-not-added-inflection"
+    }
+  ],
+  "retrieval": "Eleven selected TLFi pronunciation and sense entries read through the official lexical API. Bulot read in two official Larousse entries, each explicitly /bylo/. Collins independently read for dessous/dessus, égout/aigu and bouleau. No dictionary audio acquired.",
+  "normalization": "Preserve all vowel categories. Expand explicitly optional schwa only by choosing its present form consistently; normalize historical uvular /ʀ/ and dental /ḓ/ to broad /ʁ/ and /d/, and /g/ to /ɡ/. No /e–ɛ/ merger.",
+  "lexicalSuitability": "All selected items have independent modern dictionary headword senses. Joute, jute, écru and bulot are less beginner-familiar than the public CV starter; offer short post-answer meanings, not a claim that every item is high-frequency. No plural or conjugated duplicate is counted as added depth.",
+  "licensing": "Pronunciation facts, source URLs and independently written short glosses only; no dictionary entry paragraphs, artwork or recordings copied. Dictionary consultation grants no recording redistribution license.",
+  "rejectedOrOmitted": [
+    {
+      "pair": "boule–bulle; joue–jus; cour–cure; pour–pur",
+      "reason": "At least one proposed word or French pronunciation is already in current or staged training; excluded from this added-depth milestone."
+    },
+    {
+      "pair": "pouce–puce; moule–mule; rousse–russe",
+      "reason": "Reserved assessment material; forbidden here, including French homophones under different spellings."
+    },
+    {
+      "pair": "route–rut",
+      "reason": "Rut is already an English batch4 training spelling; the task expressly excludes all current/candidate English and French spellings."
+    },
+    {
+      "pair": "loup–lu; pou–pu",
+      "reason": "Not selected: using participles to fill a numerical target conflicts with this depth brief. No claim that such citation-form pairs are linguistically impossible."
+    },
+    {
+      "pair": "boucher–bûcher beside bouche–bûche",
+      "reason": "Not needed; avoid presenting a closely related suffix extension of the same local frame as another distinct depth milestone."
+    },
+    {
+      "pair": "flou–flux",
+      "reason": "Not selected or source-audited in this task; six independently checked items are available without relying on a potentially variable final-consonant reading."
+    }
+  ],
+  "boundaries": [
+    "No frequency ranking from historical literary counts",
+    "No pronunciation or speaker approval",
+    "No revenue or learning-effect projection change"
+  ]
+}

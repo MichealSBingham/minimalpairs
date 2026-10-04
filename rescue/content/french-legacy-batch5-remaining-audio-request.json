@@ -1,0 +1,1062 @@
+{
+  "date": "2026-09-28",
+  "status": "all-eight-missing-topics-request-only",
+  "voiceIds": [
+    "qwen-fr-a",
+    "qwen-fr-b"
+  ],
+  "uniqueWords": 46,
+  "existingCachedClips": 20,
+  "missingCachedClips": 72,
+  "requirement": "This is a fresh cache snapshot for all eight pending topics, superseding old batch cache counts. A different provider/profile needs every listed word. No cache presence is listening approval.",
+  "words": [
+    {
+      "languageId": "fr",
+      "text": "chat",
+      "ipa": "/ʃa/",
+      "meaning": "cat; masculine form",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-a-an"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/chat/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/chant/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French broad phonemic notation. TLFi gives rat /ʁa/ and also reports historical /ʁɑ/ variation; this candidate explicitly selects /a/. A recording with oral /ɑ/ must not be silently accepted for the /a/ category. Nasal quality varies across regions and speakers.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "chant",
+      "ipa": "/ʃɑ̃/",
+      "meaning": "singing; song",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-a-an"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/chat/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/chant/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French broad phonemic notation. TLFi gives rat /ʁa/ and also reports historical /ʁɑ/ variation; this candidate explicitly selects /a/. A recording with oral /ɑ/ must not be silently accepted for the /a/ category. Nasal quality varies across regions and speakers.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "rat",
+      "ipa": "/ʁa/",
+      "meaning": "rat",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-a-an",
+        "fr-a-e"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/rat/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/rang/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French broad phonemic notation. TLFi gives rat /ʁa/ and also reports historical /ʁɑ/ variation; this candidate explicitly selects /a/. A recording with oral /ɑ/ must not be silently accepted for the /a/ category. Nasal quality varies across regions and speakers.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "rang",
+      "ipa": "/ʁɑ̃/",
+      "meaning": "row; rank",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-a-an"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/rat/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/rang/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French broad phonemic notation. TLFi gives rat /ʁa/ and also reports historical /ʁɑ/ variation; this candidate explicitly selects /a/. A recording with oral /ɑ/ must not be silently accepted for the /a/ category. Nasal quality varies across regions and speakers.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "plat",
+      "ipa": "/pla/",
+      "meaning": "flat; masculine singular",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-a-an"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/plat/adjectif",
+        "https://www.portail-lexical.fr/definition/tlfi/plan/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French broad phonemic notation. TLFi gives rat /ʁa/ and also reports historical /ʁɑ/ variation; this candidate explicitly selects /a/. A recording with oral /ɑ/ must not be silently accepted for the /a/ category. Nasal quality varies across regions and speakers.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "plan",
+      "ipa": "/plɑ̃/",
+      "meaning": "plan; drawing of a layout",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-a-an"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/plat/adjectif",
+        "https://www.portail-lexical.fr/definition/tlfi/plan/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French broad phonemic notation. TLFi gives rat /ʁa/ and also reports historical /ʁɑ/ variation; this candidate explicitly selects /a/. A recording with oral /ɑ/ must not be silently accepted for the /a/ category. Nasal quality varies across regions and speakers.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "bol",
+      "ipa": "/bɔl/",
+      "meaning": "bowl",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-o-open-u"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/bol/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/boule/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French, in isolated one-syllable words without a final schwa. Final /ʁ/ may lengthen the preceding vowel; the broad transcription omits that contextual length in both members. Keep /ɔ/ distinct from /o/ and /u/ distinct from /y/. Sourd uses its masculine form, with no pronounced final d.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "boule",
+      "ipa": "/bul/",
+      "meaning": "ball; spherical object",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-o-open-u"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/bol/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/boule/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French, in isolated one-syllable words without a final schwa. Final /ʁ/ may lengthen the preceding vowel; the broad transcription omits that contextual length in both members. Keep /ɔ/ distinct from /o/ and /u/ distinct from /y/. Sourd uses its masculine form, with no pronounced final d.",
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/838104c540550bbde48ffb9348d052ba1edf1c8d118259418a5f23fea0307b5d.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/c63a64ba5235b578244fa1fc2129abad4747e6b9ca2df197e3ba0e5d26a7d720.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "cor",
+      "ipa": "/kɔʁ/",
+      "meaning": "horn; wind instrument",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-o-open-u"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/cor/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/cour/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French, in isolated one-syllable words without a final schwa. Final /ʁ/ may lengthen the preceding vowel; the broad transcription omits that contextual length in both members. Keep /ɔ/ distinct from /o/ and /u/ distinct from /y/. Sourd uses its masculine form, with no pronounced final d.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "cour",
+      "ipa": "/kuʁ/",
+      "meaning": "courtyard",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-o-open-u"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/cor/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/cour/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French, in isolated one-syllable words without a final schwa. Final /ʁ/ may lengthen the preceding vowel; the broad transcription omits that contextual length in both members. Keep /ɔ/ distinct from /o/ and /u/ distinct from /y/. Sourd uses its masculine form, with no pronounced final d.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "sort",
+      "ipa": "/sɔʁ/",
+      "meaning": "fate; destiny",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-o-open-u"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/sort/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/sourd/adjectif"
+      ],
+      "dialectNote": "Northern reference Metropolitan French, in isolated one-syllable words without a final schwa. Final /ʁ/ may lengthen the preceding vowel; the broad transcription omits that contextual length in both members. Keep /ɔ/ distinct from /o/ and /u/ distinct from /y/. Sourd uses its masculine form, with no pronounced final d.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "sourd",
+      "ipa": "/suʁ/",
+      "meaning": "deaf; masculine singular",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-o-open-u"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/sort/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/sourd/adjectif"
+      ],
+      "dialectNote": "Northern reference Metropolitan French, in isolated one-syllable words without a final schwa. Final /ʁ/ may lengthen the preceding vowel; the broad transcription omits that contextual length in both members. Keep /ɔ/ distinct from /o/ and /u/ distinct from /y/. Sourd uses its masculine form, with no pronounced final d.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "pur",
+      "ipa": "/pyʁ/",
+      "meaning": "pure",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-y-eu-open"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/pur/adjectif",
+        "https://www.portail-lexical.fr/definition/tlfi/peur/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French citation forms. Every pair has a medial target followed by /ʁ/. Contextual vowel length is omitted symmetrically in broad IPA; no /œ–ø/ merger is made. Sur is the fully pronounced isolated preposition, not a reduced conversational form. Bure is a less-frequent cloth word, included as a real lexical item rather than a fabricated form.",
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/fea0331a1cbe19497ba68c0ed7c652eb9da23636fb1ae0cd5bc5c1225b6f4920.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/7810c51c53e74bd48799c5f23e0ec5c35914816919c4cc5f8272ed000cd4fd33.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "peur",
+      "ipa": "/pœʁ/",
+      "meaning": "fear",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-y-eu-open"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/pur/adjectif",
+        "https://www.portail-lexical.fr/definition/tlfi/peur/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French citation forms. Every pair has a medial target followed by /ʁ/. Contextual vowel length is omitted symmetrically in broad IPA; no /œ–ø/ merger is made. Sur is the fully pronounced isolated preposition, not a reduced conversational form. Bure is a less-frequent cloth word, included as a real lexical item rather than a fabricated form.",
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/0c30c96b726b45d6ddbc575dbec0cbfb66a8882cc8cd9ac9480f34f8c491b74a.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/1de8435e257b1b626e658c6a17f00f109044037881ff381e434e11c8a88f954b.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "bure",
+      "ipa": "/byʁ/",
+      "meaning": "coarse woollen cloth",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-y-eu-open"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/bure/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/beurre/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French citation forms. Every pair has a medial target followed by /ʁ/. Contextual vowel length is omitted symmetrically in broad IPA; no /œ–ø/ merger is made. Sur is the fully pronounced isolated preposition, not a reduced conversational form. Bure is a less-frequent cloth word, included as a real lexical item rather than a fabricated form.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "beurre",
+      "ipa": "/bœʁ/",
+      "meaning": "butter",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-y-eu-open"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/bure/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/beurre/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French citation forms. Every pair has a medial target followed by /ʁ/. Contextual vowel length is omitted symmetrically in broad IPA; no /œ–ø/ merger is made. Sur is the fully pronounced isolated preposition, not a reduced conversational form. Bure is a less-frequent cloth word, included as a real lexical item rather than a fabricated form.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "sur",
+      "ipa": "/syʁ/",
+      "meaning": "on; upon",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-y-eu-open"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/sur/pr%C3%A9position",
+        "https://www.portail-lexical.fr/definition/tlfi/s%C5%93ur/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French citation forms. Every pair has a medial target followed by /ʁ/. Contextual vowel length is omitted symmetrically in broad IPA; no /œ–ø/ merger is made. Sur is the fully pronounced isolated preposition, not a reduced conversational form. Bure is a less-frequent cloth word, included as a real lexical item rather than a fabricated form.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "sœur",
+      "ipa": "/sœʁ/",
+      "meaning": "sister",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-y-eu-open"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/sur/pr%C3%A9position",
+        "https://www.portail-lexical.fr/definition/tlfi/s%C5%93ur/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French citation forms. Every pair has a medial target followed by /ʁ/. Contextual vowel length is omitted symmetrically in broad IPA; no /œ–ø/ merger is made. Sur is the fully pronounced isolated preposition, not a reduced conversational form. Bure is a less-frequent cloth word, included as a real lexical item rather than a fabricated form.",
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/b2677a029374d1762aabd49e669e8af0a8df585494c368888bc86b4d4168c3f6.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/40d5ebe475c01aec93b6665bacd14a33eff98aff3afa40878f8dbb2e6419379c.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "lit",
+      "ipa": "/li/",
+      "meaning": "bed",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-i-e"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/lit/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/l%C3%A9/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French in isolation. Lit, nid, nez and prix have no final spoken t, d, z or x in these forms. Lé is a noun meaning a strip of fabric or wallpaper, not the article le /lə/; retain its written accent in any synthesis request. Prix/pré have a two-consonant onset but the same final-vowel target position.",
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/496374491e91d2be25d73c5b918ac09a3a86a361edde40377ac69a54a85c6ab8.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/dcb1148a5fe01a50879f66a9dc0005d51778f7fe3f383a7b247e9da83bee24a8.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "lé",
+      "ipa": "/le/",
+      "meaning": "a full-width strip of fabric or wallpaper",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-i-e",
+        "fr-a-e"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/lit/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/l%C3%A9/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French in isolation. Lit, nid, nez and prix have no final spoken t, d, z or x in these forms. Lé is a noun meaning a strip of fabric or wallpaper, not the article le /lə/; retain its written accent in any synthesis request. Prix/pré have a two-consonant onset but the same final-vowel target position.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "nid",
+      "ipa": "/ni/",
+      "meaning": "nest",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-i-e"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/nid/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/nez/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French in isolation. Lit, nid, nez and prix have no final spoken t, d, z or x in these forms. Lé is a noun meaning a strip of fabric or wallpaper, not the article le /lə/; retain its written accent in any synthesis request. Prix/pré have a two-consonant onset but the same final-vowel target position.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "nez",
+      "ipa": "/ne/",
+      "meaning": "nose",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-i-e"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/nid/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/nez/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French in isolation. Lit, nid, nez and prix have no final spoken t, d, z or x in these forms. Lé is a noun meaning a strip of fabric or wallpaper, not the article le /lə/; retain its written accent in any synthesis request. Prix/pré have a two-consonant onset but the same final-vowel target position.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "prix",
+      "ipa": "/pʁi/",
+      "meaning": "price; prize",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-i-e"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/prix/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/pr%C3%A9/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French in isolation. Lit, nid, nez and prix have no final spoken t, d, z or x in these forms. Lé is a noun meaning a strip of fabric or wallpaper, not the article le /lə/; retain its written accent in any synthesis request. Prix/pré have a two-consonant onset but the same final-vowel target position.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "pré",
+      "ipa": "/pʁe/",
+      "meaning": "meadow",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-i-e"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/prix/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/pr%C3%A9/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French in isolation. Lit, nid, nez and prix have no final spoken t, d, z or x in these forms. Lé is a noun meaning a strip of fabric or wallpaper, not the article le /lə/; retain its written accent in any synthesis request. Prix/pré have a two-consonant onset but the same final-vowel target position.",
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/7ff060c51d9f82d4a690b84d63dcebff97e35b0fdccd3e084d5c3286e0833ace.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/83fbc6a9eb99c2485d5f75ca241cfba62a33051f770a27c3dec0f27662a9b8b8.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "dé",
+      "ipa": "/de/",
+      "meaning": "a die; singular of dice",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-e-in"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/d%C3%A9/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/daim/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French isolated forms. The nasal category is written broadly /ɛ̃/; actual quality varies by speaker. No final /m/, /n/ or /t/ is added. Keep oral /e/ distinct from /ɛ/.",
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/1ab6ba00925f7e5fdc899e1837d498d4466f07f3c8fd6263bf414404541c0adc.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/33fb6ab961640da0e250c525d835f3b5b5bc63d20f919ae462725bc67238d048.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "daim",
+      "ipa": "/dɛ̃/",
+      "meaning": "fallow deer",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-e-in"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/d%C3%A9/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/daim/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French isolated forms. The nasal category is written broadly /ɛ̃/; actual quality varies by speaker. No final /m/, /n/ or /t/ is added. Keep oral /e/ distinct from /ɛ/.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "fée",
+      "ipa": "/fe/",
+      "meaning": "fairy",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-e-in"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/f%C3%A9e/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/faim/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French isolated forms. The nasal category is written broadly /ɛ̃/; actual quality varies by speaker. No final /m/, /n/ or /t/ is added. Keep oral /e/ distinct from /ɛ/.",
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/b830c9f2797460a50a5a05184d66640c689b5ca3aeda9a8bdb3673d5e88968e4.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/7c7e82618bb400990752e5ee1592067012aa7439ac34e3042708fa32d4a7bb8b.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "faim",
+      "ipa": "/fɛ̃/",
+      "meaning": "hunger",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-e-in"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/f%C3%A9e/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/faim/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French isolated forms. The nasal category is written broadly /ɛ̃/; actual quality varies by speaker. No final /m/, /n/ or /t/ is added. Keep oral /e/ distinct from /ɛ/.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "thé",
+      "ipa": "/te/",
+      "meaning": "tea",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-e-in"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/th%C3%A9/nom",
+        "https://www.collinsdictionary.com/dictionary/french-english/teint"
+      ],
+      "dialectNote": "Northern reference Metropolitan French isolated forms. The nasal category is written broadly /ɛ̃/; actual quality varies by speaker. No final /m/, /n/ or /t/ is added. Keep oral /e/ distinct from /ɛ/.",
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/07f32880a3e22a170360a268d0cc053375f168b71dd6b06acd88f1dae1a30596.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/fc8111642e619afb63aac9efc6207fe0d84aab973188dc211907098035b85722.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "teint",
+      "ipa": "/tɛ̃/",
+      "meaning": "complexion",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-e-in"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/th%C3%A9/nom",
+        "https://www.collinsdictionary.com/dictionary/french-english/teint"
+      ],
+      "dialectNote": "Northern reference Metropolitan French isolated forms. The nasal category is written broadly /ɛ̃/; actual quality varies by speaker. No final /m/, /n/ or /t/ is added. Keep oral /e/ distinct from /ɛ/.",
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/210b8a155599fbe28ae84fd85f1e5b7af839c19e3d12f8a3bf4dfbd6cdbead37.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/bdfb4e9adb8c35acc4119e930f587f7e0cad8d93e841ff0051b1c0e7f2f22844.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "ré",
+      "ipa": "/ʁe/",
+      "meaning": "the musical note D",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-a-e"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/rat/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/r%C3%A9/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French, explicitly selecting the dictionary /a/ variants for rat and the musical noun la. Their /ɑ/ variants are not silently relabelled. Ré and la name musical notes; lé is a less-frequent textile or wallpaper noun. Ces is the isolated lowercase determiner /se/, without liaison and not the acronym CES.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "la",
+      "ipa": "/la/",
+      "meaning": "the musical note A",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-a-e"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/la/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/l%C3%A9/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French, explicitly selecting the dictionary /a/ variants for rat and the musical noun la. Their /ɑ/ variants are not silently relabelled. Ré and la name musical notes; lé is a less-frequent textile or wallpaper noun. Ces is the isolated lowercase determiner /se/, without liaison and not the acronym CES.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "ça",
+      "ipa": "/sa/",
+      "meaning": "that; informal demonstrative pronoun",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-a-e"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/%C3%A7a/pronom",
+        "https://www.collinsdictionary.com/dictionary/french-english/ces"
+      ],
+      "dialectNote": "Northern reference Metropolitan French, explicitly selecting the dictionary /a/ variants for rat and the musical noun la. Their /ɑ/ variants are not silently relabelled. Ré and la name musical notes; lé is a less-frequent textile or wallpaper noun. Ces is the isolated lowercase determiner /se/, without liaison and not the acronym CES.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "ces",
+      "ipa": "/se/",
+      "meaning": "these or those; plural determiner",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-a-e"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/%C3%A7a/pronom",
+        "https://www.collinsdictionary.com/dictionary/french-english/ces"
+      ],
+      "dialectNote": "Northern reference Metropolitan French, explicitly selecting the dictionary /a/ variants for rat and the musical noun la. Their /ɑ/ variants are not silently relabelled. Ré and la name musical notes; lé is a less-frequent textile or wallpaper noun. Ces is the isolated lowercase determiner /se/, without liaison and not the acronym CES.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "balle",
+      "ipa": "/bal/",
+      "meaning": "ball; small spherical object used in games",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-a-eh"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/balle/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/beau/adjectif"
+      ],
+      "dialectNote": "Northern reference Metropolitan French citation forms with no final schwa. All three frames are one syllable; the final consonant is /l/ or /s/. Belle is the feminine form of beau; the selected ball sense of balle is not the older bale spelling.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "belle",
+      "ipa": "/bɛl/",
+      "meaning": "beautiful; feminine singular",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-a-eh"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/balle/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/beau/adjectif"
+      ],
+      "dialectNote": "Northern reference Metropolitan French citation forms with no final schwa. All three frames are one syllable; the final consonant is /l/ or /s/. Belle is the feminine form of beau; the selected ball sense of balle is not the older bale spelling.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "salle",
+      "ipa": "/sal/",
+      "meaning": "room; hall",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-a-eh"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/salle/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/sel/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French citation forms with no final schwa. All three frames are one syllable; the final consonant is /l/ or /s/. Belle is the feminine form of beau; the selected ball sense of balle is not the older bale spelling.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "sel",
+      "ipa": "/sɛl/",
+      "meaning": "salt",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-a-eh"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/salle/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/sel/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French citation forms with no final schwa. All three frames are one syllable; the final consonant is /l/ or /s/. Belle is the feminine form of beau; the selected ball sense of balle is not the older bale spelling.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "masse",
+      "ipa": "/mas/",
+      "meaning": "mass; quantity of matter",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-a-eh"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/masse/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/messe/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French citation forms with no final schwa. All three frames are one syllable; the final consonant is /l/ or /s/. Belle is the feminine form of beau; the selected ball sense of balle is not the older bale spelling.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "messe",
+      "ipa": "/mɛs/",
+      "meaning": "Mass; Catholic liturgical service",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-a-eh"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/masse/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/messe/nom"
+      ],
+      "dialectNote": "Northern reference Metropolitan French citation forms with no final schwa. All three frames are one syllable; the final consonant is /l/ or /s/. Belle is the feminine form of beau; the selected ball sense of balle is not the older bale spelling.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "jeûne",
+      "ipa": "/ʒøn/",
+      "meaning": "a fast; abstention from food",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-eu-closed-open"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/je%C3%BBne/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/jeune/adjectif"
+      ],
+      "dialectNote": "Use speakers who preserve the selected /ø–œ/ distinction. TLFi also lists veule /vœl/, which would merge that pair and must be rejected for this lesson. Jeûne and foehn have long-vowel dictionary transcriptions; broad IPA here does not assert equal duration or a pure-height experiment. Veule is literary; foehn is a specialist wind term; fun is a French borrowing. These are three distinct lexical frames, not three common beginner pairs.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "jeune",
+      "ipa": "/ʒœn/",
+      "meaning": "young",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-eu-closed-open"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/je%C3%BBne/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/jeune/adjectif"
+      ],
+      "dialectNote": "Use speakers who preserve the selected /ø–œ/ distinction. TLFi also lists veule /vœl/, which would merge that pair and must be rejected for this lesson. Jeûne and foehn have long-vowel dictionary transcriptions; broad IPA here does not assert equal duration or a pure-height experiment. Veule is literary; foehn is a specialist wind term; fun is a French borrowing. These are three distinct lexical frames, not three common beginner pairs.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "veule",
+      "ipa": "/vøl/",
+      "meaning": "weak-willed; literary adjective",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-eu-closed-open"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/veule/adjectif",
+        "https://www.collinsdictionary.com/dictionary/french-english/veulent"
+      ],
+      "dialectNote": "Use speakers who preserve the selected /ø–œ/ distinction. TLFi also lists veule /vœl/, which would merge that pair and must be rejected for this lesson. Jeûne and foehn have long-vowel dictionary transcriptions; broad IPA here does not assert equal duration or a pure-height experiment. Veule is literary; foehn is a specialist wind term; fun is a French borrowing. These are three distinct lexical frames, not three common beginner pairs.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "veulent",
+      "ipa": "/vœl/",
+      "meaning": "want; present-tense form with they",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-eu-closed-open"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/veule/adjectif",
+        "https://www.collinsdictionary.com/dictionary/french-english/veulent"
+      ],
+      "dialectNote": "Use speakers who preserve the selected /ø–œ/ distinction. TLFi also lists veule /vœl/, which would merge that pair and must be rejected for this lesson. Jeûne and foehn have long-vowel dictionary transcriptions; broad IPA here does not assert equal duration or a pure-height experiment. Veule is literary; foehn is a specialist wind term; fun is a French borrowing. These are three distinct lexical frames, not three common beginner pairs.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "foehn",
+      "ipa": "/føn/",
+      "meaning": "warm dry wind descending into Alpine valleys",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-eu-closed-open"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/foehn/nom",
+        "https://www.collinsdictionary.com/dictionary/french-english/fun"
+      ],
+      "dialectNote": "Use speakers who preserve the selected /ø–œ/ distinction. TLFi also lists veule /vœl/, which would merge that pair and must be rejected for this lesson. Jeûne and foehn have long-vowel dictionary transcriptions; broad IPA here does not assert equal duration or a pure-height experiment. Veule is literary; foehn is a specialist wind term; fun is a French borrowing. These are three distinct lexical frames, not three common beginner pairs.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    },
+    {
+      "languageId": "fr",
+      "text": "fun",
+      "ipa": "/fœn/",
+      "meaning": "fun; enjoyable, informal adjective",
+      "locale": "fr-FR",
+      "contrastIds": [
+        "fr-eu-closed-open"
+      ],
+      "sourceUrls": [
+        "https://www.portail-lexical.fr/definition/tlfi/foehn/nom",
+        "https://www.collinsdictionary.com/dictionary/french-english/fun"
+      ],
+      "dialectNote": "Use speakers who preserve the selected /ø–œ/ distinction. TLFi also lists veule /vœl/, which would merge that pair and must be rejected for this lesson. Jeûne and foehn have long-vowel dictionary transcriptions; broad IPA here does not assert equal duration or a pure-height experiment. Veule is literary; foehn is a specialist wind term; fun is a French borrowing. These are three distinct lexical frames, not three common beginner pairs.",
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed"
+    }
+  ]
+}

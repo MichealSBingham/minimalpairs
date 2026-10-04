@@ -1,0 +1,16 @@
+---
+import Base from '../layouts/Base.astro';
+import { Header, Footer } from '../components/ui';
+import SupportForm from '../components/SupportForm';
+import '../styles/business.css';
+---
+<Base title="Help & contact | MinimalPairs" description="Get help with your MinimalPairs account, lifetime access, subscription or listening exercises.">
+<Header /><main class="editorial-wrap"><p class="eyebrow">HELP & CONTACT</p><h1>Let’s get you listening.</h1>
+<section><h2>Quick answers</h2>
+<details><summary>I already bought lifetime access.</summary><p>Sign in with the same verified email you used to buy MinimalPairs. Your lifetime purchase is honored. If access is missing, send us the purchase email below—there’s no need to buy again.</p><a href="/account">Open your account →</a></details>
+<details><summary>How do I cancel my subscription?</summary><p>Open your account and choose the billing-management option to cancel through Stripe. Signing out does not cancel a subscription.</p><a href="/account">Manage your account →</a></details>
+<details><summary>A recording sounds wrong.</summary><p>After playing it, choose “Report audio” (or “Report A”, “Report B” or “Report X” in a lesson) and select the issue. The report includes the exact recording so you don’t need to describe it.</p></details>
+<details><summary>I can’t sign in or find my progress.</summary><p>Use the same Google account as before. Guest progress stays in the browser where you practiced; signed-in sessions save to your account. If something still looks wrong, tell us below.</p></details></section>
+<section><h2>Need a hand?</h2><SupportForm client:load /></section><p><a href="/practice">← Back to lessons</a> · <a href="/account">Your account</a></p></main><Footer />
+</Base>
+<style>details{padding:1rem 0;border-bottom:1px solid #ddd5c5}summary{cursor:pointer;font-weight:600}:global(.support-form label){display:grid;gap:.5rem;margin:1rem 0}:global(.support-form input),:global(.support-form select),:global(.support-form textarea){font:inherit;padding:.8rem;border:1px solid #cfc6b4;border-radius:5px;background:#fff;width:100%;box-sizing:border-box}</style>

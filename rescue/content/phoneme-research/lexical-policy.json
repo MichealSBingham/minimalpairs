@@ -1,0 +1,29 @@
+{
+  "updatedAt": "2026-10-01",
+  "status": "owner-requested-review-policy",
+  "minimumDistinctWordsPerSound": 4,
+  "targetDistinctWordsPerSound": 5,
+  "counting": "Count distinct written lexical forms per sound category. Repetition in multiple contexts, extra senses, inflections used merely as filler, and extra voices do not substitute for lexical depth.",
+  "contextDepth": "A viable core context should contain at least four different words on each side with compatible target position and pronunciation conditions. Keep thin secondary contexts visible as gaps.",
+  "claimLimit": "Four and five are product starting thresholds set by the owner, not an optimum established by an experiment.",
+  "lexicalSelection": "Prefer common, ordinary target-language vocabulary and transparent senses. Avoid recent English-looking loans, proper names, acronyms, unusual archaic words and nonwords as convenient fillers. Do not define target-language membership by remote etymology: historically integrated native-use vocabulary is eligible.",
+  "sourcePolicy": "Dictionary evidence can establish a headword and sense without certifying our IPA. Distinguish direct entry retrieval, indexed excerpts, and unverified candidates. A study of a contrast does not turn editorial words into study stimuli.",
+  "currentExclusions": [
+    {
+      "languageId": "fr",
+      "text": "fun",
+      "reason": "Owner rejects this recent English borrowing for the core French bank."
+    },
+    {
+      "languageId": "ru",
+      "text": "Таня",
+      "reason": "Proper name used as a convenient sound example; use ordinary vocabulary."
+    }
+  ],
+  "englishVarieties": {
+    "en-US-ga": "General American reference; specify merger assumptions within relevant contrasts.",
+    "en-GB-ssbe": "Standard Southern British reference; not a representation of all UK accents."
+  },
+  "audioBoundary": "No new speech is generated. Lexical approval, phonetic review and every word-by-voice audio audit remain separate stages.",
+  "pronunciationDiversity": "Count distinct authored broad IPA forms separately from spellings. Homophones do not supply a new auditory example; the core context needs at least four words and four intended pronunciations per side. X must not share the intended pronunciation of either reference. This is text-level screening, not validated audio."
+}

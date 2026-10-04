@@ -1,0 +1,10 @@
+---
+import Base from '../layouts/Base.astro';
+import WordReviewDesk from '../components/WordReviewDesk';
+import { getWordReviewCatalog } from '../lib/word-review-catalog';
+const catalog = getWordReviewCatalog();
+---
+<Base title="Previous pair review — MinimalPairs" description="Your earlier pair-based review and saved notes." noindex analytics={false}>
+  <div style="padding:16px;text-align:center;background:#e8eef4"><a href="/word-review">Go to the new sound-pool review →</a> · This preserves your earlier pair-review notes.</div>
+  <WordReviewDesk catalog={catalog} client:load />
+</Base>

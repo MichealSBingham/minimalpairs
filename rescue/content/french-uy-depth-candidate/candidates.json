@@ -1,0 +1,395 @@
+{
+  "schemaVersion": 1,
+  "candidateVersion": "fr-u-y-depth-v1",
+  "preparedAt": "2026-09-30",
+  "status": "isolated-text-candidate-audio-unapproved",
+  "releaseReady": false,
+  "saleReady": false,
+  "languageId": "fr",
+  "locale": "fr-FR",
+  "baseContrastId": "fr-u-y",
+  "dialect": "Northern reference French citation forms; matched optional-schwa realization and selected initial /e/; no extra final schwa.",
+  "relationship": "Six additional independent lexical pairs beyond the four public fr-u-y pairs and all existing English/French candidate training; reserved assessments excluded.",
+  "defaultSetLength": 12,
+  "sets": [
+    {
+      "id": "fr-u-y-depth-final-v1",
+      "baseContrastId": "fr-u-y",
+      "label": "New words: the final vowel",
+      "phonemes": [
+        "u",
+        "y"
+      ],
+      "requiredAudioLocale": "fr-FR",
+      "targetSoundFocus": "Listen to the last vowel, at the very end of each word.",
+      "description": "The target is the final /u/ or /y/, not the first vowel. Use the selected two-syllable forms: preserve schwa in both dessous and dessus, initial /e/ in both égout and aigu, and matching /ekʁ/ in écrou and écru.",
+      "pairs": [
+        {
+          "id": "fr-depth-dessous-dessus",
+          "words": [
+            {
+              "text": "dessous",
+              "ipa": "/dəsu/",
+              "phonemes": [
+                "d",
+                "ə",
+                "s",
+                "u"
+              ],
+              "meaning": "underneath",
+              "lexicalForm": "dictionary-headword"
+            },
+            {
+              "text": "dessus",
+              "ipa": "/dəsy/",
+              "phonemes": [
+                "d",
+                "ə",
+                "s",
+                "y"
+              ],
+              "meaning": "on top",
+              "lexicalForm": "dictionary-headword"
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/dictionary/french-english/dessous",
+            "https://www.collinsdictionary.com/dictionary/french-english/dessus",
+            "https://www.portail-lexical.fr/definition/tlfi/dessous/adverbe",
+            "https://www.portail-lexical.fr/definition/tlfi/dessus/adverbe"
+          ],
+          "validation": {
+            "text": "primary-source-checked-candidate",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 3,
+            "targetPosition": "final",
+            "trialGroup": "fr-uy-depth-final-v1"
+          }
+        },
+        {
+          "id": "fr-depth-egout-aigu",
+          "words": [
+            {
+              "text": "égout",
+              "ipa": "/eɡu/",
+              "phonemes": [
+                "e",
+                "ɡ",
+                "u"
+              ],
+              "meaning": "a sewer",
+              "lexicalForm": "dictionary-headword"
+            },
+            {
+              "text": "aigu",
+              "ipa": "/eɡy/",
+              "phonemes": [
+                "e",
+                "ɡ",
+                "y"
+              ],
+              "meaning": "sharp or pointed",
+              "lexicalForm": "dictionary-headword"
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/dictionary/french-english/%C3%A9gout",
+            "https://www.collinsdictionary.com/dictionary/french-english/aigu",
+            "https://www.portail-lexical.fr/definition/tlfi/%C3%A9gout/nom",
+            "https://www.portail-lexical.fr/definition/tlfi/aigu/adjectif"
+          ],
+          "validation": {
+            "text": "primary-source-checked-candidate",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 2,
+            "targetPosition": "final",
+            "trialGroup": "fr-uy-depth-final-v1"
+          }
+        },
+        {
+          "id": "fr-depth-ecrou-ecru",
+          "words": [
+            {
+              "text": "écrou",
+              "ipa": "/ekʁu/",
+              "phonemes": [
+                "e",
+                "k",
+                "ʁ",
+                "u"
+              ],
+              "meaning": "a nut used with a screw or bolt",
+              "lexicalForm": "dictionary-headword"
+            },
+            {
+              "text": "écru",
+              "ipa": "/ekʁy/",
+              "phonemes": [
+                "e",
+                "k",
+                "ʁ",
+                "y"
+              ],
+              "meaning": "unbleached, describing cloth",
+              "lexicalForm": "dictionary-headword"
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.portail-lexical.fr/definition/tlfi/%C3%A9crou/nom",
+            "https://www.portail-lexical.fr/definition/tlfi/%C3%A9cru/adjectif"
+          ],
+          "validation": {
+            "text": "primary-source-checked-candidate",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 3,
+            "targetPosition": "final",
+            "trialGroup": "fr-uy-depth-final-v1"
+          }
+        }
+      ],
+      "sources": [
+        "https://www.collinsdictionary.com/dictionary/french-english/%C3%A9gout",
+        "https://www.collinsdictionary.com/dictionary/french-english/aigu",
+        "https://www.collinsdictionary.com/dictionary/french-english/dessous",
+        "https://www.collinsdictionary.com/dictionary/french-english/dessus",
+        "https://www.portail-lexical.fr/definition/tlfi/%C3%A9crou/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/%C3%A9cru/adjectif",
+        "https://www.portail-lexical.fr/definition/tlfi/%C3%A9gout/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/aigu/adjectif",
+        "https://www.portail-lexical.fr/definition/tlfi/dessous/adverbe",
+        "https://www.portail-lexical.fr/definition/tlfi/dessus/adverbe"
+      ],
+      "abx": {
+        "matchType": "phoneme",
+        "prompt": "Which reference shares X’s target sound?",
+        "targetSoundFocus": "Listen to the last vowel, at the very end of each word.",
+        "categoryLabels": [
+          "u",
+          "y"
+        ],
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "presentation": "audio-only-until-answer-or-explicit-text-assist",
+        "profilesMustShareLocale": "fr-FR"
+      }
+    },
+    {
+      "id": "fr-u-y-depth-medial-v1",
+      "baseContrastId": "fr-u-y",
+      "label": "New words: the first vowel",
+      "phonemes": [
+        "u",
+        "y"
+      ],
+      "requiredAudioLocale": "fr-FR",
+      "targetSoundFocus": "Listen to the first vowel, just after the first consonant.",
+      "description": "The target /u/ or /y/ always follows the initial consonant and precedes another consonant. Bouche/bûche and joute/jute are one syllable; bouleau/bulot are two. In the latter pair, the second vowel remains /o/. Do not instruct learners to match the last vowel in this set.",
+      "pairs": [
+        {
+          "id": "fr-depth-bouche-buche",
+          "words": [
+            {
+              "text": "bouche",
+              "ipa": "/buʃ/",
+              "phonemes": [
+                "b",
+                "u",
+                "ʃ"
+              ],
+              "meaning": "a mouth",
+              "lexicalForm": "dictionary-headword"
+            },
+            {
+              "text": "bûche",
+              "ipa": "/byʃ/",
+              "phonemes": [
+                "b",
+                "y",
+                "ʃ"
+              ],
+              "meaning": "a log for a fire",
+              "lexicalForm": "dictionary-headword"
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.portail-lexical.fr/definition/tlfi/b%C3%BBche/nom",
+            "https://www.portail-lexical.fr/definition/tlfi/bouche/nom"
+          ],
+          "validation": {
+            "text": "primary-source-checked-candidate",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "fr-uy-depth-first-vowel-v1"
+          }
+        },
+        {
+          "id": "fr-depth-joute-jute",
+          "words": [
+            {
+              "text": "joute",
+              "ipa": "/ʒut/",
+              "phonemes": [
+                "ʒ",
+                "u",
+                "t"
+              ],
+              "meaning": "a contest or verbal sparring match",
+              "lexicalForm": "dictionary-headword"
+            },
+            {
+              "text": "jute",
+              "ipa": "/ʒyt/",
+              "phonemes": [
+                "ʒ",
+                "y",
+                "t"
+              ],
+              "meaning": "jute fibre used in sacks and rope",
+              "lexicalForm": "dictionary-headword"
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.portail-lexical.fr/definition/tlfi/joute/nom",
+            "https://www.portail-lexical.fr/definition/tlfi/jute/nom"
+          ],
+          "validation": {
+            "text": "primary-source-checked-candidate",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "fr-uy-depth-first-vowel-v1"
+          }
+        },
+        {
+          "id": "fr-depth-bouleau-bulot",
+          "words": [
+            {
+              "text": "bouleau",
+              "ipa": "/bulo/",
+              "phonemes": [
+                "b",
+                "u",
+                "l",
+                "o"
+              ],
+              "meaning": "a birch tree",
+              "lexicalForm": "dictionary-headword"
+            },
+            {
+              "text": "bulot",
+              "ipa": "/bylo/",
+              "phonemes": [
+                "b",
+                "y",
+                "l",
+                "o"
+              ],
+              "meaning": "a whelk shellfish",
+              "lexicalForm": "dictionary-headword"
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/dictionary/french-english/bouleau",
+            "https://www.larousse.fr/dictionnaires/college/bulot/5767",
+            "https://www.larousse.fr/dictionnaires/francais-anglais/bulot/1004826",
+            "https://www.portail-lexical.fr/definition/tlfi/bouleau/nom"
+          ],
+          "validation": {
+            "text": "primary-source-checked-candidate",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "fr-uy-depth-first-vowel-v1"
+          }
+        }
+      ],
+      "sources": [
+        "https://www.collinsdictionary.com/dictionary/french-english/bouleau",
+        "https://www.larousse.fr/dictionnaires/college/bulot/5767",
+        "https://www.larousse.fr/dictionnaires/francais-anglais/bulot/1004826",
+        "https://www.portail-lexical.fr/definition/tlfi/b%C3%BBche/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/bouche/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/bouleau/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/joute/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/jute/nom"
+      ],
+      "abx": {
+        "matchType": "phoneme",
+        "prompt": "Which reference shares X’s target sound?",
+        "targetSoundFocus": "Listen to the first vowel, just after the first consonant.",
+        "categoryLabels": [
+          "u",
+          "y"
+        ],
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "presentation": "audio-only-until-answer-or-explicit-text-assist",
+        "profilesMustShareLocale": "fr-FR"
+      }
+    }
+  ],
+  "mixedRevisit": {
+    "pairIds": [
+      "fr-depth-dessous-dessus",
+      "fr-depth-egout-aigu",
+      "fr-depth-ecrou-ecru",
+      "fr-depth-bouche-buche",
+      "fr-depth-joute-jute",
+      "fr-depth-bouleau-bulot"
+    ],
+    "requireSameTrialGroup": true,
+    "instructionMustFollowReferenceSet": true,
+    "implementationStatus": "blocked-on-per-reference-set-focus",
+    "releaseReady": false,
+    "warning": "A mixed revisit must select X only from the reference set/group and display its corresponding target-focus instruction. Do not flatten all six into an undifferentiated group."
+  },
+  "claimLimits": [
+    "Additional within-program practice vocabulary, not globally unseen material",
+    "No assessment or transfer claim",
+    "No audio approval, paid entitlement implementation or sale-readiness",
+    "No evidence that six pairs justify recurring payment"
+  ]
+}

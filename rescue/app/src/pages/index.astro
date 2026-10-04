@@ -1,0 +1,9 @@
+---
+import Base from '../layouts/Base.astro';
+import HomeExperience from '../components/HomeExperience';
+import { getGuideLanguages as getLanguages } from '../lib/content';
+const languages = getLanguages();
+---
+<Base title="MinimalPairs — You can read it. Now learn to hear it." description="Hear the small sound differences that change a word. Free listening practice across nine languages, with spelling hidden, varied voices and instant feedback.">
+  <HomeExperience languages={languages} client:load />
+</Base>

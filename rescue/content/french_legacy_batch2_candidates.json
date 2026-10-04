@@ -1,0 +1,638 @@
+[
+  {
+    "id": "fr-y-i",
+    "legacy": "/french/u-vs-i",
+    "label": "Rue or riz?",
+    "phonemes": [
+      "y",
+      "i"
+    ],
+    "pairs": [
+      [
+        [
+          "rue",
+          "ʁy",
+          "street",
+          "ʁ y"
+        ],
+        [
+          "riz",
+          "ʁi",
+          "rice",
+          "ʁ i"
+        ]
+      ],
+      [
+        [
+          "bulle",
+          "byl",
+          "bubble",
+          "b y l"
+        ],
+        [
+          "bile",
+          "bil",
+          "bile",
+          "b i l"
+        ]
+      ],
+      [
+        [
+          "pur",
+          "pyʁ",
+          "pure",
+          "p y ʁ"
+        ],
+        [
+          "pire",
+          "piʁ",
+          "worse",
+          "p i ʁ"
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "fr-y-oe",
+    "legacy": "/french/u-vs-eu",
+    "label": "Jus or jeu?",
+    "phonemes": [
+      "y",
+      "ø"
+    ],
+    "pairs": [
+      [
+        [
+          "jus",
+          "ʒy",
+          "juice",
+          "ʒ y"
+        ],
+        [
+          "jeu",
+          "ʒø",
+          "game",
+          "ʒ ø"
+        ]
+      ],
+      [
+        [
+          "du",
+          "dy",
+          "some, masculine partitive article",
+          "d y"
+        ],
+        [
+          "deux",
+          "dø",
+          "two",
+          "d ø"
+        ]
+      ],
+      [
+        [
+          "cru",
+          "kʁy",
+          "raw",
+          "k ʁ y"
+        ],
+        [
+          "creux",
+          "kʁø",
+          "hollow",
+          "k ʁ ø"
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "fr-u-oe",
+    "legacy": "/french/ou-vs-eu",
+    "label": "Cou or queue?",
+    "phonemes": [
+      "u",
+      "ø"
+    ],
+    "pairs": [
+      [
+        [
+          "cou",
+          "ku",
+          "neck",
+          "k u"
+        ],
+        [
+          "queue",
+          "kø",
+          "tail; queue",
+          "k ø"
+        ]
+      ],
+      [
+        [
+          "doux",
+          "du",
+          "soft; gentle",
+          "d u"
+        ],
+        [
+          "deux",
+          "dø",
+          "two",
+          "d ø"
+        ]
+      ],
+      [
+        [
+          "nous",
+          "nu",
+          "we; us",
+          "n u"
+        ],
+        [
+          "nœud",
+          "nø",
+          "knot",
+          "n ø"
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "fr-e-oe",
+    "legacy": "/french/e-vs-eu",
+    "label": "Fée or feu?",
+    "phonemes": [
+      "e",
+      "ø"
+    ],
+    "pairs": [
+      [
+        [
+          "fée",
+          "fe",
+          "fairy",
+          "f e"
+        ],
+        [
+          "feu",
+          "fø",
+          "fire",
+          "f ø"
+        ]
+      ],
+      [
+        [
+          "dé",
+          "de",
+          "a die; one of a pair of dice",
+          "d e"
+        ],
+        [
+          "deux",
+          "dø",
+          "two",
+          "d ø"
+        ]
+      ],
+      [
+        [
+          "pré",
+          "pʁe",
+          "meadow",
+          "p ʁ e"
+        ],
+        [
+          "preux",
+          "pʁø",
+          "valiant; a valiant knight",
+          "p ʁ ø"
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "fr-eh-eu-open",
+    "legacy": "/french/e-ouvert-vs-eu-ouvert",
+    "label": "Père or peur?",
+    "phonemes": [
+      "ɛ",
+      "œ"
+    ],
+    "pairs": [
+      [
+        [
+          "père",
+          "pɛʁ",
+          "father",
+          "p ɛ ʁ"
+        ],
+        [
+          "peur",
+          "pœʁ",
+          "fear",
+          "p œ ʁ"
+        ]
+      ],
+      [
+        [
+          "serre",
+          "sɛʁ",
+          "greenhouse",
+          "s ɛ ʁ"
+        ],
+        [
+          "sœur",
+          "sœʁ",
+          "sister",
+          "s œ ʁ"
+        ]
+      ],
+      [
+        [
+          "air",
+          "ɛʁ",
+          "air",
+          "ɛ ʁ"
+        ],
+        [
+          "heure",
+          "œʁ",
+          "hour; time",
+          "œ ʁ"
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "fr-d-t",
+    "legacy": "/french/d-vs-t",
+    "label": "Doux or tout?",
+    "phonemes": [
+      "d",
+      "t"
+    ],
+    "pairs": [
+      [
+        [
+          "doux",
+          "du",
+          "soft; gentle",
+          "d u"
+        ],
+        [
+          "tout",
+          "tu",
+          "all; everything",
+          "t u"
+        ]
+      ],
+      [
+        [
+          "dos",
+          "do",
+          "back of the body",
+          "d o"
+        ],
+        [
+          "taux",
+          "to",
+          "rate",
+          "t o"
+        ]
+      ],
+      [
+        [
+          "dent",
+          "dɑ̃",
+          "tooth",
+          "d ɑ̃"
+        ],
+        [
+          "temps",
+          "tɑ̃",
+          "time; weather",
+          "t ɑ̃"
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "fr-g-k",
+    "legacy": "/french/g-vs-k",
+    "label": "Goût or cou?",
+    "phonemes": [
+      "ɡ",
+      "k"
+    ],
+    "pairs": [
+      [
+        [
+          "goût",
+          "ɡu",
+          "taste",
+          "ɡ u"
+        ],
+        [
+          "cou",
+          "ku",
+          "neck",
+          "k u"
+        ]
+      ],
+      [
+        [
+          "gant",
+          "ɡɑ̃",
+          "glove",
+          "ɡ ɑ̃"
+        ],
+        [
+          "camp",
+          "kɑ̃",
+          "camp",
+          "k ɑ̃"
+        ]
+      ],
+      [
+        [
+          "gomme",
+          "ɡɔm",
+          "eraser; gum",
+          "ɡ ɔ m"
+        ],
+        [
+          "comme",
+          "kɔm",
+          "like; as",
+          "k ɔ m"
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "fr-v-f",
+    "legacy": "/french/v-vs-f",
+    "label": "Vin or fin?",
+    "phonemes": [
+      "v",
+      "f"
+    ],
+    "pairs": [
+      [
+        [
+          "vin",
+          "vɛ̃",
+          "wine",
+          "v ɛ̃"
+        ],
+        [
+          "fin",
+          "fɛ̃",
+          "end",
+          "f ɛ̃"
+        ]
+      ],
+      [
+        [
+          "veau",
+          "vo",
+          "calf; veal",
+          "v o"
+        ],
+        [
+          "faux",
+          "fo",
+          "false",
+          "f o"
+        ]
+      ],
+      [
+        [
+          "vous",
+          "vu",
+          "you, formal or plural",
+          "v u"
+        ],
+        [
+          "fou",
+          "fu",
+          "mad; crazy",
+          "f u"
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "fr-b-v",
+    "legacy": "/french/b-vs-v",
+    "label": "Beau or veau?",
+    "phonemes": [
+      "b",
+      "v"
+    ],
+    "pairs": [
+      [
+        [
+          "beau",
+          "bo",
+          "beautiful; handsome",
+          "b o"
+        ],
+        [
+          "veau",
+          "vo",
+          "calf; veal",
+          "v o"
+        ]
+      ],
+      [
+        [
+          "bain",
+          "bɛ̃",
+          "bath",
+          "b ɛ̃"
+        ],
+        [
+          "vain",
+          "vɛ̃",
+          "vain; futile",
+          "v ɛ̃"
+        ]
+      ],
+      [
+        [
+          "bile",
+          "bil",
+          "bile",
+          "b i l"
+        ],
+        [
+          "ville",
+          "vil",
+          "town; city",
+          "v i l"
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "fr-sh-s",
+    "legacy": "/french/ch-vs-s",
+    "label": "Chou or sou?",
+    "phonemes": [
+      "ʃ",
+      "s"
+    ],
+    "pairs": [
+      [
+        [
+          "chou",
+          "ʃu",
+          "cabbage",
+          "ʃ u"
+        ],
+        [
+          "sou",
+          "su",
+          "an old coin; a small amount of money",
+          "s u"
+        ]
+      ],
+      [
+        [
+          "chaud",
+          "ʃo",
+          "hot",
+          "ʃ o"
+        ],
+        [
+          "saut",
+          "so",
+          "jump; leap",
+          "s o"
+        ]
+      ],
+      [
+        [
+          "choix",
+          "ʃwa",
+          "choice",
+          "ʃ w a"
+        ],
+        [
+          "soie",
+          "swa",
+          "silk",
+          "s w a"
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "fr-l-r",
+    "legacy": "/french/l-vs-r",
+    "label": "Lit or riz?",
+    "phonemes": [
+      "l",
+      "ʁ"
+    ],
+    "pairs": [
+      [
+        [
+          "lit",
+          "li",
+          "bed",
+          "l i"
+        ],
+        [
+          "riz",
+          "ʁi",
+          "rice",
+          "ʁ i"
+        ]
+      ],
+      [
+        [
+          "lait",
+          "lɛ",
+          "milk",
+          "l ɛ"
+        ],
+        [
+          "raie",
+          "ʁɛ",
+          "stripe; ray fish",
+          "ʁ ɛ"
+        ]
+      ],
+      [
+        [
+          "lame",
+          "lam",
+          "blade",
+          "l a m"
+        ],
+        [
+          "rame",
+          "ʁam",
+          "oar",
+          "ʁ a m"
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "fr-n-gn",
+    "legacy": "/french/n-vs-gn",
+    "label": "Peine or peigne?",
+    "phonemes": [
+      "n",
+      "ɲ"
+    ],
+    "pairs": [
+      [
+        [
+          "peine",
+          "pɛn",
+          "sorrow; penalty",
+          "p ɛ n"
+        ],
+        [
+          "peigne",
+          "pɛɲ",
+          "comb",
+          "p ɛ ɲ"
+        ]
+      ],
+      [
+        [
+          "panne",
+          "pan",
+          "breakdown; failure",
+          "p a n"
+        ],
+        [
+          "pagne",
+          "paɲ",
+          "wraparound cloth garment",
+          "p a ɲ"
+        ]
+      ],
+      [
+        [
+          "reine",
+          "ʁɛn",
+          "queen",
+          "ʁ ɛ n"
+        ],
+        [
+          "règne",
+          "ʁɛɲ",
+          "reign",
+          "ʁ ɛ ɲ"
+        ]
+      ]
+    ]
+  }
+]

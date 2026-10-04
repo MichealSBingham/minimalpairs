@@ -1,0 +1,152 @@
+{
+  "date": "2026-09-28",
+  "authoritativeInventory": "rescue/content/legacy-coverage.json",
+  "baseSnapshot": {
+    "hashes": {
+      "rescue/content/curriculum.json": "9e75f976f8b72d0df1f6b5da4c6afda06074d4f13ae91a533c0a77ebe7fe1db6",
+      "rescue/content/legacy-coverage.json": "503071bc886ac5f7de477526a78750e60476b8e7ce0045d237008a60625ef818",
+      "rescue/content/transfer-candidates.json": "14e960285239b919d5f48bddfc1d6b2a59fb5a9cfecc5789b17df4e965e9bea5",
+      "rescue/content/build_curriculum.py": "a10e0fd3778ae8219c15ce022920179257a42b1e676c77ff22ecc5c89786421d",
+      "rescue/content/french-legacy-batch3-candidates.json": "268b8670d88691292119751c270619d79b8a58805ad82b847cb2408995c425c4",
+      "rescue/content/french-legacy-batch4-candidates.json": "cfd5ec9447c34b489257d235968077779a559d27c14fe8324f7461bbeb1f71c9",
+      "rescue/app/public/audio/manifest.json": "37ee8bf1464770a61add57114c5b8ea8562bf559c6c46dd8e7f5e27d7b8e98d7"
+    },
+    "currentContrasts": 48,
+    "currentPairs": 144,
+    "frenchContrasts": 23,
+    "frenchPairs": 70
+  },
+  "integratedFrenchTopics": 23,
+  "legacyFrenchTopics": 31,
+  "missingFromProduct": 8,
+  "isolatedAuditedTopics": 8,
+  "newBatchTopics": 4,
+  "reusedAuditedTopics": 4,
+  "prospectiveFrenchTopics": 31,
+  "prospectiveFrenchPairs": 94,
+  "prospectiveTotalContrasts": 56,
+  "prospectiveTotalPairs": 168,
+  "claimLimit": "Candidate coverage is not published product coverage, full old-library equivalence, or recording approval.",
+  "reusedEvidence": [
+    {
+      "contrastId": "fr-a-an",
+      "sourceAudit": "rescue/content/french-legacy-batch3-source-audit.json",
+      "sha256": "59b8e141a2267067b0a4ba302b3139dc7b5d811aa473c11b2e758eb1b3373e8c",
+      "originalCheckedAt": "2026-09-28",
+      "retrievalRepeated": false
+    },
+    {
+      "contrastId": "fr-o-open-u",
+      "sourceAudit": "rescue/content/french-legacy-batch4-source-audit.json",
+      "sha256": "148eff8cfc2c92cbcee66d20c0471966eb7217a6654df0e1a4f7b6fa88abd351",
+      "originalCheckedAt": "2026-09-28",
+      "retrievalRepeated": false
+    },
+    {
+      "contrastId": "fr-y-eu-open",
+      "sourceAudit": "rescue/content/french-legacy-batch4-source-audit.json",
+      "sha256": "148eff8cfc2c92cbcee66d20c0471966eb7217a6654df0e1a4f7b6fa88abd351",
+      "originalCheckedAt": "2026-09-28",
+      "retrievalRepeated": false
+    },
+    {
+      "contrastId": "fr-i-e",
+      "sourceAudit": "rescue/content/french-legacy-batch4-source-audit.json",
+      "sha256": "148eff8cfc2c92cbcee66d20c0471966eb7217a6654df0e1a4f7b6fa88abd351",
+      "originalCheckedAt": "2026-09-28",
+      "retrievalRepeated": false
+    }
+  ],
+  "allPendingPairsRevalidated": true,
+  "referencePairXCategoryCombinations": 96,
+  "topics": [
+    {
+      "legacyPath": "/french/eu-open-vs-closed",
+      "phonemes": [
+        "ø",
+        "œ"
+      ],
+      "contrastId": "fr-eu-closed-open",
+      "candidateFile": "french-legacy-batch5-candidates.json",
+      "pairs": 3,
+      "status": "audited-candidate-not-integrated"
+    },
+    {
+      "legacyPath": "/french/o-ouvert-vs-ou",
+      "phonemes": [
+        "ɔ",
+        "u"
+      ],
+      "contrastId": "fr-o-open-u",
+      "candidateFile": "french-legacy-batch4-candidates.json",
+      "pairs": 3,
+      "status": "audited-candidate-not-integrated"
+    },
+    {
+      "legacyPath": "/french/u-vs-eu-ouvert",
+      "phonemes": [
+        "y",
+        "œ"
+      ],
+      "contrastId": "fr-y-eu-open",
+      "candidateFile": "french-legacy-batch4-candidates.json",
+      "pairs": 3,
+      "status": "audited-candidate-not-integrated"
+    },
+    {
+      "legacyPath": "/french/a-vs-an",
+      "phonemes": [
+        "a",
+        "ɑ̃"
+      ],
+      "contrastId": "fr-a-an",
+      "candidateFile": "french-legacy-batch3-candidates.json",
+      "pairs": 3,
+      "status": "audited-candidate-not-integrated"
+    },
+    {
+      "legacyPath": "/french/e-vs-in",
+      "phonemes": [
+        "e",
+        "ɛ̃"
+      ],
+      "contrastId": "fr-e-in",
+      "candidateFile": "french-legacy-batch5-candidates.json",
+      "pairs": 3,
+      "status": "audited-candidate-not-integrated"
+    },
+    {
+      "legacyPath": "/french/a-vs-e",
+      "phonemes": [
+        "a",
+        "e"
+      ],
+      "contrastId": "fr-a-e",
+      "candidateFile": "french-legacy-batch5-candidates.json",
+      "pairs": 3,
+      "status": "audited-candidate-not-integrated"
+    },
+    {
+      "legacyPath": "/french/i-vs-e",
+      "phonemes": [
+        "i",
+        "e"
+      ],
+      "contrastId": "fr-i-e",
+      "candidateFile": "french-legacy-batch4-candidates.json",
+      "pairs": 3,
+      "status": "audited-candidate-not-integrated"
+    },
+    {
+      "legacyPath": "/french/a-vs-e-ouvert",
+      "phonemes": [
+        "a",
+        "ɛ"
+      ],
+      "contrastId": "fr-a-eh",
+      "candidateFile": "french-legacy-batch5-candidates.json",
+      "pairs": 3,
+      "status": "audited-candidate-not-integrated"
+    }
+  ]
+}

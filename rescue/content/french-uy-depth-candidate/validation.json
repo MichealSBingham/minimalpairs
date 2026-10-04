@@ -1,0 +1,261 @@
+{
+  "passed": true,
+  "errors": [],
+  "sets": 2,
+  "strictPairs": 6,
+  "uniqueWords": 12,
+  "eligibleReferencePairXWordCategoryCombinations": 24,
+  "requiredCompleteCollectionClips": 24,
+  "pairChecks": [
+    {
+      "setId": "fr-u-y-depth-final-v1",
+      "pairId": "fr-depth-dessous-dessus",
+      "targetTokenIndex": 3,
+      "differingTokenIndices": [
+        3
+      ],
+      "xChoicesByCategory": [
+        [
+          "égout",
+          "écrou"
+        ],
+        [
+          "aigu",
+          "écru"
+        ]
+      ]
+    },
+    {
+      "setId": "fr-u-y-depth-final-v1",
+      "pairId": "fr-depth-egout-aigu",
+      "targetTokenIndex": 2,
+      "differingTokenIndices": [
+        2
+      ],
+      "xChoicesByCategory": [
+        [
+          "dessous",
+          "écrou"
+        ],
+        [
+          "dessus",
+          "écru"
+        ]
+      ]
+    },
+    {
+      "setId": "fr-u-y-depth-final-v1",
+      "pairId": "fr-depth-ecrou-ecru",
+      "targetTokenIndex": 3,
+      "differingTokenIndices": [
+        3
+      ],
+      "xChoicesByCategory": [
+        [
+          "dessous",
+          "égout"
+        ],
+        [
+          "dessus",
+          "aigu"
+        ]
+      ]
+    },
+    {
+      "setId": "fr-u-y-depth-medial-v1",
+      "pairId": "fr-depth-bouche-buche",
+      "targetTokenIndex": 1,
+      "differingTokenIndices": [
+        1
+      ],
+      "xChoicesByCategory": [
+        [
+          "joute",
+          "bouleau"
+        ],
+        [
+          "jute",
+          "bulot"
+        ]
+      ]
+    },
+    {
+      "setId": "fr-u-y-depth-medial-v1",
+      "pairId": "fr-depth-joute-jute",
+      "targetTokenIndex": 1,
+      "differingTokenIndices": [
+        1
+      ],
+      "xChoicesByCategory": [
+        [
+          "bouche",
+          "bouleau"
+        ],
+        [
+          "bûche",
+          "bulot"
+        ]
+      ]
+    },
+    {
+      "setId": "fr-u-y-depth-medial-v1",
+      "pairId": "fr-depth-bouleau-bulot",
+      "targetTokenIndex": 1,
+      "differingTokenIndices": [
+        1
+      ],
+      "xChoicesByCategory": [
+        [
+          "bouche",
+          "joute"
+        ],
+        [
+          "bûche",
+          "jute"
+        ]
+      ]
+    }
+  ],
+  "exposureExtractionChecks": {
+    "word objects ignore embedded phoneme arrays": true,
+    "source and prose lists are not vocabulary": true,
+    "legacy word tuples are extracted inside pairs": true
+  },
+  "mutationChecks": [
+    {
+      "name": "reversed categories",
+      "rejected": true,
+      "expectedError": "category phoneme"
+    },
+    {
+      "name": "aigu initial open vowel",
+      "rejected": true,
+      "expectedError": "one-phoneme substitution"
+    },
+    {
+      "name": "schwa omitted in one category only",
+      "rejected": true,
+      "expectedError": "one-phoneme substitution"
+    },
+    {
+      "name": "added final schwa",
+      "rejected": true,
+      "expectedError": "one-phoneme substitution"
+    },
+    {
+      "name": "wrong final target copied from another pair",
+      "rejected": true,
+      "expectedError": "X category/position"
+    },
+    {
+      "name": "second vowel targeted in bouleau",
+      "rejected": true,
+      "expectedError": "category phoneme"
+    },
+    {
+      "name": "medial pool given final group",
+      "rejected": true,
+      "expectedError": "position/group mismatch"
+    },
+    {
+      "name": "mixed revisit crosses groups",
+      "rejected": true,
+      "expectedError": "mixed revisit loses position/focus"
+    },
+    {
+      "name": "mixed revisit fixed wrong instruction",
+      "rejected": true,
+      "expectedError": "mixed revisit loses position/focus"
+    },
+    {
+      "name": "mixed revisit declared ready without UI routing",
+      "rejected": true,
+      "expectedError": "unsupported mixed-revisit readiness"
+    },
+    {
+      "name": "public French training word",
+      "rejected": true,
+      "expectedError": "existing English/French training spelling"
+    },
+    {
+      "name": "English candidate training word",
+      "rejected": true,
+      "expectedError": "existing English/French training spelling"
+    },
+    {
+      "name": "reserved English assessment spelling",
+      "rejected": true,
+      "expectedError": "reserved spelling"
+    },
+    {
+      "name": "reserved French homophone under new spelling",
+      "rejected": true,
+      "expectedError": "reserved French pronunciation"
+    },
+    {
+      "name": "current French homophone under new spelling",
+      "rejected": true,
+      "expectedError": "existing French training pronunciation"
+    },
+    {
+      "name": "inflection counted as new lexical item",
+      "rejected": true,
+      "expectedError": "inflection padding"
+    },
+    {
+      "name": "altered primary source IPA",
+      "rejected": true,
+      "expectedError": "dictionary selection mismatch"
+    },
+    {
+      "name": "missing request",
+      "rejected": true,
+      "expectedError": "audio inventory mismatch"
+    },
+    {
+      "name": "request category swapped",
+      "rejected": true,
+      "expectedError": "audio category binding"
+    },
+    {
+      "name": "false audio approval",
+      "rejected": true,
+      "expectedError": "invented audio authorization/approval"
+    },
+    {
+      "name": "false sale readiness",
+      "rejected": true,
+      "expectedError": "unsupported readiness claim"
+    }
+  ],
+  "baselineHashesMatch": {
+    "rescue/content/curriculum.json": true,
+    "rescue/content/english-legacy-batch2/candidates.json": true,
+    "rescue/content/english-legacy-batch3/candidates.json": true,
+    "rescue/content/english-legacy-batch4/candidates.json": true,
+    "rescue/content/english-legacy-batch5/candidates.json": true,
+    "rescue/content/english_legacy_batch1.json": true,
+    "rescue/content/french-legacy-batch3-candidates.json": true,
+    "rescue/content/french-legacy-batch4-candidates.json": true,
+    "rescue/content/french-legacy-batch5-candidates.json": true,
+    "rescue/content/french_legacy_batch2_candidates.json": true,
+    "rescue/content/transfer-candidates.json": true,
+    "research/paid-program-implementation-decision-2026-09-28.md": true
+  },
+  "candidateFileInventoryMatches": true,
+  "exposureInventory": {
+    "trainingSources": 10,
+    "englishFrenchTrainingSpellings": 278,
+    "frenchTrainingPronunciations": 134,
+    "allLanguageReservedSpellings": 12,
+    "frenchReservedPronunciations": 6
+  },
+  "preparedAt": "2026-09-30",
+  "inputSha256": {
+    "candidates.json": "8500d696a436a98e61a9b945c2b61e53cf9eab5cb5eff5916623f982d704b726",
+    "source-audit.json": "37c3d0fe47452414c463834f5d11a002f57ceac9ac8a45a97c3b96bae125d15b",
+    "audio-request.json": "45744ca52ef9d2636e635a8e1b71eb78cbbb00913997f07778d1a1f343475a4c",
+    "selection-evidence.json": "f69c2366aee7d456a2bdee737a835c0a4a913f7b4ede9560efcea8886148e0fd"
+  },
+  "limitation": "Offline declared-fact checks only; primary reading is recorded separately. No audio review, learner unseen-material claim, implementation or commercial validation."
+}

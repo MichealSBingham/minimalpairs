@@ -1,0 +1,206 @@
+{
+  "en-i-ih": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the vowel in the middle of each word."
+  },
+  "en-r-l": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the first consonant in each word."
+  },
+  "en-th-s": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the first consonant in each word."
+  },
+  "fr-u-y": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the rounded vowel at the end of each word."
+  },
+  "fr-an-on": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the nasal vowel at the end of each word."
+  },
+  "fr-s-z": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen for the hiss or buzz in the middle or at the end of the word.",
+    "caution": "This set mixes a consonant between vowels with a word-final consonant. Natural voicing and duration can differ by position."
+  },
+  "de-u-ue": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the stressed vowel in the first syllable."
+  },
+  "de-i-length": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the stressed vowel. Its quality and duration both matter."
+  },
+  "de-s-z": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen for the hiss or buzz between the vowels."
+  },
+  "de-o-oe": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the stressed rounded vowel, even when the rest of the word changes."
+  },
+  "es-tap-trill": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen for the tap or trill between the vowels."
+  },
+  "es-p-b": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the first consonant, spoken after a pause."
+  },
+  "es-stress": {
+    "matchType": "stress",
+    "targetSoundFocus": "Listen for the stronger syllable: the first or the second.",
+    "caution": "All starter words have two syllables. Compare stress position across words, not vowel identity or absolute loudness."
+  },
+  "it-length": {
+    "matchType": "feature",
+    "targetSoundFocus": "Listen for a short or long consonant in the middle. Match the length pattern even when the consonant changes.",
+    "caution": "This is feature matching across l, t and n, not matching one identical phoneme. Consonant and neighboring vowel timing both contribute."
+  },
+  "it-f-v": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the first consonant in each word."
+  },
+  "it-p-b": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the first consonant. Other long consonants in the word are not the target."
+  },
+  "zh-tone-1-4": {
+    "matchType": "tone",
+    "targetSoundFocus": "Listen to the pitch shape over the syllable: level or falling."
+  },
+  "zh-tone-2-3": {
+    "matchType": "tone",
+    "targetSoundFocus": "Listen to the pitch shape over the syllable: rising or low.",
+    "caution": "These are isolated citation tones. Third-tone sandhi and connected speech are separate tasks; absolute pitch across speakers is not the answer."
+  },
+  "zh-tone-1-2": {
+    "matchType": "tone",
+    "targetSoundFocus": "Listen to the pitch shape over the syllable: level or rising."
+  },
+  "pt-f-v": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the first consonant in each word."
+  },
+  "pt-s-z": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen for the hiss or buzz between the vowels."
+  },
+  "pt-p-b": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the first consonant in each word."
+  },
+  "ru-hard-soft": {
+    "matchType": "feature",
+    "targetSoundFocus": "Listen for a hard or soft consonant quality. Match that quality even when the consonant changes.",
+    "requireSameTargetPosition": true,
+    "caution": "This is plain versus palatalized feature matching across different consonants. Use initial-reference pairs with initial-X pairs, and final-reference pairs with final-X pairs, until a separate mixed-position task is explained."
+  },
+  "ru-s-sh": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the first consonant in each word."
+  },
+  "ru-d-t": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the first consonant in each word."
+  },
+  "fr-e-e-open": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the vowel at the end of each word.",
+    "caution": "The declared northern reference variety keeps these vowel categories distinct. Only use voices that actually preserve the contrast."
+  },
+  "fr-in-on": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the nasal vowel at the end of each word."
+  },
+  "fr-an-in": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the nasal vowel at the end of each word."
+  },
+  "fr-o-o-open": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the rounded vowel in the middle of each word.",
+    "caution": "Use reviewed northern-reference recordings retaining the quality difference. Natural timing can differ too; do not substitute a merged southern variety."
+  },
+  "fr-b-p": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the first consonant in each word."
+  },
+  "fr-zh-sh": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the hiss or buzz at the beginning of each word."
+  },
+  "fr-y-i": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the vowel in each word."
+  },
+  "fr-y-oe": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the rounded vowel at the end of each word."
+  },
+  "fr-u-oe": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the rounded vowel at the end of each word."
+  },
+  "fr-e-oe": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the final vowel in each word."
+  },
+  "fr-eh-eu-open": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the vowel immediately before the final French r."
+  },
+  "fr-d-t": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the first consonant in each word.",
+    "requireSameTargetPosition": true
+  },
+  "fr-g-k": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the first consonant in each word.",
+    "requireSameTargetPosition": true
+  },
+  "fr-v-f": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the first consonant in each word.",
+    "requireSameTargetPosition": true
+  },
+  "fr-b-v": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the first consonant in each word.",
+    "requireSameTargetPosition": true
+  },
+  "fr-sh-s": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the first consonant in each word.",
+    "requireSameTargetPosition": true
+  },
+  "fr-l-r": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the first consonant in each word.",
+    "requireSameTargetPosition": true
+  },
+  "fr-n-gn": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the nasal consonant at the end of each word.",
+    "requireSameTargetPosition": true,
+    "caution": "All reference and X targets are word-final. The conventional /ɲ/ category has regional realizations; do not assume one exact articulation or add a final schwa."
+  },
+  "en-zh-j": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the consonant between the two vowel sounds.",
+    "requireSameTargetPosition": true,
+    "caution": "All targets are medial. Treat /dʒ/ as one affricate category. Version/virgin requires the selected shared-final-schwa American readings; a final /ɪ/ in virgin or /ʃ/ in version is outside this pair’s declared form. Do not substitute leisure/ledger with /i/ in leisure."
+  },
+  "en-foot-strut": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the vowel in the middle of each word.",
+    "requireSameTargetPosition": true
+  },
+  "en-ae-strut": {
+    "matchType": "phoneme",
+    "targetSoundFocus": "Listen to the vowel in the middle of each word.",
+    "requireSameTargetPosition": true
+  }
+}

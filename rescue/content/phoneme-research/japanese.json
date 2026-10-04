@@ -1,0 +1,3218 @@
+{
+  "languageIds": [
+    "ja"
+  ],
+  "searchedAt": "2026-10-01",
+  "searchLog": [
+    {
+      "query": "Okada Japanese JIPA illustration; Vance Japanese phonology NINJAL",
+      "outcome": "Read primary phonology descriptions, including length, allophony, moraic nasals, devoicing and pitch accent."
+    },
+    {
+      "query": "Japanese L2 vowel length and consonant length perception Tsukada Tajima",
+      "outcome": "Read vowel study abstract, Tajima training paper, Tsukada 2020 full paper and its rendered Table 1. Exact table-derived provenance restricted to eight matching words."
+    },
+    {
+      "query": "Japanese fricative gemination and devoicing perception",
+      "outcome": "Read Sadakata 2014 full-text sections and Yamakawa 2022 abstract. Did not import pseudo words or claim these studies validate the authored real-word bank."
+    },
+    {
+      "query": "TUFS Japanese long vowels, t/d, k/g, consonant-glide modules",
+      "outcome": "Read university teaching explanations; kept educational motivation separate from study evidence."
+    },
+    {
+      "query": "Official EDRDG JMdict basic Japanese–English dictionary download and licence",
+      "outcome": "Downloaded official JMdict_b.gz via www.edrdg.org, edition 2026-10-01; parsed exact spelling/reading entries and inspected relevant senses. FTP-host certificate did not validate; primary www host succeeded. No bulk dictionary included. Glosses adapted with CC BY-SA attribution."
+    },
+    {
+      "query": "Kotobank dictionary direct lemma checks",
+      "outcome": "Bare-word paths generally failed; one indexed 黄色 entry confirmed the selected きいろ reading. No broad Kotobank verification claimed."
+    }
+  ],
+  "sources": [
+    {
+      "id": "ja-okada1991",
+      "title": "Okada (1991): Japanese — Illustrations of the IPA",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/EF0E01DD40A1B2779F3ADFF96B5D97E3/S002510030000445Xa.pdf/japanese.pdf",
+      "kind": "phonology",
+      "locator": "JIPA 21(2), pp.94–96; vowel-length examples and conventions on p.95.",
+      "whatItSupports": "Tokyo-area sound inventory, length contrasts, predictable consonant variants, high-vowel devoicing and independent pitch accent.",
+      "limitations": "Descriptive illustration of one speaker, not learner-training evidence. Our IPA conventions normalize its older symbols and omit pitch labels. No recordings reused."
+    },
+    {
+      "id": "ja-vance2001",
+      "title": "Vance (2001): Japanese — Orthography and Basic Phonology",
+      "url": "https://www2.ninjal.ac.jp/past-events/labphon14/PhonSketch.pdf",
+      "kind": "phonology",
+      "locator": "NINJAL-hosted two-page excerpt; consonant and vowel tables, moraic segments and accent.",
+      "whatItSupports": "All five vowels have quantity contrasts; moraic nasal realization is context dependent; ordinary Japanese distinguishes the selected consonant categories.",
+      "limitations": "Short descriptive sketch, not a study of the chosen words. Broad /ɴ/ below is a moraic-nasal placeholder, not a claim of invariant uvular articulation."
+    },
+    {
+      "id": "ja-tufs-length",
+      "title": "Tokyo University of Foreign Studies: Long Vowels",
+      "url": "https://www.coelang.tufs.ac.jp/ja/en/pmod/practical/02-02-01.php",
+      "kind": "phonology",
+      "locator": "Explanation, Long Vowels 2.2.1.",
+      "whatItSupports": "Pedagogical distinction between one- and two-mora vowels; usual long-vowel readings of kana ei/ou and the need to separate orthography from sound.",
+      "limitations": "General teaching description, not word-specific phonetic validation. Selected /eː,oː/ readings require later recording review; no blanket conversion of every ei/ou sequence."
+    },
+    {
+      "id": "ja-tufs-kg",
+      "title": "Tokyo University of Foreign Studies: k / g",
+      "url": "https://www.coelang.tufs.ac.jp/ja/en/pmod/practical/01-06-01.php",
+      "kind": "phonology",
+      "locator": "Explanation, k / g 1.6.1.",
+      "whatItSupports": "Japanese /k–ɡ/ is an instructional priority for learners whose native laryngeal categories differ.",
+      "limitations": "Pedagogical motivation, not a controlled efficacy experiment; no ranking of all learner populations implied."
+    },
+    {
+      "id": "ja-tufs-td",
+      "title": "Tokyo University of Foreign Studies: t / d",
+      "url": "https://www.coelang.tufs.ac.jp/ja/en/pmod/practical/01-05-01.php",
+      "kind": "phonology",
+      "locator": "Explanation, t / d 1.5.1.",
+      "whatItSupports": "Japanese /t–d/ can be misidentified through different native-language laryngeal cues.",
+      "limitations": "Teaching guidance, not proof that these word pools or this training method are effective."
+    },
+    {
+      "id": "ja-tufs-yoon",
+      "title": "Tokyo University of Foreign Studies: Consonant-glide",
+      "url": "https://www.coelang.tufs.ac.jp/ja/en/pmod/practical/01-11-01.php",
+      "kind": "phonology",
+      "locator": "Explanation, Consonant-glide 1.11.1.",
+      "whatItSupports": "A contracted consonant-glide mora must not be expanded into an additional full /i/ syllable.",
+      "limitations": "Supports the moraic interpretation of contracted sounds; not an experiment on the particular /s–ɕ/ pool."
+    },
+    {
+      "id": "ja-tsukada2014",
+      "title": "Tsukada, Hirata & Roengpitya (2014): Cross-language perception of Japanese vowel length contrasts",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24687127/",
+      "kind": "l2-study",
+      "locator": "PubMed abstract; JSLHR 57(3), 805–814; DOI 10.1044/2014_JSLHR-S-12-0416.",
+      "whatItSupports": "American English, Italian and Thai listeners were tested on Japanese vowel length with AXB discrimination.",
+      "limitations": "Abstract inspected; full stimulus list not recovered. Evidence concerns the length class, not every vowel-specific bank or training success. No word receives stimulus provenance from it."
+    },
+    {
+      "id": "ja-tajima2008",
+      "title": "Tajima et al. (2008): Training English listeners to perceive phonemic length contrasts in Japanese",
+      "url": "https://www.queensu.ca/psychology/sites/psycwww/files/uploaded_files/Faculty/Kevin%20Munhall/Tajima_et_al_2008_Training_English_listeners_to_perceive_phonemic_length_contrasts_in_Japanese.pdf",
+      "kind": "l2-study",
+      "locator": "Full paper, JASA 123, 397–413; abstract and pp.398–400 on temporal context and training.",
+      "whatItSupports": "Vowel-length identification training and tests of rate, word position, presentation context and transfer. Results support treating those variables explicitly.",
+      "limitations": "Reported generalization was limited. Identification with feedback is not our cross-word audio-only ABX; the paper does not establish its superiority. No word-list membership imported here."
+    },
+    {
+      "id": "ja-tsukada2020",
+      "title": "Tsukada, Kim & Han (2020): Perception of Japanese consonant length by native speakers of Korean differing in Japanese learning experience",
+      "url": "https://www.isca-archive.org/interspeech_2020/tsukada20_interspeech.pdf",
+      "kind": "l2-study",
+      "locator": "Interspeech 2020, pp.4471–4475; methods §2 and Table 1 on p.4472.",
+      "whatItSupports": "Korean learner groups completed /t,k/ length AXB trials with three different speakers per trial.",
+      "limitations": "Cross-sectional perception, not randomized training. X differed in speaker/token, not necessarily lexical word; this is not a validation of our cross-word design."
+    },
+    {
+      "id": "ja-tsukada2020-table1",
+      "title": "Tsukada, Kim & Han (2020): Table 1, Japanese word stimuli",
+      "url": "https://www.isca-archive.org/interspeech_2020/tsukada20_interspeech.pdf",
+      "kind": "stimulus-list",
+      "locator": "Table 1, p.4472, directly read in text and rendered PDF image.",
+      "whatItSupports": "Documents the exact selected readings/senses saka, kako, haka, sakka, kakko, oto, wata and otto. Three retained paired frames also share the table’s accent-type grouping.",
+      "limitations": "Only those eight matching lexical items receive this source in stimulusSourceIds. Hakka meaning mint is not our 発火 ignition. Remaining words are editorial dictionary additions; no audio permission inferred."
+    },
+    {
+      "id": "ja-sadakata2014",
+      "title": "Sadakata et al. (2014): Language specific listening of Japanese geminate consonants",
+      "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2014.01422/full",
+      "kind": "l2-study",
+      "locator": "Abstract and introduction; materials use pseudo words containing /ss/ and manipulated silence-plus-/s/.",
+      "whatItSupports": "Cross-language perception provides context for sustained-frication geminates.",
+      "limitations": "Does not directly test our real-word /s–sː/ comparison or training method. Pseudo words were not imported.",
+      "license": "Article CC BY; no recordings reused."
+    },
+    {
+      "id": "ja-yamakawa2022",
+      "title": "Yamakawa, Amano & Kondo (2022): Perceptual boundary and discrimination sensitivity of Japanese singleton and geminate stops",
+      "url": "https://www.jstage.jst.go.jp/article/ast/43/2/43_E2155/_article/-char/ja/",
+      "kind": "l2-study",
+      "locator": "Publisher abstract; Acoustical Science and Technology 43(2), 96–104.",
+      "whatItSupports": "Adjacent vowel devoicing and speaking rate affected stop-length perception in Japanese and Taiwanese Mandarin listeners.",
+      "limitations": "Abstract inspected; not certification of our lexical exemplars. No stimulus membership assigned."
+    },
+    {
+      "id": "ja-jmdict-20261001",
+      "title": "EDRDG JMdict basic Japanese–English dictionary, 2026-10-01 edition",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Official gzip XML downloaded and parsed; header JMdict created: 2026-10-01. Selected entries identified separately by ent_seq and exact kana reading.",
+      "whatItSupports": "Checks selected spelling, kana reading and ordinary lexical sense. The basic edition excludes the separate named-entity supplement.",
+      "limitations": "JMdict supplies kana readings, not IPA or verified Tokyo pitch accents. Common-word suitability is an editorial screen, not a corpus frequency measurement. No full dictionary is included in this pack.",
+      "license": "JMdict © James William Breen and the Electronic Dictionary Research and Development Group (EDRDG), CC BY-SA 4.0; https://www.edrdg.org/edrdg/licence.html . Selected readings and adapted English glosses are attributed here. IPA, romanization, selection and contrast grouping are editorial additions. This Japanese bank is distributed under CC BY-SA 4.0 for the adapted dictionary material; no EDRDG endorsement implied."
+    },
+    {
+      "id": "ja-jmdict-1317170",
+      "title": "JMdict: 耳 (みみ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1317170; selected spelling 耳 and kana reading みみ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: ear.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1446760",
+      "title": "JMdict: 島 (しま)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1446760; selected spelling 島 and kana reading しま directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: island.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1436130",
+      "title": "JMdict: 庭 (にわ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1436130; selected spelling 庭 and kana reading にわ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: garden.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1426250",
+      "title": "JMdict: 昼 (ひる)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1426250; selected spelling 昼 and kana reading ひる directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: daytime.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1555300",
+      "title": "JMdict: 緑 (みどり)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1555300; selected spelling 緑 and kana reading みどり directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: green.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1576760",
+      "title": "JMdict: 黄色 (きいろ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1576760; selected spelling 黄色 and kana reading きいろ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: yellow.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1432250",
+      "title": "JMdict: 椎茸 (しいたけ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1432250; selected spelling 椎茸 and kana reading しいたけ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: shiitake mushroom.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1347750",
+      "title": "JMdict: 小さい (ちいさい)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1347750; selected spelling 小さい and kana reading ちいさい directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: small.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1249910",
+      "title": "JMdict: 兄さん (にいさん)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1249910; selected spelling 兄さん and kana reading にいさん directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: older brother.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1573200",
+      "title": "JMdict: 贔屓 (ひいき)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1573200; selected spelling 贔屓 and kana reading ひいき directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: favoritism.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1602800",
+      "title": "JMdict: 船 (ふね)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1602800; selected spelling 船 and kana reading ふね directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: boat.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1173100",
+      "title": "JMdict: 雲 (くも)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1173100; selected spelling 雲 and kana reading くも directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: cloud.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1406820",
+      "title": "JMdict: 村 (むら)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1406820; selected spelling 村 and kana reading むら directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: village.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1237820",
+      "title": "JMdict: 胸 (むね)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1237820; selected spelling 胸 and kana reading むね directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: chest.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1291500",
+      "title": "JMdict: 砂 (すな)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1291500; selected spelling 砂 and kana reading すな directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: sand.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1245470",
+      "title": "JMdict: 空気 (くうき)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1245470; selected spelling 空気 and kana reading くうき directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: air.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1373060",
+      "title": "JMdict: 数字 (すうじ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1373060; selected spelling 数字 and kana reading すうじ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: digit.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1499940",
+      "title": "JMdict: 風船 (ふうせん)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1499940; selected spelling 風船 and kana reading ふうせん directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: balloon.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1605680",
+      "title": "JMdict: 郵便 (ゆうびん)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1605680; selected spelling 郵便 and kana reading ゆうびん directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: mail.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1334080",
+      "title": "JMdict: 住所 (じゅうしょ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1334080; selected spelling 住所 and kana reading じゅうしょ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: address.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1467640",
+      "title": "JMdict: 猫 (ねこ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1467640; selected spelling 猫 and kana reading ねこ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: cat.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1315240",
+      "title": "JMdict: 寺 (てら)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1315240; selected spelling 寺 and kana reading てら directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: Buddhist temple.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1327720",
+      "title": "JMdict: 手紙 (てがみ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1327720; selected spelling 手紙 and kana reading てがみ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: letter.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1499320",
+      "title": "JMdict: 部屋 (へや)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1499320; selected spelling 部屋 and kana reading へや directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: room.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1237680",
+      "title": "JMdict: 狭い (せまい)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1237680; selected spelling 狭い and kana reading せまい directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: narrow.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1250990",
+      "title": "JMdict: 稽古 (けいこ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1250990; selected spelling 稽古 and kana reading けいこ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: practice.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1252090",
+      "title": "JMdict: 計画 (けいかく)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1252090; selected spelling 計画 and kana reading けいかく directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: plan.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1427360",
+      "title": "JMdict: 丁寧 (ていねい)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1427360; selected spelling 丁寧 and kana reading ていねい directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: polite.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1557110",
+      "title": "JMdict: 冷蔵庫 (れいぞうこ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1557110; selected spelling 冷蔵庫 and kana reading れいぞうこ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: refrigerator.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1532790",
+      "title": "JMdict: 迷路 (めいろ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1532790; selected spelling 迷路 and kana reading めいろ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: maze.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1430250",
+      "title": "JMdict: 鳥 (とり)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1430250; selected spelling 鳥 and kana reading とり directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: bird.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1267610",
+      "title": "JMdict: 虎 (とら)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1267610; selected spelling 虎 and kana reading とら directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: tiger.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1508750",
+      "title": "JMdict: 米 (こめ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1508750; selected spelling 米 and kana reading こめ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: rice.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1245290",
+      "title": "JMdict: 空 (そら)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1245290; selected spelling 空 and kana reading そら directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: sky.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1536350",
+      "title": "JMdict: 夜 (よる)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1536350; selected spelling 夜 and kana reading よる directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: night.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1432920",
+      "title": "JMdict: 通り (とおり)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1432920; selected spelling 通り and kana reading とおり directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: street.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1488840",
+      "title": "JMdict: 氷 (こおり)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1488840; selected spelling 氷 and kana reading こおり directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: ice.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1454290",
+      "title": "JMdict: 道路 (どうろ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1454290; selected spelling 道路 and kana reading どうろ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: road.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1519170",
+      "title": "JMdict: 帽子 (ぼうし)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1519170; selected spelling 帽子 and kana reading ぼうし directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: hat.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1399790",
+      "title": "JMdict: 掃除 (そうじ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1399790; selected spelling 掃除 and kana reading そうじ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: cleaning.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1297110",
+      "title": "JMdict: 坂 (さか)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1297110; selected spelling 坂 and kana reading さか directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: slope.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1196030",
+      "title": "JMdict: 過去 (かこ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1196030; selected spelling 過去 and kana reading かこ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: past.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1514840",
+      "title": "JMdict: 墓 (はか)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1514840; selected spelling 墓 and kana reading はか directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: grave.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-2013900",
+      "title": "JMdict: 赤 (あか)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 2013900; selected spelling 赤 and kana reading あか directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: red.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1349380",
+      "title": "JMdict: 床 (ゆか)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1349380; selected spelling 床 and kana reading ゆか directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: floor.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1297510",
+      "title": "JMdict: 作家 (さっか)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1297510; selected spelling 作家 and kana reading さっか directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: author.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1208240",
+      "title": "JMdict: 括弧 (かっこ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1208240; selected spelling 括弧 and kana reading かっこ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: parentheses.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1477180",
+      "title": "JMdict: 発火 (はっか)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1477180; selected spelling 発火 and kana reading はっか directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: ignition.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1151470",
+      "title": "JMdict: 悪化 (あっか)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1151470; selected spelling 悪化 and kana reading あっか directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: deterioration.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1463930",
+      "title": "JMdict: 日記 (にっき)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1463930; selected spelling 日記 and kana reading にっき directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: diary.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1576900",
+      "title": "JMdict: 音 (おと)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1576900; selected spelling 音 and kana reading おと directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: sound.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1533340",
+      "title": "JMdict: 綿 (わた)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1533340; selected spelling 綿 and kana reading わた directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: cotton.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1457390",
+      "title": "JMdict: 豚 (ぶた)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1457390; selected spelling 豚 and kana reading ぶた directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: pig.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1258950",
+      "title": "JMdict: 肩 (かた)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1258950; selected spelling 肩 and kana reading かた directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: shoulder.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1220240",
+      "title": "JMdict: 旗 (はた)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1220240; selected spelling 旗 and kana reading はた directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: flag.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1496480",
+      "title": "JMdict: 夫 (おっと)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1496480; selected spelling 夫 and kana reading おっと directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: husband.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1689970",
+      "title": "JMdict: バッタ (ばった)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1689970; selected spelling バッタ and kana reading ばった directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: grasshopper.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1470070",
+      "title": "JMdict: 納豆 (なっとう)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1470070; selected spelling 納豆 and kana reading なっとう directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: fermented soybeans.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1385070",
+      "title": "JMdict: 切手 (きって)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1385070; selected spelling 切手 and kana reading きって directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: postage stamp.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1012800",
+      "title": "JMdict: やっと (やっと)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1012800; selected spelling やっと and kana reading やっと directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: finally.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1428280",
+      "title": "JMdict: 朝 (あさ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1428280; selected spelling 朝 and kana reading あさ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: morning.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1301940",
+      "title": "JMdict: 傘 (かさ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1301940; selected spelling 傘 and kana reading かさ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: umbrella.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1173340",
+      "title": "JMdict: 餌 (えさ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1173340; selected spelling 餌 and kana reading えさ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: animal feed.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1527040",
+      "title": "JMdict: 味噌 (みそ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1527040; selected spelling 味噌 and kana reading みそ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: miso paste.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1172400",
+      "title": "JMdict: 嘘 (うそ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1172400; selected spelling 嘘 and kana reading うそ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: lie.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1000360",
+      "title": "JMdict: あっさり (あっさり)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1000360; selected spelling あっさり and kana reading あっさり directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: lightly seasoned.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1363260",
+      "title": "JMdict: 真っ先 (まっさき)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1363260; selected spelling 真っ先 and kana reading まっさき directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: the very front.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1400300",
+      "title": "JMdict: 早速 (さっそく)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1400300; selected spelling 早速 and kana reading さっそく directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: immediately.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1285060",
+      "title": "JMdict: 合戦 (かっせん)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1285060; selected spelling 合戦 and kana reading かっせん directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: battle.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1487540",
+      "title": "JMdict: 必須 (ひっす)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1487540; selected spelling 必須 and kana reading ひっす directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: required.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1311530",
+      "title": "JMdict: 紙 (かみ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1311530; selected spelling 紙 and kana reading かみ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: paper.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1260490",
+      "title": "JMdict: 鍵 (かぎ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1260490; selected spelling 鍵 and kana reading かぎ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: key.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1217730",
+      "title": "JMdict: 顔 (かお)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1217730; selected spelling 顔 and kana reading かお directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: face.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1509290",
+      "title": "JMdict: 壁 (かべ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1509290; selected spelling 壁 and kana reading かべ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: wall.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1499720",
+      "title": "JMdict: 風 (かぜ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1499720; selected spelling 風 and kana reading かぜ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: wind.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1204380",
+      "title": "JMdict: 崖 (がけ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1204380; selected spelling 崖 and kana reading がけ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: cliff.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1197120",
+      "title": "JMdict: 画家 (がか)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1197120; selected spelling 画家 and kana reading がか directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: painter.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1196970",
+      "title": "JMdict: 我慢 (がまん)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1196970; selected spelling 我慢 and kana reading がまん directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: patience.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1206730",
+      "title": "JMdict: 学校 (がっこう)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1206730; selected spelling 学校 and kana reading がっこう directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: school.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1206900",
+      "title": "JMdict: 学生 (がくせい)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1206900; selected spelling 学生 and kana reading がくせい directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: student.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1328820",
+      "title": "JMdict: 種 (たね)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1328820; selected spelling 種 and kana reading たね directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: seed.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1416700",
+      "title": "JMdict: 棚 (たな)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1416700; selected spelling 棚 and kana reading たな directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: shelf.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1415520",
+      "title": "JMdict: 滝 (たき)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1415520; selected spelling 滝 and kana reading たき directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: waterfall.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1553120",
+      "title": "JMdict: 旅 (たび)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1553120; selected spelling 旅 and kana reading たび directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: journey.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1581590",
+      "title": "JMdict: 谷 (たに)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1581590; selected spelling 谷 and kana reading たに directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: valley.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1409110",
+      "title": "JMdict: 駄目 (だめ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1409110; selected spelling 駄目 and kana reading だめ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: no good.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1416830",
+      "title": "JMdict: 誰 (だれ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1416830; selected spelling 誰 and kana reading だれ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: who.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1412640",
+      "title": "JMdict: 台所 (だいどころ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1412640; selected spelling 台所 and kana reading だいどころ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: kitchen.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1419240",
+      "title": "JMdict: 団子 (だんご)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1419240; selected spelling 団子 and kana reading だんご directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: dumpling.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1413730",
+      "title": "JMdict: 大根 (だいこん)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1413730; selected spelling 大根 and kana reading だいこん directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: daikon radish.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1578010",
+      "title": "JMdict: 魚 (さかな)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1578010; selected spelling 魚 and kana reading さかな directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: fish.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1291600",
+      "title": "JMdict: 砂糖 (さとう)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1291600; selected spelling 砂糖 and kana reading さとう directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: sugar.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1593710",
+      "title": "JMdict: 桜 (さくら)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1593710; selected spelling 桜 and kana reading さくら directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: cherry blossom.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1306570",
+      "title": "JMdict: 刺身 (さしみ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1306570; selected spelling 刺身 and kana reading さしみ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: sliced raw fish.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1296970",
+      "title": "JMdict: 財布 (さいふ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1296970; selected spelling 財布 and kana reading さいふ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: wallet.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1321900",
+      "title": "JMdict: 写真 (しゃしん)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1321900; selected spelling 写真 and kana reading しゃしん directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: photograph.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1322700",
+      "title": "JMdict: 社会 (しゃかい)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1322700; selected spelling 社会 and kana reading しゃかい directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: society.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1323280",
+      "title": "JMdict: 車輪 (しゃりん)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1323280; selected spelling 車輪 and kana reading しゃりん directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: wheel.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1322920",
+      "title": "JMdict: 社長 (しゃちょう)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1322920; selected spelling 社長 and kana reading しゃちょう directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: company president.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    },
+    {
+      "id": "ja-jmdict-1324170",
+      "title": "JMdict: しゃもじ (しゃもじ)",
+      "url": "https://www.edrdg.org/pub/Nihongo/JMdict_b.gz",
+      "kind": "dictionary",
+      "locator": "Edition 2026-10-01, ent_seq 1324170; selected spelling しゃもじ and kana reading しゃもじ directly inspected.",
+      "whatItSupports": "Dictionary reading and selected sense: rice paddle.",
+      "limitations": "Reading/sense checked against XML; English gloss adapted. The authored IPA and romanization are editorial, not a quotation of dictionary IPA. Pitch accent and recorded pronunciation remain unverified.",
+      "license": "EDRDG JMdict, CC BY-SA 4.0; see ja-jmdict-20261001 and https://www.edrdg.org/edrdg/licence.html ."
+    }
+  ],
+  "contrasts": [
+    {
+      "id": "ja-i-length",
+      "languageId": "ja",
+      "dialect": "Standard Japanese; Tokyo-area citation forms",
+      "label": "i and long i",
+      "categories": [
+        {
+          "label": "i",
+          "ipa": "i"
+        },
+        {
+          "label": "iː",
+          "ipa": "iː"
+        }
+      ],
+      "evidenceLevel": "phonology",
+      "sourceIds": [
+        "ja-okada1991",
+        "ja-vance2001",
+        "ja-tufs-length",
+        "ja-tsukada2014",
+        "ja-tajima2008"
+      ],
+      "learnerL1s": [
+        "American English",
+        "Italian",
+        "Thai"
+      ],
+      "rationale": "A core Japanese quantity distinction with five real words per side. Vowel-length perception/training literature motivates the contrast class; these vowel-specific pools are editorial selections, not a recovered study list.",
+      "contextNotes": [
+        "Text-only lexical candidate: no synthesized or human recording has been checked.",
+        "Spelling, kana reading, romanization and IPA are review aids, never pre-answer learner prompts.",
+        "Broad IPA convention: /ɯ/ for Japanese compressed high vowel, /ɾ/ for the liquid, and /ɴ/ for the moraic nasal with context-dependent realization. Predictable fine palatalization, devoicing and pitch accent are omitted; absence of a mark is not an assertion that it never occurs.",
+        "Broad /dʑ/ may be realized as fricative [ʑ] between vowels, as in 数字・掃除・しゃもじ; this predictable variation is not a separate target category or an automatic pronunciation error.",
+        "TargetOccurrence counts complete target segments, including length marks, from left to right; a short segment is not counted inside its long counterpart.",
+        "Select the first syllable’s vowel nucleus, not the first character or first mora alone; every target is followed by additional material. Short/long here concerns vowel quantity, not pitch height or stress.",
+        "Target position is shared, but vowel neighbors, word length and accent are not fully matched. Later audio review must prevent voice, whole-word duration or pitch pattern from becoming a category shortcut.",
+        "Short-i candidates avoid the canonical voiceless-consonant + i + voiceless-consonant environment. The selected niisan reading of 兄さん is explicit; anisan is a different reading."
+      ],
+      "pools": [
+        [
+          {
+            "text": "耳",
+            "reading": "みみ",
+            "romanization": "mimi",
+            "ipa": "/mimi/",
+            "meaning": "ear",
+            "sourceIds": [
+              "ja-jmdict-1317170"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-i-length-first-nucleus-nonfinal",
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "島",
+            "reading": "しま",
+            "romanization": "shima",
+            "ipa": "/ɕima/",
+            "meaning": "island",
+            "sourceIds": [
+              "ja-jmdict-1446760"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-i-length-first-nucleus-nonfinal",
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "庭",
+            "reading": "にわ",
+            "romanization": "niwa",
+            "ipa": "/niwa/",
+            "meaning": "garden",
+            "sourceIds": [
+              "ja-jmdict-1436130"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-i-length-first-nucleus-nonfinal",
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "昼",
+            "reading": "ひる",
+            "romanization": "hiru",
+            "ipa": "/çiɾɯ/",
+            "meaning": "daytime",
+            "sourceIds": [
+              "ja-jmdict-1426250"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-i-length-first-nucleus-nonfinal",
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "緑",
+            "reading": "みどり",
+            "romanization": "midori",
+            "ipa": "/midoɾi/",
+            "meaning": "green",
+            "sourceIds": [
+              "ja-jmdict-1555300"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-i-length-first-nucleus-nonfinal",
+            "targetSegment": "i",
+            "targetOccurrence": 1
+          }
+        ],
+        [
+          {
+            "text": "黄色",
+            "reading": "きいろ",
+            "romanization": "kiiro",
+            "ipa": "/kiːɾo/",
+            "meaning": "yellow",
+            "sourceIds": [
+              "ja-jmdict-1576760"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-i-length-first-nucleus-nonfinal",
+            "targetSegment": "iː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "椎茸",
+            "reading": "しいたけ",
+            "romanization": "shiitake",
+            "ipa": "/ɕiːtake/",
+            "meaning": "shiitake mushroom",
+            "sourceIds": [
+              "ja-jmdict-1432250"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-i-length-first-nucleus-nonfinal",
+            "targetSegment": "iː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "小さい",
+            "reading": "ちいさい",
+            "romanization": "chiisai",
+            "ipa": "/tɕiːsai/",
+            "meaning": "small",
+            "sourceIds": [
+              "ja-jmdict-1347750"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-i-length-first-nucleus-nonfinal",
+            "targetSegment": "iː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "兄さん",
+            "reading": "にいさん",
+            "romanization": "niisan",
+            "ipa": "/niːsaɴ/",
+            "meaning": "older brother",
+            "sourceIds": [
+              "ja-jmdict-1249910"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-i-length-first-nucleus-nonfinal",
+            "targetSegment": "iː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "贔屓",
+            "reading": "ひいき",
+            "romanization": "hiiki",
+            "ipa": "/çiːki/",
+            "meaning": "favoritism",
+            "sourceIds": [
+              "ja-jmdict-1573200"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-i-length-first-nucleus-nonfinal",
+            "targetSegment": "iː",
+            "targetOccurrence": 1
+          }
+        ]
+      ],
+      "minimalPairs": [],
+      "reviewNotes": [
+        "Draft for owner and native-speaker review. Five distinct spellings and five distinct authored pronunciations per category in the shared target-position group.",
+        "JMdict readings/senses checked; adapted English glosses attributed. Broad IPA is editorial and lacks pitch annotations. Study evidence and dictionary evidence are kept separate."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "ja-u-length",
+      "languageId": "ja",
+      "dialect": "Standard Japanese; Tokyo-area citation forms",
+      "label": "u and long u",
+      "categories": [
+        {
+          "label": "ɯ",
+          "ipa": "ɯ"
+        },
+        {
+          "label": "ɯː",
+          "ipa": "ɯː"
+        }
+      ],
+      "evidenceLevel": "phonology",
+      "sourceIds": [
+        "ja-okada1991",
+        "ja-vance2001",
+        "ja-tufs-length",
+        "ja-tsukada2014",
+        "ja-tajima2008"
+      ],
+      "learnerL1s": [
+        "American English",
+        "Italian",
+        "Thai"
+      ],
+      "rationale": "A core Japanese quantity distinction with five real words per side. Vowel-length perception/training literature motivates the contrast class; these vowel-specific pools are editorial selections, not a recovered study list.",
+      "contextNotes": [
+        "Text-only lexical candidate: no synthesized or human recording has been checked.",
+        "Spelling, kana reading, romanization and IPA are review aids, never pre-answer learner prompts.",
+        "Broad IPA convention: /ɯ/ for Japanese compressed high vowel, /ɾ/ for the liquid, and /ɴ/ for the moraic nasal with context-dependent realization. Predictable fine palatalization, devoicing and pitch accent are omitted; absence of a mark is not an assertion that it never occurs.",
+        "Broad /dʑ/ may be realized as fricative [ʑ] between vowels, as in 数字・掃除・しゃもじ; this predictable variation is not a separate target category or an automatic pronunciation error.",
+        "TargetOccurrence counts complete target segments, including length marks, from left to right; a short segment is not counted inside its long counterpart.",
+        "Select the first syllable’s vowel nucleus, not the first character or first mora alone; every target is followed by additional material. Short/long here concerns vowel quantity, not pitch height or stress.",
+        "Target position is shared, but vowel neighbors, word length and accent are not fully matched. Later audio review must prevent voice, whole-word duration or pitch pattern from becoming a category shortcut.",
+        "Short-u targets here precede voiced consonants, reducing a simple voiced-versus-devoiced shortcut. Romanized u is not an English rounded /u/ target."
+      ],
+      "pools": [
+        [
+          {
+            "text": "船",
+            "reading": "ふね",
+            "romanization": "fune",
+            "ipa": "/ɸɯne/",
+            "meaning": "boat",
+            "sourceIds": [
+              "ja-jmdict-1602800"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-u-length-first-nucleus-nonfinal",
+            "targetSegment": "ɯ",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "雲",
+            "reading": "くも",
+            "romanization": "kumo",
+            "ipa": "/kɯmo/",
+            "meaning": "cloud",
+            "sourceIds": [
+              "ja-jmdict-1173100"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-u-length-first-nucleus-nonfinal",
+            "targetSegment": "ɯ",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "村",
+            "reading": "むら",
+            "romanization": "mura",
+            "ipa": "/mɯɾa/",
+            "meaning": "village",
+            "sourceIds": [
+              "ja-jmdict-1406820"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-u-length-first-nucleus-nonfinal",
+            "targetSegment": "ɯ",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "胸",
+            "reading": "むね",
+            "romanization": "mune",
+            "ipa": "/mɯne/",
+            "meaning": "chest",
+            "sourceIds": [
+              "ja-jmdict-1237820"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-u-length-first-nucleus-nonfinal",
+            "targetSegment": "ɯ",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "砂",
+            "reading": "すな",
+            "romanization": "suna",
+            "ipa": "/sɯna/",
+            "meaning": "sand",
+            "sourceIds": [
+              "ja-jmdict-1291500"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-u-length-first-nucleus-nonfinal",
+            "targetSegment": "ɯ",
+            "targetOccurrence": 1
+          }
+        ],
+        [
+          {
+            "text": "空気",
+            "reading": "くうき",
+            "romanization": "kūki",
+            "ipa": "/kɯːki/",
+            "meaning": "air",
+            "sourceIds": [
+              "ja-jmdict-1245470"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-u-length-first-nucleus-nonfinal",
+            "targetSegment": "ɯː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "数字",
+            "reading": "すうじ",
+            "romanization": "sūji",
+            "ipa": "/sɯːdʑi/",
+            "meaning": "digit",
+            "sourceIds": [
+              "ja-jmdict-1373060"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-u-length-first-nucleus-nonfinal",
+            "targetSegment": "ɯː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "風船",
+            "reading": "ふうせん",
+            "romanization": "fūsen",
+            "ipa": "/ɸɯːseɴ/",
+            "meaning": "balloon",
+            "sourceIds": [
+              "ja-jmdict-1499940"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-u-length-first-nucleus-nonfinal",
+            "targetSegment": "ɯː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "郵便",
+            "reading": "ゆうびん",
+            "romanization": "yūbin",
+            "ipa": "/jɯːbiɴ/",
+            "meaning": "mail",
+            "sourceIds": [
+              "ja-jmdict-1605680"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-u-length-first-nucleus-nonfinal",
+            "targetSegment": "ɯː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "住所",
+            "reading": "じゅうしょ",
+            "romanization": "jūsho",
+            "ipa": "/dʑɯːɕo/",
+            "meaning": "address",
+            "sourceIds": [
+              "ja-jmdict-1334080"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-u-length-first-nucleus-nonfinal",
+            "targetSegment": "ɯː",
+            "targetOccurrence": 1
+          }
+        ]
+      ],
+      "minimalPairs": [],
+      "reviewNotes": [
+        "Draft for owner and native-speaker review. Five distinct spellings and five distinct authored pronunciations per category in the shared target-position group.",
+        "JMdict readings/senses checked; adapted English glosses attributed. Broad IPA is editorial and lacks pitch annotations. Study evidence and dictionary evidence are kept separate."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "ja-e-length",
+      "languageId": "ja",
+      "dialect": "Standard Japanese; Tokyo-area citation forms",
+      "label": "e and long e",
+      "categories": [
+        {
+          "label": "e",
+          "ipa": "e"
+        },
+        {
+          "label": "eː",
+          "ipa": "eː"
+        }
+      ],
+      "evidenceLevel": "phonology",
+      "sourceIds": [
+        "ja-okada1991",
+        "ja-vance2001",
+        "ja-tufs-length",
+        "ja-tsukada2014",
+        "ja-tajima2008"
+      ],
+      "learnerL1s": [
+        "American English",
+        "Italian",
+        "Thai"
+      ],
+      "rationale": "A core Japanese quantity distinction with five real words per side. Vowel-length perception/training literature motivates the contrast class; these vowel-specific pools are editorial selections, not a recovered study list.",
+      "contextNotes": [
+        "Text-only lexical candidate: no synthesized or human recording has been checked.",
+        "Spelling, kana reading, romanization and IPA are review aids, never pre-answer learner prompts.",
+        "Broad IPA convention: /ɯ/ for Japanese compressed high vowel, /ɾ/ for the liquid, and /ɴ/ for the moraic nasal with context-dependent realization. Predictable fine palatalization, devoicing and pitch accent are omitted; absence of a mark is not an assertion that it never occurs.",
+        "Broad /dʑ/ may be realized as fricative [ʑ] between vowels, as in 数字・掃除・しゃもじ; this predictable variation is not a separate target category or an automatic pronunciation error.",
+        "TargetOccurrence counts complete target segments, including length marks, from left to right; a short segment is not counted inside its long counterpart.",
+        "Select the first syllable’s vowel nucleus, not the first character or first mora alone; every target is followed by additional material. Short/long here concerns vowel quantity, not pitch height or stress.",
+        "Target position is shared, but vowel neighbors, word length and accent are not fully matched. Later audio review must prevent voice, whole-word duration or pitch pattern from becoming a category shortcut.",
+        "稽古・計画・丁寧・冷蔵庫・迷路 are selected with ordinary long-e realizations of けい・てい・れい・めい. Kana readings are retained exactly. Careful, spelling-driven or sung [ei] realizations are possible and are not silently treated as verified /eː/ tokens. Confirm the selected realization in every eventual recording.",
+        "丁寧 contains two authored /eː/ segments; only the first is the target."
+      ],
+      "pools": [
+        [
+          {
+            "text": "猫",
+            "reading": "ねこ",
+            "romanization": "neko",
+            "ipa": "/neko/",
+            "meaning": "cat",
+            "sourceIds": [
+              "ja-jmdict-1467640"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-e-length-first-nucleus-nonfinal",
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "寺",
+            "reading": "てら",
+            "romanization": "tera",
+            "ipa": "/teɾa/",
+            "meaning": "Buddhist temple",
+            "sourceIds": [
+              "ja-jmdict-1315240"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-e-length-first-nucleus-nonfinal",
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "手紙",
+            "reading": "てがみ",
+            "romanization": "tegami",
+            "ipa": "/teɡami/",
+            "meaning": "letter",
+            "sourceIds": [
+              "ja-jmdict-1327720"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-e-length-first-nucleus-nonfinal",
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "部屋",
+            "reading": "へや",
+            "romanization": "heya",
+            "ipa": "/heja/",
+            "meaning": "room",
+            "sourceIds": [
+              "ja-jmdict-1499320"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-e-length-first-nucleus-nonfinal",
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "狭い",
+            "reading": "せまい",
+            "romanization": "semai",
+            "ipa": "/semai/",
+            "meaning": "narrow",
+            "sourceIds": [
+              "ja-jmdict-1237680"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-e-length-first-nucleus-nonfinal",
+            "targetSegment": "e",
+            "targetOccurrence": 1
+          }
+        ],
+        [
+          {
+            "text": "稽古",
+            "reading": "けいこ",
+            "romanization": "keiko",
+            "ipa": "/keːko/",
+            "meaning": "practice",
+            "sourceIds": [
+              "ja-jmdict-1250990"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-e-length-first-nucleus-nonfinal",
+            "targetSegment": "eː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "計画",
+            "reading": "けいかく",
+            "romanization": "keikaku",
+            "ipa": "/keːkakɯ/",
+            "meaning": "plan",
+            "sourceIds": [
+              "ja-jmdict-1252090"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-e-length-first-nucleus-nonfinal",
+            "targetSegment": "eː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "丁寧",
+            "reading": "ていねい",
+            "romanization": "teinei",
+            "ipa": "/teːneː/",
+            "meaning": "polite",
+            "sourceIds": [
+              "ja-jmdict-1427360"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-e-length-first-nucleus-nonfinal",
+            "targetSegment": "eː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "冷蔵庫",
+            "reading": "れいぞうこ",
+            "romanization": "reizōko",
+            "ipa": "/ɾeːzoːko/",
+            "meaning": "refrigerator",
+            "sourceIds": [
+              "ja-jmdict-1557110"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-e-length-first-nucleus-nonfinal",
+            "targetSegment": "eː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "迷路",
+            "reading": "めいろ",
+            "romanization": "meiro",
+            "ipa": "/meːɾo/",
+            "meaning": "maze",
+            "sourceIds": [
+              "ja-jmdict-1532790"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-e-length-first-nucleus-nonfinal",
+            "targetSegment": "eː",
+            "targetOccurrence": 1
+          }
+        ]
+      ],
+      "minimalPairs": [],
+      "reviewNotes": [
+        "Draft for owner and native-speaker review. Five distinct spellings and five distinct authored pronunciations per category in the shared target-position group.",
+        "JMdict readings/senses checked; adapted English glosses attributed. Broad IPA is editorial and lacks pitch annotations. Study evidence and dictionary evidence are kept separate."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "ja-o-length",
+      "languageId": "ja",
+      "dialect": "Standard Japanese; Tokyo-area citation forms",
+      "label": "o and long o",
+      "categories": [
+        {
+          "label": "o",
+          "ipa": "o"
+        },
+        {
+          "label": "oː",
+          "ipa": "oː"
+        }
+      ],
+      "evidenceLevel": "phonology",
+      "sourceIds": [
+        "ja-okada1991",
+        "ja-vance2001",
+        "ja-tufs-length",
+        "ja-tsukada2014",
+        "ja-tajima2008"
+      ],
+      "learnerL1s": [
+        "American English",
+        "Italian",
+        "Thai"
+      ],
+      "rationale": "A core Japanese quantity distinction with five real words per side. Vowel-length perception/training literature motivates the contrast class; these vowel-specific pools are editorial selections, not a recovered study list.",
+      "contextNotes": [
+        "Text-only lexical candidate: no synthesized or human recording has been checked.",
+        "Spelling, kana reading, romanization and IPA are review aids, never pre-answer learner prompts.",
+        "Broad IPA convention: /ɯ/ for Japanese compressed high vowel, /ɾ/ for the liquid, and /ɴ/ for the moraic nasal with context-dependent realization. Predictable fine palatalization, devoicing and pitch accent are omitted; absence of a mark is not an assertion that it never occurs.",
+        "Broad /dʑ/ may be realized as fricative [ʑ] between vowels, as in 数字・掃除・しゃもじ; this predictable variation is not a separate target category or an automatic pronunciation error.",
+        "TargetOccurrence counts complete target segments, including length marks, from left to right; a short segment is not counted inside its long counterpart.",
+        "Select the first syllable’s vowel nucleus, not the first character or first mora alone; every target is followed by additional material. Short/long here concerns vowel quantity, not pitch height or stress.",
+        "Target position is shared, but vowel neighbors, word length and accent are not fully matched. Later audio review must prevent voice, whole-word duration or pitch pattern from becoming a category shortcut.",
+        "通り and 氷 have とお/こお; 道路・帽子・掃除 have どう/ぼう/そう. Their selected common reading is long /oː/. This does not license converting unrelated sequences such as verb-final おう to /oː/ automatically."
+      ],
+      "pools": [
+        [
+          {
+            "text": "鳥",
+            "reading": "とり",
+            "romanization": "tori",
+            "ipa": "/toɾi/",
+            "meaning": "bird",
+            "sourceIds": [
+              "ja-jmdict-1430250"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-o-length-first-nucleus-nonfinal",
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "虎",
+            "reading": "とら",
+            "romanization": "tora",
+            "ipa": "/toɾa/",
+            "meaning": "tiger",
+            "sourceIds": [
+              "ja-jmdict-1267610"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-o-length-first-nucleus-nonfinal",
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "米",
+            "reading": "こめ",
+            "romanization": "kome",
+            "ipa": "/kome/",
+            "meaning": "rice",
+            "sourceIds": [
+              "ja-jmdict-1508750"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-o-length-first-nucleus-nonfinal",
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "空",
+            "reading": "そら",
+            "romanization": "sora",
+            "ipa": "/soɾa/",
+            "meaning": "sky",
+            "sourceIds": [
+              "ja-jmdict-1245290"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-o-length-first-nucleus-nonfinal",
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "夜",
+            "reading": "よる",
+            "romanization": "yoru",
+            "ipa": "/joɾɯ/",
+            "meaning": "night",
+            "sourceIds": [
+              "ja-jmdict-1536350"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-o-length-first-nucleus-nonfinal",
+            "targetSegment": "o",
+            "targetOccurrence": 1
+          }
+        ],
+        [
+          {
+            "text": "通り",
+            "reading": "とおり",
+            "romanization": "tōri",
+            "ipa": "/toːɾi/",
+            "meaning": "street",
+            "sourceIds": [
+              "ja-jmdict-1432920"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-o-length-first-nucleus-nonfinal",
+            "targetSegment": "oː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "氷",
+            "reading": "こおり",
+            "romanization": "kōri",
+            "ipa": "/koːɾi/",
+            "meaning": "ice",
+            "sourceIds": [
+              "ja-jmdict-1488840"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-o-length-first-nucleus-nonfinal",
+            "targetSegment": "oː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "道路",
+            "reading": "どうろ",
+            "romanization": "dōro",
+            "ipa": "/doːɾo/",
+            "meaning": "road",
+            "sourceIds": [
+              "ja-jmdict-1454290"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-o-length-first-nucleus-nonfinal",
+            "targetSegment": "oː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "帽子",
+            "reading": "ぼうし",
+            "romanization": "bōshi",
+            "ipa": "/boːɕi/",
+            "meaning": "hat",
+            "sourceIds": [
+              "ja-jmdict-1519170"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-o-length-first-nucleus-nonfinal",
+            "targetSegment": "oː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "掃除",
+            "reading": "そうじ",
+            "romanization": "sōji",
+            "ipa": "/soːdʑi/",
+            "meaning": "cleaning",
+            "sourceIds": [
+              "ja-jmdict-1399790"
+            ],
+            "stimulusSourceIds": [],
+            "position": "first-syllable vowel",
+            "group": "ja-o-length-first-nucleus-nonfinal",
+            "targetSegment": "oː",
+            "targetOccurrence": 1
+          }
+        ]
+      ],
+      "minimalPairs": [],
+      "reviewNotes": [
+        "Draft for owner and native-speaker review. Five distinct spellings and five distinct authored pronunciations per category in the shared target-position group.",
+        "JMdict readings/senses checked; adapted English glosses attributed. Broad IPA is editorial and lacks pitch annotations. Study evidence and dictionary evidence are kept separate."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "ja-k-length",
+      "languageId": "ja",
+      "dialect": "Standard Japanese; Tokyo-area citation forms",
+      "label": "k and long k",
+      "categories": [
+        {
+          "label": "k",
+          "ipa": "k"
+        },
+        {
+          "label": "kː",
+          "ipa": "kː"
+        }
+      ],
+      "evidenceLevel": "study-stimuli",
+      "sourceIds": [
+        "ja-okada1991",
+        "ja-vance2001",
+        "ja-tsukada2020",
+        "ja-tsukada2020-table1",
+        "ja-tajima2008",
+        "ja-yamakawa2022"
+      ],
+      "learnerL1s": [
+        "Korean",
+        "English",
+        "Taiwanese Mandarin"
+      ],
+      "rationale": "Separate the medial singleton from its moraic geminate using ordinary lexical examples. Retained table words have exact provenance; added words are dictionary-curated candidates.",
+      "contextNotes": [
+        "Text-only lexical candidate: no synthesized or human recording has been checked.",
+        "Spelling, kana reading, romanization and IPA are review aids, never pre-answer learner prompts.",
+        "Broad IPA convention: /ɯ/ for Japanese compressed high vowel, /ɾ/ for the liquid, and /ɴ/ for the moraic nasal with context-dependent realization. Predictable fine palatalization, devoicing and pitch accent are omitted; absence of a mark is not an assertion that it never occurs.",
+        "Broad /dʑ/ may be realized as fricative [ʑ] between vowels, as in 数字・掃除・しゃもじ; this predictable variation is not a separate target category or an automatic pronunciation error.",
+        "TargetOccurrence counts complete target segments, including length marks, from left to right; a short segment is not counted inside its long counterpart.",
+        "The target is the medial consonant immediately after the first vowel nucleus. Gemination adds a mora; do not label it simply a pause for fricatives or impose a fixed millisecond threshold.",
+        "This common position allows category practice; it does not make all word combinations acoustically controlled minimal pairs. Word length, neighboring vowels, pitch accent and natural rate still need balanced recording/trial review.",
+        "過去 targets its second /k/, not its word-initial /k/. 日記 targets /kː/ before /i/; the release may be palatalized.",
+        "発火 means ignition. It must not inherit the study’s hakka meaning mint solely because the segmental reading matches."
+      ],
+      "pools": [
+        [
+          {
+            "text": "坂",
+            "reading": "さか",
+            "romanization": "saka",
+            "ipa": "/saka/",
+            "meaning": "slope",
+            "sourceIds": [
+              "ja-jmdict-1297110",
+              "ja-tsukada2020-table1"
+            ],
+            "stimulusSourceIds": [
+              "ja-tsukada2020-table1"
+            ],
+            "position": "medial",
+            "group": "ja-k-length-after-first-vowel",
+            "targetSegment": "k",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "過去",
+            "reading": "かこ",
+            "romanization": "kako",
+            "ipa": "/kako/",
+            "meaning": "past",
+            "sourceIds": [
+              "ja-jmdict-1196030",
+              "ja-tsukada2020-table1"
+            ],
+            "stimulusSourceIds": [
+              "ja-tsukada2020-table1"
+            ],
+            "position": "medial",
+            "group": "ja-k-length-after-first-vowel",
+            "targetSegment": "k",
+            "targetOccurrence": 2
+          },
+          {
+            "text": "墓",
+            "reading": "はか",
+            "romanization": "haka",
+            "ipa": "/haka/",
+            "meaning": "grave",
+            "sourceIds": [
+              "ja-jmdict-1514840",
+              "ja-tsukada2020-table1"
+            ],
+            "stimulusSourceIds": [
+              "ja-tsukada2020-table1"
+            ],
+            "position": "medial",
+            "group": "ja-k-length-after-first-vowel",
+            "targetSegment": "k",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "赤",
+            "reading": "あか",
+            "romanization": "aka",
+            "ipa": "/aka/",
+            "meaning": "red",
+            "sourceIds": [
+              "ja-jmdict-2013900"
+            ],
+            "stimulusSourceIds": [],
+            "position": "medial",
+            "group": "ja-k-length-after-first-vowel",
+            "targetSegment": "k",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "床",
+            "reading": "ゆか",
+            "romanization": "yuka",
+            "ipa": "/jɯka/",
+            "meaning": "floor",
+            "sourceIds": [
+              "ja-jmdict-1349380"
+            ],
+            "stimulusSourceIds": [],
+            "position": "medial",
+            "group": "ja-k-length-after-first-vowel",
+            "targetSegment": "k",
+            "targetOccurrence": 1
+          }
+        ],
+        [
+          {
+            "text": "作家",
+            "reading": "さっか",
+            "romanization": "sakka",
+            "ipa": "/sakːa/",
+            "meaning": "author",
+            "sourceIds": [
+              "ja-jmdict-1297510",
+              "ja-tsukada2020-table1"
+            ],
+            "stimulusSourceIds": [
+              "ja-tsukada2020-table1"
+            ],
+            "position": "medial",
+            "group": "ja-k-length-after-first-vowel",
+            "targetSegment": "kː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "括弧",
+            "reading": "かっこ",
+            "romanization": "kakko",
+            "ipa": "/kakːo/",
+            "meaning": "parentheses",
+            "sourceIds": [
+              "ja-jmdict-1208240",
+              "ja-tsukada2020-table1"
+            ],
+            "stimulusSourceIds": [
+              "ja-tsukada2020-table1"
+            ],
+            "position": "medial",
+            "group": "ja-k-length-after-first-vowel",
+            "targetSegment": "kː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "発火",
+            "reading": "はっか",
+            "romanization": "hakka",
+            "ipa": "/hakːa/",
+            "meaning": "ignition",
+            "sourceIds": [
+              "ja-jmdict-1477180"
+            ],
+            "stimulusSourceIds": [],
+            "position": "medial",
+            "group": "ja-k-length-after-first-vowel",
+            "targetSegment": "kː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "悪化",
+            "reading": "あっか",
+            "romanization": "akka",
+            "ipa": "/akːa/",
+            "meaning": "deterioration",
+            "sourceIds": [
+              "ja-jmdict-1151470"
+            ],
+            "stimulusSourceIds": [],
+            "position": "medial",
+            "group": "ja-k-length-after-first-vowel",
+            "targetSegment": "kː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "日記",
+            "reading": "にっき",
+            "romanization": "nikki",
+            "ipa": "/nikːi/",
+            "meaning": "diary",
+            "sourceIds": [
+              "ja-jmdict-1463930"
+            ],
+            "stimulusSourceIds": [],
+            "position": "medial",
+            "group": "ja-k-length-after-first-vowel",
+            "targetSegment": "kː",
+            "targetOccurrence": 1
+          }
+        ]
+      ],
+      "minimalPairs": [
+        {
+          "left": "坂",
+          "right": "作家",
+          "sourceIds": [
+            "ja-tsukada2020-table1"
+          ]
+        },
+        {
+          "left": "過去",
+          "right": "括弧",
+          "sourceIds": [
+            "ja-tsukada2020-table1"
+          ]
+        }
+      ],
+      "reviewNotes": [
+        "Draft for owner and native-speaker review. Five distinct spellings and five distinct authored pronunciations per category in the shared target-position group.",
+        "JMdict readings/senses checked; adapted English glosses attributed. Broad IPA is editorial and lacks pitch annotations. Study evidence and dictionary evidence are kept separate."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "ja-t-length",
+      "languageId": "ja",
+      "dialect": "Standard Japanese; Tokyo-area citation forms",
+      "label": "t and long t",
+      "categories": [
+        {
+          "label": "t",
+          "ipa": "t"
+        },
+        {
+          "label": "tː",
+          "ipa": "tː"
+        }
+      ],
+      "evidenceLevel": "study-stimuli",
+      "sourceIds": [
+        "ja-okada1991",
+        "ja-vance2001",
+        "ja-tsukada2020",
+        "ja-tsukada2020-table1",
+        "ja-tajima2008",
+        "ja-yamakawa2022"
+      ],
+      "learnerL1s": [
+        "Korean",
+        "English",
+        "Taiwanese Mandarin"
+      ],
+      "rationale": "Separate the medial singleton from its moraic geminate using ordinary lexical examples. Retained table words have exact provenance; added words are dictionary-curated candidates.",
+      "contextNotes": [
+        "Text-only lexical candidate: no synthesized or human recording has been checked.",
+        "Spelling, kana reading, romanization and IPA are review aids, never pre-answer learner prompts.",
+        "Broad IPA convention: /ɯ/ for Japanese compressed high vowel, /ɾ/ for the liquid, and /ɴ/ for the moraic nasal with context-dependent realization. Predictable fine palatalization, devoicing and pitch accent are omitted; absence of a mark is not an assertion that it never occurs.",
+        "Broad /dʑ/ may be realized as fricative [ʑ] between vowels, as in 数字・掃除・しゃもじ; this predictable variation is not a separate target category or an automatic pronunciation error.",
+        "TargetOccurrence counts complete target segments, including length marks, from left to right; a short segment is not counted inside its long counterpart.",
+        "The target is the medial consonant immediately after the first vowel nucleus. Gemination adds a mora; do not label it simply a pause for fricatives or impose a fixed millisecond threshold.",
+        "This common position allows category practice; it does not make all word combinations acoustically controlled minimal pairs. Word length, neighboring vowels, pitch accent and natural rate still need balanced recording/trial review.",
+        "切手 can have a devoiced vowel before /tː/; do not force an unnatural voiced vowel or treat that token as acoustically interchangeable with every other frame. 納豆 has a later long /oː/, which is not the target."
+      ],
+      "pools": [
+        [
+          {
+            "text": "音",
+            "reading": "おと",
+            "romanization": "oto",
+            "ipa": "/oto/",
+            "meaning": "sound",
+            "sourceIds": [
+              "ja-jmdict-1576900",
+              "ja-tsukada2020-table1"
+            ],
+            "stimulusSourceIds": [
+              "ja-tsukada2020-table1"
+            ],
+            "position": "medial",
+            "group": "ja-t-length-after-first-vowel",
+            "targetSegment": "t",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "綿",
+            "reading": "わた",
+            "romanization": "wata",
+            "ipa": "/wata/",
+            "meaning": "cotton",
+            "sourceIds": [
+              "ja-jmdict-1533340",
+              "ja-tsukada2020-table1"
+            ],
+            "stimulusSourceIds": [
+              "ja-tsukada2020-table1"
+            ],
+            "position": "medial",
+            "group": "ja-t-length-after-first-vowel",
+            "targetSegment": "t",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "豚",
+            "reading": "ぶた",
+            "romanization": "buta",
+            "ipa": "/bɯta/",
+            "meaning": "pig",
+            "sourceIds": [
+              "ja-jmdict-1457390"
+            ],
+            "stimulusSourceIds": [],
+            "position": "medial",
+            "group": "ja-t-length-after-first-vowel",
+            "targetSegment": "t",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "肩",
+            "reading": "かた",
+            "romanization": "kata",
+            "ipa": "/kata/",
+            "meaning": "shoulder",
+            "sourceIds": [
+              "ja-jmdict-1258950"
+            ],
+            "stimulusSourceIds": [],
+            "position": "medial",
+            "group": "ja-t-length-after-first-vowel",
+            "targetSegment": "t",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "旗",
+            "reading": "はた",
+            "romanization": "hata",
+            "ipa": "/hata/",
+            "meaning": "flag",
+            "sourceIds": [
+              "ja-jmdict-1220240"
+            ],
+            "stimulusSourceIds": [],
+            "position": "medial",
+            "group": "ja-t-length-after-first-vowel",
+            "targetSegment": "t",
+            "targetOccurrence": 1
+          }
+        ],
+        [
+          {
+            "text": "夫",
+            "reading": "おっと",
+            "romanization": "otto",
+            "ipa": "/otːo/",
+            "meaning": "husband",
+            "sourceIds": [
+              "ja-jmdict-1496480",
+              "ja-tsukada2020-table1"
+            ],
+            "stimulusSourceIds": [
+              "ja-tsukada2020-table1"
+            ],
+            "position": "medial",
+            "group": "ja-t-length-after-first-vowel",
+            "targetSegment": "tː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "バッタ",
+            "reading": "ばった",
+            "romanization": "batta",
+            "ipa": "/batːa/",
+            "meaning": "grasshopper",
+            "sourceIds": [
+              "ja-jmdict-1689970"
+            ],
+            "stimulusSourceIds": [],
+            "position": "medial",
+            "group": "ja-t-length-after-first-vowel",
+            "targetSegment": "tː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "納豆",
+            "reading": "なっとう",
+            "romanization": "nattō",
+            "ipa": "/natːoː/",
+            "meaning": "fermented soybeans",
+            "sourceIds": [
+              "ja-jmdict-1470070"
+            ],
+            "stimulusSourceIds": [],
+            "position": "medial",
+            "group": "ja-t-length-after-first-vowel",
+            "targetSegment": "tː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "切手",
+            "reading": "きって",
+            "romanization": "kitte",
+            "ipa": "/kitːe/",
+            "meaning": "postage stamp",
+            "sourceIds": [
+              "ja-jmdict-1385070"
+            ],
+            "stimulusSourceIds": [],
+            "position": "medial",
+            "group": "ja-t-length-after-first-vowel",
+            "targetSegment": "tː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "やっと",
+            "reading": "やっと",
+            "romanization": "yatto",
+            "ipa": "/jatːo/",
+            "meaning": "finally",
+            "sourceIds": [
+              "ja-jmdict-1012800"
+            ],
+            "stimulusSourceIds": [],
+            "position": "medial",
+            "group": "ja-t-length-after-first-vowel",
+            "targetSegment": "tː",
+            "targetOccurrence": 1
+          }
+        ]
+      ],
+      "minimalPairs": [
+        {
+          "left": "音",
+          "right": "夫",
+          "sourceIds": [
+            "ja-tsukada2020-table1"
+          ]
+        }
+      ],
+      "reviewNotes": [
+        "Draft for owner and native-speaker review. Five distinct spellings and five distinct authored pronunciations per category in the shared target-position group.",
+        "JMdict readings/senses checked; adapted English glosses attributed. Broad IPA is editorial and lacks pitch annotations. Study evidence and dictionary evidence are kept separate."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "ja-s-length",
+      "languageId": "ja",
+      "dialect": "Standard Japanese; Tokyo-area citation forms",
+      "label": "s and long s",
+      "categories": [
+        {
+          "label": "s",
+          "ipa": "s"
+        },
+        {
+          "label": "sː",
+          "ipa": "sː"
+        }
+      ],
+      "evidenceLevel": "phonology",
+      "sourceIds": [
+        "ja-okada1991",
+        "ja-vance2001",
+        "ja-tajima2008",
+        "ja-yamakawa2022",
+        "ja-sadakata2014"
+      ],
+      "learnerL1s": [],
+      "rationale": "Separate the medial singleton from its moraic geminate using ordinary lexical examples. Retained table words have exact provenance; added words are dictionary-curated candidates.",
+      "contextNotes": [
+        "Text-only lexical candidate: no synthesized or human recording has been checked.",
+        "Spelling, kana reading, romanization and IPA are review aids, never pre-answer learner prompts.",
+        "Broad IPA convention: /ɯ/ for Japanese compressed high vowel, /ɾ/ for the liquid, and /ɴ/ for the moraic nasal with context-dependent realization. Predictable fine palatalization, devoicing and pitch accent are omitted; absence of a mark is not an assertion that it never occurs.",
+        "Broad /dʑ/ may be realized as fricative [ʑ] between vowels, as in 数字・掃除・しゃもじ; this predictable variation is not a separate target category or an automatic pronunciation error.",
+        "TargetOccurrence counts complete target segments, including length marks, from left to right; a short segment is not counted inside its long counterpart.",
+        "The target is the medial consonant immediately after the first vowel nucleus. Gemination adds a mora; do not label it simply a pause for fricatives or impose a fixed millisecond threshold.",
+        "This common position allows category practice; it does not make all word combinations acoustically controlled minimal pairs. Word length, neighboring vowels, pitch accent and natural rate still need balanced recording/trial review.",
+        "Fricative gemination is sustained /s/ frication, not insertion of silence. 必須 selects hissu /çisːɯ/; its adjacent high vowels may devoice.",
+        "The cited fricative study used manipulated pseudo words, not these lexical items or a direct real-word short/long training trial. No stimulusSourceIds are assigned."
+      ],
+      "pools": [
+        [
+          {
+            "text": "朝",
+            "reading": "あさ",
+            "romanization": "asa",
+            "ipa": "/asa/",
+            "meaning": "morning",
+            "sourceIds": [
+              "ja-jmdict-1428280"
+            ],
+            "stimulusSourceIds": [],
+            "position": "medial",
+            "group": "ja-s-length-after-first-vowel",
+            "targetSegment": "s",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "傘",
+            "reading": "かさ",
+            "romanization": "kasa",
+            "ipa": "/kasa/",
+            "meaning": "umbrella",
+            "sourceIds": [
+              "ja-jmdict-1301940"
+            ],
+            "stimulusSourceIds": [],
+            "position": "medial",
+            "group": "ja-s-length-after-first-vowel",
+            "targetSegment": "s",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "餌",
+            "reading": "えさ",
+            "romanization": "esa",
+            "ipa": "/esa/",
+            "meaning": "animal feed",
+            "sourceIds": [
+              "ja-jmdict-1173340"
+            ],
+            "stimulusSourceIds": [],
+            "position": "medial",
+            "group": "ja-s-length-after-first-vowel",
+            "targetSegment": "s",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "味噌",
+            "reading": "みそ",
+            "romanization": "miso",
+            "ipa": "/miso/",
+            "meaning": "miso paste",
+            "sourceIds": [
+              "ja-jmdict-1527040"
+            ],
+            "stimulusSourceIds": [],
+            "position": "medial",
+            "group": "ja-s-length-after-first-vowel",
+            "targetSegment": "s",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "嘘",
+            "reading": "うそ",
+            "romanization": "uso",
+            "ipa": "/ɯso/",
+            "meaning": "lie",
+            "sourceIds": [
+              "ja-jmdict-1172400"
+            ],
+            "stimulusSourceIds": [],
+            "position": "medial",
+            "group": "ja-s-length-after-first-vowel",
+            "targetSegment": "s",
+            "targetOccurrence": 1
+          }
+        ],
+        [
+          {
+            "text": "あっさり",
+            "reading": "あっさり",
+            "romanization": "assari",
+            "ipa": "/asːaɾi/",
+            "meaning": "lightly seasoned",
+            "sourceIds": [
+              "ja-jmdict-1000360"
+            ],
+            "stimulusSourceIds": [],
+            "position": "medial",
+            "group": "ja-s-length-after-first-vowel",
+            "targetSegment": "sː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "真っ先",
+            "reading": "まっさき",
+            "romanization": "massaki",
+            "ipa": "/masːaki/",
+            "meaning": "the very front",
+            "sourceIds": [
+              "ja-jmdict-1363260"
+            ],
+            "stimulusSourceIds": [],
+            "position": "medial",
+            "group": "ja-s-length-after-first-vowel",
+            "targetSegment": "sː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "早速",
+            "reading": "さっそく",
+            "romanization": "sassoku",
+            "ipa": "/sasːokɯ/",
+            "meaning": "immediately",
+            "sourceIds": [
+              "ja-jmdict-1400300"
+            ],
+            "stimulusSourceIds": [],
+            "position": "medial",
+            "group": "ja-s-length-after-first-vowel",
+            "targetSegment": "sː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "合戦",
+            "reading": "かっせん",
+            "romanization": "kassen",
+            "ipa": "/kasːeɴ/",
+            "meaning": "battle",
+            "sourceIds": [
+              "ja-jmdict-1285060"
+            ],
+            "stimulusSourceIds": [],
+            "position": "medial",
+            "group": "ja-s-length-after-first-vowel",
+            "targetSegment": "sː",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "必須",
+            "reading": "ひっす",
+            "romanization": "hissu",
+            "ipa": "/çisːɯ/",
+            "meaning": "required",
+            "sourceIds": [
+              "ja-jmdict-1487540"
+            ],
+            "stimulusSourceIds": [],
+            "position": "medial",
+            "group": "ja-s-length-after-first-vowel",
+            "targetSegment": "sː",
+            "targetOccurrence": 1
+          }
+        ]
+      ],
+      "minimalPairs": [],
+      "reviewNotes": [
+        "Draft for owner and native-speaker review. Five distinct spellings and five distinct authored pronunciations per category in the shared target-position group.",
+        "JMdict readings/senses checked; adapted English glosses attributed. Broad IPA is editorial and lacks pitch annotations. Study evidence and dictionary evidence are kept separate."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "ja-k-g",
+      "languageId": "ja",
+      "dialect": "Standard Japanese; Tokyo-area citation forms",
+      "label": "k and g",
+      "categories": [
+        {
+          "label": "k",
+          "ipa": "k"
+        },
+        {
+          "label": "ɡ",
+          "ipa": "ɡ"
+        }
+      ],
+      "evidenceLevel": "phonology",
+      "sourceIds": [
+        "ja-okada1991",
+        "ja-vance2001",
+        "ja-tufs-kg"
+      ],
+      "learnerL1s": [],
+      "rationale": "A practical initial-consonant comparison in one shared following-vowel context, with dictionary-selected words and phonological support.",
+      "contextNotes": [
+        "Text-only lexical candidate: no synthesized or human recording has been checked.",
+        "Spelling, kana reading, romanization and IPA are review aids, never pre-answer learner prompts.",
+        "Broad IPA convention: /ɯ/ for Japanese compressed high vowel, /ɾ/ for the liquid, and /ɴ/ for the moraic nasal with context-dependent realization. Predictable fine palatalization, devoicing and pitch accent are omitted; absence of a mark is not an assertion that it never occurs.",
+        "Broad /dʑ/ may be realized as fricative [ʑ] between vowels, as in 数字・掃除・しゃもじ; this predictable variation is not a separate target category or an automatic pronunciation error.",
+        "TargetOccurrence counts complete target segments, including length marks, from left to right; a short segment is not counted inside its long counterpart.",
+        "Both categories target the word-initial consonant directly before /a/. Do not infer a rule for positions or vowels outside this group.",
+        "The categories are useful instructional contrasts; unrelated pool words are not claimed to differ by only one sound.",
+        "Initial /ɡ/ is targeted; medial /ɡ/ in a word such as 鍵 may have different realizations in Tokyo varieties and is not the target. 学校 and 学生 are distinct common lexemes, not spelling aliases; they do share the school/study morpheme."
+      ],
+      "pools": [
+        [
+          {
+            "text": "紙",
+            "reading": "かみ",
+            "romanization": "kami",
+            "ipa": "/kami/",
+            "meaning": "paper",
+            "sourceIds": [
+              "ja-jmdict-1311530"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-k-g-before-a",
+            "targetSegment": "k",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "鍵",
+            "reading": "かぎ",
+            "romanization": "kagi",
+            "ipa": "/kaɡi/",
+            "meaning": "key",
+            "sourceIds": [
+              "ja-jmdict-1260490"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-k-g-before-a",
+            "targetSegment": "k",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "顔",
+            "reading": "かお",
+            "romanization": "kao",
+            "ipa": "/kao/",
+            "meaning": "face",
+            "sourceIds": [
+              "ja-jmdict-1217730"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-k-g-before-a",
+            "targetSegment": "k",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "壁",
+            "reading": "かべ",
+            "romanization": "kabe",
+            "ipa": "/kabe/",
+            "meaning": "wall",
+            "sourceIds": [
+              "ja-jmdict-1509290"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-k-g-before-a",
+            "targetSegment": "k",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "風",
+            "reading": "かぜ",
+            "romanization": "kaze",
+            "ipa": "/kaze/",
+            "meaning": "wind",
+            "sourceIds": [
+              "ja-jmdict-1499720"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-k-g-before-a",
+            "targetSegment": "k",
+            "targetOccurrence": 1
+          }
+        ],
+        [
+          {
+            "text": "崖",
+            "reading": "がけ",
+            "romanization": "gake",
+            "ipa": "/ɡake/",
+            "meaning": "cliff",
+            "sourceIds": [
+              "ja-jmdict-1204380"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-k-g-before-a",
+            "targetSegment": "ɡ",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "画家",
+            "reading": "がか",
+            "romanization": "gaka",
+            "ipa": "/ɡaka/",
+            "meaning": "painter",
+            "sourceIds": [
+              "ja-jmdict-1197120"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-k-g-before-a",
+            "targetSegment": "ɡ",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "我慢",
+            "reading": "がまん",
+            "romanization": "gaman",
+            "ipa": "/ɡamaɴ/",
+            "meaning": "patience",
+            "sourceIds": [
+              "ja-jmdict-1196970"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-k-g-before-a",
+            "targetSegment": "ɡ",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "学校",
+            "reading": "がっこう",
+            "romanization": "gakkō",
+            "ipa": "/ɡakːoː/",
+            "meaning": "school",
+            "sourceIds": [
+              "ja-jmdict-1206730"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-k-g-before-a",
+            "targetSegment": "ɡ",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "学生",
+            "reading": "がくせい",
+            "romanization": "gakusei",
+            "ipa": "/ɡakɯseː/",
+            "meaning": "student",
+            "sourceIds": [
+              "ja-jmdict-1206900"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-k-g-before-a",
+            "targetSegment": "ɡ",
+            "targetOccurrence": 1
+          }
+        ]
+      ],
+      "minimalPairs": [],
+      "reviewNotes": [
+        "Draft for owner and native-speaker review. Five distinct spellings and five distinct authored pronunciations per category in the shared target-position group.",
+        "JMdict readings/senses checked; adapted English glosses attributed. Broad IPA is editorial and lacks pitch annotations. Study evidence and dictionary evidence are kept separate."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "ja-t-d",
+      "languageId": "ja",
+      "dialect": "Standard Japanese; Tokyo-area citation forms",
+      "label": "t and d",
+      "categories": [
+        {
+          "label": "t",
+          "ipa": "t"
+        },
+        {
+          "label": "d",
+          "ipa": "d"
+        }
+      ],
+      "evidenceLevel": "phonology",
+      "sourceIds": [
+        "ja-okada1991",
+        "ja-vance2001",
+        "ja-tufs-td"
+      ],
+      "learnerL1s": [],
+      "rationale": "A practical initial-consonant comparison in one shared following-vowel context, with dictionary-selected words and phonological support.",
+      "contextNotes": [
+        "Text-only lexical candidate: no synthesized or human recording has been checked.",
+        "Spelling, kana reading, romanization and IPA are review aids, never pre-answer learner prompts.",
+        "Broad IPA convention: /ɯ/ for Japanese compressed high vowel, /ɾ/ for the liquid, and /ɴ/ for the moraic nasal with context-dependent realization. Predictable fine palatalization, devoicing and pitch accent are omitted; absence of a mark is not an assertion that it never occurs.",
+        "Broad /dʑ/ may be realized as fricative [ʑ] between vowels, as in 数字・掃除・しゃもじ; this predictable variation is not a separate target category or an automatic pronunciation error.",
+        "TargetOccurrence counts complete target segments, including length marks, from left to right; a short segment is not counted inside its long counterpart.",
+        "Both categories target the word-initial consonant directly before /a/. Do not infer a rule for positions or vowels outside this group.",
+        "The categories are useful instructional contrasts; unrelated pool words are not claimed to differ by only one sound.",
+        "The /a/ context avoids collapsing ti/tu with Japanese affricate realizations. 団子’s moraic nasal may assimilate before /ɡ/; this is not a /n–ɴ/ lesson."
+      ],
+      "pools": [
+        [
+          {
+            "text": "種",
+            "reading": "たね",
+            "romanization": "tane",
+            "ipa": "/tane/",
+            "meaning": "seed",
+            "sourceIds": [
+              "ja-jmdict-1328820"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-t-d-before-a",
+            "targetSegment": "t",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "棚",
+            "reading": "たな",
+            "romanization": "tana",
+            "ipa": "/tana/",
+            "meaning": "shelf",
+            "sourceIds": [
+              "ja-jmdict-1416700"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-t-d-before-a",
+            "targetSegment": "t",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "滝",
+            "reading": "たき",
+            "romanization": "taki",
+            "ipa": "/taki/",
+            "meaning": "waterfall",
+            "sourceIds": [
+              "ja-jmdict-1415520"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-t-d-before-a",
+            "targetSegment": "t",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "旅",
+            "reading": "たび",
+            "romanization": "tabi",
+            "ipa": "/tabi/",
+            "meaning": "journey",
+            "sourceIds": [
+              "ja-jmdict-1553120"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-t-d-before-a",
+            "targetSegment": "t",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "谷",
+            "reading": "たに",
+            "romanization": "tani",
+            "ipa": "/tani/",
+            "meaning": "valley",
+            "sourceIds": [
+              "ja-jmdict-1581590"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-t-d-before-a",
+            "targetSegment": "t",
+            "targetOccurrence": 1
+          }
+        ],
+        [
+          {
+            "text": "駄目",
+            "reading": "だめ",
+            "romanization": "dame",
+            "ipa": "/dame/",
+            "meaning": "no good",
+            "sourceIds": [
+              "ja-jmdict-1409110"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-t-d-before-a",
+            "targetSegment": "d",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "誰",
+            "reading": "だれ",
+            "romanization": "dare",
+            "ipa": "/daɾe/",
+            "meaning": "who",
+            "sourceIds": [
+              "ja-jmdict-1416830"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-t-d-before-a",
+            "targetSegment": "d",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "台所",
+            "reading": "だいどころ",
+            "romanization": "daidokoro",
+            "ipa": "/daidokoɾo/",
+            "meaning": "kitchen",
+            "sourceIds": [
+              "ja-jmdict-1412640"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-t-d-before-a",
+            "targetSegment": "d",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "団子",
+            "reading": "だんご",
+            "romanization": "dango",
+            "ipa": "/daɴɡo/",
+            "meaning": "dumpling",
+            "sourceIds": [
+              "ja-jmdict-1419240"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-t-d-before-a",
+            "targetSegment": "d",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "大根",
+            "reading": "だいこん",
+            "romanization": "daikon",
+            "ipa": "/daikoɴ/",
+            "meaning": "daikon radish",
+            "sourceIds": [
+              "ja-jmdict-1413730"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-t-d-before-a",
+            "targetSegment": "d",
+            "targetOccurrence": 1
+          }
+        ]
+      ],
+      "minimalPairs": [],
+      "reviewNotes": [
+        "Draft for owner and native-speaker review. Five distinct spellings and five distinct authored pronunciations per category in the shared target-position group.",
+        "JMdict readings/senses checked; adapted English glosses attributed. Broad IPA is editorial and lacks pitch annotations. Study evidence and dictionary evidence are kept separate."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "ja-s-sh",
+      "languageId": "ja",
+      "dialect": "Standard Japanese; Tokyo-area citation forms",
+      "label": "s and sh before a",
+      "categories": [
+        {
+          "label": "s",
+          "ipa": "s"
+        },
+        {
+          "label": "ɕ",
+          "ipa": "ɕ"
+        }
+      ],
+      "evidenceLevel": "phonology",
+      "sourceIds": [
+        "ja-okada1991",
+        "ja-vance2001",
+        "ja-tufs-yoon"
+      ],
+      "learnerL1s": [],
+      "rationale": "A practical initial-consonant comparison in one shared following-vowel context, with dictionary-selected words and phonological support.",
+      "contextNotes": [
+        "Text-only lexical candidate: no synthesized or human recording has been checked.",
+        "Spelling, kana reading, romanization and IPA are review aids, never pre-answer learner prompts.",
+        "Broad IPA convention: /ɯ/ for Japanese compressed high vowel, /ɾ/ for the liquid, and /ɴ/ for the moraic nasal with context-dependent realization. Predictable fine palatalization, devoicing and pitch accent are omitted; absence of a mark is not an assertion that it never occurs.",
+        "Broad /dʑ/ may be realized as fricative [ʑ] between vowels, as in 数字・掃除・しゃもじ; this predictable variation is not a separate target category or an automatic pronunciation error.",
+        "TargetOccurrence counts complete target segments, including length marks, from left to right; a short segment is not counted inside its long counterpart.",
+        "Both categories target the word-initial consonant directly before /a/. Do not infer a rule for positions or vowels outside this group.",
+        "The categories are useful instructional contrasts; unrelated pool words are not claimed to differ by only one sound.",
+        "This is さ-type /sa/ versus しゃ-type /ɕa/, not an invented contrast between ordinary si and shi before /i/. Phonemic analyses may represent the latter as a palatalized consonant or /sj/ sequence.",
+        "Both pools use ordinary three-mora words. 刺身 and 写真 contain additional sibilants; only the first consonant is the target."
+      ],
+      "pools": [
+        [
+          {
+            "text": "魚",
+            "reading": "さかな",
+            "romanization": "sakana",
+            "ipa": "/sakana/",
+            "meaning": "fish",
+            "sourceIds": [
+              "ja-jmdict-1578010"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-s-sh-before-a",
+            "targetSegment": "s",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "砂糖",
+            "reading": "さとう",
+            "romanization": "satō",
+            "ipa": "/satoː/",
+            "meaning": "sugar",
+            "sourceIds": [
+              "ja-jmdict-1291600"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-s-sh-before-a",
+            "targetSegment": "s",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "桜",
+            "reading": "さくら",
+            "romanization": "sakura",
+            "ipa": "/sakɯɾa/",
+            "meaning": "cherry blossom",
+            "sourceIds": [
+              "ja-jmdict-1593710"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-s-sh-before-a",
+            "targetSegment": "s",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "刺身",
+            "reading": "さしみ",
+            "romanization": "sashimi",
+            "ipa": "/saɕimi/",
+            "meaning": "sliced raw fish",
+            "sourceIds": [
+              "ja-jmdict-1306570"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-s-sh-before-a",
+            "targetSegment": "s",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "財布",
+            "reading": "さいふ",
+            "romanization": "saifu",
+            "ipa": "/saiɸɯ/",
+            "meaning": "wallet",
+            "sourceIds": [
+              "ja-jmdict-1296970"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-s-sh-before-a",
+            "targetSegment": "s",
+            "targetOccurrence": 1
+          }
+        ],
+        [
+          {
+            "text": "写真",
+            "reading": "しゃしん",
+            "romanization": "shashin",
+            "ipa": "/ɕaɕiɴ/",
+            "meaning": "photograph",
+            "sourceIds": [
+              "ja-jmdict-1321900"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-s-sh-before-a",
+            "targetSegment": "ɕ",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "社会",
+            "reading": "しゃかい",
+            "romanization": "shakai",
+            "ipa": "/ɕakai/",
+            "meaning": "society",
+            "sourceIds": [
+              "ja-jmdict-1322700"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-s-sh-before-a",
+            "targetSegment": "ɕ",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "車輪",
+            "reading": "しゃりん",
+            "romanization": "sharin",
+            "ipa": "/ɕaɾiɴ/",
+            "meaning": "wheel",
+            "sourceIds": [
+              "ja-jmdict-1323280"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-s-sh-before-a",
+            "targetSegment": "ɕ",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "社長",
+            "reading": "しゃちょう",
+            "romanization": "shachō",
+            "ipa": "/ɕatɕoː/",
+            "meaning": "company president",
+            "sourceIds": [
+              "ja-jmdict-1322920"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-s-sh-before-a",
+            "targetSegment": "ɕ",
+            "targetOccurrence": 1
+          },
+          {
+            "text": "しゃもじ",
+            "reading": "しゃもじ",
+            "romanization": "shamoji",
+            "ipa": "/ɕamodʑi/",
+            "meaning": "rice paddle",
+            "sourceIds": [
+              "ja-jmdict-1324170"
+            ],
+            "stimulusSourceIds": [],
+            "position": "initial",
+            "group": "ja-s-sh-before-a",
+            "targetSegment": "ɕ",
+            "targetOccurrence": 1
+          }
+        ]
+      ],
+      "minimalPairs": [],
+      "reviewNotes": [
+        "Draft for owner and native-speaker review. Five distinct spellings and five distinct authored pronunciations per category in the shared target-position group.",
+        "JMdict readings/senses checked; adapted English glosses attributed. Broad IPA is editorial and lacks pitch annotations. Study evidence and dictionary evidence are kept separate."
+      ],
+      "status": "draft"
+    }
+  ],
+  "gaps": [
+    "Text-only draft. No audio generated, selected, auditioned or approved. Counts describe lexical candidates, not launch-ready lessons.",
+    "This bounded first bank is not an exhaustive inventory. /a–aː/ is deferred because this pass did not establish five ordinary independent long-a lexemes in one useful context under the current vocabulary constraints; this is not a claim that such vocabulary is impossible.",
+    "Singleton/geminate /p/ is deferred: common native/Sino-Japanese singleton examples tend to introduce a postnasal context, while geminates are medial elsewhere. A future pack may use carefully selected established loans or another controlled design instead of quietly mixing contexts.",
+    "Pitch accent is an independent lexical dimension and is not a target here. No Tokyo accent dictionary was imported; exact accent patterns remain to be reviewed before audio/trial balancing. The three listed minimal pairs are segmentally matched and share accent-type cells in Tsukada Table 1, not a declaration that every natural token has identical F0.",
+    "Moraic-nasal presence/length, palatalized versus full-i sequences, /ɕ–tɕ/, vowel quality comparisons, additional voicing categories and position-specific expansions remain outside this first scope.",
+    "Four vowel-specific banks are labeled phonology: L2 studies motivate quantity generally, but exact vowel-specific stimulus lists were not inspected for these words. The /s–sː/ bank is also phonology, with related pseudo-word research clearly qualified.",
+    "Broad target-position groups are not complete acoustic matching. Word length, segmental neighbors, accent, vowel devoicing and speaking rate need checks during the later recording discussion; no fixed duration threshold is endorsed.",
+    "JMdict © James William Breen and the Electronic Dictionary Research and Development Group (EDRDG), CC BY-SA 4.0; https://www.edrdg.org/edrdg/licence.html . Selected readings and adapted English glosses are attributed here. IPA, romanization, selection and contrast grouping are editorial additions. This Japanese bank is distributed under CC BY-SA 4.0 for the adapted dictionary material; no EDRDG endorsement implied.",
+    "Japanese script and exact kana readings are retained. Romanization is an editorial modified-Hepburn review aid: ii is retained, ū/ō mark conventional long vowels, and ei is retained where the kana spelling uses えい; IPA states the selected monophthong reading. Romanization alone is not pronunciation evidence.",
+    "Frozen text snapshot: source data was inspected on 2026-10-01. Recheck relevant dictionary revisions and readings before a later audio publication; this dated snapshot is not a permanently current lexicon."
+  ]
+}

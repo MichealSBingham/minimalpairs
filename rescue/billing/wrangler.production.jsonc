@@ -1,0 +1,40 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "minimalpairs-billing",
+  "main": "runtime/worker.mjs",
+  "compatibility_date": "2026-09-26",
+  "workers_dev": true,
+  "preview_urls": false,
+  "send_metrics": false,
+  "observability": {
+    "enabled": false
+  },
+  "triggers": {
+    "crons": [
+      "0 * * * *"
+    ]
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "BILLING_LEDGER",
+        "class_name": "BillingLedger"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": [
+        "BillingLedger"
+      ]
+    }
+  ],
+  "vars": {
+    "BILLING_SERVICE_ENABLED": "true",
+    "BILLING_CHECKOUT_ENABLED": "true",
+    "BILLING_COMMUNICATIONS_APPROVED": "true",
+    "BILLING_CONFIG_JSON": "{\"appOrigin\":\"https://minimalpairs.web.app\",\"expectedLivemode\":true,\"prices\":{\"monthly\":{\"id\":\"price_1UMI7CJ2FK64SYOddWLPIklw\",\"unitAmount\":700,\"currency\":\"usd\",\"interval\":\"month\",\"intervalCount\":1},\"annual\":{\"id\":\"price_1UMI7DJ2FK64SYOdI2GfMwVi\",\"unitAmount\":4900,\"currency\":\"usd\",\"interval\":\"year\",\"intervalCount\":1}},\"portalConfigurationId\":\"bpc_1UMI7DJ2FK64SYOd2oFOyhCA\"}",
+    "FIREBASE_PROJECT_ID": "minimalpairs"
+  }
+}

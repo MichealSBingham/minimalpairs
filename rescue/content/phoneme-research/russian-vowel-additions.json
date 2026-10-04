@@ -1,0 +1,752 @@
+{
+  "languageIds": [
+    "ru"
+  ],
+  "searchedAt": "2026-10-01T16:59:26.457834+00:00",
+  "searchLog": [
+    {
+      "query": "Russian ы и phonemic status palatalization primary phonology",
+      "outcome": "Read MSU phonetics explanation with explicit мыл/мил. Located Cavar/Lulich 2021 primary study and six-versus-five-vowel analysis discussion; retained coupling warning. The primary Cavar/Lulich PDF explicitly contrasts its separate-phoneme choice with Avanesov/Padgett derived-allophone accounts; the analysis-dependence warning is directly supported."
+    },
+    {
+      "query": "Russian i ɨ non-native perception Spanish listeners Kogan",
+      "outcome": "Retrieved and extracted Vita Kogan 2020 dissertation. Read participant/method pages: 68 Spanish participants and spliced vowels with rated dissimilarity. Not an ABX training intervention."
+    },
+    {
+      "query": "Russian vowel phonology Yanushevskaya Buncic 2015",
+      "outcome": "Primary publisher source remains intermittently inaccessible; not used as sole new evidence or claimed full-text verification."
+    },
+    {
+      "query": "Gramota lexical checks мыл мил был бил мел лис бак бок бык; stressed vowel examples мал мол мил мул мел",
+      "outcome": "Read indexed primary dictionary/reference entries. Some direct pages returned 403; incomplete individual checks are marked in review notes rather than implied complete."
+    },
+    {
+      "query": "site:gramota.ru individual dictionary checks сын, рис, сам, сом, там, том, бук",
+      "outcome": "Located and read indexed primary dictionary entries for all seven lemmas. Retained precise headword/sense references, including fish сом, book-volume том and tree бук. Direct metaslovar pages returned 403; indexed-only evidence is explicitly recorded. Replaced phonology-only word references with dictionary source IDs. No comparisons or words added."
+    }
+  ],
+  "sources": [
+    {
+      "id": "ru-msu-softness-vowels",
+      "title": "Moscow State University phonetics: meaning-distinguishing role of consonant hardness/softness",
+      "url": "https://www.philol.msu.ru/~fonetica/kons/n-24.htm",
+      "kind": "phonology",
+      "locator": "§1г; мыл/мил example",
+      "whatItSupports": "Explicit hard-onset [mɨl] versus soft-onset [mʲil] coupling.",
+      "limitations": "Pedagogical phonetic description, not a training trial. Its articulatory classification should not be treated as the only theoretical analysis."
+    },
+    {
+      "id": "ru-cavar-lulich-2021",
+      "title": "Cavar & Lulich: Variation in the articulation of Russian stressed vowels and the mechanics of palatalization in consonants",
+      "url": "https://www.cambridge.org/core/journals/phonological-data-and-analysis/article/variation-in-the-articulation-of-russian-stressed-vowels-and-the-mechanics-of-palatalization-in-consonants/40B6B844F05189EB5EE259BE422B2974",
+      "kind": "phonology",
+      "locator": "Abstract; §2.1; primary PDF discussion explicitly contrasting separate-phoneme and derived-allophone analyses; DOI 10.3765/pda.v3art3.31",
+      "whatItSupports": "Stressed vowels vary with hard/soft contexts. The authors explicitly choose a separate-phoneme analysis of /ɨ/ while citing the alternative /i/-allophone account.",
+      "limitations": "Native-speaker nonce-word ultrasound study, not an L2 intervention or a lexical source. Does not settle all competing phonemic analyses.",
+      "license": "CC BY 3.0, stated on publisher record"
+    },
+    {
+      "id": "ru-kogan-2020-vowel-perception",
+      "title": "Vita Kogan: The Effect of First Language Perception on the Discrimination of a Non-native Vowel Contrast: Investigating Individual Differences",
+      "url": "https://diposit.ub.edu/server/api/core/bitstreams/f28b2105-de18-4952-bce2-1df605199f4b/content",
+      "kind": "l2-study",
+      "locator": "Doctoral dissertation, 2020; methodology pp.59–66, especially rated-dissimilarity task",
+      "whatItSupports": "Russian i/ɨ perception examined in 68 Spanish participants against a Russian baseline; vowel tokens were spliced and rated for dissimilarity.",
+      "limitations": "Non-native perception assessment, not a training efficacy experiment. Most Spanish participants reported some basic foreign-language knowledge. No word pool below is attributed as its stimulus list.",
+      "license": "Repository reserves rights; research citation only. No thesis media, tables or passages reproduced."
+    },
+    {
+      "id": "ru-msu-vowel-row",
+      "title": "Moscow State University phonetics: vowel classification by tongue position",
+      "url": "https://www.philol.msu.ru/~fonetica/nn/n30.htm",
+      "kind": "phonology",
+      "locator": "Vowel row classification",
+      "whatItSupports": "Russian vowel-sound categories in a university teaching reference.",
+      "limitations": "Pedagogical classification; broad IPA below is an editorial convention."
+    },
+    {
+      "id": "ru-gramota-stressed-vowel-examples",
+      "title": "Gramota phonetics reference: stressed vowels",
+      "url": "https://gramota.ru/poisk?mode=spravochniki&query=%D0%BC%D0%BE%D0%BB%2C&simple=0",
+      "kind": "phonology",
+      "locator": "Indexed reference excerpt listing мал, мол, мил, мул, мел",
+      "whatItSupports": "Documented real-word examples of stressed Russian vowel distinctions.",
+      "limitations": "Indexed primary excerpt accessed; full page fetch failed. Examples are not all vowel-only minimal pairs because onset softness changes in мил/мел."
+    },
+    {
+      "id": "ru-gramota-mel",
+      "title": "Gramota dictionaries: мел",
+      "url": "https://gramota.ru/poisk?mode=slovari&query=%D0%BC%D0%B5%D0%BB",
+      "kind": "dictionary",
+      "locator": "Headword, dictionary result",
+      "whatItSupports": "Chalk lemma and inflection.",
+      "limitations": "Indexed dictionary text; full IPA supplied editorially."
+    },
+    {
+      "id": "ru-gramota-milyj",
+      "title": "Gramota Dictionary of Difficulties: милый",
+      "url": "https://gramota.ru/poisk?dicts%5B0%5D=47&mode=slovari&query=%D0%BC%D0%B8%D0%BB%D1%8B%D0%B9&simple=0",
+      "kind": "dictionary",
+      "locator": "Short forms мил, мила, мило",
+      "whatItSupports": "Мил is a real masculine short adjective, pleasing/dear.",
+      "limitations": "Not the proper name Мил; context must preserve the adjective sense."
+    },
+    {
+      "id": "ru-gramota-bit",
+      "title": "Gramota dictionaries: бить",
+      "url": "https://gramota.ru/poisk?mode=all&query=%D0%B1%D0%B8%D1%82%D1%8C",
+      "kind": "dictionary",
+      "locator": "Verb headword and forms",
+      "whatItSupports": "Бить and the inflected past form бил are lexical verb forms.",
+      "limitations": "Past-form IPA is editorial; no audio checked."
+    },
+    {
+      "id": "ru-gramota-byt",
+      "title": "Gramota dictionaries: быть and inflections",
+      "url": "https://gramota.ru/poisk?mode=slovari&query=%D0%B1%D0%B8%D1%82%D1%8C%2A&simple=0",
+      "kind": "dictionary",
+      "locator": "Indexed result for быть: был, была, было, были",
+      "whatItSupports": "Был is the masculine past form of быть.",
+      "limitations": "The search result includes neighbouring headwords; only the displayed быть paradigm is used."
+    },
+    {
+      "id": "ru-gramota-bok",
+      "title": "Gramota dictionaries: бок",
+      "url": "https://gramota.ru/poisk?mode=slovari&page=8&query=%D0%B1%D0%B0%D0%BA&simple=0",
+      "kind": "dictionary",
+      "locator": "Indexed БОК headword",
+      "whatItSupports": "Side/flank noun.",
+      "limitations": "IPA is editorial; the query page includes neighbouring words."
+    },
+    {
+      "id": "ru-orthographic-dictionary-vowel-candidates",
+      "title": "Russian Orthographic Dictionary, Gramota-hosted edition",
+      "url": "https://gramota.ru/storage/public/normdicts/orfograficheskij_slovar.pdf",
+      "kind": "dictionary",
+      "locator": "Indexed entries бак and мыть; this source is used only for those headwords",
+      "whatItSupports": "Spelling and headword provenance for бак and мыть.",
+      "limitations": "This source does not support every pool word. English senses and complete IPA are editorial; other lemmas have separate references."
+    },
+    {
+      "id": "ru-gramota-lis",
+      "title": "Gramota dictionaries: лис / лиса results",
+      "url": "https://gramota.ru/poisk?mode=all&query=%D0%BB%D0%B8%D1%81%D0%B0",
+      "kind": "dictionary",
+      "locator": "Displayed лис definition and vowel-reduction discussion",
+      "whatItSupports": "Лис is a male fox; лес/лиса examples illustrate the importance of stress.",
+      "limitations": "Search result combines entries. Full IPA normalized here, not copied from a pronunciation dictionary."
+    },
+    {
+      "id": "ru-active-dictionary-byk",
+      "title": "Russian Academy of Sciences: Active Dictionary of Russian, Volume 1",
+      "url": "https://ruslang.ru/sites/default/files/2024-02/%D0%90%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9%20%D1%81%D0%BB%D0%BE%D0%B2%D0%B0%D1%80%D1%8C%20%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%20%D1%8F%D0%B7%D1%8B%D0%BA%D0%B0.%20%D0%A2%D0%BE%D0%BC%201.pdf",
+      "kind": "dictionary",
+      "locator": "Indexed БЫК article",
+      "whatItSupports": "Bull noun and stress paradigm.",
+      "limitations": "No source recording or full dictionary article imported."
+    },
+    {
+      "id": "ru-gramota-syn",
+      "title": "Gramota dictionaries: сын",
+      "url": "https://gramota.ru/meta/syn",
+      "kind": "dictionary",
+      "locator": "Headword сын; male child in relation to his parents",
+      "whatItSupports": "Son noun, spelling and inflection; the family-relationship sense.",
+      "limitations": "Primary dictionary text was inspected in the search index. Direct page returned HTTP 403. Broad IPA is editorial; no pronunciation recording was checked."
+    },
+    {
+      "id": "ru-gramota-ris",
+      "title": "Gramota dictionaries: рис",
+      "url": "https://gramota.ru/meta/ris",
+      "kind": "dictionary",
+      "locator": "Headword рис; cereal plant and edible grains",
+      "whatItSupports": "Rice noun, spelling and inflection.",
+      "limitations": "Primary dictionary text was inspected in the search index. Direct page returned HTTP 403. Broad IPA is editorial; no pronunciation recording was checked."
+    },
+    {
+      "id": "ru-gramota-sam",
+      "title": "Gramota dictionaries: сам",
+      "url": "https://gramota.ru/poisk?dicts%5B0%5D=42&mode=slovari&query=%D1%81%D0%B0%D0%BC&simple=0",
+      "kind": "dictionary",
+      "locator": "Большой толковый словарь: 1. САМ, I. местоим. сущ., sense 1",
+      "whatItSupports": "Masculine pronoun сам indicating the person acting personally; himself/oneself. Excludes the separate colloquial head-of-household noun.",
+      "limitations": "Primary dictionary text was inspected in the search index. The individual dictionary entry was inspected through indexed text only. Broad IPA is editorial; no pronunciation recording was checked."
+    },
+    {
+      "id": "ru-gramota-som",
+      "title": "Gramota dictionaries: сом",
+      "url": "https://gramota.ru/meta/som",
+      "kind": "dictionary",
+      "locator": "Headword сом; fish sense, not the homographic currency",
+      "whatItSupports": "Catfish noun, spelling and inflection.",
+      "limitations": "Primary dictionary text was inspected in the search index. Direct page returned HTTP 403. Broad IPA is editorial; no pronunciation recording was checked."
+    },
+    {
+      "id": "ru-gramota-tam",
+      "title": "Gramota dictionaries: там",
+      "url": "https://gramota.ru/meta/tam",
+      "kind": "dictionary",
+      "locator": "Demonstrative adverb там; Большой толковый словарь, sense 1",
+      "whatItSupports": "Spatial adverb there, as distinct from its conversational temporal use.",
+      "limitations": "Primary dictionary text was inspected in the search index. Direct page returned HTTP 403. Broad IPA is editorial; no pronunciation recording was checked."
+    },
+    {
+      "id": "ru-gramota-tom",
+      "title": "Gramota dictionaries: том",
+      "url": "https://gramota.ru/meta/tom",
+      "kind": "dictionary",
+      "locator": "Headword том; a part of a publication forming a separate book",
+      "whatItSupports": "Book-volume noun; not the inflected demonstrative pronoun.",
+      "limitations": "Primary dictionary text was inspected in the search index. Direct page returned HTTP 403. Broad IPA is editorial; no pronunciation recording was checked."
+    },
+    {
+      "id": "ru-gramota-buk",
+      "title": "Gramota dictionaries: бук",
+      "url": "https://gramota.ru/poisk?mode=slovari&query=%D0%91%D1%83%D0%BA",
+      "kind": "dictionary",
+      "locator": "Headword БУК in Большой толковый словарь and Большой толковый словарь русских существительных",
+      "whatItSupports": "Beech-tree noun and its wood sense; distinct from буки, the old letter name.",
+      "limitations": "Primary dictionary text was inspected in the search index. The individual dictionary entries were inspected through indexed text only. Broad IPA is editorial; no pronunciation recording was checked."
+    }
+  ],
+  "contrasts": [
+    {
+      "id": "ru-y-i",
+      "languageId": "ru",
+      "dialect": "Contemporary Standard Russian; isolated stressed citation words",
+      "label": "Ы and и: stressed vowel sounds",
+      "categories": [
+        {
+          "label": "ы-like sound",
+          "ipa": "ɨ"
+        },
+        {
+          "label": "и-like sound",
+          "ipa": "i"
+        }
+      ],
+      "evidenceLevel": "study-contrast",
+      "sourceIds": [
+        "ru-msu-softness-vowels",
+        "ru-cavar-lulich-2021",
+        "ru-kogan-2020-vowel-perception",
+        "ru-gramota-syn",
+        "ru-gramota-ris"
+      ],
+      "learnerL1s": [
+        "es"
+      ],
+      "rationale": "A pedagogically important sound comparison omitted from the first pack. Non-native perception research directly examines this sound distinction.",
+      "contextNotes": [
+        "All words are stressed monosyllables; do not mix reduced unstressed vowels into these categories.",
+        "IPA is broad and editorial. It omits predictable narrow coarticulation; exact audio must be reviewed later.",
+        "targetOccurrence is 1-based among exact targetSegment occurrences. Every listed word has exactly one vowel nucleus.",
+        "The first pool has plain onsets; the second has palatalized onsets. This shared group explicitly represents the coupled pattern, not identical consonantal context.",
+        "Five-vowel analyses often treat [ɨ] as conditioned relative to /i/; six-vowel analyses give it separate status. The lesson must not resolve that debate by fiat.",
+        "Мыл/мил and был/бил are useful linked examples, but both onset softness and vowel realization change; neither is entered as a vowel-only minimal pair.",
+        "Быть/бить has the same issue and is intentionally not used as proof of a one-vowel lexical contrast."
+      ],
+      "pools": [
+        [
+          {
+            "text": "мыл",
+            "ipa": "/mɨl/",
+            "meaning": "washed, masculine past",
+            "position": "stressed nucleus of a monosyllable",
+            "group": "stressed-CVC-hard-coda-coupled-onset",
+            "targetSegment": "ɨ",
+            "targetOccurrence": 1,
+            "sourceIds": [
+              "ru-msu-softness-vowels",
+              "ru-orthographic-dictionary-vowel-candidates"
+            ],
+            "stimulusSourceIds": [],
+            "romanization": "myl"
+          },
+          {
+            "text": "был",
+            "ipa": "/bɨl/",
+            "meaning": "was, masculine past",
+            "position": "stressed nucleus of a monosyllable",
+            "group": "stressed-CVC-hard-coda-coupled-onset",
+            "targetSegment": "ɨ",
+            "targetOccurrence": 1,
+            "sourceIds": [
+              "ru-gramota-byt"
+            ],
+            "stimulusSourceIds": [],
+            "romanization": "byl"
+          },
+          {
+            "text": "сын",
+            "ipa": "/sɨn/",
+            "meaning": "son",
+            "position": "stressed nucleus of a monosyllable",
+            "group": "stressed-CVC-hard-coda-coupled-onset",
+            "targetSegment": "ɨ",
+            "targetOccurrence": 1,
+            "sourceIds": [
+              "ru-gramota-syn"
+            ],
+            "stimulusSourceIds": [],
+            "romanization": "syn"
+          }
+        ],
+        [
+          {
+            "text": "мил",
+            "ipa": "/mʲil/",
+            "meaning": "dear; pleasing, masculine short adjective",
+            "position": "stressed nucleus of a monosyllable",
+            "group": "stressed-CVC-hard-coda-coupled-onset",
+            "targetSegment": "i",
+            "targetOccurrence": 1,
+            "sourceIds": [
+              "ru-msu-softness-vowels",
+              "ru-gramota-milyj"
+            ],
+            "stimulusSourceIds": [],
+            "romanization": "mil"
+          },
+          {
+            "text": "бил",
+            "ipa": "/bʲil/",
+            "meaning": "hit; struck, masculine past",
+            "position": "stressed nucleus of a monosyllable",
+            "group": "stressed-CVC-hard-coda-coupled-onset",
+            "targetSegment": "i",
+            "targetOccurrence": 1,
+            "sourceIds": [
+              "ru-gramota-bit"
+            ],
+            "stimulusSourceIds": [],
+            "romanization": "bil"
+          },
+          {
+            "text": "рис",
+            "ipa": "/rʲis/",
+            "meaning": "rice",
+            "position": "stressed nucleus of a monosyllable",
+            "group": "stressed-CVC-hard-coda-coupled-onset",
+            "targetSegment": "i",
+            "targetOccurrence": 1,
+            "sourceIds": [
+              "ru-gramota-ris"
+            ],
+            "stimulusSourceIds": [],
+            "romanization": "ris"
+          }
+        ]
+      ],
+      "minimalPairs": [],
+      "reviewNotes": [
+        "Contrast-first review only. If the intended outcome is vowel-only perception, ordinary whole-word ABX can be solved using onset softness and cannot demonstrate that outcome.",
+        "Decide whether to keep a combined consonant-plus-vowel lesson or later develop a separately validated vowel-only task. No clipping or new audio has been performed.",
+        "Сын and рис have individual Gramota dictionary support for their lexical senses and spellings, inspected through indexed primary entries; their broad IPA and eventual recordings remain review-required."
+      ],
+      "status": "draft",
+      "scopeNote": "This compares the sounds [ɨ] and [i]. In these words the preceding consonant also changes from hard to soft, so these are not vowel-only minimal pairs."
+    },
+    {
+      "id": "ru-a-o",
+      "languageId": "ru",
+      "dialect": "Contemporary Standard Russian; isolated stressed citation words",
+      "label": "Stressed а and о",
+      "categories": [
+        {
+          "label": "a",
+          "ipa": "a"
+        },
+        {
+          "label": "o",
+          "ipa": "o"
+        }
+      ],
+      "evidenceLevel": "phonology",
+      "sourceIds": [
+        "ru-cavar-lulich-2021",
+        "ru-msu-vowel-row",
+        "ru-orthographic-dictionary-vowel-candidates",
+        "ru-gramota-bok",
+        "ru-gramota-sam",
+        "ru-gramota-tam",
+        "ru-gramota-som",
+        "ru-gramota-tom"
+      ],
+      "learnerL1s": [],
+      "rationale": "Adds the central low versus mid-back stressed-vowel comparison with plain consonants on both sides.",
+      "contextNotes": [
+        "All words are stressed monosyllables; do not mix reduced unstressed vowels into these categories.",
+        "IPA is broad and editorial. It omits predictable narrow coarticulation; exact audio must be reviewed later.",
+        "targetOccurrence is 1-based among exact targetSegment occurrences. Every listed word has exactly one vowel nucleus.",
+        "All proposed pair members preserve consonants and differ in the stressed vowel.",
+        "Akanje neutralizes many unstressed а/о distinctions; the stressed label is essential and should remain visible in review."
+      ],
+      "pools": [
+        [
+          {
+            "text": "бак",
+            "ipa": "/bak/",
+            "meaning": "tank; container",
+            "position": "stressed nucleus of a monosyllable",
+            "group": "stressed-CVC-hard-onset-hard-coda",
+            "targetSegment": "a",
+            "targetOccurrence": 1,
+            "sourceIds": [
+              "ru-orthographic-dictionary-vowel-candidates"
+            ],
+            "stimulusSourceIds": []
+          },
+          {
+            "text": "сам",
+            "ipa": "/sam/",
+            "meaning": "oneself; himself",
+            "position": "stressed nucleus of a monosyllable",
+            "group": "stressed-CVC-hard-onset-hard-coda",
+            "targetSegment": "a",
+            "targetOccurrence": 1,
+            "sourceIds": [
+              "ru-gramota-sam"
+            ],
+            "stimulusSourceIds": []
+          },
+          {
+            "text": "там",
+            "ipa": "/tam/",
+            "meaning": "there",
+            "position": "stressed nucleus of a monosyllable",
+            "group": "stressed-CVC-hard-onset-hard-coda",
+            "targetSegment": "a",
+            "targetOccurrence": 1,
+            "sourceIds": [
+              "ru-gramota-tam"
+            ],
+            "stimulusSourceIds": []
+          }
+        ],
+        [
+          {
+            "text": "бок",
+            "ipa": "/bok/",
+            "meaning": "side; flank",
+            "position": "stressed nucleus of a monosyllable",
+            "group": "stressed-CVC-hard-onset-hard-coda",
+            "targetSegment": "o",
+            "targetOccurrence": 1,
+            "sourceIds": [
+              "ru-gramota-bok"
+            ],
+            "stimulusSourceIds": []
+          },
+          {
+            "text": "сом",
+            "ipa": "/som/",
+            "meaning": "catfish",
+            "position": "stressed nucleus of a monosyllable",
+            "group": "stressed-CVC-hard-onset-hard-coda",
+            "targetSegment": "o",
+            "targetOccurrence": 1,
+            "sourceIds": [
+              "ru-gramota-som"
+            ],
+            "stimulusSourceIds": []
+          },
+          {
+            "text": "том",
+            "ipa": "/tom/",
+            "meaning": "volume of a book",
+            "position": "stressed nucleus of a monosyllable",
+            "group": "stressed-CVC-hard-onset-hard-coda",
+            "targetSegment": "o",
+            "targetOccurrence": 1,
+            "sourceIds": [
+              "ru-gramota-tom"
+            ],
+            "stimulusSourceIds": []
+          }
+        ]
+      ],
+      "minimalPairs": [
+        {
+          "left": "бак",
+          "right": "бок",
+          "sourceIds": [
+            "ru-orthographic-dictionary-vowel-candidates",
+            "ru-gramota-bok"
+          ]
+        },
+        {
+          "left": "сам",
+          "right": "сом",
+          "sourceIds": [
+            "ru-gramota-sam",
+            "ru-gramota-som"
+          ]
+        },
+        {
+          "left": "там",
+          "right": "том",
+          "sourceIds": [
+            "ru-gramota-tam",
+            "ru-gramota-tom"
+          ]
+        }
+      ],
+      "reviewNotes": [
+        "Бак/бок has targeted lexical-source support. Сам/сом and там/том now also have individual Gramota dictionary references, inspected through indexed primary entries; the selected senses are pronoun, catfish, spatial there, and book volume.",
+        "The pairs are structurally minimal in the stated broad transcription, not study-stimulus or learning-efficacy claims."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "ru-i-e",
+      "languageId": "ru",
+      "dialect": "Contemporary Standard Russian; isolated stressed citation words",
+      "label": "Stressed и and е after a soft consonant",
+      "categories": [
+        {
+          "label": "i",
+          "ipa": "i"
+        },
+        {
+          "label": "e",
+          "ipa": "e"
+        }
+      ],
+      "evidenceLevel": "phonology",
+      "sourceIds": [
+        "ru-cavar-lulich-2021",
+        "ru-msu-vowel-row",
+        "ru-msu-softness-vowels",
+        "ru-gramota-mel",
+        "ru-gramota-stressed-vowel-examples",
+        "ru-gramota-lis"
+      ],
+      "learnerL1s": [],
+      "rationale": "Separates two front vowels while keeping preceding consonants palatalized in both categories.",
+      "contextNotes": [
+        "All words are stressed monosyllables; do not mix reduced unstressed vowels into these categories.",
+        "IPA is broad and editorial. It omits predictable narrow coarticulation; exact audio must be reviewed later.",
+        "targetOccurrence is 1-based among exact targetSegment occurrences. Every listed word has exactly one vowel nucleus.",
+        "Unlike the ы/и pool, both categories have a soft onset and a plain coda; do not add hard-onset loanwords with э without a separate group.",
+        "Broad /e/ can be phonetically more open in this context; the category symbol is not a claim of one invariant narrow vowel.",
+        "Do not substitute мёл (swept) for мел (chalk)."
+      ],
+      "pools": [
+        [
+          {
+            "text": "мил",
+            "ipa": "/mʲil/",
+            "meaning": "dear; pleasing, masculine short adjective",
+            "position": "stressed nucleus of a monosyllable",
+            "group": "stressed-CsoftVC-hard-coda",
+            "targetSegment": "i",
+            "targetOccurrence": 1,
+            "sourceIds": [
+              "ru-msu-softness-vowels",
+              "ru-gramota-milyj"
+            ],
+            "stimulusSourceIds": [],
+            "romanization": "mil"
+          },
+          {
+            "text": "лис",
+            "ipa": "/lʲis/",
+            "meaning": "male fox",
+            "position": "stressed nucleus of a monosyllable",
+            "group": "stressed-CsoftVC-hard-coda",
+            "targetSegment": "i",
+            "targetOccurrence": 1,
+            "sourceIds": [
+              "ru-gramota-lis"
+            ],
+            "stimulusSourceIds": []
+          }
+        ],
+        [
+          {
+            "text": "мел",
+            "ipa": "/mʲel/",
+            "meaning": "chalk",
+            "position": "stressed nucleus of a monosyllable",
+            "group": "stressed-CsoftVC-hard-coda",
+            "targetSegment": "e",
+            "targetOccurrence": 1,
+            "sourceIds": [
+              "ru-gramota-mel",
+              "ru-gramota-stressed-vowel-examples"
+            ],
+            "stimulusSourceIds": []
+          },
+          {
+            "text": "лес",
+            "ipa": "/lʲes/",
+            "meaning": "forest",
+            "position": "stressed nucleus of a monosyllable",
+            "group": "stressed-CsoftVC-hard-coda",
+            "targetSegment": "e",
+            "targetOccurrence": 1,
+            "sourceIds": [
+              "ru-gramota-lis",
+              "ru-cavar-lulich-2021"
+            ],
+            "stimulusSourceIds": []
+          }
+        ]
+      ],
+      "minimalPairs": [
+        {
+          "left": "мил",
+          "right": "мел",
+          "sourceIds": [
+            "ru-msu-softness-vowels",
+            "ru-gramota-milyj",
+            "ru-gramota-mel",
+            "ru-gramota-stressed-vowel-examples"
+          ]
+        },
+        {
+          "left": "лис",
+          "right": "лес",
+          "sourceIds": [
+            "ru-gramota-lis",
+            "ru-cavar-lulich-2021"
+          ]
+        }
+      ],
+      "reviewNotes": [
+        "Мил/мел and лис/лес differ only in the vowel in these broad forms. Dictionary-derived senses are paraphrased; lexical and voice review remain separate."
+      ],
+      "status": "draft"
+    },
+    {
+      "id": "ru-y-u",
+      "languageId": "ru",
+      "dialect": "Contemporary Standard Russian; isolated stressed citation words",
+      "label": "Stressed ы and у",
+      "categories": [
+        {
+          "label": "ы-like vowel",
+          "ipa": "ɨ"
+        },
+        {
+          "label": "u",
+          "ipa": "u"
+        }
+      ],
+      "evidenceLevel": "phonology",
+      "sourceIds": [
+        "ru-cavar-lulich-2021",
+        "ru-msu-vowel-row",
+        "ru-msu-softness-vowels",
+        "ru-gramota-stressed-vowel-examples",
+        "ru-active-dictionary-byk",
+        "ru-gramota-buk"
+      ],
+      "learnerL1s": [],
+      "rationale": "Adds unrounded versus rounded high-vowel comparison while retaining plain onsets and codas.",
+      "contextNotes": [
+        "All words are stressed monosyllables; do not mix reduced unstressed vowels into these categories.",
+        "IPA is broad and editorial. It omits predictable narrow coarticulation; exact audio must be reviewed later.",
+        "targetOccurrence is 1-based among exact targetSegment occurrences. Every listed word has exactly one vowel nucleus.",
+        "The phonetic contrast remains teachable whether [ɨ] is analyzed as a separate phoneme or a context-conditioned realization.",
+        "Both categories use plain consonants; this group does not require the onset-softness switch present in ы/и."
+      ],
+      "pools": [
+        [
+          {
+            "text": "мыл",
+            "ipa": "/mɨl/",
+            "meaning": "washed, masculine past",
+            "position": "stressed nucleus of a monosyllable",
+            "group": "stressed-CVC-hard-onset-hard-coda",
+            "targetSegment": "ɨ",
+            "targetOccurrence": 1,
+            "sourceIds": [
+              "ru-msu-softness-vowels",
+              "ru-orthographic-dictionary-vowel-candidates"
+            ],
+            "stimulusSourceIds": [],
+            "romanization": "myl"
+          },
+          {
+            "text": "бык",
+            "ipa": "/bɨk/",
+            "meaning": "bull",
+            "position": "stressed nucleus of a monosyllable",
+            "group": "stressed-CVC-hard-onset-hard-coda",
+            "targetSegment": "ɨ",
+            "targetOccurrence": 1,
+            "sourceIds": [
+              "ru-active-dictionary-byk"
+            ],
+            "stimulusSourceIds": []
+          }
+        ],
+        [
+          {
+            "text": "мул",
+            "ipa": "/mul/",
+            "meaning": "mule",
+            "position": "stressed nucleus of a monosyllable",
+            "group": "stressed-CVC-hard-onset-hard-coda",
+            "targetSegment": "u",
+            "targetOccurrence": 1,
+            "sourceIds": [
+              "ru-gramota-stressed-vowel-examples"
+            ],
+            "stimulusSourceIds": []
+          },
+          {
+            "text": "бук",
+            "ipa": "/buk/",
+            "meaning": "beech tree",
+            "position": "stressed nucleus of a monosyllable",
+            "group": "stressed-CVC-hard-onset-hard-coda",
+            "targetSegment": "u",
+            "targetOccurrence": 1,
+            "sourceIds": [
+              "ru-gramota-buk"
+            ],
+            "stimulusSourceIds": []
+          }
+        ]
+      ],
+      "minimalPairs": [
+        {
+          "left": "мыл",
+          "right": "мул",
+          "sourceIds": [
+            "ru-msu-softness-vowels",
+            "ru-orthographic-dictionary-vowel-candidates",
+            "ru-gramota-stressed-vowel-examples"
+          ]
+        },
+        {
+          "left": "бык",
+          "right": "бук",
+          "sourceIds": [
+            "ru-active-dictionary-byk",
+            "ru-gramota-buk"
+          ]
+        }
+      ],
+      "reviewNotes": [
+        "Мул is explicitly documented in the Gramota stressed-vowel examples. Бук now has an individual Gramota dictionary reference for the beech-tree sense, inspected through indexed primary entries.",
+        "No universal L1 difficulty ranking is asserted; personal diagnostics should determine priority."
+      ],
+      "status": "draft",
+      "scopeNote": "A stressed vowel-sound comparison in plain-consonant contexts; the separate-phoneme status of [ɨ] is analysis-dependent."
+    }
+  ],
+  "gaps": [
+    "Coverage correction: this addition introduces four Russian vowel comparisons; the previous pack already contains stressed o/u. Together they cover six pedagogical sound categories a, e, i, o, u, ɨ across five selected comparisons, not all pairwise combinations.",
+    "Remaining six-category pairwise inventory: a/e, a/i, a/ɨ, a/u, e/ɨ, e/o, e/u, i/o, i/u, ɨ/o. This is a coverage map, not a recommendation to create ten equally important lessons. Context compatibility and learner evidence must determine selection.",
+    "Unstressed reduction and stress movement need separate material: a/o neutralization and front-vowel reduction cannot be addressed by adding unstressed spellings to stressed categories.",
+    "Soft-consonant versus hard-consonant realizations of a, o, u and e remain additional contextual gaps; the sound category often changes its phonetic realization with its neighbours.",
+    "Russian letter pairs а/я, о/ё, у/ю, э/е are not automatically independent vowel-phoneme contrasts. Palatalization, jotation and position must be separated.",
+    "The ы/и sound distinction is pedagogically important despite its disputed phonemic analysis. Whole-word results from the supplied coupled pool cannot isolate vowel learning from onset-softness learning.",
+    "No claim that any new word appeared in an L2 stimulus table: all stimulusSourceIds are empty. No speech has been generated, downloaded for practice, or perceptually validated.",
+    "The seven follow-up lemmas сын, рис, сам, сом, там, том and бук now have individually inspected indexed Gramota dictionary entries. Complete IPA and owner word review remain pending; this draft is not deployable curriculum and does not certify recordings."
+  ]
+}

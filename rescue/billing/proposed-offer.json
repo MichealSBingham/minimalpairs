@@ -1,0 +1,22 @@
+{
+  "status": "live",
+  "currency": "usd",
+  "monthlyAmount": 700,
+  "annualAmount": 4900,
+  "scope": "All available languages and contrasts",
+  "free": {
+    "contrastGroupsPerLanguage": 3,
+    "usageLimit": null,
+    "cardRequired": false
+  },
+  "timedTrial": null,
+  "newLifetimeSales": false,
+  "legacyPolicy": "Honor original lifetime coverage; preserve already-paid subscription terms. Never erase grants during migration.",
+  "ownerPreview": "/membership-preview",
+  "limitations": [
+    "Paid exercise access is enforced in the app; static audio remains publicly hosted.",
+    "Live checkout, portal creation, amount verification and signed webhook route passed; no live payment was submitted.",
+    "Payment-to-entitlement lifecycle was verified separately in the deployed sandbox.",
+    "Standard transaction receipts are approved. Outreach, refunds, payouts, transfers and spending require separate owner permission."
+  ]
+}

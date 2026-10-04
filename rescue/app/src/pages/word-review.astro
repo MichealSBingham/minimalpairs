@@ -1,0 +1,9 @@
+---
+import Base from '../layouts/Base.astro';
+import PhonemeReviewDesk from '../components/PhonemeReviewDesk';
+import { getPhonemeLibrary } from '../lib/phoneme-library';
+const library = getPhonemeLibrary();
+---
+<Base title="Words and IPA contrast review — MinimalPairs" description="Audit the exact draft word lists, IPA, meanings, dialects and practice grouping before approving audio generation." noindex analytics={false}>
+  <PhonemeReviewDesk library={library} client:load />
+</Base>

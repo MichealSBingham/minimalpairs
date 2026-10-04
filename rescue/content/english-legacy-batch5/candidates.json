@@ -1,0 +1,683 @@
+{
+  "date": "2026-09-28",
+  "status": "isolated-text-candidate-audio-unapproved",
+  "languageId": "en",
+  "locale": null,
+  "requiredLocales": [
+    "en-US",
+    "en-GB"
+  ],
+  "dialect": "Three American consonant pools plus a separately gated non-rhotic British vowel pool; never one mixed voice set.",
+  "contrasts": [
+    {
+      "id": "en-dh-d",
+      "label": "They or day?",
+      "phonemes": [
+        "ð",
+        "d"
+      ],
+      "description": "Match the first consonant: /ð/ as in they or /d/ as in day. X has a different ending but shares one initial sound category.",
+      "l1Notes": [],
+      "requiredAudioLocale": "en-US",
+      "dialectNote": "Use the full American dictionary citation forms, including /ðeɪ/, /ðɛn/ and /ðoʊ/. Do not substitute reduced connected-speech function words or a profile that replaces initial /ð/ with /d/. The distinction is not a voiced-versus-voiceless contrast.",
+      "integrationStatus": "isolated-awaiting-audio-review-and-integration",
+      "pairs": [
+        {
+          "id": "en-they-day",
+          "words": [
+            {
+              "text": "they",
+              "ipa": "/ðeɪ/",
+              "meaning": "people or things already mentioned",
+              "phonemes": [
+                "ð",
+                "eɪ"
+              ]
+            },
+            {
+              "text": "day",
+              "ipa": "/deɪ/",
+              "meaning": "a period of 24 hours",
+              "phonemes": [
+                "d",
+                "eɪ"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/they",
+            "https://www.collinsdictionary.com/us/dictionary/english/day"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        },
+        {
+          "id": "en-then-den",
+          "words": [
+            {
+              "text": "then",
+              "ipa": "/ðɛn/",
+              "meaning": "at that time",
+              "phonemes": [
+                "ð",
+                "ɛ",
+                "n"
+              ]
+            },
+            {
+              "text": "den",
+              "ipa": "/dɛn/",
+              "meaning": "an animal’s shelter",
+              "phonemes": [
+                "d",
+                "ɛ",
+                "n"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/then",
+            "https://www.collinsdictionary.com/us/dictionary/english/den"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        },
+        {
+          "id": "en-though-dough",
+          "words": [
+            {
+              "text": "though",
+              "ipa": "/ðoʊ/",
+              "meaning": "although",
+              "phonemes": [
+                "ð",
+                "oʊ"
+              ]
+            },
+            {
+              "text": "dough",
+              "ipa": "/doʊ/",
+              "meaning": "a flour mixture prepared for baking",
+              "phonemes": [
+                "d",
+                "oʊ"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/though",
+            "https://www.collinsdictionary.com/us/dictionary/english/dough"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        }
+      ],
+      "sources": [
+        "https://www.collinsdictionary.com/us/dictionary/english/day",
+        "https://www.collinsdictionary.com/us/dictionary/english/den",
+        "https://www.collinsdictionary.com/us/dictionary/english/dough",
+        "https://www.collinsdictionary.com/us/dictionary/english/then",
+        "https://www.collinsdictionary.com/us/dictionary/english/they",
+        "https://www.collinsdictionary.com/us/dictionary/english/though"
+      ],
+      "targetSoundFocus": "Listen to the first consonant in each word.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the first consonant in each word.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "ð",
+          "d"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "profilesMustShareLocale": "en-US",
+        "presentation": "audio-only-until-answer-or-explicit-text-assist"
+      }
+    },
+    {
+      "id": "en-dh-z",
+      "label": "Breathe or breeze?",
+      "phonemes": [
+        "ð",
+        "z"
+      ],
+      "description": "Listen to the last consonant, /ð/ or /z/. All examples have /i/ just before that ending. X can begin differently and still share the same final category.",
+      "l1Notes": [],
+      "requiredAudioLocale": "en-US",
+      "dialectNote": "Preserve the final /ð/ versus /z/ in the American citation forms. Breathe is the verb /bɹið/, not breath /bɹɛθ/; teethe is the verb /tið/, not teeth /tiθ/. Seethe and teethe may need optional meaning help, but are ordinary modern verbs, not invented or obsolete padding. Do not trim away the final fricative.",
+      "integrationStatus": "isolated-awaiting-audio-review-and-integration",
+      "pairs": [
+        {
+          "id": "en-breathe-breeze",
+          "words": [
+            {
+              "text": "breathe",
+              "ipa": "/bɹið/",
+              "meaning": "take air in and out",
+              "phonemes": [
+                "b",
+                "ɹ",
+                "i",
+                "ð"
+              ]
+            },
+            {
+              "text": "breeze",
+              "ipa": "/bɹiz/",
+              "meaning": "a gentle wind",
+              "phonemes": [
+                "b",
+                "ɹ",
+                "i",
+                "z"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/breathe",
+            "https://www.collinsdictionary.com/us/dictionary/english/breeze"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 3,
+            "targetPosition": "final",
+            "trialGroup": "final-fricative-after-i-v1"
+          }
+        },
+        {
+          "id": "en-seethe-seize",
+          "words": [
+            {
+              "text": "seethe",
+              "ipa": "/sið/",
+              "meaning": "be intensely agitated",
+              "phonemes": [
+                "s",
+                "i",
+                "ð"
+              ]
+            },
+            {
+              "text": "seize",
+              "ipa": "/siz/",
+              "meaning": "grab suddenly",
+              "phonemes": [
+                "s",
+                "i",
+                "z"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/seethe",
+            "https://www.collinsdictionary.com/us/dictionary/english/seize"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 2,
+            "targetPosition": "final",
+            "trialGroup": "final-fricative-after-i-v1"
+          }
+        },
+        {
+          "id": "en-teethe-tease",
+          "words": [
+            {
+              "text": "teethe",
+              "ipa": "/tið/",
+              "meaning": "develop the first teeth",
+              "phonemes": [
+                "t",
+                "i",
+                "ð"
+              ]
+            },
+            {
+              "text": "tease",
+              "ipa": "/tiz/",
+              "meaning": "provoke with jokes or mocking",
+              "phonemes": [
+                "t",
+                "i",
+                "z"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/teethe",
+            "https://www.collinsdictionary.com/us/dictionary/english/tease"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 2,
+            "targetPosition": "final",
+            "trialGroup": "final-fricative-after-i-v1"
+          }
+        }
+      ],
+      "sources": [
+        "https://www.collinsdictionary.com/us/dictionary/english/breathe",
+        "https://www.collinsdictionary.com/us/dictionary/english/breeze",
+        "https://www.collinsdictionary.com/us/dictionary/english/seethe",
+        "https://www.collinsdictionary.com/us/dictionary/english/seize",
+        "https://www.collinsdictionary.com/us/dictionary/english/tease",
+        "https://www.collinsdictionary.com/us/dictionary/english/teethe"
+      ],
+      "targetSoundFocus": "Listen to the last consonant in each word.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the last consonant in each word.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "ð",
+          "z"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "profilesMustShareLocale": "en-US",
+        "presentation": "audio-only-until-answer-or-explicit-text-assist"
+      }
+    },
+    {
+      "id": "en-v-b",
+      "label": "Vote or boat?",
+      "phonemes": [
+        "v",
+        "b"
+      ],
+      "description": "Match the first consonant, /v/ or /b/, across different word endings. Very and berry share the same stress pattern and the same remaining sounds.",
+      "l1Notes": [],
+      "requiredAudioLocale": "en-US",
+      "dialectNote": "Use matching American /ˈvɛɹi–ˈbɛɹi/, /voʊt–boʊt/ and /voʊlt–boʊlt/ forms. Very/berry have two syllables while the other pairs have one; all targets remain initial single consonants. Volt means the electrical unit. Do not replace /v/ with /b/ or remove either onset while trimming.",
+      "integrationStatus": "isolated-awaiting-audio-review-and-integration",
+      "pairs": [
+        {
+          "id": "en-very-berry",
+          "words": [
+            {
+              "text": "very",
+              "ipa": "/ˈvɛɹi/",
+              "meaning": "to a great extent",
+              "phonemes": [
+                "v",
+                "ɛ",
+                "ɹ",
+                "i"
+              ]
+            },
+            {
+              "text": "berry",
+              "ipa": "/ˈbɛɹi/",
+              "meaning": "a small fleshy fruit",
+              "phonemes": [
+                "b",
+                "ɛ",
+                "ɹ",
+                "i"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/very",
+            "https://www.collinsdictionary.com/us/dictionary/english/berry"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        },
+        {
+          "id": "en-vote-boat",
+          "words": [
+            {
+              "text": "vote",
+              "ipa": "/voʊt/",
+              "meaning": "a choice expressed in a group decision",
+              "phonemes": [
+                "v",
+                "oʊ",
+                "t"
+              ]
+            },
+            {
+              "text": "boat",
+              "ipa": "/boʊt/",
+              "meaning": "a small craft for travelling on water",
+              "phonemes": [
+                "b",
+                "oʊ",
+                "t"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/vote",
+            "https://www.collinsdictionary.com/us/dictionary/english/boat"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        },
+        {
+          "id": "en-volt-bolt",
+          "words": [
+            {
+              "text": "volt",
+              "ipa": "/voʊlt/",
+              "meaning": "a unit of electrical potential difference",
+              "phonemes": [
+                "v",
+                "oʊ",
+                "l",
+                "t"
+              ]
+            },
+            {
+              "text": "bolt",
+              "ipa": "/boʊlt/",
+              "meaning": "a threaded metal fastener",
+              "phonemes": [
+                "b",
+                "oʊ",
+                "l",
+                "t"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/volt",
+            "https://www.collinsdictionary.com/us/dictionary/english/bolt"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        }
+      ],
+      "sources": [
+        "https://www.collinsdictionary.com/us/dictionary/english/berry",
+        "https://www.collinsdictionary.com/us/dictionary/english/boat",
+        "https://www.collinsdictionary.com/us/dictionary/english/bolt",
+        "https://www.collinsdictionary.com/us/dictionary/english/very",
+        "https://www.collinsdictionary.com/us/dictionary/english/volt",
+        "https://www.collinsdictionary.com/us/dictionary/english/vote"
+      ],
+      "targetSoundFocus": "Listen to the first consonant in each word.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the first consonant in each word.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "v",
+          "b"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "profilesMustShareLocale": "en-US",
+        "presentation": "audio-only-until-answer-or-explicit-text-assist"
+      }
+    },
+    {
+      "id": "en-thought-lot-gb",
+      "label": "Port or pot? (British)",
+      "phonemes": [
+        "ɔː",
+        "ɒ"
+      ],
+      "description": "In the selected non-rhotic British forms, compare /ɔː/ with /ɒ/ before final /t/. X uses a different first consonant while retaining one of these vowel categories.",
+      "l1Notes": [],
+      "requiredAudioLocale": "en-GB",
+      "dialectNote": "This pool restores the exact legacy /ɔː–ɒ/ declaration using Collins’s non-rhotic British forms. It requires two complete matched en-GB profiles with no pronounced /r/ in port, court or short. It is not an American cot–caught lesson: rhotic US versions add /ɹ/, and substituting /ɑ/ for /ɒ/ changes the target. British accents also vary; the broad dictionary categories specify this selected reference, not every British speaker. Do not infer correctness from locale alone or coach duration as the sole cue.",
+      "integrationStatus": "blocked-per-contrast-dialect-profile-support-and-audio-review",
+      "pairs": [
+        {
+          "id": "en-port-pot",
+          "words": [
+            {
+              "text": "port",
+              "ipa": "/pɔːt/",
+              "meaning": "a place where ships load and unload",
+              "phonemes": [
+                "p",
+                "ɔː",
+                "t"
+              ]
+            },
+            {
+              "text": "pot",
+              "ipa": "/pɒt/",
+              "meaning": "a deep container used for cooking",
+              "phonemes": [
+                "p",
+                "ɒ",
+                "t"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/port",
+            "https://www.collinsdictionary.com/us/dictionary/english/pot"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "nonrhotic-gb-medial-vowel-before-t-v1"
+          }
+        },
+        {
+          "id": "en-court-cot",
+          "words": [
+            {
+              "text": "court",
+              "ipa": "/kɔːt/",
+              "meaning": "an area marked for a ball game",
+              "phonemes": [
+                "k",
+                "ɔː",
+                "t"
+              ]
+            },
+            {
+              "text": "cot",
+              "ipa": "/kɒt/",
+              "meaning": "a young child’s bed with sides",
+              "phonemes": [
+                "k",
+                "ɒ",
+                "t"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/court",
+            "https://www.collinsdictionary.com/us/dictionary/english/cot"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "nonrhotic-gb-medial-vowel-before-t-v1"
+          }
+        },
+        {
+          "id": "en-short-shot",
+          "words": [
+            {
+              "text": "short",
+              "ipa": "/ʃɔːt/",
+              "meaning": "small in length",
+              "phonemes": [
+                "ʃ",
+                "ɔː",
+                "t"
+              ]
+            },
+            {
+              "text": "shot",
+              "ipa": "/ʃɒt/",
+              "meaning": "a photograph",
+              "phonemes": [
+                "ʃ",
+                "ɒ",
+                "t"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/short",
+            "https://www.collinsdictionary.com/us/dictionary/english/shot"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "nonrhotic-gb-medial-vowel-before-t-v1"
+          }
+        }
+      ],
+      "sources": [
+        "https://www.collinsdictionary.com/us/dictionary/english/cot",
+        "https://www.collinsdictionary.com/us/dictionary/english/court",
+        "https://www.collinsdictionary.com/us/dictionary/english/port",
+        "https://www.collinsdictionary.com/us/dictionary/english/pot",
+        "https://www.collinsdictionary.com/us/dictionary/english/short",
+        "https://www.collinsdictionary.com/us/dictionary/english/shot"
+      ],
+      "targetSoundFocus": "Listen to the vowel before the final /t/ in each word.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the vowel before the final /t/ in each word.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "ɔː",
+          "ɒ"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "profilesMustShareLocale": "en-GB",
+        "presentation": "audio-only-until-answer-or-explicit-text-assist"
+      }
+    }
+  ]
+}

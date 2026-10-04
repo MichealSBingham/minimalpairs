@@ -1,0 +1,464 @@
+{
+  "schemaVersion": "1.0.0",
+  "poolId": "minimalpairs-transfer-candidates-v1",
+  "createdAt": "2026-09-28",
+  "status": "source-checked-lexical-candidates-not-an-operational-assessment",
+  "releaseReady": false,
+  "integration": {
+    "inPracticeCurriculum": false,
+    "publicGuideOrAudioExport": false,
+    "note": "The application build rejects same-language reserved words and normalized phonemic forms in the shared training curriculum and public audio manifests. The guard does not inspect arbitrary prose, recover prior exposure, or implement an assessment. Do not import into practice, SEO examples, demos, audio generation or adaptive review."
+  },
+  "curriculumSnapshot": {
+    "path": "rescue/content/curriculum.json",
+    "sha256": "cc3d926b744379a8d9e6535c8cb06ce30cd3795cd871398f40540861eb58b752",
+    "languages": 8,
+    "contrasts": 46,
+    "pairs": 138,
+    "uniqueNormalizedTrainingTexts": 243,
+    "check": "Every candidate text checked against every language word.text in this snapshot. Also checked same-language authored IPA. A changed curriculum requires a fresh audit."
+  },
+  "claimLimit": "Not present as a training word in the checked snapshot does not prove a learner has never seen or heard it. Prior legacy use, reading guides, baseline assessments, other devices and outside experience may be unknown. Learner-specific exposure tracking is not implemented.",
+  "licensing": {
+    "dictionaryUse": "Source URLs, brief pronunciation facts and original glosses only; no dictionary recordings or entry paragraphs are imported. Dictionary access supplies no audio redistribution license.",
+    "audio": "No audio requested, generated, downloaded or licensed by this task."
+  },
+  "researchSources": [
+    "https://ebooks.au.dk/aul/catalog/download/322/218/985?inline=1",
+    "https://www.cambridge.org/core/journals/studies-in-second-language-acquisition/article/differential-effects-of-identification-and-discrimination-training-tasks-on-l2-vowel-identification-and-discrimination/279378503598720C6E0D486892981037",
+    "https://www.sciencedirect.com/science/article/pii/S0749596X22000390"
+  ],
+  "sets": [
+    {
+      "languageId": "fr",
+      "contrastId": "fr-u-y",
+      "locale": "fr-FR",
+      "dialect": "Northern reference French; no added final schwa",
+      "categoryPhonemes": [
+        "u",
+        "y"
+      ],
+      "targetSoundFocus": "Listen to the vowel in the middle of each word.",
+      "contextNote": "All candidate words are CVC. The current fr-u-y training words are CV, so this pool changes lexical items AND syllable/coda context. It cannot isolate a lexical-only transfer effect. Do not reuse the training instruction that says the vowel is at the end.",
+      "pairs": [
+        {
+          "id": "transfer-v1-fr-pouce-puce",
+          "words": [
+            {
+              "text": "pouce",
+              "normalizedText": "pouce",
+              "ipa": "/pus/",
+              "phonemes": [
+                "p",
+                "u",
+                "s"
+              ],
+              "meaning": "thumb",
+              "evidence": {
+                "sourceUrl": "https://www.portail-lexical.fr/definition/tlfi/pouce/nom",
+                "checkedAt": "2026-09-28",
+                "dictionaryIpa": "pus",
+                "verification": "pronunciation-read-in-primary-dictionary",
+                "dictionary": "ATILF lexical portal, TLFi section",
+                "lookupUrl": "https://www.portail-lexical.fr/api/word/pouce/nom",
+                "selectedTlfiEntry": 0,
+                "normalization": "Historical TLFi /ʀ/ is represented as broad /ʁ/. No other segment change.",
+                "selectedForm": "Headword reading in the selected noun or adjective entry."
+              }
+            },
+            {
+              "text": "puce",
+              "normalizedText": "puce",
+              "ipa": "/pys/",
+              "phonemes": [
+                "p",
+                "y",
+                "s"
+              ],
+              "meaning": "flea",
+              "evidence": {
+                "sourceUrl": "https://www.portail-lexical.fr/definition/tlfi/puce/nom",
+                "checkedAt": "2026-09-28",
+                "dictionaryIpa": "pys",
+                "verification": "pronunciation-read-in-primary-dictionary",
+                "dictionary": "ATILF lexical portal, TLFi section",
+                "lookupUrl": "https://www.portail-lexical.fr/api/word/puce/nom",
+                "selectedTlfiEntry": 0,
+                "normalization": "Historical TLFi /ʀ/ is represented as broad /ʁ/. No other segment change.",
+                "selectedForm": "Headword reading in the selected noun or adjective entry."
+              }
+            }
+          ],
+          "kind": "minimal",
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "monosyllabic-cvc-v1"
+          },
+          "audit": {
+            "singlePhonemeDifference": true,
+            "trainingWordOverlap": false,
+            "sameLanguageTrainingIpaOverlap": false
+          },
+          "audioStatus": "missing",
+          "exposureStatus": "unknown-for-individual-learners"
+        },
+        {
+          "id": "transfer-v1-fr-moule-mule",
+          "words": [
+            {
+              "text": "moule",
+              "normalizedText": "moule",
+              "ipa": "/mul/",
+              "phonemes": [
+                "m",
+                "u",
+                "l"
+              ],
+              "meaning": "mold; casting form",
+              "evidence": {
+                "sourceUrl": "https://www.portail-lexical.fr/definition/tlfi/moule/nom",
+                "checkedAt": "2026-09-28",
+                "dictionaryIpa": "mul",
+                "verification": "pronunciation-read-in-primary-dictionary",
+                "dictionary": "ATILF lexical portal, TLFi section",
+                "lookupUrl": "https://www.portail-lexical.fr/api/word/moule/nom",
+                "selectedTlfiEntry": 0,
+                "normalization": "Historical TLFi /ʀ/ is represented as broad /ʁ/. No other segment change.",
+                "selectedForm": "Headword reading in the selected noun or adjective entry."
+              }
+            },
+            {
+              "text": "mule",
+              "normalizedText": "mule",
+              "ipa": "/myl/",
+              "phonemes": [
+                "m",
+                "y",
+                "l"
+              ],
+              "meaning": "female mule",
+              "evidence": {
+                "sourceUrl": "https://www.portail-lexical.fr/definition/tlfi/mule/nom",
+                "checkedAt": "2026-09-28",
+                "dictionaryIpa": "myl",
+                "verification": "pronunciation-read-in-primary-dictionary",
+                "dictionary": "ATILF lexical portal, TLFi section",
+                "lookupUrl": "https://www.portail-lexical.fr/api/word/mule/nom",
+                "selectedTlfiEntry": 0,
+                "normalization": "Historical TLFi /ʀ/ is represented as broad /ʁ/. No other segment change.",
+                "selectedForm": "Headword reading in the selected noun or adjective entry."
+              }
+            }
+          ],
+          "kind": "minimal",
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "monosyllabic-cvc-v1"
+          },
+          "audit": {
+            "singlePhonemeDifference": true,
+            "trainingWordOverlap": false,
+            "sameLanguageTrainingIpaOverlap": false
+          },
+          "audioStatus": "missing",
+          "exposureStatus": "unknown-for-individual-learners"
+        },
+        {
+          "id": "transfer-v1-fr-rousse-russe",
+          "words": [
+            {
+              "text": "rousse",
+              "normalizedText": "rousse",
+              "ipa": "/ʁus/",
+              "phonemes": [
+                "ʁ",
+                "u",
+                "s"
+              ],
+              "meaning": "red-haired; feminine form",
+              "evidence": {
+                "sourceUrl": "https://www.portail-lexical.fr/definition/tlfi/roux/adjectif",
+                "checkedAt": "2026-09-28",
+                "dictionaryIpa": "ʀus",
+                "verification": "pronunciation-read-in-primary-dictionary",
+                "dictionary": "ATILF lexical portal, TLFi section",
+                "lookupUrl": "https://www.portail-lexical.fr/api/word/roux/adjectif",
+                "selectedTlfiEntry": 0,
+                "normalization": "Historical TLFi /ʀ/ is represented as broad /ʁ/. No other segment change.",
+                "selectedForm": "Explicit feminine /ʀus/ in the ROUX, ROUSSE adjective entry."
+              }
+            },
+            {
+              "text": "russe",
+              "normalizedText": "russe",
+              "ipa": "/ʁys/",
+              "phonemes": [
+                "ʁ",
+                "y",
+                "s"
+              ],
+              "meaning": "Russian",
+              "evidence": {
+                "sourceUrl": "https://www.portail-lexical.fr/definition/tlfi/russe/adjectif",
+                "checkedAt": "2026-09-28",
+                "dictionaryIpa": "ʀys",
+                "verification": "pronunciation-read-in-primary-dictionary",
+                "dictionary": "ATILF lexical portal, TLFi section",
+                "lookupUrl": "https://www.portail-lexical.fr/api/word/russe/adjectif",
+                "selectedTlfiEntry": 0,
+                "normalization": "Historical TLFi /ʀ/ is represented as broad /ʁ/. No other segment change.",
+                "selectedForm": "Headword reading in the selected noun or adjective entry."
+              }
+            }
+          ],
+          "kind": "minimal",
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "monosyllabic-cvc-v1"
+          },
+          "audit": {
+            "singlePhonemeDifference": true,
+            "trainingWordOverlap": false,
+            "sameLanguageTrainingIpaOverlap": false
+          },
+          "audioStatus": "missing",
+          "exposureStatus": "unknown-for-individual-learners"
+        }
+      ],
+      "eligibleReferencePairXCategoryCombinations": 12,
+      "speakerHoldout": {
+        "status": "missing",
+        "approvedSpeakerIds": [],
+        "approvedClipIds": [],
+        "required": "At least two licensed, pronunciation-reviewed human speakers for cross-speaker ABX; both categories and every candidate word covered by both speakers. Verify actual speaker identity against all training libraries. A new profile name or clone is not proof of a new speaker.",
+        "freshDelayedSpeakerRequirement": "Speakers heard at baseline are assessment-exposed at delayed testing. A genuinely first-exposure delayed-speaker condition requires an additional reserved speaker pool."
+      }
+    },
+    {
+      "languageId": "en",
+      "contrastId": "en-i-ih",
+      "locale": "en-US",
+      "dialect": "General American",
+      "categoryPhonemes": [
+        "ɪ",
+        "i"
+      ],
+      "targetSoundFocus": "Listen to the vowel in the middle of each word.",
+      "contextNote": "All candidate words are monosyllabic CVC forms. The /i/ notation matches the existing American curriculum; Cambridge also uses /iː/. Vowel duration naturally varies with the coda, so retain both categories in every lexical frame.",
+      "pairs": [
+        {
+          "id": "transfer-v1-en-bid-bead",
+          "words": [
+            {
+              "text": "bid",
+              "normalizedText": "bid",
+              "ipa": "/bɪd/",
+              "phonemes": [
+                "b",
+                "ɪ",
+                "d"
+              ],
+              "meaning": "offer a price",
+              "evidence": {
+                "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/bid",
+                "checkedAt": "2026-09-28",
+                "dictionaryIpa": "bɪd",
+                "verification": "pronunciation-read-in-primary-dictionary",
+                "dictionary": "Cambridge Dictionary, US pronunciation block",
+                "normalization": "Dictionary /iː/ is authored as /i/, consistently with the General American practice curriculum. No audio duration is changed."
+              }
+            },
+            {
+              "text": "bead",
+              "normalizedText": "bead",
+              "ipa": "/bid/",
+              "phonemes": [
+                "b",
+                "i",
+                "d"
+              ],
+              "meaning": "small pierced ornament",
+              "evidence": {
+                "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/bead",
+                "checkedAt": "2026-09-28",
+                "dictionaryIpa": "biːd",
+                "verification": "pronunciation-read-in-primary-dictionary",
+                "dictionary": "Cambridge Dictionary, US pronunciation block",
+                "normalization": "Dictionary /iː/ is authored as /i/, consistently with the General American practice curriculum. No audio duration is changed."
+              }
+            }
+          ],
+          "kind": "minimal",
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "monosyllabic-cvc-v1"
+          },
+          "audit": {
+            "singlePhonemeDifference": true,
+            "trainingWordOverlap": false,
+            "sameLanguageTrainingIpaOverlap": false
+          },
+          "audioStatus": "missing",
+          "exposureStatus": "unknown-for-individual-learners"
+        },
+        {
+          "id": "transfer-v1-en-bin-bean",
+          "words": [
+            {
+              "text": "bin",
+              "normalizedText": "bin",
+              "ipa": "/bɪn/",
+              "phonemes": [
+                "b",
+                "ɪ",
+                "n"
+              ],
+              "meaning": "storage container",
+              "evidence": {
+                "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/bin",
+                "checkedAt": "2026-09-28",
+                "dictionaryIpa": "bɪn",
+                "verification": "pronunciation-read-in-primary-dictionary",
+                "dictionary": "Cambridge Dictionary, US pronunciation block",
+                "normalization": "Dictionary /iː/ is authored as /i/, consistently with the General American practice curriculum. No audio duration is changed."
+              }
+            },
+            {
+              "text": "bean",
+              "normalizedText": "bean",
+              "ipa": "/bin/",
+              "phonemes": [
+                "b",
+                "i",
+                "n"
+              ],
+              "meaning": "edible seed",
+              "evidence": {
+                "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/bean",
+                "checkedAt": "2026-09-28",
+                "dictionaryIpa": "biːn",
+                "verification": "pronunciation-read-in-primary-dictionary",
+                "dictionary": "Cambridge Dictionary, US pronunciation block",
+                "normalization": "Dictionary /iː/ is authored as /i/, consistently with the General American practice curriculum. No audio duration is changed."
+              }
+            }
+          ],
+          "kind": "minimal",
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "monosyllabic-cvc-v1"
+          },
+          "audit": {
+            "singlePhonemeDifference": true,
+            "trainingWordOverlap": false,
+            "sameLanguageTrainingIpaOverlap": false
+          },
+          "audioStatus": "missing",
+          "exposureStatus": "unknown-for-individual-learners"
+        },
+        {
+          "id": "transfer-v1-en-lick-leak",
+          "words": [
+            {
+              "text": "lick",
+              "normalizedText": "lick",
+              "ipa": "/lɪk/",
+              "phonemes": [
+                "l",
+                "ɪ",
+                "k"
+              ],
+              "meaning": "touch with the tongue",
+              "evidence": {
+                "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/lick",
+                "checkedAt": "2026-09-28",
+                "dictionaryIpa": "lɪk",
+                "verification": "pronunciation-read-in-primary-dictionary",
+                "dictionary": "Cambridge Dictionary, US pronunciation block",
+                "normalization": "Dictionary /iː/ is authored as /i/, consistently with the General American practice curriculum. No audio duration is changed."
+              }
+            },
+            {
+              "text": "leak",
+              "normalizedText": "leak",
+              "ipa": "/lik/",
+              "phonemes": [
+                "l",
+                "i",
+                "k"
+              ],
+              "meaning": "escape through an opening",
+              "evidence": {
+                "sourceUrl": "https://dictionary.cambridge.org/dictionary/english/leak",
+                "checkedAt": "2026-09-28",
+                "dictionaryIpa": "liːk",
+                "verification": "pronunciation-read-in-primary-dictionary",
+                "dictionary": "Cambridge Dictionary, US pronunciation block",
+                "normalization": "Dictionary /iː/ is authored as /i/, consistently with the General American practice curriculum. No audio duration is changed."
+              }
+            }
+          ],
+          "kind": "minimal",
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "monosyllabic-cvc-v1"
+          },
+          "audit": {
+            "singlePhonemeDifference": true,
+            "trainingWordOverlap": false,
+            "sameLanguageTrainingIpaOverlap": false
+          },
+          "audioStatus": "missing",
+          "exposureStatus": "unknown-for-individual-learners"
+        }
+      ],
+      "eligibleReferencePairXCategoryCombinations": 12,
+      "speakerHoldout": {
+        "status": "missing",
+        "approvedSpeakerIds": [],
+        "approvedClipIds": [],
+        "required": "At least two licensed, pronunciation-reviewed human speakers for cross-speaker ABX; both categories and every candidate word covered by both speakers. Verify actual speaker identity against all training libraries. A new profile name or clone is not proof of a new speaker.",
+        "freshDelayedSpeakerRequirement": "Speakers heard at baseline are assessment-exposed at delayed testing. A genuinely first-exposure delayed-speaker condition requires an additional reserved speaker pool."
+      }
+    }
+  ],
+  "audit": {
+    "candidatePairs": 6,
+    "candidateWords": 12,
+    "trainingTextCollisions": 0,
+    "sameLanguageIpaCollisions": 0,
+    "singlePhonemePairChecksPassed": 6,
+    "eligibleReferencePairXCategoryCombinations": 24,
+    "assessmentAudioClips": 0
+  }
+}

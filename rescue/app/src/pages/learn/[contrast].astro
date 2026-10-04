@@ -1,0 +1,129 @@
+---
+import Base from '../../layouts/Base.astro';
+import { Header, Footer, Icon } from '../../components/ui';
+import GuideWordAudio from '../../components/GuideWordAudio';
+import { getGuideLanguages as getLanguages, getPracticeLanguages, slugFor } from '../../lib/content';
+import { guideAudioStatus } from '../../lib/guide-audio-status';
+import { absoluteUrl, abxFor, guideCopy, kindLabel, l1Label, practiceUrl, readingFor, safeJsonLd } from '../../lib/seo';
+import type { Contrast, Language } from '../../lib/types';
+import '../../styles/guide-redesign.css';
+
+export function getStaticPaths() {
+  return getLanguages().flatMap(language => language.contrasts.map(contrast => ({ params: { contrast: contrast.id }, props: { language, contrast } })));
+}
+const { language, contrast } = Astro.props as { language: Language; contrast: Contrast };
+const languages = getLanguages();
+const practiceLanguage = getPracticeLanguages().find(l => l.id === language.id);
+const hasLesson = Boolean(practiceLanguage?.contrasts.some(c => c.id === contrast.id));
+const lessonUrl = hasLesson ? practiceUrl(language,contrast) : '/practice';
+const copy = guideCopy[contrast.id];
+const abx = abxFor(contrast);
+const audioStatus = guideAudioStatus(language.id, contrast);
+const requiredWords = contrast.pairs.flatMap(pair => pair.words.map(word => word.text));
+const categories = contrast.abx?.categoryLabels || contrast.phonemes;
+const symbolic = (sound: string) => !sound.includes(' ');
+const soundLabel = (sound: string) => symbolic(sound) ? `/${sound}/` : sound;
+const pairTitle = (item: Contrast) => item.pairs[0].words.map(word => word.text).join(' · ');
+const contrastTitle = (item: Contrast) => item.phonemes.map(soundLabel).join(' vs ');
+const description = `${language.name} ${contrastTitle(contrast)}: compare ${contrast.pairs[0].words.map(word => word.text).join(' and ')} and more word pairs. Hear the examples, learn the difference, and try a listening exercise.`;
+const kind = contrast.pairs[0].kind;
+// Broad sound labels explain the notation, while contrast-specific focus, traps,
+// dialect scope and first-language notes below remain the curated source copy.
+const soundCards: Record<string, { title: string; description: string }> = {
+  'ɪ': { title: 'The vowel in this first set', description: 'A near-close, unrounded vowel. Compare its quality with the other category, not just its duration.' },
+  'i': { title: 'A close, unrounded vowel', description: 'The tongue is high and toward the front. Listen to the vowel as one complete sound.' },
+  'iː': { title: 'A close, long vowel', description: 'This German vowel differs in quality as well as length from /ɪ/.' },
+  'u': { title: 'A back, rounded vowel', description: 'The tongue is high and farther back, with rounded lips.' },
+  'y': { title: 'A front, rounded vowel', description: 'The tongue is high and farther forward, with rounded lips. It is one vowel, not a separate y sound plus a vowel.' },
+  'ʊ': { title: 'A near-close, rounded vowel', description: 'Listen to the vowel quality in these complete words. Spelling or duration alone will not identify it.' },
+  'ʏ': { title: 'A front, rounded vowel', description: 'The vowel in this German set is farther forward than /ʊ/. It does not add another syllable.' },
+  'ʌ': { title: 'The STRUT vowel', description: 'This is the stressed vowel category in the second set of General American examples.' },
+  'æ': { title: 'The TRAP vowel', description: 'This is the stressed vowel category in the first set of General American examples.' },
+  'e': { title: 'A close-mid, unrounded vowel', description: 'A front vowel without rounded lips. Compare it with the other complete vowel.' },
+  'ɛ': { title: 'An open-mid, unrounded vowel', description: 'The tongue is toward the front, with a more open vowel position than /e/.' },
+  'ø': { title: 'A close-mid, rounded vowel', description: 'A front vowel with rounded lips. This vowel is not schwa.' },
+  'œ': { title: 'An open-mid, rounded vowel', description: 'A front vowel with rounded lips. Listen to its quality immediately before the final French r.' },
+  'o': { title: 'A close-mid, rounded vowel', description: 'A rounded vowel made toward the back of the mouth.' },
+  'ɔ': { title: 'An open-mid, rounded vowel', description: 'A more open back vowel than /o/. The guide below identifies the reference variety used here.' },
+  'oː': { title: 'A long, back rounded vowel', description: 'The lips stay rounded and the tongue is farther back than for /øː/.' },
+  'øː': { title: 'A long, front rounded vowel', description: 'The lips stay rounded while the tongue is farther forward than for /oː/.' },
+  'ɑ̃': { title: 'A nasal vowel', description: 'Nasal quality belongs to the vowel itself. There is no separate final n in these isolated words.' },
+  'ɔ̃': { title: 'A rounded nasal vowel', description: 'Listen to the vowel quality and nasal resonance together, without adding a final n.' },
+  'ɛ̃': { title: 'A nasal-vowel quality', description: 'The whole vowel is nasal. Compare its quality across the different word beginnings.' },
+  's': { title: 'An unvoiced hiss', description: 'Listen for the narrow, hissing sound in the target consonant.' },
+  'z': { title: 'A voiced buzz', description: 'Compare the voiced buzzing sound with the hiss in the other category.' },
+  'ʃ': { title: 'A broader, unvoiced hiss', description: 'A continuous consonant. Compare the quality of its friction with the other sound.' },
+  'ʒ': { title: 'Continuous, voiced friction', description: 'Listen for the continuous, voiced friction through this consonant.' },
+  'dʒ': { title: 'A stop flowing into friction', description: 'A brief closure releases into voiced friction. Listen to the whole consonant.' },
+  'θ': { title: 'The unvoiced th sound', description: 'The opening noise is softer and more diffuse than the sharper hiss of /s/.' },
+  'ɹ': { title: 'The American r sound', description: 'This is the American reference sound, rather than the taps or trills called r in other languages.' },
+  'ʁ': { title: 'The French r category', description: 'The metropolitan French rhotic is written /ʁ/ here. Listen to the recorded word beginning.' },
+  'l': { title: 'The l sound', description: 'Listen to the beginning of the word and compare it with the other consonant while the ending stays the same.' },
+  'p': { title: 'An unvoiced lip closure', description: 'The lips close briefly and release. Listen to the opening consonant in the reference variety used here.' },
+  'b': { title: 'A voiced lip closure', description: 'A brief stop made with the lips. Its natural realization depends on the language and sound context.' },
+  't': { title: 'An unvoiced tongue closure', description: 'A brief stop near the front of the mouth. The target here is the first consonant.' },
+  'd': { title: 'A voiced tongue closure', description: 'Compare this opening consonant with /t/ while keeping the rest of the word out of the decision.' },
+  'k': { title: 'An unvoiced back closure', description: 'A brief stop made toward the back of the mouth.' },
+  'ɡ': { title: 'A voiced back closure', description: 'Compare this stop with /k/ across the different following vowels.' },
+  'f': { title: 'Unvoiced lip-and-teeth friction', description: 'Air passes between the lower lip and upper teeth. Listen to the first sound.' },
+  'v': { title: 'Voiced lip-and-teeth friction', description: 'A continuous, voiced consonant. Compare it with the other beginning in the pair.' },
+  'n': { title: 'The final n category', description: 'Listen to the nasal consonant at the end, rather than a change in the preceding vowel.' },
+  'ɲ': { title: 'The French gn category', description: 'Conventionally written /ɲ/. Its realization varies by speaker; the word ending is the listening target.' },
+  'ɾ': { title: 'A single tap', description: 'One brief tongue contact between vowels, as in the first set of Spanish words.' },
+  'r': { title: 'A trill', description: 'Compare the repeated contact of the trill with the single tap, between the same surrounding vowels.' },
+  'ʂ': { title: 'The Russian ш sound', description: 'A darker, retracted sound than /s/. Russian ш is conventionally hard.' },
+  'first-syllable stress': { title: 'The first syllable is prominent', description: 'Keep the sequence of sounds in mind and listen for prominence at the beginning.' },
+  'last-syllable stress': { title: 'The last syllable is prominent', description: 'The same sound sequence has prominence on the second syllable in these examples.' },
+  'single consonant': { title: 'A shorter middle consonant', description: 'Listen to the complete timing pattern, including the vowel before the consonant.' },
+  'long consonant': { title: 'A longer middle consonant', description: 'The longer consonant is not an extra syllable or simply a louder sound.' },
+  'plain consonant': { title: 'A hard consonant', description: 'Match the plain consonant quality even when the particular consonant changes.' },
+  'palatalized consonant': { title: 'A soft consonant', description: 'Softness includes a tongue movement toward the hard palate; it is not a separate y syllable.' },
+  'tone 1': { title: 'High and level', description: 'Listen for a relatively level contour within the speaker’s own pitch range.' },
+  'tone 2': { title: 'A rising contour', description: 'Listen for pitch moving upward over the syllable, rather than an absolute musical note.' },
+  'tone 3': { title: 'A low contour', description: 'In these isolated forms it may dip and rise. Its shape often changes in connected speech.' },
+  'tone 4': { title: 'A falling contour', description: 'Listen for pitch moving down over the syllable within the speaker’s own range.' },
+};
+const schema = { '@context': 'https://schema.org', '@type': 'LearningResource', name: `${contrast.label} ${language.name} listening practice`, description: contrast.description, url: absoluteUrl(`/learn/${contrast.id}`), inLanguage: 'en', learningResourceType: 'Listening practice guide', about: { '@type': 'Thing', name: `${language.name}: ${contrast.phonemes.join(' / ')}` }, isPartOf: { '@type': 'CollectionPage', name: `${language.name} minimal pairs`, url: absoluteUrl(`/${slugFor(language)}`) } };
+---
+<Base title={`${language.name} ${contrastTitle(contrast)} Minimal Pairs ${audioStatus.hasCachedAudio ? '& Audio' : 'Guide'} | MinimalPairs`} description={description.slice(0, 175)}>
+  <Header />
+  <main class="guide-page">
+    <div class="guide-layout">
+      <aside class="guide-sidebar">
+        <nav class="guide-language-chips" aria-label="Sound guide languages">{languages.map(item => <a href={`/${slugFor(item)}`} class:list={{ 'is-active': item.id === language.id }} aria-current={item.id === language.id ? 'true' : undefined}>{item.id === 'zh' ? 'Mandarin' : item.name}</a>)}</nav>
+        <nav class="guide-desktop-contrasts" aria-label={`${language.name} sound contrasts`}><h2>{language.name} contrasts</h2><div class="guide-contrast-links">{language.contrasts.map(item => <a href={`/learn/${item.id}`} class:list={{ 'is-current': item.id === contrast.id }} aria-current={item.id === contrast.id ? 'page' : undefined}><span>{contrastTitle(item)}</span><small lang={language.locale}>{pairTitle(item)}</small></a>)}</div></nav>
+        <details class="guide-mobile-contrasts"><summary>{language.name} contrasts <Icon name="chevronDown" size={16} /></summary><nav aria-label={`${language.name} sound contrasts`}>{language.contrasts.map(item => <a href={`/learn/${item.id}`} aria-current={item.id === contrast.id ? 'page' : undefined}>{contrastTitle(item)}<small lang={language.locale}>{pairTitle(item)}</small></a>)}</nav></details>
+      </aside>
+      <article class="guide-content">
+        <nav class="guide-breadcrumb" aria-label="Breadcrumb"><a href="/#languages">Languages</a><span aria-hidden="true">/</span><a href={`/${slugFor(language)}`}>{language.name}</a><span aria-hidden="true">/</span><span>{contrastTitle(contrast)}</span></nav>
+        <header class="guide-hero">
+          <p class="guide-eyebrow">{kindLabel(kind)} · {language.dialect}</p>
+          <h1>{language.name} <span class:list={{ 'guide-symbol': symbolic(categories[0]), 'guide-category-text': !symbolic(categories[0]) }}>{soundLabel(categories[0])}</span><span class="guide-versus"> vs </span><span class:list={{ 'guide-symbol': symbolic(categories[1]), 'guide-category-text': !symbolic(categories[1]), 'is-second': true }}>{soundLabel(categories[1])}</span><em>{contrast.label}</em></h1>
+          <div class="guide-intro"><p>{contrast.description}</p><a class="guide-button" href={lessonUrl}>{hasLesson ? 'Practice these sounds' : 'Explore listening lessons'}<Icon name="arrow" size={20} /></a></div>
+          
+        </header>
+
+        <section class="guide-sound-cards" aria-label="The two sound categories">{categories.map((category, side) => <div class:list={{ 'guide-sound-card': true, 'is-second': side === 1 }}><span class:list={{ 'guide-card-symbol': symbolic(category), 'guide-card-category': !symbolic(category) }}>{soundLabel(category)}</span><h2>{soundCards[category]?.title || `The ${category} category`}</h2><p>{soundCards[category]?.description || abx.targetSoundFocus || contrast.description}</p><div class="guide-card-example"><span>As in</span><strong lang={language.locale}>{contrast.pairs[0].words[side].text}</strong>{readingFor(contrast.pairs[0].words[side]) && <small>{readingFor(contrast.pairs[0].words[side])}</small>}</div></div>)}</section>
+
+        <section class="guide-explainer" aria-labelledby="guide-listen-for"><div><p class="guide-eyebrow">WHAT TO LISTEN FOR</p><h2 id="guide-listen-for">A small change.<br /> <em>A different word.</em></h2></div><div><p>{copy?.focus || contrast.description}</p>{abx.targetSoundFocus && <p class="guide-focus-line">{abx.targetSoundFocus}</p>}</div></section>
+        {copy?.trap && <section class="guide-trap" aria-labelledby="guide-trap-title"><h2 id="guide-trap-title">A common trap</h2><p>{copy.trap}</p></section>}
+
+        <section class="guide-examples" aria-labelledby="guide-pairs-title"><div class="guide-section-heading"><h2 id="guide-pairs-title">{kind === 'tone' ? 'Same syllable, different tone.' : kind === 'stress' ? 'Same sounds, different stress.' : 'Minimal pairs'}</h2><span>{audioStatus.hasCachedAudio ? 'Tap to hear each word' : 'Cached recordings are being prepared'}</span></div>
+          <div class="guide-pair-columns" aria-hidden="true"><span>{soundLabel(categories[0])}</span><span>{soundLabel(categories[1])}</span></div>
+          <div class="guide-pair-list">{contrast.pairs.map(pair => <div class="guide-pair-row"><div class="guide-pair-words">{pair.words.map((word, side) => <div class:list={{ 'guide-word': true, 'is-second': side === 1 }}><GuideWordAudio client:load languageId={language.id} word={word.text} ipa={word.ipa} requiredWords={requiredWords} pairWords={pair.words} hasCachedAudio={audioStatus.hasCachedAudio} side={side} /><div class="guide-word-name"><strong lang={language.locale}>{word.text}</strong>{readingFor(word) && <span class="guide-reading">{readingFor(word)}</span>}</div><span class="guide-ipa">{word.ipa}</span><span class="guide-meaning">{word.meaning}</span></div>)}</div>{pair.note && <p class="guide-pair-note">{pair.note}</p>}</div>)}</div>
+          <p class="guide-example-note">{contrast.pairs.length} word examples. Words and IPA appear in this guide. During listening practice, they stay hidden until you choose text hints or reveal the words after answering.</p>
+          {!audioStatus.hasCachedAudio && <p class="guide-device-note">This guide is free to read. Recordings for these examples are not available yet.</p>}
+        </section>
+
+        <section class="guide-practice-banner"><div><h2>Now, let your <em>ears decide.</em></h2><p>Can you hear the difference? Listen to two examples, then decide which sound you hear in a new word. Get feedback after every answer.</p></div><a class="guide-button is-light" href={lessonUrl}>{hasLesson ? 'Practice these sounds' : 'Explore listening lessons'}<Icon name="arrow" size={20} /></a></section>
+
+        {contrast.l1Notes && contrast.l1Notes.length > 0 && <section class="guide-starting-points" aria-labelledby="guide-l1-title"><h2 id="guide-l1-title">A note for your starting point.</h2>{contrast.l1Notes.map(note => <div><h3>If you speak {l1Label(note.nativeLanguage)}</h3><p>{note.note}</p></div>)}<p class="guide-small">Your first language is a useful starting point, not a prediction of what you will find easy or difficult.</p></section>}
+
+        <section class="guide-next-step"><h2>Keep the sound. Change the word.</h2><p>{copy?.next || contrast.description}</p><a class="guide-text-link" href={`/${slugFor(language)}`}>Explore all {language.name} contrasts <Icon name="arrow" size={17} /></a></section>
+
+      </article>
+    </div>
+  </main>
+  <Footer />
+  <script type="application/ld+json" set:html={safeJsonLd(schema)} />
+</Base>

@@ -1,0 +1,389 @@
+{
+  "date": "2026-09-28",
+  "sourcePolicy": "Bounded editorial verification of 17 lexemes. Only source identifiers and pronunciation facts retained; glosses authored independently. No dictionary audio copied.",
+  "words": [
+    {
+      "text": "beau",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/beau/adjectif",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/beau/adjectif",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "BEAU, BEL, BELLE,",
+      "retrievedIpa": [
+        "bo",
+        "bεl"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "bo",
+        "bɛl"
+      ],
+      "editorialIpa": "/bo/",
+      "originalMeaning": "beautiful; masculine singular",
+      "normalization": "Historical TLFi ʀ → broad ʁ and ε → ɛ only. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "bout",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/bout/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/bout/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "BOUT",
+      "retrievedIpa": [
+        "bu"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "bu"
+      ],
+      "editorialIpa": "/bu/",
+      "originalMeaning": "end; tip",
+      "normalization": "Historical TLFi ʀ → broad ʁ and ε → ɛ only. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "veau",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/veau/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/veau/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "VEAU",
+      "retrievedIpa": [
+        "vo"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "vo"
+      ],
+      "editorialIpa": "/vo/",
+      "originalMeaning": "calf",
+      "normalization": "Historical TLFi ʀ → broad ʁ and ε → ɛ only. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "vous",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/vous/pronom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/vous/pronom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "VOUS",
+      "retrievedIpa": [
+        "vu",
+        "vuz-",
+        "vuzεtjœn",
+        "vuzabitepʀε"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "vu",
+        "vuz-",
+        "vuzɛtjœn",
+        "vuzabitepʁɛ"
+      ],
+      "editorialIpa": "/vu/",
+      "originalMeaning": "you, formal or plural",
+      "normalization": "Historical TLFi ʀ → broad ʁ and ε → ɛ only. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "saut",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/saut/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/saut/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "SAUT",
+      "retrievedIpa": [
+        "so"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "so"
+      ],
+      "editorialIpa": "/so/",
+      "originalMeaning": "jump",
+      "normalization": "Historical TLFi ʀ → broad ʁ and ε → ɛ only. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "sou",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/sou/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/sou/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "SOU",
+      "retrievedIpa": [
+        "su"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "su"
+      ],
+      "editorialIpa": "/su/",
+      "originalMeaning": "a small coin; a little money",
+      "normalization": "Historical TLFi ʀ → broad ʁ and ε → ɛ only. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "chat",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/chat/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/chat/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 2,
+      "entryLabel": "CHAT1, CHATTE,",
+      "retrievedIpa": [
+        "ʃa",
+        "ʃat"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "ʃa",
+        "ʃat"
+      ],
+      "editorialIpa": "/ʃa/",
+      "originalMeaning": "cat; masculine form",
+      "normalization": "Historical TLFi ʀ → broad ʁ and ε → ɛ only. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "chant",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/chant/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/chant/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 2,
+      "entryLabel": "CHANT1",
+      "retrievedIpa": [
+        "ʃɑ̃"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "ʃɑ̃"
+      ],
+      "editorialIpa": "/ʃɑ̃/",
+      "originalMeaning": "singing; song",
+      "normalization": "Historical TLFi ʀ → broad ʁ and ε → ɛ only. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "rat",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/rat/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/rat/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "RAT",
+      "retrievedIpa": [
+        "ʀa",
+        "ʀɑ",
+        "ɑ"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "ʁa",
+        "ʁɑ",
+        "ɑ"
+      ],
+      "editorialIpa": "/ʁa/",
+      "originalMeaning": "rat",
+      "normalization": "Historical TLFi ʀ → broad ʁ and ε → ɛ only. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "rang",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/rang/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/rang/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "RANG",
+      "retrievedIpa": [
+        "ʀɑ̃"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "ʁɑ̃"
+      ],
+      "editorialIpa": "/ʁɑ̃/",
+      "originalMeaning": "row; rank",
+      "normalization": "Historical TLFi ʀ → broad ʁ and ε → ɛ only. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "plat",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/plat/adjectif",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/plat/adjectif",
+      "selectedTlfiEntry": 0,
+      "entryCount": 2,
+      "entryLabel": "PLAT1, PLATE,",
+      "retrievedIpa": [
+        "pla",
+        "plat"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "pla",
+        "plat"
+      ],
+      "editorialIpa": "/pla/",
+      "originalMeaning": "flat; masculine singular",
+      "normalization": "Historical TLFi ʀ → broad ʁ and ε → ɛ only. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "plan",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/plan/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/plan/nom",
+      "selectedTlfiEntry": 1,
+      "entryCount": 2,
+      "entryLabel": "PLAN3",
+      "retrievedIpa": [
+        "plɑ̃"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "plɑ̃"
+      ],
+      "editorialIpa": "/plɑ̃/",
+      "originalMeaning": "plan; drawing of a layout",
+      "normalization": "Historical TLFi ʀ → broad ʁ and ε → ɛ only. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "bon",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/bon/adjectif",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/bon/adjectif",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "BON1, BONNE,",
+      "retrievedIpa": [
+        "bɔ̃",
+        "bɔn",
+        "bɔnelε:v",
+        "bɔnami",
+        "bɔnɔm",
+        "bɔnɔmi"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "bɔ̃",
+        "bɔn",
+        "bɔnelɛ:v",
+        "bɔnami",
+        "bɔnɔm",
+        "bɔnɔmi"
+      ],
+      "editorialIpa": "/bɔ̃/",
+      "originalMeaning": "good; masculine singular",
+      "normalization": "Historical TLFi ʀ → broad ʁ and ε → ɛ only. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "peau",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/peau/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/peau/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "PEAU",
+      "retrievedIpa": [
+        "po"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "po"
+      ],
+      "editorialIpa": "/po/",
+      "originalMeaning": "skin",
+      "normalization": "Historical TLFi ʀ → broad ʁ and ε → ɛ only. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "pont",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/pont/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/pont/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "PONT",
+      "retrievedIpa": [
+        "pɔ̃"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "pɔ̃"
+      ],
+      "editorialIpa": "/pɔ̃/",
+      "originalMeaning": "bridge",
+      "normalization": "Historical TLFi ʀ → broad ʁ and ε → ɛ only. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "taux",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/taux/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/taux/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "TAUX",
+      "retrievedIpa": [
+        "to"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "to"
+      ],
+      "editorialIpa": "/to/",
+      "originalMeaning": "rate",
+      "normalization": "Historical TLFi ʀ → broad ʁ and ε → ɛ only. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "ton",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/ton/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/ton/nom",
+      "selectedTlfiEntry": 1,
+      "entryCount": 3,
+      "entryLabel": "TON3",
+      "retrievedIpa": [
+        "tɔ̃"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "tɔ̃"
+      ],
+      "editorialIpa": "/tɔ̃/",
+      "originalMeaning": "tone; pitch of a voice",
+      "normalization": "Historical TLFi ʀ → broad ʁ and ε → ɛ only. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    }
+  ]
+}

@@ -1,0 +1,109 @@
+{
+  "version": "1.1.0",
+  "status": "implementation-recommendation-not-yet-validated",
+  "sessionLength": 12,
+  "sessionLengthRationale": "A short product default, not a scientifically established optimum.",
+  "onboarding": [
+    "Ask target language and preferred variety.",
+    "Offer optional native language for explanations; do not infer ability from nationality.",
+    "Check playback and demonstrate A, B and X using audio only. Explain which sound, feature, tone or stress pattern to compare.",
+    "Explain that X is a different word and that the answer concerns its target category, not the whole word."
+  ],
+  "adaptation": {
+    "basis": "Per-contrast first-attempt ABX performance, tracked separately by word/voice familiarity, audio-only versus text-assisted trials, phoneme versus feature task, and voice condition.",
+    "initialMix": {
+      "weakOrDue": 0.5,
+      "new": 0.3,
+      "previouslySuccessful": 0.2
+    },
+    "minimumInterveningTrialsBeforeSamePair": 3,
+    "errorAction": "Give contrastive feedback, then revisit after intervening trials with a different reviewed token when available.",
+    "reviewIntervalsDays": [
+      1,
+      3,
+      7,
+      14
+    ],
+    "intervalStatus": "Heuristic starting schedule; adjust against delayed performance.",
+    "doNotAlterPitchOrTimeStretchForScoredTrials": true
+  },
+  "measurement": {
+    "separateModes": [
+      "audio-only vs text-assisted",
+      "within-voice vs across-voice",
+      "trained words vs genuinely held-out words",
+      "trained voices vs genuinely held-out voices"
+    ],
+    "holdOutBeforeTraining": true,
+    "reportCountsWithPercentages": true,
+    "shortSessionLabel": "Session accuracy",
+    "avoidClaims": [
+      "fluent",
+      "native-level",
+      "accent fixed",
+      "contrast mastered after one session"
+    ],
+    "provisionalProgressRule": "Only consider a contrast reliable after repeated first-attempt success across days, multiple word pairs, and an available held-out check. Display the evidence count and test type.",
+    "insufficientInventory": "With only two pairs per contrast or trial group, cross-word practice is possible but there is no untouched-word transfer test after both pairs have been heard. Do not call a different word in the current trial a held-out word."
+  },
+  "gamification": {
+    "use": [
+      "visible short-session goal",
+      "personal progress",
+      "optional daily reminder",
+      "specific feedback",
+      "user-selected practice targets",
+      "celebrate completed effort"
+    ],
+    "avoid": [
+      "punishing missed days",
+      "fake scarcity",
+      "unverified improvement percentages",
+      "paying to undo fabricated failure",
+      "public rankings presented as language ability"
+    ]
+  },
+  "audioReleaseGate": [
+    "License permits commercial use, redistribution and caching for this asset.",
+    "Recording says the intended word with the declared dialect and contrast.",
+    "No incorrect stress, tone, dropped segment or generated extra word.",
+    "No filename, speaker selection, silence pattern or loudness cue reveals the answer.",
+    "Source type is accurately labeled; synthetic voices are not called human recordings.",
+    "Audio playback is checked on actual target browsers and mobile devices.",
+    "Every ABX category has correctly pronounced clips for the selected voices; A/B/X never expose the target text through pre-answer UI or accessibility labels."
+  ],
+  "defaultMode": "cross-word-audio-only-ABX",
+  "abx": {
+    "instruction": "Listen to A, B, then X. Which reference shares X’s target sound?",
+    "specialInstructions": "Use target feature, tone or stress pattern instead of target sound when contrast.abx.matchType requires it.",
+    "answerChoices": [
+      "A",
+      "B"
+    ],
+    "chanceBaseline": 0.5,
+    "referencePair": "Use the two words in one curated pair. Randomly assign category 0/1 to display roles A/B.",
+    "targetX": "Choose a different pair in the same contrast and the same abx.trialGroup. Pick the word with the desired category index; reject either reference word text.",
+    "correctAnswer": "The A/B display role whose category index equals X’s category index. Never infer from word spelling, array display position or voice.",
+    "balanceCategoryAndAnswerRole": true,
+    "eligibility": "Each reference pair needs at least one other pair with eligible words in its trial group. If none exists, show content unavailable; never silently substitute identical-clip matching.",
+    "referenceVoices": "Prefer one reviewed voice for both A and B, with X from a different reviewed voice. Both voices must cover both categories.",
+    "singleVoiceFallback": "A different word for X still prevents exact-waveform matching. Label this within-voice practice, vary independently recorded tokens when available, and keep its results separate.",
+    "threeVoiceOption": "With sufficient reviewed voices, A/B/X may use distinct voices; randomize assignments independently of answer and track the condition.",
+    "audioSequence": "Play full reviewed words in A-B-X order with consistent spacing; allow individual replays. A 500 ms gap is a testable starting choice, not a universally optimal interval.",
+    "textVisibility": "Hide words, IPA, pinyin, meanings, category labels that expose spelling, word-bearing filenames and accessibility labels until the first answer or explicit text-assist opt-in.",
+    "audioOnlyLabels": "Playback and response controls say A, B or X. A neutral target-location instruction may be visible. Text guides remain separate reading material.",
+    "textAssistMeasurement": "If a learner enables text before answering, mark the trial text-assisted and exclude it from audio-only accuracy.",
+    "feedback": "After the first answer, identify the matching A/B category, allow A/B/X replay and optionally reveal words, IPA and meanings. Explain the target category without treating X as the same whole word.",
+    "allowReplay": true,
+    "recordReplayCount": true,
+    "countFirstAttemptOnlyInAccuracy": true,
+    "doNotCountAudioFailureAsIncorrect": true,
+    "exactWaveformReuseForX": false,
+    "researchLimit": "ABX is the chosen product task. Categorical discrimination has research support, but neither ABX superiority nor this specific cross-word app algorithm has been established."
+  },
+  "researchSources": [
+    "https://openbooks.kb.dk/au/catalog/download/322/218/985?inline=1",
+    "https://doi.org/10.1017/S0272263124000408",
+    "https://www.mdpi.com/2227-7102/13/10/1042"
+  ]
+}

@@ -1,0 +1,402 @@
+{
+  "date": "2026-09-28",
+  "status": "request-only-no-audio-generated-or-manifest-changed",
+  "languageId": "fr",
+  "locale": "fr-FR",
+  "voiceIds": [
+    "qwen-fr-a",
+    "qwen-fr-b"
+  ],
+  "uniqueWords": 18,
+  "newTrainingWords": [
+    "bol",
+    "cor",
+    "cour",
+    "sort",
+    "sourd",
+    "bure",
+    "beurre",
+    "sur",
+    "lé",
+    "nid",
+    "nez",
+    "prix"
+  ],
+  "missingCachedClips": 24,
+  "existingCachedClips": 12,
+  "requirement": "At least two complete, dialect-consistent profiles require listening review. Existing synthetic profile IDs do not certify stable human speakers. Newly recorded human voices need all 18 words per profile, not only words uncached in the existing synthetic profiles.",
+  "words": [
+    {
+      "languageId": "fr",
+      "text": "bol",
+      "ipa": "/bɔl/",
+      "locale": "fr-FR",
+      "meaning": "bowl",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-o-open-u"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check the declared isolated-word vowel category and consonant frame, naturalness and voice consistency; do not add a final schwa. Natural pre-r vowel length is allowed."
+    },
+    {
+      "languageId": "fr",
+      "text": "boule",
+      "ipa": "/bul/",
+      "locale": "fr-FR",
+      "meaning": "ball; spherical object",
+      "alreadyInTraining": true,
+      "contrastIds": [
+        "fr-o-open-u"
+      ],
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/838104c540550bbde48ffb9348d052ba1edf1c8d118259418a5f23fea0307b5d.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/c63a64ba5235b578244fa1fc2129abad4747e6b9ca2df197e3ba0e5d26a7d720.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check the declared isolated-word vowel category and consonant frame, naturalness and voice consistency; do not add a final schwa. Natural pre-r vowel length is allowed."
+    },
+    {
+      "languageId": "fr",
+      "text": "cor",
+      "ipa": "/kɔʁ/",
+      "locale": "fr-FR",
+      "meaning": "horn; wind instrument",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-o-open-u"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check the declared isolated-word vowel category and consonant frame, naturalness and voice consistency; do not add a final schwa. Natural pre-r vowel length is allowed."
+    },
+    {
+      "languageId": "fr",
+      "text": "cour",
+      "ipa": "/kuʁ/",
+      "locale": "fr-FR",
+      "meaning": "courtyard",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-o-open-u"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check the declared isolated-word vowel category and consonant frame, naturalness and voice consistency; do not add a final schwa. Natural pre-r vowel length is allowed."
+    },
+    {
+      "languageId": "fr",
+      "text": "sort",
+      "ipa": "/sɔʁ/",
+      "locale": "fr-FR",
+      "meaning": "fate; destiny",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-o-open-u"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check the declared isolated-word vowel category and consonant frame, naturalness and voice consistency; do not add a final schwa. Natural pre-r vowel length is allowed."
+    },
+    {
+      "languageId": "fr",
+      "text": "sourd",
+      "ipa": "/suʁ/",
+      "locale": "fr-FR",
+      "meaning": "deaf; masculine singular",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-o-open-u"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check the declared isolated-word vowel category and consonant frame, naturalness and voice consistency; do not add a final schwa. Natural pre-r vowel length is allowed."
+    },
+    {
+      "languageId": "fr",
+      "text": "pur",
+      "ipa": "/pyʁ/",
+      "locale": "fr-FR",
+      "meaning": "pure",
+      "alreadyInTraining": true,
+      "contrastIds": [
+        "fr-y-eu-open"
+      ],
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/fea0331a1cbe19497ba68c0ed7c652eb9da23636fb1ae0cd5bc5c1225b6f4920.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/7810c51c53e74bd48799c5f23e0ec5c35914816919c4cc5f8272ed000cd4fd33.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check the declared isolated-word vowel category and consonant frame, naturalness and voice consistency; do not add a final schwa. Natural pre-r vowel length is allowed."
+    },
+    {
+      "languageId": "fr",
+      "text": "peur",
+      "ipa": "/pœʁ/",
+      "locale": "fr-FR",
+      "meaning": "fear",
+      "alreadyInTraining": true,
+      "contrastIds": [
+        "fr-y-eu-open"
+      ],
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/0c30c96b726b45d6ddbc575dbec0cbfb66a8882cc8cd9ac9480f34f8c491b74a.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/1de8435e257b1b626e658c6a17f00f109044037881ff381e434e11c8a88f954b.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check the declared isolated-word vowel category and consonant frame, naturalness and voice consistency; do not add a final schwa. Natural pre-r vowel length is allowed."
+    },
+    {
+      "languageId": "fr",
+      "text": "bure",
+      "ipa": "/byʁ/",
+      "locale": "fr-FR",
+      "meaning": "coarse woollen cloth",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-y-eu-open"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check the declared isolated-word vowel category and consonant frame, naturalness and voice consistency; do not add a final schwa. Natural pre-r vowel length is allowed."
+    },
+    {
+      "languageId": "fr",
+      "text": "beurre",
+      "ipa": "/bœʁ/",
+      "locale": "fr-FR",
+      "meaning": "butter",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-y-eu-open"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check the declared isolated-word vowel category and consonant frame, naturalness and voice consistency; do not add a final schwa. Natural pre-r vowel length is allowed."
+    },
+    {
+      "languageId": "fr",
+      "text": "sur",
+      "ipa": "/syʁ/",
+      "locale": "fr-FR",
+      "meaning": "on; upon",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-y-eu-open"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check the declared isolated-word vowel category and consonant frame, naturalness and voice consistency; do not add a final schwa. Natural pre-r vowel length is allowed."
+    },
+    {
+      "languageId": "fr",
+      "text": "sœur",
+      "ipa": "/sœʁ/",
+      "locale": "fr-FR",
+      "meaning": "sister",
+      "alreadyInTraining": true,
+      "contrastIds": [
+        "fr-y-eu-open"
+      ],
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/b2677a029374d1762aabd49e669e8af0a8df585494c368888bc86b4d4168c3f6.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/40d5ebe475c01aec93b6665bacd14a33eff98aff3afa40878f8dbb2e6419379c.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check the declared isolated-word vowel category and consonant frame, naturalness and voice consistency; do not add a final schwa. Natural pre-r vowel length is allowed."
+    },
+    {
+      "languageId": "fr",
+      "text": "lit",
+      "ipa": "/li/",
+      "locale": "fr-FR",
+      "meaning": "bed",
+      "alreadyInTraining": true,
+      "contrastIds": [
+        "fr-i-e"
+      ],
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/496374491e91d2be25d73c5b918ac09a3a86a361edde40377ac69a54a85c6ab8.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/dcb1148a5fe01a50879f66a9dc0005d51778f7fe3f383a7b247e9da83bee24a8.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check the declared isolated-word vowel category and consonant frame, naturalness and voice consistency; do not add a final schwa. Natural pre-r vowel length is allowed."
+    },
+    {
+      "languageId": "fr",
+      "text": "lé",
+      "ipa": "/le/",
+      "locale": "fr-FR",
+      "meaning": "a full-width strip of fabric or wallpaper",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-i-e"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check the declared isolated-word vowel category and consonant frame, naturalness and voice consistency; do not add a final schwa. Natural pre-r vowel length is allowed. Retain the accent: lé /le/, not le /lə/."
+    },
+    {
+      "languageId": "fr",
+      "text": "nid",
+      "ipa": "/ni/",
+      "locale": "fr-FR",
+      "meaning": "nest",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-i-e"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check the declared isolated-word vowel category and consonant frame, naturalness and voice consistency; do not add a final schwa. Natural pre-r vowel length is allowed."
+    },
+    {
+      "languageId": "fr",
+      "text": "nez",
+      "ipa": "/ne/",
+      "locale": "fr-FR",
+      "meaning": "nose",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-i-e"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check the declared isolated-word vowel category and consonant frame, naturalness and voice consistency; do not add a final schwa. Natural pre-r vowel length is allowed."
+    },
+    {
+      "languageId": "fr",
+      "text": "prix",
+      "ipa": "/pʁi/",
+      "locale": "fr-FR",
+      "meaning": "price; prize",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-i-e"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check the declared isolated-word vowel category and consonant frame, naturalness and voice consistency; do not add a final schwa. Natural pre-r vowel length is allowed."
+    },
+    {
+      "languageId": "fr",
+      "text": "pré",
+      "ipa": "/pʁe/",
+      "locale": "fr-FR",
+      "meaning": "meadow",
+      "alreadyInTraining": true,
+      "contrastIds": [
+        "fr-i-e"
+      ],
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/7ff060c51d9f82d4a690b84d63dcebff97e35b0fdccd3e084d5c3286e0833ace.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/83fbc6a9eb99c2485d5f75ca241cfba62a33051f770a27c3dec0f27662a9b8b8.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check the declared isolated-word vowel category and consonant frame, naturalness and voice consistency; do not add a final schwa. Natural pre-r vowel length is allowed."
+    }
+  ]
+}

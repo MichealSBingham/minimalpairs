@@ -1,0 +1,13 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import Base from '../layouts/Base.astro';
+import VoiceAudition from '../components/VoiceAudition';
+import type { VoiceAudition as Audition } from '../lib/voice-audition';
+const file = path.resolve('public/audio/voice-audition-v2/manifest.json');
+if (!fs.existsSync(file)) throw new Error('Generate and prepare the audition manifest before publishing this page.');
+const audition = JSON.parse(fs.readFileSync(file,'utf8')) as Audition;
+---
+<Base title="Voice audition — MinimalPairs" description="Listen, compare and review the new voice candidates before they enter practice." noindex analytics={false}>
+  <VoiceAudition audition={audition} client:load />
+</Base>

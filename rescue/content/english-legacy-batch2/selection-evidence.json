@@ -1,0 +1,108 @@
+{
+  "date": "2026-09-28",
+  "sourceFiles": {
+    "rescue/content/legacy-coverage.json": "503071bc886ac5f7de477526a78750e60476b8e7ce0045d237008a60625ef818",
+    "rescue/content/curriculum.json": "9e75f976f8b72d0df1f6b5da4c6afda06074d4f13ae91a533c0a77ebe7fe1db6",
+    "research/revenue-operation-2026-09-27.md": "9b2386ee764397bbae733e53ce646f1151c57995a43745cf20d42466a4f1a339",
+    "rescue/discovery/legacy-bundle.js": "cfa66c8b8fa6a63bdc5e192bd540a0d69210ad5403edf3a1fb8d7b4143e6f78e"
+  },
+  "englishInventoryAtSelection": {
+    "legacyContrasts": 24,
+    "starterContrastsPresent": 6,
+    "missing": 18
+  },
+  "existingEnglishContrastIds": [
+    "en-i-ih",
+    "en-r-l",
+    "en-th-s",
+    "en-zh-j",
+    "en-foot-strut",
+    "en-ae-strut"
+  ],
+  "selectedLegacyRoutes": [
+    {
+      "legacyUrl": "https://minimalpairs.co/english/short-u-vs-long-oo",
+      "legacyPath": "/english/short-u-vs-long-oo",
+      "language": "en",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice.",
+      "caution": "Legacy spelling labels do not fix a unique IPA target. Inspect the old inventory and dialect before authoring or mapping."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/voiceless-th-vs-f",
+      "legacyPath": "/english/voiceless-th-vs-f",
+      "language": "en",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/v-vs-w",
+      "legacyPath": "/english/v-vs-w",
+      "language": "en",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice."
+    },
+    {
+      "legacyUrl": "https://minimalpairs.co/english/ae-vs-e",
+      "legacyPath": "/english/ae-vs-e",
+      "language": "en",
+      "status": "missing-contrast",
+      "contrastId": null,
+      "proposedGuidePath": null,
+      "action": "Restore and audit the actual contrast; do not silently redirect this lesson to unrelated practice."
+    }
+  ],
+  "mappings": [
+    {
+      "contrastId": "en-foot-goose",
+      "legacyPath": "/english/short-u-vs-long-oo",
+      "legacyDeclaredLabel": "short u vs long oo (/ʊ/ vs /uː/)",
+      "bundleComponent": "oN",
+      "broadCategoryNormalization": "Legacy /uː/ maps to American /u/; other selected category symbols are unchanged."
+    },
+    {
+      "contrastId": "en-trap-dress",
+      "legacyPath": "/english/ae-vs-e",
+      "legacyDeclaredLabel": "ae vs e (/æ/ vs /ɛ/)",
+      "bundleComponent": "QN",
+      "broadCategoryNormalization": "No category substitution."
+    },
+    {
+      "contrastId": "en-v-w",
+      "legacyPath": "/english/v-vs-w",
+      "legacyDeclaredLabel": "v vs w (/v/ vs /w/)",
+      "bundleComponent": "MN",
+      "broadCategoryNormalization": "No category substitution."
+    },
+    {
+      "contrastId": "en-th-f",
+      "legacyPath": "/english/voiceless-th-vs-f",
+      "legacyDeclaredLabel": "voiceless th vs f (/θ/ vs /f/)",
+      "bundleComponent": "bN",
+      "broadCategoryNormalization": "No category substitution."
+    }
+  ],
+  "demandEvidence": {
+    "source": "research/revenue-operation-2026-09-27.md",
+    "observationWindow": "2026-06-26 through 2026-09-25",
+    "englishHub": {
+      "clicks": 49,
+      "impressions": 4711,
+      "latest28DayClicks": 14
+    },
+    "individuallyMeasuredEnglishTopicsAlreadyRestored": [
+      "en-zh-j",
+      "en-foot-strut",
+      "en-ae-strut"
+    ],
+    "selectedTopicMetrics": null,
+    "priorityBasis": "Editorial restoration priority among missing legacy routes: familiar lexical examples, complementary vowel/consonant coverage and existing English hub visibility. Saved evidence does not rank these four routes by individual demand.",
+    "noForecastClaim": true
+  }
+}

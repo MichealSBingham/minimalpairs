@@ -1,0 +1,162 @@
+[
+  {
+    "id": "en-zh-j",
+    "legacy": "/english/zh-vs-j",
+    "label": "Lesion or legion?",
+    "phonemes": [
+      "ʒ",
+      "dʒ"
+    ],
+    "pairs": [
+      [
+        [
+          "lesion",
+          "ˈliʒən",
+          "an area of damaged tissue",
+          "l i ʒ ə n"
+        ],
+        [
+          "legion",
+          "ˈlidʒən",
+          "a large group; a military unit",
+          "l i dʒ ə n"
+        ]
+      ],
+      [
+        [
+          "pleasure",
+          "ˈplɛʒɚ",
+          "enjoyment",
+          "p l ɛ ʒ ɚ"
+        ],
+        [
+          "pledger",
+          "ˈplɛdʒɚ",
+          "someone who gives a pledge",
+          "p l ɛ dʒ ɚ"
+        ]
+      ],
+      [
+        [
+          "version",
+          "ˈvɝʒən",
+          "a particular form or account of something",
+          "v ɝ ʒ ə n"
+        ],
+        [
+          "virgin",
+          "ˈvɝdʒən",
+          "unused; untouched",
+          "v ɝ dʒ ə n"
+        ]
+      ]
+    ],
+    "inventoryLimitation": "Three selected American minimal pairs. Version/virgin uses the final-schwa readings documented in Webster’s New World; other American dictionary entries give /ɪ/ in virgin. The pair is not minimal in every US pronunciation, and audio must match the stated shared-vowel reading."
+  },
+  {
+    "id": "en-foot-strut",
+    "legacy": "/english/uu-vs-uh",
+    "label": "Put or putt?",
+    "phonemes": [
+      "ʊ",
+      "ʌ"
+    ],
+    "pairs": [
+      [
+        [
+          "put",
+          "pʊt",
+          "place something",
+          "p ʊ t"
+        ],
+        [
+          "putt",
+          "pʌt",
+          "a short golf stroke",
+          "p ʌ t"
+        ]
+      ],
+      [
+        [
+          "look",
+          "lʊk",
+          "direct your eyes toward something",
+          "l ʊ k"
+        ],
+        [
+          "luck",
+          "lʌk",
+          "chance; good fortune",
+          "l ʌ k"
+        ]
+      ],
+      [
+        [
+          "book",
+          "bʊk",
+          "a written work with pages",
+          "b ʊ k"
+        ],
+        [
+          "buck",
+          "bʌk",
+          "a male deer; a dollar",
+          "b ʌ k"
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "en-ae-strut",
+    "legacy": "/english/ae-vs-uh",
+    "label": "Cap or cup?",
+    "phonemes": [
+      "æ",
+      "ʌ"
+    ],
+    "pairs": [
+      [
+        [
+          "cat",
+          "kæt",
+          "a small feline animal",
+          "k æ t"
+        ],
+        [
+          "cut",
+          "kʌt",
+          "divide with a sharp tool",
+          "k ʌ t"
+        ]
+      ],
+      [
+        [
+          "cap",
+          "kæp",
+          "a hat; a cover",
+          "k æ p"
+        ],
+        [
+          "cup",
+          "kʌp",
+          "a small drinking vessel",
+          "k ʌ p"
+        ]
+      ],
+      [
+        [
+          "lack",
+          "læk",
+          "not have enough of something",
+          "l æ k"
+        ],
+        [
+          "luck",
+          "lʌk",
+          "chance; good fortune",
+          "l ʌ k"
+        ]
+      ]
+    ]
+  }
+]

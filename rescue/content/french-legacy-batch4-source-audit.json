@@ -1,0 +1,386 @@
+{
+  "date": "2026-09-28",
+  "sourcePolicy": "Bounded editorial verification of 18 lexemes. Only source identifiers and pronunciation facts retained; glosses authored independently. No dictionary audio copied.",
+  "words": [
+    {
+      "text": "bol",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/bol/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/bol/nom",
+      "selectedTlfiEntry": 1,
+      "entryCount": 2,
+      "entryLabel": "BOL2",
+      "retrievedIpa": [
+        "bɔl"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "bɔl"
+      ],
+      "editorialIpa": "/bɔl/",
+      "originalMeaning": "bowl",
+      "normalization": "Historical TLFi ʀ → broad ʁ, ε → ɛ, oe → œ; contextual vowel length before /ʁ/ omitted symmetrically in both words. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "boule",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/boule/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/boule/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "BOULE",
+      "retrievedIpa": [
+        "bul"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "bul"
+      ],
+      "editorialIpa": "/bul/",
+      "originalMeaning": "ball; spherical object",
+      "normalization": "Historical TLFi ʀ → broad ʁ, ε → ɛ, oe → œ; contextual vowel length before /ʁ/ omitted symmetrically in both words. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "cor",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/cor/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/cor/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 2,
+      "entryLabel": "COR1",
+      "retrievedIpa": [
+        "kɔ:ʀ"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "kɔʁ"
+      ],
+      "editorialIpa": "/kɔʁ/",
+      "originalMeaning": "horn; wind instrument",
+      "normalization": "Historical TLFi ʀ → broad ʁ, ε → ɛ, oe → œ; contextual vowel length before /ʁ/ omitted symmetrically in both words. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "cour",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/cour/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/cour/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 2,
+      "entryLabel": "COUR1",
+      "retrievedIpa": [
+        "ku:ʀ"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "kuʁ"
+      ],
+      "editorialIpa": "/kuʁ/",
+      "originalMeaning": "courtyard",
+      "normalization": "Historical TLFi ʀ → broad ʁ, ε → ɛ, oe → œ; contextual vowel length before /ʁ/ omitted symmetrically in both words. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "sort",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/sort/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/sort/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "SORT",
+      "retrievedIpa": [
+        "sɔ:ʀ"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "sɔʁ"
+      ],
+      "editorialIpa": "/sɔʁ/",
+      "originalMeaning": "fate; destiny",
+      "normalization": "Historical TLFi ʀ → broad ʁ, ε → ɛ, oe → œ; contextual vowel length before /ʁ/ omitted symmetrically in both words. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "sourd",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/sourd/adjectif",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/sourd/adjectif",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "SOURD, SOURDE,",
+      "retrievedIpa": [
+        "su:ʀ",
+        "suʀd"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "suʁ",
+        "suʁd"
+      ],
+      "editorialIpa": "/suʁ/",
+      "originalMeaning": "deaf; masculine singular",
+      "normalization": "Historical TLFi ʀ → broad ʁ, ε → ɛ, oe → œ; contextual vowel length before /ʁ/ omitted symmetrically in both words. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "pur",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/pur/adjectif",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/pur/adjectif",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "PUR, PURE,",
+      "retrievedIpa": [
+        "py:ʀ"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "pyʁ"
+      ],
+      "editorialIpa": "/pyʁ/",
+      "originalMeaning": "pure",
+      "normalization": "Historical TLFi ʀ → broad ʁ, ε → ɛ, oe → œ; contextual vowel length before /ʁ/ omitted symmetrically in both words. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "peur",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/peur/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/peur/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "PEUR",
+      "retrievedIpa": [
+        "poe:ʀ"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "pœʁ"
+      ],
+      "editorialIpa": "/pœʁ/",
+      "originalMeaning": "fear",
+      "normalization": "Historical TLFi ʀ → broad ʁ, ε → ɛ, oe → œ; contextual vowel length before /ʁ/ omitted symmetrically in both words. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "bure",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/bure/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/bure/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 3,
+      "entryLabel": "BURE1",
+      "retrievedIpa": [
+        "by:ʀ"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "byʁ"
+      ],
+      "editorialIpa": "/byʁ/",
+      "originalMeaning": "coarse woollen cloth",
+      "normalization": "Historical TLFi ʀ → broad ʁ, ε → ɛ, oe → œ; contextual vowel length before /ʁ/ omitted symmetrically in both words. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "beurre",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/beurre/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/beurre/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "BEURRE",
+      "retrievedIpa": [
+        "bœ:ʀ"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "bœʁ"
+      ],
+      "editorialIpa": "/bœʁ/",
+      "originalMeaning": "butter",
+      "normalization": "Historical TLFi ʀ → broad ʁ, ε → ɛ, oe → œ; contextual vowel length before /ʁ/ omitted symmetrically in both words. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "sur",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/sur/pr%C3%A9position",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/sur/pr%C3%A9position",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "SUR préposition I. — Domaine spatial . [Le compl. désigne le",
+      "retrievedIpa": [
+        "sy:ʀ"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "syʁ"
+      ],
+      "editorialIpa": "/syʁ/",
+      "originalMeaning": "on; upon",
+      "normalization": "Historical TLFi ʀ → broad ʁ, ε → ɛ, oe → œ; contextual vowel length before /ʁ/ omitted symmetrically in both words. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "sœur",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/s%C5%93ur/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/s%C5%93ur/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "SŒUR",
+      "retrievedIpa": [
+        "sœ:ʀ"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "sœʁ"
+      ],
+      "editorialIpa": "/sœʁ/",
+      "originalMeaning": "sister",
+      "normalization": "Historical TLFi ʀ → broad ʁ, ε → ɛ, oe → œ; contextual vowel length before /ʁ/ omitted symmetrically in both words. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "lit",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/lit/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/lit/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "LIT",
+      "retrievedIpa": [
+        "li"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "li"
+      ],
+      "editorialIpa": "/li/",
+      "originalMeaning": "bed",
+      "normalization": "Historical TLFi ʀ → broad ʁ, ε → ɛ, oe → œ; contextual vowel length before /ʁ/ omitted symmetrically in both words. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "lé",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/l%C3%A9/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/l%C3%A9/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "LÉ",
+      "retrievedIpa": [
+        "le"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "le"
+      ],
+      "editorialIpa": "/le/",
+      "originalMeaning": "a full-width strip of fabric or wallpaper",
+      "normalization": "Historical TLFi ʀ → broad ʁ, ε → ɛ, oe → œ; contextual vowel length before /ʁ/ omitted symmetrically in both words. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "nid",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/nid/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/nid/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "NID",
+      "retrievedIpa": [
+        "ni"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "ni"
+      ],
+      "editorialIpa": "/ni/",
+      "originalMeaning": "nest",
+      "normalization": "Historical TLFi ʀ → broad ʁ, ε → ɛ, oe → œ; contextual vowel length before /ʁ/ omitted symmetrically in both words. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "nez",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/nez/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/nez/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "NEZ",
+      "retrievedIpa": [
+        "ne"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "ne"
+      ],
+      "editorialIpa": "/ne/",
+      "originalMeaning": "nose",
+      "normalization": "Historical TLFi ʀ → broad ʁ, ε → ɛ, oe → œ; contextual vowel length before /ʁ/ omitted symmetrically in both words. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "prix",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/prix/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/prix/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "PRIX",
+      "retrievedIpa": [
+        "pʀi"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "pʁi"
+      ],
+      "editorialIpa": "/pʁi/",
+      "originalMeaning": "price; prize",
+      "normalization": "Historical TLFi ʀ → broad ʁ, ε → ɛ, oe → œ; contextual vowel length before /ʁ/ omitted symmetrically in both words. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "pré",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/pr%C3%A9/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/pr%C3%A9/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "PRÉ",
+      "retrievedIpa": [
+        "pʀe"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "pʁe"
+      ],
+      "editorialIpa": "/pʁe/",
+      "originalMeaning": "meadow",
+      "normalization": "Historical TLFi ʀ → broad ʁ, ε → ɛ, oe → œ; contextual vowel length before /ʁ/ omitted symmetrically in both words. No vowel-quality merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    }
+  ]
+}

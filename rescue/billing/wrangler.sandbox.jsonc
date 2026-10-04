@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "minimalpairs-billing-sandbox",
+  "main": "runtime/worker.mjs",
+  "compatibility_date": "2026-09-26",
+  "workers_dev": false,
+  "preview_urls": false,
+  "send_metrics": false,
+  "observability": { "enabled": false },
+  "triggers": { "crons": ["0 * * * *"] },
+  "durable_objects": { "bindings": [{ "name": "BILLING_LEDGER", "class_name": "BillingLedger" }] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["BillingLedger"] }],
+  "vars": {
+    "BILLING_SERVICE_ENABLED": "false",
+    "BILLING_CHECKOUT_ENABLED": "false",
+    "BILLING_COMMUNICATIONS_APPROVED": "false",
+    "BILLING_CONFIG_JSON": "{\"appOrigin\":\"https://minimalpairs-billing-sandbox.web.app\",\"expectedLivemode\":false,\"prices\":{},\"portalConfigurationId\":\"\"}",
+    "FIREBASE_PROJECT_ID": "minimalpairs-billing-sandbox"
+  }
+}

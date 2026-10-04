@@ -1,0 +1,14 @@
+---
+import Base from '../layouts/Base.astro';
+import Trainer from '../components/Trainer';
+import { getLanguages } from '../lib/content';
+import { ownerEnglishLanguages, OWNER_ENGLISH_COLLECTION, OWNER_ENGLISH_MANIFEST } from '../lib/owner-audio-preview';
+const languages = ownerEnglishLanguages(getLanguages());
+---
+<Base title="English audio preview | MinimalPairs" description="Listening practice with different words and voices." noindex>
+  <div class="owner-audio-notice"><span><strong>English audio</strong> · Three contrasts. Pronunciation, accent and voice consistency are unreviewed.</span><a href="/audio-credits#owner-english-preview">Review notes & sources</a></div>
+  <Trainer languages={languages} initialLanguage="en" initialContrast="en-zh-j" audioManifestPath={OWNER_ENGLISH_MANIFEST} audioCollectionId={OWNER_ENGLISH_COLLECTION} client:load />
+</Base>
+<style>
+  .owner-audio-notice{display:flex;align-items:center;justify-content:center;gap:20px;padding:12px 24px;background:#e8efe2;color:#3c5140;font-size:12px;line-height:1.5;flex-wrap:wrap}.owner-audio-notice a{text-decoration:underline;text-underline-offset:3px;white-space:nowrap}.owner-audio-notice strong{font-weight:600}@media(max-width:600px){.owner-audio-notice{font-size:11px;justify-content:flex-start;gap:4px;padding:10px 20px}}
+</style>

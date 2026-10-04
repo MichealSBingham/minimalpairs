@@ -1,0 +1,86 @@
+[
+  {
+    "bank": "de",
+    "language": "German",
+    "dialect": "Standard German from Germany",
+    "text": "Am Morgen fällt Licht durch das Fenster. Ich spreche ruhig und deutlich und höre auf die kleinen Unterschiede zwischen den Wörtern.",
+    "words": [
+      "musste",
+      "müsste",
+      "wurde",
+      "würde"
+    ]
+  },
+  {
+    "bank": "es",
+    "language": "Spanish",
+    "dialect": "Mexican Spanish",
+    "text": "La luz de la mañana entra por la ventana. Hablo con calma y escucho con atención los pequeños detalles de cada palabra.",
+    "words": [
+      "caro",
+      "carro",
+      "pero",
+      "perro"
+    ]
+  },
+  {
+    "bank": "it",
+    "language": "Italian",
+    "dialect": "Standard Italian from Italy",
+    "text": "La luce del mattino entra nella stanza. Parlo con calma e ascolto con attenzione i piccoli dettagli di ogni parola.",
+    "words": [
+      "pala",
+      "palla",
+      "fato",
+      "fatto"
+    ]
+  },
+  {
+    "bank": "zh",
+    "language": "Chinese",
+    "dialect": "Standard Mandarin Chinese, Putonghua",
+    "text": "早晨的阳光照进房间。我慢慢地说话，认真听每一个字的声音，注意它们之间细小的差别。",
+    "words": [
+      "妈",
+      "麻",
+      "马",
+      "骂"
+    ]
+  },
+  {
+    "bank": "pt",
+    "language": "Portuguese",
+    "dialect": "Brazilian Portuguese",
+    "text": "A luz da manhã entra pela janela. Eu falo com calma e presto atenção aos pequenos detalhes de cada palavra.",
+    "words": [
+      "faca",
+      "vaca",
+      "fila",
+      "vila"
+    ]
+  },
+  {
+    "bank": "ru",
+    "language": "Russian",
+    "dialect": "Standard Russian",
+    "text": "Утренний свет наполняет комнату. Я говорю спокойно и чётко, внимательно слушаю и замечаю небольшие различия между словами.",
+    "words": [
+      "был",
+      "бил",
+      "сок",
+      "шок"
+    ]
+  },
+  {
+    "bank": "ja",
+    "language": "Japanese",
+    "dialect": "Standard Japanese from Tokyo",
+    "text": "朝の光が部屋に入ってきます。ゆっくりはっきり話して、一つ一つの言葉の音の違いをよく聞きます。",
+    "words": [
+      "耳",
+      "黄色",
+      "島",
+      "椎茸"
+    ]
+  }
+]

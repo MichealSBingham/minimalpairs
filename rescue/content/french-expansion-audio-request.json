@@ -1,0 +1,373 @@
+{
+  "languageId": "fr",
+  "locale": "fr-FR",
+  "contrastIds": [
+    "fr-e-e-open",
+    "fr-in-on",
+    "fr-an-in",
+    "fr-o-o-open",
+    "fr-b-p",
+    "fr-zh-sh"
+  ],
+  "newWords": [
+    {
+      "text": "pré",
+      "ipa": "/pʁe/",
+      "meaning": "meadow",
+      "phonemes": [
+        "p",
+        "ʁ",
+        "e"
+      ]
+    },
+    {
+      "text": "prêt",
+      "ipa": "/pʁɛ/",
+      "meaning": "ready",
+      "phonemes": [
+        "p",
+        "ʁ",
+        "ɛ"
+      ]
+    },
+    {
+      "text": "thé",
+      "ipa": "/te/",
+      "meaning": "tea",
+      "phonemes": [
+        "t",
+        "e"
+      ]
+    },
+    {
+      "text": "taie",
+      "ipa": "/tɛ/",
+      "meaning": "pillowcase",
+      "phonemes": [
+        "t",
+        "ɛ"
+      ]
+    },
+    {
+      "text": "dé",
+      "ipa": "/de/",
+      "meaning": "a die; one of a pair of dice",
+      "phonemes": [
+        "d",
+        "e"
+      ]
+    },
+    {
+      "text": "dais",
+      "ipa": "/dɛ/",
+      "meaning": "ceremonial canopy",
+      "phonemes": [
+        "d",
+        "ɛ"
+      ]
+    },
+    {
+      "text": "bain",
+      "ipa": "/bɛ̃/",
+      "meaning": "bath",
+      "phonemes": [
+        "b",
+        "ɛ̃"
+      ]
+    },
+    {
+      "text": "pin",
+      "ipa": "/pɛ̃/",
+      "meaning": "pine tree",
+      "phonemes": [
+        "p",
+        "ɛ̃"
+      ]
+    },
+    {
+      "text": "teint",
+      "ipa": "/tɛ̃/",
+      "meaning": "complexion",
+      "phonemes": [
+        "t",
+        "ɛ̃"
+      ]
+    },
+    {
+      "text": "pain",
+      "ipa": "/pɛ̃/",
+      "meaning": "bread",
+      "phonemes": [
+        "p",
+        "ɛ̃"
+      ]
+    },
+    {
+      "text": "temps",
+      "ipa": "/tɑ̃/",
+      "meaning": "time; weather",
+      "phonemes": [
+        "t",
+        "ɑ̃"
+      ]
+    },
+    {
+      "text": "paume",
+      "ipa": "/pom/",
+      "meaning": "palm of the hand",
+      "phonemes": [
+        "p",
+        "o",
+        "m"
+      ]
+    },
+    {
+      "text": "pomme",
+      "ipa": "/pɔm/",
+      "meaning": "apple",
+      "phonemes": [
+        "p",
+        "ɔ",
+        "m"
+      ]
+    },
+    {
+      "text": "côte",
+      "ipa": "/kot/",
+      "meaning": "coast; rib",
+      "phonemes": [
+        "k",
+        "o",
+        "t"
+      ]
+    },
+    {
+      "text": "cote",
+      "ipa": "/kɔt/",
+      "meaning": "rating; assessed value",
+      "phonemes": [
+        "k",
+        "ɔ",
+        "t"
+      ]
+    },
+    {
+      "text": "saute",
+      "ipa": "/sot/",
+      "meaning": "a sudden change",
+      "phonemes": [
+        "s",
+        "o",
+        "t"
+      ]
+    },
+    {
+      "text": "sotte",
+      "ipa": "/sɔt/",
+      "meaning": "foolish, feminine",
+      "phonemes": [
+        "s",
+        "ɔ",
+        "t"
+      ]
+    },
+    {
+      "text": "beau",
+      "ipa": "/bo/",
+      "meaning": "beautiful; handsome",
+      "phonemes": [
+        "b",
+        "o"
+      ]
+    },
+    {
+      "text": "peau",
+      "ipa": "/po/",
+      "meaning": "skin",
+      "phonemes": [
+        "p",
+        "o"
+      ]
+    },
+    {
+      "text": "boule",
+      "ipa": "/bul/",
+      "meaning": "ball; sphere",
+      "phonemes": [
+        "b",
+        "u",
+        "l"
+      ]
+    },
+    {
+      "text": "poule",
+      "ipa": "/pul/",
+      "meaning": "hen",
+      "phonemes": [
+        "p",
+        "u",
+        "l"
+      ]
+    },
+    {
+      "text": "joue",
+      "ipa": "/ʒu/",
+      "meaning": "cheek",
+      "phonemes": [
+        "ʒ",
+        "u"
+      ]
+    },
+    {
+      "text": "chou",
+      "ipa": "/ʃu/",
+      "meaning": "cabbage",
+      "phonemes": [
+        "ʃ",
+        "u"
+      ]
+    },
+    {
+      "text": "gens",
+      "ipa": "/ʒɑ̃/",
+      "meaning": "people",
+      "phonemes": [
+        "ʒ",
+        "ɑ̃"
+      ]
+    },
+    {
+      "text": "champ",
+      "ipa": "/ʃɑ̃/",
+      "meaning": "field",
+      "phonemes": [
+        "ʃ",
+        "ɑ̃"
+      ]
+    },
+    {
+      "text": "geai",
+      "ipa": "/ʒɛ/",
+      "meaning": "jay, a bird",
+      "phonemes": [
+        "ʒ",
+        "ɛ"
+      ]
+    },
+    {
+      "text": "chai",
+      "ipa": "/ʃɛ/",
+      "meaning": "wine storehouse",
+      "phonemes": [
+        "ʃ",
+        "ɛ"
+      ]
+    }
+  ],
+  "allNewContrastPairs": [
+    {
+      "id": "fr-e-e-open",
+      "pairs": [
+        [
+          "pré",
+          "prêt"
+        ],
+        [
+          "thé",
+          "taie"
+        ],
+        [
+          "dé",
+          "dais"
+        ]
+      ]
+    },
+    {
+      "id": "fr-in-on",
+      "pairs": [
+        [
+          "bain",
+          "bon"
+        ],
+        [
+          "pin",
+          "pont"
+        ],
+        [
+          "teint",
+          "ton"
+        ]
+      ]
+    },
+    {
+      "id": "fr-an-in",
+      "pairs": [
+        [
+          "banc",
+          "bain"
+        ],
+        [
+          "pan",
+          "pain"
+        ],
+        [
+          "temps",
+          "teint"
+        ]
+      ]
+    },
+    {
+      "id": "fr-o-o-open",
+      "pairs": [
+        [
+          "paume",
+          "pomme"
+        ],
+        [
+          "côte",
+          "cote"
+        ],
+        [
+          "saute",
+          "sotte"
+        ]
+      ]
+    },
+    {
+      "id": "fr-b-p",
+      "pairs": [
+        [
+          "beau",
+          "peau"
+        ],
+        [
+          "bain",
+          "pain"
+        ],
+        [
+          "boule",
+          "poule"
+        ]
+      ]
+    },
+    {
+      "id": "fr-zh-sh",
+      "pairs": [
+        [
+          "joue",
+          "chou"
+        ],
+        [
+          "gens",
+          "champ"
+        ],
+        [
+          "geai",
+          "chai"
+        ]
+      ]
+    }
+  ],
+  "audioStatus": "needs-generation-and-listening-review",
+  "dialectWarning": "fr-e-e-open and fr-o-o-open require voices preserving the stated northern reference distinctions. Do not score merged pronunciations as correct contrasting tokens."
+}

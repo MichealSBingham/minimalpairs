@@ -1,0 +1,663 @@
+{
+  "date": "2026-09-28",
+  "status": "isolated-text-candidate-audio-unapproved",
+  "languageId": "en",
+  "locale": "en-US",
+  "dialect": "Selected rhotic American English dictionary citation forms; recordings unreviewed",
+  "contrasts": [
+    {
+      "id": "en-dress-strut",
+      "label": "Pen or pun?",
+      "phonemes": [
+        "ɛ",
+        "ʌ"
+      ],
+      "description": "Focus on the middle vowel, /ɛ/ as in pen or /ʌ/ as in pun. The surrounding consonants stay the same within each pair.",
+      "l1Notes": [],
+      "dialectNote": "Selected rhotic American dictionary citation forms. Use stressed American citation vowels. Ton is the weight unit /tʌn/; hum is the verb /hʌm/, not the interjection /həm/. Keep the selected /ɛ/ category in pen, ten and hem; these vowels precede nasals.",
+      "pairs": [
+        {
+          "id": "en-pen-pun",
+          "words": [
+            {
+              "text": "pen",
+              "ipa": "/pɛn/",
+              "meaning": "a tool for writing in ink",
+              "phonemes": [
+                "p",
+                "ɛ",
+                "n"
+              ]
+            },
+            {
+              "text": "pun",
+              "ipa": "/pʌn/",
+              "meaning": "a joke based on word meanings or sounds",
+              "phonemes": [
+                "p",
+                "ʌ",
+                "n"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/pen",
+            "https://www.collinsdictionary.com/us/dictionary/english/pun"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "medial-vowel-cvc-v1"
+          }
+        },
+        {
+          "id": "en-ten-ton",
+          "words": [
+            {
+              "text": "ten",
+              "ipa": "/tɛn/",
+              "meaning": "the number 10",
+              "phonemes": [
+                "t",
+                "ɛ",
+                "n"
+              ]
+            },
+            {
+              "text": "ton",
+              "ipa": "/tʌn/",
+              "meaning": "a unit of weight",
+              "phonemes": [
+                "t",
+                "ʌ",
+                "n"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/ten",
+            "https://www.collinsdictionary.com/us/dictionary/english/ton"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "medial-vowel-cvc-v1"
+          }
+        },
+        {
+          "id": "en-hem-hum",
+          "words": [
+            {
+              "text": "hem",
+              "ipa": "/hɛm/",
+              "meaning": "a sewn edge of fabric",
+              "phonemes": [
+                "h",
+                "ɛ",
+                "m"
+              ]
+            },
+            {
+              "text": "hum",
+              "ipa": "/hʌm/",
+              "meaning": "make a low continuous sound",
+              "phonemes": [
+                "h",
+                "ʌ",
+                "m"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/hem",
+            "https://www.collinsdictionary.com/us/dictionary/english/hum"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "medial-vowel-cvc-v1"
+          }
+        }
+      ],
+      "sources": [
+        "https://www.collinsdictionary.com/us/dictionary/english/hem",
+        "https://www.collinsdictionary.com/us/dictionary/english/hum",
+        "https://www.collinsdictionary.com/us/dictionary/english/pen",
+        "https://www.collinsdictionary.com/us/dictionary/english/pun",
+        "https://www.collinsdictionary.com/us/dictionary/english/ten",
+        "https://www.collinsdictionary.com/us/dictionary/english/ton"
+      ],
+      "targetSoundFocus": "Listen to the vowel in the middle of each word.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the vowel in the middle of each word.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "ɛ",
+          "ʌ"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "presentation": "audio-only-until-answer-or-explicit-text-assist"
+      }
+    },
+    {
+      "id": "en-n-ng",
+      "label": "Kin or king?",
+      "phonemes": [
+        "n",
+        "ŋ"
+      ],
+      "description": "Listen to the last consonant: /n/ as in kin or /ŋ/ as in king. X has a different beginning but belongs to one of these ending categories.",
+      "l1Notes": [],
+      "dialectNote": "Selected rhotic American dictionary citation forms. All three frames use the dictionary /ɪ/ vowel and a single final nasal. King, ping and wing end in /ŋ/, with no additional /ɡ/ in the selected variety. Preserve the nasal ending when trimming. Normal coarticulation does not mean that the whole word must sound identical.",
+      "pairs": [
+        {
+          "id": "en-kin-king",
+          "words": [
+            {
+              "text": "kin",
+              "ipa": "/kɪn/",
+              "meaning": "relatives",
+              "phonemes": [
+                "k",
+                "ɪ",
+                "n"
+              ]
+            },
+            {
+              "text": "king",
+              "ipa": "/kɪŋ/",
+              "meaning": "a male monarch",
+              "phonemes": [
+                "k",
+                "ɪ",
+                "ŋ"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/kin",
+            "https://www.collinsdictionary.com/us/dictionary/english/king"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 2,
+            "targetPosition": "final",
+            "trialGroup": "final-nasal-cvc-v1"
+          }
+        },
+        {
+          "id": "en-pin-ping",
+          "words": [
+            {
+              "text": "pin",
+              "ipa": "/pɪn/",
+              "meaning": "a small pointed fastener",
+              "phonemes": [
+                "p",
+                "ɪ",
+                "n"
+              ]
+            },
+            {
+              "text": "ping",
+              "ipa": "/pɪŋ/",
+              "meaning": "a brief high-pitched sound",
+              "phonemes": [
+                "p",
+                "ɪ",
+                "ŋ"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/pin",
+            "https://www.collinsdictionary.com/us/dictionary/english/ping"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 2,
+            "targetPosition": "final",
+            "trialGroup": "final-nasal-cvc-v1"
+          }
+        },
+        {
+          "id": "en-win-wing",
+          "words": [
+            {
+              "text": "win",
+              "ipa": "/wɪn/",
+              "meaning": "succeed in a contest",
+              "phonemes": [
+                "w",
+                "ɪ",
+                "n"
+              ]
+            },
+            {
+              "text": "wing",
+              "ipa": "/wɪŋ/",
+              "meaning": "a limb used for flight",
+              "phonemes": [
+                "w",
+                "ɪ",
+                "ŋ"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/win",
+            "https://www.collinsdictionary.com/us/dictionary/english/wing"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 2,
+            "targetPosition": "final",
+            "trialGroup": "final-nasal-cvc-v1"
+          }
+        }
+      ],
+      "sources": [
+        "https://www.collinsdictionary.com/us/dictionary/english/kin",
+        "https://www.collinsdictionary.com/us/dictionary/english/king",
+        "https://www.collinsdictionary.com/us/dictionary/english/pin",
+        "https://www.collinsdictionary.com/us/dictionary/english/ping",
+        "https://www.collinsdictionary.com/us/dictionary/english/win",
+        "https://www.collinsdictionary.com/us/dictionary/english/wing"
+      ],
+      "targetSoundFocus": "Listen to the last consonant in each word.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the last consonant in each word.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "n",
+          "ŋ"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "presentation": "audio-only-until-answer-or-explicit-text-assist"
+      }
+    },
+    {
+      "id": "en-t-d",
+      "label": "Tip or dip?",
+      "phonemes": [
+        "t",
+        "d"
+      ],
+      "description": "Listen to the first consonant, including its release into the vowel. Match the initial /t/ or /d/ category across different word endings.",
+      "l1Notes": [],
+      "dialectNote": "Selected rhotic American dictionary citation forms. Use stressed initial /t/ and /d/, not the medial American tap context. Release timing and aspiration contribute to the contrast; do not describe it as only a vibration switch or trim the onset away. Die is a singular game cube in the vocabulary note.",
+      "pairs": [
+        {
+          "id": "en-tip-dip",
+          "words": [
+            {
+              "text": "tip",
+              "ipa": "/tɪp/",
+              "meaning": "the end of something narrow",
+              "phonemes": [
+                "t",
+                "ɪ",
+                "p"
+              ]
+            },
+            {
+              "text": "dip",
+              "ipa": "/dɪp/",
+              "meaning": "put briefly into liquid",
+              "phonemes": [
+                "d",
+                "ɪ",
+                "p"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/tip",
+            "https://www.collinsdictionary.com/us/dictionary/english/dip"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        },
+        {
+          "id": "en-tie-die",
+          "words": [
+            {
+              "text": "tie",
+              "ipa": "/taɪ/",
+              "meaning": "fasten with a knot",
+              "phonemes": [
+                "t",
+                "aɪ"
+              ]
+            },
+            {
+              "text": "die",
+              "ipa": "/daɪ/",
+              "meaning": "one numbered cube used in games",
+              "phonemes": [
+                "d",
+                "aɪ"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/tie",
+            "https://www.collinsdictionary.com/us/dictionary/english/die"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        },
+        {
+          "id": "en-town-down",
+          "words": [
+            {
+              "text": "town",
+              "ipa": "/taʊn/",
+              "meaning": "a community larger than a village",
+              "phonemes": [
+                "t",
+                "aʊ",
+                "n"
+              ]
+            },
+            {
+              "text": "down",
+              "ipa": "/daʊn/",
+              "meaning": "toward a lower place",
+              "phonemes": [
+                "d",
+                "aʊ",
+                "n"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/town",
+            "https://www.collinsdictionary.com/us/dictionary/english/down"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial-singleton-v1"
+          }
+        }
+      ],
+      "sources": [
+        "https://www.collinsdictionary.com/us/dictionary/english/die",
+        "https://www.collinsdictionary.com/us/dictionary/english/dip",
+        "https://www.collinsdictionary.com/us/dictionary/english/down",
+        "https://www.collinsdictionary.com/us/dictionary/english/tie",
+        "https://www.collinsdictionary.com/us/dictionary/english/tip",
+        "https://www.collinsdictionary.com/us/dictionary/english/town"
+      ],
+      "targetSoundFocus": "Listen to the first consonant in each word.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the first consonant in each word.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "t",
+          "d"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "presentation": "audio-only-until-answer-or-explicit-text-assist"
+      }
+    },
+    {
+      "id": "en-strut-ah",
+      "label": "Hut or hot?",
+      "phonemes": [
+        "ʌ",
+        "ɑ"
+      ],
+      "description": "Compare the middle vowels /ʌ/ and /ɑ/ in short American English words. Match the vowel category even when X begins with another consonant.",
+      "l1Notes": [],
+      "dialectNote": "Selected rhotic American dictionary citation forms. This is an explicit American dialect adaptation of the legacy /ʌ–ɑː/ topic, not merely length-mark removal. Rot, hot and not use American LOT /ɑ/ in a reference variety where LOT and PALM share that phoneme. These words would not supply British /ɑː/ in many British accents. Use only matched American profiles, never blend British or non-rhotic reference sets; keep full citation not /nɑt/.",
+      "pairs": [
+        {
+          "id": "en-rut-rot",
+          "words": [
+            {
+              "text": "rut",
+              "ipa": "/ɹʌt/",
+              "meaning": "a wheel track in the ground",
+              "phonemes": [
+                "ɹ",
+                "ʌ",
+                "t"
+              ]
+            },
+            {
+              "text": "rot",
+              "ipa": "/ɹɑt/",
+              "meaning": "decay",
+              "phonemes": [
+                "ɹ",
+                "ɑ",
+                "t"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/rut",
+            "https://www.collinsdictionary.com/us/dictionary/english/rot"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "medial-vowel-cvc-v1"
+          }
+        },
+        {
+          "id": "en-hut-hot",
+          "words": [
+            {
+              "text": "hut",
+              "ipa": "/hʌt/",
+              "meaning": "a small simple dwelling",
+              "phonemes": [
+                "h",
+                "ʌ",
+                "t"
+              ]
+            },
+            {
+              "text": "hot",
+              "ipa": "/hɑt/",
+              "meaning": "having a high temperature",
+              "phonemes": [
+                "h",
+                "ɑ",
+                "t"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/hut",
+            "https://www.collinsdictionary.com/us/dictionary/english/hot"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "medial-vowel-cvc-v1"
+          }
+        },
+        {
+          "id": "en-nut-not",
+          "words": [
+            {
+              "text": "nut",
+              "ipa": "/nʌt/",
+              "meaning": "an edible kernel in a hard shell",
+              "phonemes": [
+                "n",
+                "ʌ",
+                "t"
+              ]
+            },
+            {
+              "text": "not",
+              "ipa": "/nɑt/",
+              "meaning": "a word expressing negation",
+              "phonemes": [
+                "n",
+                "ɑ",
+                "t"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/nut",
+            "https://www.collinsdictionary.com/us/dictionary/english/not"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "medial-vowel-cvc-v1"
+          }
+        }
+      ],
+      "sources": [
+        "https://www.collinsdictionary.com/us/dictionary/english/hot",
+        "https://www.collinsdictionary.com/us/dictionary/english/hut",
+        "https://www.collinsdictionary.com/us/dictionary/english/not",
+        "https://www.collinsdictionary.com/us/dictionary/english/nut",
+        "https://www.collinsdictionary.com/us/dictionary/english/rot",
+        "https://www.collinsdictionary.com/us/dictionary/english/rut"
+      ],
+      "targetSoundFocus": "Listen to the vowel in the middle of each word.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the vowel in the middle of each word.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "ʌ",
+          "ɑ"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "presentation": "audio-only-until-answer-or-explicit-text-assist"
+      }
+    }
+  ]
+}

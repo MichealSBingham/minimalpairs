@@ -1,0 +1,223 @@
+{
+  "date": "2026-09-28",
+  "status": "passed-text-and-cross-word-eligibility-only",
+  "baseSnapshot": {
+    "hashes": {
+      "rescue/content/curriculum.json": "9e75f976f8b72d0df1f6b5da4c6afda06074d4f13ae91a533c0a77ebe7fe1db6",
+      "rescue/content/legacy-coverage.json": "503071bc886ac5f7de477526a78750e60476b8e7ce0045d237008a60625ef818",
+      "rescue/content/transfer-candidates.json": "14e960285239b919d5f48bddfc1d6b2a59fb5a9cfecc5789b17df4e965e9bea5",
+      "rescue/content/build_curriculum.py": "a10e0fd3778ae8219c15ce022920179257a42b1e676c77ff22ecc5c89786421d",
+      "rescue/content/french-legacy-batch3-candidates.json": "268b8670d88691292119751c270619d79b8a58805ad82b847cb2408995c425c4",
+      "rescue/content/french-legacy-batch4-candidates.json": "cfd5ec9447c34b489257d235968077779a559d27c14fe8324f7461bbeb1f71c9",
+      "rescue/app/public/audio/manifest.json": "37ee8bf1464770a61add57114c5b8ea8562bf559c6c46dd8e7f5e27d7b8e98d7"
+    },
+    "currentContrasts": 48,
+    "currentPairs": 144,
+    "frenchContrasts": 23,
+    "frenchPairs": 70
+  },
+  "totalPairs": 12,
+  "sourceCheckedUniqueWords": 24,
+  "pairs": [
+    {
+      "id": "fr-de-daim",
+      "strictMinimalForSelectedBroadForms": true,
+      "categoryAligned": true,
+      "eligibleDifferentXByCategory": [
+        [
+          "fée",
+          "thé"
+        ],
+        [
+          "faim",
+          "teint"
+        ]
+      ]
+    },
+    {
+      "id": "fr-fee-faim",
+      "strictMinimalForSelectedBroadForms": true,
+      "categoryAligned": true,
+      "eligibleDifferentXByCategory": [
+        [
+          "dé",
+          "thé"
+        ],
+        [
+          "daim",
+          "teint"
+        ]
+      ]
+    },
+    {
+      "id": "fr-the-teint",
+      "strictMinimalForSelectedBroadForms": true,
+      "categoryAligned": true,
+      "eligibleDifferentXByCategory": [
+        [
+          "dé",
+          "fée"
+        ],
+        [
+          "daim",
+          "faim"
+        ]
+      ]
+    },
+    {
+      "id": "fr-rat-re",
+      "strictMinimalForSelectedBroadForms": true,
+      "categoryAligned": true,
+      "eligibleDifferentXByCategory": [
+        [
+          "la",
+          "ça"
+        ],
+        [
+          "lé",
+          "ces"
+        ]
+      ]
+    },
+    {
+      "id": "fr-la-le",
+      "strictMinimalForSelectedBroadForms": true,
+      "categoryAligned": true,
+      "eligibleDifferentXByCategory": [
+        [
+          "rat",
+          "ça"
+        ],
+        [
+          "ré",
+          "ces"
+        ]
+      ]
+    },
+    {
+      "id": "fr-ca-ces",
+      "strictMinimalForSelectedBroadForms": true,
+      "categoryAligned": true,
+      "eligibleDifferentXByCategory": [
+        [
+          "rat",
+          "la"
+        ],
+        [
+          "ré",
+          "lé"
+        ]
+      ]
+    },
+    {
+      "id": "fr-balle-belle",
+      "strictMinimalForSelectedBroadForms": true,
+      "categoryAligned": true,
+      "eligibleDifferentXByCategory": [
+        [
+          "salle",
+          "masse"
+        ],
+        [
+          "sel",
+          "messe"
+        ]
+      ]
+    },
+    {
+      "id": "fr-salle-sel",
+      "strictMinimalForSelectedBroadForms": true,
+      "categoryAligned": true,
+      "eligibleDifferentXByCategory": [
+        [
+          "balle",
+          "masse"
+        ],
+        [
+          "belle",
+          "messe"
+        ]
+      ]
+    },
+    {
+      "id": "fr-masse-messe",
+      "strictMinimalForSelectedBroadForms": true,
+      "categoryAligned": true,
+      "eligibleDifferentXByCategory": [
+        [
+          "balle",
+          "salle"
+        ],
+        [
+          "belle",
+          "sel"
+        ]
+      ]
+    },
+    {
+      "id": "fr-jeune-fast-jeune-young",
+      "strictMinimalForSelectedBroadForms": true,
+      "categoryAligned": true,
+      "eligibleDifferentXByCategory": [
+        [
+          "veule",
+          "foehn"
+        ],
+        [
+          "veulent",
+          "fun"
+        ]
+      ]
+    },
+    {
+      "id": "fr-veule-veulent",
+      "strictMinimalForSelectedBroadForms": true,
+      "categoryAligned": true,
+      "eligibleDifferentXByCategory": [
+        [
+          "jeûne",
+          "foehn"
+        ],
+        [
+          "jeune",
+          "fun"
+        ]
+      ]
+    },
+    {
+      "id": "fr-foehn-fun",
+      "strictMinimalForSelectedBroadForms": true,
+      "categoryAligned": true,
+      "eligibleDifferentXByCategory": [
+        [
+          "jeûne",
+          "veule"
+        ],
+        [
+          "jeune",
+          "veulent"
+        ]
+      ]
+    }
+  ],
+  "referencePairXCategoryCombinations": 48,
+  "allEightPendingTopicsRevalidated": true,
+  "allPendingPairs": 24,
+  "allPendingReferencePairXCategoryCombinations": 96,
+  "negativeControls": [
+    "swapped categories rejected",
+    "extra phoneme rejected"
+  ],
+  "transferTextOverlap": [],
+  "sameLanguageTransferIpaOverlap": [],
+  "protectedFilesUnchanged": true,
+  "audioReadiness": {
+    "missingCachedClips": 40,
+    "listeningApproval": false
+  },
+  "limits": [
+    "Broad phonemic facts are not an acoustic validation.",
+    "Dialect-sensitive selected variants must be enforced by listening, not inferred from a voice locale.",
+    "No measured retention, transfer or revenue improvement is asserted."
+  ]
+}

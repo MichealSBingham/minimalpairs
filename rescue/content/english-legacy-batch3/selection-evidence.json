@@ -1,0 +1,110 @@
+{
+  "date": "2026-09-28",
+  "routes": [
+    {
+      "legacyPath": "/english/s-vs-z",
+      "contrastId": "en-s-z",
+      "proposedGuidePath": "/learn/en-s-z",
+      "legacyDeclaredTitle": "English /s/ vs /z/",
+      "legacyDeclaredPhonemes": [
+        "s",
+        "z"
+      ],
+      "legacyComponent": "qN",
+      "evidence": "Saved bundle hub card declaration and exact route-to-component binding; no old examples reused.",
+      "authoritativeStatusAtSelection": "missing-contrast"
+    },
+    {
+      "legacyPath": "/english/f-vs-v",
+      "contrastId": "en-f-v",
+      "proposedGuidePath": "/learn/en-f-v",
+      "legacyDeclaredTitle": "English /f/ vs /v/",
+      "legacyDeclaredPhonemes": [
+        "f",
+        "v"
+      ],
+      "legacyComponent": "DN",
+      "evidence": "Saved bundle hub card declaration and exact route-to-component binding; no old examples reused.",
+      "authoritativeStatusAtSelection": "missing-contrast"
+    },
+    {
+      "legacyPath": "/english/p-vs-b",
+      "contrastId": "en-p-b",
+      "proposedGuidePath": "/learn/en-p-b",
+      "legacyDeclaredTitle": "English /p/ vs /b/",
+      "legacyDeclaredPhonemes": [
+        "p",
+        "b"
+      ],
+      "legacyComponent": "F2",
+      "evidence": "Saved bundle hub card declaration and exact route-to-component binding; no old examples reused.",
+      "authoritativeStatusAtSelection": "missing-contrast"
+    },
+    {
+      "legacyPath": "/english/k-vs-g",
+      "contrastId": "en-k-g",
+      "proposedGuidePath": "/learn/en-k-g",
+      "legacyDeclaredTitle": "English /k/ vs /g/",
+      "legacyDeclaredPhonemes": [
+        "k",
+        "g"
+      ],
+      "legacyComponent": "u2",
+      "evidence": "Saved bundle hub card declaration and exact route-to-component binding; no old examples reused.",
+      "authoritativeStatusAtSelection": "missing-contrast"
+    },
+    {
+      "legacyPath": "/english/sh-vs-s",
+      "contrastId": "en-sh-s",
+      "proposedGuidePath": "/learn/en-sh-s",
+      "legacyDeclaredTitle": "English /ʃ/ vs /s/",
+      "legacyDeclaredPhonemes": [
+        "ʃ",
+        "s"
+      ],
+      "legacyComponent": "R2",
+      "evidence": "Saved bundle hub card declaration and exact route-to-component binding; no old examples reused.",
+      "authoritativeStatusAtSelection": "missing-contrast"
+    },
+    {
+      "legacyPath": "/english/sh-vs-ch",
+      "contrastId": "en-sh-ch",
+      "proposedGuidePath": "/learn/en-sh-ch",
+      "legacyDeclaredTitle": "English /ʃ/ vs /tʃ/",
+      "legacyDeclaredPhonemes": [
+        "ʃ",
+        "tʃ"
+      ],
+      "legacyComponent": "H2",
+      "evidence": "Saved bundle hub card declaration and exact route-to-component binding; no old examples reused.",
+      "authoritativeStatusAtSelection": "missing-contrast"
+    }
+  ],
+  "rationale": "Missing legacy topics with three independently verified strict pairs and useful initial-consonant coverage. This is editorial selection, not a traffic ranking.",
+  "baseline": {
+    "integratedEnglishTopics": 6,
+    "legacyEnglishTopics": 24,
+    "previousIsolatedBatchTopics": 4,
+    "thisIsolatedBatchTopics": 6,
+    "potentialTopicsIfBothIsolatedBatchesIntegrated": 16,
+    "remainingTopicsAfterBothBatches": [
+      "/english/voiced-th-vs-d",
+      "/english/voiced-th-vs-z",
+      "/english/e-vs-uh",
+      "/english/n-vs-ng",
+      "/english/aw-vs-o",
+      "/english/t-vs-d",
+      "/english/uh-vs-ah",
+      "/english/v-vs-b"
+    ]
+  },
+  "demandEvidence": "The dated revenue-operation-2026-09-27 report has English hub evidence and three already-restored measured topics. No specific observed GSC count is assigned to these six.",
+  "inputSha256": {
+    "rescue/content/legacy-coverage.json": "503071bc886ac5f7de477526a78750e60476b8e7ce0045d237008a60625ef818",
+    "rescue/content/curriculum.json": "9e75f976f8b72d0df1f6b5da4c6afda06074d4f13ae91a533c0a77ebe7fe1db6",
+    "rescue/content/transfer-candidates.json": "14e960285239b919d5f48bddfc1d6b2a59fb5a9cfecc5789b17df4e965e9bea5",
+    "rescue/content/english-legacy-batch2/candidates.json": "899e8e9e254f1d1dc596c360b39516b3e2ed16d5ad7fe3b2cd2c98939a5a9d53",
+    "rescue/discovery/legacy-bundle.js": "cfa66c8b8fa6a63bdc5e192bd540a0d69210ad5403edf3a1fb8d7b4143e6f78e"
+  },
+  "hashPolicy": "These hashes identify the selection baseline; the validator also checks exclusions against the current files. Later main-file changes require fresh review, not a silent coverage claim."
+}

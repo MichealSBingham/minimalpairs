@@ -1,0 +1,137 @@
+{
+  "passed": true,
+  "errors": [],
+  "contrasts": 4,
+  "pairs": 12,
+  "words": 24,
+  "requiredProfileClips": 48,
+  "dictionaryWordEvidence": 24,
+  "pairChecks": [
+    {
+      "pairId": "en-cook-kook",
+      "differingTokenIndices": [
+        1
+      ],
+      "targetTokenIndex": 1,
+      "alternativePairCount": 2
+    },
+    {
+      "pairId": "en-full-fool",
+      "differingTokenIndices": [
+        1
+      ],
+      "targetTokenIndex": 1,
+      "alternativePairCount": 2
+    },
+    {
+      "pairId": "en-pull-pool",
+      "differingTokenIndices": [
+        1
+      ],
+      "targetTokenIndex": 1,
+      "alternativePairCount": 2
+    },
+    {
+      "pairId": "en-bat-bet",
+      "differingTokenIndices": [
+        1
+      ],
+      "targetTokenIndex": 1,
+      "alternativePairCount": 2
+    },
+    {
+      "pairId": "en-mat-met",
+      "differingTokenIndices": [
+        1
+      ],
+      "targetTokenIndex": 1,
+      "alternativePairCount": 2
+    },
+    {
+      "pairId": "en-bad-bed",
+      "differingTokenIndices": [
+        1
+      ],
+      "targetTokenIndex": 1,
+      "alternativePairCount": 2
+    },
+    {
+      "pairId": "en-vine-wine",
+      "differingTokenIndices": [
+        0
+      ],
+      "targetTokenIndex": 0,
+      "alternativePairCount": 2
+    },
+    {
+      "pairId": "en-vest-west",
+      "differingTokenIndices": [
+        0
+      ],
+      "targetTokenIndex": 0,
+      "alternativePairCount": 2
+    },
+    {
+      "pairId": "en-vet-wet",
+      "differingTokenIndices": [
+        0
+      ],
+      "targetTokenIndex": 0,
+      "alternativePairCount": 2
+    },
+    {
+      "pairId": "en-thin-fin",
+      "differingTokenIndices": [
+        0
+      ],
+      "targetTokenIndex": 0,
+      "alternativePairCount": 2
+    },
+    {
+      "pairId": "en-three-free",
+      "differingTokenIndices": [
+        0
+      ],
+      "targetTokenIndex": 0,
+      "alternativePairCount": 2
+    },
+    {
+      "pairId": "en-thirst-first",
+      "differingTokenIndices": [
+        0
+      ],
+      "targetTokenIndex": 0,
+      "alternativePairCount": 2
+    }
+  ],
+  "limitation": "Offline checks validate declared source-to-IPA mapping, category orientation and inventory. They do not independently verify the dictionary readings, pronunciation, speaker consistency, recordings, SEO ranking or learning efficacy.",
+  "date": "2026-09-28",
+  "mutationChecks": [
+    {
+      "name": "reversed word/category orientation",
+      "rejected": true
+    },
+    {
+      "name": "second non-target phoneme difference",
+      "rejected": true
+    },
+    {
+      "name": "dictionary reading inconsistent with pair",
+      "rejected": true
+    },
+    {
+      "name": "missing word in requested audio",
+      "rejected": true
+    },
+    {
+      "name": "invented audio approval",
+      "rejected": true
+    }
+  ],
+  "inputSha256": {
+    "candidates.json": "899e8e9e254f1d1dc596c360b39516b3e2ed16d5ad7fe3b2cd2c98939a5a9d53",
+    "source-audit.json": "ac7269bf65dd6e6f7c3244350fd5ba593683da37109eea0facc8f5a5ff25f8af",
+    "audio-request.json": "fb6eee8066bbd29c2cc420e0a1d4f878348ac88c0c5ff46831e8639576c011b1",
+    "selection-evidence.json": "7d84eac1ad89b8170e0f4823920a34e5b61c6281b986bb4f055096d585a69591"
+  }
+}

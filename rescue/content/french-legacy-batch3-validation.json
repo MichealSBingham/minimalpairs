@@ -1,0 +1,195 @@
+{
+  "date": "2026-09-28",
+  "status": "passed-text-and-eligibility-checks-only",
+  "baseSnapshot": {
+    "hashes": {
+      "rescue/content/curriculum.json": "cc3d926b744379a8d9e6535c8cb06ce30cd3795cd871398f40540861eb58b752",
+      "rescue/content/legacy-coverage.json": "6629304e604c883b3d5c8dc0b2989620e5987b4a9d3aa03c170c2b0aa09577b6",
+      "rescue/content/transfer-candidates.json": "a4e6193b99761d19365e06584ed70d2db2853fbe641684f429ccf32d6dd6eb11",
+      "rescue/app/public/audio/manifest.json": "37ee8bf1464770a61add57114c5b8ea8562bf559c6c46dd8e7f5e27d7b8e98d7"
+    },
+    "currentContrasts": 46,
+    "currentPairs": 138
+  },
+  "contrasts": [
+    {
+      "id": "fr-o-u",
+      "legacyLabelConfirmedInBundle": true,
+      "pairs": 3,
+      "referencePairXCategoryCombinations": 12
+    },
+    {
+      "id": "fr-a-an",
+      "legacyLabelConfirmedInBundle": true,
+      "pairs": 3,
+      "referencePairXCategoryCombinations": 12
+    },
+    {
+      "id": "fr-o-on",
+      "legacyLabelConfirmedInBundle": true,
+      "pairs": 3,
+      "referencePairXCategoryCombinations": 12
+    }
+  ],
+  "pairs": [
+    {
+      "id": "fr-beau-bout",
+      "strictMinimal": true,
+      "categoryAligned": true,
+      "targetPosition": "final",
+      "eligibleDifferentXByCategory": [
+        [
+          "veau",
+          "saut"
+        ],
+        [
+          "vous",
+          "sou"
+        ]
+      ]
+    },
+    {
+      "id": "fr-veau-vous",
+      "strictMinimal": true,
+      "categoryAligned": true,
+      "targetPosition": "final",
+      "eligibleDifferentXByCategory": [
+        [
+          "beau",
+          "saut"
+        ],
+        [
+          "bout",
+          "sou"
+        ]
+      ]
+    },
+    {
+      "id": "fr-saut-sou",
+      "strictMinimal": true,
+      "categoryAligned": true,
+      "targetPosition": "final",
+      "eligibleDifferentXByCategory": [
+        [
+          "beau",
+          "veau"
+        ],
+        [
+          "bout",
+          "vous"
+        ]
+      ]
+    },
+    {
+      "id": "fr-chat-chant",
+      "strictMinimal": true,
+      "categoryAligned": true,
+      "targetPosition": "final",
+      "eligibleDifferentXByCategory": [
+        [
+          "rat",
+          "plat"
+        ],
+        [
+          "rang",
+          "plan"
+        ]
+      ]
+    },
+    {
+      "id": "fr-rat-rang",
+      "strictMinimal": true,
+      "categoryAligned": true,
+      "targetPosition": "final",
+      "eligibleDifferentXByCategory": [
+        [
+          "chat",
+          "plat"
+        ],
+        [
+          "chant",
+          "plan"
+        ]
+      ]
+    },
+    {
+      "id": "fr-plat-plan",
+      "strictMinimal": true,
+      "categoryAligned": true,
+      "targetPosition": "final",
+      "eligibleDifferentXByCategory": [
+        [
+          "chat",
+          "rat"
+        ],
+        [
+          "chant",
+          "rang"
+        ]
+      ]
+    },
+    {
+      "id": "fr-beau-bon",
+      "strictMinimal": true,
+      "categoryAligned": true,
+      "targetPosition": "final",
+      "eligibleDifferentXByCategory": [
+        [
+          "peau",
+          "taux"
+        ],
+        [
+          "pont",
+          "ton"
+        ]
+      ]
+    },
+    {
+      "id": "fr-peau-pont",
+      "strictMinimal": true,
+      "categoryAligned": true,
+      "targetPosition": "final",
+      "eligibleDifferentXByCategory": [
+        [
+          "beau",
+          "taux"
+        ],
+        [
+          "bon",
+          "ton"
+        ]
+      ]
+    },
+    {
+      "id": "fr-taux-ton",
+      "strictMinimal": true,
+      "categoryAligned": true,
+      "targetPosition": "final",
+      "eligibleDifferentXByCategory": [
+        [
+          "beau",
+          "peau"
+        ],
+        [
+          "bon",
+          "pont"
+        ]
+      ]
+    }
+  ],
+  "totalPairs": 9,
+  "sourceCheckedUniqueWords": 17,
+  "totalReferencePairXCategoryCombinations": 36,
+  "transferTextOverlap": [],
+  "sameLanguageTransferIpaOverlap": [],
+  "protectedFilesUnchanged": true,
+  "audioReadiness": {
+    "missingCachedClips": 12,
+    "listeningApproval": false
+  },
+  "limits": [
+    "Source/phoneme checks cannot certify generated pronunciations.",
+    "Combination counts exclude independent A/B ordering, token, and voice variation; they are not independent-test sample sizes.",
+    "No runtime integration, statistical learning result, or demand uplift is asserted."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "serviceEnabled": false,
+  "checkoutEnabled": false,
+  "communicationsApproved": false,
+  "expectedLivemode": false,
+  "appOrigin": "https://minimalpairs.co",
+  "firebaseProjectId": "minimalpairs",
+  "prices": {
+    "monthly": { "id": "", "currency": "usd", "interval": "month", "intervalCount": 1 },
+    "annual": { "id": "", "currency": "usd", "interval": "year", "intervalCount": 1 }
+  },
+  "portalConfigurationId": "",
+  "webhookSecrets": []
+}

@@ -1,0 +1,276 @@
+{
+  "date": "2026-09-28",
+  "languageId": "en",
+  "locale": "en-US",
+  "contrastIds": [
+    "en-zh-j",
+    "en-foot-strut",
+    "en-ae-strut"
+  ],
+  "newWords": [
+    {
+      "text": "lesion",
+      "ipa": "/ˈliʒən/",
+      "meaning": "an area of damaged tissue",
+      "phonemes": [
+        "l",
+        "i",
+        "ʒ",
+        "ə",
+        "n"
+      ]
+    },
+    {
+      "text": "legion",
+      "ipa": "/ˈlidʒən/",
+      "meaning": "a large group; a military unit",
+      "phonemes": [
+        "l",
+        "i",
+        "dʒ",
+        "ə",
+        "n"
+      ]
+    },
+    {
+      "text": "pleasure",
+      "ipa": "/ˈplɛʒɚ/",
+      "meaning": "enjoyment",
+      "phonemes": [
+        "p",
+        "l",
+        "ɛ",
+        "ʒ",
+        "ɚ"
+      ]
+    },
+    {
+      "text": "pledger",
+      "ipa": "/ˈplɛdʒɚ/",
+      "meaning": "someone who gives a pledge",
+      "phonemes": [
+        "p",
+        "l",
+        "ɛ",
+        "dʒ",
+        "ɚ"
+      ]
+    },
+    {
+      "text": "version",
+      "ipa": "/ˈvɝʒən/",
+      "meaning": "a particular form or account of something",
+      "phonemes": [
+        "v",
+        "ɝ",
+        "ʒ",
+        "ə",
+        "n"
+      ]
+    },
+    {
+      "text": "virgin",
+      "ipa": "/ˈvɝdʒən/",
+      "meaning": "unused; untouched",
+      "phonemes": [
+        "v",
+        "ɝ",
+        "dʒ",
+        "ə",
+        "n"
+      ]
+    },
+    {
+      "text": "put",
+      "ipa": "/pʊt/",
+      "meaning": "place something",
+      "phonemes": [
+        "p",
+        "ʊ",
+        "t"
+      ]
+    },
+    {
+      "text": "putt",
+      "ipa": "/pʌt/",
+      "meaning": "a short golf stroke",
+      "phonemes": [
+        "p",
+        "ʌ",
+        "t"
+      ]
+    },
+    {
+      "text": "look",
+      "ipa": "/lʊk/",
+      "meaning": "direct your eyes toward something",
+      "phonemes": [
+        "l",
+        "ʊ",
+        "k"
+      ]
+    },
+    {
+      "text": "luck",
+      "ipa": "/lʌk/",
+      "meaning": "chance; good fortune",
+      "phonemes": [
+        "l",
+        "ʌ",
+        "k"
+      ]
+    },
+    {
+      "text": "book",
+      "ipa": "/bʊk/",
+      "meaning": "a written work with pages",
+      "phonemes": [
+        "b",
+        "ʊ",
+        "k"
+      ]
+    },
+    {
+      "text": "buck",
+      "ipa": "/bʌk/",
+      "meaning": "a male deer; a dollar",
+      "phonemes": [
+        "b",
+        "ʌ",
+        "k"
+      ]
+    },
+    {
+      "text": "cat",
+      "ipa": "/kæt/",
+      "meaning": "a small feline animal",
+      "phonemes": [
+        "k",
+        "æ",
+        "t"
+      ]
+    },
+    {
+      "text": "cut",
+      "ipa": "/kʌt/",
+      "meaning": "divide with a sharp tool",
+      "phonemes": [
+        "k",
+        "ʌ",
+        "t"
+      ]
+    },
+    {
+      "text": "cap",
+      "ipa": "/kæp/",
+      "meaning": "a hat; a cover",
+      "phonemes": [
+        "k",
+        "æ",
+        "p"
+      ]
+    },
+    {
+      "text": "cup",
+      "ipa": "/kʌp/",
+      "meaning": "a small drinking vessel",
+      "phonemes": [
+        "k",
+        "ʌ",
+        "p"
+      ]
+    },
+    {
+      "text": "lack",
+      "ipa": "/læk/",
+      "meaning": "not have enough of something",
+      "phonemes": [
+        "l",
+        "æ",
+        "k"
+      ]
+    }
+  ],
+  "reusedWordTexts": [],
+  "allNewContrastPairs": [
+    {
+      "id": "en-zh-j",
+      "phonemes": [
+        "ʒ",
+        "dʒ"
+      ],
+      "targetSoundFocus": "Listen to the consonant between the two vowel sounds.",
+      "pairs": [
+        [
+          "lesion",
+          "legion"
+        ],
+        [
+          "pleasure",
+          "pledger"
+        ],
+        [
+          "version",
+          "virgin"
+        ]
+      ]
+    },
+    {
+      "id": "en-foot-strut",
+      "phonemes": [
+        "ʊ",
+        "ʌ"
+      ],
+      "targetSoundFocus": "Listen to the vowel in the middle of each word.",
+      "pairs": [
+        [
+          "put",
+          "putt"
+        ],
+        [
+          "look",
+          "luck"
+        ],
+        [
+          "book",
+          "buck"
+        ]
+      ]
+    },
+    {
+      "id": "en-ae-strut",
+      "phonemes": [
+        "æ",
+        "ʌ"
+      ],
+      "targetSoundFocus": "Listen to the vowel in the middle of each word.",
+      "pairs": [
+        [
+          "cat",
+          "cut"
+        ],
+        [
+          "cap",
+          "cup"
+        ],
+        [
+          "lack",
+          "luck"
+        ]
+      ]
+    }
+  ],
+  "audioStatus": "needs-generation-and-listening-review",
+  "dialectWarning": "General American. Version /ˈvɝʒən/ and virgin /ˈvɝdʒən/ MUST share final schwa; an /ɪ/ ending in virgin or /ʃ/ in version invalidates this authored pair. The shared-schwa readings are attested in Webster’s New World American entries; other US pronunciations are not learner errors. Pledger /ˈplɛdʒɚ/ is a real noun and must retain the affricate. Do not pronounce put as putt or merge /ʊ–ʌ/.",
+  "conditionalPairs": [
+    {
+      "pairId": "en-version-virgin",
+      "requiredReadings": [
+        "ˈvɝʒən",
+        "ˈvɝdʒən"
+      ],
+      "reviewFailureAction": "Exclude failed clips from assessed trials; two independent medial pairs remain available if this pair cannot be recorded consistently."
+    }
+  ],
+  "verification": "17 distinct forms have checked American dictionary pronunciation evidence and matching broad IPA after explicit notation normalization; no audio generated or approved by this task."
+}

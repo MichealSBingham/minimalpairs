@@ -1,0 +1,85 @@
+{
+  "date": "2026-09-28",
+  "routes": [
+    {
+      "legacyPath": "/english/voiced-th-vs-d",
+      "contrastId": "en-dh-d",
+      "proposedGuidePath": "/learn/en-dh-d",
+      "legacyDeclaredTitle": "English /ð/ vs /d/",
+      "legacyDeclaredPhonemes": [
+        "ð",
+        "d"
+      ],
+      "legacyComponent": "jN",
+      "requiredAudioLocale": "en-US",
+      "evidence": "Saved bundle hub category declaration and exact route-to-component binding; old pair lists not reused.",
+      "authoritativeStatusAtSelection": "missing-contrast"
+    },
+    {
+      "legacyPath": "/english/voiced-th-vs-z",
+      "contrastId": "en-dh-z",
+      "proposedGuidePath": "/learn/en-dh-z",
+      "legacyDeclaredTitle": "English /ð/ vs /z/",
+      "legacyDeclaredPhonemes": [
+        "ð",
+        "z"
+      ],
+      "legacyComponent": "PN",
+      "requiredAudioLocale": "en-US",
+      "evidence": "Saved bundle hub category declaration and exact route-to-component binding; old pair lists not reused.",
+      "authoritativeStatusAtSelection": "missing-contrast"
+    },
+    {
+      "legacyPath": "/english/v-vs-b",
+      "contrastId": "en-v-b",
+      "proposedGuidePath": "/learn/en-v-b",
+      "legacyDeclaredTitle": "English /v/ vs /b/",
+      "legacyDeclaredPhonemes": [
+        "v",
+        "b"
+      ],
+      "legacyComponent": "c4",
+      "requiredAudioLocale": "en-US",
+      "evidence": "Saved bundle hub category declaration and exact route-to-component binding; old pair lists not reused.",
+      "authoritativeStatusAtSelection": "missing-contrast"
+    },
+    {
+      "legacyPath": "/english/aw-vs-o",
+      "contrastId": "en-thought-lot-gb",
+      "proposedGuidePath": "/learn/en-thought-lot-gb",
+      "legacyDeclaredTitle": "English /ɔː/ vs /ɒ/",
+      "legacyDeclaredPhonemes": [
+        "ɔː",
+        "ɒ"
+      ],
+      "legacyComponent": "E2",
+      "requiredAudioLocale": "en-GB",
+      "evidence": "Saved bundle hub category declaration and exact route-to-component binding; old pair lists not reused.",
+      "authoritativeStatusAtSelection": "missing-contrast"
+    }
+  ],
+  "rationale": "The four exact legacy topics left after earlier isolated batches, selected without inventing a demand ranking.",
+  "baseline": {
+    "integratedEnglishTopics": 6,
+    "legacyEnglishTopics": 24,
+    "previousIsolatedBatchTopics": 14,
+    "thisIsolatedBatchTopics": 4,
+    "topicsWithTextCandidatesIncludingIntegrated": 24,
+    "topicsPotentiallyCompatibleWithAmericanReferenceAfterAllAudioReview": 23,
+    "britishTopicsBlockedOnSeparateProfileRouting": 1,
+    "remainingTopicsWithoutTextCandidates": []
+  },
+  "exclusionScope": "Current/batches2–4: English spelling and normalized English IPA only. Reserved: spellings across all languages plus English IPA. Ordinary French training spellings do not ban independent English lexemes.",
+  "integrationGate": "No integration in this task. The current English language target is en-US and current audio selection is keyed by languageId with an en-US device fallback, not contrast dialect. British pool requires explicit contrast-level en-GB profile routing and no cross-dialect fallback before release.",
+  "demandEvidence": "No per-topic observed GSC count is claimed for these four.",
+  "inputSha256": {
+    "rescue/content/legacy-coverage.json": "503071bc886ac5f7de477526a78750e60476b8e7ce0045d237008a60625ef818",
+    "rescue/content/curriculum.json": "9e75f976f8b72d0df1f6b5da4c6afda06074d4f13ae91a533c0a77ebe7fe1db6",
+    "rescue/content/transfer-candidates.json": "14e960285239b919d5f48bddfc1d6b2a59fb5a9cfecc5789b17df4e965e9bea5",
+    "rescue/content/english-legacy-batch2/candidates.json": "899e8e9e254f1d1dc596c360b39516b3e2ed16d5ad7fe3b2cd2c98939a5a9d53",
+    "rescue/content/english-legacy-batch3/candidates.json": "88b73b87f70c2df6990a81074569d5b719a2297035b1dd59e4b371617c4c13c4",
+    "rescue/content/english-legacy-batch4/candidates.json": "c696a612f46f6a897647497832771d686a4409d6741f82dbf52ad1d27b996298",
+    "rescue/discovery/legacy-bundle.js": "cfa66c8b8fa6a63bdc5e192bd540a0d69210ad5403edf3a1fb8d7b4143e6f78e"
+  },
+  "hashPolicy": "Selection baseline only; validator also rechecks current inventories. Changed inputs require renewed review."
+}

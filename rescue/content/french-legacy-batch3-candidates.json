@@ -1,0 +1,564 @@
+{
+  "schemaVersion": "1.0.0",
+  "batchId": "french-legacy-batch3",
+  "createdAt": "2026-09-28",
+  "status": "source-checked-isolated-candidates-not-live",
+  "releaseReady": false,
+  "languageId": "fr",
+  "locale": "fr-FR",
+  "dialect": "Northern reference Metropolitan French; isolated words",
+  "scope": "Three missing legacy topics selected from limited saved demand evidence, not a measured top-three click ranking.",
+  "integration": {
+    "inLiveCurriculum": false,
+    "inDefaultAudioManifest": false,
+    "routesPublished": false
+  },
+  "licensing": {
+    "text": "Original explanations and glosses. Dictionary links and pronunciation facts provide evidence; no dictionary paragraphs or recordings included.",
+    "audio": "Separate provider/license and pronunciation review required; this artifact grants no rights to dictionary or research audio."
+  },
+  "contrasts": [
+    {
+      "id": "fr-o-u",
+      "label": "Beau or bout?",
+      "phonemes": [
+        "o",
+        "u"
+      ],
+      "description": "Listen for the final rounded vowel. These pairs contrast close-mid /o/ with close /u/; neither category is the open-mid /ɔ/ of the separate o ouvert lesson.",
+      "l1Notes": [
+        {
+          "nativeLanguage": "en",
+          "note": "Both vowels are taught as single French vowel categories. The English vowels in go and boot are approximate comparisons, not target recordings."
+        },
+        {
+          "nativeLanguage": "es",
+          "note": "The letters ou represent /u/ in these examples; attend to the sound before enabling spelling hints."
+        }
+      ],
+      "pairs": [
+        {
+          "id": "fr-beau-bout",
+          "words": [
+            {
+              "text": "beau",
+              "ipa": "/bo/",
+              "meaning": "beautiful; masculine singular",
+              "phonemes": [
+                "b",
+                "o"
+              ]
+            },
+            {
+              "text": "bout",
+              "ipa": "/bu/",
+              "meaning": "end; tip",
+              "phonemes": [
+                "b",
+                "u"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.portail-lexical.fr/definition/tlfi/beau/adjectif",
+            "https://www.portail-lexical.fr/definition/tlfi/bout/nom"
+          ],
+          "validation": {
+            "text": "source-checked-candidate",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "final",
+            "trialGroup": "monosyllabic-final-vowel"
+          }
+        },
+        {
+          "id": "fr-veau-vous",
+          "words": [
+            {
+              "text": "veau",
+              "ipa": "/vo/",
+              "meaning": "calf",
+              "phonemes": [
+                "v",
+                "o"
+              ]
+            },
+            {
+              "text": "vous",
+              "ipa": "/vu/",
+              "meaning": "you, formal or plural",
+              "phonemes": [
+                "v",
+                "u"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.portail-lexical.fr/definition/tlfi/veau/nom",
+            "https://www.portail-lexical.fr/definition/tlfi/vous/pronom"
+          ],
+          "validation": {
+            "text": "source-checked-candidate",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "final",
+            "trialGroup": "monosyllabic-final-vowel"
+          }
+        },
+        {
+          "id": "fr-saut-sou",
+          "words": [
+            {
+              "text": "saut",
+              "ipa": "/so/",
+              "meaning": "jump",
+              "phonemes": [
+                "s",
+                "o"
+              ]
+            },
+            {
+              "text": "sou",
+              "ipa": "/su/",
+              "meaning": "a small coin; a little money",
+              "phonemes": [
+                "s",
+                "u"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.portail-lexical.fr/definition/tlfi/saut/nom",
+            "https://www.portail-lexical.fr/definition/tlfi/sou/nom"
+          ],
+          "validation": {
+            "text": "source-checked-candidate",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "final",
+            "trialGroup": "monosyllabic-final-vowel"
+          }
+        }
+      ],
+      "dialectNote": "Reference Metropolitan French in isolated words. Keep /o/ separate from /ɔ/ and /u/ separate from /y/. Do not insert an English-style off-glide as the target.",
+      "sources": [
+        "https://www.portail-lexical.fr/definition/tlfi/beau/adjectif",
+        "https://www.portail-lexical.fr/definition/tlfi/bout/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/saut/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/sou/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/veau/nom",
+        "https://www.portail-lexical.fr/definition/tlfi/vous/pronom"
+      ],
+      "targetSoundFocus": "Listen to the final vowel. The first consonant or consonant cluster changes in X; match the vowel category, not the whole word.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the final vowel. The first consonant or consonant cluster changes in X; match the vowel category, not the whole word.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "o",
+          "u"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "presentation": "audio-only-unless-explicit-text-assist"
+      },
+      "restoration": {
+        "legacyUrl": "/french/o-vs-ou",
+        "legacyComponent": "v1",
+        "exactLegacyLabel": "o vs ou (/o/ vs /u/)",
+        "demandEvidence": "The saved Search Console audit explicitly lists this legacy URL among crawled/not-indexed pages. A click count for this URL was not saved."
+      },
+      "guide": {
+        "title": "French /o/ vs /u/ minimal pairs",
+        "intro": "Listen for the final rounded vowel. These pairs contrast close-mid /o/ with close /u/; neither category is the open-mid /ɔ/ of the separate o ouvert lesson.",
+        "practiceInstruction": "Listen to A, B, and a different word X. Choose the reference with the same final vowel as X. Word text, spelling, IPA, and meanings stay hidden unless hints are explicitly enabled.",
+        "audioStatus": "Candidate only. Existing cached clips are generated and unreviewed; new words have no cached clips. No release or listening approval is implied."
+      }
+    },
+    {
+      "id": "fr-a-an",
+      "label": "Chat or chant?",
+      "phonemes": [
+        "a",
+        "ɑ̃"
+      ],
+      "description": "Listen to the final vowel: oral /a/ or nasal /ɑ̃/. The nasal vowel is one sound, with no added n or ng consonant in these isolated words. Its oral quality may differ too.",
+      "l1Notes": [
+        {
+          "nativeLanguage": "en",
+          "note": "Listen for a nasal vowel rather than a vowel followed by an English n or ng."
+        },
+        {
+          "nativeLanguage": "es",
+          "note": "The final written n, ng, and nt do not add a spoken nasal consonant to these isolated target words."
+        }
+      ],
+      "pairs": [
+        {
+          "id": "fr-chat-chant",
+          "words": [
+            {
+              "text": "chat",
+              "ipa": "/ʃa/",
+              "meaning": "cat; masculine form",
+              "phonemes": [
+                "ʃ",
+                "a"
+              ]
+            },
+            {
+              "text": "chant",
+              "ipa": "/ʃɑ̃/",
+              "meaning": "singing; song",
+              "phonemes": [
+                "ʃ",
+                "ɑ̃"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.portail-lexical.fr/definition/tlfi/chat/nom",
+            "https://www.portail-lexical.fr/definition/tlfi/chant/nom"
+          ],
+          "validation": {
+            "text": "source-checked-candidate",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "final",
+            "trialGroup": "monosyllabic-final-vowel"
+          }
+        },
+        {
+          "id": "fr-rat-rang",
+          "words": [
+            {
+              "text": "rat",
+              "ipa": "/ʁa/",
+              "meaning": "rat",
+              "phonemes": [
+                "ʁ",
+                "a"
+              ]
+            },
+            {
+              "text": "rang",
+              "ipa": "/ʁɑ̃/",
+              "meaning": "row; rank",
+              "phonemes": [
+                "ʁ",
+                "ɑ̃"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.portail-lexical.fr/definition/tlfi/rat/nom",
+            "https://www.portail-lexical.fr/definition/tlfi/rang/nom"
+          ],
+          "validation": {
+            "text": "source-checked-candidate",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "final",
+            "trialGroup": "monosyllabic-final-vowel"
+          },
+          "note": "Select the dictionary /ʁa/ variant. TLFi also documents /ʁɑ/: audio must be reviewed against the selected /a/ target."
+        },
+        {
+          "id": "fr-plat-plan",
+          "words": [
+            {
+              "text": "plat",
+              "ipa": "/pla/",
+              "meaning": "flat; masculine singular",
+              "phonemes": [
+                "p",
+                "l",
+                "a"
+              ]
+            },
+            {
+              "text": "plan",
+              "ipa": "/plɑ̃/",
+              "meaning": "plan; drawing of a layout",
+              "phonemes": [
+                "p",
+                "l",
+                "ɑ̃"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.portail-lexical.fr/definition/tlfi/plat/adjectif",
+            "https://www.portail-lexical.fr/definition/tlfi/plan/nom"
+          ],
+          "validation": {
+            "text": "source-checked-candidate",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 2,
+            "targetPosition": "final",
+            "trialGroup": "monosyllabic-final-vowel"
+          }
+        }
+      ],
+      "dialectNote": "Northern reference Metropolitan French broad phonemic notation. TLFi gives rat /ʁa/ and also reports historical /ʁɑ/ variation; this candidate explicitly selects /a/. A recording with oral /ɑ/ must not be silently accepted for the /a/ category. Nasal quality varies across regions and speakers.",
+      "sources": [
+        "https://assta.org/proceedings/ICPhS2019Microsite/pdf/full-paper_37.pdf",
+        "https://experts.illinois.edu/en/publications/a-real-time-mri-investigation-of-the-role-of-lingual-and-pharynge/"
+      ],
+      "targetSoundFocus": "Listen to the final vowel. The first consonant or consonant cluster changes in X; match the vowel category, not the whole word.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the final vowel. The first consonant or consonant cluster changes in X; match the vowel category, not the whole word.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "a",
+          "ɑ̃"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "presentation": "audio-only-unless-explicit-text-assist"
+      },
+      "restoration": {
+        "legacyUrl": "/french/a-vs-an",
+        "legacyComponent": "B1",
+        "exactLegacyLabel": "a vs an (/a/ vs /ɑ̃/)",
+        "demandEvidence": "A saved customer case requested more French nasal-vowel work. This combines that request with French-hub search demand; no contrast-specific click rank is available."
+      },
+      "guide": {
+        "title": "French /a/ vs /ɑ̃/ minimal pairs",
+        "intro": "Listen to the final vowel: oral /a/ or nasal /ɑ̃/. The nasal vowel is one sound, with no added n or ng consonant in these isolated words. Its oral quality may differ too.",
+        "practiceInstruction": "Listen to A, B, and a different word X. Choose the reference with the same final vowel as X. Word text, spelling, IPA, and meanings stay hidden unless hints are explicitly enabled.",
+        "audioStatus": "Candidate only. Existing cached clips are generated and unreviewed; new words have no cached clips. No release or listening approval is implied."
+      }
+    },
+    {
+      "id": "fr-o-on",
+      "label": "Beau or bon?",
+      "phonemes": [
+        "o",
+        "ɔ̃"
+      ],
+      "description": "Listen to the final vowel: oral /o/ or nasal /ɔ̃/. In these isolated words, the nasal spelling does not add a separate n consonant. The contrast can include vowel-quality differences as well as nasalization.",
+      "l1Notes": [
+        {
+          "nativeLanguage": "en",
+          "note": "Bon does not end with the n consonant of English bone. Listen to its complete vowel."
+        },
+        {
+          "nativeLanguage": "es",
+          "note": "Compare whole vowel categories. Adding a spoken n to /o/ is not the target for bon, pont, or ton."
+        }
+      ],
+      "pairs": [
+        {
+          "id": "fr-beau-bon",
+          "words": [
+            {
+              "text": "beau",
+              "ipa": "/bo/",
+              "meaning": "beautiful; masculine singular",
+              "phonemes": [
+                "b",
+                "o"
+              ]
+            },
+            {
+              "text": "bon",
+              "ipa": "/bɔ̃/",
+              "meaning": "good; masculine singular",
+              "phonemes": [
+                "b",
+                "ɔ̃"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.portail-lexical.fr/definition/tlfi/beau/adjectif",
+            "https://www.portail-lexical.fr/definition/tlfi/bon/adjectif"
+          ],
+          "validation": {
+            "text": "source-checked-candidate",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "final",
+            "trialGroup": "monosyllabic-final-vowel"
+          }
+        },
+        {
+          "id": "fr-peau-pont",
+          "words": [
+            {
+              "text": "peau",
+              "ipa": "/po/",
+              "meaning": "skin",
+              "phonemes": [
+                "p",
+                "o"
+              ]
+            },
+            {
+              "text": "pont",
+              "ipa": "/pɔ̃/",
+              "meaning": "bridge",
+              "phonemes": [
+                "p",
+                "ɔ̃"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.portail-lexical.fr/definition/tlfi/peau/nom",
+            "https://www.portail-lexical.fr/definition/tlfi/pont/nom"
+          ],
+          "validation": {
+            "text": "source-checked-candidate",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "final",
+            "trialGroup": "monosyllabic-final-vowel"
+          }
+        },
+        {
+          "id": "fr-taux-ton",
+          "words": [
+            {
+              "text": "taux",
+              "ipa": "/to/",
+              "meaning": "rate",
+              "phonemes": [
+                "t",
+                "o"
+              ]
+            },
+            {
+              "text": "ton",
+              "ipa": "/tɔ̃/",
+              "meaning": "tone; pitch of a voice",
+              "phonemes": [
+                "t",
+                "ɔ̃"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.portail-lexical.fr/definition/tlfi/taux/nom",
+            "https://www.portail-lexical.fr/definition/tlfi/ton/nom"
+          ],
+          "validation": {
+            "text": "source-checked-candidate",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "final",
+            "trialGroup": "monosyllabic-final-vowel"
+          }
+        }
+      ],
+      "dialectNote": "Northern reference Metropolitan French, in isolation. Broad /ɔ̃/ does not require a literal nasalized copy of oral /o/ or /ɔ/ in every voice. Bon here is isolated masculine /bɔ̃/; its feminine and some liaison forms are different. Do not merge this lesson with oral /o–ɔ/.",
+      "sources": [
+        "https://assta.org/proceedings/ICPhS2019Microsite/pdf/full-paper_37.pdf",
+        "https://experts.illinois.edu/en/publications/a-real-time-mri-investigation-of-the-role-of-lingual-and-pharynge/"
+      ],
+      "targetSoundFocus": "Listen to the final vowel. The first consonant or consonant cluster changes in X; match the vowel category, not the whole word.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the final vowel. The first consonant or consonant cluster changes in X; match the vowel category, not the whole word.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "o",
+          "ɔ̃"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "presentation": "audio-only-unless-explicit-text-assist"
+      },
+      "restoration": {
+        "legacyUrl": "/french/o-vs-on",
+        "legacyComponent": "X1",
+        "exactLegacyLabel": "o vs on (/o/ vs /ɔ̃/)",
+        "demandEvidence": "A saved customer case requested more French nasal-vowel work. This restores the distinct legacy /o–ɔ̃/ topic; it is not the already-covered /o–ɔ/ topic."
+      },
+      "guide": {
+        "title": "French /o/ vs /ɔ̃/ minimal pairs",
+        "intro": "Listen to the final vowel: oral /o/ or nasal /ɔ̃/. In these isolated words, the nasal spelling does not add a separate n consonant. The contrast can include vowel-quality differences as well as nasalization.",
+        "practiceInstruction": "Listen to A, B, and a different word X. Choose the reference with the same final vowel as X. Word text, spelling, IPA, and meanings stay hidden unless hints are explicitly enabled.",
+        "audioStatus": "Candidate only. Existing cached clips are generated and unreviewed; new words have no cached clips. No release or listening approval is implied."
+      }
+    }
+  ],
+  "baseSnapshot": {
+    "hashes": {
+      "rescue/content/curriculum.json": "cc3d926b744379a8d9e6535c8cb06ce30cd3795cd871398f40540861eb58b752",
+      "rescue/content/legacy-coverage.json": "6629304e604c883b3d5c8dc0b2989620e5987b4a9d3aa03c170c2b0aa09577b6",
+      "rescue/content/transfer-candidates.json": "a4e6193b99761d19365e06584ed70d2db2853fbe641684f429ccf32d6dd6eb11",
+      "rescue/app/public/audio/manifest.json": "37ee8bf1464770a61add57114c5b8ea8562bf559c6c46dd8e7f5e27d7b8e98d7"
+    },
+    "currentContrasts": 46,
+    "currentPairs": 138
+  }
+}

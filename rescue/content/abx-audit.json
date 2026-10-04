@@ -1,0 +1,1303 @@
+{
+  "date": "2026-09-28",
+  "pairs": 144,
+  "contrasts": 48,
+  "passed": 144,
+  "failures": [],
+  "validCrossWordCategoryTrials": 568,
+  "limitation": "Checks authored phoneme/category order and different-word candidate availability, not audio pronunciation or learning efficacy. Display A/B roles may be swapped independently of word category index.",
+  "rows": [
+    {
+      "id": "en-ship-sheep",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "en-fill-feel",
+        "en-sit-seat"
+      ]
+    },
+    {
+      "id": "en-fill-feel",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "en-ship-sheep",
+        "en-sit-seat"
+      ]
+    },
+    {
+      "id": "en-sit-seat",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "en-ship-sheep",
+        "en-fill-feel"
+      ]
+    },
+    {
+      "id": "en-right-light",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "en-road-load",
+        "en-rice-lice"
+      ]
+    },
+    {
+      "id": "en-road-load",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "en-right-light",
+        "en-rice-lice"
+      ]
+    },
+    {
+      "id": "en-rice-lice",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "en-right-light",
+        "en-road-load"
+      ]
+    },
+    {
+      "id": "en-thin-sin",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "en-thick-sick",
+        "en-thigh-sigh"
+      ]
+    },
+    {
+      "id": "en-thick-sick",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "en-thin-sin",
+        "en-thigh-sigh"
+      ]
+    },
+    {
+      "id": "en-thigh-sigh",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "en-thin-sin",
+        "en-thick-sick"
+      ]
+    },
+    {
+      "id": "en-lesion-legion",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "en-pleasure-pledger",
+        "en-version-virgin"
+      ]
+    },
+    {
+      "id": "en-pleasure-pledger",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "en-lesion-legion",
+        "en-version-virgin"
+      ]
+    },
+    {
+      "id": "en-version-virgin",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "en-lesion-legion",
+        "en-pleasure-pledger"
+      ]
+    },
+    {
+      "id": "en-put-putt",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "en-look-luck",
+        "en-book-buck"
+      ]
+    },
+    {
+      "id": "en-look-luck",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "en-put-putt",
+        "en-book-buck"
+      ]
+    },
+    {
+      "id": "en-book-buck",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "en-put-putt",
+        "en-look-luck"
+      ]
+    },
+    {
+      "id": "en-cat-cut",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "en-cap-cup",
+        "en-lack-luck"
+      ]
+    },
+    {
+      "id": "en-cap-cup",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "en-cat-cut",
+        "en-lack-luck"
+      ]
+    },
+    {
+      "id": "en-lack-luck",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "en-cat-cut",
+        "en-cap-cup"
+      ]
+    },
+    {
+      "id": "fr-tout-tu",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-vous-vu",
+        "fr-roue-rue",
+        "fr-bout-bu"
+      ]
+    },
+    {
+      "id": "fr-vous-vu",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-tout-tu",
+        "fr-roue-rue",
+        "fr-bout-bu"
+      ]
+    },
+    {
+      "id": "fr-roue-rue",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-tout-tu",
+        "fr-vous-vu",
+        "fr-bout-bu"
+      ]
+    },
+    {
+      "id": "fr-bout-bu",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-tout-tu",
+        "fr-vous-vu",
+        "fr-roue-rue"
+      ]
+    },
+    {
+      "id": "fr-banc-bon",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-pan-pont",
+        "fr-tant-ton"
+      ]
+    },
+    {
+      "id": "fr-pan-pont",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-banc-bon",
+        "fr-tant-ton"
+      ]
+    },
+    {
+      "id": "fr-tant-ton",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-banc-bon",
+        "fr-pan-pont"
+      ]
+    },
+    {
+      "id": "fr-poisson-poison",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "fr-coussin-cousin",
+        "fr-basse-base"
+      ]
+    },
+    {
+      "id": "fr-coussin-cousin",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "fr-poisson-poison",
+        "fr-basse-base"
+      ]
+    },
+    {
+      "id": "fr-basse-base",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-poisson-poison",
+        "fr-coussin-cousin"
+      ]
+    },
+    {
+      "id": "fr-pre-pret",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-the-taie",
+        "fr-de-dais"
+      ]
+    },
+    {
+      "id": "fr-the-taie",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-pre-pret",
+        "fr-de-dais"
+      ]
+    },
+    {
+      "id": "fr-de-dais",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-pre-pret",
+        "fr-the-taie"
+      ]
+    },
+    {
+      "id": "fr-bain-bon",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-pin-pont",
+        "fr-teint-ton"
+      ]
+    },
+    {
+      "id": "fr-pin-pont",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-bain-bon",
+        "fr-teint-ton"
+      ]
+    },
+    {
+      "id": "fr-teint-ton",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-bain-bon",
+        "fr-pin-pont"
+      ]
+    },
+    {
+      "id": "fr-banc-bain",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-pan-pain",
+        "fr-temps-teint"
+      ]
+    },
+    {
+      "id": "fr-pan-pain",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-banc-bain",
+        "fr-temps-teint"
+      ]
+    },
+    {
+      "id": "fr-temps-teint",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-banc-bain",
+        "fr-pan-pain"
+      ]
+    },
+    {
+      "id": "fr-paume-pomme",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "fr-cote-cote",
+        "fr-saute-sotte"
+      ]
+    },
+    {
+      "id": "fr-cote-cote",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "fr-paume-pomme",
+        "fr-saute-sotte"
+      ]
+    },
+    {
+      "id": "fr-saute-sotte",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "fr-paume-pomme",
+        "fr-cote-cote"
+      ]
+    },
+    {
+      "id": "fr-beau-peau",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-bain-pain",
+        "fr-boule-poule"
+      ]
+    },
+    {
+      "id": "fr-bain-pain",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-beau-peau",
+        "fr-boule-poule"
+      ]
+    },
+    {
+      "id": "fr-boule-poule",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-beau-peau",
+        "fr-bain-pain"
+      ]
+    },
+    {
+      "id": "fr-joue-chou",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-gens-champ",
+        "fr-geai-chai"
+      ]
+    },
+    {
+      "id": "fr-gens-champ",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-joue-chou",
+        "fr-geai-chai"
+      ]
+    },
+    {
+      "id": "fr-geai-chai",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-joue-chou",
+        "fr-gens-champ"
+      ]
+    },
+    {
+      "id": "fr-rue-riz",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-bulle-bile",
+        "fr-pur-pire"
+      ]
+    },
+    {
+      "id": "fr-bulle-bile",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "fr-rue-riz",
+        "fr-pur-pire"
+      ]
+    },
+    {
+      "id": "fr-pur-pire",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "fr-rue-riz",
+        "fr-bulle-bile"
+      ]
+    },
+    {
+      "id": "fr-jus-jeu",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-du-deux",
+        "fr-cru-creux"
+      ]
+    },
+    {
+      "id": "fr-du-deux",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-jus-jeu",
+        "fr-cru-creux"
+      ]
+    },
+    {
+      "id": "fr-cru-creux",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-jus-jeu",
+        "fr-du-deux"
+      ]
+    },
+    {
+      "id": "fr-cou-queue",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-doux-deux",
+        "fr-nous-noeud"
+      ]
+    },
+    {
+      "id": "fr-doux-deux",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-cou-queue",
+        "fr-nous-noeud"
+      ]
+    },
+    {
+      "id": "fr-nous-noeud",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-cou-queue",
+        "fr-doux-deux"
+      ]
+    },
+    {
+      "id": "fr-fee-feu",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-de-deux",
+        "fr-pre-preux"
+      ]
+    },
+    {
+      "id": "fr-de-deux",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-fee-feu",
+        "fr-pre-preux"
+      ]
+    },
+    {
+      "id": "fr-pre-preux",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-fee-feu",
+        "fr-de-deux"
+      ]
+    },
+    {
+      "id": "fr-pere-peur",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "fr-serre-soeur",
+        "fr-air-heure"
+      ]
+    },
+    {
+      "id": "fr-serre-soeur",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "fr-pere-peur",
+        "fr-air-heure"
+      ]
+    },
+    {
+      "id": "fr-air-heure",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-pere-peur",
+        "fr-serre-soeur"
+      ]
+    },
+    {
+      "id": "fr-doux-tout",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-dos-taux",
+        "fr-dent-temps"
+      ]
+    },
+    {
+      "id": "fr-dos-taux",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-doux-tout",
+        "fr-dent-temps"
+      ]
+    },
+    {
+      "id": "fr-dent-temps",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-doux-tout",
+        "fr-dos-taux"
+      ]
+    },
+    {
+      "id": "fr-gout-cou",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-gant-camp",
+        "fr-gomme-comme"
+      ]
+    },
+    {
+      "id": "fr-gant-camp",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-gout-cou",
+        "fr-gomme-comme"
+      ]
+    },
+    {
+      "id": "fr-gomme-comme",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-gout-cou",
+        "fr-gant-camp"
+      ]
+    },
+    {
+      "id": "fr-vin-fin",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-veau-faux",
+        "fr-vous-fou"
+      ]
+    },
+    {
+      "id": "fr-veau-faux",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-vin-fin",
+        "fr-vous-fou"
+      ]
+    },
+    {
+      "id": "fr-vous-fou",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-vin-fin",
+        "fr-veau-faux"
+      ]
+    },
+    {
+      "id": "fr-beau-veau",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-bain-vain",
+        "fr-bile-ville"
+      ]
+    },
+    {
+      "id": "fr-bain-vain",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-beau-veau",
+        "fr-bile-ville"
+      ]
+    },
+    {
+      "id": "fr-bile-ville",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-beau-veau",
+        "fr-bain-vain"
+      ]
+    },
+    {
+      "id": "fr-chou-sou",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-chaud-saut",
+        "fr-choix-soie"
+      ]
+    },
+    {
+      "id": "fr-chaud-saut",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-chou-sou",
+        "fr-choix-soie"
+      ]
+    },
+    {
+      "id": "fr-choix-soie",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-chou-sou",
+        "fr-chaud-saut"
+      ]
+    },
+    {
+      "id": "fr-lit-riz",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-lait-raie",
+        "fr-lame-rame"
+      ]
+    },
+    {
+      "id": "fr-lait-raie",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-lit-riz",
+        "fr-lame-rame"
+      ]
+    },
+    {
+      "id": "fr-lame-rame",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "fr-lit-riz",
+        "fr-lait-raie"
+      ]
+    },
+    {
+      "id": "fr-peine-peigne",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-panne-pagne",
+        "fr-reine-regne"
+      ]
+    },
+    {
+      "id": "fr-panne-pagne",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-peine-peigne",
+        "fr-reine-regne"
+      ]
+    },
+    {
+      "id": "fr-reine-regne",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-peine-peigne",
+        "fr-panne-pagne"
+      ]
+    },
+    {
+      "id": "fr-beau-bout",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-veau-vous",
+        "fr-saut-sou"
+      ]
+    },
+    {
+      "id": "fr-veau-vous",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-beau-bout",
+        "fr-saut-sou"
+      ]
+    },
+    {
+      "id": "fr-saut-sou",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-beau-bout",
+        "fr-veau-vous"
+      ]
+    },
+    {
+      "id": "fr-beau-bon",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-peau-pont",
+        "fr-taux-ton"
+      ]
+    },
+    {
+      "id": "fr-peau-pont",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-beau-bon",
+        "fr-taux-ton"
+      ]
+    },
+    {
+      "id": "fr-taux-ton",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "fr-beau-bon",
+        "fr-peau-pont"
+      ]
+    },
+    {
+      "id": "de-musste-muesste",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "de-wurde-wuerde",
+        "de-mutter-muetter"
+      ]
+    },
+    {
+      "id": "de-wurde-wuerde",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "de-musste-muesste",
+        "de-mutter-muetter"
+      ]
+    },
+    {
+      "id": "de-mutter-muetter",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "de-musste-muesste",
+        "de-wurde-wuerde"
+      ]
+    },
+    {
+      "id": "de-bitten-bieten",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "de-mitte-miete",
+        "de-schiff-schief"
+      ]
+    },
+    {
+      "id": "de-mitte-miete",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "de-bitten-bieten",
+        "de-schiff-schief"
+      ]
+    },
+    {
+      "id": "de-schiff-schief",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "de-bitten-bieten",
+        "de-mitte-miete"
+      ]
+    },
+    {
+      "id": "de-reissen-reisen",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "de-weisse-weise",
+        "de-musse-muse"
+      ]
+    },
+    {
+      "id": "de-weisse-weise",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "de-reissen-reisen",
+        "de-musse-muse"
+      ]
+    },
+    {
+      "id": "de-musse-muse",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "de-reissen-reisen",
+        "de-weisse-weise"
+      ]
+    },
+    {
+      "id": "de-schon-schoen",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "de-rohre-roehre",
+        "de-rote-roete"
+      ]
+    },
+    {
+      "id": "de-rohre-roehre",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "de-schon-schoen",
+        "de-rote-roete"
+      ]
+    },
+    {
+      "id": "de-rote-roete",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "de-schon-schoen",
+        "de-rohre-roehre"
+      ]
+    },
+    {
+      "id": "es-caro-carro",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "es-pero-perro",
+        "es-coro-corro"
+      ]
+    },
+    {
+      "id": "es-pero-perro",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "es-caro-carro",
+        "es-coro-corro"
+      ]
+    },
+    {
+      "id": "es-coro-corro",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "es-caro-carro",
+        "es-pero-perro"
+      ]
+    },
+    {
+      "id": "es-peso-beso",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "es-pata-bata",
+        "es-pala-bala"
+      ]
+    },
+    {
+      "id": "es-pata-bata",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "es-peso-beso",
+        "es-pala-bala"
+      ]
+    },
+    {
+      "id": "es-pala-bala",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "es-peso-beso",
+        "es-pata-bata"
+      ]
+    },
+    {
+      "id": "es-hablo-hablo-past",
+      "categoryOrderAligned": true,
+      "targetPosition": "word-stress",
+      "eligibleXPairIds": [
+        "es-canto-canto-past",
+        "es-tomo-tomo-past"
+      ]
+    },
+    {
+      "id": "es-canto-canto-past",
+      "categoryOrderAligned": true,
+      "targetPosition": "word-stress",
+      "eligibleXPairIds": [
+        "es-hablo-hablo-past",
+        "es-tomo-tomo-past"
+      ]
+    },
+    {
+      "id": "es-tomo-tomo-past",
+      "categoryOrderAligned": true,
+      "targetPosition": "word-stress",
+      "eligibleXPairIds": [
+        "es-hablo-hablo-past",
+        "es-canto-canto-past"
+      ]
+    },
+    {
+      "id": "it-pala-palla",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "it-fato-fatto",
+        "it-pena-penna"
+      ]
+    },
+    {
+      "id": "it-fato-fatto",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "it-pala-palla",
+        "it-pena-penna"
+      ]
+    },
+    {
+      "id": "it-pena-penna",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "it-pala-palla",
+        "it-fato-fatto"
+      ]
+    },
+    {
+      "id": "it-fino-vino",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "it-faro-varo",
+        "it-finto-vinto"
+      ]
+    },
+    {
+      "id": "it-faro-varo",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "it-fino-vino",
+        "it-finto-vinto"
+      ]
+    },
+    {
+      "id": "it-finto-vinto",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "it-fino-vino",
+        "it-faro-varo"
+      ]
+    },
+    {
+      "id": "it-panca-banca",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "it-pasta-basta",
+        "it-pelle-belle"
+      ]
+    },
+    {
+      "id": "it-pasta-basta",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "it-panca-banca",
+        "it-pelle-belle"
+      ]
+    },
+    {
+      "id": "it-pelle-belle",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "it-panca-banca",
+        "it-pasta-basta"
+      ]
+    },
+    {
+      "id": "zh-ma1-ma4",
+      "categoryOrderAligned": true,
+      "targetPosition": "whole-syllable",
+      "eligibleXPairIds": [
+        "zh-shu1-shu4",
+        "zh-tang1-tang4"
+      ]
+    },
+    {
+      "id": "zh-shu1-shu4",
+      "categoryOrderAligned": true,
+      "targetPosition": "whole-syllable",
+      "eligibleXPairIds": [
+        "zh-ma1-ma4",
+        "zh-tang1-tang4"
+      ]
+    },
+    {
+      "id": "zh-tang1-tang4",
+      "categoryOrderAligned": true,
+      "targetPosition": "whole-syllable",
+      "eligibleXPairIds": [
+        "zh-ma1-ma4",
+        "zh-shu1-shu4"
+      ]
+    },
+    {
+      "id": "zh-ma2-ma3",
+      "categoryOrderAligned": true,
+      "targetPosition": "whole-syllable",
+      "eligibleXPairIds": [
+        "zh-yu2-yu3",
+        "zh-pi2-pi3"
+      ]
+    },
+    {
+      "id": "zh-yu2-yu3",
+      "categoryOrderAligned": true,
+      "targetPosition": "whole-syllable",
+      "eligibleXPairIds": [
+        "zh-ma2-ma3",
+        "zh-pi2-pi3"
+      ]
+    },
+    {
+      "id": "zh-pi2-pi3",
+      "categoryOrderAligned": true,
+      "targetPosition": "whole-syllable",
+      "eligibleXPairIds": [
+        "zh-ma2-ma3",
+        "zh-yu2-yu3"
+      ]
+    },
+    {
+      "id": "zh-ma1-ma2",
+      "categoryOrderAligned": true,
+      "targetPosition": "whole-syllable",
+      "eligibleXPairIds": [
+        "zh-shi1-shi2",
+        "zh-ba1-ba2"
+      ]
+    },
+    {
+      "id": "zh-shi1-shi2",
+      "categoryOrderAligned": true,
+      "targetPosition": "whole-syllable",
+      "eligibleXPairIds": [
+        "zh-ma1-ma2",
+        "zh-ba1-ba2"
+      ]
+    },
+    {
+      "id": "zh-ba1-ba2",
+      "categoryOrderAligned": true,
+      "targetPosition": "whole-syllable",
+      "eligibleXPairIds": [
+        "zh-ma1-ma2",
+        "zh-shi1-shi2"
+      ]
+    },
+    {
+      "id": "pt-faca-vaca",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "pt-fila-vila",
+        "pt-fala-vala"
+      ]
+    },
+    {
+      "id": "pt-fila-vila",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "pt-faca-vaca",
+        "pt-fala-vala"
+      ]
+    },
+    {
+      "id": "pt-fala-vala",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "pt-faca-vaca",
+        "pt-fila-vila"
+      ]
+    },
+    {
+      "id": "pt-caca-casa",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "pt-assa-asa",
+        "pt-caco-caso"
+      ]
+    },
+    {
+      "id": "pt-assa-asa",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "pt-caca-casa",
+        "pt-caco-caso"
+      ]
+    },
+    {
+      "id": "pt-caco-caso",
+      "categoryOrderAligned": true,
+      "targetPosition": "medial",
+      "eligibleXPairIds": [
+        "pt-caca-casa",
+        "pt-assa-asa"
+      ]
+    },
+    {
+      "id": "pt-pata-bata",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "pt-pala-bala",
+        "pt-pato-bato"
+      ]
+    },
+    {
+      "id": "pt-pala-bala",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "pt-pata-bata",
+        "pt-pato-bato"
+      ]
+    },
+    {
+      "id": "pt-pato-bato",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "pt-pata-bata",
+        "pt-pala-bala"
+      ]
+    },
+    {
+      "id": "ru-luk-lyuk",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "ru-nos-nyos"
+      ]
+    },
+    {
+      "id": "ru-nos-nyos",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "ru-luk-lyuk"
+      ]
+    },
+    {
+      "id": "ru-mat-matsoft",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "ru-ugol-ugolsoft"
+      ]
+    },
+    {
+      "id": "ru-ugol-ugolsoft",
+      "categoryOrderAligned": true,
+      "targetPosition": "final",
+      "eligibleXPairIds": [
+        "ru-mat-matsoft"
+      ]
+    },
+    {
+      "id": "ru-sok-shok",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "ru-sutki-shutki"
+      ]
+    },
+    {
+      "id": "ru-sutki-shutki",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "ru-sok-shok"
+      ]
+    },
+    {
+      "id": "ru-dom-tom",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "ru-dochka-tochka"
+      ]
+    },
+    {
+      "id": "ru-dochka-tochka",
+      "categoryOrderAligned": true,
+      "targetPosition": "initial",
+      "eligibleXPairIds": [
+        "ru-dom-tom"
+      ]
+    }
+  ]
+}

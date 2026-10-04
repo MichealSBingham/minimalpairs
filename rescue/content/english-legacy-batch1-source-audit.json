@@ -1,0 +1,315 @@
+{
+  "date": "2026-09-28",
+  "limitation": "Dictionary facts and broad-notation matching do not validate generated audio. Cambridge US pronunciation blocks only; selected Collins Webster’s New World American entries for pledger/version/virgin. No dictionary recordings or definition paragraphs are copied.",
+  "words": [
+    {
+      "word": "lesion",
+      "source": "Cambridge Dictionary, US pronunciation blocks",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/lesion",
+      "retrievedUsIpa": [
+        "ˈliː.ʒən",
+        "ˈli·ʒən"
+      ],
+      "status": "pronunciation-read",
+      "editorialBroadIpa": "ˈliʒən",
+      "dictionaryBroadIpaCandidates": [
+        "ˈliʒən",
+        "ˈliʒən"
+      ],
+      "broadIpaMatchesRetrievedUs": true,
+      "normalization": "Cambridge /e/ is represented as DRESS /ɛ/; /iː/ as /i/; syllable dots removed; rhotic /ər/ written /ɚ/ and /ɜr/ as /ɝ/. Stress preserved. These are declared broad-notation equivalents, not audio modifications."
+    },
+    {
+      "word": "legion",
+      "source": "Cambridge Dictionary, US pronunciation blocks",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/legion",
+      "retrievedUsIpa": [
+        "ˈliː.dʒən",
+        "ˈli·dʒən"
+      ],
+      "status": "pronunciation-read",
+      "editorialBroadIpa": "ˈlidʒən",
+      "dictionaryBroadIpaCandidates": [
+        "ˈlidʒən",
+        "ˈlidʒən"
+      ],
+      "broadIpaMatchesRetrievedUs": true,
+      "normalization": "Cambridge /e/ is represented as DRESS /ɛ/; /iː/ as /i/; syllable dots removed; rhotic /ər/ written /ɚ/ and /ɜr/ as /ɝ/. Stress preserved. These are declared broad-notation equivalents, not audio modifications."
+    },
+    {
+      "word": "pleasure",
+      "source": "Cambridge Dictionary, US pronunciation blocks",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/pleasure",
+      "retrievedUsIpa": [
+        "ˈpleʒ.ɚ",
+        "ˈpleʒ·ər"
+      ],
+      "status": "pronunciation-read",
+      "editorialBroadIpa": "ˈplɛʒɚ",
+      "dictionaryBroadIpaCandidates": [
+        "ˈplɛʒɚ",
+        "ˈplɛʒɚ"
+      ],
+      "broadIpaMatchesRetrievedUs": true,
+      "normalization": "Cambridge /e/ is represented as DRESS /ɛ/; /iː/ as /i/; syllable dots removed; rhotic /ər/ written /ɚ/ and /ɜr/ as /ɝ/. Stress preserved. These are declared broad-notation equivalents, not audio modifications."
+    },
+    {
+      "word": "pledger",
+      "source": "Webster’s New World College Dictionary via Collins, explicitly American English",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/pledger",
+      "supportingUrls": [
+        "https://www.merriam-webster.com/dictionary/pledger"
+      ],
+      "retrievedUsIpa": [
+        "ˈplɛdʒər"
+      ],
+      "retrieval": "American entry read through web tool on 2026-09-28; dictionary edition identified separately from other entries on the same page.",
+      "status": "pronunciation-read",
+      "editorialBroadIpa": "ˈplɛdʒɚ",
+      "dictionaryBroadIpaCandidates": [
+        "ˈplɛdʒɚ"
+      ],
+      "broadIpaMatchesRetrievedUs": true,
+      "normalization": "Cambridge /e/ is represented as DRESS /ɛ/; /iː/ as /i/; syllable dots removed; rhotic /ər/ written /ɚ/ and /ɜr/ as /ɝ/. Stress preserved. These are declared broad-notation equivalents, not audio modifications."
+    },
+    {
+      "word": "version",
+      "source": "Webster’s New World College Dictionary via Collins, explicitly American English",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/version",
+      "supportingUrls": [],
+      "retrievedUsIpa": [
+        "ˈvɜrʒən",
+        "ˈvɜrʃən"
+      ],
+      "retrieval": "American entry read through web tool on 2026-09-28; dictionary edition identified separately from other entries on the same page.",
+      "status": "pronunciation-read",
+      "editorialBroadIpa": "ˈvɝʒən",
+      "dictionaryBroadIpaCandidates": [
+        "ˈvɝʒən",
+        "ˈvɝʃən"
+      ],
+      "broadIpaMatchesRetrievedUs": true,
+      "normalization": "Cambridge /e/ is represented as DRESS /ɛ/; /iː/ as /i/; syllable dots removed; rhotic /ər/ written /ɚ/ and /ɜr/ as /ɝ/. Stress preserved. These are declared broad-notation equivalents, not audio modifications."
+    },
+    {
+      "word": "virgin",
+      "source": "Webster’s New World College Dictionary via Collins, explicitly American English",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/virgin",
+      "supportingUrls": [],
+      "retrievedUsIpa": [
+        "ˈvɜrdʒən"
+      ],
+      "retrieval": "American entry read through web tool on 2026-09-28; dictionary edition identified separately from other entries on the same page.",
+      "status": "pronunciation-read",
+      "editorialBroadIpa": "ˈvɝdʒən",
+      "dictionaryBroadIpaCandidates": [
+        "ˈvɝdʒən"
+      ],
+      "broadIpaMatchesRetrievedUs": true,
+      "normalization": "Cambridge /e/ is represented as DRESS /ɛ/; /iː/ as /i/; syllable dots removed; rhotic /ər/ written /ɚ/ and /ɜr/ as /ɝ/. Stress preserved. These are declared broad-notation equivalents, not audio modifications."
+    },
+    {
+      "word": "put",
+      "source": "Cambridge Dictionary, US pronunciation blocks",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/put",
+      "retrievedUsIpa": [
+        "pʊt"
+      ],
+      "status": "pronunciation-read",
+      "editorialBroadIpa": "pʊt",
+      "dictionaryBroadIpaCandidates": [
+        "pʊt"
+      ],
+      "broadIpaMatchesRetrievedUs": true,
+      "normalization": "Cambridge /e/ is represented as DRESS /ɛ/; /iː/ as /i/; syllable dots removed; rhotic /ər/ written /ɚ/ and /ɜr/ as /ɝ/. Stress preserved. These are declared broad-notation equivalents, not audio modifications."
+    },
+    {
+      "word": "putt",
+      "source": "Cambridge Dictionary, US pronunciation blocks",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/putt",
+      "retrievedUsIpa": [
+        "pʌt"
+      ],
+      "status": "pronunciation-read",
+      "editorialBroadIpa": "pʌt",
+      "dictionaryBroadIpaCandidates": [
+        "pʌt"
+      ],
+      "broadIpaMatchesRetrievedUs": true,
+      "normalization": "Cambridge /e/ is represented as DRESS /ɛ/; /iː/ as /i/; syllable dots removed; rhotic /ər/ written /ɚ/ and /ɜr/ as /ɝ/. Stress preserved. These are declared broad-notation equivalents, not audio modifications."
+    },
+    {
+      "word": "look",
+      "source": "Cambridge Dictionary, US pronunciation blocks",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/look",
+      "retrievedUsIpa": [
+        "lʊk"
+      ],
+      "status": "pronunciation-read",
+      "editorialBroadIpa": "lʊk",
+      "dictionaryBroadIpaCandidates": [
+        "lʊk"
+      ],
+      "broadIpaMatchesRetrievedUs": true,
+      "normalization": "Cambridge /e/ is represented as DRESS /ɛ/; /iː/ as /i/; syllable dots removed; rhotic /ər/ written /ɚ/ and /ɜr/ as /ɝ/. Stress preserved. These are declared broad-notation equivalents, not audio modifications."
+    },
+    {
+      "word": "luck",
+      "source": "Cambridge Dictionary, US pronunciation blocks",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/luck",
+      "retrievedUsIpa": [
+        "lʌk"
+      ],
+      "status": "pronunciation-read",
+      "editorialBroadIpa": "lʌk",
+      "dictionaryBroadIpaCandidates": [
+        "lʌk"
+      ],
+      "broadIpaMatchesRetrievedUs": true,
+      "normalization": "Cambridge /e/ is represented as DRESS /ɛ/; /iː/ as /i/; syllable dots removed; rhotic /ər/ written /ɚ/ and /ɜr/ as /ɝ/. Stress preserved. These are declared broad-notation equivalents, not audio modifications."
+    },
+    {
+      "word": "book",
+      "source": "Cambridge Dictionary, US pronunciation blocks",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/book",
+      "retrievedUsIpa": [
+        "bʊk"
+      ],
+      "status": "pronunciation-read",
+      "editorialBroadIpa": "bʊk",
+      "dictionaryBroadIpaCandidates": [
+        "bʊk"
+      ],
+      "broadIpaMatchesRetrievedUs": true,
+      "normalization": "Cambridge /e/ is represented as DRESS /ɛ/; /iː/ as /i/; syllable dots removed; rhotic /ər/ written /ɚ/ and /ɜr/ as /ɝ/. Stress preserved. These are declared broad-notation equivalents, not audio modifications."
+    },
+    {
+      "word": "buck",
+      "source": "Cambridge Dictionary, US pronunciation blocks",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/buck",
+      "retrievedUsIpa": [
+        "bʌk"
+      ],
+      "status": "pronunciation-read",
+      "editorialBroadIpa": "bʌk",
+      "dictionaryBroadIpaCandidates": [
+        "bʌk"
+      ],
+      "broadIpaMatchesRetrievedUs": true,
+      "normalization": "Cambridge /e/ is represented as DRESS /ɛ/; /iː/ as /i/; syllable dots removed; rhotic /ər/ written /ɚ/ and /ɜr/ as /ɝ/. Stress preserved. These are declared broad-notation equivalents, not audio modifications."
+    },
+    {
+      "word": "cat",
+      "source": "Cambridge Dictionary, US pronunciation blocks",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/cat",
+      "retrievedUsIpa": [
+        "kæt"
+      ],
+      "status": "pronunciation-read",
+      "editorialBroadIpa": "kæt",
+      "dictionaryBroadIpaCandidates": [
+        "kæt"
+      ],
+      "broadIpaMatchesRetrievedUs": true,
+      "normalization": "Cambridge /e/ is represented as DRESS /ɛ/; /iː/ as /i/; syllable dots removed; rhotic /ər/ written /ɚ/ and /ɜr/ as /ɝ/. Stress preserved. These are declared broad-notation equivalents, not audio modifications."
+    },
+    {
+      "word": "cut",
+      "source": "Cambridge Dictionary, US pronunciation blocks",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/cut",
+      "retrievedUsIpa": [
+        "kʌt"
+      ],
+      "status": "pronunciation-read",
+      "editorialBroadIpa": "kʌt",
+      "dictionaryBroadIpaCandidates": [
+        "kʌt"
+      ],
+      "broadIpaMatchesRetrievedUs": true,
+      "normalization": "Cambridge /e/ is represented as DRESS /ɛ/; /iː/ as /i/; syllable dots removed; rhotic /ər/ written /ɚ/ and /ɜr/ as /ɝ/. Stress preserved. These are declared broad-notation equivalents, not audio modifications."
+    },
+    {
+      "word": "cap",
+      "source": "Cambridge Dictionary, US pronunciation blocks",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/cap",
+      "retrievedUsIpa": [
+        "kæp"
+      ],
+      "status": "pronunciation-read",
+      "editorialBroadIpa": "kæp",
+      "dictionaryBroadIpaCandidates": [
+        "kæp"
+      ],
+      "broadIpaMatchesRetrievedUs": true,
+      "normalization": "Cambridge /e/ is represented as DRESS /ɛ/; /iː/ as /i/; syllable dots removed; rhotic /ər/ written /ɚ/ and /ɜr/ as /ɝ/. Stress preserved. These are declared broad-notation equivalents, not audio modifications."
+    },
+    {
+      "word": "cup",
+      "source": "Cambridge Dictionary, US pronunciation blocks",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/cup",
+      "retrievedUsIpa": [
+        "kʌp",
+        "ˌsiː ˌjuː ˈpiː"
+      ],
+      "status": "pronunciation-read",
+      "editorialBroadIpa": "kʌp",
+      "dictionaryBroadIpaCandidates": [
+        "kʌp",
+        "ˌsi ˌju ˈpi"
+      ],
+      "broadIpaMatchesRetrievedUs": true,
+      "normalization": "Cambridge /e/ is represented as DRESS /ɛ/; /iː/ as /i/; syllable dots removed; rhotic /ər/ written /ɚ/ and /ɜr/ as /ɝ/. Stress preserved. These are declared broad-notation equivalents, not audio modifications."
+    },
+    {
+      "word": "lack",
+      "source": "Cambridge Dictionary, US pronunciation blocks",
+      "referenceUrl": "https://dictionary.cambridge.org/dictionary/english/lack",
+      "retrievedUsIpa": [
+        "læk"
+      ],
+      "status": "pronunciation-read",
+      "editorialBroadIpa": "læk",
+      "dictionaryBroadIpaCandidates": [
+        "læk"
+      ],
+      "broadIpaMatchesRetrievedUs": true,
+      "normalization": "Cambridge /e/ is represented as DRESS /ɛ/; /iː/ as /i/; syllable dots removed; rhotic /ər/ written /ɚ/ and /ɜr/ as /ɝ/. Stress preserved. These are declared broad-notation equivalents, not audio modifications."
+    }
+  ],
+  "excludedCandidates": [
+    {
+      "pair": [
+        "leisure",
+        "ledger"
+      ],
+      "reason": "Cambridge primary US leisure is /ˈliː.ʒɚ/; Collins American ledger is /ˈlɛdʒər/. This would also change the stressed vowel. A secondary American /ɛ/ variant of leisure exists, but is not silently imposed on this starter.",
+      "sources": [
+        "https://dictionary.cambridge.org/dictionary/english/leisure",
+        "https://www.collinsdictionary.com/us/dictionary/english/ledger"
+      ]
+    },
+    {
+      "pair": [
+        "lesions",
+        "legions"
+      ],
+      "reason": "Regular plurals would add no independent lexical frames. Not used merely to inflate the sparse contrast count.",
+      "sources": [
+        "https://dictionary.cambridge.org/dictionary/english/lesion",
+        "https://dictionary.cambridge.org/dictionary/english/legion"
+      ]
+    }
+  ],
+  "conditionalPair": {
+    "pair": [
+      "version",
+      "virgin"
+    ],
+    "selectedReading": "Shared final schwa: /ˈvɝʒən–ˈvɝdʒən/. Both selected transcriptions occur in Webster’s New World American entries on Collins.",
+    "caution": "Another American entry on the same virgin page gives final /ɪ/. That variant would add a vowel difference. Version also has a voiceless /ʃ/ variant; it is not the target here. Audio review must select the explicitly authored readings.",
+    "sources": [
+      "https://www.collinsdictionary.com/us/dictionary/english/version",
+      "https://www.collinsdictionary.com/us/dictionary/english/virgin"
+    ]
+  }
+}

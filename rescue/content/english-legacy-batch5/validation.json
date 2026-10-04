@@ -1,0 +1,363 @@
+{
+  "passed": true,
+  "errors": [],
+  "contrasts": 4,
+  "pairs": 12,
+  "uniqueWords": 24,
+  "eligibleReferencePairXWordCategoryCombinations": 48,
+  "requiredCompleteCollectionClips": 48,
+  "pairChecks": [
+    {
+      "pairId": "en-they-day",
+      "targetPosition": "initial",
+      "targetTokenIndex": 0,
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "then",
+          "though"
+        ],
+        [
+          "den",
+          "dough"
+        ]
+      ],
+      "requiredLocale": "en-US"
+    },
+    {
+      "pairId": "en-then-den",
+      "targetPosition": "initial",
+      "targetTokenIndex": 0,
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "they",
+          "though"
+        ],
+        [
+          "day",
+          "dough"
+        ]
+      ],
+      "requiredLocale": "en-US"
+    },
+    {
+      "pairId": "en-though-dough",
+      "targetPosition": "initial",
+      "targetTokenIndex": 0,
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "they",
+          "then"
+        ],
+        [
+          "day",
+          "den"
+        ]
+      ],
+      "requiredLocale": "en-US"
+    },
+    {
+      "pairId": "en-breathe-breeze",
+      "targetPosition": "final",
+      "targetTokenIndex": 3,
+      "differingTokenIndices": [
+        3
+      ],
+      "xChoicesByCategory": [
+        [
+          "seethe",
+          "teethe"
+        ],
+        [
+          "seize",
+          "tease"
+        ]
+      ],
+      "requiredLocale": "en-US"
+    },
+    {
+      "pairId": "en-seethe-seize",
+      "targetPosition": "final",
+      "targetTokenIndex": 2,
+      "differingTokenIndices": [
+        2
+      ],
+      "xChoicesByCategory": [
+        [
+          "breathe",
+          "teethe"
+        ],
+        [
+          "breeze",
+          "tease"
+        ]
+      ],
+      "requiredLocale": "en-US"
+    },
+    {
+      "pairId": "en-teethe-tease",
+      "targetPosition": "final",
+      "targetTokenIndex": 2,
+      "differingTokenIndices": [
+        2
+      ],
+      "xChoicesByCategory": [
+        [
+          "breathe",
+          "seethe"
+        ],
+        [
+          "breeze",
+          "seize"
+        ]
+      ],
+      "requiredLocale": "en-US"
+    },
+    {
+      "pairId": "en-very-berry",
+      "targetPosition": "initial",
+      "targetTokenIndex": 0,
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "vote",
+          "volt"
+        ],
+        [
+          "boat",
+          "bolt"
+        ]
+      ],
+      "requiredLocale": "en-US"
+    },
+    {
+      "pairId": "en-vote-boat",
+      "targetPosition": "initial",
+      "targetTokenIndex": 0,
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "very",
+          "volt"
+        ],
+        [
+          "berry",
+          "bolt"
+        ]
+      ],
+      "requiredLocale": "en-US"
+    },
+    {
+      "pairId": "en-volt-bolt",
+      "targetPosition": "initial",
+      "targetTokenIndex": 0,
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "very",
+          "vote"
+        ],
+        [
+          "berry",
+          "boat"
+        ]
+      ],
+      "requiredLocale": "en-US"
+    },
+    {
+      "pairId": "en-port-pot",
+      "targetPosition": "medial",
+      "targetTokenIndex": 1,
+      "differingTokenIndices": [
+        1
+      ],
+      "xChoicesByCategory": [
+        [
+          "court",
+          "short"
+        ],
+        [
+          "cot",
+          "shot"
+        ]
+      ],
+      "requiredLocale": "en-GB"
+    },
+    {
+      "pairId": "en-court-cot",
+      "targetPosition": "medial",
+      "targetTokenIndex": 1,
+      "differingTokenIndices": [
+        1
+      ],
+      "xChoicesByCategory": [
+        [
+          "port",
+          "short"
+        ],
+        [
+          "pot",
+          "shot"
+        ]
+      ],
+      "requiredLocale": "en-GB"
+    },
+    {
+      "pairId": "en-short-shot",
+      "targetPosition": "medial",
+      "targetTokenIndex": 1,
+      "differingTokenIndices": [
+        1
+      ],
+      "xChoicesByCategory": [
+        [
+          "port",
+          "court"
+        ],
+        [
+          "pot",
+          "cot"
+        ]
+      ],
+      "requiredLocale": "en-GB"
+    }
+  ],
+  "mutationChecks": [
+    {
+      "name": "category reversal",
+      "rejected": true,
+      "expectedError": "category phoneme"
+    },
+    {
+      "name": "second altered phoneme",
+      "rejected": true,
+      "expectedError": "one-phoneme substitution"
+    },
+    {
+      "name": "split diphthong",
+      "rejected": true,
+      "expectedError": "tokenization"
+    },
+    {
+      "name": "wrong index copied from longer final word",
+      "rejected": true,
+      "expectedError": "X category/position mismatch"
+    },
+    {
+      "name": "word-final category mislabeled initial",
+      "rejected": true,
+      "expectedError": "target position"
+    },
+    {
+      "name": "isolated X group",
+      "rejected": true,
+      "expectedError": "insufficient different X words"
+    },
+    {
+      "name": "reserved French spelling",
+      "rejected": true,
+      "expectedError": "reserved text"
+    },
+    {
+      "name": "reserved English homophone",
+      "rejected": true,
+      "expectedError": "reserved IPA"
+    },
+    {
+      "name": "prior English spelling",
+      "rejected": true,
+      "expectedError": "existing English training word"
+    },
+    {
+      "name": "dictionary IPA changed",
+      "rejected": true,
+      "expectedError": "dictionary normalization mismatch"
+    },
+    {
+      "name": "stress missing from berry",
+      "rejected": true,
+      "expectedError": "stress mismatch"
+    },
+    {
+      "name": "British length mark dropped",
+      "rejected": true,
+      "expectedError": "category phoneme"
+    },
+    {
+      "name": "American rhotic port substituted",
+      "rejected": true,
+      "expectedError": "one-phoneme substitution"
+    },
+    {
+      "name": "British pool labeled US",
+      "rejected": true,
+      "expectedError": "contrast locale mismatch"
+    },
+    {
+      "name": "British profile gate removed",
+      "rejected": true,
+      "expectedError": "integration gate"
+    },
+    {
+      "name": "cross-dialect trial profiles",
+      "rejected": true,
+      "expectedError": "cross-dialect profiles"
+    },
+    {
+      "name": "British audio request labeled US",
+      "rejected": true,
+      "expectedError": "audio locale mismatch"
+    },
+    {
+      "name": "missing requested word",
+      "rejected": true,
+      "expectedError": "audio inventory mismatch"
+    },
+    {
+      "name": "audio category swapped",
+      "rejected": true,
+      "expectedError": "audio category binding"
+    },
+    {
+      "name": "invented approved recording",
+      "rejected": true,
+      "expectedError": "invented audio approval"
+    },
+    {
+      "name": "wrong legacy vowel",
+      "rejected": true,
+      "expectedError": "legacy phoneme/locale mismatch"
+    }
+  ],
+  "baselineHashesMatch": {
+    "rescue/content/legacy-coverage.json": true,
+    "rescue/content/curriculum.json": true,
+    "rescue/content/transfer-candidates.json": true,
+    "rescue/content/english-legacy-batch2/candidates.json": true,
+    "rescue/content/english-legacy-batch3/candidates.json": true,
+    "rescue/content/english-legacy-batch4/candidates.json": true,
+    "rescue/discovery/legacy-bundle.js": true
+  },
+  "date": "2026-09-28",
+  "inputSha256": {
+    "candidates.json": "4de296102b6b664c5cd7a770be9fe8a2fc8bfb12e810ec5bd460fc359afcb869",
+    "source-audit.json": "56f18f758a7927963bbe0070839da718e3593a331fe0f9e93996b02a396ffb3c",
+    "audio-request.json": "c219bddc984605a9a66e65ab1891ac7f9f28fcb322265014610a80bf93b8b888",
+    "selection-evidence.json": "a643f70106426bd19d31189a41064b2470e2bc95c7e1d41e64999dc8525a2efa"
+  },
+  "limitation": "Offline integrity and exposure checks only. Selected sources were manually read separately. British routing is not implemented; no audio, profile or learner outcome is approved."
+}

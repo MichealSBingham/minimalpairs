@@ -1,0 +1,374 @@
+{
+  "passed": true,
+  "errors": [],
+  "contrasts": 6,
+  "pairs": 18,
+  "uniqueWords": 36,
+  "eligibleReferencePairXWordCategoryCombinations": 72,
+  "requiredCompleteCollectionClips": 72,
+  "pairChecks": [
+    {
+      "pairId": "en-sip-zip",
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "seal",
+          "sink"
+        ],
+        [
+          "zeal",
+          "zinc"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-seal-zeal",
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "sip",
+          "sink"
+        ],
+        [
+          "zip",
+          "zinc"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-sink-zinc",
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "sip",
+          "seal"
+        ],
+        [
+          "zip",
+          "zeal"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-fan-van",
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "fat",
+          "fail"
+        ],
+        [
+          "vat",
+          "veil"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-fat-vat",
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "fan",
+          "fail"
+        ],
+        [
+          "van",
+          "veil"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-fail-veil",
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "fan",
+          "fat"
+        ],
+        [
+          "van",
+          "vat"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-pea-bee",
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "peg",
+          "peach"
+        ],
+        [
+          "beg",
+          "beach"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-peg-beg",
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "pea",
+          "peach"
+        ],
+        [
+          "bee",
+          "beach"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-peach-beach",
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "pea",
+          "peg"
+        ],
+        [
+          "bee",
+          "beg"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-coat-goat",
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "curl",
+          "came"
+        ],
+        [
+          "girl",
+          "game"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-curl-girl",
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "coat",
+          "came"
+        ],
+        [
+          "goat",
+          "game"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-came-game",
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "coat",
+          "curl"
+        ],
+        [
+          "goat",
+          "girl"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-shack-sack",
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "shell",
+          "shock"
+        ],
+        [
+          "sell",
+          "sock"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-shell-sell",
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "shack",
+          "shock"
+        ],
+        [
+          "sack",
+          "sock"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-shock-sock",
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "shack",
+          "shell"
+        ],
+        [
+          "sack",
+          "sell"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-shop-chop",
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "shin",
+          "shoe"
+        ],
+        [
+          "chin",
+          "chew"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-shin-chin",
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "shop",
+          "shoe"
+        ],
+        [
+          "chop",
+          "chew"
+        ]
+      ]
+    },
+    {
+      "pairId": "en-shoe-chew",
+      "differingTokenIndices": [
+        0
+      ],
+      "xChoicesByCategory": [
+        [
+          "shop",
+          "shin"
+        ],
+        [
+          "chop",
+          "chin"
+        ]
+      ]
+    }
+  ],
+  "mutationChecks": [
+    {
+      "name": "reversed category order",
+      "rejected": true,
+      "expectedError": "category phoneme"
+    },
+    {
+      "name": "second changed phoneme",
+      "rejected": true,
+      "expectedError": "one-phoneme substitution"
+    },
+    {
+      "name": "affricate split into two tokens",
+      "rejected": true,
+      "expectedError": "tokenization"
+    },
+    {
+      "name": "isolated X trial group",
+      "rejected": true,
+      "expectedError": "insufficient different X words"
+    },
+    {
+      "name": "target mislabeled as final",
+      "rejected": true,
+      "expectedError": "target position"
+    },
+    {
+      "name": "reserved spelling",
+      "rejected": true,
+      "expectedError": "reserved text"
+    },
+    {
+      "name": "reserved homophone under another spelling",
+      "rejected": true,
+      "expectedError": "reserved IPA"
+    },
+    {
+      "name": "dictionary pronunciation altered",
+      "rejected": true,
+      "expectedError": "dictionary normalization mismatch"
+    },
+    {
+      "name": "missing requested word",
+      "rejected": true,
+      "expectedError": "audio inventory mismatch"
+    },
+    {
+      "name": "audio category swapped",
+      "rejected": true,
+      "expectedError": "audio category binding"
+    },
+    {
+      "name": "invented approved clip",
+      "rejected": true,
+      "expectedError": "invented audio approval"
+    },
+    {
+      "name": "already staged contrast",
+      "rejected": true,
+      "expectedError": "existing contrast"
+    },
+    {
+      "name": "wrong legacy phoneme mapping",
+      "rejected": true,
+      "expectedError": "legacy phoneme mismatch"
+    }
+  ],
+  "date": "2026-09-28",
+  "inputSha256": {
+    "candidates.json": "88b73b87f70c2df6990a81074569d5b719a2297035b1dd59e4b371617c4c13c4",
+    "source-audit.json": "cc0455b84714334fb00cfac57987b4e50a8b97ef83096186feb56bffac16988f",
+    "audio-request.json": "05dc18ace48257ee73b80b399ff11602275d1dbefea25ee788901aec5322b78c",
+    "selection-evidence.json": "7a014dbedd752a9933c5774abdfff4d8f17918030ad5eefa4a8bc8dd89061b80"
+  },
+  "limitation": "Offline integrity and current exclusion checks; manual source reading is recorded separately. No audio or learning efficacy is validated."
+}

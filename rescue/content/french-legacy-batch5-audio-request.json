@@ -1,0 +1,480 @@
+{
+  "date": "2026-09-28",
+  "status": "request-only-no-generation-or-manifest-change",
+  "languageId": "fr",
+  "locale": "fr-FR",
+  "voiceIds": [
+    "qwen-fr-a",
+    "qwen-fr-b"
+  ],
+  "uniqueWords": 24,
+  "existingCachedClips": 8,
+  "missingCachedClips": 40,
+  "requirement": "At least two complete profiles in the stated variety, then real listening review. Different provider or voice IDs require all words for that new profile; cache presence does not imply reviewed pronunciation.",
+  "words": [
+    {
+      "languageId": "fr",
+      "text": "dé",
+      "ipa": "/de/",
+      "locale": "fr-FR",
+      "meaning": "a die; singular of dice",
+      "alreadyInTraining": true,
+      "contrastIds": [
+        "fr-e-in"
+      ],
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/1ab6ba00925f7e5fdc899e1837d498d4466f07f3c8fd6263bf414404541c0adc.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/33fb6ab961640da0e250c525d835f3b5b5bc63d20f919ae462725bc67238d048.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Verify the exact isolated word and selected phonemic category, naturalness and stable voice. Preserve accents. No final schwa or added article/subject. "
+    },
+    {
+      "languageId": "fr",
+      "text": "daim",
+      "ipa": "/dɛ̃/",
+      "locale": "fr-FR",
+      "meaning": "fallow deer",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-e-in"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Verify the exact isolated word and selected phonemic category, naturalness and stable voice. Preserve accents. No final schwa or added article/subject. "
+    },
+    {
+      "languageId": "fr",
+      "text": "fée",
+      "ipa": "/fe/",
+      "locale": "fr-FR",
+      "meaning": "fairy",
+      "alreadyInTraining": true,
+      "contrastIds": [
+        "fr-e-in"
+      ],
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/b830c9f2797460a50a5a05184d66640c689b5ca3aeda9a8bdb3673d5e88968e4.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/7c7e82618bb400990752e5ee1592067012aa7439ac34e3042708fa32d4a7bb8b.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Verify the exact isolated word and selected phonemic category, naturalness and stable voice. Preserve accents. No final schwa or added article/subject. "
+    },
+    {
+      "languageId": "fr",
+      "text": "faim",
+      "ipa": "/fɛ̃/",
+      "locale": "fr-FR",
+      "meaning": "hunger",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-e-in"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Verify the exact isolated word and selected phonemic category, naturalness and stable voice. Preserve accents. No final schwa or added article/subject. "
+    },
+    {
+      "languageId": "fr",
+      "text": "thé",
+      "ipa": "/te/",
+      "locale": "fr-FR",
+      "meaning": "tea",
+      "alreadyInTraining": true,
+      "contrastIds": [
+        "fr-e-in"
+      ],
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/07f32880a3e22a170360a268d0cc053375f168b71dd6b06acd88f1dae1a30596.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/fc8111642e619afb63aac9efc6207fe0d84aab973188dc211907098035b85722.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Verify the exact isolated word and selected phonemic category, naturalness and stable voice. Preserve accents. No final schwa or added article/subject. "
+    },
+    {
+      "languageId": "fr",
+      "text": "teint",
+      "ipa": "/tɛ̃/",
+      "locale": "fr-FR",
+      "meaning": "complexion",
+      "alreadyInTraining": true,
+      "contrastIds": [
+        "fr-e-in"
+      ],
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/210b8a155599fbe28ae84fd85f1e5b7af839c19e3d12f8a3bf4dfbd6cdbead37.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/bdfb4e9adb8c35acc4119e930f587f7e0cad8d93e841ff0051b1c0e7f2f22844.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Verify the exact isolated word and selected phonemic category, naturalness and stable voice. Preserve accents. No final schwa or added article/subject. "
+    },
+    {
+      "languageId": "fr",
+      "text": "rat",
+      "ipa": "/ʁa/",
+      "locale": "fr-FR",
+      "meaning": "rat",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-a-e"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Verify the exact isolated word and selected phonemic category, naturalness and stable voice. Preserve accents. No final schwa or added article/subject.  Select /a/, not documented /ɑ/ variant."
+    },
+    {
+      "languageId": "fr",
+      "text": "ré",
+      "ipa": "/ʁe/",
+      "locale": "fr-FR",
+      "meaning": "the musical note D",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-a-e"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Verify the exact isolated word and selected phonemic category, naturalness and stable voice. Preserve accents. No final schwa or added article/subject. "
+    },
+    {
+      "languageId": "fr",
+      "text": "la",
+      "ipa": "/la/",
+      "locale": "fr-FR",
+      "meaning": "the musical note A",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-a-e"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Verify the exact isolated word and selected phonemic category, naturalness and stable voice. Preserve accents. No final schwa or added article/subject.  Select /a/, not documented /ɑ/ variant."
+    },
+    {
+      "languageId": "fr",
+      "text": "lé",
+      "ipa": "/le/",
+      "locale": "fr-FR",
+      "meaning": "a full-width strip of fabric or wallpaper",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-a-e"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Verify the exact isolated word and selected phonemic category, naturalness and stable voice. Preserve accents. No final schwa or added article/subject. "
+    },
+    {
+      "languageId": "fr",
+      "text": "ça",
+      "ipa": "/sa/",
+      "locale": "fr-FR",
+      "meaning": "that; informal demonstrative pronoun",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-a-e"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Verify the exact isolated word and selected phonemic category, naturalness and stable voice. Preserve accents. No final schwa or added article/subject. "
+    },
+    {
+      "languageId": "fr",
+      "text": "ces",
+      "ipa": "/se/",
+      "locale": "fr-FR",
+      "meaning": "these or those; plural determiner",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-a-e"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Verify the exact isolated word and selected phonemic category, naturalness and stable voice. Preserve accents. No final schwa or added article/subject.  Use lowercase ces /se/; do not spell the acronym."
+    },
+    {
+      "languageId": "fr",
+      "text": "balle",
+      "ipa": "/bal/",
+      "locale": "fr-FR",
+      "meaning": "ball; small spherical object used in games",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-a-eh"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Verify the exact isolated word and selected phonemic category, naturalness and stable voice. Preserve accents. No final schwa or added article/subject. "
+    },
+    {
+      "languageId": "fr",
+      "text": "belle",
+      "ipa": "/bɛl/",
+      "locale": "fr-FR",
+      "meaning": "beautiful; feminine singular",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-a-eh"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Verify the exact isolated word and selected phonemic category, naturalness and stable voice. Preserve accents. No final schwa or added article/subject. "
+    },
+    {
+      "languageId": "fr",
+      "text": "salle",
+      "ipa": "/sal/",
+      "locale": "fr-FR",
+      "meaning": "room; hall",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-a-eh"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Verify the exact isolated word and selected phonemic category, naturalness and stable voice. Preserve accents. No final schwa or added article/subject. "
+    },
+    {
+      "languageId": "fr",
+      "text": "sel",
+      "ipa": "/sɛl/",
+      "locale": "fr-FR",
+      "meaning": "salt",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-a-eh"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Verify the exact isolated word and selected phonemic category, naturalness and stable voice. Preserve accents. No final schwa or added article/subject. "
+    },
+    {
+      "languageId": "fr",
+      "text": "masse",
+      "ipa": "/mas/",
+      "locale": "fr-FR",
+      "meaning": "mass; quantity of matter",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-a-eh"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Verify the exact isolated word and selected phonemic category, naturalness and stable voice. Preserve accents. No final schwa or added article/subject. "
+    },
+    {
+      "languageId": "fr",
+      "text": "messe",
+      "ipa": "/mɛs/",
+      "locale": "fr-FR",
+      "meaning": "Mass; Catholic liturgical service",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-a-eh"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Verify the exact isolated word and selected phonemic category, naturalness and stable voice. Preserve accents. No final schwa or added article/subject. "
+    },
+    {
+      "languageId": "fr",
+      "text": "jeûne",
+      "ipa": "/ʒøn/",
+      "locale": "fr-FR",
+      "meaning": "a fast; abstention from food",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-eu-closed-open"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Verify the exact isolated word and selected phonemic category, naturalness and stable voice. Preserve accents. No final schwa or added article/subject. "
+    },
+    {
+      "languageId": "fr",
+      "text": "jeune",
+      "ipa": "/ʒœn/",
+      "locale": "fr-FR",
+      "meaning": "young",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-eu-closed-open"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Verify the exact isolated word and selected phonemic category, naturalness and stable voice. Preserve accents. No final schwa or added article/subject. "
+    },
+    {
+      "languageId": "fr",
+      "text": "veule",
+      "ipa": "/vøl/",
+      "locale": "fr-FR",
+      "meaning": "weak-willed; literary adjective",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-eu-closed-open"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Verify the exact isolated word and selected phonemic category, naturalness and stable voice. Preserve accents. No final schwa or added article/subject. Reject veule /vœl/; category 0 requires /vøl/."
+    },
+    {
+      "languageId": "fr",
+      "text": "veulent",
+      "ipa": "/vœl/",
+      "locale": "fr-FR",
+      "meaning": "want; present-tense form with they",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-eu-closed-open"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Verify the exact isolated word and selected phonemic category, naturalness and stable voice. Preserve accents. No final schwa or added article/subject. "
+    },
+    {
+      "languageId": "fr",
+      "text": "foehn",
+      "ipa": "/føn/",
+      "locale": "fr-FR",
+      "meaning": "warm dry wind descending into Alpine valleys",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-eu-closed-open"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Verify the exact isolated word and selected phonemic category, naturalness and stable voice. Preserve accents. No final schwa or added article/subject. "
+    },
+    {
+      "languageId": "fr",
+      "text": "fun",
+      "ipa": "/fœn/",
+      "locale": "fr-FR",
+      "meaning": "fun; enjoyable, informal adjective",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-eu-closed-open"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Verify the exact isolated word and selected phonemic category, naturalness and stable voice. Preserve accents. No final schwa or added article/subject.  Use French /fœn/, not English /fʌn/."
+    }
+  ]
+}

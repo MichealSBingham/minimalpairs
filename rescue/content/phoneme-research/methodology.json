@@ -1,0 +1,84 @@
+{
+  "updatedAt": "2026-10-01",
+  "status": "research-draft-for-owner-review",
+  "scope": "Versioned text-bank baseline across nine languages, with separate General American and Standard Southern British banks. Targeted literature and stimulus-list searches, not an exhaustive systematic review.",
+  "ownerTrainingContract": {
+    "primaryUnit": "One specified sound contrast, selected dialect, two word pools and explicit compatible contexts.",
+    "primaryTask": "Audio-only category ABX: A and B demonstrate the contrasting categories. X is a different lexical item from one category. The learner chooses the matching sound category.",
+    "textVisibility": "No orthography, translation or IPA in the learner trial until optional hints or post-answer reveal. Text is intentionally visible in this owner review.",
+    "wordSelection": "Pool membership is independent of minimal-pair linkage. A/B references can be selected from compatible pools; arbitrary Cartesian combinations are not automatically minimal pairs or valid trials. X must differ lexically and in intended whole-word pronunciation from both reference words; homophones with different spellings are not distinct auditory examples.",
+    "voiceSelection": "Each approved word should eventually have several independently audited voices and takes. Category, A/B position and speaker must not predict each other. Never reuse an identical recording as the matching X. Hold out both words and voices when evaluating transfer.",
+    "secondaryTask": "Optional explicit word identification remains separate; no decision that one method is universally superior.",
+    "reviewSequence": [
+      "Review phoneme/tone/stress contrasts and dialect.",
+      "Review each category's words, intended IPA, senses and target positions; record missing words and errors.",
+      "Only after owner text review, prepare audio candidates.",
+      "Audit every word-by-voice recording for lexical identity, target sound, dialect and naturalness before training use. Synthetic checks alone cannot establish correct pronunciation."
+    ],
+    "currentImplementationBoundary": "This change builds the research database and owner review only. It does not enable a new sampling algorithm, synthesize audio, or approve any word or recording.",
+    "textBankFreeze": "The owner requested this bank as the settled inventory for the next audio discussion on 2026-10-01. Freeze a versioned snapshot after British/Japanese review; freeze means selected scope, not independent pronunciation or audio approval. Corrections require an explicit new version."
+  },
+  "evidencePolicy": {
+    "stimulusMembership": "Assign only when the actual word is visible in inspected primary study material. Record its original role (training, testing, familiarization) and population; do not generalize membership to our IPA or efficacy.",
+    "categoryEvidence": "An L2 study may motivate categories without supplying our words, binary comparison, learner population or task. Those differences remain explicit.",
+    "editorialVocabulary": "Proposed words remain proposals even when a dictionary URL is recorded. Unvisited lookup targets are not verification.",
+    "phonology": "A descriptive inventory establishes language structure, not efficacy or difficulty for every L1.",
+    "rights": "No research recordings are copied and no commercial reuse right is inferred from textual word-list access.",
+    "normalization": "Lexemes are stored separately from category memberships and minimal-pair links. Context capacity checks require two distinct words per category and consistent target positions, but are not linguistic certification.",
+    "reviewIdentity": "Changes to a word, IPA, meaning, dialect, category, context or attached evidence invalidate its previous review identity. Earlier fixed-pair notes remain on a separate preserved page."
+  },
+  "methodFindings": [
+    {
+      "source": "Lively, Logan & Pisoni (1993)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8408964/",
+      "locator": "Abstract; experiments 1 and 2",
+      "finding": "Japanese learners practiced identification of English r/l. Multiple-talker training generalized to new words and an unfamiliar talker; the single-talker experiment did not show that new-talker transfer.",
+      "limit": "Supports attention to variability, not a universal optimal voice count or superiority of ABX."
+    },
+    {
+      "source": "Mora & Mora-Plaza (2019), Contributions of Cognitive Attention Control to L2 Speech Learning",
+      "url": "https://ebooks.au.dk/aul/catalog/download/322/218/985?inline=1",
+      "locator": "Section 2.4.1, printed pp.483–484",
+      "finding": "Categorical ABX assessed vowel perception using different speakers for A, B and X. X speakers were absent from training.",
+      "limit": "Their illustrated X repeats one reference's lexical/nonword form. Our distinct-word X rule is an extension, not an exact replication of that assessment."
+    },
+    {
+      "source": "Cebrian et al. (2024), Differential effects of identification and discrimination training tasks",
+      "url": "https://doi.org/10.1017/S0272263124000408",
+      "locator": "Abstract; Procedure; Discussion",
+      "finding": "Both identification and categorical same/different AX training improved L2 vowel perception, with retained gains after four months.",
+      "limit": "AX is not ABX. Task-specific gains, stimulus choices and feedback differences prevent treating this as proof that our product method is best."
+    },
+    {
+      "source": "Shinohara & Iverson (2018), High variability identification and discrimination training for Japanese speakers learning English /r–l/",
+      "url": "https://y.shinohara.w.waseda.jp/assets/files/Shinohara_and_Iverson_2018.pdf",
+      "locator": "Section 2.3.1, printed p.245; Results and Discussion",
+      "finding": "Discrimination combined natural auditory (20%), processed auditory (40%) and distinct-word category oddity (40%) trials. Both regimens improved learning; identification had a larger early identification-test gain.",
+      "limit": "One speaker per trial, varied across sessions; mixed tasks and a crossover design prevent attributing gains to cross-word oddity alone."
+    }
+  ],
+  "searches": [
+    {
+      "query": "Iverson 2005 phonetic training acoustic cue manipulation table A1 English Japanese r l words pdf",
+      "outcome": "Inspected published Appendix A1 through author-paper mirror; independently confirmed the selected r/l words."
+    },
+    {
+      "query": "cross word ABX discrimination phonetic training different words target vowel L2",
+      "outcome": "Located categorical ABX assessment precedents and a 2026 vowel perception assessment. Task differences were retained."
+    },
+    {
+      "query": "1743034 Supplementary docx; Suemitsu Supplementary Table 1 2026 minimal pairs",
+      "outcome": "Public article and supplement filename found; full supplement was not recovered. No unseen list was imported."
+    },
+    {
+      "query": "Shinohara Iverson 2018 category discrimination different words identification high variability",
+      "outcome": "Inspected author-hosted full text, especially §2.3.1. Corrected the earlier overemphasis on processed discrimination and acknowledged natural cross-word category training."
+    }
+  ],
+  "taskDefinitions": {
+    "abx": "Three auditory items: A and B provide contrasting references; judge which reference category X matches. The product uses distinct-word X and hidden text.",
+    "identification": "One auditory item: assign it to a response category, which may be represented by a word, phoneme label or another learned cue. Written words are a design choice, not the definition of identification.",
+    "highVariability": "Variation across words, phonetic contexts and speakers; compatible with different response tasks. It is not a synonym for identification or ABX.",
+    "evidenceBoundary": "ABX is an established discrimination format, not the only standard phonetic-training procedure. Support for discrimination broadly does not establish that this exact product algorithm is superior."
+  }
+}

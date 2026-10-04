@@ -1,0 +1,42 @@
+{
+  "preparedAt": "2026-09-30",
+  "brief": "research/paid-program-implementation-decision-2026-09-28.md",
+  "publicStarterPairIds": [
+    "fr-tout-tu",
+    "fr-vous-vu",
+    "fr-roue-rue",
+    "fr-bout-bu"
+  ],
+  "publicStarterPairs": 4,
+  "additionalPairs": 6,
+  "additionalWords": 12,
+  "trainingSourceFiles": [
+    "rescue/content/curriculum.json",
+    "rescue/content/english-legacy-batch2/candidates.json",
+    "rescue/content/english-legacy-batch3/candidates.json",
+    "rescue/content/english-legacy-batch4/candidates.json",
+    "rescue/content/english-legacy-batch5/candidates.json",
+    "rescue/content/english_legacy_batch1.json",
+    "rescue/content/french-legacy-batch3-candidates.json",
+    "rescue/content/french-legacy-batch4-candidates.json",
+    "rescue/content/french-legacy-batch5-candidates.json",
+    "rescue/content/french_legacy_batch2_candidates.json"
+  ],
+  "exclusionScope": "All current and candidate English/French training spellings; all-language reserved assessment spellings; French current/candidate/reserved IPA, including alternate spellings of an already-used form.",
+  "inputSha256": {
+    "rescue/content/curriculum.json": "9e75f976f8b72d0df1f6b5da4c6afda06074d4f13ae91a533c0a77ebe7fe1db6",
+    "rescue/content/english-legacy-batch2/candidates.json": "899e8e9e254f1d1dc596c360b39516b3e2ed16d5ad7fe3b2cd2c98939a5a9d53",
+    "rescue/content/english-legacy-batch3/candidates.json": "88b73b87f70c2df6990a81074569d5b719a2297035b1dd59e4b371617c4c13c4",
+    "rescue/content/english-legacy-batch4/candidates.json": "c696a612f46f6a897647497832771d686a4409d6741f82dbf52ad1d27b996298",
+    "rescue/content/english-legacy-batch5/candidates.json": "4de296102b6b664c5cd7a770be9fe8a2fc8bfb12e810ec5bd460fc359afcb869",
+    "rescue/content/english_legacy_batch1.json": "9de7fb39081704c78347c2e2bd5480716524cdd41f20bee26bd90b68e3b63ad7",
+    "rescue/content/french-legacy-batch3-candidates.json": "268b8670d88691292119751c270619d79b8a58805ad82b847cb2408995c425c4",
+    "rescue/content/french-legacy-batch4-candidates.json": "cfd5ec9447c34b489257d235968077779a559d27c14fe8324f7461bbeb1f71c9",
+    "rescue/content/french-legacy-batch5-candidates.json": "018423fe7c13533744e228a0d17d27517550abcf7b438495959690de38e7eb8f",
+    "rescue/content/french_legacy_batch2_candidates.json": "3c96086650ac1103b88dc3e8762c7679fc6cc31bbec1fce38fae9757e526cc2a",
+    "rescue/content/transfer-candidates.json": "14e960285239b919d5f48bddfc1d6b2a59fb5a9cfecc5789b17df4e965e9bea5",
+    "research/paid-program-implementation-decision-2026-09-28.md": "014adcae5ae5e1d9f65e6301fe77e351c2b1c58dedb37444bf41c53ad6778c73"
+  },
+  "hashPolicy": "Baseline hashes plus freshly reconstructed exclusions on every validation. Changed files require renewed review; additional candidate files must also enter the inventory.",
+  "commercialStatus": "Candidate content only; not a second deliverable release, reviewed audio, validated demand, recurring value proof or sale-ready program."
+}

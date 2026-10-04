@@ -1,0 +1,64 @@
+---
+import Base from '../layouts/Base.astro';
+import { Header, Footer, Icon } from '../components/ui';
+import { getGuideLanguages as getLanguages, getPracticeLanguages, slugFor } from '../lib/content';
+import { guideAudioStatus } from '../lib/guide-audio-status';
+import { absoluteUrl, pairCount, practiceUrl, readingFor, safeJsonLd } from '../lib/seo';
+import type { Language } from '../lib/types';
+import '../styles/editorial.css';
+import '../styles/language-redesign.css';
+
+export function getStaticPaths() {
+  return getLanguages().map(language => ({ params: { language: slugFor(language) }, props: { language } }));
+}
+const { language } = Astro.props as { language: Language };
+const count = pairCount(language);
+const lessonIds = new Set(getPracticeLanguages().find(l => l.id === language.id)?.contrasts.map(c => c.id) || []);
+const audioByContrast = new Map(language.contrasts.map(contrast => [contrast.id, guideAudioStatus(language.id, contrast)]));
+const deviceOnlyCount = [...audioByContrast.values()].filter(status => !status.hasCachedAudio).length;
+const languages = [language, ...getLanguages().filter(item => item.id !== language.id)];
+const description = `${language.name} listening practice with ${count} word pairs, IPA, meanings and focused sound guides. Explore ${language.dialect.toLowerCase()} one contrast at a time.`;
+const url = absoluteUrl(`/${slugFor(language)}`);
+const schema = { '@context': 'https://schema.org', '@type': 'CollectionPage', name: `${language.name} minimal pairs`, description, url, inLanguage: 'en', hasPart: language.contrasts.map(contrast => ({ '@type': 'LearningResource', name: contrast.label, url: absoluteUrl(`/learn/${contrast.id}`), learningResourceType: 'Listening practice guide' })) };
+---
+<Base title={`${language.name} Minimal Pairs & Listening Practice | MinimalPairs`} description={description}>
+  <Header />
+  <main class="ed-page language-chooser">
+    <div class="ed-wrap">
+      <nav class="ed-breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">/</span><span>{language.name}</span></nav>
+      <nav class="language-chooser-tabs" aria-label="Choose a language">
+        {languages.map(item => <a href={`/${slugFor(item)}`} aria-current={item.id === language.id ? 'page' : undefined}>{item.name}</a>)}
+      </nav>
+      <section class="language-chooser-heading" aria-labelledby="language-title">
+        <p class="ed-eyebrow">CHOOSE A SOUND</p>
+        <h1 id="language-title">{language.name} <em>contrasts.</em></h1>
+        <p class="ed-lede">Start with a difference you find hard to hear. Words stay hidden during practice until you choose to show them.</p>
+        <div class="language-chooser-meta"><span>{language.dialect}</span><span>{language.contrasts.length} sound contrasts</span></div>
+        <p class="language-chooser-note">Browse the examples below, then listen to A and B and match their target sound in a different word, X.</p>
+
+      </section>
+
+      <section class="language-chooser-catalog" aria-label={`${language.name} sound contrasts`}>
+        <div class="language-contrast-grid">{language.contrasts.map(contrast => <article class="language-contrast-card">
+          <div class="language-contrast-main">
+            <h2 class:list={['language-contrast-sounds', { 'has-feature-label': contrast.phonemes.some(phoneme => phoneme.includes(' ')) }]} aria-label={contrast.label}>{contrast.phonemes.map((phoneme, index) => <>{index > 0 && <span class="language-contrast-vs" aria-hidden="true">vs</span>}<span class={index === 0 ? 'sound-a' : 'sound-b'}>{phoneme.includes(' ') ? phoneme : `/${phoneme}/`}</span></>)}</h2>
+            <p class="language-contrast-examples" lang={language.locale}>{contrast.pairs[0].words.map((word, index) => <>{index > 0 && <span class="example-separator" aria-hidden="true"> · </span>}<span>{word.text}{readingFor(word) && <small>{readingFor(word)}</small>}</span></>)}</p>
+          </div>
+          <a class="language-contrast-drill" href={lessonIds.has(contrast.id) ? practiceUrl(language, contrast) : '/practice'} aria-label={lessonIds.has(contrast.id) ? `Practice ${contrast.label}` : 'Explore listening lessons'}>{lessonIds.has(contrast.id) ? 'Practice' : 'Lessons'} <Icon name="arrow" size={18} /></a>
+          <p class="language-contrast-description">{contrast.description}</p>
+          <div class="language-contrast-footer"><a class="sound-guide-link" href={`/learn/${contrast.id}`} aria-label={`Read the guide to ${contrast.label}`}>Sound guide <Icon name="arrow" size={14} /></a></div>
+        </article>)}</div>
+      </section>
+
+      <section class="ed-explainer ed-section">
+        <div><p class="ed-eyebrow">A CLOSER LISTEN</p><h2>What is a<br />minimal pair?</h2></div>
+        <div><p>Two words form a minimal pair when one sound difference changes the word. Keeping the surrounding sounds the same gives you a specific difference to listen for.</p><p>Some lessons focus on tone or word stress instead of a single consonant or vowel. We label those separately, so you know what each exercise is testing.</p><p>In the exercise, listen to A and B, then a different word X. Choose the reference that shares the target sound, tone, stress or consonant feature. Words and IPA stay hidden unless you enable text hints, including after answering; you can replay the audio whenever you need it.</p><a class="ed-text-link" href="/method">Read about the learning approach <Icon name="arrow" size={16} /></a></div>
+      </section>
+
+      <section class="ed-variety-note" aria-labelledby="variety-title"><Icon name="globe" size={24} /><div><h2 id="variety-title">A clear starting variety.</h2><p><strong>{language.dialect}.</strong> Pronunciation varies across communities and speakers. These starter examples keep a stated target variety; they do not represent every accent of {language.name}.</p></div></section>
+
+    </div>
+  </main>
+  <Footer />
+  <script type="application/ld+json" set:html={safeJsonLd(schema)} />
+</Base>

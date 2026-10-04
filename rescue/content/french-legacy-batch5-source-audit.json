@@ -1,0 +1,544 @@
+{
+  "date": "2026-09-28",
+  "sourcePolicy": "Bounded verification of 24 lexical forms; 20 selected ATILF entries and four explicit Collins entries. Source facts only; no copied entry prose or audio.",
+  "words": [
+    {
+      "text": "dé",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/d%C3%A9/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/d%C3%A9/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 2,
+      "entryLabel": "DÉ1",
+      "retrievedIpa": [
+        "de"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "de"
+      ],
+      "editorialIpa": "/de/",
+      "originalMeaning": "a die; singular of dice",
+      "normalization": "Historical ʀ → broad ʁ, ε → ɛ, oe → œ; dictionary vowel quantity omitted in broad IPA but preserved above. No /a–ɑ/, /e–ɛ/, /ø–œ/ or oral/nasal merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "daim",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/daim/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/daim/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "DAIM",
+      "retrievedIpa": [
+        "dε̃"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "dɛ̃"
+      ],
+      "editorialIpa": "/dɛ̃/",
+      "originalMeaning": "fallow deer",
+      "normalization": "Historical ʀ → broad ʁ, ε → ɛ, oe → œ; dictionary vowel quantity omitted in broad IPA but preserved above. No /a–ɑ/, /e–ɛ/, /ø–œ/ or oral/nasal merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "fée",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/f%C3%A9e/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/f%C3%A9e/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "FÉE",
+      "retrievedIpa": [
+        "fe"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "fe"
+      ],
+      "editorialIpa": "/fe/",
+      "originalMeaning": "fairy",
+      "normalization": "Historical ʀ → broad ʁ, ε → ɛ, oe → œ; dictionary vowel quantity omitted in broad IPA but preserved above. No /a–ɑ/, /e–ɛ/, /ø–œ/ or oral/nasal merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "faim",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/faim/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/faim/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "FAIM",
+      "retrievedIpa": [
+        "fε̃"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "fɛ̃"
+      ],
+      "editorialIpa": "/fɛ̃/",
+      "originalMeaning": "hunger",
+      "normalization": "Historical ʀ → broad ʁ, ε → ɛ, oe → œ; dictionary vowel quantity omitted in broad IPA but preserved above. No /a–ɑ/, /e–ɛ/, /ø–œ/ or oral/nasal merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "thé",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/th%C3%A9/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/th%C3%A9/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "THÉ",
+      "retrievedIpa": [
+        "te"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "te"
+      ],
+      "editorialIpa": "/te/",
+      "originalMeaning": "tea",
+      "normalization": "Historical ʀ → broad ʁ, ε → ɛ, oe → œ; dictionary vowel quantity omitted in broad IPA but preserved above. No /a–ɑ/, /e–ɛ/, /ø–œ/ or oral/nasal merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "teint",
+      "source": "Collins French-English Dictionary / HarperCollins",
+      "retrievedAt": "2026-09-28",
+      "referenceUrl": "https://www.collinsdictionary.com/dictionary/french-english/teint",
+      "lookupUrl": "https://www.collinsdictionary.com/dictionary/french-english/teint",
+      "retrievalMethod": "Official web page opened and explicit selected entry read; saved fact is not a fresh automated HTTP check.",
+      "selectedEntry": "Main noun entry, complexion; not a feminine participle. TLFi legacy typography renders [tẽ], so the selected /ɛ̃/ has separate explicit modern dictionary support.",
+      "retrievedIpa": [
+        "tɛ̃"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "tɛ̃"
+      ],
+      "editorialIpa": "/tɛ̃/",
+      "originalMeaning": "complexion",
+      "normalization": "No segment or quantity change.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "rat",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/rat/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/rat/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "RAT",
+      "retrievedIpa": [
+        "ʀa",
+        "ʀɑ",
+        "ɑ"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "ʁa",
+        "ʁɑ",
+        "ɑ"
+      ],
+      "editorialIpa": "/ʁa/",
+      "originalMeaning": "rat",
+      "normalization": "Historical ʀ → broad ʁ, ε → ɛ, oe → œ; dictionary vowel quantity omitted in broad IPA but preserved above. No /a–ɑ/, /e–ɛ/, /ø–œ/ or oral/nasal merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "ré",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/r%C3%A9/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/r%C3%A9/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "RÉ",
+      "retrievedIpa": [
+        "ʀe"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "ʁe"
+      ],
+      "editorialIpa": "/ʁe/",
+      "originalMeaning": "the musical note D",
+      "normalization": "Historical ʀ → broad ʁ, ε → ɛ, oe → œ; dictionary vowel quantity omitted in broad IPA but preserved above. No /a–ɑ/, /e–ɛ/, /ø–œ/ or oral/nasal merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "la",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/la/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/la/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "LA",
+      "retrievedIpa": [
+        "lɑ",
+        "la"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "lɑ",
+        "la"
+      ],
+      "editorialIpa": "/la/",
+      "originalMeaning": "the musical note A",
+      "normalization": "Historical ʀ → broad ʁ, ε → ɛ, oe → œ; dictionary vowel quantity omitted in broad IPA but preserved above. No /a–ɑ/, /e–ɛ/, /ø–œ/ or oral/nasal merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "lé",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/l%C3%A9/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/l%C3%A9/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "LÉ",
+      "retrievedIpa": [
+        "le"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "le"
+      ],
+      "editorialIpa": "/le/",
+      "originalMeaning": "a full-width strip of fabric or wallpaper",
+      "normalization": "Historical ʀ → broad ʁ, ε → ɛ, oe → œ; dictionary vowel quantity omitted in broad IPA but preserved above. No /a–ɑ/, /e–ɛ/, /ø–œ/ or oral/nasal merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "ça",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/%C3%A7a/pronom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/%C3%A7a/pronom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "CELA, ÇA,",
+      "retrievedIpa": [
+        "s(ə)la",
+        "sa"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "s(ə)la",
+        "sa"
+      ],
+      "editorialIpa": "/sa/",
+      "originalMeaning": "that; informal demonstrative pronoun",
+      "normalization": "Historical ʀ → broad ʁ, ε → ɛ, oe → œ; dictionary vowel quantity omitted in broad IPA but preserved above. No /a–ɑ/, /e–ɛ/, /ø–œ/ or oral/nasal merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "ces",
+      "source": "Collins French-English Dictionary / HarperCollins",
+      "retrievedAt": "2026-09-28",
+      "referenceUrl": "https://www.collinsdictionary.com/dictionary/french-english/ces",
+      "lookupUrl": "https://www.collinsdictionary.com/dictionary/french-english/ces",
+      "retrievalMethod": "Official web page opened and explicit selected entry read; saved fact is not a fresh automated HTTP check.",
+      "selectedEntry": "Lowercase determiner entry [se]; not ce [sə] or capitalized acronym CES [seəɛs].",
+      "retrievedIpa": [
+        "se"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "se"
+      ],
+      "editorialIpa": "/se/",
+      "originalMeaning": "these or those; plural determiner",
+      "normalization": "No segment or quantity change.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "balle",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/balle/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/balle/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 4,
+      "entryLabel": "BALLE1",
+      "retrievedIpa": [
+        "bal"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "bal"
+      ],
+      "editorialIpa": "/bal/",
+      "originalMeaning": "ball; small spherical object used in games",
+      "normalization": "Historical ʀ → broad ʁ, ε → ɛ, oe → œ; dictionary vowel quantity omitted in broad IPA but preserved above. No /a–ɑ/, /e–ɛ/, /ø–œ/ or oral/nasal merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "belle",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/beau/adjectif",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/beau/adjectif",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "BEAU, BEL, BELLE,",
+      "retrievedIpa": [
+        "bo",
+        "bεl"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "bo",
+        "bɛl"
+      ],
+      "editorialIpa": "/bɛl/",
+      "originalMeaning": "beautiful; feminine singular",
+      "normalization": "Historical ʀ → broad ʁ, ε → ɛ, oe → œ; dictionary vowel quantity omitted in broad IPA but preserved above. No /a–ɑ/, /e–ɛ/, /ø–œ/ or oral/nasal merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "salle",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/salle/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/salle/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "SALLE",
+      "retrievedIpa": [
+        "sal"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "sal"
+      ],
+      "editorialIpa": "/sal/",
+      "originalMeaning": "room; hall",
+      "normalization": "Historical ʀ → broad ʁ, ε → ɛ, oe → œ; dictionary vowel quantity omitted in broad IPA but preserved above. No /a–ɑ/, /e–ɛ/, /ø–œ/ or oral/nasal merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "sel",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/sel/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/sel/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "SEL",
+      "retrievedIpa": [
+        "sεl"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "sɛl"
+      ],
+      "editorialIpa": "/sɛl/",
+      "originalMeaning": "salt",
+      "normalization": "Historical ʀ → broad ʁ, ε → ɛ, oe → œ; dictionary vowel quantity omitted in broad IPA but preserved above. No /a–ɑ/, /e–ɛ/, /ø–œ/ or oral/nasal merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "masse",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/masse/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/masse/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 2,
+      "entryLabel": "MASSE1",
+      "retrievedIpa": [
+        "mas"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "mas"
+      ],
+      "editorialIpa": "/mas/",
+      "originalMeaning": "mass; quantity of matter",
+      "normalization": "Historical ʀ → broad ʁ, ε → ɛ, oe → œ; dictionary vowel quantity omitted in broad IPA but preserved above. No /a–ɑ/, /e–ɛ/, /ø–œ/ or oral/nasal merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "messe",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/messe/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/messe/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "MESSE",
+      "retrievedIpa": [
+        "mεs"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "mɛs"
+      ],
+      "editorialIpa": "/mɛs/",
+      "originalMeaning": "Mass; Catholic liturgical service",
+      "normalization": "Historical ʀ → broad ʁ, ε → ɛ, oe → œ; dictionary vowel quantity omitted in broad IPA but preserved above. No /a–ɑ/, /e–ɛ/, /ø–œ/ or oral/nasal merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "jeûne",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/je%C3%BBne/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/je%C3%BBne/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "JEÛNE",
+      "retrievedIpa": [
+        "ʒø:n",
+        "deʒœn",
+        "dejøne",
+        "-ʒœne",
+        "-ʒne"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "ʒøn",
+        "deʒœn",
+        "dejøne",
+        "-ʒœne",
+        "-ʒne"
+      ],
+      "editorialIpa": "/ʒøn/",
+      "originalMeaning": "a fast; abstention from food",
+      "normalization": "Historical ʀ → broad ʁ, ε → ɛ, oe → œ; dictionary vowel quantity omitted in broad IPA but preserved above. No /a–ɑ/, /e–ɛ/, /ø–œ/ or oral/nasal merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "jeune",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/jeune/adjectif",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/jeune/adjectif",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "JEUNE",
+      "retrievedIpa": [
+        "ʒœn"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "ʒœn"
+      ],
+      "editorialIpa": "/ʒœn/",
+      "originalMeaning": "young",
+      "normalization": "Historical ʀ → broad ʁ, ε → ɛ, oe → œ; dictionary vowel quantity omitted in broad IPA but preserved above. No /a–ɑ/, /e–ɛ/, /ø–œ/ or oral/nasal merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "veule",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/veule/adjectif",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/veule/adjectif",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "VEULE",
+      "retrievedIpa": [
+        "vø:l",
+        "vœl"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "vøl",
+        "vœl"
+      ],
+      "editorialIpa": "/vøl/",
+      "originalMeaning": "weak-willed; literary adjective",
+      "normalization": "Historical ʀ → broad ʁ, ε → ɛ, oe → œ; dictionary vowel quantity omitted in broad IPA but preserved above. No /a–ɑ/, /e–ɛ/, /ø–œ/ or oral/nasal merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "veulent",
+      "source": "Collins French-English Dictionary / HarperCollins",
+      "retrievedAt": "2026-09-28",
+      "referenceUrl": "https://www.collinsdictionary.com/dictionary/french-english/veulent",
+      "lookupUrl": "https://www.collinsdictionary.com/dictionary/french-english/veulent",
+      "retrievalMethod": "Official web page opened and explicit selected entry read; saved fact is not a fresh automated HTTP check.",
+      "selectedEntry": "Inflected verb entry linked to vouloir. Third-person plural present is also explicit in TLFi vouloir and University of Caen phonetics.",
+      "retrievedIpa": [
+        "vœl"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "vœl"
+      ],
+      "editorialIpa": "/vœl/",
+      "originalMeaning": "want; present-tense form with they",
+      "normalization": "No segment or quantity change.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "foehn",
+      "source": "ATILF / TLFi selected lexical entry",
+      "retrievedAt": "2026-09-28",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/foehn/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/foehn/nom",
+      "selectedTlfiEntry": 0,
+      "entryCount": 1,
+      "entryLabel": "FOEHN",
+      "retrievedIpa": [
+        "fø:n"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "føn"
+      ],
+      "editorialIpa": "/føn/",
+      "originalMeaning": "warm dry wind descending into Alpine valleys",
+      "normalization": "Historical ʀ → broad ʁ, ε → ɛ, oe → œ; dictionary vowel quantity omitted in broad IPA but preserved above. No /a–ɑ/, /e–ɛ/, /ø–œ/ or oral/nasal merger.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    },
+    {
+      "text": "fun",
+      "source": "Collins French-English Dictionary / HarperCollins",
+      "retrievedAt": "2026-09-28",
+      "referenceUrl": "https://www.collinsdictionary.com/dictionary/french-english/fun",
+      "lookupUrl": "https://www.collinsdictionary.com/dictionary/french-english/fun",
+      "retrievalMethod": "Official web page opened and explicit selected entry read; saved fact is not a fresh automated HTTP check.",
+      "selectedEntry": "French informal invariable adjective. This is an established borrowing pronounced with French /œ/, not an English /ʌ/ request.",
+      "retrievedIpa": [
+        "fœn"
+      ],
+      "dictionaryBroadIpaCandidates": [
+        "fœn"
+      ],
+      "editorialIpa": "/fœn/",
+      "originalMeaning": "fun; enjoyable, informal adjective",
+      "normalization": "No segment or quantity change.",
+      "lexicalSenseReviewed": true,
+      "broadIpaMatchesSelectedEntry": true
+    }
+  ],
+  "rejectedAlternatives": [
+    {
+      "pair": "tas–thé",
+      "reason": "The inspected TLFi tas entry gives /tɑ/, not /ta/; excluded rather than silently merging /ɑ/ into /a/."
+    },
+    {
+      "pair": "deux–de",
+      "reason": "The second vowel is schwa /ə/, not the promised /œ/ category."
+    },
+    {
+      "pair": "œufs–œuf",
+      "reason": "A final /f/ also changes, so it is not a one-phoneme minimal pair."
+    },
+    {
+      "pair": "veule /vœl/–veulent /vœl/",
+      "reason": "This permitted variant is homophonous and must not be used as contrasting audio."
+    }
+  ]
+}

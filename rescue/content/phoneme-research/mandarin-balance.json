@@ -1,0 +1,2256 @@
+{
+  "schemaVersion": 1,
+  "languageId": "zh",
+  "status": "draft-balanced-for-audition",
+  "basedOnRelease": "text-bank-v1",
+  "dialect": "Standard Mandarin (Putonghua), isolated citation tones",
+  "createdAt": "2026-10-01T18:48:49.551580+00:00",
+  "sources": [
+    {
+      "id": "lexical-rz-zh-5988",
+      "title": "Taiwan Ministry of Education dictionary: 媽",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=1021&word=%3D%E5%AA%BD",
+      "kind": "dictionary",
+      "locator": "Headword 媽; reading mā; selected sense mother",
+      "whatItSupports": "An attested Mandarin lexical reading and the selected ordinary sense; simplified display 妈.",
+      "limitations": "Indexed primary dictionary entry inspected. This is a Taiwan dictionary, not a Putonghua pronunciation authority; only the indicated shared lexical reading is selected. Broad IPA is editorial. Alternate readings, historical senses and surname senses are excluded; no recording is imported."
+    },
+    {
+      "id": "lexical-rz-zh-4e66",
+      "title": "Taiwan Ministry of Education dictionary: 書",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=9081&q=1&word=%E5%A7%93%E3%80%82",
+      "kind": "dictionary",
+      "locator": "Headword 書; reading shū; selected sense book",
+      "whatItSupports": "An attested Mandarin lexical reading and the selected ordinary sense; simplified display 书.",
+      "limitations": "Indexed primary dictionary entry inspected. This is a Taiwan dictionary, not a Putonghua pronunciation authority; only the indicated shared lexical reading is selected. Broad IPA is editorial. Alternate readings, historical senses and surname senses are excluded; no recording is imported."
+    },
+    {
+      "id": "lexical-rz-zh-6c64",
+      "title": "Taiwan Ministry of Education dictionary: 湯",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=2576&ver=4",
+      "kind": "dictionary",
+      "locator": "Headword 湯; reading tāng; selected sense soup",
+      "whatItSupports": "An attested Mandarin lexical reading and the selected ordinary sense; simplified display 汤.",
+      "limitations": "Indexed primary dictionary entry inspected. This is a Taiwan dictionary, not a Putonghua pronunciation authority; only the indicated shared lexical reading is selected. Broad IPA is editorial. Alternate readings, historical senses and surname senses are excluded; no recording is imported."
+    },
+    {
+      "id": "lexical-rz-zh-8bd7",
+      "title": "Taiwan Ministry of Education dictionary: 詩",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=8716&la=0&powerMode=0",
+      "kind": "dictionary",
+      "locator": "Headword 詩; reading shī; selected sense poem",
+      "whatItSupports": "An attested Mandarin lexical reading and the selected ordinary sense; simplified display 诗.",
+      "limitations": "Indexed primary dictionary entry inspected. This is a Taiwan dictionary, not a Putonghua pronunciation authority; only the indicated shared lexical reading is selected. Broad IPA is editorial. Alternate readings, historical senses and surname senses are excluded; no recording is imported."
+    },
+    {
+      "id": "lexical-rz-zh-516b",
+      "title": "Taiwan Ministry of Education dictionary: 八",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=1&la=0&powerMode=0",
+      "kind": "dictionary",
+      "locator": "Headword 八; reading bā; selected sense eight",
+      "whatItSupports": "An attested Mandarin lexical reading and the selected ordinary sense; simplified display 八.",
+      "limitations": "Indexed primary dictionary entry inspected. This is a Taiwan dictionary, not a Putonghua pronunciation authority; only the indicated shared lexical reading is selected. Broad IPA is editorial. Alternate readings, historical senses and surname senses are excluded; no recording is imported."
+    },
+    {
+      "id": "lexical-rz-zh-9ebb",
+      "title": "Taiwan Ministry of Education dictionary: 麻",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=1022&ver=4",
+      "kind": "dictionary",
+      "locator": "Headword 麻; reading má; selected sense numb",
+      "whatItSupports": "An attested Mandarin lexical reading and the selected ordinary sense; simplified display 麻.",
+      "limitations": "Indexed primary dictionary entry inspected. This is a Taiwan dictionary, not a Putonghua pronunciation authority; only the indicated shared lexical reading is selected. Broad IPA is editorial. Alternate readings, historical senses and surname senses are excluded; no recording is imported."
+    },
+    {
+      "id": "lexical-rz-zh-9c7c",
+      "title": "Taiwan Ministry of Education dictionary: 魚",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=11644&la=0&powerMode=1",
+      "kind": "dictionary",
+      "locator": "Headword 魚; reading yú; selected sense fish",
+      "whatItSupports": "An attested Mandarin lexical reading and the selected ordinary sense; simplified display 鱼.",
+      "limitations": "Indexed primary dictionary entry inspected. This is a Taiwan dictionary, not a Putonghua pronunciation authority; only the indicated shared lexical reading is selected. Broad IPA is editorial. Alternate readings, historical senses and surname senses are excluded; no recording is imported."
+    },
+    {
+      "id": "lexical-rz-zh-76ae",
+      "title": "Taiwan Ministry of Education dictionary: 皮",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=830&q=1&word=2",
+      "kind": "dictionary",
+      "locator": "Headword 皮; reading pí; selected sense skin",
+      "whatItSupports": "An attested Mandarin lexical reading and the selected ordinary sense; simplified display 皮.",
+      "limitations": "Indexed primary dictionary entry inspected. This is a Taiwan dictionary, not a Putonghua pronunciation authority; only the indicated shared lexical reading is selected. Broad IPA is editorial. Alternate readings, historical senses and surname senses are excluded; no recording is imported."
+    },
+    {
+      "id": "lexical-rz-zh-5341",
+      "title": "Taiwan Ministry of Education dictionary: 十",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=8727&word=%3D%E5%8D%81",
+      "kind": "dictionary",
+      "locator": "Headword 十; reading shí; selected sense ten",
+      "whatItSupports": "An attested Mandarin lexical reading and the selected ordinary sense; simplified display 十.",
+      "limitations": "Indexed primary dictionary entry inspected. This is a Taiwan dictionary, not a Putonghua pronunciation authority; only the indicated shared lexical reading is selected. Broad IPA is editorial. Alternate readings, historical senses and surname senses are excluded; no recording is imported."
+    },
+    {
+      "id": "lexical-rz-zh-62d4",
+      "title": "Taiwan Ministry of Education dictionary: 拔",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=14&q=1&word=%E6%8B%94",
+      "kind": "dictionary",
+      "locator": "Headword 拔; reading bá; selected sense pull out",
+      "whatItSupports": "An attested Mandarin lexical reading and the selected ordinary sense; simplified display 拔.",
+      "limitations": "Indexed primary dictionary entry inspected. This is a Taiwan dictionary, not a Putonghua pronunciation authority; only the indicated shared lexical reading is selected. Broad IPA is editorial. Alternate readings, historical senses and surname senses are excluded; no recording is imported."
+    },
+    {
+      "id": "lexical-rz-zh-9a6c",
+      "title": "Taiwan Ministry of Education dictionary: 馬",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=1031&la=0&powerMode=0",
+      "kind": "dictionary",
+      "locator": "Headword 馬; reading mǎ; selected sense horse",
+      "whatItSupports": "An attested Mandarin lexical reading and the selected ordinary sense; simplified display 马.",
+      "limitations": "Indexed primary dictionary entry inspected. This is a Taiwan dictionary, not a Putonghua pronunciation authority; only the indicated shared lexical reading is selected. Broad IPA is editorial. Alternate readings, historical senses and surname senses are excluded; no recording is imported."
+    },
+    {
+      "id": "lexical-rz-zh-96e8",
+      "title": "Taiwan Ministry of Education dictionary: 雨",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=11686&la=0&powerMode=0",
+      "kind": "dictionary",
+      "locator": "Headword 雨; reading yǔ; selected sense rain, noun",
+      "whatItSupports": "An attested Mandarin lexical reading and the selected ordinary sense; simplified display 雨.",
+      "limitations": "Indexed primary dictionary entry inspected. This is a Taiwan dictionary, not a Putonghua pronunciation authority; only the indicated shared lexical reading is selected. Broad IPA is editorial. Alternate readings, historical senses and surname senses are excluded; no recording is imported."
+    },
+    {
+      "id": "lexical-rz-zh-5339",
+      "title": "Taiwan Ministry of Education dictionary: 匹",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=800",
+      "kind": "dictionary",
+      "locator": "Headword 匹; reading pǐ; selected sense classifier for a length of cloth",
+      "whatItSupports": "An attested Mandarin lexical reading and the selected ordinary sense; simplified display 匹.",
+      "limitations": "Indexed primary dictionary entry inspected. This is a Taiwan dictionary, not a Putonghua pronunciation authority; only the indicated shared lexical reading is selected. Broad IPA is editorial. Alternate readings, historical senses and surname senses are excluded; no recording is imported."
+    },
+    {
+      "id": "lexical-rz-zh-9f20",
+      "title": "Taiwan Ministry of Education dictionary: 鼠",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=9106&la=1&powerMode=0",
+      "kind": "dictionary",
+      "locator": "Headword 鼠; reading shǔ; selected sense mouse; rat",
+      "whatItSupports": "An attested Mandarin lexical reading and the selected ordinary sense; simplified display 鼠.",
+      "limitations": "Indexed primary dictionary entry inspected. This is a Taiwan dictionary, not a Putonghua pronunciation authority; only the indicated shared lexical reading is selected. Broad IPA is editorial. Alternate readings, historical senses and surname senses are excluded; no recording is imported."
+    },
+    {
+      "id": "lexical-rz-zh-4e70",
+      "title": "Taiwan Ministry of Education dictionary: 買",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=1109&word=%3D%E8%B2%B7",
+      "kind": "dictionary",
+      "locator": "Headword 買; reading mǎi; selected sense buy",
+      "whatItSupports": "An attested Mandarin lexical reading and the selected ordinary sense; simplified display 买.",
+      "limitations": "Indexed primary dictionary entry inspected. This is a Taiwan dictionary, not a Putonghua pronunciation authority; only the indicated shared lexical reading is selected. Broad IPA is editorial. Alternate readings, historical senses and surname senses are excluded; no recording is imported."
+    },
+    {
+      "id": "lexical-rz-zh-9a82",
+      "title": "Taiwan Ministry of Education dictionary: 罵",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=1040&word=%3D%E7%BD%B5",
+      "kind": "dictionary",
+      "locator": "Headword 罵; reading mà; selected sense scold",
+      "whatItSupports": "An attested Mandarin lexical reading and the selected ordinary sense; simplified display 骂.",
+      "limitations": "Indexed primary dictionary entry inspected. This is a Taiwan dictionary, not a Putonghua pronunciation authority; only the indicated shared lexical reading is selected. Broad IPA is editorial. Alternate readings, historical senses and surname senses are excluded; no recording is imported."
+    },
+    {
+      "id": "lexical-rz-zh-6811",
+      "title": "Taiwan Ministry of Education dictionary: 樹",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=9124&la=1&powerMode=0",
+      "kind": "dictionary",
+      "locator": "Headword 樹; reading shù; selected sense tree",
+      "whatItSupports": "An attested Mandarin lexical reading and the selected ordinary sense; simplified display 树.",
+      "limitations": "Indexed primary dictionary entry inspected. This is a Taiwan dictionary, not a Putonghua pronunciation authority; only the indicated shared lexical reading is selected. Broad IPA is editorial. Alternate readings, historical senses and surname senses are excluded; no recording is imported."
+    },
+    {
+      "id": "lexical-rz-zh-70eb",
+      "title": "Taiwan Ministry of Education dictionary: 燙",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=2620&la=0&powerMode=0",
+      "kind": "dictionary",
+      "locator": "Headword 燙; reading tàng; selected sense scald; scalding hot",
+      "whatItSupports": "An attested Mandarin lexical reading and the selected ordinary sense; simplified display 烫.",
+      "limitations": "Indexed primary dictionary entry inspected. This is a Taiwan dictionary, not a Putonghua pronunciation authority; only the indicated shared lexical reading is selected. Broad IPA is editorial. Alternate readings, historical senses and surname senses are excluded; no recording is imported."
+    },
+    {
+      "id": "lexical-rz-zh-7389",
+      "title": "Taiwan Ministry of Education dictionary: 玉",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=11811&ver=4",
+      "kind": "dictionary",
+      "locator": "Headword 玉; reading yù; selected sense jade",
+      "whatItSupports": "An attested Mandarin lexical reading and the selected ordinary sense; simplified display 玉.",
+      "limitations": "Indexed primary dictionary entry inspected. This is a Taiwan dictionary, not a Putonghua pronunciation authority; only the indicated shared lexical reading is selected. Broad IPA is editorial. Alternate readings, historical senses and surname senses are excluded; no recording is imported."
+    },
+    {
+      "id": "lexical-rz-zh-5356",
+      "title": "Taiwan Ministry of Education dictionary: 賣",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=1113&la=1&powerMode=0",
+      "kind": "dictionary",
+      "locator": "Headword 賣; reading mài; selected sense sell",
+      "whatItSupports": "An attested Mandarin lexical reading and the selected ordinary sense; simplified display 卖.",
+      "limitations": "Indexed primary dictionary entry inspected. This is a Taiwan dictionary, not a Putonghua pronunciation authority; only the indicated shared lexical reading is selected. Broad IPA is editorial. Alternate readings, historical senses and surname senses are excluded; no recording is imported."
+    },
+    {
+      "id": "lexical-rz-zh-65b9",
+      "title": "Taiwan Ministry of Education dictionary: 方",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=1703&la=0&powerMode=0",
+      "kind": "dictionary",
+      "locator": "Headword 方; reading fāng; selected sense square",
+      "whatItSupports": "An attested Mandarin lexical reading and the selected ordinary sense; simplified display 方.",
+      "limitations": "Indexed primary dictionary entry inspected. This is a Taiwan dictionary, not a Putonghua pronunciation authority; only the indicated shared lexical reading is selected. Broad IPA is editorial. Alternate readings, historical senses and surname senses are excluded; no recording is imported."
+    },
+    {
+      "id": "zh-balance-moe-628a",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 把",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=137",
+      "kind": "dictionary",
+      "locator": "Headword 把; selected reading bǎ; selected sense hold; grasp; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 把 (bǎ).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-7238",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 爸",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=28",
+      "kind": "dictionary",
+      "locator": "Headword 爸; selected reading bà; selected sense dad; father; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 爸 (bà).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-642d",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 搭",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=1900",
+      "kind": "dictionary",
+      "locator": "Headword 搭; selected reading dā; selected sense put up; erect; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 搭 (dā).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-8fbe",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 達",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=1914",
+      "kind": "dictionary",
+      "locator": "Headword 達; selected reading dá; selected sense reach; attain; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 达 (dá).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-6253",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 打",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=1905",
+      "kind": "dictionary",
+      "locator": "Headword 打; selected reading dǎ; selected sense hit; strike; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 打 (dǎ).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-5927",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 大",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=1919",
+      "kind": "dictionary",
+      "locator": "Headword 大; selected reading dà; selected sense big; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 大 (dà).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-4f7f",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 使",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=8746",
+      "kind": "dictionary",
+      "locator": "Headword 使; selected reading shǐ; selected sense make; cause; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 使 (shǐ).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-662f",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 是",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=8779",
+      "kind": "dictionary",
+      "locator": "Headword 是; selected reading shì; selected sense be; is; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 是 (shì).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-7cd6",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 糖",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=2598",
+      "kind": "dictionary",
+      "locator": "Headword 糖; selected reading táng; selected sense sugar; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 糖 (táng).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-8eba",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 躺",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=2612",
+      "kind": "dictionary",
+      "locator": "Headword 躺; selected reading tǎng; selected sense lie down; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 躺 (tǎng).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-9e21",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 雞",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=5355",
+      "kind": "dictionary",
+      "locator": "Headword 雞; selected reading jī; selected sense chicken; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 鸡 (jī).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-6025",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 急",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=5382",
+      "kind": "dictionary",
+      "locator": "Headword 急; selected reading jí; selected sense urgent; anxious; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 急 (jí).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-6324",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 擠",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=5427",
+      "kind": "dictionary",
+      "locator": "Headword 擠; selected reading jǐ; selected sense squeeze; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 挤 (jǐ).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-8bb0",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 記",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=5442",
+      "kind": "dictionary",
+      "locator": "Headword 記; selected reading jì; selected sense remember; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 记 (jì).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-4e03",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 七",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=6217",
+      "kind": "dictionary",
+      "locator": "Headword 七; selected reading qī; selected sense seven; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 七 (qī).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-9a91",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 騎",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=5456",
+      "kind": "dictionary",
+      "locator": "Headword 騎; selected reading qí; selected sense ride; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 骑 (qí).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-8d77",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 起",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=6299",
+      "kind": "dictionary",
+      "locator": "Headword 起; selected reading qǐ; selected sense rise; get up; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 起 (qǐ).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-6c14",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 氣",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=6315",
+      "kind": "dictionary",
+      "locator": "Headword 氣; selected reading qì; selected sense air; gas; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 气 (qì).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-897f",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 西",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=6750",
+      "kind": "dictionary",
+      "locator": "Headword 西; selected reading xī; selected sense west; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 西 (xī).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-5e2d",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 席",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=6823",
+      "kind": "dictionary",
+      "locator": "Headword 席; selected reading xí; selected sense mat; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 席 (xí).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-6d17",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 洗",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=6843",
+      "kind": "dictionary",
+      "locator": "Headword 洗; selected reading xǐ; selected sense wash; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 洗 (xǐ).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-7ec6",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 細",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=6879",
+      "kind": "dictionary",
+      "locator": "Headword 細; selected reading xì; selected sense thin; fine; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 细 (xì).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-70df",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 煙",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=10972",
+      "kind": "dictionary",
+      "locator": "Headword 煙; selected reading yān; selected sense smoke; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 烟 (yān).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-76d0",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 鹽",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=11007",
+      "kind": "dictionary",
+      "locator": "Headword 鹽; selected reading yán; selected sense salt; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 盐 (yán).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-773c",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 眼",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=11030",
+      "kind": "dictionary",
+      "locator": "Headword 眼; selected reading yǎn; selected sense eye; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 眼 (yǎn).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-71d5",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 燕",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=10977",
+      "kind": "dictionary",
+      "locator": "Headword 燕; selected reading yàn; selected sense swallow, the bird; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 燕 (yàn).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-732a",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 豬",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=7971",
+      "kind": "dictionary",
+      "locator": "Headword 豬; selected reading zhū; selected sense pig; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 猪 (zhū).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-7af9",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 竹",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=7977",
+      "kind": "dictionary",
+      "locator": "Headword 竹; selected reading zhú; selected sense bamboo; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 竹 (zhú).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-716e",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 煮",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=8000",
+      "kind": "dictionary",
+      "locator": "Headword 煮; selected reading zhǔ; selected sense boil; cook in water; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 煮 (zhǔ).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-4f4f",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 住",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=8012",
+      "kind": "dictionary",
+      "locator": "Headword 住; selected reading zhù; selected sense live; reside; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 住 (zhù).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-623f",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 房",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=1714",
+      "kind": "dictionary",
+      "locator": "Headword 房; selected reading fáng; selected sense room; house; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 房 (fáng).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-4eff",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 仿",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=1717",
+      "kind": "dictionary",
+      "locator": "Headword 仿; selected reading fǎng; selected sense imitate; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 仿 (fǎng).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-653e",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 放",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=1719",
+      "kind": "dictionary",
+      "locator": "Headword 放; selected reading fàng; selected sense put; place; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 放 (fàng).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-5206",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 分",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=1688",
+      "kind": "dictionary",
+      "locator": "Headword 分; selected reading fēn; selected sense divide; separate; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 分 (fēn).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-575f",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 墳",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=1678",
+      "kind": "dictionary",
+      "locator": "Headword 墳; selected reading fén; selected sense grave; tomb; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 坟 (fén).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-7c89",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 粉",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=1687",
+      "kind": "dictionary",
+      "locator": "Headword 粉; selected reading fěn; selected sense powder; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 粉 (fěn).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-4efd",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 份",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=1689",
+      "kind": "dictionary",
+      "locator": "Headword 份; selected reading fèn; selected sense portion; share; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 份 (fèn).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-98de",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 飛",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=1561",
+      "kind": "dictionary",
+      "locator": "Headword 飛; selected reading fēi; selected sense fly; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 飞 (fēi).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-80a5",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 肥",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=1562",
+      "kind": "dictionary",
+      "locator": "Headword 肥; selected reading féi; selected sense fat; plump; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 肥 (féi).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-532a",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 匪",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=1567",
+      "kind": "dictionary",
+      "locator": "Headword 匪; selected reading fěi; selected sense bandit; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 匪 (fěi).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-8d39",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 費",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=1583",
+      "kind": "dictionary",
+      "locator": "Headword 費; selected reading fèi; selected sense spend; cost; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 费 (fèi).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-9e70",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 鷹",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=11201",
+      "kind": "dictionary",
+      "locator": "Headword 鷹; selected reading yīng; selected sense eagle; hawk; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 鹰 (yīng).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-8d62",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 贏",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=11228",
+      "kind": "dictionary",
+      "locator": "Headword 贏; selected reading yíng; selected sense win; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 赢 (yíng).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-5f71",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 影",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=11233",
+      "kind": "dictionary",
+      "locator": "Headword 影; selected reading yǐng; selected sense shadow; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 影 (yǐng).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    },
+    {
+      "id": "zh-balance-moe-786c",
+      "title": "Taiwan Ministry of Education Revised Mandarin Dictionary: 硬",
+      "url": "https://dict.revised.moe.edu.tw/dictView.jsp?ID=11239",
+      "kind": "dictionary",
+      "locator": "Headword 硬; selected reading yìng; selected sense hard; indexed entry text inspected 2026-10-01.",
+      "whatItSupports": "The selected lexical reading and ordinary sense of 硬 (yìng).",
+      "limitations": "Primary entry inspected through its indexed text. This is a Taiwan lexical dictionary, not a Putonghua acoustic authority. Simplified display and short English gloss are editorial; IPA is editorial, not supplied by this dictionary. Historical, surname and unselected readings are excluded. No dictionary recording or entry paragraph is imported."
+    }
+  ],
+  "lexicalItems": [
+    {
+      "id": "zh-balance-5988-1",
+      "text": "妈",
+      "ipa": "/ma˥/",
+      "romanization": "mā",
+      "meaning": "mother",
+      "sourceIds": [
+        "lexical-rz-zh-5988"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 1,
+      "segmentalFrame": "ma",
+      "split": "train",
+      "readingNote": "Isolated mā. This does not model the unstressed second syllable of 妈妈."
+    },
+    {
+      "id": "zh-balance-9ebb-2",
+      "text": "麻",
+      "ipa": "/ma˧˥/",
+      "romanization": "má",
+      "meaning": "numb",
+      "sourceIds": [
+        "lexical-rz-zh-9ebb"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 2,
+      "segmentalFrame": "ma",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-9a6c-3",
+      "text": "马",
+      "ipa": "/ma˨˩˦/",
+      "romanization": "mǎ",
+      "meaning": "horse",
+      "sourceIds": [
+        "lexical-rz-zh-9a6c"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 3,
+      "segmentalFrame": "ma",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-9a82-4",
+      "text": "骂",
+      "ipa": "/ma˥˩/",
+      "romanization": "mà",
+      "meaning": "scold",
+      "sourceIds": [
+        "lexical-rz-zh-9a82"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 4,
+      "segmentalFrame": "ma",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-516b-1",
+      "text": "八",
+      "ipa": "/pa˥/",
+      "romanization": "bā",
+      "meaning": "eight",
+      "sourceIds": [
+        "lexical-rz-zh-516b"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 1,
+      "segmentalFrame": "ba",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-62d4-2",
+      "text": "拔",
+      "ipa": "/pa˧˥/",
+      "romanization": "bá",
+      "meaning": "pull out",
+      "sourceIds": [
+        "lexical-rz-zh-62d4"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 2,
+      "segmentalFrame": "ba",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-628a-3",
+      "text": "把",
+      "ipa": "/pa˨˩˦/",
+      "romanization": "bǎ",
+      "meaning": "hold; grasp",
+      "sourceIds": [
+        "zh-balance-moe-628a"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 3,
+      "segmentalFrame": "ba",
+      "split": "train",
+      "readingNote": "Select bǎ hold/grasp, not bà handle or the historical alternative bǎi."
+    },
+    {
+      "id": "zh-balance-7238-4",
+      "text": "爸",
+      "ipa": "/pa˥˩/",
+      "romanization": "bà",
+      "meaning": "dad; father",
+      "sourceIds": [
+        "zh-balance-moe-7238"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 4,
+      "segmentalFrame": "ba",
+      "split": "train",
+      "readingNote": "Isolated bà. This does not model the unstressed second syllable of 爸爸."
+    },
+    {
+      "id": "zh-balance-642d-1",
+      "text": "搭",
+      "ipa": "/ta˥/",
+      "romanization": "dā",
+      "meaning": "put up; erect",
+      "sourceIds": [
+        "zh-balance-moe-642d"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 1,
+      "segmentalFrame": "da",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-8fbe-2",
+      "text": "达",
+      "ipa": "/ta˧˥/",
+      "romanization": "dá",
+      "meaning": "reach; attain",
+      "sourceIds": [
+        "zh-balance-moe-8fbe"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 2,
+      "segmentalFrame": "da",
+      "split": "train",
+      "readingNote": "Select dá reach/attain; exclude the historical tà reading and surname senses."
+    },
+    {
+      "id": "zh-balance-6253-3",
+      "text": "打",
+      "ipa": "/ta˨˩˦/",
+      "romanization": "dǎ",
+      "meaning": "hit; strike",
+      "sourceIds": [
+        "zh-balance-moe-6253"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 3,
+      "segmentalFrame": "da",
+      "split": "train",
+      "readingNote": "Select dǎ hit; exclude dá dozen."
+    },
+    {
+      "id": "zh-balance-5927-4",
+      "text": "大",
+      "ipa": "/ta˥˩/",
+      "romanization": "dà",
+      "meaning": "big",
+      "sourceIds": [
+        "zh-balance-moe-5927"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 4,
+      "segmentalFrame": "da",
+      "split": "train",
+      "readingNote": "Select dà big; exclude dài in 大夫 and historical tài."
+    },
+    {
+      "id": "zh-balance-8bd7-1",
+      "text": "诗",
+      "ipa": "/ʂɻ̩˥/",
+      "romanization": "shī",
+      "meaning": "poem",
+      "sourceIds": [
+        "lexical-rz-zh-8bd7"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 1,
+      "segmentalFrame": "shi",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-5341-2",
+      "text": "十",
+      "ipa": "/ʂɻ̩˧˥/",
+      "romanization": "shí",
+      "meaning": "ten",
+      "sourceIds": [
+        "lexical-rz-zh-5341"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 2,
+      "segmentalFrame": "shi",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-4f7f-3",
+      "text": "使",
+      "ipa": "/ʂɻ̩˨˩˦/",
+      "romanization": "shǐ",
+      "meaning": "make; cause",
+      "sourceIds": [
+        "zh-balance-moe-4f7f"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 3,
+      "segmentalFrame": "shi",
+      "split": "train",
+      "readingNote": "Select shǐ make/cause; exclude the dictionary's shì alternative for other senses."
+    },
+    {
+      "id": "zh-balance-662f-4",
+      "text": "是",
+      "ipa": "/ʂɻ̩˥˩/",
+      "romanization": "shì",
+      "meaning": "be; is",
+      "sourceIds": [
+        "zh-balance-moe-662f"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 4,
+      "segmentalFrame": "shi",
+      "split": "train",
+      "readingNote": "An isolated, full citation shì; do not synthesize a neutral or reduced connected-speech realization."
+    },
+    {
+      "id": "zh-balance-6c64-1",
+      "text": "汤",
+      "ipa": "/tʰɑŋ˥/",
+      "romanization": "tāng",
+      "meaning": "soup",
+      "sourceIds": [
+        "lexical-rz-zh-6c64"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 1,
+      "segmentalFrame": "tang",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-7cd6-2",
+      "text": "糖",
+      "ipa": "/tʰɑŋ˧˥/",
+      "romanization": "táng",
+      "meaning": "sugar",
+      "sourceIds": [
+        "zh-balance-moe-7cd6"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 2,
+      "segmentalFrame": "tang",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-8eba-3",
+      "text": "躺",
+      "ipa": "/tʰɑŋ˨˩˦/",
+      "romanization": "tǎng",
+      "meaning": "lie down",
+      "sourceIds": [
+        "zh-balance-moe-8eba"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 3,
+      "segmentalFrame": "tang",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-70eb-4",
+      "text": "烫",
+      "ipa": "/tʰɑŋ˥˩/",
+      "romanization": "tàng",
+      "meaning": "scald; scalding hot",
+      "sourceIds": [
+        "lexical-rz-zh-70eb"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 4,
+      "segmentalFrame": "tang",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-9e21-1",
+      "text": "鸡",
+      "ipa": "/tɕi˥/",
+      "romanization": "jī",
+      "meaning": "chicken",
+      "sourceIds": [
+        "zh-balance-moe-9e21"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 1,
+      "segmentalFrame": "ji",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-6025-2",
+      "text": "急",
+      "ipa": "/tɕi˧˥/",
+      "romanization": "jí",
+      "meaning": "urgent; anxious",
+      "sourceIds": [
+        "zh-balance-moe-6025"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 2,
+      "segmentalFrame": "ji",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-6324-3",
+      "text": "挤",
+      "ipa": "/tɕi˨˩˦/",
+      "romanization": "jǐ",
+      "meaning": "squeeze",
+      "sourceIds": [
+        "zh-balance-moe-6324"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 3,
+      "segmentalFrame": "ji",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-8bb0-4",
+      "text": "记",
+      "ipa": "/tɕi˥˩/",
+      "romanization": "jì",
+      "meaning": "remember",
+      "sourceIds": [
+        "zh-balance-moe-8bb0"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 4,
+      "segmentalFrame": "ji",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-4e03-1",
+      "text": "七",
+      "ipa": "/tɕʰi˥/",
+      "romanization": "qī",
+      "meaning": "seven",
+      "sourceIds": [
+        "zh-balance-moe-4e03"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 1,
+      "segmentalFrame": "qi",
+      "split": "train",
+      "readingNote": "Isolated qī. Do not import the dictionary's contextual/Taiwan tone-change note into this Putonghua citation task."
+    },
+    {
+      "id": "zh-balance-9a91-2",
+      "text": "骑",
+      "ipa": "/tɕʰi˧˥/",
+      "romanization": "qí",
+      "meaning": "ride",
+      "sourceIds": [
+        "zh-balance-moe-9a91"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 2,
+      "segmentalFrame": "qi",
+      "split": "train",
+      "readingNote": "Select qí ride, not the Taiwan dictionary's jì nominal/cavalry reading."
+    },
+    {
+      "id": "zh-balance-8d77-3",
+      "text": "起",
+      "ipa": "/tɕʰi˨˩˦/",
+      "romanization": "qǐ",
+      "meaning": "rise; get up",
+      "sourceIds": [
+        "zh-balance-moe-8d77"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 3,
+      "segmentalFrame": "qi",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-6c14-4",
+      "text": "气",
+      "ipa": "/tɕʰi˥˩/",
+      "romanization": "qì",
+      "meaning": "air; gas",
+      "sourceIds": [
+        "zh-balance-moe-6c14"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 4,
+      "segmentalFrame": "qi",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-897f-1",
+      "text": "西",
+      "ipa": "/ɕi˥/",
+      "romanization": "xī",
+      "meaning": "west",
+      "sourceIds": [
+        "zh-balance-moe-897f"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 1,
+      "segmentalFrame": "xi",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-5e2d-2",
+      "text": "席",
+      "ipa": "/ɕi˧˥/",
+      "romanization": "xí",
+      "meaning": "mat",
+      "sourceIds": [
+        "zh-balance-moe-5e2d"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 2,
+      "segmentalFrame": "xi",
+      "split": "train",
+      "readingNote": "The ordinary mat sense, not the surname; often expanded as 席子 in conversation."
+    },
+    {
+      "id": "zh-balance-6d17-3",
+      "text": "洗",
+      "ipa": "/ɕi˨˩˦/",
+      "romanization": "xǐ",
+      "meaning": "wash",
+      "sourceIds": [
+        "zh-balance-moe-6d17"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 3,
+      "segmentalFrame": "xi",
+      "split": "train",
+      "readingNote": "Select xǐ wash, not xiǎn in other senses."
+    },
+    {
+      "id": "zh-balance-7ec6-4",
+      "text": "细",
+      "ipa": "/ɕi˥˩/",
+      "romanization": "xì",
+      "meaning": "thin; fine",
+      "sourceIds": [
+        "zh-balance-moe-7ec6"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 4,
+      "segmentalFrame": "xi",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-70df-1",
+      "text": "烟",
+      "ipa": "/jɛn˥/",
+      "romanization": "yān",
+      "meaning": "smoke",
+      "sourceIds": [
+        "zh-balance-moe-70df"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 1,
+      "segmentalFrame": "yan",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-76d0-2",
+      "text": "盐",
+      "ipa": "/jɛn˧˥/",
+      "romanization": "yán",
+      "meaning": "salt",
+      "sourceIds": [
+        "zh-balance-moe-76d0"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 2,
+      "segmentalFrame": "yan",
+      "split": "train",
+      "readingNote": "Select yán salt, not the historical yàn verb."
+    },
+    {
+      "id": "zh-balance-773c-3",
+      "text": "眼",
+      "ipa": "/jɛn˨˩˦/",
+      "romanization": "yǎn",
+      "meaning": "eye",
+      "sourceIds": [
+        "zh-balance-moe-773c"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 3,
+      "segmentalFrame": "yan",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-71d5-4",
+      "text": "燕",
+      "ipa": "/jɛn˥˩/",
+      "romanization": "yàn",
+      "meaning": "swallow, the bird",
+      "sourceIds": [
+        "zh-balance-moe-71d5"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 4,
+      "segmentalFrame": "yan",
+      "split": "train",
+      "readingNote": "Select yàn swallow (bird), not yān historical state or surname; often expanded as 燕子 in conversation."
+    },
+    {
+      "id": "zh-balance-732a-1",
+      "text": "猪",
+      "ipa": "/ʈʂu˥/",
+      "romanization": "zhū",
+      "meaning": "pig",
+      "sourceIds": [
+        "zh-balance-moe-732a"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 1,
+      "segmentalFrame": "zhu",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-7af9-2",
+      "text": "竹",
+      "ipa": "/ʈʂu˧˥/",
+      "romanization": "zhú",
+      "meaning": "bamboo",
+      "sourceIds": [
+        "zh-balance-moe-7af9"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 2,
+      "segmentalFrame": "zhu",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-716e-3",
+      "text": "煮",
+      "ipa": "/ʈʂu˨˩˦/",
+      "romanization": "zhǔ",
+      "meaning": "boil; cook in water",
+      "sourceIds": [
+        "zh-balance-moe-716e"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 3,
+      "segmentalFrame": "zhu",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-4f4f-4",
+      "text": "住",
+      "ipa": "/ʈʂu˥˩/",
+      "romanization": "zhù",
+      "meaning": "live; reside",
+      "sourceIds": [
+        "zh-balance-moe-4f4f"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 4,
+      "segmentalFrame": "zhu",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-65b9-1",
+      "text": "方",
+      "ipa": "/fɑŋ˥/",
+      "romanization": "fāng",
+      "meaning": "square",
+      "sourceIds": [
+        "lexical-rz-zh-65b9"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 1,
+      "segmentalFrame": "fang",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-623f-2",
+      "text": "房",
+      "ipa": "/fɑŋ˧˥/",
+      "romanization": "fáng",
+      "meaning": "room; house",
+      "sourceIds": [
+        "zh-balance-moe-623f"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 2,
+      "segmentalFrame": "fang",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-4eff-3",
+      "text": "仿",
+      "ipa": "/fɑŋ˨˩˦/",
+      "romanization": "fǎng",
+      "meaning": "imitate",
+      "sourceIds": [
+        "zh-balance-moe-4eff"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 3,
+      "segmentalFrame": "fang",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-653e-4",
+      "text": "放",
+      "ipa": "/fɑŋ˥˩/",
+      "romanization": "fàng",
+      "meaning": "put; place",
+      "sourceIds": [
+        "zh-balance-moe-653e"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 4,
+      "segmentalFrame": "fang",
+      "split": "train",
+      "readingNote": "Select fàng put/place, not the historical fǎng reading."
+    },
+    {
+      "id": "zh-balance-5206-1",
+      "text": "分",
+      "ipa": "/fən˥/",
+      "romanization": "fēn",
+      "meaning": "divide; separate",
+      "sourceIds": [
+        "zh-balance-moe-5206"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 1,
+      "segmentalFrame": "fen",
+      "split": "train",
+      "readingNote": "Select fēn divide/separate, not fèn portion."
+    },
+    {
+      "id": "zh-balance-575f-2",
+      "text": "坟",
+      "ipa": "/fən˧˥/",
+      "romanization": "fén",
+      "meaning": "grave; tomb",
+      "sourceIds": [
+        "zh-balance-moe-575f"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 2,
+      "segmentalFrame": "fen",
+      "split": "train",
+      "readingNote": "Select fén grave, not the historical fèn reading."
+    },
+    {
+      "id": "zh-balance-7c89-3",
+      "text": "粉",
+      "ipa": "/fən˨˩˦/",
+      "romanization": "fěn",
+      "meaning": "powder",
+      "sourceIds": [
+        "zh-balance-moe-7c89"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 3,
+      "segmentalFrame": "fen",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-4efd-4",
+      "text": "份",
+      "ipa": "/fən˥˩/",
+      "romanization": "fèn",
+      "meaning": "portion; share",
+      "sourceIds": [
+        "zh-balance-moe-4efd"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 4,
+      "segmentalFrame": "fen",
+      "split": "train",
+      "readingNote": "Select fèn portion/share, not the historical bīn reading."
+    },
+    {
+      "id": "zh-balance-98de-1",
+      "text": "飞",
+      "ipa": "/fei˥/",
+      "romanization": "fēi",
+      "meaning": "fly",
+      "sourceIds": [
+        "zh-balance-moe-98de"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 1,
+      "segmentalFrame": "fei",
+      "split": "heldout",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-80a5-2",
+      "text": "肥",
+      "ipa": "/fei˧˥/",
+      "romanization": "féi",
+      "meaning": "fat; plump",
+      "sourceIds": [
+        "zh-balance-moe-80a5"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 2,
+      "segmentalFrame": "fei",
+      "split": "heldout",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-532a-3",
+      "text": "匪",
+      "ipa": "/fei˨˩˦/",
+      "romanization": "fěi",
+      "meaning": "bandit",
+      "sourceIds": [
+        "zh-balance-moe-532a"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 3,
+      "segmentalFrame": "fei",
+      "split": "heldout",
+      "readingNote": "The modern bandit sense, not the historical negator or basket; frequently occurs in 土匪/绑匪."
+    },
+    {
+      "id": "zh-balance-8d39-4",
+      "text": "费",
+      "ipa": "/fei˥˩/",
+      "romanization": "fèi",
+      "meaning": "spend; cost",
+      "sourceIds": [
+        "zh-balance-moe-8d39"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 4,
+      "segmentalFrame": "fei",
+      "split": "heldout",
+      "readingNote": "Select fèi spend/cost, not bì in the historical place-name."
+    },
+    {
+      "id": "zh-balance-9e70-1",
+      "text": "鹰",
+      "ipa": "/iŋ˥/",
+      "romanization": "yīng",
+      "meaning": "eagle; hawk",
+      "sourceIds": [
+        "zh-balance-moe-9e70"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 1,
+      "segmentalFrame": "ying",
+      "split": "heldout",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-8d62-2",
+      "text": "赢",
+      "ipa": "/iŋ˧˥/",
+      "romanization": "yíng",
+      "meaning": "win",
+      "sourceIds": [
+        "zh-balance-moe-8d62"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 2,
+      "segmentalFrame": "ying",
+      "split": "heldout",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-5f71-3",
+      "text": "影",
+      "ipa": "/iŋ˨˩˦/",
+      "romanization": "yǐng",
+      "meaning": "shadow",
+      "sourceIds": [
+        "zh-balance-moe-5f71"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 3,
+      "segmentalFrame": "ying",
+      "split": "heldout",
+      "readingNote": "Shadow is a common lexical morpheme, often expanded as 影子 in conversation."
+    },
+    {
+      "id": "zh-balance-786c-4",
+      "text": "硬",
+      "ipa": "/iŋ˥˩/",
+      "romanization": "yìng",
+      "meaning": "hard",
+      "sourceIds": [
+        "zh-balance-moe-786c"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 4,
+      "segmentalFrame": "ying",
+      "split": "heldout",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-76ae-2",
+      "text": "皮",
+      "ipa": "/pʰi˧˥/",
+      "romanization": "pí",
+      "meaning": "skin",
+      "sourceIds": [
+        "lexical-rz-zh-76ae"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 2,
+      "segmentalFrame": "pi",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-5339-3",
+      "text": "匹",
+      "ipa": "/pʰi˨˩˦/",
+      "romanization": "pǐ",
+      "meaning": "classifier for a length of cloth",
+      "sourceIds": [
+        "lexical-rz-zh-5339"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 3,
+      "segmentalFrame": "pi",
+      "split": "train",
+      "readingNote": "Preserve the selected pǐ cloth-length classifier; do not substitute the Taiwan dictionary's pī horse-classifier reading."
+    },
+    {
+      "id": "zh-balance-4e66-1",
+      "text": "书",
+      "ipa": "/ʂu˥/",
+      "romanization": "shū",
+      "meaning": "book",
+      "sourceIds": [
+        "lexical-rz-zh-4e66"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 1,
+      "segmentalFrame": "shu",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-9f20-3",
+      "text": "鼠",
+      "ipa": "/ʂu˨˩˦/",
+      "romanization": "shǔ",
+      "meaning": "mouse; rat",
+      "sourceIds": [
+        "lexical-rz-zh-9f20"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 3,
+      "segmentalFrame": "shu",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-6811-4",
+      "text": "树",
+      "ipa": "/ʂu˥˩/",
+      "romanization": "shù",
+      "meaning": "tree",
+      "sourceIds": [
+        "lexical-rz-zh-6811"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 4,
+      "segmentalFrame": "shu",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-9c7c-2",
+      "text": "鱼",
+      "ipa": "/y˧˥/",
+      "romanization": "yú",
+      "meaning": "fish",
+      "sourceIds": [
+        "lexical-rz-zh-9c7c"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 2,
+      "segmentalFrame": "yu",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-96e8-3",
+      "text": "雨",
+      "ipa": "/y˨˩˦/",
+      "romanization": "yǔ",
+      "meaning": "rain, noun",
+      "sourceIds": [
+        "lexical-rz-zh-96e8"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 3,
+      "segmentalFrame": "yu",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-7389-4",
+      "text": "玉",
+      "ipa": "/y˥˩/",
+      "romanization": "yù",
+      "meaning": "jade",
+      "sourceIds": [
+        "lexical-rz-zh-7389"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 4,
+      "segmentalFrame": "yu",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-4e70-3",
+      "text": "买",
+      "ipa": "/mai˨˩˦/",
+      "romanization": "mǎi",
+      "meaning": "buy",
+      "sourceIds": [
+        "lexical-rz-zh-4e70"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 3,
+      "segmentalFrame": "mai",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    },
+    {
+      "id": "zh-balance-5356-4",
+      "text": "卖",
+      "ipa": "/mai˥˩/",
+      "romanization": "mài",
+      "meaning": "sell",
+      "sourceIds": [
+        "lexical-rz-zh-5356"
+      ],
+      "stimulusSourceIds": [],
+      "tone": 4,
+      "segmentalFrame": "mai",
+      "split": "train",
+      "readingNote": "Use the listed isolated citation reading and selected modern sense."
+    }
+  ],
+  "trainingComparisons": [
+    {
+      "contrastId": "zh-tone-1-4",
+      "tones": [
+        1,
+        4
+      ],
+      "segmentalFrames": [
+        "ma",
+        "ba",
+        "da",
+        "shi",
+        "tang",
+        "ji",
+        "qi",
+        "xi",
+        "yan",
+        "zhu",
+        "fang",
+        "fen",
+        "shu"
+      ],
+      "wordIdsByTone": [
+        [
+          "zh-balance-5988-1",
+          "zh-balance-516b-1",
+          "zh-balance-642d-1",
+          "zh-balance-8bd7-1",
+          "zh-balance-6c64-1",
+          "zh-balance-9e21-1",
+          "zh-balance-4e03-1",
+          "zh-balance-897f-1",
+          "zh-balance-70df-1",
+          "zh-balance-732a-1",
+          "zh-balance-65b9-1",
+          "zh-balance-5206-1",
+          "zh-balance-4e66-1"
+        ],
+        [
+          "zh-balance-9a82-4",
+          "zh-balance-7238-4",
+          "zh-balance-5927-4",
+          "zh-balance-662f-4",
+          "zh-balance-70eb-4",
+          "zh-balance-8bb0-4",
+          "zh-balance-6c14-4",
+          "zh-balance-7ec6-4",
+          "zh-balance-71d5-4",
+          "zh-balance-4f4f-4",
+          "zh-balance-653e-4",
+          "zh-balance-4efd-4",
+          "zh-balance-6811-4"
+        ]
+      ]
+    },
+    {
+      "contrastId": "zh-tone-2-3",
+      "tones": [
+        2,
+        3
+      ],
+      "segmentalFrames": [
+        "ma",
+        "ba",
+        "da",
+        "shi",
+        "tang",
+        "ji",
+        "qi",
+        "xi",
+        "yan",
+        "zhu",
+        "fang",
+        "fen",
+        "yu",
+        "pi"
+      ],
+      "wordIdsByTone": [
+        [
+          "zh-balance-9ebb-2",
+          "zh-balance-62d4-2",
+          "zh-balance-8fbe-2",
+          "zh-balance-5341-2",
+          "zh-balance-7cd6-2",
+          "zh-balance-6025-2",
+          "zh-balance-9a91-2",
+          "zh-balance-5e2d-2",
+          "zh-balance-76d0-2",
+          "zh-balance-7af9-2",
+          "zh-balance-623f-2",
+          "zh-balance-575f-2",
+          "zh-balance-9c7c-2",
+          "zh-balance-76ae-2"
+        ],
+        [
+          "zh-balance-9a6c-3",
+          "zh-balance-628a-3",
+          "zh-balance-6253-3",
+          "zh-balance-4f7f-3",
+          "zh-balance-8eba-3",
+          "zh-balance-6324-3",
+          "zh-balance-8d77-3",
+          "zh-balance-6d17-3",
+          "zh-balance-773c-3",
+          "zh-balance-716e-3",
+          "zh-balance-4eff-3",
+          "zh-balance-7c89-3",
+          "zh-balance-96e8-3",
+          "zh-balance-5339-3"
+        ]
+      ]
+    },
+    {
+      "contrastId": "zh-tone-1-2",
+      "tones": [
+        1,
+        2
+      ],
+      "segmentalFrames": [
+        "ma",
+        "ba",
+        "da",
+        "shi",
+        "tang",
+        "ji",
+        "qi",
+        "xi",
+        "yan",
+        "zhu",
+        "fang",
+        "fen"
+      ],
+      "wordIdsByTone": [
+        [
+          "zh-balance-5988-1",
+          "zh-balance-516b-1",
+          "zh-balance-642d-1",
+          "zh-balance-8bd7-1",
+          "zh-balance-6c64-1",
+          "zh-balance-9e21-1",
+          "zh-balance-4e03-1",
+          "zh-balance-897f-1",
+          "zh-balance-70df-1",
+          "zh-balance-732a-1",
+          "zh-balance-65b9-1",
+          "zh-balance-5206-1"
+        ],
+        [
+          "zh-balance-9ebb-2",
+          "zh-balance-62d4-2",
+          "zh-balance-8fbe-2",
+          "zh-balance-5341-2",
+          "zh-balance-7cd6-2",
+          "zh-balance-6025-2",
+          "zh-balance-9a91-2",
+          "zh-balance-5e2d-2",
+          "zh-balance-76d0-2",
+          "zh-balance-7af9-2",
+          "zh-balance-623f-2",
+          "zh-balance-575f-2"
+        ]
+      ]
+    },
+    {
+      "contrastId": "zh-tone-1-3",
+      "tones": [
+        1,
+        3
+      ],
+      "segmentalFrames": [
+        "ma",
+        "ba",
+        "da",
+        "shi",
+        "tang",
+        "ji",
+        "qi",
+        "xi",
+        "yan",
+        "zhu",
+        "fang",
+        "fen",
+        "shu"
+      ],
+      "wordIdsByTone": [
+        [
+          "zh-balance-5988-1",
+          "zh-balance-516b-1",
+          "zh-balance-642d-1",
+          "zh-balance-8bd7-1",
+          "zh-balance-6c64-1",
+          "zh-balance-9e21-1",
+          "zh-balance-4e03-1",
+          "zh-balance-897f-1",
+          "zh-balance-70df-1",
+          "zh-balance-732a-1",
+          "zh-balance-65b9-1",
+          "zh-balance-5206-1",
+          "zh-balance-4e66-1"
+        ],
+        [
+          "zh-balance-9a6c-3",
+          "zh-balance-628a-3",
+          "zh-balance-6253-3",
+          "zh-balance-4f7f-3",
+          "zh-balance-8eba-3",
+          "zh-balance-6324-3",
+          "zh-balance-8d77-3",
+          "zh-balance-6d17-3",
+          "zh-balance-773c-3",
+          "zh-balance-716e-3",
+          "zh-balance-4eff-3",
+          "zh-balance-7c89-3",
+          "zh-balance-9f20-3"
+        ]
+      ]
+    },
+    {
+      "contrastId": "zh-tone-2-4",
+      "tones": [
+        2,
+        4
+      ],
+      "segmentalFrames": [
+        "ma",
+        "ba",
+        "da",
+        "shi",
+        "tang",
+        "ji",
+        "qi",
+        "xi",
+        "yan",
+        "zhu",
+        "fang",
+        "fen",
+        "yu"
+      ],
+      "wordIdsByTone": [
+        [
+          "zh-balance-9ebb-2",
+          "zh-balance-62d4-2",
+          "zh-balance-8fbe-2",
+          "zh-balance-5341-2",
+          "zh-balance-7cd6-2",
+          "zh-balance-6025-2",
+          "zh-balance-9a91-2",
+          "zh-balance-5e2d-2",
+          "zh-balance-76d0-2",
+          "zh-balance-7af9-2",
+          "zh-balance-623f-2",
+          "zh-balance-575f-2",
+          "zh-balance-9c7c-2"
+        ],
+        [
+          "zh-balance-9a82-4",
+          "zh-balance-7238-4",
+          "zh-balance-5927-4",
+          "zh-balance-662f-4",
+          "zh-balance-70eb-4",
+          "zh-balance-8bb0-4",
+          "zh-balance-6c14-4",
+          "zh-balance-7ec6-4",
+          "zh-balance-71d5-4",
+          "zh-balance-4f4f-4",
+          "zh-balance-653e-4",
+          "zh-balance-4efd-4",
+          "zh-balance-7389-4"
+        ]
+      ]
+    },
+    {
+      "contrastId": "zh-tone-3-4",
+      "tones": [
+        3,
+        4
+      ],
+      "segmentalFrames": [
+        "ma",
+        "ba",
+        "da",
+        "shi",
+        "tang",
+        "ji",
+        "qi",
+        "xi",
+        "yan",
+        "zhu",
+        "fang",
+        "fen",
+        "shu",
+        "yu",
+        "mai"
+      ],
+      "wordIdsByTone": [
+        [
+          "zh-balance-9a6c-3",
+          "zh-balance-628a-3",
+          "zh-balance-6253-3",
+          "zh-balance-4f7f-3",
+          "zh-balance-8eba-3",
+          "zh-balance-6324-3",
+          "zh-balance-8d77-3",
+          "zh-balance-6d17-3",
+          "zh-balance-773c-3",
+          "zh-balance-716e-3",
+          "zh-balance-4eff-3",
+          "zh-balance-7c89-3",
+          "zh-balance-9f20-3",
+          "zh-balance-96e8-3",
+          "zh-balance-4e70-3"
+        ],
+        [
+          "zh-balance-9a82-4",
+          "zh-balance-7238-4",
+          "zh-balance-5927-4",
+          "zh-balance-662f-4",
+          "zh-balance-70eb-4",
+          "zh-balance-8bb0-4",
+          "zh-balance-6c14-4",
+          "zh-balance-7ec6-4",
+          "zh-balance-71d5-4",
+          "zh-balance-4f4f-4",
+          "zh-balance-653e-4",
+          "zh-balance-4efd-4",
+          "zh-balance-6811-4",
+          "zh-balance-7389-4",
+          "zh-balance-5356-4"
+        ]
+      ]
+    }
+  ],
+  "heldoutComparisons": [
+    {
+      "contrastId": "zh-tone-1-4",
+      "tones": [
+        1,
+        4
+      ],
+      "segmentalFrames": [
+        "fei",
+        "ying"
+      ],
+      "wordIdsByTone": [
+        [
+          "zh-balance-98de-1",
+          "zh-balance-9e70-1"
+        ],
+        [
+          "zh-balance-8d39-4",
+          "zh-balance-786c-4"
+        ]
+      ]
+    },
+    {
+      "contrastId": "zh-tone-2-3",
+      "tones": [
+        2,
+        3
+      ],
+      "segmentalFrames": [
+        "fei",
+        "ying"
+      ],
+      "wordIdsByTone": [
+        [
+          "zh-balance-80a5-2",
+          "zh-balance-8d62-2"
+        ],
+        [
+          "zh-balance-532a-3",
+          "zh-balance-5f71-3"
+        ]
+      ]
+    },
+    {
+      "contrastId": "zh-tone-1-2",
+      "tones": [
+        1,
+        2
+      ],
+      "segmentalFrames": [
+        "fei",
+        "ying"
+      ],
+      "wordIdsByTone": [
+        [
+          "zh-balance-98de-1",
+          "zh-balance-9e70-1"
+        ],
+        [
+          "zh-balance-80a5-2",
+          "zh-balance-8d62-2"
+        ]
+      ]
+    },
+    {
+      "contrastId": "zh-tone-1-3",
+      "tones": [
+        1,
+        3
+      ],
+      "segmentalFrames": [
+        "fei",
+        "ying"
+      ],
+      "wordIdsByTone": [
+        [
+          "zh-balance-98de-1",
+          "zh-balance-9e70-1"
+        ],
+        [
+          "zh-balance-532a-3",
+          "zh-balance-5f71-3"
+        ]
+      ]
+    },
+    {
+      "contrastId": "zh-tone-2-4",
+      "tones": [
+        2,
+        4
+      ],
+      "segmentalFrames": [
+        "fei",
+        "ying"
+      ],
+      "wordIdsByTone": [
+        [
+          "zh-balance-80a5-2",
+          "zh-balance-8d62-2"
+        ],
+        [
+          "zh-balance-8d39-4",
+          "zh-balance-786c-4"
+        ]
+      ]
+    },
+    {
+      "contrastId": "zh-tone-3-4",
+      "tones": [
+        3,
+        4
+      ],
+      "segmentalFrames": [
+        "fei",
+        "ying"
+      ],
+      "wordIdsByTone": [
+        [
+          "zh-balance-532a-3",
+          "zh-balance-5f71-3"
+        ],
+        [
+          "zh-balance-8d39-4",
+          "zh-balance-786c-4"
+        ]
+      ]
+    }
+  ],
+  "audition": {
+    "wordIds": [
+      "zh-balance-5988-1",
+      "zh-balance-9ebb-2",
+      "zh-balance-9a6c-3",
+      "zh-balance-9a82-4",
+      "zh-balance-8bd7-1",
+      "zh-balance-5341-2",
+      "zh-balance-4f7f-3",
+      "zh-balance-662f-4",
+      "zh-balance-6c64-1",
+      "zh-balance-7cd6-2",
+      "zh-balance-8eba-3",
+      "zh-balance-70eb-4",
+      "zh-balance-9e21-1",
+      "zh-balance-6025-2",
+      "zh-balance-6324-3",
+      "zh-balance-8bb0-4"
+    ],
+    "purpose": "Sixteen training words: four shared syllable frames by four citation tones. Small voice-quality audition only; no heldout exposure and no learning-effectiveness claim."
+  },
+  "retiredMemberships": [
+    {
+      "contrastId": "zh-tone-1-4",
+      "categoryIndex": 1,
+      "text": "玉",
+      "ipa": "/y˥˩/",
+      "previousMembershipKeys": [
+        "pool-word:59660eaf698a15d8792e99be37d6840a3fceee4f43924652a6721e74345f2096"
+      ],
+      "reason": "Retired from this training comparison because its toneless syllable frame lacks a selected counterpart in the opposing category; the lexeme is not declared incorrect. Preserve prior review history as historical."
+    },
+    {
+      "contrastId": "zh-tone-1-4",
+      "categoryIndex": 1,
+      "text": "卖",
+      "ipa": "/mai˥˩/",
+      "previousMembershipKeys": [
+        "pool-word:5c24031aa2ad1bd90f27568c25d342009e0deb11f4b775bf4ca348f3cffb424a"
+      ],
+      "reason": "Retired from this training comparison because its toneless syllable frame lacks a selected counterpart in the opposing category; the lexeme is not declared incorrect. Preserve prior review history as historical."
+    },
+    {
+      "contrastId": "zh-tone-2-3",
+      "categoryIndex": 1,
+      "text": "鼠",
+      "ipa": "/ʂu˨˩˦/",
+      "previousMembershipKeys": [
+        "pool-word:6d9d7d477adff35ddeeb1947e52debf6de863e8d9f7e47ca3a297965dbb31b1d"
+      ],
+      "reason": "Retired from this training comparison because its toneless syllable frame lacks a selected counterpart in the opposing category; the lexeme is not declared incorrect. Preserve prior review history as historical."
+    },
+    {
+      "contrastId": "zh-tone-2-3",
+      "categoryIndex": 1,
+      "text": "买",
+      "ipa": "/mai˨˩˦/",
+      "previousMembershipKeys": [
+        "pool-word:7d4700f13e0b477890a306b4cb154360d3924ab73d2779899da57d171f5d047a"
+      ],
+      "reason": "Retired from this training comparison because its toneless syllable frame lacks a selected counterpart in the opposing category; the lexeme is not declared incorrect. Preserve prior review history as historical."
+    },
+    {
+      "contrastId": "zh-tone-1-2",
+      "categoryIndex": 0,
+      "text": "书",
+      "ipa": "/ʂu˥/",
+      "previousMembershipKeys": [
+        "pool-word:4b17ff3c3fa91b3f723550c91883d165af3c4296fdd78aad6b134ffb61d16801"
+      ],
+      "reason": "Retired from this training comparison because its toneless syllable frame lacks a selected counterpart in the opposing category; the lexeme is not declared incorrect. Preserve prior review history as historical."
+    },
+    {
+      "contrastId": "zh-tone-1-2",
+      "categoryIndex": 1,
+      "text": "鱼",
+      "ipa": "/y˧˥/",
+      "previousMembershipKeys": [
+        "pool-word:39a8e534e9e85611ceb3f21c02abdd92fe3abce8571f570fd15754a94c4863d0"
+      ],
+      "reason": "Retired from this training comparison because its toneless syllable frame lacks a selected counterpart in the opposing category; the lexeme is not declared incorrect. Preserve prior review history as historical."
+    },
+    {
+      "contrastId": "zh-tone-1-2",
+      "categoryIndex": 1,
+      "text": "皮",
+      "ipa": "/pʰi˧˥/",
+      "previousMembershipKeys": [
+        "pool-word:bf635987e9a277ede538cd8f58067c3cbddcfc9cd3007ebd4f9a77d490c502f1"
+      ],
+      "reason": "Retired from this training comparison because its toneless syllable frame lacks a selected counterpart in the opposing category; the lexeme is not declared incorrect. Preserve prior review history as historical."
+    },
+    {
+      "contrastId": "zh-tone-1-3",
+      "categoryIndex": 1,
+      "text": "雨",
+      "ipa": "/y˨˩˦/",
+      "previousMembershipKeys": [
+        "pool-word:c1f65f1346b2372c533ae97eb2d1ecf0da9fb7037b50e95e8285c7b0236e7a8d"
+      ],
+      "reason": "Retired from this training comparison because its toneless syllable frame lacks a selected counterpart in the opposing category; the lexeme is not declared incorrect. Preserve prior review history as historical."
+    },
+    {
+      "contrastId": "zh-tone-1-3",
+      "categoryIndex": 1,
+      "text": "匹",
+      "ipa": "/pʰi˨˩˦/",
+      "previousMembershipKeys": [
+        "pool-word:567a54dc75888a6fcbd0d2189b6c709d921ddab3b9ab0869b3b577f93e965027"
+      ],
+      "reason": "Retired from this training comparison because its toneless syllable frame lacks a selected counterpart in the opposing category; the lexeme is not declared incorrect. Preserve prior review history as historical."
+    },
+    {
+      "contrastId": "zh-tone-1-3",
+      "categoryIndex": 1,
+      "text": "买",
+      "ipa": "/mai˨˩˦/",
+      "previousMembershipKeys": [
+        "pool-word:14e09152514e48c9f53db54cfd0e96501923037de17c9a9aa9f00900b03b4949"
+      ],
+      "reason": "Retired from this training comparison because its toneless syllable frame lacks a selected counterpart in the opposing category; the lexeme is not declared incorrect. Preserve prior review history as historical."
+    },
+    {
+      "contrastId": "zh-tone-2-4",
+      "categoryIndex": 0,
+      "text": "皮",
+      "ipa": "/pʰi˧˥/",
+      "previousMembershipKeys": [
+        "pool-word:dc9c46b5b6f52f58fb6b79b95c668aa230e1373ad7fc1db28b1172036beba5ba"
+      ],
+      "reason": "Retired from this training comparison because its toneless syllable frame lacks a selected counterpart in the opposing category; the lexeme is not declared incorrect. Preserve prior review history as historical."
+    },
+    {
+      "contrastId": "zh-tone-2-4",
+      "categoryIndex": 1,
+      "text": "树",
+      "ipa": "/ʂu˥˩/",
+      "previousMembershipKeys": [
+        "pool-word:29761c45ec393e23cf2eab8a3a4449b1f06fbfc636dda286167303487545c5d7"
+      ],
+      "reason": "Retired from this training comparison because its toneless syllable frame lacks a selected counterpart in the opposing category; the lexeme is not declared incorrect. Preserve prior review history as historical."
+    },
+    {
+      "contrastId": "zh-tone-2-4",
+      "categoryIndex": 1,
+      "text": "卖",
+      "ipa": "/mai˥˩/",
+      "previousMembershipKeys": [
+        "pool-word:684127ec4c5f245957b674ffa94c0fd8f9c8b6844fa77dc1edb59cd7fd58cacb"
+      ],
+      "reason": "Retired from this training comparison because its toneless syllable frame lacks a selected counterpart in the opposing category; the lexeme is not declared incorrect. Preserve prior review history as historical."
+    },
+    {
+      "contrastId": "zh-tone-3-4",
+      "categoryIndex": 0,
+      "text": "匹",
+      "ipa": "/pʰi˨˩˦/",
+      "previousMembershipKeys": [
+        "pool-word:64c018a4fe6bedc3e689dfb20afdd93035c1e041d977d0cfb7bf1d3babe0d7c5"
+      ],
+      "reason": "Retired from this training comparison because its toneless syllable frame lacks a selected counterpart in the opposing category; the lexeme is not declared incorrect. Preserve prior review history as historical."
+    }
+  ],
+  "retiredLexicalItems": [],
+  "policies": [
+    "Ordinary main pools contain train items only. The sidecar is authoritative for frame and split metadata; heldout items must not be copied into train memberships.",
+    "Uniformly sample the same frame inventory for both categories. Balance tones, A/B assignment and voice profiles independently; a favorite-word weighting may reintroduce a shortcut.",
+    "Cross-word ABX always requires X to be a different lexical word from A and B. Prefer A/B on the same segmental frame and X on another, or three distinct frames; do not correlate the answer with a shared reference/X frame.",
+    "Use reserved words as X against familiar training-frame references, counterbalanced across tones, for a lexical-frame transfer check. Alternatively use one heldout frame for both references and the other for X, but this exposes reserved words. Record exposure and never reuse a demonstrated item as previously unheard.",
+    "No hints or feedback during the first transfer check. Two heldout frames are a limited diagnostic sample, not a validated mastery measure; ordinary listening outside the app and historical exposure are unknown.",
+    "IPA is broad editorial transcription. /ʂɻ̩/ represents the shi syllable; /jɛn/ the yan syllable; /iŋ/ is a broad ying rhyme without committing to all surface glide/vowel variants. The same declared segmental form is used for each tone on a frame.",
+    "Tone3 uses the pedagogical /˨˩˦/ citation symbol; natural isolated T3 may have variable rise and creak. Do not force a fully rising tail in every connected-speech context or certify recordings by pitch tracing alone.",
+    "Do not concatenate these clips to construct sandhi or disyllabic lessons. Contextual tone material requires a separately authored and reviewed corpus.",
+    "Primary dictionary facts support selected readings and senses, not Putonghua audio approval, word-frequency rankings, or a license to redistribute dictionary recordings.",
+    "Retained spelling/IPA/meaning/romanization identities are preserved where possible. Changed comparison memberships and source context require fresh review; never transfer an old pass automatically to a different audio hash."
+  ],
+  "validation": {
+    "trainingLexemes": 58,
+    "heldoutLexemes": 8,
+    "trainingFrames": 16,
+    "sharedCoreFrames": 12,
+    "heldoutFrames": 2,
+    "trainingToneCounts": {
+      "1": 13,
+      "2": 14,
+      "3": 16,
+      "4": 15
+    },
+    "trainingComparisonMemberships": 160,
+    "retiredMemberships": 14,
+    "retainedLegacyToneLexemes": 20,
+    "retiredLegacyToneLexemes": 0,
+    "balancedFramesEveryComparison": true,
+    "tonelessIpaIdenticalWithinEachMinimalPair": true,
+    "heldoutExcludedFromAllCurrentMandarinTraining": true,
+    "unrelatedContrastsUnchanged": true,
+    "experimentalStimulusClaimsAdded": 0,
+    "audioGenerated": 0,
+    "expectedFrameOnlyCategoryAccuracyUnderUniformSampling": 0.5
+  }
+}

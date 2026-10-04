@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import { Header, Footer } from '../components/ui';
+import MembershipPanel from '../components/MembershipPanel';
+import '../styles/pricing.css';
+---
+<Base title="Listening practice plans | MinimalPairs" description="Start listening free, or unlock every sound contrast in nine languages. Premium is $7 per month or $49 per year.">
+ <Header />
+ <main class="pricing-page">
+  <header class="pricing-hero"><span class="eyebrow">SMALL SOUNDS. MORE POSSIBILITIES.</span><h1>Hear the difference.<br /><em>Keep building on it.</em></h1><p>Train your ear for the sounds that are easy to miss.<br />Short listening sessions. Different voices. A little more clarity.</p><div class="pricing-proof"><span>9 languages</span><span>Sound-first practice</span></div></header>
+  <MembershipPanel storefront client:load />
+  <section class="pricing-included"><div><span class="eyebrow">ONE MEMBERSHIP. EVERY LANGUAGE.</span><h2>Follow the sounds<br />you want to hear.</h2></div><div><p>English · French · Spanish · German · Italian · Mandarin Chinese · Portuguese · Russian · Japanese</p><p>Listen to two reference sounds, then match a new word spoken by another voice. Replay, get feedback, and return to the contrasts that need another listen.</p></div></section>
+  <section class="pricing-faq"><h2>A few good questions.</h2><details><summary>What can I try for free?</summary><p>The first three exercises in every language, as often as you like. No card or purchase needed.</p></details><details><summary>What does Premium unlock?</summary><p>Every available exercise in all nine languages. Both paid plans include the same listening library and practice features.</p></details><details><summary>Can I cancel?</summary><p>Yes. Cancel renewal from your account’s billing settings. Your access continues until the end of your paid period.</p></details><details><summary>Is there a free trial that charges me later?</summary><p>No. Free exercises stay free. A paid membership starts only when you complete checkout, at the price and billing interval you choose.</p></details><details><summary>Already purchased lifetime access?</summary><p>Sign in with your verified purchase email. Your lifetime access is restored without another purchase. <a href="/restore-access">Restore your access →</a></p></details></section>
+ </main><Footer />
+</Base>

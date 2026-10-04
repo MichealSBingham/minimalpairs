@@ -1,0 +1,571 @@
+{
+  "schemaVersion": "1.0.0",
+  "batchId": "french-legacy-batch4",
+  "createdAt": "2026-09-28",
+  "status": "source-checked-isolated-candidates-not-live",
+  "releaseReady": false,
+  "languageId": "fr",
+  "locale": "fr-FR",
+  "dialect": "Northern reference Metropolitan French; isolated words",
+  "scope": "Three source-supported remaining legacy topics. Current integration covers 21/31; isolated batch3 covers three more candidates. Saved demand does not rank these topics by clicks.",
+  "integration": {
+    "inLiveCurriculum": false,
+    "inDefaultAudioManifest": false,
+    "routesPublished": false
+  },
+  "licensing": {
+    "text": "Original explanations and glosses. Dictionary links and pronunciation facts provide evidence; no dictionary paragraphs or recordings included.",
+    "audio": "Separate provider/license and pronunciation review required; this artifact grants no rights to dictionary or research audio."
+  },
+  "contrasts": [
+    {
+      "id": "fr-o-open-u",
+      "label": "Bol or boule?",
+      "phonemes": [
+        "ɔ",
+        "u"
+      ],
+      "description": "Listen to the vowel between the consonants. These pairs contrast open-mid /ɔ/ with close /u/, both rounded vowels. This is separate from the /o–u/ lesson.",
+      "l1Notes": [
+        {
+          "nativeLanguage": "en",
+          "note": "Avoid substituting an English vowel-plus-r sequence for the vowel followed by the French rhotic in cor/cour and sort/sourd."
+        },
+        {
+          "nativeLanguage": "es",
+          "note": "French /ɔ/ here is the open-mid category, distinct from the close-mid /o/ taught in another lesson."
+        }
+      ],
+      "pairs": [
+        {
+          "id": "fr-bol-boule",
+          "words": [
+            {
+              "text": "bol",
+              "ipa": "/bɔl/",
+              "meaning": "bowl",
+              "phonemes": [
+                "b",
+                "ɔ",
+                "l"
+              ]
+            },
+            {
+              "text": "boule",
+              "ipa": "/bul/",
+              "meaning": "ball; spherical object",
+              "phonemes": [
+                "b",
+                "u",
+                "l"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.portail-lexical.fr/definition/tlfi/bol/nom",
+            "https://www.portail-lexical.fr/definition/tlfi/boule/nom"
+          ],
+          "validation": {
+            "text": "source-checked-candidate",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "monosyllabic-cvc-vowel"
+          }
+        },
+        {
+          "id": "fr-cor-cour",
+          "words": [
+            {
+              "text": "cor",
+              "ipa": "/kɔʁ/",
+              "meaning": "horn; wind instrument",
+              "phonemes": [
+                "k",
+                "ɔ",
+                "ʁ"
+              ]
+            },
+            {
+              "text": "cour",
+              "ipa": "/kuʁ/",
+              "meaning": "courtyard",
+              "phonemes": [
+                "k",
+                "u",
+                "ʁ"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.portail-lexical.fr/definition/tlfi/cor/nom",
+            "https://www.portail-lexical.fr/definition/tlfi/cour/nom"
+          ],
+          "validation": {
+            "text": "source-checked-candidate",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "monosyllabic-cvc-vowel"
+          }
+        },
+        {
+          "id": "fr-sort-sourd",
+          "words": [
+            {
+              "text": "sort",
+              "ipa": "/sɔʁ/",
+              "meaning": "fate; destiny",
+              "phonemes": [
+                "s",
+                "ɔ",
+                "ʁ"
+              ]
+            },
+            {
+              "text": "sourd",
+              "ipa": "/suʁ/",
+              "meaning": "deaf; masculine singular",
+              "phonemes": [
+                "s",
+                "u",
+                "ʁ"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.portail-lexical.fr/definition/tlfi/sort/nom",
+            "https://www.portail-lexical.fr/definition/tlfi/sourd/adjectif"
+          ],
+          "validation": {
+            "text": "source-checked-candidate",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "monosyllabic-cvc-vowel"
+          }
+        }
+      ],
+      "dialectNote": "Northern reference Metropolitan French, in isolated one-syllable words without a final schwa. Final /ʁ/ may lengthen the preceding vowel; the broad transcription omits that contextual length in both members. Keep /ɔ/ distinct from /o/ and /u/ distinct from /y/. Sourd uses its masculine form, with no pronounced final d.",
+      "sources": [
+        "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/E2BC8B1DD975FE4B272B088B8345B933/S0025100300004874a.pdf/french.pdf"
+      ],
+      "targetSoundFocus": "Listen to the vowel in the middle of each word. The surrounding consonants may change in X; match the vowel, not the whole word.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the vowel in the middle of each word. The surrounding consonants may change in X; match the vowel, not the whole word.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "ɔ",
+          "u"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "presentation": "audio-only-unless-explicit-text-assist"
+      },
+      "restoration": {
+        "legacyUrl": "/french/o-ouvert-vs-ou",
+        "legacyComponent": "A1",
+        "exactLegacyLabel": "o ouvert vs ou (/ɔ/ vs /u/)",
+        "demandEvidence": "A distinct missing legacy vowel contrast with three common, dictionary-supported noun/adjective pairs. Saved account evidence provides French-hub demand, not a click ranking for this topic."
+      },
+      "guide": {
+        "title": "French /ɔ/ vs /u/ minimal pairs",
+        "intro": "Listen to the vowel between the consonants. These pairs contrast open-mid /ɔ/ with close /u/, both rounded vowels. This is separate from the /o–u/ lesson.",
+        "practiceInstruction": "Listen to A, B, and a different word X. Choose the reference sharing X’s target vowel. Word text, spelling, IPA, and meanings stay hidden unless hints are explicitly enabled.",
+        "audioStatus": "Candidate only. Existing cached clips are generated and unreviewed; new words have no cached clips. No release or listening approval is implied."
+      }
+    },
+    {
+      "id": "fr-y-eu-open",
+      "label": "Pur or peur?",
+      "phonemes": [
+        "y",
+        "œ"
+      ],
+      "description": "Both target vowels are front and rounded: close /y/ versus open-mid /œ/. Listen to the vowel before the final French r. The separate /y–ø/ lesson uses a different mid vowel.",
+      "l1Notes": [
+        {
+          "nativeLanguage": "en",
+          "note": "French /y/ is one rounded vowel, not the English sequence in you. Compare the complete vowel quality before r."
+        },
+        {
+          "nativeLanguage": "es",
+          "note": "Both targets require front rounded vowel categories; do not substitute ordinary Spanish /u/ or /e/."
+        }
+      ],
+      "pairs": [
+        {
+          "id": "fr-pur-peur",
+          "words": [
+            {
+              "text": "pur",
+              "ipa": "/pyʁ/",
+              "meaning": "pure",
+              "phonemes": [
+                "p",
+                "y",
+                "ʁ"
+              ]
+            },
+            {
+              "text": "peur",
+              "ipa": "/pœʁ/",
+              "meaning": "fear",
+              "phonemes": [
+                "p",
+                "œ",
+                "ʁ"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.portail-lexical.fr/definition/tlfi/pur/adjectif",
+            "https://www.portail-lexical.fr/definition/tlfi/peur/nom"
+          ],
+          "validation": {
+            "text": "source-checked-candidate",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "monosyllabic-cvc-vowel-before-r"
+          }
+        },
+        {
+          "id": "fr-bure-beurre",
+          "words": [
+            {
+              "text": "bure",
+              "ipa": "/byʁ/",
+              "meaning": "coarse woollen cloth",
+              "phonemes": [
+                "b",
+                "y",
+                "ʁ"
+              ]
+            },
+            {
+              "text": "beurre",
+              "ipa": "/bœʁ/",
+              "meaning": "butter",
+              "phonemes": [
+                "b",
+                "œ",
+                "ʁ"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.portail-lexical.fr/definition/tlfi/bure/nom",
+            "https://www.portail-lexical.fr/definition/tlfi/beurre/nom"
+          ],
+          "validation": {
+            "text": "source-checked-candidate",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "monosyllabic-cvc-vowel-before-r"
+          },
+          "note": "Bure is a real but less-frequent noun for coarse woollen cloth; use the first TLFi sense."
+        },
+        {
+          "id": "fr-sur-soeur",
+          "words": [
+            {
+              "text": "sur",
+              "ipa": "/syʁ/",
+              "meaning": "on; upon",
+              "phonemes": [
+                "s",
+                "y",
+                "ʁ"
+              ]
+            },
+            {
+              "text": "sœur",
+              "ipa": "/sœʁ/",
+              "meaning": "sister",
+              "phonemes": [
+                "s",
+                "œ",
+                "ʁ"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.portail-lexical.fr/definition/tlfi/sur/pr%C3%A9position",
+            "https://www.portail-lexical.fr/definition/tlfi/s%C5%93ur/nom"
+          ],
+          "validation": {
+            "text": "source-checked-candidate",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "monosyllabic-cvc-vowel-before-r"
+          }
+        }
+      ],
+      "dialectNote": "Northern reference Metropolitan French citation forms. Every pair has a medial target followed by /ʁ/. Contextual vowel length is omitted symmetrically in broad IPA; no /œ–ø/ merger is made. Sur is the fully pronounced isolated preposition, not a reduced conversational form. Bure is a less-frequent cloth word, included as a real lexical item rather than a fabricated form.",
+      "sources": [
+        "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/E2BC8B1DD975FE4B272B088B8345B933/S0025100300004874a.pdf/french.pdf"
+      ],
+      "targetSoundFocus": "Listen to the vowel before the final French r. The opening consonant changes in X; match the vowel category.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the vowel before the final French r. The opening consonant changes in X; match the vowel category.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "y",
+          "œ"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "presentation": "audio-only-unless-explicit-text-assist"
+      },
+      "restoration": {
+        "legacyUrl": "/french/u-vs-eu-ouvert",
+        "legacyComponent": "C1",
+        "exactLegacyLabel": "u vs eu ouvert (/y/ vs /œ/)",
+        "demandEvidence": "Restores the missing open-mid rounded target without redirecting it to the integrated /y–ø/ contrast. Three real pairs share the same consonant-vowel-r frame; no topic-level click rank is available."
+      },
+      "guide": {
+        "title": "French /y/ vs /œ/ minimal pairs",
+        "intro": "Both target vowels are front and rounded: close /y/ versus open-mid /œ/. Listen to the vowel before the final French r. The separate /y–ø/ lesson uses a different mid vowel.",
+        "practiceInstruction": "Listen to A, B, and a different word X. Choose the reference sharing X’s target vowel. Word text, spelling, IPA, and meanings stay hidden unless hints are explicitly enabled.",
+        "audioStatus": "Candidate only. Existing cached clips are generated and unreviewed; new words have no cached clips. No release or listening approval is implied."
+      }
+    },
+    {
+      "id": "fr-i-e",
+      "label": "Nid or nez?",
+      "phonemes": [
+        "i",
+        "e"
+      ],
+      "description": "Compare two unrounded front vowels: close /i/ and close-mid /e/. All targets are word-final. Keep /e/ distinct from the open-mid /ɛ/ category.",
+      "l1Notes": [
+        {
+          "nativeLanguage": "en",
+          "note": "The /e/ target is a single French vowel; an English-style off-glide is not the goal."
+        },
+        {
+          "nativeLanguage": "es",
+          "note": "Use the audio to distinguish these final vowel categories before enabling spelling hints."
+        }
+      ],
+      "pairs": [
+        {
+          "id": "fr-lit-le",
+          "words": [
+            {
+              "text": "lit",
+              "ipa": "/li/",
+              "meaning": "bed",
+              "phonemes": [
+                "l",
+                "i"
+              ]
+            },
+            {
+              "text": "lé",
+              "ipa": "/le/",
+              "meaning": "a full-width strip of fabric or wallpaper",
+              "phonemes": [
+                "l",
+                "e"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.portail-lexical.fr/definition/tlfi/lit/nom",
+            "https://www.portail-lexical.fr/definition/tlfi/l%C3%A9/nom"
+          ],
+          "validation": {
+            "text": "source-checked-candidate",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "final",
+            "trialGroup": "monosyllabic-final-vowel"
+          },
+          "note": "Lé names a strip of fabric or wallpaper. Retain the accent: this noun /le/ is distinct from the article le /lə/."
+        },
+        {
+          "id": "fr-nid-nez",
+          "words": [
+            {
+              "text": "nid",
+              "ipa": "/ni/",
+              "meaning": "nest",
+              "phonemes": [
+                "n",
+                "i"
+              ]
+            },
+            {
+              "text": "nez",
+              "ipa": "/ne/",
+              "meaning": "nose",
+              "phonemes": [
+                "n",
+                "e"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.portail-lexical.fr/definition/tlfi/nid/nom",
+            "https://www.portail-lexical.fr/definition/tlfi/nez/nom"
+          ],
+          "validation": {
+            "text": "source-checked-candidate",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "final",
+            "trialGroup": "monosyllabic-final-vowel"
+          }
+        },
+        {
+          "id": "fr-prix-pre",
+          "words": [
+            {
+              "text": "prix",
+              "ipa": "/pʁi/",
+              "meaning": "price; prize",
+              "phonemes": [
+                "p",
+                "ʁ",
+                "i"
+              ]
+            },
+            {
+              "text": "pré",
+              "ipa": "/pʁe/",
+              "meaning": "meadow",
+              "phonemes": [
+                "p",
+                "ʁ",
+                "e"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.portail-lexical.fr/definition/tlfi/prix/nom",
+            "https://www.portail-lexical.fr/definition/tlfi/pr%C3%A9/nom"
+          ],
+          "validation": {
+            "text": "source-checked-candidate",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 2,
+            "targetPosition": "final",
+            "trialGroup": "monosyllabic-final-vowel"
+          }
+        }
+      ],
+      "dialectNote": "Northern reference Metropolitan French in isolation. Lit, nid, nez and prix have no final spoken t, d, z or x in these forms. Lé is a noun meaning a strip of fabric or wallpaper, not the article le /lə/; retain its written accent in any synthesis request. Prix/pré have a two-consonant onset but the same final-vowel target position.",
+      "sources": [
+        "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/E2BC8B1DD975FE4B272B088B8345B933/S0025100300004874a.pdf/french.pdf"
+      ],
+      "targetSoundFocus": "Listen to the vowel at the end of each word. The first consonant or consonant cluster changes in X; match the final vowel.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the vowel at the end of each word. The first consonant or consonant cluster changes in X; match the final vowel.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "i",
+          "e"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "presentation": "audio-only-unless-explicit-text-assist"
+      },
+      "restoration": {
+        "legacyUrl": "/french/i-vs-e",
+        "legacyComponent": "r5",
+        "exactLegacyLabel": "i vs é (/i/ vs /e/)",
+        "demandEvidence": "Restores the exact legacy /i–e/ topic using three independent lexical frames. The noun lé is less familiar and explicitly glossed; no topic-level click rank is available."
+      },
+      "guide": {
+        "title": "French /i/ vs /e/ minimal pairs",
+        "intro": "Compare two unrounded front vowels: close /i/ and close-mid /e/. All targets are word-final. Keep /e/ distinct from the open-mid /ɛ/ category.",
+        "practiceInstruction": "Listen to A, B, and a different word X. Choose the reference sharing X’s target vowel. Word text, spelling, IPA, and meanings stay hidden unless hints are explicitly enabled.",
+        "audioStatus": "Candidate only. Existing cached clips are generated and unreviewed; new words have no cached clips. No release or listening approval is implied."
+      }
+    }
+  ],
+  "baseSnapshot": {
+    "hashes": {
+      "rescue/content/curriculum.json": "cc3d926b744379a8d9e6535c8cb06ce30cd3795cd871398f40540861eb58b752",
+      "rescue/content/legacy-coverage.json": "6629304e604c883b3d5c8dc0b2989620e5987b4a9d3aa03c170c2b0aa09577b6",
+      "rescue/content/transfer-candidates.json": "14e960285239b919d5f48bddfc1d6b2a59fb5a9cfecc5789b17df4e965e9bea5",
+      "rescue/app/public/audio/manifest.json": "37ee8bf1464770a61add57114c5b8ea8562bf559c6c46dd8e7f5e27d7b8e98d7",
+      "rescue/content/french-legacy-batch3-candidates.json": "268b8670d88691292119751c270619d79b8a58805ad82b847cb2408995c425c4"
+    },
+    "currentContrasts": 46,
+    "currentPairs": 138
+  }
+}

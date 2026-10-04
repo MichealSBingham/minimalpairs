@@ -1,0 +1,665 @@
+{
+  "date": "2026-09-28",
+  "status": "isolated-text-candidate-audio-unapproved",
+  "languageId": "en",
+  "locale": "en-US",
+  "dialect": "Selected rhotic American English dictionary citation forms; recordings unreviewed",
+  "contrasts": [
+    {
+      "id": "en-foot-goose",
+      "label": "Full or fool?",
+      "phonemes": [
+        "ʊ",
+        "u"
+      ],
+      "description": "Distinguish the vowels in full and fool. Listen to vowel quality; making a sound longer by itself does not establish the other category.",
+      "l1Notes": [],
+      "pairs": [
+        {
+          "id": "en-cook-kook",
+          "words": [
+            {
+              "text": "cook",
+              "ipa": "/kʊk/",
+              "meaning": "prepare food using heat",
+              "phonemes": [
+                "k",
+                "ʊ",
+                "k"
+              ]
+            },
+            {
+              "text": "kook",
+              "ipa": "/kuk/",
+              "meaning": "an eccentric person (informal)",
+              "phonemes": [
+                "k",
+                "u",
+                "k"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/cook",
+            "https://www.collinsdictionary.com/us/dictionary/english/kook"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "all"
+          }
+        },
+        {
+          "id": "en-full-fool",
+          "words": [
+            {
+              "text": "full",
+              "ipa": "/fʊl/",
+              "meaning": "filled to capacity",
+              "phonemes": [
+                "f",
+                "ʊ",
+                "l"
+              ]
+            },
+            {
+              "text": "fool",
+              "ipa": "/ful/",
+              "meaning": "trick someone",
+              "phonemes": [
+                "f",
+                "u",
+                "l"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/full",
+            "https://www.collinsdictionary.com/us/dictionary/english/fool"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "all"
+          }
+        },
+        {
+          "id": "en-pull-pool",
+          "words": [
+            {
+              "text": "pull",
+              "ipa": "/pʊl/",
+              "meaning": "draw something toward you",
+              "phonemes": [
+                "p",
+                "ʊ",
+                "l"
+              ]
+            },
+            {
+              "text": "pool",
+              "ipa": "/pul/",
+              "meaning": "a place for swimming",
+              "phonemes": [
+                "p",
+                "u",
+                "l"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/pull",
+            "https://www.collinsdictionary.com/us/dictionary/english/pool"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "all"
+          }
+        }
+      ],
+      "sources": [
+        "https://www.collinsdictionary.com/us/dictionary/english/cook",
+        "https://www.collinsdictionary.com/us/dictionary/english/fool",
+        "https://www.collinsdictionary.com/us/dictionary/english/full",
+        "https://www.collinsdictionary.com/us/dictionary/english/kook",
+        "https://www.collinsdictionary.com/us/dictionary/english/pool",
+        "https://www.collinsdictionary.com/us/dictionary/english/pull"
+      ],
+      "targetSoundFocus": "Listen to the vowel in the middle of each word.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the vowel in the middle of each word.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "ʊ",
+          "u"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "presentation": "audio-only-until-answer-or-explicit-text-assist"
+      }
+    },
+    {
+      "id": "en-trap-dress",
+      "label": "Bat or bet?",
+      "phonemes": [
+        "æ",
+        "ɛ"
+      ],
+      "description": "Compare the vowels in bat and bet while the surrounding consonants stay the same within each pair.",
+      "l1Notes": [],
+      "pairs": [
+        {
+          "id": "en-bat-bet",
+          "words": [
+            {
+              "text": "bat",
+              "ipa": "/bæt/",
+              "meaning": "a flying mammal",
+              "phonemes": [
+                "b",
+                "æ",
+                "t"
+              ]
+            },
+            {
+              "text": "bet",
+              "ipa": "/bɛt/",
+              "meaning": "a wager",
+              "phonemes": [
+                "b",
+                "ɛ",
+                "t"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/bat",
+            "https://www.collinsdictionary.com/us/dictionary/english/bet"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "all"
+          }
+        },
+        {
+          "id": "en-mat-met",
+          "words": [
+            {
+              "text": "mat",
+              "ipa": "/mæt/",
+              "meaning": "a small floor covering",
+              "phonemes": [
+                "m",
+                "æ",
+                "t"
+              ]
+            },
+            {
+              "text": "met",
+              "ipa": "/mɛt/",
+              "meaning": "past tense of meet",
+              "phonemes": [
+                "m",
+                "ɛ",
+                "t"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/mat",
+            "https://www.collinsdictionary.com/us/dictionary/english/met"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "all"
+          }
+        },
+        {
+          "id": "en-bad-bed",
+          "words": [
+            {
+              "text": "bad",
+              "ipa": "/bæd/",
+              "meaning": "poor in quality",
+              "phonemes": [
+                "b",
+                "æ",
+                "d"
+              ]
+            },
+            {
+              "text": "bed",
+              "ipa": "/bɛd/",
+              "meaning": "furniture used for sleeping",
+              "phonemes": [
+                "b",
+                "ɛ",
+                "d"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/bad",
+            "https://www.collinsdictionary.com/us/dictionary/english/bed"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "all"
+          }
+        }
+      ],
+      "sources": [
+        "https://www.collinsdictionary.com/us/dictionary/english/bad",
+        "https://www.collinsdictionary.com/us/dictionary/english/bat",
+        "https://www.collinsdictionary.com/us/dictionary/english/bed",
+        "https://www.collinsdictionary.com/us/dictionary/english/bet",
+        "https://www.collinsdictionary.com/us/dictionary/english/mat",
+        "https://www.collinsdictionary.com/us/dictionary/english/met"
+      ],
+      "targetSoundFocus": "Listen to the vowel in the middle of each word.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the vowel in the middle of each word.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "æ",
+          "ɛ"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "presentation": "audio-only-until-answer-or-explicit-text-assist"
+      }
+    },
+    {
+      "id": "en-v-w",
+      "label": "Vine or wine?",
+      "phonemes": [
+        "v",
+        "w"
+      ],
+      "description": "Focus on the first consonant in vine and wine, then compare it across other words.",
+      "l1Notes": [],
+      "pairs": [
+        {
+          "id": "en-vine-wine",
+          "words": [
+            {
+              "text": "vine",
+              "ipa": "/vaɪn/",
+              "meaning": "a plant with a climbing stem",
+              "phonemes": [
+                "v",
+                "aɪ",
+                "n"
+              ]
+            },
+            {
+              "text": "wine",
+              "ipa": "/waɪn/",
+              "meaning": "an alcoholic drink made from grapes",
+              "phonemes": [
+                "w",
+                "aɪ",
+                "n"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/vine",
+            "https://www.collinsdictionary.com/us/dictionary/english/wine"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "all"
+          }
+        },
+        {
+          "id": "en-vest-west",
+          "words": [
+            {
+              "text": "vest",
+              "ipa": "/vɛst/",
+              "meaning": "a sleeveless upper-body garment",
+              "phonemes": [
+                "v",
+                "ɛ",
+                "s",
+                "t"
+              ]
+            },
+            {
+              "text": "west",
+              "ipa": "/wɛst/",
+              "meaning": "the direction opposite east",
+              "phonemes": [
+                "w",
+                "ɛ",
+                "s",
+                "t"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/vest",
+            "https://www.collinsdictionary.com/us/dictionary/english/west"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "all"
+          }
+        },
+        {
+          "id": "en-vet-wet",
+          "words": [
+            {
+              "text": "vet",
+              "ipa": "/vɛt/",
+              "meaning": "a veterinarian (informal)",
+              "phonemes": [
+                "v",
+                "ɛ",
+                "t"
+              ]
+            },
+            {
+              "text": "wet",
+              "ipa": "/wɛt/",
+              "meaning": "covered with water",
+              "phonemes": [
+                "w",
+                "ɛ",
+                "t"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/vet",
+            "https://www.collinsdictionary.com/us/dictionary/english/wet"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "all"
+          }
+        }
+      ],
+      "sources": [
+        "https://www.collinsdictionary.com/us/dictionary/english/vest",
+        "https://www.collinsdictionary.com/us/dictionary/english/vet",
+        "https://www.collinsdictionary.com/us/dictionary/english/vine",
+        "https://www.collinsdictionary.com/us/dictionary/english/west",
+        "https://www.collinsdictionary.com/us/dictionary/english/wet",
+        "https://www.collinsdictionary.com/us/dictionary/english/wine"
+      ],
+      "targetSoundFocus": "Listen to the first consonant in each word.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the first consonant in each word.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "v",
+          "w"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "presentation": "audio-only-until-answer-or-explicit-text-assist"
+      }
+    },
+    {
+      "id": "en-th-f",
+      "label": "Thin or fin?",
+      "phonemes": [
+        "θ",
+        "f"
+      ],
+      "description": "Match the first sound in thin or fin. The target is voiceless /θ/ versus /f/, including before another consonant in three and free.",
+      "l1Notes": [],
+      "pairs": [
+        {
+          "id": "en-thin-fin",
+          "words": [
+            {
+              "text": "thin",
+              "ipa": "/θɪn/",
+              "meaning": "having little thickness",
+              "phonemes": [
+                "θ",
+                "ɪ",
+                "n"
+              ]
+            },
+            {
+              "text": "fin",
+              "ipa": "/fɪn/",
+              "meaning": "a fish’s swimming appendage",
+              "phonemes": [
+                "f",
+                "ɪ",
+                "n"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/thin",
+            "https://www.collinsdictionary.com/us/dictionary/english/fin"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "all"
+          }
+        },
+        {
+          "id": "en-three-free",
+          "words": [
+            {
+              "text": "three",
+              "ipa": "/θɹi/",
+              "meaning": "the number 3",
+              "phonemes": [
+                "θ",
+                "ɹ",
+                "i"
+              ]
+            },
+            {
+              "text": "free",
+              "ipa": "/fɹi/",
+              "meaning": "not under another person’s control",
+              "phonemes": [
+                "f",
+                "ɹ",
+                "i"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/three",
+            "https://www.collinsdictionary.com/us/dictionary/english/free"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "all"
+          }
+        },
+        {
+          "id": "en-thirst-first",
+          "words": [
+            {
+              "text": "thirst",
+              "ipa": "/θɝst/",
+              "meaning": "a need for a drink",
+              "phonemes": [
+                "θ",
+                "ɝ",
+                "s",
+                "t"
+              ]
+            },
+            {
+              "text": "first",
+              "ipa": "/fɝst/",
+              "meaning": "before the others in order",
+              "phonemes": [
+                "f",
+                "ɝ",
+                "s",
+                "t"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.collinsdictionary.com/us/dictionary/english/thirst",
+            "https://www.collinsdictionary.com/us/dictionary/english/first"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "all"
+          }
+        }
+      ],
+      "sources": [
+        "https://www.collinsdictionary.com/us/dictionary/english/fin",
+        "https://www.collinsdictionary.com/us/dictionary/english/first",
+        "https://www.collinsdictionary.com/us/dictionary/english/free",
+        "https://www.collinsdictionary.com/us/dictionary/english/thin",
+        "https://www.collinsdictionary.com/us/dictionary/english/thirst",
+        "https://www.collinsdictionary.com/us/dictionary/english/three"
+      ],
+      "targetSoundFocus": "Listen to the first consonant in each word.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the first consonant in each word.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "θ",
+          "f"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "presentation": "audio-only-until-answer-or-explicit-text-assist"
+      }
+    }
+  ]
+}

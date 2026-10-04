@@ -1,0 +1,369 @@
+{
+  "date": "2026-09-28",
+  "sources": [
+    "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+    "Collins English Dictionary, selected British English entry"
+  ],
+  "retrieval": "All 24 selected pronunciation and intended-sense blocks manually read on this date: 18 Webster American entries and six Collins British entries. Mixed-page COBUILD summaries and other publishers are not substituted for those blocks.",
+  "normalization": "Dictionary /r/ becomes /ɹ/ in American forms. Stress marks stay in displayed IPA and are excluded only from phoneme token lists; paired stress patterns are checked. Preserve British /ɔː/ as one vowel token, including its length mark, and preserve /ɒ/. No vowel category or lexical dialect is silently replaced.",
+  "licensing": "Short original meaning labels and factual IPA/source checking only. No dictionary paragraphs, audio, chart artwork or redistribution license copied.",
+  "words": [
+    {
+      "word": "they",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/they",
+      "selectedEntry": "they in American English; pronoun, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "selectedLocale": "en-US",
+      "retrievedIpa": [
+        "ðeɪ"
+      ],
+      "editorialBroadIpa": "ðeɪ",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "day",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/day",
+      "selectedEntry": "day in American English; noun, sense 2a",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "selectedLocale": "en-US",
+      "retrievedIpa": [
+        "deɪ"
+      ],
+      "editorialBroadIpa": "deɪ",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "then",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/then",
+      "selectedEntry": "then in American English; adverb, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "selectedLocale": "en-US",
+      "retrievedIpa": [
+        "ðɛn"
+      ],
+      "editorialBroadIpa": "ðɛn",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "den",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/den",
+      "selectedEntry": "den in American English; noun, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "selectedLocale": "en-US",
+      "retrievedIpa": [
+        "dɛn"
+      ],
+      "editorialBroadIpa": "dɛn",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "though",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/though",
+      "selectedEntry": "though in American English; conjunction, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "selectedLocale": "en-US",
+      "retrievedIpa": [
+        "ðoʊ"
+      ],
+      "editorialBroadIpa": "ðoʊ",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "dough",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/dough",
+      "selectedEntry": "dough in American English; noun, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "selectedLocale": "en-US",
+      "retrievedIpa": [
+        "doʊ"
+      ],
+      "editorialBroadIpa": "doʊ",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "breathe",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/breathe",
+      "selectedEntry": "breathe in American English; intransitive verb, sense 1a",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "selectedLocale": "en-US",
+      "retrievedIpa": [
+        "brið"
+      ],
+      "editorialBroadIpa": "bɹið",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "breeze",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/breeze",
+      "selectedEntry": "breeze in American English 1; noun, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "selectedLocale": "en-US",
+      "retrievedIpa": [
+        "briz"
+      ],
+      "editorialBroadIpa": "bɹiz",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "seethe",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/seethe",
+      "selectedEntry": "seethe in American English; intransitive verb, sense 4",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "selectedLocale": "en-US",
+      "retrievedIpa": [
+        "sið"
+      ],
+      "editorialBroadIpa": "sið",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "seize",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/seize",
+      "selectedEntry": "seize in American English; transitive verb, sense 4",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "selectedLocale": "en-US",
+      "retrievedIpa": [
+        "siz"
+      ],
+      "editorialBroadIpa": "siz",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "teethe",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/teethe",
+      "selectedEntry": "teethe in American English; intransitive verb",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "selectedLocale": "en-US",
+      "retrievedIpa": [
+        "tið"
+      ],
+      "editorialBroadIpa": "tið",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "tease",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/tease",
+      "selectedEntry": "tease in American English; transitive verb, sense 3",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "selectedLocale": "en-US",
+      "retrievedIpa": [
+        "tiz"
+      ],
+      "editorialBroadIpa": "tiz",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "very",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/very",
+      "selectedEntry": "very in American English; adverb, sense 6",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "selectedLocale": "en-US",
+      "retrievedIpa": [
+        "ˈvɛri"
+      ],
+      "editorialBroadIpa": "ˈvɛɹi",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "berry",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/berry",
+      "selectedEntry": "berry in American English; common noun, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "selectedLocale": "en-US",
+      "retrievedIpa": [
+        "ˈbɛri"
+      ],
+      "editorialBroadIpa": "ˈbɛɹi",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "vote",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/vote",
+      "selectedEntry": "vote in American English; noun, sense 1b",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "selectedLocale": "en-US",
+      "retrievedIpa": [
+        "voʊt"
+      ],
+      "editorialBroadIpa": "voʊt",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "boat",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/boat",
+      "selectedEntry": "boat in American English; noun, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "selectedLocale": "en-US",
+      "retrievedIpa": [
+        "boʊt"
+      ],
+      "editorialBroadIpa": "boʊt",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "volt",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/volt",
+      "selectedEntry": "volt in American English 2; electrical unit, not the riding movement",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "selectedLocale": "en-US",
+      "retrievedIpa": [
+        "voʊlt"
+      ],
+      "editorialBroadIpa": "voʊlt",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "bolt",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/bolt",
+      "selectedEntry": "bolt in American English 1; noun, sense 5",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "selectedLocale": "en-US",
+      "retrievedIpa": [
+        "boʊlt"
+      ],
+      "editorialBroadIpa": "boʊlt",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "port",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/port",
+      "selectedEntry": "port in British English 1; noun, sense 1",
+      "source": "Collins English Dictionary, selected British English entry",
+      "selectedLocale": "en-GB",
+      "retrievedIpa": [
+        "pɔːt"
+      ],
+      "editorialBroadIpa": "pɔːt",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "pot",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/pot",
+      "selectedEntry": "pot in British English 1; noun, sense 1",
+      "source": "Collins English Dictionary, selected British English entry",
+      "selectedLocale": "en-GB",
+      "retrievedIpa": [
+        "pɒt"
+      ],
+      "editorialBroadIpa": "pɒt",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "court",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/court",
+      "selectedEntry": "court in British English; noun, sense 9a",
+      "source": "Collins English Dictionary, selected British English entry",
+      "selectedLocale": "en-GB",
+      "retrievedIpa": [
+        "kɔːt"
+      ],
+      "editorialBroadIpa": "kɔːt",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "cot",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/cot",
+      "selectedEntry": "cot in British English 1; noun, sense 1",
+      "source": "Collins English Dictionary, selected British English entry",
+      "selectedLocale": "en-GB",
+      "retrievedIpa": [
+        "kɒt"
+      ],
+      "editorialBroadIpa": "kɒt",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "short",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/short",
+      "selectedEntry": "short in British English; adjective, sense 1",
+      "source": "Collins English Dictionary, selected British English entry",
+      "selectedLocale": "en-GB",
+      "retrievedIpa": [
+        "ʃɔːt"
+      ],
+      "editorialBroadIpa": "ʃɔːt",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "shot",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/shot",
+      "selectedEntry": "shot in British English 1; noun, sense 10a",
+      "source": "Collins English Dictionary, selected British English entry",
+      "selectedLocale": "en-GB",
+      "retrievedIpa": [
+        "ʃɒt"
+      ],
+      "editorialBroadIpa": "ʃɒt",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    }
+  ],
+  "exclusions": [
+    {
+      "candidate": "there–dare / those–doze",
+      "reason": "Valid-looking alternatives are unnecessary: three selected pairs per pool have direct source evidence. These alternatives are not claimed independently audited."
+    },
+    {
+      "candidate": "American port–pot / court–cot / short–shot",
+      "reason": "Not adopted: selected rhotic American forms would differ in /ɹ/ as well as vowel. An en-US audio fallback cannot restore this British pool."
+    },
+    {
+      "candidate": "reserved English and French transfer words",
+      "reason": "All-language reserved spellings and English reserved IPA are excluded, including different spellings with a reserved English pronunciation."
+    }
+  ],
+  "unsupportedClaims": [
+    "No pronunciation or speaker-profile approval",
+    "No proof that every British accent preserves the exact selected realization",
+    "No product learning-effect or ABX superiority claim",
+    "No traffic ranking or revenue increase",
+    "No current 24-topic English availability"
+  ]
+}

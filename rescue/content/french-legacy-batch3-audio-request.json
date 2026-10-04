@@ -1,0 +1,419 @@
+{
+  "date": "2026-09-28",
+  "status": "request-only-no-audio-generated-or-manifest-changed",
+  "languageId": "fr",
+  "locale": "fr-FR",
+  "voiceIds": [
+    "qwen-fr-a",
+    "qwen-fr-b"
+  ],
+  "uniqueWords": 17,
+  "newTrainingWords": [
+    "chat",
+    "chant",
+    "rat",
+    "rang",
+    "plat",
+    "plan"
+  ],
+  "missingCachedClips": 12,
+  "existingCachedClips": 22,
+  "requirement": "At least two complete, dialect-consistent profiles require listening review. Existing synthetic profile IDs do not certify stable human speakers. Newly recorded human voices need all 17 words per profile, not only the six currently uncached words.",
+  "words": [
+    {
+      "languageId": "fr",
+      "text": "beau",
+      "ipa": "/bo/",
+      "locale": "fr-FR",
+      "meaning": "beautiful; masculine singular",
+      "alreadyInTraining": true,
+      "contrastIds": [
+        "fr-o-u",
+        "fr-o-on"
+      ],
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/2618b77da7a79633fce4f5ee6c9abb1428f81b74ff4ccc5d1d22da18f93c549e.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/11bcf832a32cfce607173e34de35f1918022617177ffb28194f48edd1d2a4b6d.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check isolated-word final vowel category, naturalness, and voice consistency; do not add a final consonant or schwa."
+    },
+    {
+      "languageId": "fr",
+      "text": "bout",
+      "ipa": "/bu/",
+      "locale": "fr-FR",
+      "meaning": "end; tip",
+      "alreadyInTraining": true,
+      "contrastIds": [
+        "fr-o-u"
+      ],
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/a720c317be6833585001f2ee9cfcfea1dc18550d2a6ad18ecbc4693603c35c88.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/3af6921081918c43107b72141a1540e2f7e3ea88dc4e1f68a2eda61e6bfb7746.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check isolated-word final vowel category, naturalness, and voice consistency; do not add a final consonant or schwa."
+    },
+    {
+      "languageId": "fr",
+      "text": "veau",
+      "ipa": "/vo/",
+      "locale": "fr-FR",
+      "meaning": "calf",
+      "alreadyInTraining": true,
+      "contrastIds": [
+        "fr-o-u"
+      ],
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/4558aaf4694a267049950cf69c5ea3aebde0d8c4e27fce07254b76b7b11cafec.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/760b127dbbf207291826ea415f20e97ecfcbb7ce75de51e670f88e4a7ca8c8d9.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check isolated-word final vowel category, naturalness, and voice consistency; do not add a final consonant or schwa."
+    },
+    {
+      "languageId": "fr",
+      "text": "vous",
+      "ipa": "/vu/",
+      "locale": "fr-FR",
+      "meaning": "you, formal or plural",
+      "alreadyInTraining": true,
+      "contrastIds": [
+        "fr-o-u"
+      ],
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/a4dc61682d9cce819a4cd6cf44c0fd6e62d672163d1bf27a2628a414ef3c2727.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/8ab8cb2bfe65c2fd02e42f22e2afdd96e139157e7e6d28ce13860cef7e0aa789.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check isolated-word final vowel category, naturalness, and voice consistency; do not add a final consonant or schwa."
+    },
+    {
+      "languageId": "fr",
+      "text": "saut",
+      "ipa": "/so/",
+      "locale": "fr-FR",
+      "meaning": "jump",
+      "alreadyInTraining": true,
+      "contrastIds": [
+        "fr-o-u"
+      ],
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/66bce07d3edef25554c9a4e1ca213ec74af87ed1d5db34eb19b8f05e9acacfb3.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/7a943586d5029617e14824274172ae111d9220670f92712d959d917f136063a9.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check isolated-word final vowel category, naturalness, and voice consistency; do not add a final consonant or schwa."
+    },
+    {
+      "languageId": "fr",
+      "text": "sou",
+      "ipa": "/su/",
+      "locale": "fr-FR",
+      "meaning": "a small coin; a little money",
+      "alreadyInTraining": true,
+      "contrastIds": [
+        "fr-o-u"
+      ],
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/6823d04a262af4199c99c162db07c2d4cec38cfcf13ca5df88b44f337f31a50b.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/ef0baf980227bfe0a7a294c54ee588b59c5a2080ffe2b09883a08c36e983b33e.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check isolated-word final vowel category, naturalness, and voice consistency; do not add a final consonant or schwa."
+    },
+    {
+      "languageId": "fr",
+      "text": "chat",
+      "ipa": "/ʃa/",
+      "locale": "fr-FR",
+      "meaning": "cat; masculine form",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-a-an"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check isolated-word final vowel category, naturalness, and voice consistency; do not add a final consonant or schwa."
+    },
+    {
+      "languageId": "fr",
+      "text": "chant",
+      "ipa": "/ʃɑ̃/",
+      "locale": "fr-FR",
+      "meaning": "singing; song",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-a-an"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check isolated-word final vowel category, naturalness, and voice consistency; do not add a final consonant or schwa."
+    },
+    {
+      "languageId": "fr",
+      "text": "rat",
+      "ipa": "/ʁa/",
+      "locale": "fr-FR",
+      "meaning": "rat",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-a-an"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check isolated-word final vowel category, naturalness, and voice consistency; do not add a final consonant or schwa. Select /ʁa/, not the attested alternate /ʁɑ/."
+    },
+    {
+      "languageId": "fr",
+      "text": "rang",
+      "ipa": "/ʁɑ̃/",
+      "locale": "fr-FR",
+      "meaning": "row; rank",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-a-an"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check isolated-word final vowel category, naturalness, and voice consistency; do not add a final consonant or schwa."
+    },
+    {
+      "languageId": "fr",
+      "text": "plat",
+      "ipa": "/pla/",
+      "locale": "fr-FR",
+      "meaning": "flat; masculine singular",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-a-an"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check isolated-word final vowel category, naturalness, and voice consistency; do not add a final consonant or schwa."
+    },
+    {
+      "languageId": "fr",
+      "text": "plan",
+      "ipa": "/plɑ̃/",
+      "locale": "fr-FR",
+      "meaning": "plan; drawing of a layout",
+      "alreadyInTraining": false,
+      "contrastIds": [
+        "fr-a-an"
+      ],
+      "existingClips": [],
+      "missingVoiceIds": [
+        "qwen-fr-a",
+        "qwen-fr-b"
+      ],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check isolated-word final vowel category, naturalness, and voice consistency; do not add a final consonant or schwa."
+    },
+    {
+      "languageId": "fr",
+      "text": "bon",
+      "ipa": "/bɔ̃/",
+      "locale": "fr-FR",
+      "meaning": "good; masculine singular",
+      "alreadyInTraining": true,
+      "contrastIds": [
+        "fr-o-on"
+      ],
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/37e353d368c84e8ede8ee0f26237eeef74e33efedc49d0accc38d1818514088b.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/327baab3f72a9ab186c29571587811bef3604865ec477dbc88ac96689f91fdb7.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check isolated-word final vowel category, naturalness, and voice consistency; do not add a final consonant or schwa."
+    },
+    {
+      "languageId": "fr",
+      "text": "peau",
+      "ipa": "/po/",
+      "locale": "fr-FR",
+      "meaning": "skin",
+      "alreadyInTraining": true,
+      "contrastIds": [
+        "fr-o-on"
+      ],
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/5cd3231c7b59265c5f03aac60de03cfe2f9bf41eb51a28bc473daac0c0b41813.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/335f3d7673dea093154229a0d81f21a425d55fcf6c0fc8f621016d1fc0579665.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check isolated-word final vowel category, naturalness, and voice consistency; do not add a final consonant or schwa."
+    },
+    {
+      "languageId": "fr",
+      "text": "pont",
+      "ipa": "/pɔ̃/",
+      "locale": "fr-FR",
+      "meaning": "bridge",
+      "alreadyInTraining": true,
+      "contrastIds": [
+        "fr-o-on"
+      ],
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/69ae1d4378674f6a49562344796c843a67ea39d8a188f2c8f8c5b61d2c087620.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/5c39bf1a1afd1b0ed539d9a8836477e4a11e1e4e2f4095a7250aaf304dc7760c.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check isolated-word final vowel category, naturalness, and voice consistency; do not add a final consonant or schwa."
+    },
+    {
+      "languageId": "fr",
+      "text": "taux",
+      "ipa": "/to/",
+      "locale": "fr-FR",
+      "meaning": "rate",
+      "alreadyInTraining": true,
+      "contrastIds": [
+        "fr-o-on"
+      ],
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/985e2f0087e0a54a26f6c86169f7053fc5799b9406aed40afce665b978ac824a.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/7b5b3ea8543ccc892ed0bd9cf5fcc18860a1cebdf5e0a8313e42015e74c27bc2.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check isolated-word final vowel category, naturalness, and voice consistency; do not add a final consonant or schwa."
+    },
+    {
+      "languageId": "fr",
+      "text": "ton",
+      "ipa": "/tɔ̃/",
+      "locale": "fr-FR",
+      "meaning": "tone; pitch of a voice",
+      "alreadyInTraining": true,
+      "contrastIds": [
+        "fr-o-on"
+      ],
+      "existingClips": [
+        {
+          "voiceId": "qwen-fr-a",
+          "url": "/audio/clips/d12fec1c01278d2cf1a17bc8636baa3198be564f386d2166d3720cd58b9e754e.mp3",
+          "status": "generated-unreviewed"
+        },
+        {
+          "voiceId": "qwen-fr-b",
+          "url": "/audio/clips/16a2ba8cd923e0c002d4ea55928230a67ddd229cf8d74d8a35c3b1506e93a3db.mp3",
+          "status": "generated-unreviewed"
+        }
+      ],
+      "missingVoiceIds": [],
+      "reviewStatus": "unreviewed",
+      "reviewInstruction": "Check isolated-word final vowel category, naturalness, and voice consistency; do not add a final consonant or schwa."
+    }
+  ]
+}

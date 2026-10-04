@@ -1,0 +1,1149 @@
+{
+  "date": "2026-09-28",
+  "limitation": "Header IPA can combine portal resources. The separate short TLFi excerpt identifies retrieved dictionary pronunciation. Editorial broad IPA is not a certified speaker realization. Glosses are original summaries.",
+  "words": [
+    {
+      "word": "rue",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/rue/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/rue",
+      "headerForm": "rue",
+      "headerIpa": "\\ʁy\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[ʀy]. Homon. ru, rue 2 et formes du verbe ruer . Att. ds Ac. 1694. Étymologie et historique 1. Ca 1050 «",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "ʁy"
+      ],
+      "editorialBroadIpa": "ʁy",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "riz",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/riz/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/riz",
+      "headerForm": "riz",
+      "headerIpa": "\\ʁi\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[ʀi]. Att. ds Ac. dep. 1694. Ac. 1798: riz; ris . Étymologie et historique 1. Ca 1270 ris « grain de la",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "ʁi"
+      ],
+      "editorialBroadIpa": "ʁi",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "bulle",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/bulle/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/bulle/nom",
+      "headerForm": "bulle",
+      "headerIpa": "\\byl\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[byl]. Enq. : /byl/. Étymologie et historique Av. 1590 « globule d'air » ( Paré , XXVI, 4 dans Littré ); d'où",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "byl"
+      ],
+      "editorialBroadIpa": "byl",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "bile",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/bile/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/bile",
+      "headerForm": "bile",
+      "headerIpa": "\\bil\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[bil]. Étymologie et historique 1539 ( Canappe , 2 e Livre de la méthod. thérap. cité par R. Chauvelot dans La Presse",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "bil"
+      ],
+      "editorialBroadIpa": "bil",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "pur",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/pur/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/pur",
+      "headerForm": "pur, pure",
+      "headerIpa": "\\pyʁ\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[py:ʀ]. Att. ds Ac. dep. 1694. Étymologie et historique I Adj. A. 1. fin x e s. pura « qui est sans",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "pyʁ"
+      ],
+      "editorialBroadIpa": "pyʁ",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "pire",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/pire/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/pire",
+      "headerForm": "pire",
+      "headerIpa": "\\piʁ\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[pi:ʀ]. Att. ds Ac. dep. 1694. Étymologie et historique 1. a) 1119 adj. avec l'art. déf. ou un adj. poss.: superl. rel.",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "piʁ"
+      ],
+      "editorialBroadIpa": "piʁ",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "jus",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/jus/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/jus/nom",
+      "headerForm": "jus",
+      "headerIpa": "\\ʒy\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[ʒy]. Att. ds Ac. dep. 1694. Étymologie et historique 1. Ca 1165 « suc extrait d'un fruit » ([ Chr. de Troyes",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "ʒy"
+      ],
+      "editorialBroadIpa": "ʒy",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "jeu",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/jeu/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/jeu",
+      "headerForm": "jeu",
+      "headerIpa": "\\ʒø\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[ʒø]. Au plur. des jeux. Att. ds Ac. dep. 1694. Étymologie et historique I. 1. Ca 1100 giu « amusement » (",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "ʒø"
+      ],
+      "editorialBroadIpa": "ʒø",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "du",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/du/article",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/du/article",
+      "headerForm": "du",
+      "headerIpa": "\\dy\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[də], [dy], [de] ds les dict. récents : cf. Pt Rob. , Pt Lar. 1968 et Lar. Lang. fr. Pourtant [ε] ouvert",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "də",
+        "dy",
+        "de",
+        "ɛ"
+      ],
+      "editorialBroadIpa": "dy",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "deux",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/deux/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/deux",
+      "headerForm": "deux",
+      "headerIpa": "\\dø\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[dø]. X à la place d' s ( deus ) qui serait la graph. rég. s'explique par confusion avec les mots dans",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "dø"
+      ],
+      "editorialBroadIpa": "dø",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "cru",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/cru/adjectif",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/cru/adjectif",
+      "headerForm": "cru, crue",
+      "headerIpa": "\\kʁy\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[kʀy]. Ds Ac. 1694-1740 s.v. crud, au fém. crue. La forme avec d étymol. est donnée encore ds Fér. 1768, et ds",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "kʁy"
+      ],
+      "editorialBroadIpa": "kʁy",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "creux",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/creux/adjectif",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/creux/adjectif",
+      "headerForm": "creux, creuse",
+      "headerIpa": "\\kʁø\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[kʀø], fém. [-ø:z]. Ds Ac. 1694-1932. Étymologie et historique I. Adj. 1. ca 1180 cruose « qui est vide, creusé à l'intérieur",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "kʁø",
+        "-øz"
+      ],
+      "editorialBroadIpa": "kʁø",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "cou",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/cou/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/cou",
+      "headerForm": "cou",
+      "headerIpa": "\\ku\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[ku]. Ds Ac. depuis 1694. Rouss.-Lacl. 1927, p. 167, rappelle que « les graphies archaïques sol, fol, col, etc., quand ces mots",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "ku"
+      ],
+      "editorialBroadIpa": "ku",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "queue",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/queue/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/queue",
+      "headerForm": "queue",
+      "headerIpa": "\\kø\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[kø]. Homon. queux . Att. ds Ac. dep. 1694. Étymologie et historique A. 1. a) Ca 1100 cue « appendice qui prolonge",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "kø"
+      ],
+      "editorialBroadIpa": "kø",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "doux",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/doux/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/doux",
+      "headerForm": "doux, douce",
+      "headerIpa": "\\du\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[du], fém. [dus]. Ds Ac. dep. 1694. Étymologie et historique Ca 1100 France dulce ( Rol., éd. J. Bédier, 16); id. dulz",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "du",
+        "dus"
+      ],
+      "editorialBroadIpa": "du",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "nous",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/nous/pronom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/nous/pronom",
+      "headerForm": "nous",
+      "headerIpa": "\\nu\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[nu]. Homon. noue et formes de nouer. Att. ds Ac. dep. 1694. Étymologie et historique I. Pron. pers. 1 re pers. du",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "nu"
+      ],
+      "editorialBroadIpa": "nu",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "nœud",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/n%C5%93ud/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/n%C5%93ud",
+      "headerForm": "nœud",
+      "headerIpa": "\\nø\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[nø]. Att. ds Ac. dep. 1694. Étymologie et historique I. 1. 1119 «enlacement serré de fils» ( Philippe de Thaon, Comput, éd.",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "nø"
+      ],
+      "editorialBroadIpa": "nø",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "fée",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/f%C3%A9e/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/f%C3%A9e",
+      "headerForm": "fée",
+      "headerIpa": "\\fe\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[fe]. Ds Ac. 1694-1932. Étymologie et historique Ca 1140 ( Gaimar , Estoire des Engleis, éd. A. Bell, 3657). Du lat. Fata",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "fe"
+      ],
+      "editorialBroadIpa": "fe",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "feu",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/feu/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/feu/nom",
+      "headerForm": "feu",
+      "headerIpa": "\\fø\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[fø]. Ds Ac. dep. 1694. Au plur. feux. Étymologie et historique A. Matières en combustion 1. moyen de destruction ca 881 «",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "fø"
+      ],
+      "editorialBroadIpa": "fø",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "dé",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/d%C3%A9/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/d%C3%A9",
+      "headerForm": "dé",
+      "headerIpa": "\\de\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[de]. Homon. d (lettre), des. Ds Ac. 1694-1932. Étymologie et historique Av. 1150 dé (Trad. du Lapidaire de Marbode , éd. P.",
+      "status": "read",
+      "reusedFrom": "french-expansion-source-audit.json",
+      "dictionaryBroadIpaCandidates": [
+        "de"
+      ],
+      "editorialBroadIpa": "de",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "pré",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/pr%C3%A9/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/pr%C3%A9",
+      "headerForm": "pré",
+      "headerIpa": "\\pʁe\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[pʀe]. Att. ds Ac. dep. 1694. Étymologie et historique 1. a) Ca 1100 pred «petite étendue de terre produisant de l'herbe» (",
+      "status": "read",
+      "reusedFrom": "french-expansion-source-audit.json",
+      "dictionaryBroadIpaCandidates": [
+        "pʁe"
+      ],
+      "editorialBroadIpa": "pʁe",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "preux",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/preux/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/preux",
+      "headerForm": "preux",
+      "headerIpa": "\\pʁø\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[pʀø]. Homon. preu . Att. ds Ac. dep. 1694. Étymologie et historique Ca 1100 «bon, vaillant» adj. ( Roland , éd. J.",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "pʁø"
+      ],
+      "editorialBroadIpa": "pʁø",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "père",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/p%C3%A8re/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/p%C3%A8re",
+      "headerForm": "père",
+      "headerIpa": "\\pɛʁ\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[pε:ʀ]. Homon. pair, paire, pers, formes de perdre. Ac. 1694 et 1718 : pere; dep. 1740 : père. Étymologie et historique I.",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "pɛʁ"
+      ],
+      "editorialBroadIpa": "pɛʁ",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "peur",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/peur/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/peur",
+      "headerForm": "peur",
+      "headerIpa": "\\pœʁ\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[poe:ʀ]. Att. ds Ac. dep. 1694. Étymologie et historique 1. Avoir peur a) 2 e moitié x e s. ( St Léger,",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "pœʁ"
+      ],
+      "editorialBroadIpa": "pœʁ",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "serre",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/serre/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/serre/nom",
+      "headerForm": "serre",
+      "headerIpa": "\\sɛʁ\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[sε:ʀ]. Homon. cerf, serf, serre 2 et formes de servir . Att. ds Ac. dep. 1694. Étymologie et historique A. 1. a)",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "sɛʁ"
+      ],
+      "editorialBroadIpa": "sɛʁ",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "sœur",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/s%C5%93ur/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/s%C5%93ur",
+      "headerForm": "sœur",
+      "headerIpa": "\\sœʁ\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[sœ:ʀ]. Att. ds Ac. dep. 1694. Étymologie et historique 1. 1100 sorur ( Roland , éd. J. Bédier, 1720); id. soer (",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "sœʁ"
+      ],
+      "editorialBroadIpa": "sœʁ",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "air",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/air/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/air",
+      "headerForm": "air",
+      "headerIpa": "\\ɛʁ\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "1. Forme phon. : [ε:ʀ]. 2. Homon. et homogr. : air 2 , air 3 , aire, ère, erre verbe, erre subst.,",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "ɛʁ"
+      ],
+      "editorialBroadIpa": "ɛʁ",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "heure",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/heure/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/heure",
+      "headerForm": "heure",
+      "headerIpa": "^((h muet))\\œʁ\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[œ:ʀ]. Att. ds Ac. dep. 1694. Homon. heur, heurt. Étymologie et historique A. 1. Ca 1050 « point situé dans le temps",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "œʁ"
+      ],
+      "editorialBroadIpa": "œʁ",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "tout",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/tout/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/tout",
+      "headerForm": "tout",
+      "headerIpa": "\\tu\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "Tout : [tu] devant cons.: tout signe [tusiɳ], [tut] devant voy. et h muet: tout art [tuta:ʀ], tout habitat [tutabita]. Fém. toute",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "tu",
+        "tusiɲ",
+        "tut",
+        "tutaʁ",
+        "tutabita"
+      ],
+      "editorialBroadIpa": "tu",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "dos",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/dos/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/dos",
+      "headerForm": "dos",
+      "headerIpa": "\\do\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[do]. Ds Ac. 1694-1932. On lie dos à dos [dozado]. Étymologie et historique Ca 1100 l'eschine ... del dos ( Roland, éd.",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "do",
+        "dozado"
+      ],
+      "editorialBroadIpa": "do",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "taux",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/taux/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/taux",
+      "headerForm": "taux",
+      "headerIpa": "\\to\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[to]. Homon. tau, taud, tôt . Att. ds Ac. dep. 1718. Étymologie et historique 1. 1283 tans (lire taus , cf. T.-L.)",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "to"
+      ],
+      "editorialBroadIpa": "to",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "dent",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/dent/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/dent/nom",
+      "headerForm": "dent",
+      "headerIpa": "\\dɑ̃\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[dɑ̃]. D'apr. Littré le t se lie : une dent aiguë [dɑ̃tεgy] et au plur. l' s : des dents aiguës [dɑ̃zεgy].",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "dɑ̃",
+        "dɑ̃tɛɡy",
+        "dɑ̃zɛɡy"
+      ],
+      "editorialBroadIpa": "dɑ̃",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "temps",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/temps/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/temps",
+      "headerForm": "temps",
+      "headerIpa": "\\tɑ̃\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[tɑ̃]. Homon. tant, taon , formes de tendre . Att. ds. Ac . dep. 1694. Étymologie et historique A. 1. a) 2",
+      "status": "read",
+      "reusedFrom": "french-expansion-source-audit.json",
+      "dictionaryBroadIpaCandidates": [
+        "tɑ̃"
+      ],
+      "editorialBroadIpa": "tɑ̃",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "goût",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/go%C3%BBt/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/go%C3%BBt",
+      "headerForm": "goût",
+      "headerIpa": "\\ɡu\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[gu]. D'apr. Littré le t ne se lie pas dans le lang. cour. Ds Ac. dep. 1694. Étymologie et historique A. 1.",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "ɡu"
+      ],
+      "editorialBroadIpa": "ɡu",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "gant",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/gant/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/gant",
+      "headerForm": "gant",
+      "headerIpa": "\\ɡɑ̃\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[gɑ̃]. Ds Ac. dep. 1694. Étymologie et historique 1. a) Ca 1100 guant « pièce de l'habillement qui recouvre la main en",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "ɡɑ̃"
+      ],
+      "editorialBroadIpa": "ɡɑ̃",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "camp",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/camp/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/camp",
+      "headerForm": "camp",
+      "headerIpa": "\\kɑ̃\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[kɑ̃]. Le groupe -mp est muet et la voyelle précédente nasale dans camp, champ, clamp ( cf. Fouché Prononc. 1959, p. 425).",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "kɑ̃"
+      ],
+      "editorialBroadIpa": "kɑ̃",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "gomme",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/gomme/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/gomme/nom",
+      "headerForm": "gomme",
+      "headerIpa": "\\ɡɔm\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[gɔm]. Ds Ac. dep. 1694. Étymologie et historique I. Ca 1165 gome (B. de Ste- Maure , Troie, 14899 ds T.-L.); 1836",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "ɡɔm"
+      ],
+      "editorialBroadIpa": "ɡɔm",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "comme",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/comme/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/comme",
+      "headerForm": "comme",
+      "headerIpa": "\\kɔm\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[kɔm]. Enq. : /kom/. Ds Ac. 1694-1932. Étymologie et historique I. A. Conjonction et adv. exprimant la comparaison 1. 842 si cum",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "kɔm"
+      ],
+      "editorialBroadIpa": "kɔm",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "vin",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/vin/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/vin",
+      "headerForm": "vin",
+      "headerIpa": "\\vɛ̃\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[vε̃]. Att. ds Ac. dep. 1694. Étymologie et historique 1. a) Fin x e s. « boisson alcoolisée provenant de la fermentation",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "vɛ̃"
+      ],
+      "editorialBroadIpa": "vɛ̃",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "fin",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/fin/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/fin/nom",
+      "headerForm": "fin",
+      "headerIpa": "\\fɛ̃\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[fε̃]. Ds Ac. 1694-1932. Homon. faim, formes du verbe feindre. Étymologie et historique 1. 2 e moitié x e s. « terme",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "fɛ̃"
+      ],
+      "editorialBroadIpa": "fɛ̃",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "veau",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/veau/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/veau",
+      "headerForm": "veau",
+      "headerIpa": "\\vo\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[vo]. Homon. val (sous la forme plur. vaux ) , valoir (prés. de l'ind. 1, 2, 3 pers.), vos. Att. ds Ac.",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "vo"
+      ],
+      "editorialBroadIpa": "vo",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "faux",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/faux/adjectif",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/faux/adjectif",
+      "headerForm": "faux, fausse",
+      "headerIpa": "\\fo\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[fo], fém. [fo:s]. Enq. : /fo, -s, D/. Homon. faut (de falloir ). Ac. 1932 écrit les composés en faux- avec un",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "fo",
+        "fos"
+      ],
+      "editorialBroadIpa": "fo",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "vous",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/vous/pronom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/vous/pronom",
+      "headerForm": "vous",
+      "headerIpa": "\\vu\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[vu]. Liaison [vuz-] devant voy. ou h muet: vous êtes jeune [vuzεtjœn]; vous habitez près [vuzabitepʀε]. Att. ds Ac. 1694 et dep.",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "vu",
+        "vuz-",
+        "vuzɛtjœn",
+        "vuzabitepʁɛ"
+      ],
+      "editorialBroadIpa": "vu",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "fou",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/fou/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/fou",
+      "headerForm": "fou, folle",
+      "headerIpa": "\\fu\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[fɔl], [fu]. La forme fol au masc. sing. est considérée comme vieillie dès le xvii e s. ( cf. Fur. 1701 :",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "fɔl",
+        "fu"
+      ],
+      "editorialBroadIpa": "fu",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "beau",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/beau/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/beau",
+      "headerForm": "beau, belle",
+      "headerIpa": "\\bo\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "1. Forme phon. : [bo], bel (masc.), belle (fém.) [bεl]. Enq. : /bo/. 2. Homon. : bau (solive pour affermir le bordage),",
+      "status": "read",
+      "reusedFrom": "french-expansion-source-audit.json",
+      "dictionaryBroadIpaCandidates": [
+        "bo",
+        "bɛl"
+      ],
+      "editorialBroadIpa": "bo",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "bain",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/bain/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/bain/nom",
+      "headerForm": "bain",
+      "headerIpa": "\\bɛ̃\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[bε̃]. Étymologie et historique A.— Subst. masc. plur. 1. ca 1100 « endroit du palais ou de la maison où l'on se",
+      "status": "read",
+      "reusedFrom": "french-expansion-source-audit.json",
+      "dictionaryBroadIpaCandidates": [
+        "bɛ̃"
+      ],
+      "editorialBroadIpa": "bɛ̃",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "vain",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/vain/adjectif",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/vain/adjectif",
+      "headerForm": "vain, vaine",
+      "headerIpa": "\\vɛ̃\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[vε̃], fém. [vεn]. [vεn] au masc. devant voy. ex. ce vain amour [vεnamu:ʀ]. Homon. vin, vingt ; formes de venir et vaincre",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "vɛ̃",
+        "vɛn",
+        "vɛn",
+        "vɛnamuʁ"
+      ],
+      "editorialBroadIpa": "vɛ̃",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "ville",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/ville/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/ville",
+      "headerForm": "ville",
+      "headerIpa": "\\vil\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[vil]. Att. ds Ac. dep. 1694. Étymologie et historique 1. Fin x e s. vile « réunion de maisons habitées, disposées par",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "vil"
+      ],
+      "editorialBroadIpa": "vil",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "chou",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/chou/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/chou/nom",
+      "headerForm": "chou",
+      "headerIpa": "\\ʃu\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[ʃu]. Ds Ac. 1694-1932. Fait partie des 7 mots qui prennent x au plur. au lieu de s : bijou, caillou, chou,",
+      "status": "read",
+      "reusedFrom": "french-expansion-source-audit.json",
+      "dictionaryBroadIpaCandidates": [
+        "ʃu"
+      ],
+      "editorialBroadIpa": "ʃu",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "sou",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/sou/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/sou",
+      "headerForm": "sou",
+      "headerIpa": "\\su\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[su]. Ac. 1694-1740: sou, sol ; dep. 1762: sou, Sol , avec la valeur phonique de sou ( Rouss. - Lacl. 1927,",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "su"
+      ],
+      "editorialBroadIpa": "su",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "chaud",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/chaud/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/chaud",
+      "headerForm": "chaud, chaude",
+      "headerIpa": "\\ʃo\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[ʃo], fém. [ʃo:d]. Littré note que : « le d ne se lie pas [qu'] au plur. l' s se lie ».",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "ʃo",
+        "ʃod",
+        "qu'"
+      ],
+      "editorialBroadIpa": "ʃo",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "saut",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/saut/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/saut",
+      "headerForm": "saut",
+      "headerIpa": "\\so\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[so]. Homon. sceau, seau, sot . Att. ds Ac. dep. 1694. Étymologie et historique A. 1. a) 1100 salz « mouvement brusque",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "so"
+      ],
+      "editorialBroadIpa": "so",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "choix",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/choix/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/choix",
+      "headerForm": "choix",
+      "headerIpa": "\\ʃwa\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[ʃwa]. Lar. Lang. fr. transcrit [ɑ] post.; à ce sujet cf. Buben 1935, § 12 : « Il n'existe non plus aucune",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "ʃwa",
+        "ɑ"
+      ],
+      "editorialBroadIpa": "ʃwa",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "soie",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/soie/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/soie",
+      "headerForm": "soie",
+      "headerIpa": "\\swa\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[swa], [-ɑ]. Homon. soi, soit, soie 2 , forme de être . Littré [ɑ]; Warn. 1968, Lar. Lang. fr. , Pt Rob.",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "swa",
+        "-ɑ",
+        "ɑ"
+      ],
+      "editorialBroadIpa": "swa",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "lit",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/lit/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/lit/nom",
+      "headerForm": "lit",
+      "headerIpa": "\\li\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[li]. Att. ds Ac. dep. 1694. Étymologie et historique 1. a) Ca 1050 « meuble destiné au coucher » ( Alexis, 12,",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "li"
+      ],
+      "editorialBroadIpa": "li",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "lait",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/lait/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/lait/nom",
+      "headerForm": "lait",
+      "headerIpa": "\\lɛ\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[lε]. Att. ds Ac. dep. 1694. Étymologie et historique A. 1. 1 re moitié xii e s. « liquide sécrété par les",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "lɛ"
+      ],
+      "editorialBroadIpa": "lɛ",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "raie",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/raie/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/raie/nom",
+      "headerForm": "raie",
+      "headerIpa": "\\ʁɛ\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[ʀε]. Homon. et homogr. rai, raie 2 , rets. Ac. 1694-1718: raye; dep. 1740: raie. Étymologie et historique 1. a) Ca 1140",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "ʁɛ"
+      ],
+      "editorialBroadIpa": "ʁɛ",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "lame",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/lame/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/lame",
+      "headerForm": "lame",
+      "headerIpa": "\\lam\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[lam]. Att. ds Ac. dep. 1694. Étymologie et historique 1. a) Ca 1121 « morceau (de métal) mince et étroit » (",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "lam"
+      ],
+      "editorialBroadIpa": "lam",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "rame",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/rame/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/rame/nom",
+      "headerForm": "rame",
+      "headerIpa": "\\ʁam\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[ʀam]. Homon. et homogr. rame 1, 3, 4 . Att. ds Ac. dep. 1694. Étymologie et historique 1. 1395 ( Voyage de",
+      "selectedTlfiEntry": 1,
+      "tlfiEntryCount": 4,
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "ʁam"
+      ],
+      "editorialBroadIpa": "ʁam",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "peine",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/peine/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/peine",
+      "headerForm": "peine",
+      "headerIpa": "\\pɛn\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[pεn]. Ds Martinet - Walter 1973, 7 sujets disent [pε:n]. Homon. pêne et éventuellement penne . Att. ds Ac. dep. 1694. Étymologie",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "pɛn",
+        "pɛn"
+      ],
+      "editorialBroadIpa": "pɛn",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "peigne",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/peigne/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/peigne/nom",
+      "headerForm": "peigne",
+      "headerIpa": "\\pɛɲ\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[pεɳ]. Att. ds Ac. dep. 1694. Étymologie et historique A. 1. Instrument servant à coiffer les cheveux a) [1176-81] déb. xiii e",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "pɛɲ",
+        "1176-81"
+      ],
+      "editorialBroadIpa": "pɛɲ",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "panne",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/panne/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/panne",
+      "headerForm": "panne",
+      "headerIpa": "\\pan\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[pan]. Att. ds Ac. dep. 1694. Étymologie et historique 1. 1515-16 pene «la plus longue pièce d'une vergue latine, qui s'amincit vers",
+      "selectedTlfiEntry": 2,
+      "tlfiEntryCount": 6,
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "pan"
+      ],
+      "editorialBroadIpa": "pan",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "pagne",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/pagne/",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/pagne",
+      "headerForm": "pagne",
+      "headerIpa": "\\paɲ\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[paɳ]. Att. ds Ac. dep. 1762. Étymologie et historique A. Fém. 1637 paigne ( Alexis de Saint-Lô , Relation du voyage au",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "paɲ"
+      ],
+      "editorialBroadIpa": "paɲ",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "reine",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/reine/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/reine/nom",
+      "headerForm": "reine",
+      "headerIpa": "\\ʁɛn\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[ʀεn]. Homon. raine, rêne, renne. Ac. 1694: reine, reyne ; dep. 1718: reine . Étymologie et historique 1. Ca 1100 reïne «",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "ʁɛn"
+      ],
+      "editorialBroadIpa": "ʁɛn",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    },
+    {
+      "word": "règne",
+      "source": "ATILF public lookup; TLFi section",
+      "lookupUrl": "https://www.portail-lexical.fr/api/word/r%C3%A8gne/nom",
+      "referenceUrl": "https://www.portail-lexical.fr/definition/tlfi/r%C3%A8gne/nom",
+      "headerForm": "règne",
+      "headerIpa": "\\ʁɛɲ\\",
+      "tlfiAvailable": true,
+      "pronunciationExcerpt": "[ʀεɳ]. Ac. 1694, 1718: re- ; dep. 1740: rè- . Étymologie et historique A. 1. 2 e moit. x e s. «",
+      "status": "read",
+      "dictionaryBroadIpaCandidates": [
+        "ʁɛɲ"
+      ],
+      "editorialBroadIpa": "ʁɛɲ",
+      "broadIpaMatchesRetrievedExcerpt": true,
+      "normalization": "TLFi ʀ→ʁ, ε→ɛ, ɳ→ɲ, g→ɡ, oe→œ; colon/length mark omitted for broad teaching notation. All other symbols preserved."
+    }
+  ]
+}

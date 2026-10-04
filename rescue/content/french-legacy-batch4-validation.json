@@ -1,0 +1,196 @@
+{
+  "date": "2026-09-28",
+  "status": "passed-text-and-eligibility-checks-only",
+  "baseSnapshot": {
+    "hashes": {
+      "rescue/content/curriculum.json": "cc3d926b744379a8d9e6535c8cb06ce30cd3795cd871398f40540861eb58b752",
+      "rescue/content/legacy-coverage.json": "6629304e604c883b3d5c8dc0b2989620e5987b4a9d3aa03c170c2b0aa09577b6",
+      "rescue/content/transfer-candidates.json": "14e960285239b919d5f48bddfc1d6b2a59fb5a9cfecc5789b17df4e965e9bea5",
+      "rescue/app/public/audio/manifest.json": "37ee8bf1464770a61add57114c5b8ea8562bf559c6c46dd8e7f5e27d7b8e98d7",
+      "rescue/content/french-legacy-batch3-candidates.json": "268b8670d88691292119751c270619d79b8a58805ad82b847cb2408995c425c4"
+    },
+    "currentContrasts": 46,
+    "currentPairs": 138
+  },
+  "contrasts": [
+    {
+      "id": "fr-o-open-u",
+      "legacyLabelConfirmedInBundle": true,
+      "pairs": 3,
+      "referencePairXCategoryCombinations": 12
+    },
+    {
+      "id": "fr-y-eu-open",
+      "legacyLabelConfirmedInBundle": true,
+      "pairs": 3,
+      "referencePairXCategoryCombinations": 12
+    },
+    {
+      "id": "fr-i-e",
+      "legacyLabelConfirmedInBundle": true,
+      "pairs": 3,
+      "referencePairXCategoryCombinations": 12
+    }
+  ],
+  "pairs": [
+    {
+      "id": "fr-bol-boule",
+      "strictMinimal": true,
+      "categoryAligned": true,
+      "targetPosition": "medial",
+      "eligibleDifferentXByCategory": [
+        [
+          "cor",
+          "sort"
+        ],
+        [
+          "cour",
+          "sourd"
+        ]
+      ]
+    },
+    {
+      "id": "fr-cor-cour",
+      "strictMinimal": true,
+      "categoryAligned": true,
+      "targetPosition": "medial",
+      "eligibleDifferentXByCategory": [
+        [
+          "bol",
+          "sort"
+        ],
+        [
+          "boule",
+          "sourd"
+        ]
+      ]
+    },
+    {
+      "id": "fr-sort-sourd",
+      "strictMinimal": true,
+      "categoryAligned": true,
+      "targetPosition": "medial",
+      "eligibleDifferentXByCategory": [
+        [
+          "bol",
+          "cor"
+        ],
+        [
+          "boule",
+          "cour"
+        ]
+      ]
+    },
+    {
+      "id": "fr-pur-peur",
+      "strictMinimal": true,
+      "categoryAligned": true,
+      "targetPosition": "medial",
+      "eligibleDifferentXByCategory": [
+        [
+          "bure",
+          "sur"
+        ],
+        [
+          "beurre",
+          "sœur"
+        ]
+      ]
+    },
+    {
+      "id": "fr-bure-beurre",
+      "strictMinimal": true,
+      "categoryAligned": true,
+      "targetPosition": "medial",
+      "eligibleDifferentXByCategory": [
+        [
+          "pur",
+          "sur"
+        ],
+        [
+          "peur",
+          "sœur"
+        ]
+      ]
+    },
+    {
+      "id": "fr-sur-soeur",
+      "strictMinimal": true,
+      "categoryAligned": true,
+      "targetPosition": "medial",
+      "eligibleDifferentXByCategory": [
+        [
+          "pur",
+          "bure"
+        ],
+        [
+          "peur",
+          "beurre"
+        ]
+      ]
+    },
+    {
+      "id": "fr-lit-le",
+      "strictMinimal": true,
+      "categoryAligned": true,
+      "targetPosition": "final",
+      "eligibleDifferentXByCategory": [
+        [
+          "nid",
+          "prix"
+        ],
+        [
+          "nez",
+          "pré"
+        ]
+      ]
+    },
+    {
+      "id": "fr-nid-nez",
+      "strictMinimal": true,
+      "categoryAligned": true,
+      "targetPosition": "final",
+      "eligibleDifferentXByCategory": [
+        [
+          "lit",
+          "prix"
+        ],
+        [
+          "lé",
+          "pré"
+        ]
+      ]
+    },
+    {
+      "id": "fr-prix-pre",
+      "strictMinimal": true,
+      "categoryAligned": true,
+      "targetPosition": "final",
+      "eligibleDifferentXByCategory": [
+        [
+          "lit",
+          "nid"
+        ],
+        [
+          "lé",
+          "nez"
+        ]
+      ]
+    }
+  ],
+  "totalPairs": 9,
+  "sourceCheckedUniqueWords": 18,
+  "totalReferencePairXCategoryCombinations": 36,
+  "transferTextOverlap": [],
+  "sameLanguageTransferIpaOverlap": [],
+  "protectedFilesUnchanged": true,
+  "audioReadiness": {
+    "missingCachedClips": 24,
+    "listeningApproval": false
+  },
+  "limits": [
+    "Source/phoneme checks cannot certify generated pronunciations.",
+    "Combination counts exclude independent A/B ordering, token, and voice variation; they are not independent-test sample sizes.",
+    "No runtime integration, statistical learning result, or demand uplift is asserted."
+  ]
+}

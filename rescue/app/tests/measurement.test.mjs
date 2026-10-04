@@ -1,0 +1,313 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import ts from 'typescript';
+import * as data from '../src/lib/measurement-data.ts';
+
+const CHOICE = 'minimalpairs.analytics-choice.v1';
+const attempt = '00000000-0000-4000-8000-000000000001';
+const recommendationId = '00000000-0000-4000-8000-000000000002';
+const PENDING = 'minimalpairs.analytics-recommendation.v1';
+const trial = { language_id: 'fr', contrast_id: 'fr-u-y', audio_collection: 'qwen-starter-v1', total: 12, text_hints_used: false };
+const suggestion = { language_id: 'fr', contrast_id: 'fr-u-y', audio_collection: 'qwen-starter-v1', recommendation_id: recommendationId, recommendation_kind: 'revisit', recommendation_surface: 'history' };
+function client(options = {}) {
+  const storage = options.storage || new Map(options.choice ? [[CHOICE, options.choice]] : []);
+  const session = options.session || new Map();
+  const scripts = [], cookies = [];
+  const events = new EventTarget();
+  const window = {
+    location: { origin: 'https://minimalpairs.web.app', hostname: 'minimalpairs.web.app', pathname: '/practice', search: '?email=private@example.invalid', hash: '#secret' },
+    localStorage: { getItem: key => { if (options.blockStorageRead) throw Error('blocked'); return storage.get(key) ?? null; }, setItem: (key, value) => { if (options.blockStorageWrite) throw Error('blocked'); storage.set(key, value); } },
+    sessionStorage: {
+      getItem: key => { if (options.blockSessionStorage) throw Error('blocked'); return session.get(key) ?? null; },
+      setItem: (key, value) => { if (options.blockSessionStorage) throw Error('blocked'); session.set(key, value); },
+      removeItem: key => { if (options.blockSessionStorage || options.blockSessionRemove) throw Error('blocked'); session.delete(key); },
+    },
+    addEventListener: events.addEventListener.bind(events), removeEventListener: events.removeEventListener.bind(events), dispatchEvent: events.dispatchEvent.bind(events),
+  };
+  const document = {
+    documentElement: { dataset: { measurementId: options.configured === false ? '' : 'G-TEST123', measurementEnvironment: options.environment || 'preview' } },
+    referrer: 'https://www.google.com/search?q=private',
+    head: { append: script => { if (options.blockScript) throw Error('blocked'); scripts.push(script); } },
+    createElement: () => ({ dataset: {} }),
+    get cookie() { return '_ga=existing; _ga_TEST123=existing; session=keep'; },
+    set cookie(value) { cookies.push(value); },
+  };
+  const navigator = { doNotTrack: options.dnt, globalPrivacyControl: options.gpc };
+  const compiled = ts.transpileModule(readFileSync(new URL('../src/lib/measurement.ts', import.meta.url), 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;
+  const exports = {};
+  new Function('require', 'exports', 'window', 'document', 'navigator', 'Event', compiled)(name => { assert.equal(name, './measurement-data'); return data; }, exports, window, document, navigator, Event);
+  const calls = () => (window.dataLayer || []).map(args => Array.from(args));
+  const measured = () => calls().filter(call => call[0] === 'event');
+  const storageEvent = key => { const event = new Event('storage'); Object.defineProperty(event, 'key', { value: key }); window.dispatchEvent(event); };
+  return { api: exports, scripts, cookies, window, document, storage, session, calls, measured, storageEvent };
+}
+
+test('measurement remains absent before consent and after declining', () => {
+  const c = client(); c.api.initializeMeasurement();
+  c.api.startMeasuredPractice(attempt, trial); c.api.measuredFirstAnswer(attempt, false);
+  c.api.setAnalyticsChoice('declined'); c.api.completeMeasuredPractice(attempt, { correct: 8, total: 12 });
+  assert.deepEqual(c.scripts, []); assert.deepEqual(c.calls(), []);
+  assert.equal(c.api.analyticsChoice(), 'declined');
+});
+
+test('allowed measurement loads once, sanitizes page details, and denies advertising', () => {
+  const c = client(); assert.equal(c.api.setAnalyticsChoice('allowed'), true); c.api.initializeMeasurement(); c.api.initializeMeasurement();
+  assert.equal(c.scripts.length, 1);
+  const config = c.calls().find(call => call[0] === 'config')[2];
+  assert.equal(config.send_page_view, false); assert.equal(config.allow_google_signals, false); assert.equal(config.allow_ad_personalization_signals, false);
+  assert.equal(config.page_location, 'https://minimalpairs.web.app/practice'); assert.equal(config.page_referrer, ''); assert.equal(config.debug_mode, true);
+  assert.equal(c.measured().filter(call => call[1] === 'page_view').length, 1);
+  assert.doesNotMatch(JSON.stringify(c.calls()), /private|@|secret/);
+  assert.deepEqual(c.calls()[0], ['consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' }]);
+});
+
+test('production omits debug_mode entirely so the developer filter cannot discard customers', () => {
+  const c = client({ choice: 'allowed', environment: 'production' }); c.api.initializeMeasurement();
+  c.api.startMeasuredPractice(attempt, trial);
+  const config = c.calls().find(call => call[0] === 'config')[2];
+  assert.equal(config.environment, 'production'); assert.equal('debug_mode' in config, false);
+  assert.ok(c.measured().every(call => !('debug_mode' in call[2])));
+});
+
+for (const preference of [{ dnt: '1' }, { gpc: true }]) test(`browser privacy preference prevents tag loading: ${JSON.stringify(preference)}`, () => {
+  const c = client({ choice: 'allowed', ...preference }); c.api.initializeMeasurement(); c.api.setAnalyticsChoice('allowed');
+  c.api.startMeasuredPractice(attempt, trial);
+  assert.equal(c.api.browserDeclinesAnalytics(), true); assert.deepEqual(c.scripts, []); assert.deepEqual(c.calls(), []);
+});
+
+test('missing configuration or blocked storage fails closed', () => {
+  for (const options of [{ configured: false }, { blockStorageRead: true }]) {
+    const c = client({ choice: 'allowed', ...options }); c.api.initializeMeasurement(); c.api.startMeasuredPractice(attempt, trial);
+    assert.deepEqual(c.scripts, []); assert.deepEqual(c.calls(), []);
+  }
+  const c = client({ choice: 'allowed', blockStorageWrite: true });
+  assert.equal(c.api.setAnalyticsChoice('declined'), false); assert.equal(c.api.trackMeasurement('page_view'), false);
+  assert.deepEqual(c.scripts, []);
+});
+
+test('events count each start, first answer, per-round error and completion once', () => {
+  const c = client({ choice: 'allowed' });
+  for (let i = 0; i < 2; i++) {
+    c.api.startMeasuredPractice(attempt, trial); c.api.measuredFirstAnswer(attempt, true); c.api.measuredAudioFailure(attempt, 2); c.api.completeMeasuredPractice(attempt, { correct: 8, total: 12, text_hints_used: true });
+  }
+  assert.deepEqual(c.measured().map(call => call[1]), ['practice_start', 'practice_first_answer', 'practice_audio_error', 'practice_complete']);
+  assert.equal(c.measured().at(-1)[2].text_hints_used, true);
+  assert.equal(c.measured().at(-1)[2].correct, 8);
+  assert.equal(c.measured()[2][2].round, 2);
+});
+
+test('late opt-in does not invent an unobserved start or count its completion', () => {
+  const c = client(); c.api.startMeasuredPractice(attempt, trial); c.api.setAnalyticsChoice('allowed');
+  c.api.measuredFirstAnswer(attempt, false); c.api.completeMeasuredPractice(attempt, { correct: 8, total: 12 });
+  assert.deepEqual(c.measured().map(call => call[1]), ['page_view']);
+});
+
+test('withdrawal stops events, forgets active attempts and only clears GA cookies', () => {
+  const c = client({ choice: 'allowed' }); c.api.initializeMeasurement(); c.api.startMeasuredPractice(attempt, trial);
+  const count = c.measured().length;
+  c.api.setAnalyticsChoice('declined'); c.api.measuredFirstAnswer(attempt, false); c.api.completeMeasuredPractice(attempt, { correct: 8, total: 12 });
+  assert.equal(c.measured().length, count); assert.equal(c.window['ga-disable-G-TEST123'], true);
+  assert.ok(c.cookies.length > 0); assert.ok(c.cookies.every(cookie => /^_ga(?:_|=)/.test(cookie)));
+  c.api.setAnalyticsChoice('allowed'); c.api.completeMeasuredPractice(attempt, { correct: 8, total: 12 });
+  assert.equal(c.measured().length, count);
+});
+
+test('another tab declining or clearing storage disables ongoing measurement', () => {
+  for (const key of [CHOICE, null]) {
+    const c = client({ choice: 'allowed' }); c.api.initializeMeasurement(); c.api.startMeasuredPractice(attempt, trial);
+    c.storage.clear(); c.storageEvent(key); const count = c.measured().length;
+    c.api.completeMeasuredPractice(attempt, { correct: 8, total: 12 });
+    assert.equal(c.window['ga-disable-G-TEST123'], true); assert.equal(c.measured().length, count);
+    assert.equal(c.calls().at(-1)[2].analytics_storage, 'denied');
+  }
+});
+
+test('tag failures cannot interrupt the practice caller', () => {
+  const c = client({ choice: 'allowed', blockScript: true });
+  assert.doesNotThrow(() => c.api.startMeasuredPractice(attempt, trial));
+  assert.equal(c.api.trackMeasurement('page_view'), false);
+  assert.deepEqual(c.measured(), []);
+  c.window.gtag = () => { throw Error('extension'); };
+  assert.equal(c.api.trackMeasurement('page_view'), false);
+  assert.doesNotThrow(() => c.api.completeMeasuredPractice(attempt, { total: 12, correct: 12 }));
+});
+
+test('data allowlist discards personal fields, unknown events and malformed attempts', () => {
+  const clean = data.measurementData('practice_start', { ...trial, attempt_id: attempt, email: 'private@example.invalid', answer: 'tout', error: 'private URL', url: 'https://private.invalid' });
+  assert.doesNotMatch(JSON.stringify(clean), /private|tout/);
+  assert.equal(data.measurementData('purchase', { email: 'private@example.invalid' }), null);
+  assert.equal(data.measurementData('practice_start', { ...trial, attempt_id: '-'.repeat(36) }), null);
+  assert.equal(data.measurementData('practice_start', { ...trial, language_id: 'unknown', attempt_id: attempt }), null);
+  assert.equal(data.measurementPath('/auth/action?oobCode=secret'), '/other');
+  assert.equal(data.measurementPath('/practice?email=private#secret'), '/practice');
+  assert.equal(data.measurementPath('/learn/fr-u-y?secret=1'), '/learn/fr-u-y');
+  assert.equal(data.measurementPath('/accounts/private@example.invalid'), '/other');
+  assert.equal(data.acquisitionChannel('https://www.google.com/search?q=private', 'https://minimalpairs.web.app'), 'organic_search');
+});
+
+test('a followed suggestion attributes exactly one matching attempt across page navigation', () => {
+  const c = client({ choice: 'allowed' });
+  assert.equal(c.api.openMeasuredRecommendation({ ...suggestion, email: 'private@example.invalid', url: '/private' }, true), true);
+  assert.equal(c.api.openMeasuredRecommendation(suggestion, true), false);
+  assert.deepEqual(c.measured(), []);
+  assert.doesNotMatch(c.session.get(PENDING), /private|email|url/);
+  const nextPage = client({ storage: c.storage, session: c.session });
+  nextPage.window.location.search = '?language=fr&contrast=fr-u-y&private_probe=never-send';
+  nextPage.api.initializeMeasurement();
+  nextPage.api.startMeasuredPractice(attempt, trial);
+  nextPage.api.startMeasuredPractice(attempt, trial);
+  nextPage.api.measuredFirstAnswer(attempt, false);
+  nextPage.api.completeMeasuredPractice(attempt, { total: 12, correct: 7 });
+  nextPage.api.completeMeasuredPractice(attempt, { total: 12, correct: 7 });
+  assert.deepEqual(nextPage.measured().map(call => call[1]), ['page_view', 'review_open', 'practice_start', 'review_practice_start', 'practice_first_answer', 'practice_complete', 'review_practice_complete']);
+  assert.ok(nextPage.measured().filter(call => call[1] !== 'page_view').every(call => call[2].recommendation_id === recommendationId));
+  assert.equal(nextPage.session.has(PENDING), false);
+  nextPage.api.startMeasuredPractice('00000000-0000-4000-8000-000000000003', trial);
+  assert.equal(nextPage.measured().at(-1)[1], 'practice_start');
+  assert.equal(nextPage.measured().at(-1)[2].recommendation_id, undefined);
+});
+
+test('starting another language, contrast, collection or surface consumes without attribution', () => {
+  for (const changed of [{ language_id: 'en', contrast_id: 'en-i-ih' }, { contrast_id: 'fr-an-on' }, { audio_collection: 'comparison-human-v1' }, { path: '/audio-comparison' }]) {
+    const c = client({ choice: 'allowed' }); c.api.openMeasuredRecommendation(suggestion, true);
+    if (changed.path) c.window.location.pathname = changed.path;
+    c.api.startMeasuredPractice(attempt, { ...trial, ...changed });
+    assert.equal(c.measured().filter(call => call[1] === 'review_practice_start').length, 0);
+    assert.equal(c.measured().at(-1)[2].recommendation_id, undefined);
+    assert.equal(c.session.has(PENDING), false);
+  }
+});
+
+test('expired, future, malformed and mismatched recommendation records cannot attribute a session', () => {
+  const now = Date.now();
+  for (const saved of [null, 'bad', { ...suggestion, version: 2, openedAt: now }, { ...suggestion, version: 1, openedAt: now + 1 }, { ...suggestion, version: 1, openedAt: now - data.RECOMMENDATION_WINDOW_MS - 1 }, { ...suggestion, version: 1, openedAt: now, language_id: 'en' }, { ...suggestion, version: 1, openedAt: now, recommendation_id: 'not-an-id' }]) {
+    assert.equal(data.recommendationAttribution(saved, trial, now), null);
+  }
+  assert.equal(data.recommendationAttribution({ ...suggestion, version: 1, openedAt: now - data.RECOMMENDATION_WINDOW_MS }, trial, now).recommendation_id, recommendationId);
+  const c = client({ choice: 'allowed', session: new Map([[PENDING, '{invalid']]) });
+  assert.doesNotThrow(() => c.api.startMeasuredPractice(attempt, trial));
+  assert.equal(c.measured().at(-1)[2].recommendation_id, undefined);
+});
+
+test('new-tab clicks and unavailable storage cannot fabricate arrival or attribution', () => {
+  for (const options of [{ sameTab: false }, { blockSessionStorage: true }, { blockSessionRemove: true }]) {
+    const c = client({ choice: 'allowed', ...options });
+    assert.doesNotThrow(() => c.api.openMeasuredRecommendation(suggestion, options.sameTab !== false));
+    c.api.startMeasuredPractice(attempt, trial);
+    assert.deepEqual(c.measured().map(call => call[1]), ['practice_start']);
+    assert.equal(c.measured().at(-1)[2].recommendation_id, undefined);
+  }
+});
+
+test('modified clicks do not arm attribution and a later ordinary click can arm it once', () => {
+  const c = client({ choice: 'allowed' });
+  assert.equal(c.api.openMeasuredRecommendation(suggestion, false), false);
+  assert.equal(c.session.size, 0);
+  assert.equal(c.api.openMeasuredRecommendation(suggestion, true), true);
+  assert.deepEqual(c.measured(), []);
+  c.window.location.search = '?language=fr&contrast=fr-u-y';
+  c.api.initializeMeasurement();
+  c.api.startMeasuredPractice(attempt, trial);
+  assert.equal(c.measured().at(-1)[1], 'review_practice_start');
+  assert.equal(c.api.openMeasuredRecommendation(suggestion, true), false);
+  assert.equal(c.session.size, 0);
+});
+
+test('arrival is counted on the matching destination once across reloads, without navigation delays', () => {
+  const c = client({ choice: 'allowed' });
+  c.api.openMeasuredRecommendation(suggestion, true);
+  const wrongPage = client({ storage: c.storage, session: c.session });
+  wrongPage.window.location.search = '?language=de&contrast=de-u-ue'; wrongPage.api.initializeMeasurement();
+  assert.equal(wrongPage.measured().filter(call => call[1] === 'review_open').length, 0);
+  const arrived = client({ storage: c.storage, session: c.session });
+  arrived.window.location.search = '?language=fr&contrast=fr-u-y&email=never-send'; arrived.api.initializeMeasurement();
+  assert.equal(arrived.measured().filter(call => call[1] === 'review_open').length, 1);
+  assert.doesNotMatch(JSON.stringify(arrived.measured()), /never-send|event_callback|event_timeout/);
+  const reloaded = client({ storage: c.storage, session: c.session });
+  reloaded.window.location.search = arrived.window.location.search; reloaded.api.initializeMeasurement();
+  assert.equal(reloaded.measured().filter(call => call[1] === 'review_open').length, 0);
+  reloaded.api.startMeasuredPractice(attempt, trial);
+  assert.equal(reloaded.measured().at(-1)[1], 'review_practice_start');
+});
+
+test('consent withdrawal and browser privacy preferences clear suggestion attribution', () => {
+  const c = client({ choice: 'allowed' }); c.api.initializeMeasurement(); c.api.openMeasuredRecommendation(suggestion, true);
+  c.api.setAnalyticsChoice('declined'); assert.equal(c.session.has(PENDING), false);
+  c.api.setAnalyticsChoice('allowed'); c.api.startMeasuredPractice(attempt, trial);
+  assert.equal(c.measured().at(-1)[2].recommendation_id, undefined);
+  const d = client({ choice: 'allowed' }); d.api.initializeMeasurement(); d.api.openMeasuredRecommendation(suggestion, true);
+  d.storage.clear(); d.storageEvent(CHOICE); assert.equal(d.session.has(PENDING), false);
+  for (const options of [{}, { choice: 'declined' }, { choice: 'allowed', dnt: '1' }, { choice: 'allowed', gpc: true }]) {
+    const privateClient = client(options);
+    assert.equal(privateClient.api.openMeasuredRecommendation(suggestion, true), false);
+    assert.deepEqual(privateClient.measured(), []); assert.equal(privateClient.session.size, 0);
+  }
+});
+
+test('invalid data cannot arm attribution and a blocked tag does not block navigation intent', () => {
+  const c = client({ choice: 'allowed' });
+  for (const malformed of [{ ...suggestion, recommendation_id: undefined }, { ...suggestion, recommendation_kind: 'anything' }, { ...suggestion, language_id: 'en' }]) assert.equal(c.api.openMeasuredRecommendation(malformed, true), false);
+  assert.equal(c.session.size, 0);
+  const failed = client({ choice: 'allowed', blockScript: true });
+  assert.equal(failed.api.openMeasuredRecommendation(suggestion, true), true);
+  failed.window.location.search = '?language=fr&contrast=fr-u-y'; failed.api.initializeMeasurement();
+  assert.deepEqual(failed.measured(), []);
+  assert.equal(data.measurementData('review_practice_complete', suggestion), null);
+});
+
+
+test('a diverted or generic visit cannot attribute an unconfirmed destination arrival', () => {
+  const c = client({ choice: 'allowed' }); c.api.openMeasuredRecommendation(suggestion, true);
+  const generic = client({ storage: c.storage, session: c.session });
+  generic.window.location.search = '?language=fr'; generic.api.initializeMeasurement();
+  generic.api.startMeasuredPractice(attempt, trial);
+  assert.equal(generic.measured().filter(call => call[1].startsWith('review_')).length, 0);
+  assert.equal(generic.measured().at(-1)[2].recommendation_id, undefined);
+  assert.equal(generic.session.has(PENDING), false);
+});
+
+const feedback = { ...trial, attempt_id: attempt, feedback_category: 'audio_unclear' };
+test('session feedback is absent without consent, with unavailable configuration and under browser privacy preferences', () => {
+  for (const options of [{}, { choice: 'declined' }, { choice: 'allowed', configured: false }, { choice: 'allowed', dnt: '1' }, { choice: 'allowed', gpc: true }, { choice: 'allowed', blockStorageRead: true }]) {
+    const c = client(options);
+    assert.notEqual(c.api.sessionFeedbackPermission(), 'allowed');
+    assert.equal(c.api.shareSessionFeedback(feedback), 'off');
+    assert.deepEqual(c.calls(), []); assert.deepEqual(c.scripts, []); assert.equal(c.session.size, 0);
+  }
+});
+test('feedback accepts only one fixed category and the exact privacy-safe session fields', () => {
+  const raw = { ...feedback, email: 'private@example.invalid', uid: 'private-user', comment: 'private message', word: 'tout', correct: 8, text_hints_used: false, recommendation_id: recommendationId, recommendation_kind: 'revisit' };
+  const clean = data.measurementData('practice_feedback', raw);
+  assert.deepEqual(clean, { measurement_version: data.MEASUREMENT_VERSION, attempt_id: attempt, language_id: 'fr', contrast_id: 'fr-u-y', audio_collection: 'qwen-starter-v1', feedback_category: 'audio_unclear' });
+  for (const change of [{ feedback_category: 'private@example.invalid' }, { feedback_category: ['too_easy', 'too_difficult'] }, { attempt_id: undefined }, { audio_collection: undefined }, { language_id: 'en' }]) assert.equal(data.measurementData('practice_feedback', { ...feedback, ...change }), null);
+  for (const category of data.SESSION_FEEDBACK_CATEGORIES) assert.equal(data.measurementData('practice_feedback', { ...feedback, feedback_category: category }).feedback_category, category);
+});
+test('feedback queues once per completion even after repeated clicks, new category or consent toggle', () => {
+  const c = client({ choice: 'allowed' });
+  assert.equal(c.api.shareSessionFeedback(feedback), 'queued');
+  assert.equal(c.api.shareSessionFeedback(feedback), 'duplicate');
+  assert.equal(c.api.shareSessionFeedback({ ...feedback, feedback_category: 'too_easy' }), 'duplicate');
+  c.api.setAnalyticsChoice('declined'); assert.equal(c.api.shareSessionFeedback(feedback), 'off');
+  c.api.setAnalyticsChoice('allowed'); assert.equal(c.api.shareSessionFeedback(feedback), 'duplicate');
+  const rows = c.measured().filter(row => row[1] === 'practice_feedback'); assert.equal(rows.length, 1);
+  assert.equal(rows[0][2].feedback_category, 'audio_unclear'); assert.equal(rows[0][2].attempt_id, attempt);
+  assert.equal(c.session.size, 0); assert.deepEqual([...c.storage.keys()], [CHOICE]);
+});
+test('late consent never sends an earlier feedback choice or invents practice funnel events', () => {
+  const c = client();
+  assert.equal(c.api.shareSessionFeedback(feedback), 'off');
+  c.api.setAnalyticsChoice('allowed'); assert.deepEqual(c.measured().map(row => row[1]), ['page_view']);
+  assert.equal(c.api.shareSessionFeedback(feedback), 'queued');
+  assert.deepEqual(c.measured().map(row => row[1]), ['page_view', 'practice_feedback']);
+  assert.equal(c.api.shareSessionFeedback({ ...feedback, attempt_id: recommendationId, feedback_category: 'about_right' }), 'queued');
+});
+test('unqueueable feedback reports failure and withdrawal in another tab blocks submission', () => {
+  const failed = client({ choice: 'allowed', blockScript: true });
+  assert.equal(failed.api.shareSessionFeedback(feedback), 'unavailable'); assert.deepEqual(failed.measured(), []);
+  const noTag = client({ choice: 'allowed' }); noTag.api.initializeMeasurement(); delete noTag.window.gtag;
+  assert.equal(noTag.api.shareSessionFeedback(feedback), 'unavailable');
+  assert.equal(noTag.measured().filter(row => row[1] === 'practice_feedback').length, 0);
+  const c = client({ choice: 'allowed' }); c.api.initializeMeasurement(); c.storage.set(CHOICE, 'declined'); c.storageEvent(CHOICE);
+  assert.equal(c.api.shareSessionFeedback(feedback), 'off'); assert.equal(c.measured().filter(row => row[1] === 'practice_feedback').length, 0);
+});

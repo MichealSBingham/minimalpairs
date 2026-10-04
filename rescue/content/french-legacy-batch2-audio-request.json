@@ -1,0 +1,829 @@
+{
+  "date": "2026-09-28",
+  "languageId": "fr",
+  "locale": "fr-FR",
+  "contrastIds": [
+    "fr-y-i",
+    "fr-y-oe",
+    "fr-u-oe",
+    "fr-e-oe",
+    "fr-eh-eu-open",
+    "fr-d-t",
+    "fr-g-k",
+    "fr-v-f",
+    "fr-b-v",
+    "fr-sh-s",
+    "fr-l-r",
+    "fr-n-gn"
+  ],
+  "newWords": [
+    {
+      "text": "riz",
+      "ipa": "/ʁi/",
+      "meaning": "rice",
+      "phonemes": [
+        "ʁ",
+        "i"
+      ]
+    },
+    {
+      "text": "bulle",
+      "ipa": "/byl/",
+      "meaning": "bubble",
+      "phonemes": [
+        "b",
+        "y",
+        "l"
+      ]
+    },
+    {
+      "text": "bile",
+      "ipa": "/bil/",
+      "meaning": "bile",
+      "phonemes": [
+        "b",
+        "i",
+        "l"
+      ]
+    },
+    {
+      "text": "pur",
+      "ipa": "/pyʁ/",
+      "meaning": "pure",
+      "phonemes": [
+        "p",
+        "y",
+        "ʁ"
+      ]
+    },
+    {
+      "text": "pire",
+      "ipa": "/piʁ/",
+      "meaning": "worse",
+      "phonemes": [
+        "p",
+        "i",
+        "ʁ"
+      ]
+    },
+    {
+      "text": "jus",
+      "ipa": "/ʒy/",
+      "meaning": "juice",
+      "phonemes": [
+        "ʒ",
+        "y"
+      ]
+    },
+    {
+      "text": "jeu",
+      "ipa": "/ʒø/",
+      "meaning": "game",
+      "phonemes": [
+        "ʒ",
+        "ø"
+      ]
+    },
+    {
+      "text": "du",
+      "ipa": "/dy/",
+      "meaning": "some, masculine partitive article",
+      "phonemes": [
+        "d",
+        "y"
+      ]
+    },
+    {
+      "text": "deux",
+      "ipa": "/dø/",
+      "meaning": "two",
+      "phonemes": [
+        "d",
+        "ø"
+      ]
+    },
+    {
+      "text": "cru",
+      "ipa": "/kʁy/",
+      "meaning": "raw",
+      "phonemes": [
+        "k",
+        "ʁ",
+        "y"
+      ]
+    },
+    {
+      "text": "creux",
+      "ipa": "/kʁø/",
+      "meaning": "hollow",
+      "phonemes": [
+        "k",
+        "ʁ",
+        "ø"
+      ]
+    },
+    {
+      "text": "cou",
+      "ipa": "/ku/",
+      "meaning": "neck",
+      "phonemes": [
+        "k",
+        "u"
+      ]
+    },
+    {
+      "text": "queue",
+      "ipa": "/kø/",
+      "meaning": "tail; queue",
+      "phonemes": [
+        "k",
+        "ø"
+      ]
+    },
+    {
+      "text": "doux",
+      "ipa": "/du/",
+      "meaning": "soft; gentle",
+      "phonemes": [
+        "d",
+        "u"
+      ]
+    },
+    {
+      "text": "nous",
+      "ipa": "/nu/",
+      "meaning": "we; us",
+      "phonemes": [
+        "n",
+        "u"
+      ]
+    },
+    {
+      "text": "nœud",
+      "ipa": "/nø/",
+      "meaning": "knot",
+      "phonemes": [
+        "n",
+        "ø"
+      ]
+    },
+    {
+      "text": "fée",
+      "ipa": "/fe/",
+      "meaning": "fairy",
+      "phonemes": [
+        "f",
+        "e"
+      ]
+    },
+    {
+      "text": "feu",
+      "ipa": "/fø/",
+      "meaning": "fire",
+      "phonemes": [
+        "f",
+        "ø"
+      ]
+    },
+    {
+      "text": "preux",
+      "ipa": "/pʁø/",
+      "meaning": "valiant; a valiant knight",
+      "phonemes": [
+        "p",
+        "ʁ",
+        "ø"
+      ]
+    },
+    {
+      "text": "père",
+      "ipa": "/pɛʁ/",
+      "meaning": "father",
+      "phonemes": [
+        "p",
+        "ɛ",
+        "ʁ"
+      ]
+    },
+    {
+      "text": "peur",
+      "ipa": "/pœʁ/",
+      "meaning": "fear",
+      "phonemes": [
+        "p",
+        "œ",
+        "ʁ"
+      ]
+    },
+    {
+      "text": "serre",
+      "ipa": "/sɛʁ/",
+      "meaning": "greenhouse",
+      "phonemes": [
+        "s",
+        "ɛ",
+        "ʁ"
+      ]
+    },
+    {
+      "text": "sœur",
+      "ipa": "/sœʁ/",
+      "meaning": "sister",
+      "phonemes": [
+        "s",
+        "œ",
+        "ʁ"
+      ]
+    },
+    {
+      "text": "air",
+      "ipa": "/ɛʁ/",
+      "meaning": "air",
+      "phonemes": [
+        "ɛ",
+        "ʁ"
+      ]
+    },
+    {
+      "text": "heure",
+      "ipa": "/œʁ/",
+      "meaning": "hour; time",
+      "phonemes": [
+        "œ",
+        "ʁ"
+      ]
+    },
+    {
+      "text": "dos",
+      "ipa": "/do/",
+      "meaning": "back of the body",
+      "phonemes": [
+        "d",
+        "o"
+      ]
+    },
+    {
+      "text": "taux",
+      "ipa": "/to/",
+      "meaning": "rate",
+      "phonemes": [
+        "t",
+        "o"
+      ]
+    },
+    {
+      "text": "dent",
+      "ipa": "/dɑ̃/",
+      "meaning": "tooth",
+      "phonemes": [
+        "d",
+        "ɑ̃"
+      ]
+    },
+    {
+      "text": "goût",
+      "ipa": "/ɡu/",
+      "meaning": "taste",
+      "phonemes": [
+        "ɡ",
+        "u"
+      ]
+    },
+    {
+      "text": "gant",
+      "ipa": "/ɡɑ̃/",
+      "meaning": "glove",
+      "phonemes": [
+        "ɡ",
+        "ɑ̃"
+      ]
+    },
+    {
+      "text": "camp",
+      "ipa": "/kɑ̃/",
+      "meaning": "camp",
+      "phonemes": [
+        "k",
+        "ɑ̃"
+      ]
+    },
+    {
+      "text": "gomme",
+      "ipa": "/ɡɔm/",
+      "meaning": "eraser; gum",
+      "phonemes": [
+        "ɡ",
+        "ɔ",
+        "m"
+      ]
+    },
+    {
+      "text": "comme",
+      "ipa": "/kɔm/",
+      "meaning": "like; as",
+      "phonemes": [
+        "k",
+        "ɔ",
+        "m"
+      ]
+    },
+    {
+      "text": "vin",
+      "ipa": "/vɛ̃/",
+      "meaning": "wine",
+      "phonemes": [
+        "v",
+        "ɛ̃"
+      ]
+    },
+    {
+      "text": "fin",
+      "ipa": "/fɛ̃/",
+      "meaning": "end",
+      "phonemes": [
+        "f",
+        "ɛ̃"
+      ]
+    },
+    {
+      "text": "veau",
+      "ipa": "/vo/",
+      "meaning": "calf; veal",
+      "phonemes": [
+        "v",
+        "o"
+      ]
+    },
+    {
+      "text": "faux",
+      "ipa": "/fo/",
+      "meaning": "false",
+      "phonemes": [
+        "f",
+        "o"
+      ]
+    },
+    {
+      "text": "fou",
+      "ipa": "/fu/",
+      "meaning": "mad; crazy",
+      "phonemes": [
+        "f",
+        "u"
+      ]
+    },
+    {
+      "text": "vain",
+      "ipa": "/vɛ̃/",
+      "meaning": "vain; futile",
+      "phonemes": [
+        "v",
+        "ɛ̃"
+      ]
+    },
+    {
+      "text": "ville",
+      "ipa": "/vil/",
+      "meaning": "town; city",
+      "phonemes": [
+        "v",
+        "i",
+        "l"
+      ]
+    },
+    {
+      "text": "sou",
+      "ipa": "/su/",
+      "meaning": "an old coin; a small amount of money",
+      "phonemes": [
+        "s",
+        "u"
+      ]
+    },
+    {
+      "text": "chaud",
+      "ipa": "/ʃo/",
+      "meaning": "hot",
+      "phonemes": [
+        "ʃ",
+        "o"
+      ]
+    },
+    {
+      "text": "saut",
+      "ipa": "/so/",
+      "meaning": "jump; leap",
+      "phonemes": [
+        "s",
+        "o"
+      ]
+    },
+    {
+      "text": "choix",
+      "ipa": "/ʃwa/",
+      "meaning": "choice",
+      "phonemes": [
+        "ʃ",
+        "w",
+        "a"
+      ]
+    },
+    {
+      "text": "soie",
+      "ipa": "/swa/",
+      "meaning": "silk",
+      "phonemes": [
+        "s",
+        "w",
+        "a"
+      ]
+    },
+    {
+      "text": "lit",
+      "ipa": "/li/",
+      "meaning": "bed",
+      "phonemes": [
+        "l",
+        "i"
+      ]
+    },
+    {
+      "text": "lait",
+      "ipa": "/lɛ/",
+      "meaning": "milk",
+      "phonemes": [
+        "l",
+        "ɛ"
+      ]
+    },
+    {
+      "text": "raie",
+      "ipa": "/ʁɛ/",
+      "meaning": "stripe; ray fish",
+      "phonemes": [
+        "ʁ",
+        "ɛ"
+      ]
+    },
+    {
+      "text": "lame",
+      "ipa": "/lam/",
+      "meaning": "blade",
+      "phonemes": [
+        "l",
+        "a",
+        "m"
+      ]
+    },
+    {
+      "text": "rame",
+      "ipa": "/ʁam/",
+      "meaning": "oar",
+      "phonemes": [
+        "ʁ",
+        "a",
+        "m"
+      ]
+    },
+    {
+      "text": "peine",
+      "ipa": "/pɛn/",
+      "meaning": "sorrow; penalty",
+      "phonemes": [
+        "p",
+        "ɛ",
+        "n"
+      ]
+    },
+    {
+      "text": "peigne",
+      "ipa": "/pɛɲ/",
+      "meaning": "comb",
+      "phonemes": [
+        "p",
+        "ɛ",
+        "ɲ"
+      ]
+    },
+    {
+      "text": "panne",
+      "ipa": "/pan/",
+      "meaning": "breakdown; failure",
+      "phonemes": [
+        "p",
+        "a",
+        "n"
+      ]
+    },
+    {
+      "text": "pagne",
+      "ipa": "/paɲ/",
+      "meaning": "wraparound cloth garment",
+      "phonemes": [
+        "p",
+        "a",
+        "ɲ"
+      ]
+    },
+    {
+      "text": "reine",
+      "ipa": "/ʁɛn/",
+      "meaning": "queen",
+      "phonemes": [
+        "ʁ",
+        "ɛ",
+        "n"
+      ]
+    },
+    {
+      "text": "règne",
+      "ipa": "/ʁɛɲ/",
+      "meaning": "reign",
+      "phonemes": [
+        "ʁ",
+        "ɛ",
+        "ɲ"
+      ]
+    }
+  ],
+  "reusedWordTexts": [
+    "rue",
+    "dé",
+    "pré",
+    "tout",
+    "temps",
+    "vous",
+    "beau",
+    "bain",
+    "chou"
+  ],
+  "allNewContrastPairs": [
+    {
+      "id": "fr-y-i",
+      "phonemes": [
+        "y",
+        "i"
+      ],
+      "targetSoundFocus": "Listen to the vowel in each word.",
+      "pairs": [
+        [
+          "rue",
+          "riz"
+        ],
+        [
+          "bulle",
+          "bile"
+        ],
+        [
+          "pur",
+          "pire"
+        ]
+      ]
+    },
+    {
+      "id": "fr-y-oe",
+      "phonemes": [
+        "y",
+        "ø"
+      ],
+      "targetSoundFocus": "Listen to the rounded vowel at the end of each word.",
+      "pairs": [
+        [
+          "jus",
+          "jeu"
+        ],
+        [
+          "du",
+          "deux"
+        ],
+        [
+          "cru",
+          "creux"
+        ]
+      ]
+    },
+    {
+      "id": "fr-u-oe",
+      "phonemes": [
+        "u",
+        "ø"
+      ],
+      "targetSoundFocus": "Listen to the rounded vowel at the end of each word.",
+      "pairs": [
+        [
+          "cou",
+          "queue"
+        ],
+        [
+          "doux",
+          "deux"
+        ],
+        [
+          "nous",
+          "nœud"
+        ]
+      ]
+    },
+    {
+      "id": "fr-e-oe",
+      "phonemes": [
+        "e",
+        "ø"
+      ],
+      "targetSoundFocus": "Listen to the final vowel in each word.",
+      "pairs": [
+        [
+          "fée",
+          "feu"
+        ],
+        [
+          "dé",
+          "deux"
+        ],
+        [
+          "pré",
+          "preux"
+        ]
+      ]
+    },
+    {
+      "id": "fr-eh-eu-open",
+      "phonemes": [
+        "ɛ",
+        "œ"
+      ],
+      "targetSoundFocus": "Listen to the vowel immediately before the final French r.",
+      "pairs": [
+        [
+          "père",
+          "peur"
+        ],
+        [
+          "serre",
+          "sœur"
+        ],
+        [
+          "air",
+          "heure"
+        ]
+      ]
+    },
+    {
+      "id": "fr-d-t",
+      "phonemes": [
+        "d",
+        "t"
+      ],
+      "targetSoundFocus": "Listen to the first consonant in each word.",
+      "pairs": [
+        [
+          "doux",
+          "tout"
+        ],
+        [
+          "dos",
+          "taux"
+        ],
+        [
+          "dent",
+          "temps"
+        ]
+      ]
+    },
+    {
+      "id": "fr-g-k",
+      "phonemes": [
+        "ɡ",
+        "k"
+      ],
+      "targetSoundFocus": "Listen to the first consonant in each word.",
+      "pairs": [
+        [
+          "goût",
+          "cou"
+        ],
+        [
+          "gant",
+          "camp"
+        ],
+        [
+          "gomme",
+          "comme"
+        ]
+      ]
+    },
+    {
+      "id": "fr-v-f",
+      "phonemes": [
+        "v",
+        "f"
+      ],
+      "targetSoundFocus": "Listen to the first consonant in each word.",
+      "pairs": [
+        [
+          "vin",
+          "fin"
+        ],
+        [
+          "veau",
+          "faux"
+        ],
+        [
+          "vous",
+          "fou"
+        ]
+      ]
+    },
+    {
+      "id": "fr-b-v",
+      "phonemes": [
+        "b",
+        "v"
+      ],
+      "targetSoundFocus": "Listen to the first consonant in each word.",
+      "pairs": [
+        [
+          "beau",
+          "veau"
+        ],
+        [
+          "bain",
+          "vain"
+        ],
+        [
+          "bile",
+          "ville"
+        ]
+      ]
+    },
+    {
+      "id": "fr-sh-s",
+      "phonemes": [
+        "ʃ",
+        "s"
+      ],
+      "targetSoundFocus": "Listen to the first consonant in each word.",
+      "pairs": [
+        [
+          "chou",
+          "sou"
+        ],
+        [
+          "chaud",
+          "saut"
+        ],
+        [
+          "choix",
+          "soie"
+        ]
+      ]
+    },
+    {
+      "id": "fr-l-r",
+      "phonemes": [
+        "l",
+        "ʁ"
+      ],
+      "targetSoundFocus": "Listen to the first consonant in each word.",
+      "pairs": [
+        [
+          "lit",
+          "riz"
+        ],
+        [
+          "lait",
+          "raie"
+        ],
+        [
+          "lame",
+          "rame"
+        ]
+      ]
+    },
+    {
+      "id": "fr-n-gn",
+      "phonemes": [
+        "n",
+        "ɲ"
+      ],
+      "targetSoundFocus": "Listen to the nasal consonant at the end of each word.",
+      "pairs": [
+        [
+          "peine",
+          "peigne"
+        ],
+        [
+          "panne",
+          "pagne"
+        ],
+        [
+          "reine",
+          "règne"
+        ]
+      ]
+    }
+  ],
+  "audioStatus": "needs-generation-and-listening-review",
+  "dialectWarning": "Metropolitan citation forms without final schwa. Preserve the /y ø u e ɛ œ/ categories. For n/gn, use final targets and review the actual distinction: /ɲ/ is broad conventional notation with speaker variation. Do not pronounce silent final letters; du is /dy/, nous is isolated /nu/, vous is isolated /vu/, nœud is /nø/. No audio was generated by the curriculum task.",
+  "verification": "65 distinct forms checked in TLFi, with authored broad IPA matching retrieved pronunciation after explicitly documented historical-symbol/length normalization."
+}

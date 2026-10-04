@@ -1,0 +1,546 @@
+{
+  "date": "2026-09-28",
+  "status": "request-only-no-generation-authorized-by-this-artifact",
+  "languageId": "en",
+  "locale": "en-US",
+  "contrastIds": [
+    "en-foot-goose",
+    "en-trap-dress",
+    "en-v-w",
+    "en-th-f"
+  ],
+  "pairIds": [
+    "en-cook-kook",
+    "en-full-fool",
+    "en-pull-pool",
+    "en-bat-bet",
+    "en-mat-met",
+    "en-bad-bed",
+    "en-vine-wine",
+    "en-vest-west",
+    "en-vet-wet",
+    "en-thin-fin",
+    "en-three-free",
+    "en-thirst-first"
+  ],
+  "requiredWords": [
+    {
+      "text": "cook",
+      "ipa": "/kʊk/",
+      "meaning": "prepare food using heat",
+      "phonemes": [
+        "k",
+        "ʊ",
+        "k"
+      ]
+    },
+    {
+      "text": "kook",
+      "ipa": "/kuk/",
+      "meaning": "an eccentric person (informal)",
+      "phonemes": [
+        "k",
+        "u",
+        "k"
+      ]
+    },
+    {
+      "text": "full",
+      "ipa": "/fʊl/",
+      "meaning": "filled to capacity",
+      "phonemes": [
+        "f",
+        "ʊ",
+        "l"
+      ]
+    },
+    {
+      "text": "fool",
+      "ipa": "/ful/",
+      "meaning": "trick someone",
+      "phonemes": [
+        "f",
+        "u",
+        "l"
+      ]
+    },
+    {
+      "text": "pull",
+      "ipa": "/pʊl/",
+      "meaning": "draw something toward you",
+      "phonemes": [
+        "p",
+        "ʊ",
+        "l"
+      ]
+    },
+    {
+      "text": "pool",
+      "ipa": "/pul/",
+      "meaning": "a place for swimming",
+      "phonemes": [
+        "p",
+        "u",
+        "l"
+      ]
+    },
+    {
+      "text": "bat",
+      "ipa": "/bæt/",
+      "meaning": "a flying mammal",
+      "phonemes": [
+        "b",
+        "æ",
+        "t"
+      ]
+    },
+    {
+      "text": "bet",
+      "ipa": "/bɛt/",
+      "meaning": "a wager",
+      "phonemes": [
+        "b",
+        "ɛ",
+        "t"
+      ]
+    },
+    {
+      "text": "mat",
+      "ipa": "/mæt/",
+      "meaning": "a small floor covering",
+      "phonemes": [
+        "m",
+        "æ",
+        "t"
+      ]
+    },
+    {
+      "text": "met",
+      "ipa": "/mɛt/",
+      "meaning": "past tense of meet",
+      "phonemes": [
+        "m",
+        "ɛ",
+        "t"
+      ]
+    },
+    {
+      "text": "bad",
+      "ipa": "/bæd/",
+      "meaning": "poor in quality",
+      "phonemes": [
+        "b",
+        "æ",
+        "d"
+      ]
+    },
+    {
+      "text": "bed",
+      "ipa": "/bɛd/",
+      "meaning": "furniture used for sleeping",
+      "phonemes": [
+        "b",
+        "ɛ",
+        "d"
+      ]
+    },
+    {
+      "text": "vine",
+      "ipa": "/vaɪn/",
+      "meaning": "a plant with a climbing stem",
+      "phonemes": [
+        "v",
+        "aɪ",
+        "n"
+      ]
+    },
+    {
+      "text": "wine",
+      "ipa": "/waɪn/",
+      "meaning": "an alcoholic drink made from grapes",
+      "phonemes": [
+        "w",
+        "aɪ",
+        "n"
+      ]
+    },
+    {
+      "text": "vest",
+      "ipa": "/vɛst/",
+      "meaning": "a sleeveless upper-body garment",
+      "phonemes": [
+        "v",
+        "ɛ",
+        "s",
+        "t"
+      ]
+    },
+    {
+      "text": "west",
+      "ipa": "/wɛst/",
+      "meaning": "the direction opposite east",
+      "phonemes": [
+        "w",
+        "ɛ",
+        "s",
+        "t"
+      ]
+    },
+    {
+      "text": "vet",
+      "ipa": "/vɛt/",
+      "meaning": "a veterinarian (informal)",
+      "phonemes": [
+        "v",
+        "ɛ",
+        "t"
+      ]
+    },
+    {
+      "text": "wet",
+      "ipa": "/wɛt/",
+      "meaning": "covered with water",
+      "phonemes": [
+        "w",
+        "ɛ",
+        "t"
+      ]
+    },
+    {
+      "text": "thin",
+      "ipa": "/θɪn/",
+      "meaning": "having little thickness",
+      "phonemes": [
+        "θ",
+        "ɪ",
+        "n"
+      ]
+    },
+    {
+      "text": "fin",
+      "ipa": "/fɪn/",
+      "meaning": "a fish’s swimming appendage",
+      "phonemes": [
+        "f",
+        "ɪ",
+        "n"
+      ]
+    },
+    {
+      "text": "three",
+      "ipa": "/θɹi/",
+      "meaning": "the number 3",
+      "phonemes": [
+        "θ",
+        "ɹ",
+        "i"
+      ]
+    },
+    {
+      "text": "free",
+      "ipa": "/fɹi/",
+      "meaning": "not under another person’s control",
+      "phonemes": [
+        "f",
+        "ɹ",
+        "i"
+      ]
+    },
+    {
+      "text": "thirst",
+      "ipa": "/θɝst/",
+      "meaning": "a need for a drink",
+      "phonemes": [
+        "θ",
+        "ɝ",
+        "s",
+        "t"
+      ]
+    },
+    {
+      "text": "first",
+      "ipa": "/fɝst/",
+      "meaning": "before the others in order",
+      "phonemes": [
+        "f",
+        "ɝ",
+        "s",
+        "t"
+      ]
+    }
+  ],
+  "newWords": [
+    {
+      "text": "cook",
+      "ipa": "/kʊk/",
+      "meaning": "prepare food using heat",
+      "phonemes": [
+        "k",
+        "ʊ",
+        "k"
+      ]
+    },
+    {
+      "text": "kook",
+      "ipa": "/kuk/",
+      "meaning": "an eccentric person (informal)",
+      "phonemes": [
+        "k",
+        "u",
+        "k"
+      ]
+    },
+    {
+      "text": "full",
+      "ipa": "/fʊl/",
+      "meaning": "filled to capacity",
+      "phonemes": [
+        "f",
+        "ʊ",
+        "l"
+      ]
+    },
+    {
+      "text": "fool",
+      "ipa": "/ful/",
+      "meaning": "trick someone",
+      "phonemes": [
+        "f",
+        "u",
+        "l"
+      ]
+    },
+    {
+      "text": "pull",
+      "ipa": "/pʊl/",
+      "meaning": "draw something toward you",
+      "phonemes": [
+        "p",
+        "ʊ",
+        "l"
+      ]
+    },
+    {
+      "text": "pool",
+      "ipa": "/pul/",
+      "meaning": "a place for swimming",
+      "phonemes": [
+        "p",
+        "u",
+        "l"
+      ]
+    },
+    {
+      "text": "bat",
+      "ipa": "/bæt/",
+      "meaning": "a flying mammal",
+      "phonemes": [
+        "b",
+        "æ",
+        "t"
+      ]
+    },
+    {
+      "text": "bet",
+      "ipa": "/bɛt/",
+      "meaning": "a wager",
+      "phonemes": [
+        "b",
+        "ɛ",
+        "t"
+      ]
+    },
+    {
+      "text": "mat",
+      "ipa": "/mæt/",
+      "meaning": "a small floor covering",
+      "phonemes": [
+        "m",
+        "æ",
+        "t"
+      ]
+    },
+    {
+      "text": "met",
+      "ipa": "/mɛt/",
+      "meaning": "past tense of meet",
+      "phonemes": [
+        "m",
+        "ɛ",
+        "t"
+      ]
+    },
+    {
+      "text": "bad",
+      "ipa": "/bæd/",
+      "meaning": "poor in quality",
+      "phonemes": [
+        "b",
+        "æ",
+        "d"
+      ]
+    },
+    {
+      "text": "bed",
+      "ipa": "/bɛd/",
+      "meaning": "furniture used for sleeping",
+      "phonemes": [
+        "b",
+        "ɛ",
+        "d"
+      ]
+    },
+    {
+      "text": "vine",
+      "ipa": "/vaɪn/",
+      "meaning": "a plant with a climbing stem",
+      "phonemes": [
+        "v",
+        "aɪ",
+        "n"
+      ]
+    },
+    {
+      "text": "wine",
+      "ipa": "/waɪn/",
+      "meaning": "an alcoholic drink made from grapes",
+      "phonemes": [
+        "w",
+        "aɪ",
+        "n"
+      ]
+    },
+    {
+      "text": "vest",
+      "ipa": "/vɛst/",
+      "meaning": "a sleeveless upper-body garment",
+      "phonemes": [
+        "v",
+        "ɛ",
+        "s",
+        "t"
+      ]
+    },
+    {
+      "text": "west",
+      "ipa": "/wɛst/",
+      "meaning": "the direction opposite east",
+      "phonemes": [
+        "w",
+        "ɛ",
+        "s",
+        "t"
+      ]
+    },
+    {
+      "text": "vet",
+      "ipa": "/vɛt/",
+      "meaning": "a veterinarian (informal)",
+      "phonemes": [
+        "v",
+        "ɛ",
+        "t"
+      ]
+    },
+    {
+      "text": "wet",
+      "ipa": "/wɛt/",
+      "meaning": "covered with water",
+      "phonemes": [
+        "w",
+        "ɛ",
+        "t"
+      ]
+    },
+    {
+      "text": "fin",
+      "ipa": "/fɪn/",
+      "meaning": "a fish’s swimming appendage",
+      "phonemes": [
+        "f",
+        "ɪ",
+        "n"
+      ]
+    },
+    {
+      "text": "three",
+      "ipa": "/θɹi/",
+      "meaning": "the number 3",
+      "phonemes": [
+        "θ",
+        "ɹ",
+        "i"
+      ]
+    },
+    {
+      "text": "free",
+      "ipa": "/fɹi/",
+      "meaning": "not under another person’s control",
+      "phonemes": [
+        "f",
+        "ɹ",
+        "i"
+      ]
+    },
+    {
+      "text": "thirst",
+      "ipa": "/θɝst/",
+      "meaning": "a need for a drink",
+      "phonemes": [
+        "θ",
+        "ɝ",
+        "s",
+        "t"
+      ]
+    },
+    {
+      "text": "first",
+      "ipa": "/fɝst/",
+      "meaning": "before the others in order",
+      "phonemes": [
+        "f",
+        "ɝ",
+        "s",
+        "t"
+      ]
+    }
+  ],
+  "reusedTextWords": [
+    "thin"
+  ],
+  "requestedProfilesPerWord": 2,
+  "completeCollectionClipCount": 48,
+  "textNewClipCount": 46,
+  "reviewedApprovedClipCount": 0,
+  "rules": [
+    "Acquire or generate two stable identifiable profiles that each cover every word of each chosen contrast; do not substitute arbitrary per-word speakers.",
+    "Existing text or cached thin does not establish approved pronunciation, voice compatibility or reuse rights for a new collection.",
+    "Do not mix distinct source collections or fall back silently for missing words. Audio is not ready merely because every filename exists.",
+    "Keep the original lexical text; if disambiguating input is needed (for example fin), record the changed request and audit the actual response.",
+    "Audit each exact take for word identity, both category realizations, accent, intelligibility, extra speech, clipping and category-correlated recording artifacts.",
+    "This batch is not in the Google audition allowlist. Do not expand that tool, its scope or its budget from this request."
+  ],
+  "pronunciationReviewQuestions": {
+    "en-foot-goose": [
+      "Use the selected American /ʊ–u/ citation forms. The legacy /uː/ label is represented as broad American /u/ here, not a new contrast.",
+      "Two of the three pairs end in /l/. Approve each actual profile only if full/fool and pull/pool remain audibly distinct; the dictionary cannot guarantee a given voice’s realization.",
+      "Kook is an informal, potentially disparaging noun. Teach its meaning neutrally, without describing the learner this way."
+    ],
+    "en-trap-dress": [
+      "Target the selected American TRAP /æ/ and DRESS /ɛ/ citation forms; this is not an assertion that all English accents realize those vowels identically.",
+      "The legacy route says e, but its own phonetic declaration is /ɛ/. Do not relabel this as FACE /eɪ/.",
+      "Bat means the animal, met is the past tense of meet, and bet means a wager. These entries do not require a different spoken form for their selected meanings."
+    ],
+    "en-v-w": [
+      "Use selected American citation forms with distinct initial /v/ and /w/.",
+      "All selected pairs match in the remainder of the word. Legacy very/wary was not reused; no claim is made about its dialect-specific suitability because those dictionary entries were not audited for this batch.",
+      "Vet is the informal word for veterinarian. West is the direction, not a proper name."
+    ],
+    "en-th-f": [
+      "Use the selected rhotic American citation forms. Thirst/first use /ɝ/ here; do not mix rhotic and non-rhotic readings within a profile.",
+      "A recording that realizes target /θ/ as /f/ cannot represent two distinct answer categories for this lesson. This reference choice is not a judgment that another English variety is wrong.",
+      "Fin is the fish-organ word /fɪn/, not the borrowed French word /fɛ̃/. Inspect the actual recording or synthesis response rather than assuming the spelling settles pronunciation.",
+      "Three/free have /ɹ/ after the target. Their target is only the first consonant, with category-matched context within each pair."
+    ]
+  }
+}

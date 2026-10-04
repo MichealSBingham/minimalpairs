@@ -1,0 +1,9 @@
+---
+import Base from '../layouts/Base.astro';
+import AudioReviewDesk from '../components/AudioReviewDesk';
+import { getAudioReviewCatalog } from '../lib/audio-review-catalog';
+const catalog = getAudioReviewCatalog();
+---
+<Base title="Audio review workspace — MinimalPairs" description="Review the currently published contrast groups, words and exact audio recordings. Save checks and corrections locally and export a backup." noindex analytics={false}>
+  <AudioReviewDesk catalog={catalog} client:load />
+</Base>

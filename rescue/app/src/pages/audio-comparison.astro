@@ -1,0 +1,11 @@
+---
+import Base from '../layouts/Base.astro';
+import AudioComparison from '../components/AudioComparison';
+import { getLanguages } from '../lib/content';
+import { comparisonLanguages } from '../lib/audio-comparison';
+import '../styles/audio-comparison.css';
+const languages = comparisonLanguages(getLanguages());
+---
+<Base title="Compare audio sources | MinimalPairs" description="An optional French and English listening comparison using three separate audio sources. All candidates remain under listening review." noindex>
+  <AudioComparison languages={languages} client:load />
+</Base>

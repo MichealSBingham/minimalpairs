@@ -1,0 +1,37 @@
+# Credentials and private operational data
+**/.env
+**/.env.*
+!**/.env.example
+**/private/
+**/*.sqlite*
+**/*.db
+**/admin-token
+**/*secrets*.json
+# Local dependencies, caches, builds and logs
+**/node_modules/
+**/.venv/
+**/__pycache__/
+**/.astro/
+**/dist/
+**/.firebase/
+**/.wrangler/
+**/*.log
+**/*.local.json
+# Recordings and model weights stay outside Git
+**/*.wav
+**/*.mp3
+**/*.flac
+**/*.m4a
+**/*.ogg
+**/*.safetensors
+**/*.pt
+**/*.pth
+# Private research, artifacts and owner approvals
+/research/
+/accuracy-lab/
+/vowel-map/
+/rescue/discovery/
+/rescue/approvals/
+/rescue/migration/
+/rescue/qa/*
+!/rescue/qa/legacy-sitemap-paths.json

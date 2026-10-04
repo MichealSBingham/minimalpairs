@@ -1,0 +1,12 @@
+---
+import Base from '../layouts/Base.astro';
+import AccountPanel from '../components/AccountPanel';
+import { authReady } from '../lib/auth';
+import { getPracticeLanguages as getLanguages } from '../lib/content';
+import { getListeningPlanCatalog } from '../lib/listening-plan-catalog';
+const languages = getLanguages();
+const planCatalog = getListeningPlanCatalog(languages);
+---
+<Base title="Your progress — MinimalPairs" description="Your practice history, account and access." noindex>
+  <AccountPanel languages={languages} planCatalog={planCatalog} authEnabled={authReady} client:load />
+</Base>

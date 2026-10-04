@@ -1,0 +1,2584 @@
+{
+  "date": "2026-09-28",
+  "languages": 8,
+  "pairs": 144,
+  "passed": 144,
+  "failures": [],
+  "limitation": "Checks internal consistency of hand-authored transcriptions. It cannot establish real-word status, independent IPA correctness, dialect match, naturalness, human origin or recorded pronunciation. Those require external evidence and listening review.",
+  "rows": [
+    {
+      "id": "en-ship-sheep",
+      "language": "en",
+      "words": [
+        "ship",
+        "sheep"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "ɪ",
+          "right": "i"
+        }
+      ]
+    },
+    {
+      "id": "en-fill-feel",
+      "language": "en",
+      "words": [
+        "fill",
+        "feel"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "ɪ",
+          "right": "i"
+        }
+      ]
+    },
+    {
+      "id": "en-sit-seat",
+      "language": "en",
+      "words": [
+        "sit",
+        "seat"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "ɪ",
+          "right": "i"
+        }
+      ]
+    },
+    {
+      "id": "en-right-light",
+      "language": "en",
+      "words": [
+        "right",
+        "light"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "ɹ",
+          "right": "l"
+        }
+      ]
+    },
+    {
+      "id": "en-road-load",
+      "language": "en",
+      "words": [
+        "road",
+        "load"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "ɹ",
+          "right": "l"
+        }
+      ]
+    },
+    {
+      "id": "en-rice-lice",
+      "language": "en",
+      "words": [
+        "rice",
+        "lice"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "ɹ",
+          "right": "l"
+        }
+      ]
+    },
+    {
+      "id": "en-thin-sin",
+      "language": "en",
+      "words": [
+        "thin",
+        "sin"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "θ",
+          "right": "s"
+        }
+      ]
+    },
+    {
+      "id": "en-thick-sick",
+      "language": "en",
+      "words": [
+        "thick",
+        "sick"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "θ",
+          "right": "s"
+        }
+      ]
+    },
+    {
+      "id": "en-thigh-sigh",
+      "language": "en",
+      "words": [
+        "thigh",
+        "sigh"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "θ",
+          "right": "s"
+        }
+      ]
+    },
+    {
+      "id": "en-lesion-legion",
+      "language": "en",
+      "words": [
+        "lesion",
+        "legion"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "ʒ",
+          "right": "dʒ"
+        }
+      ]
+    },
+    {
+      "id": "en-pleasure-pledger",
+      "language": "en",
+      "words": [
+        "pleasure",
+        "pledger"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 3,
+          "left": "ʒ",
+          "right": "dʒ"
+        }
+      ]
+    },
+    {
+      "id": "en-version-virgin",
+      "language": "en",
+      "words": [
+        "version",
+        "virgin"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "ʒ",
+          "right": "dʒ"
+        }
+      ]
+    },
+    {
+      "id": "en-put-putt",
+      "language": "en",
+      "words": [
+        "put",
+        "putt"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "ʊ",
+          "right": "ʌ"
+        }
+      ]
+    },
+    {
+      "id": "en-look-luck",
+      "language": "en",
+      "words": [
+        "look",
+        "luck"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "ʊ",
+          "right": "ʌ"
+        }
+      ]
+    },
+    {
+      "id": "en-book-buck",
+      "language": "en",
+      "words": [
+        "book",
+        "buck"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "ʊ",
+          "right": "ʌ"
+        }
+      ]
+    },
+    {
+      "id": "en-cat-cut",
+      "language": "en",
+      "words": [
+        "cat",
+        "cut"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "æ",
+          "right": "ʌ"
+        }
+      ]
+    },
+    {
+      "id": "en-cap-cup",
+      "language": "en",
+      "words": [
+        "cap",
+        "cup"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "æ",
+          "right": "ʌ"
+        }
+      ]
+    },
+    {
+      "id": "en-lack-luck",
+      "language": "en",
+      "words": [
+        "lack",
+        "luck"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "æ",
+          "right": "ʌ"
+        }
+      ]
+    },
+    {
+      "id": "fr-tout-tu",
+      "language": "fr",
+      "words": [
+        "tout",
+        "tu"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "u",
+          "right": "y"
+        }
+      ]
+    },
+    {
+      "id": "fr-vous-vu",
+      "language": "fr",
+      "words": [
+        "vous",
+        "vu"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "u",
+          "right": "y"
+        }
+      ]
+    },
+    {
+      "id": "fr-roue-rue",
+      "language": "fr",
+      "words": [
+        "roue",
+        "rue"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "u",
+          "right": "y"
+        }
+      ]
+    },
+    {
+      "id": "fr-bout-bu",
+      "language": "fr",
+      "words": [
+        "bout",
+        "bu"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "u",
+          "right": "y"
+        }
+      ]
+    },
+    {
+      "id": "fr-banc-bon",
+      "language": "fr",
+      "words": [
+        "banc",
+        "bon"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "ɑ̃",
+          "right": "ɔ̃"
+        }
+      ]
+    },
+    {
+      "id": "fr-pan-pont",
+      "language": "fr",
+      "words": [
+        "pan",
+        "pont"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "ɑ̃",
+          "right": "ɔ̃"
+        }
+      ]
+    },
+    {
+      "id": "fr-tant-ton",
+      "language": "fr",
+      "words": [
+        "tant",
+        "ton"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "ɑ̃",
+          "right": "ɔ̃"
+        }
+      ]
+    },
+    {
+      "id": "fr-poisson-poison",
+      "language": "fr",
+      "words": [
+        "poisson",
+        "poison"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 3,
+          "left": "s",
+          "right": "z"
+        }
+      ]
+    },
+    {
+      "id": "fr-coussin-cousin",
+      "language": "fr",
+      "words": [
+        "coussin",
+        "cousin"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "s",
+          "right": "z"
+        }
+      ]
+    },
+    {
+      "id": "fr-basse-base",
+      "language": "fr",
+      "words": [
+        "basse",
+        "base"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "s",
+          "right": "z"
+        }
+      ]
+    },
+    {
+      "id": "fr-pre-pret",
+      "language": "fr",
+      "words": [
+        "pré",
+        "prêt"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "e",
+          "right": "ɛ"
+        }
+      ]
+    },
+    {
+      "id": "fr-the-taie",
+      "language": "fr",
+      "words": [
+        "thé",
+        "taie"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "e",
+          "right": "ɛ"
+        }
+      ]
+    },
+    {
+      "id": "fr-de-dais",
+      "language": "fr",
+      "words": [
+        "dé",
+        "dais"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "e",
+          "right": "ɛ"
+        }
+      ]
+    },
+    {
+      "id": "fr-bain-bon",
+      "language": "fr",
+      "words": [
+        "bain",
+        "bon"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "ɛ̃",
+          "right": "ɔ̃"
+        }
+      ]
+    },
+    {
+      "id": "fr-pin-pont",
+      "language": "fr",
+      "words": [
+        "pin",
+        "pont"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "ɛ̃",
+          "right": "ɔ̃"
+        }
+      ]
+    },
+    {
+      "id": "fr-teint-ton",
+      "language": "fr",
+      "words": [
+        "teint",
+        "ton"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "ɛ̃",
+          "right": "ɔ̃"
+        }
+      ]
+    },
+    {
+      "id": "fr-banc-bain",
+      "language": "fr",
+      "words": [
+        "banc",
+        "bain"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "ɑ̃",
+          "right": "ɛ̃"
+        }
+      ]
+    },
+    {
+      "id": "fr-pan-pain",
+      "language": "fr",
+      "words": [
+        "pan",
+        "pain"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "ɑ̃",
+          "right": "ɛ̃"
+        }
+      ]
+    },
+    {
+      "id": "fr-temps-teint",
+      "language": "fr",
+      "words": [
+        "temps",
+        "teint"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "ɑ̃",
+          "right": "ɛ̃"
+        }
+      ]
+    },
+    {
+      "id": "fr-paume-pomme",
+      "language": "fr",
+      "words": [
+        "paume",
+        "pomme"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "o",
+          "right": "ɔ"
+        }
+      ]
+    },
+    {
+      "id": "fr-cote-cote",
+      "language": "fr",
+      "words": [
+        "côte",
+        "cote"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "o",
+          "right": "ɔ"
+        }
+      ]
+    },
+    {
+      "id": "fr-saute-sotte",
+      "language": "fr",
+      "words": [
+        "saute",
+        "sotte"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "o",
+          "right": "ɔ"
+        }
+      ]
+    },
+    {
+      "id": "fr-beau-peau",
+      "language": "fr",
+      "words": [
+        "beau",
+        "peau"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "b",
+          "right": "p"
+        }
+      ]
+    },
+    {
+      "id": "fr-bain-pain",
+      "language": "fr",
+      "words": [
+        "bain",
+        "pain"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "b",
+          "right": "p"
+        }
+      ]
+    },
+    {
+      "id": "fr-boule-poule",
+      "language": "fr",
+      "words": [
+        "boule",
+        "poule"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "b",
+          "right": "p"
+        }
+      ]
+    },
+    {
+      "id": "fr-joue-chou",
+      "language": "fr",
+      "words": [
+        "joue",
+        "chou"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "ʒ",
+          "right": "ʃ"
+        }
+      ]
+    },
+    {
+      "id": "fr-gens-champ",
+      "language": "fr",
+      "words": [
+        "gens",
+        "champ"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "ʒ",
+          "right": "ʃ"
+        }
+      ]
+    },
+    {
+      "id": "fr-geai-chai",
+      "language": "fr",
+      "words": [
+        "geai",
+        "chai"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "ʒ",
+          "right": "ʃ"
+        }
+      ]
+    },
+    {
+      "id": "fr-rue-riz",
+      "language": "fr",
+      "words": [
+        "rue",
+        "riz"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "y",
+          "right": "i"
+        }
+      ]
+    },
+    {
+      "id": "fr-bulle-bile",
+      "language": "fr",
+      "words": [
+        "bulle",
+        "bile"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "y",
+          "right": "i"
+        }
+      ]
+    },
+    {
+      "id": "fr-pur-pire",
+      "language": "fr",
+      "words": [
+        "pur",
+        "pire"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "y",
+          "right": "i"
+        }
+      ]
+    },
+    {
+      "id": "fr-jus-jeu",
+      "language": "fr",
+      "words": [
+        "jus",
+        "jeu"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "y",
+          "right": "ø"
+        }
+      ]
+    },
+    {
+      "id": "fr-du-deux",
+      "language": "fr",
+      "words": [
+        "du",
+        "deux"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "y",
+          "right": "ø"
+        }
+      ]
+    },
+    {
+      "id": "fr-cru-creux",
+      "language": "fr",
+      "words": [
+        "cru",
+        "creux"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "y",
+          "right": "ø"
+        }
+      ]
+    },
+    {
+      "id": "fr-cou-queue",
+      "language": "fr",
+      "words": [
+        "cou",
+        "queue"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "u",
+          "right": "ø"
+        }
+      ]
+    },
+    {
+      "id": "fr-doux-deux",
+      "language": "fr",
+      "words": [
+        "doux",
+        "deux"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "u",
+          "right": "ø"
+        }
+      ]
+    },
+    {
+      "id": "fr-nous-noeud",
+      "language": "fr",
+      "words": [
+        "nous",
+        "nœud"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "u",
+          "right": "ø"
+        }
+      ]
+    },
+    {
+      "id": "fr-fee-feu",
+      "language": "fr",
+      "words": [
+        "fée",
+        "feu"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "e",
+          "right": "ø"
+        }
+      ]
+    },
+    {
+      "id": "fr-de-deux",
+      "language": "fr",
+      "words": [
+        "dé",
+        "deux"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "e",
+          "right": "ø"
+        }
+      ]
+    },
+    {
+      "id": "fr-pre-preux",
+      "language": "fr",
+      "words": [
+        "pré",
+        "preux"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "e",
+          "right": "ø"
+        }
+      ]
+    },
+    {
+      "id": "fr-pere-peur",
+      "language": "fr",
+      "words": [
+        "père",
+        "peur"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "ɛ",
+          "right": "œ"
+        }
+      ]
+    },
+    {
+      "id": "fr-serre-soeur",
+      "language": "fr",
+      "words": [
+        "serre",
+        "sœur"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "ɛ",
+          "right": "œ"
+        }
+      ]
+    },
+    {
+      "id": "fr-air-heure",
+      "language": "fr",
+      "words": [
+        "air",
+        "heure"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "ɛ",
+          "right": "œ"
+        }
+      ]
+    },
+    {
+      "id": "fr-doux-tout",
+      "language": "fr",
+      "words": [
+        "doux",
+        "tout"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "d",
+          "right": "t"
+        }
+      ]
+    },
+    {
+      "id": "fr-dos-taux",
+      "language": "fr",
+      "words": [
+        "dos",
+        "taux"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "d",
+          "right": "t"
+        }
+      ]
+    },
+    {
+      "id": "fr-dent-temps",
+      "language": "fr",
+      "words": [
+        "dent",
+        "temps"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "d",
+          "right": "t"
+        }
+      ]
+    },
+    {
+      "id": "fr-gout-cou",
+      "language": "fr",
+      "words": [
+        "goût",
+        "cou"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "ɡ",
+          "right": "k"
+        }
+      ]
+    },
+    {
+      "id": "fr-gant-camp",
+      "language": "fr",
+      "words": [
+        "gant",
+        "camp"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "ɡ",
+          "right": "k"
+        }
+      ]
+    },
+    {
+      "id": "fr-gomme-comme",
+      "language": "fr",
+      "words": [
+        "gomme",
+        "comme"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "ɡ",
+          "right": "k"
+        }
+      ]
+    },
+    {
+      "id": "fr-vin-fin",
+      "language": "fr",
+      "words": [
+        "vin",
+        "fin"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "v",
+          "right": "f"
+        }
+      ]
+    },
+    {
+      "id": "fr-veau-faux",
+      "language": "fr",
+      "words": [
+        "veau",
+        "faux"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "v",
+          "right": "f"
+        }
+      ]
+    },
+    {
+      "id": "fr-vous-fou",
+      "language": "fr",
+      "words": [
+        "vous",
+        "fou"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "v",
+          "right": "f"
+        }
+      ]
+    },
+    {
+      "id": "fr-beau-veau",
+      "language": "fr",
+      "words": [
+        "beau",
+        "veau"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "b",
+          "right": "v"
+        }
+      ]
+    },
+    {
+      "id": "fr-bain-vain",
+      "language": "fr",
+      "words": [
+        "bain",
+        "vain"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "b",
+          "right": "v"
+        }
+      ]
+    },
+    {
+      "id": "fr-bile-ville",
+      "language": "fr",
+      "words": [
+        "bile",
+        "ville"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "b",
+          "right": "v"
+        }
+      ]
+    },
+    {
+      "id": "fr-chou-sou",
+      "language": "fr",
+      "words": [
+        "chou",
+        "sou"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "ʃ",
+          "right": "s"
+        }
+      ]
+    },
+    {
+      "id": "fr-chaud-saut",
+      "language": "fr",
+      "words": [
+        "chaud",
+        "saut"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "ʃ",
+          "right": "s"
+        }
+      ]
+    },
+    {
+      "id": "fr-choix-soie",
+      "language": "fr",
+      "words": [
+        "choix",
+        "soie"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "ʃ",
+          "right": "s"
+        }
+      ]
+    },
+    {
+      "id": "fr-lit-riz",
+      "language": "fr",
+      "words": [
+        "lit",
+        "riz"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "l",
+          "right": "ʁ"
+        }
+      ]
+    },
+    {
+      "id": "fr-lait-raie",
+      "language": "fr",
+      "words": [
+        "lait",
+        "raie"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "l",
+          "right": "ʁ"
+        }
+      ]
+    },
+    {
+      "id": "fr-lame-rame",
+      "language": "fr",
+      "words": [
+        "lame",
+        "rame"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "l",
+          "right": "ʁ"
+        }
+      ]
+    },
+    {
+      "id": "fr-peine-peigne",
+      "language": "fr",
+      "words": [
+        "peine",
+        "peigne"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "n",
+          "right": "ɲ"
+        }
+      ]
+    },
+    {
+      "id": "fr-panne-pagne",
+      "language": "fr",
+      "words": [
+        "panne",
+        "pagne"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "n",
+          "right": "ɲ"
+        }
+      ]
+    },
+    {
+      "id": "fr-reine-regne",
+      "language": "fr",
+      "words": [
+        "reine",
+        "règne"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "n",
+          "right": "ɲ"
+        }
+      ]
+    },
+    {
+      "id": "fr-beau-bout",
+      "language": "fr",
+      "words": [
+        "beau",
+        "bout"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "o",
+          "right": "u"
+        }
+      ]
+    },
+    {
+      "id": "fr-veau-vous",
+      "language": "fr",
+      "words": [
+        "veau",
+        "vous"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "o",
+          "right": "u"
+        }
+      ]
+    },
+    {
+      "id": "fr-saut-sou",
+      "language": "fr",
+      "words": [
+        "saut",
+        "sou"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "o",
+          "right": "u"
+        }
+      ]
+    },
+    {
+      "id": "fr-beau-bon",
+      "language": "fr",
+      "words": [
+        "beau",
+        "bon"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "o",
+          "right": "ɔ̃"
+        }
+      ]
+    },
+    {
+      "id": "fr-peau-pont",
+      "language": "fr",
+      "words": [
+        "peau",
+        "pont"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "o",
+          "right": "ɔ̃"
+        }
+      ]
+    },
+    {
+      "id": "fr-taux-ton",
+      "language": "fr",
+      "words": [
+        "taux",
+        "ton"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "o",
+          "right": "ɔ̃"
+        }
+      ]
+    },
+    {
+      "id": "de-musste-muesste",
+      "language": "de",
+      "words": [
+        "musste",
+        "müsste"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "ʊ",
+          "right": "ʏ"
+        }
+      ]
+    },
+    {
+      "id": "de-wurde-wuerde",
+      "language": "de",
+      "words": [
+        "wurde",
+        "würde"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "ʊ",
+          "right": "ʏ"
+        }
+      ]
+    },
+    {
+      "id": "de-mutter-muetter",
+      "language": "de",
+      "words": [
+        "Mutter",
+        "Mütter"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "ʊ",
+          "right": "ʏ"
+        }
+      ]
+    },
+    {
+      "id": "de-bitten-bieten",
+      "language": "de",
+      "words": [
+        "bitten",
+        "bieten"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "ɪ",
+          "right": "iː"
+        }
+      ]
+    },
+    {
+      "id": "de-mitte-miete",
+      "language": "de",
+      "words": [
+        "Mitte",
+        "Miete"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "ɪ",
+          "right": "iː"
+        }
+      ]
+    },
+    {
+      "id": "de-schiff-schief",
+      "language": "de",
+      "words": [
+        "Schiff",
+        "schief"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "ɪ",
+          "right": "iː"
+        }
+      ]
+    },
+    {
+      "id": "de-reissen-reisen",
+      "language": "de",
+      "words": [
+        "reißen",
+        "reisen"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "s",
+          "right": "z"
+        }
+      ]
+    },
+    {
+      "id": "de-weisse-weise",
+      "language": "de",
+      "words": [
+        "weiße",
+        "weise"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "s",
+          "right": "z"
+        }
+      ]
+    },
+    {
+      "id": "de-musse-muse",
+      "language": "de",
+      "words": [
+        "Muße",
+        "Muse"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "s",
+          "right": "z"
+        }
+      ]
+    },
+    {
+      "id": "de-schon-schoen",
+      "language": "de",
+      "words": [
+        "schon",
+        "schön"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "oː",
+          "right": "øː"
+        }
+      ]
+    },
+    {
+      "id": "de-rohre-roehre",
+      "language": "de",
+      "words": [
+        "Rohre",
+        "Röhre"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "oː",
+          "right": "øː"
+        }
+      ]
+    },
+    {
+      "id": "de-rote-roete",
+      "language": "de",
+      "words": [
+        "rote",
+        "Röte"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "oː",
+          "right": "øː"
+        }
+      ]
+    },
+    {
+      "id": "es-caro-carro",
+      "language": "es",
+      "words": [
+        "caro",
+        "carro"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "ɾ",
+          "right": "r"
+        }
+      ]
+    },
+    {
+      "id": "es-pero-perro",
+      "language": "es",
+      "words": [
+        "pero",
+        "perro"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "ɾ",
+          "right": "r"
+        }
+      ]
+    },
+    {
+      "id": "es-coro-corro",
+      "language": "es",
+      "words": [
+        "coro",
+        "corro"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "ɾ",
+          "right": "r"
+        }
+      ]
+    },
+    {
+      "id": "es-peso-beso",
+      "language": "es",
+      "words": [
+        "peso",
+        "beso"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "p",
+          "right": "b"
+        }
+      ]
+    },
+    {
+      "id": "es-pata-bata",
+      "language": "es",
+      "words": [
+        "pata",
+        "bata"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "p",
+          "right": "b"
+        }
+      ]
+    },
+    {
+      "id": "es-pala-bala",
+      "language": "es",
+      "words": [
+        "pala",
+        "bala"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "p",
+          "right": "b"
+        }
+      ]
+    },
+    {
+      "id": "es-hablo-hablo-past",
+      "language": "es",
+      "words": [
+        "hablo",
+        "habló"
+      ],
+      "kind": "stress",
+      "passed": true,
+      "rule": "Same segment sequence; marked stress position differs.",
+      "differences": []
+    },
+    {
+      "id": "es-canto-canto-past",
+      "language": "es",
+      "words": [
+        "canto",
+        "cantó"
+      ],
+      "kind": "stress",
+      "passed": true,
+      "rule": "Same segment sequence; marked stress position differs.",
+      "differences": []
+    },
+    {
+      "id": "es-tomo-tomo-past",
+      "language": "es",
+      "words": [
+        "tomo",
+        "tomó"
+      ],
+      "kind": "stress",
+      "passed": true,
+      "rule": "Same segment sequence; marked stress position differs.",
+      "differences": []
+    },
+    {
+      "id": "it-pala-palla",
+      "language": "it",
+      "words": [
+        "pala",
+        "palla"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "l",
+          "right": "lː"
+        }
+      ]
+    },
+    {
+      "id": "it-fato-fatto",
+      "language": "it",
+      "words": [
+        "fato",
+        "fatto"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "t",
+          "right": "tː"
+        }
+      ]
+    },
+    {
+      "id": "it-pena-penna",
+      "language": "it",
+      "words": [
+        "pena",
+        "penna"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "n",
+          "right": "nː"
+        }
+      ]
+    },
+    {
+      "id": "it-fino-vino",
+      "language": "it",
+      "words": [
+        "fino",
+        "vino"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "f",
+          "right": "v"
+        }
+      ]
+    },
+    {
+      "id": "it-faro-varo",
+      "language": "it",
+      "words": [
+        "faro",
+        "varo"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "f",
+          "right": "v"
+        }
+      ]
+    },
+    {
+      "id": "it-finto-vinto",
+      "language": "it",
+      "words": [
+        "finto",
+        "vinto"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "f",
+          "right": "v"
+        }
+      ]
+    },
+    {
+      "id": "it-panca-banca",
+      "language": "it",
+      "words": [
+        "panca",
+        "banca"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "p",
+          "right": "b"
+        }
+      ]
+    },
+    {
+      "id": "it-pasta-basta",
+      "language": "it",
+      "words": [
+        "pasta",
+        "basta"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "p",
+          "right": "b"
+        }
+      ]
+    },
+    {
+      "id": "it-pelle-belle",
+      "language": "it",
+      "words": [
+        "pelle",
+        "belle"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "p",
+          "right": "b"
+        }
+      ]
+    },
+    {
+      "id": "zh-ma1-ma4",
+      "language": "zh",
+      "words": [
+        "妈",
+        "骂"
+      ],
+      "kind": "tone",
+      "passed": true,
+      "rule": "One tone substitution; segment sequence unchanged.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "T1",
+          "right": "T4"
+        }
+      ]
+    },
+    {
+      "id": "zh-shu1-shu4",
+      "language": "zh",
+      "words": [
+        "书",
+        "树"
+      ],
+      "kind": "tone",
+      "passed": true,
+      "rule": "One tone substitution; segment sequence unchanged.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "T1",
+          "right": "T4"
+        }
+      ]
+    },
+    {
+      "id": "zh-tang1-tang4",
+      "language": "zh",
+      "words": [
+        "汤",
+        "烫"
+      ],
+      "kind": "tone",
+      "passed": true,
+      "rule": "One tone substitution; segment sequence unchanged.",
+      "differences": [
+        {
+          "position": 3,
+          "left": "T1",
+          "right": "T4"
+        }
+      ]
+    },
+    {
+      "id": "zh-ma2-ma3",
+      "language": "zh",
+      "words": [
+        "麻",
+        "马"
+      ],
+      "kind": "tone",
+      "passed": true,
+      "rule": "One tone substitution; segment sequence unchanged.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "T2",
+          "right": "T3"
+        }
+      ]
+    },
+    {
+      "id": "zh-yu2-yu3",
+      "language": "zh",
+      "words": [
+        "鱼",
+        "雨"
+      ],
+      "kind": "tone",
+      "passed": true,
+      "rule": "One tone substitution; segment sequence unchanged.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "T2",
+          "right": "T3"
+        }
+      ]
+    },
+    {
+      "id": "zh-pi2-pi3",
+      "language": "zh",
+      "words": [
+        "皮",
+        "匹"
+      ],
+      "kind": "tone",
+      "passed": true,
+      "rule": "One tone substitution; segment sequence unchanged.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "T2",
+          "right": "T3"
+        }
+      ]
+    },
+    {
+      "id": "zh-ma1-ma2",
+      "language": "zh",
+      "words": [
+        "妈",
+        "麻"
+      ],
+      "kind": "tone",
+      "passed": true,
+      "rule": "One tone substitution; segment sequence unchanged.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "T1",
+          "right": "T2"
+        }
+      ]
+    },
+    {
+      "id": "zh-shi1-shi2",
+      "language": "zh",
+      "words": [
+        "诗",
+        "十"
+      ],
+      "kind": "tone",
+      "passed": true,
+      "rule": "One tone substitution; segment sequence unchanged.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "T1",
+          "right": "T2"
+        }
+      ]
+    },
+    {
+      "id": "zh-ba1-ba2",
+      "language": "zh",
+      "words": [
+        "八",
+        "拔"
+      ],
+      "kind": "tone",
+      "passed": true,
+      "rule": "One tone substitution; segment sequence unchanged.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "T1",
+          "right": "T2"
+        }
+      ]
+    },
+    {
+      "id": "pt-faca-vaca",
+      "language": "pt",
+      "words": [
+        "faca",
+        "vaca"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "f",
+          "right": "v"
+        }
+      ]
+    },
+    {
+      "id": "pt-fila-vila",
+      "language": "pt",
+      "words": [
+        "fila",
+        "vila"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "f",
+          "right": "v"
+        }
+      ]
+    },
+    {
+      "id": "pt-fala-vala",
+      "language": "pt",
+      "words": [
+        "fala",
+        "vala"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "f",
+          "right": "v"
+        }
+      ]
+    },
+    {
+      "id": "pt-caca-casa",
+      "language": "pt",
+      "words": [
+        "caça",
+        "casa"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "s",
+          "right": "z"
+        }
+      ]
+    },
+    {
+      "id": "pt-assa-asa",
+      "language": "pt",
+      "words": [
+        "assa",
+        "asa"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 1,
+          "left": "s",
+          "right": "z"
+        }
+      ]
+    },
+    {
+      "id": "pt-caco-caso",
+      "language": "pt",
+      "words": [
+        "caço",
+        "caso"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "s",
+          "right": "z"
+        }
+      ]
+    },
+    {
+      "id": "pt-pata-bata",
+      "language": "pt",
+      "words": [
+        "pata",
+        "bata"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "p",
+          "right": "b"
+        }
+      ]
+    },
+    {
+      "id": "pt-pala-bala",
+      "language": "pt",
+      "words": [
+        "pala",
+        "bala"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "p",
+          "right": "b"
+        }
+      ]
+    },
+    {
+      "id": "pt-pato-bato",
+      "language": "pt",
+      "words": [
+        "pato",
+        "bato"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "p",
+          "right": "b"
+        }
+      ]
+    },
+    {
+      "id": "ru-luk-lyuk",
+      "language": "ru",
+      "words": [
+        "лук",
+        "люк"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "l",
+          "right": "lʲ"
+        }
+      ]
+    },
+    {
+      "id": "ru-nos-nyos",
+      "language": "ru",
+      "words": [
+        "нос",
+        "нёс"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "n",
+          "right": "nʲ"
+        }
+      ]
+    },
+    {
+      "id": "ru-mat-matsoft",
+      "language": "ru",
+      "words": [
+        "мат",
+        "мать"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 2,
+          "left": "t",
+          "right": "tʲ"
+        }
+      ]
+    },
+    {
+      "id": "ru-ugol-ugolsoft",
+      "language": "ru",
+      "words": [
+        "угол",
+        "уголь"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 3,
+          "left": "l",
+          "right": "lʲ"
+        }
+      ]
+    },
+    {
+      "id": "ru-sok-shok",
+      "language": "ru",
+      "words": [
+        "сок",
+        "шок"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "s",
+          "right": "ʂ"
+        }
+      ]
+    },
+    {
+      "id": "ru-sutki-shutki",
+      "language": "ru",
+      "words": [
+        "сутки",
+        "шутки"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "s",
+          "right": "ʂ"
+        }
+      ]
+    },
+    {
+      "id": "ru-dom-tom",
+      "language": "ru",
+      "words": [
+        "дом",
+        "том"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "d",
+          "right": "t"
+        }
+      ]
+    },
+    {
+      "id": "ru-dochka-tochka",
+      "language": "ru",
+      "words": [
+        "дочка",
+        "точка"
+      ],
+      "kind": "minimal",
+      "passed": true,
+      "rule": "One segment substitution in the editorial phoneme tokenization.",
+      "differences": [
+        {
+          "position": 0,
+          "left": "d",
+          "right": "t"
+        }
+      ]
+    }
+  ]
+}

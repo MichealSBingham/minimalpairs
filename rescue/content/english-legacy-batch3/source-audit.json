@@ -1,0 +1,511 @@
+{
+  "date": "2026-09-28",
+  "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+  "retrieval": "All 36 selected American IPA and sense entries manually read through the web tool on this date. Other publishers and homographs on the same page are not interchangeable evidence.",
+  "normalization": "Webster /ɜr/ becomes broad rhotic /ɝ/; /r/ becomes /ɹ/; ASCII g becomes IPA ɡ. Retain /i/, /u/, /ɑ/, /ɛ/ and diphthongs. No vowel substitution. Treat tʃ as one phoneme.",
+  "licensing": "Factual word/pronunciation checking and original short meaning labels. No dictionary paragraphs, chart artwork or dictionary audio copied or licensed for redistribution.",
+  "words": [
+    {
+      "word": "sip",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/sip",
+      "selectedEntry": "sip in American English; verb",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "sɪp"
+      ],
+      "editorialBroadIpa": "sɪp",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "zip",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/zip",
+      "selectedEntry": "zip in American English; transitive verb, sense 9",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "zɪp"
+      ],
+      "editorialBroadIpa": "zɪp",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "seal",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/seal",
+      "selectedEntry": "seal in American English 2; animal, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "sil"
+      ],
+      "editorialBroadIpa": "sil",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "zeal",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/zeal",
+      "selectedEntry": "zeal in American English; noun",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "zil"
+      ],
+      "editorialBroadIpa": "zil",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "sink",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/sink",
+      "selectedEntry": "sink in American English; intransitive verb",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "sɪŋk"
+      ],
+      "editorialBroadIpa": "sɪŋk",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "zinc",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/zinc",
+      "selectedEntry": "zinc in American English; noun, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "zɪŋk"
+      ],
+      "editorialBroadIpa": "zɪŋk",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "fan",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/fan",
+      "selectedEntry": "fan in American English 1; noun, sense 2",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "fæn"
+      ],
+      "editorialBroadIpa": "fæn",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "van",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/van",
+      "selectedEntry": "van in American English 3; vehicle, senses 1–2",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "væn"
+      ],
+      "editorialBroadIpa": "væn",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "fat",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/fat",
+      "selectedEntry": "fat in American English; noun, sense 8",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "fæt"
+      ],
+      "editorialBroadIpa": "fæt",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "vat",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/vat",
+      "selectedEntry": "vat in American English; lowercase container noun",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "væt"
+      ],
+      "editorialBroadIpa": "væt",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "fail",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/fail",
+      "selectedEntry": "fail in American English; intransitive verb",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "feɪl"
+      ],
+      "editorialBroadIpa": "feɪl",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "veil",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/veil",
+      "selectedEntry": "veil in American English; common noun",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "veɪl"
+      ],
+      "editorialBroadIpa": "veɪl",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "pea",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/pea",
+      "selectedEntry": "pea in American English; noun, sense 2",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "pi"
+      ],
+      "editorialBroadIpa": "pi",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "bee",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/bee",
+      "selectedEntry": "bee in American English 1; insect noun",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "bi"
+      ],
+      "editorialBroadIpa": "bi",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "peg",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/peg",
+      "selectedEntry": "peg in American English; common noun, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "pɛɡ"
+      ],
+      "editorialBroadIpa": "pɛɡ",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "beg",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/beg",
+      "selectedEntry": "beg in American English; common verb",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "bɛɡ"
+      ],
+      "editorialBroadIpa": "bɛɡ",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "peach",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/peach",
+      "selectedEntry": "peach in American English 1; fruit noun",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "pitʃ"
+      ],
+      "editorialBroadIpa": "pitʃ",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "beach",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/beach",
+      "selectedEntry": "beach in American English; noun, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "bitʃ"
+      ],
+      "editorialBroadIpa": "bitʃ",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "coat",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/coat",
+      "selectedEntry": "coat in American English; noun, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "koʊt"
+      ],
+      "editorialBroadIpa": "koʊt",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "goat",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/goat",
+      "selectedEntry": "goat in American English; animal, sense 1a",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "ɡoʊt"
+      ],
+      "editorialBroadIpa": "ɡoʊt",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "curl",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/curl",
+      "selectedEntry": "curl in American English; transitive verb, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "kɜrl"
+      ],
+      "editorialBroadIpa": "kɝl",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "girl",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/girl",
+      "selectedEntry": "girl in American English; noun, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "ɡɜrl"
+      ],
+      "editorialBroadIpa": "ɡɝl",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "came",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/came",
+      "selectedEntry": "came in American English 1; verb",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "keɪm"
+      ],
+      "editorialBroadIpa": "keɪm",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "game",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/game",
+      "selectedEntry": "game in American English 1; noun",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "ɡeɪm"
+      ],
+      "editorialBroadIpa": "ɡeɪm",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "shack",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/shack",
+      "selectedEntry": "shack in American English; noun",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "ʃæk"
+      ],
+      "editorialBroadIpa": "ʃæk",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "sack",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/sack",
+      "selectedEntry": "sack in American English 1; bag, sense 1a",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "sæk"
+      ],
+      "editorialBroadIpa": "sæk",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "shell",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/shell",
+      "selectedEntry": "shell in American English; common noun, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "ʃɛl"
+      ],
+      "editorialBroadIpa": "ʃɛl",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "sell",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/sell",
+      "selectedEntry": "sell in American English; common transitive verb",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "sɛl"
+      ],
+      "editorialBroadIpa": "sɛl",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "shock",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/shock",
+      "selectedEntry": "shock in American English 1; noun, sense 3a",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "ʃɑk"
+      ],
+      "editorialBroadIpa": "ʃɑk",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "sock",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/sock",
+      "selectedEntry": "sock in American English 1; noun, sense 3",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "sɑk"
+      ],
+      "editorialBroadIpa": "sɑk",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "shop",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/shop",
+      "selectedEntry": "shop in American English; noun, sense 1a",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "ʃɑp"
+      ],
+      "editorialBroadIpa": "ʃɑp",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "chop",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/chop",
+      "selectedEntry": "chop in American English 1; transitive verb, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "tʃɑp"
+      ],
+      "editorialBroadIpa": "tʃɑp",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "shin",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/shin",
+      "selectedEntry": "shin in American English 1; body part, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "ʃɪn"
+      ],
+      "editorialBroadIpa": "ʃɪn",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "chin",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/chin",
+      "selectedEntry": "chin in American English; common body-part noun",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "tʃɪn"
+      ],
+      "editorialBroadIpa": "tʃɪn",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "shoe",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/shoe",
+      "selectedEntry": "shoe in American English; noun, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "ʃu"
+      ],
+      "editorialBroadIpa": "ʃu",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "chew",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/chew",
+      "selectedEntry": "chew in American English; transitive verb, sense 1",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), hosted by Collins",
+      "retrievedUsIpa": [
+        "tʃu"
+      ],
+      "editorialBroadIpa": "tʃu",
+      "checkedAt": "2026-09-28",
+      "sourceStatus": "pronunciation-and-selected-sense-read",
+      "audioStatus": "not-listened"
+    }
+  ],
+  "phoneticsSources": [
+    {
+      "url": "https://www.haskinslaboratories.org/vot",
+      "support": "Institutional account of stop release/voice-onset timing and the original experiment; no acoustic threshold is imported."
+    },
+    {
+      "url": "https://ecampusontario.pressbooks.pub/essentialsoflinguistics/chapter/3-5-aspirated-stops-in-english/",
+      "support": "Author textbook explains aspiration in stressed English stop onsets; not evidence for this product’s learning efficacy."
+    },
+    {
+      "url": "https://www.internationalphoneticassociation.org/IPAcharts/IPA_charts_TI/IPA_charts_TI.html",
+      "support": "Official symbols and optional affricate tie-bar notation. No chart or audio reused."
+    }
+  ],
+  "exclusions": [
+    {
+      "candidate": "pin–bin",
+      "reason": "Bin /bɪn/ is reserved for transfer assessment. Rejected before dictionary research; no impossibility claim."
+    },
+    {
+      "candidate": "ship–chip / ship–sip",
+      "reason": "Ship is already training material; this batch uses new lexical frames instead."
+    },
+    {
+      "candidate": "shin letter-name reading /ʃin/",
+      "reason": "Different lexical entry; selected body-part reading is /ʃɪn/."
+    }
+  ],
+  "unsupportedClaims": [
+    "No pronunciation or voice identity approval",
+    "No exact-waveform equivalence",
+    "No demonstrated ABX advantage or unseen-word transfer",
+    "No route demand or revenue ranking"
+  ]
+}

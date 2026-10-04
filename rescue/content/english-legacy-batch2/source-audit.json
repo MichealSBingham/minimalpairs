@@ -1,0 +1,341 @@
+{
+  "date": "2026-09-28",
+  "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+  "retrieval": "Primary dictionary American entries read through the web tool on 2026-09-28; meanings below are independently written brief labels. No dictionary recordings or definition paragraphs were acquired.",
+  "normalization": "Webster American /r/ is represented as broad /ɹ/; /ɜr/ as rhotic /ɝ/. Whitespace is removed. No vowel-category substitution is made; Webster /u/ is retained without a length mark.",
+  "words": [
+    {
+      "word": "cook",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/cook",
+      "selectedEntry": "cook in American English; common verb/noun",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+      "retrievedUsIpa": [
+        "kʊk"
+      ],
+      "editorialBroadIpa": "kʊk",
+      "sourceStatus": "pronunciation-entry-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "kook",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/kook",
+      "selectedEntry": "kook in American English; informal US noun",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+      "retrievedUsIpa": [
+        "kuk"
+      ],
+      "editorialBroadIpa": "kuk",
+      "sourceStatus": "pronunciation-entry-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "full",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/full",
+      "selectedEntry": "full in American English 1; adjective",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+      "retrievedUsIpa": [
+        "fʊl"
+      ],
+      "editorialBroadIpa": "fʊl",
+      "sourceStatus": "pronunciation-entry-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "fool",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/fool",
+      "selectedEntry": "fool in American English 1; verb",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+      "retrievedUsIpa": [
+        "ful"
+      ],
+      "editorialBroadIpa": "ful",
+      "sourceStatus": "pronunciation-entry-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "pull",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/pull",
+      "selectedEntry": "pull in American English; verb",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+      "retrievedUsIpa": [
+        "pʊl"
+      ],
+      "editorialBroadIpa": "pʊl",
+      "sourceStatus": "pronunciation-entry-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "pool",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/pool",
+      "selectedEntry": "pool in American English 1; noun",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+      "retrievedUsIpa": [
+        "pul"
+      ],
+      "editorialBroadIpa": "pul",
+      "sourceStatus": "pronunciation-entry-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "bat",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/bat",
+      "selectedEntry": "bat in American English 2; animal noun",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+      "retrievedUsIpa": [
+        "bæt"
+      ],
+      "editorialBroadIpa": "bæt",
+      "sourceStatus": "pronunciation-entry-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "bet",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/bet",
+      "selectedEntry": "bet in American English 1; wager noun, not the Hebrew-letter entry",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+      "retrievedUsIpa": [
+        "bɛt"
+      ],
+      "editorialBroadIpa": "bɛt",
+      "sourceStatus": "pronunciation-entry-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "mat",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/mat",
+      "selectedEntry": "mat in American English 1; noun",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+      "retrievedUsIpa": [
+        "mæt"
+      ],
+      "editorialBroadIpa": "mæt",
+      "sourceStatus": "pronunciation-entry-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "met",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/met",
+      "selectedEntry": "met in American English 1; past tense/participle",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+      "retrievedUsIpa": [
+        "mɛt"
+      ],
+      "editorialBroadIpa": "mɛt",
+      "sourceStatus": "pronunciation-entry-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "bad",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/bad",
+      "selectedEntry": "bad in American English 1; adjective, not archaic verb",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+      "retrievedUsIpa": [
+        "bæd"
+      ],
+      "editorialBroadIpa": "bæd",
+      "sourceStatus": "pronunciation-entry-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "bed",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/bed",
+      "selectedEntry": "bed in American English; common noun, not BEd abbreviation",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+      "retrievedUsIpa": [
+        "bɛd"
+      ],
+      "editorialBroadIpa": "bɛd",
+      "sourceStatus": "pronunciation-entry-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "vine",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/vine",
+      "selectedEntry": "vine in American English; common noun",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+      "retrievedUsIpa": [
+        "vaɪn"
+      ],
+      "editorialBroadIpa": "vaɪn",
+      "sourceStatus": "pronunciation-entry-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "wine",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/wine",
+      "selectedEntry": "wine in American English; common noun",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+      "retrievedUsIpa": [
+        "waɪn"
+      ],
+      "editorialBroadIpa": "waɪn",
+      "sourceStatus": "pronunciation-entry-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "vest",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/vest",
+      "selectedEntry": "vest in American English; clothing noun",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+      "retrievedUsIpa": [
+        "vɛst"
+      ],
+      "editorialBroadIpa": "vɛst",
+      "sourceStatus": "pronunciation-entry-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "west",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/west",
+      "selectedEntry": "west in American English; direction noun, not surname West",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+      "retrievedUsIpa": [
+        "wɛst"
+      ],
+      "editorialBroadIpa": "wɛst",
+      "sourceStatus": "pronunciation-entry-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "vet",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/vet",
+      "selectedEntry": "vet in American English 1; veterinarian noun",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+      "retrievedUsIpa": [
+        "vɛt"
+      ],
+      "editorialBroadIpa": "vɛt",
+      "sourceStatus": "pronunciation-entry-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "wet",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/wet",
+      "selectedEntry": "wet in American English; adjective",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+      "retrievedUsIpa": [
+        "wɛt"
+      ],
+      "editorialBroadIpa": "wɛt",
+      "sourceStatus": "pronunciation-entry-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "thin",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/thin",
+      "selectedEntry": "thin in American English; adjective",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+      "retrievedUsIpa": [
+        "θɪn"
+      ],
+      "editorialBroadIpa": "θɪn",
+      "sourceStatus": "pronunciation-entry-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "fin",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/fin",
+      "selectedEntry": "fin in American English 1; fish-organ noun, not French loanword fin",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+      "retrievedUsIpa": [
+        "fɪn"
+      ],
+      "editorialBroadIpa": "fɪn",
+      "sourceStatus": "pronunciation-entry-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "three",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/three",
+      "selectedEntry": "three in American English; number",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+      "retrievedUsIpa": [
+        "θri"
+      ],
+      "editorialBroadIpa": "θɹi",
+      "sourceStatus": "pronunciation-entry-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "free",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/free",
+      "selectedEntry": "free in American English; independent adjective, not suffix -free",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+      "retrievedUsIpa": [
+        "fri"
+      ],
+      "editorialBroadIpa": "fɹi",
+      "sourceStatus": "pronunciation-entry-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "thirst",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/thirst",
+      "selectedEntry": "thirst in American English; noun",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+      "retrievedUsIpa": [
+        "θɜrst"
+      ],
+      "editorialBroadIpa": "θɝst",
+      "sourceStatus": "pronunciation-entry-read",
+      "audioStatus": "not-listened"
+    },
+    {
+      "word": "first",
+      "referenceUrl": "https://www.collinsdictionary.com/us/dictionary/english/first",
+      "selectedEntry": "first in American English; ordinal adjective",
+      "source": "Webster’s New World College Dictionary, 5th Digital Edition (2025), via Collins",
+      "retrievedUsIpa": [
+        "fɜrst"
+      ],
+      "editorialBroadIpa": "fɝst",
+      "sourceStatus": "pronunciation-entry-read",
+      "audioStatus": "not-listened"
+    }
+  ],
+  "restrictionsByContrast": {
+    "en-foot-goose": [
+      "Use the selected American /ʊ–u/ citation forms. The legacy /uː/ label is represented as broad American /u/ here, not a new contrast.",
+      "Two of the three pairs end in /l/. Approve each actual profile only if full/fool and pull/pool remain audibly distinct; the dictionary cannot guarantee a given voice’s realization.",
+      "Kook is an informal, potentially disparaging noun. Teach its meaning neutrally, without describing the learner this way."
+    ],
+    "en-trap-dress": [
+      "Target the selected American TRAP /æ/ and DRESS /ɛ/ citation forms; this is not an assertion that all English accents realize those vowels identically.",
+      "The legacy route says e, but its own phonetic declaration is /ɛ/. Do not relabel this as FACE /eɪ/.",
+      "Bat means the animal, met is the past tense of meet, and bet means a wager. These entries do not require a different spoken form for their selected meanings."
+    ],
+    "en-v-w": [
+      "Use selected American citation forms with distinct initial /v/ and /w/.",
+      "All selected pairs match in the remainder of the word. Legacy very/wary was not reused; no claim is made about its dialect-specific suitability because those dictionary entries were not audited for this batch.",
+      "Vet is the informal word for veterinarian. West is the direction, not a proper name."
+    ],
+    "en-th-f": [
+      "Use the selected rhotic American citation forms. Thirst/first use /ɝ/ here; do not mix rhotic and non-rhotic readings within a profile.",
+      "A recording that realizes target /θ/ as /f/ cannot represent two distinct answer categories for this lesson. This reference choice is not a judgment that another English variety is wrong.",
+      "Fin is the fish-organ word /fɪn/, not the borrowed French word /fɛ̃/. Inspect the actual recording or synthesis response rather than assuming the spelling settles pronunciation.",
+      "Three/free have /ɹ/ after the target. Their target is only the first consonant, with category-matched context within each pair."
+    ]
+  },
+  "rejectedCandidates": [
+    {
+      "pair": [
+        "soot",
+        "suit"
+      ],
+      "reason": "The Webster American soot entry gives both /sʊt/ and /sut/. The latter erases the target contrast with /sut/ suit; no unconditional starter pair is asserted.",
+      "sources": [
+        "https://www.collinsdictionary.com/us/dictionary/english/soot",
+        "https://www.collinsdictionary.com/us/dictionary/english/suit"
+      ],
+      "retrievedUsIpa": {
+        "soot": [
+          "sʊt",
+          "sut"
+        ],
+        "suit": [
+          "sut"
+        ]
+      }
+    }
+  ]
+}

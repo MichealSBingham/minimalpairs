@@ -1,0 +1,128 @@
+{
+  "date": "2026-09-28",
+  "routes": [
+    {
+      "legacyPath": "/english/e-vs-uh",
+      "contrastId": "en-dress-strut",
+      "proposedGuidePath": "/learn/en-dress-strut",
+      "legacyDeclaredTitle": "English /ɛ/ vs /ʌ/",
+      "legacyDeclaredPhonemes": [
+        "ɛ",
+        "ʌ"
+      ],
+      "legacyComponent": "a2",
+      "evidence": "Saved bundle hub card declaration and exact route-to-component binding; no old examples reused.",
+      "authoritativeStatusAtSelection": "missing-contrast"
+    },
+    {
+      "legacyPath": "/english/n-vs-ng",
+      "contrastId": "en-n-ng",
+      "proposedGuidePath": "/learn/en-n-ng",
+      "legacyDeclaredTitle": "English /n/ vs /ŋ/",
+      "legacyDeclaredPhonemes": [
+        "n",
+        "ŋ"
+      ],
+      "legacyComponent": "N2",
+      "evidence": "Saved bundle hub card declaration and exact route-to-component binding; no old examples reused.",
+      "authoritativeStatusAtSelection": "missing-contrast"
+    },
+    {
+      "legacyPath": "/english/t-vs-d",
+      "contrastId": "en-t-d",
+      "proposedGuidePath": "/learn/en-t-d",
+      "legacyDeclaredTitle": "English /t/ vs /d/",
+      "legacyDeclaredPhonemes": [
+        "t",
+        "d"
+      ],
+      "legacyComponent": "V2",
+      "evidence": "Saved bundle hub card declaration and exact route-to-component binding; no old examples reused.",
+      "authoritativeStatusAtSelection": "missing-contrast"
+    },
+    {
+      "legacyPath": "/english/uh-vs-ah",
+      "contrastId": "en-strut-ah",
+      "proposedGuidePath": "/learn/en-strut-ah",
+      "legacyDeclaredTitle": "English /ʌ/ vs /ɑː/",
+      "legacyDeclaredPhonemes": [
+        "ʌ",
+        "ɑː"
+      ],
+      "legacyComponent": "n4",
+      "evidence": "Saved bundle hub card declaration and exact route-to-component binding; no old examples reused.",
+      "authoritativeStatusAtSelection": "missing-contrast"
+    }
+  ],
+  "rationale": "Missing legacy topics with three independently verified strict pairs and useful initial/final consonant and vowel coverage. This is editorial selection, not a traffic ranking.",
+  "baseline": {
+    "integratedEnglishTopics": 6,
+    "legacyEnglishTopics": 24,
+    "previousIsolatedBatchTopics": 10,
+    "thisIsolatedBatchTopics": 4,
+    "potentialTopicsIfAllIsolatedBatchesIntegrated": 20,
+    "remainingTopicsAfterAllBatches": [
+      "/english/voiced-th-vs-d",
+      "/english/voiced-th-vs-z",
+      "/english/aw-vs-o",
+      "/english/v-vs-b"
+    ]
+  },
+  "remainingLegacyBindings": [
+    {
+      "legacyPath": "/english/voiced-th-vs-d",
+      "legacyDeclaredTitle": "English /ð/ vs /d/",
+      "legacyDeclaredPhonemes": [
+        "ð",
+        "d"
+      ],
+      "legacyComponent": "jN",
+      "status": "not-audited-in-this-batch",
+      "nextAction": "Source-audit three useful strict pairs, intended lexical senses and compatible target positions. No claim of impossibility is made."
+    },
+    {
+      "legacyPath": "/english/voiced-th-vs-z",
+      "legacyDeclaredTitle": "English /ð/ vs /z/",
+      "legacyDeclaredPhonemes": [
+        "ð",
+        "z"
+      ],
+      "legacyComponent": "PN",
+      "status": "not-audited-in-this-batch",
+      "nextAction": "Source-audit three useful strict pairs, intended lexical senses and compatible target positions. No claim of impossibility is made."
+    },
+    {
+      "legacyPath": "/english/aw-vs-o",
+      "legacyDeclaredTitle": "English /ɔː/ vs /ɒ/",
+      "legacyDeclaredPhonemes": [
+        "ɔː",
+        "ɒ"
+      ],
+      "legacyComponent": "E2",
+      "status": "not-audited-in-this-batch",
+      "nextAction": "Decide and label the target dialect explicitly; do not silently replace /ɒ/ with /ɑ/ or assume every US voice preserves a low-back contrast."
+    },
+    {
+      "legacyPath": "/english/v-vs-b",
+      "legacyDeclaredTitle": "English /v/ vs /b/",
+      "legacyDeclaredPhonemes": [
+        "v",
+        "b"
+      ],
+      "legacyComponent": "c4",
+      "status": "not-audited-in-this-batch",
+      "nextAction": "Source-audit three useful strict pairs, intended lexical senses and compatible target positions. No claim of impossibility is made."
+    }
+  ],
+  "exclusionScope": "Current curriculum and batches2/3: English spelling and normalized English IPA. Reserved assessments: spellings across all languages and normalized English IPA. French training ton/pin have different scoped pronunciations and do not prohibit the English words.",
+  "demandEvidence": "The dated revenue-operation-2026-09-27 report has English hub evidence and three already-restored measured topics. No specific observed GSC count is assigned to these four.",
+  "inputSha256": {
+    "rescue/content/legacy-coverage.json": "503071bc886ac5f7de477526a78750e60476b8e7ce0045d237008a60625ef818",
+    "rescue/content/curriculum.json": "9e75f976f8b72d0df1f6b5da4c6afda06074d4f13ae91a533c0a77ebe7fe1db6",
+    "rescue/content/transfer-candidates.json": "14e960285239b919d5f48bddfc1d6b2a59fb5a9cfecc5789b17df4e965e9bea5",
+    "rescue/content/english-legacy-batch2/candidates.json": "899e8e9e254f1d1dc596c360b39516b3e2ed16d5ad7fe3b2cd2c98939a5a9d53",
+    "rescue/content/english-legacy-batch3/candidates.json": "88b73b87f70c2df6990a81074569d5b719a2297035b1dd59e4b371617c4c13c4",
+    "rescue/discovery/legacy-bundle.js": "cfa66c8b8fa6a63bdc5e192bd540a0d69210ad5403edf3a1fb8d7b4143e6f78e"
+  },
+  "hashPolicy": "These hashes identify the selection baseline; the validator also checks exclusions against the current files. Later main-file changes require fresh review, not a silent coverage claim."
+}

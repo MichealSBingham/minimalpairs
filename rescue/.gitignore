@@ -1,0 +1,14 @@
+discovery/
+private/
+**/.env
+**/.env.*
+!**/.env.example
+**/node_modules/
+**/.venv/
+**/__pycache__/
+**/.astro/
+**/dist/
+
+# Disposable isolated-browser traces and test-run output
+/qa/e2e/
+/qa/e2e-results.json

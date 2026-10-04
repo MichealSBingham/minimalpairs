@@ -1,0 +1,153 @@
+{
+  "preparedAt": "2026-09-30",
+  "status": "request-only-no-generation-authorized",
+  "requiredProfiles": 2,
+  "uniqueWords": 12,
+  "requiredCompleteCollectionClips": 24,
+  "approvedClips": 0,
+  "languageId": "fr",
+  "locale": "fr-FR",
+  "words": [
+    {
+      "languageId": "fr",
+      "locale": "fr-FR",
+      "setId": "fr-u-y-depth-final-v1",
+      "pairId": "fr-depth-dessous-dessus",
+      "category": 0,
+      "text": "dessous",
+      "ipa": "/dəsu/",
+      "meaning": "underneath",
+      "status": "request-only-unapproved"
+    },
+    {
+      "languageId": "fr",
+      "locale": "fr-FR",
+      "setId": "fr-u-y-depth-final-v1",
+      "pairId": "fr-depth-dessous-dessus",
+      "category": 1,
+      "text": "dessus",
+      "ipa": "/dəsy/",
+      "meaning": "on top",
+      "status": "request-only-unapproved"
+    },
+    {
+      "languageId": "fr",
+      "locale": "fr-FR",
+      "setId": "fr-u-y-depth-final-v1",
+      "pairId": "fr-depth-egout-aigu",
+      "category": 0,
+      "text": "égout",
+      "ipa": "/eɡu/",
+      "meaning": "a sewer",
+      "status": "request-only-unapproved"
+    },
+    {
+      "languageId": "fr",
+      "locale": "fr-FR",
+      "setId": "fr-u-y-depth-final-v1",
+      "pairId": "fr-depth-egout-aigu",
+      "category": 1,
+      "text": "aigu",
+      "ipa": "/eɡy/",
+      "meaning": "sharp or pointed",
+      "status": "request-only-unapproved"
+    },
+    {
+      "languageId": "fr",
+      "locale": "fr-FR",
+      "setId": "fr-u-y-depth-final-v1",
+      "pairId": "fr-depth-ecrou-ecru",
+      "category": 0,
+      "text": "écrou",
+      "ipa": "/ekʁu/",
+      "meaning": "a nut used with a screw or bolt",
+      "status": "request-only-unapproved"
+    },
+    {
+      "languageId": "fr",
+      "locale": "fr-FR",
+      "setId": "fr-u-y-depth-final-v1",
+      "pairId": "fr-depth-ecrou-ecru",
+      "category": 1,
+      "text": "écru",
+      "ipa": "/ekʁy/",
+      "meaning": "unbleached, describing cloth",
+      "status": "request-only-unapproved"
+    },
+    {
+      "languageId": "fr",
+      "locale": "fr-FR",
+      "setId": "fr-u-y-depth-medial-v1",
+      "pairId": "fr-depth-bouche-buche",
+      "category": 0,
+      "text": "bouche",
+      "ipa": "/buʃ/",
+      "meaning": "a mouth",
+      "status": "request-only-unapproved"
+    },
+    {
+      "languageId": "fr",
+      "locale": "fr-FR",
+      "setId": "fr-u-y-depth-medial-v1",
+      "pairId": "fr-depth-bouche-buche",
+      "category": 1,
+      "text": "bûche",
+      "ipa": "/byʃ/",
+      "meaning": "a log for a fire",
+      "status": "request-only-unapproved"
+    },
+    {
+      "languageId": "fr",
+      "locale": "fr-FR",
+      "setId": "fr-u-y-depth-medial-v1",
+      "pairId": "fr-depth-joute-jute",
+      "category": 0,
+      "text": "joute",
+      "ipa": "/ʒut/",
+      "meaning": "a contest or verbal sparring match",
+      "status": "request-only-unapproved"
+    },
+    {
+      "languageId": "fr",
+      "locale": "fr-FR",
+      "setId": "fr-u-y-depth-medial-v1",
+      "pairId": "fr-depth-joute-jute",
+      "category": 1,
+      "text": "jute",
+      "ipa": "/ʒyt/",
+      "meaning": "jute fibre used in sacks and rope",
+      "status": "request-only-unapproved"
+    },
+    {
+      "languageId": "fr",
+      "locale": "fr-FR",
+      "setId": "fr-u-y-depth-medial-v1",
+      "pairId": "fr-depth-bouleau-bulot",
+      "category": 0,
+      "text": "bouleau",
+      "ipa": "/bulo/",
+      "meaning": "a birch tree",
+      "status": "request-only-unapproved"
+    },
+    {
+      "languageId": "fr",
+      "locale": "fr-FR",
+      "setId": "fr-u-y-depth-medial-v1",
+      "pairId": "fr-depth-bouleau-bulot",
+      "category": 1,
+      "text": "bulot",
+      "ipa": "/bylo/",
+      "meaning": "a whelk shellfish",
+      "status": "request-only-unapproved"
+    }
+  ],
+  "reviewRequirements": [
+    "Two complete licensed profiles covering both categories and all 12 words, with exact-take listening review; no synthetic/acoustic shortcut to approval.",
+    "Same profile for A/B, another complete profile of the same variety for X; X uses a different lexical pair within the same set/group.",
+    "Dessous/dessus retain schwa in both selected takes per profile; neither receives a category-specific added syllable or consonant.",
+    "Égout/aigu both begin /eɡ/; reject initial /ɛ/ only in aigu. Écrou/écru share /ekʁ/.",
+    "Bouche/bûche and joute/jute end in consonants without an added schwa. Preserve final /ʃ,t/ when trimming.",
+    "Bouleau/bulot target the FIRST vowel; keep the second vowel /o/ in both. Do not confuse bulot with boulot.",
+    "Glosses specify joute as a contest, jute as textile fibre, écru as unbleached and bulot as a whelk. Approve natural dictionary-matching speech, not exaggerated vowel duration."
+  ]
+}

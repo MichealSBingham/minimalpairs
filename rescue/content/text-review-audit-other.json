@@ -1,0 +1,40 @@
+{
+  "languages": [
+    "es",
+    "it",
+    "zh",
+    "pt",
+    "ru"
+  ],
+  "summary": "Preliminary text-only audit of 15 current contrasts, 44 pairs and 88 word entries (86 distinct language/word combinations). All pairs passed the local checks for category order, intended token differences, target indexes and eligible cross-word partners. No supported word replacement, IPA correction or category reversal was identified in this bounded pass. One confirmed correction concerns the Italian dictionary citation for varo. External checking was targeted, not a dictionary-by-dictionary certification of every word or a native-speaker linguistic review. No audio was generated or assessed; curriculum and product files were not changed.",
+  "checksPerformed": [
+    "Input: rescue/content/curriculum.json; SHA-256 9e75f976f8b72d0df1f6b5da4c6afda06074d4f13ae91a533c0a77ebe7fe1db6.",
+    "Inspected every current word, IPA, gloss, token array, kind, category label, target position and trial group in the five assigned languages. Scope: es: 3 contrasts, 9 pairs, 18 word entries; it: 3 contrasts, 9 pairs, 18 word entries; zh: 3 contrasts, 9 pairs, 18 word entries; pt: 3 contrasts, 9 pairs, 18 word entries; ru: 3 contrasts, 8 pairs, 16 word entries.",
+    "Local checks: every pair has two populated word records and categoryByWordIndex [0,1]; equal token-array lengths; exactly the declared target differs for minimal/tone pairs; stress pairs retain the same segment sequence. No discrepancies found.",
+    "Local checks: phoneme categories match target-token order; tone labels and tone tokens agree; Italian feature pairs consistently order singleton before geminate; Russian feature pairs consistently order plain before palatalized. No discrepancies found.",
+    "Enumerated cross-word eligibility for both target categories of all 44 reference pairs: another compatible pair exists in every case, and both reference spellings are excluded from X. Russian hard/soft initial and final groups each have two pairs and remain position-matched.",
+    "Spanish: checked Mexican Spanish phonemic tap/trill, stop variation and contrastive stress against Avelino, Mexico City Spanish, https://doi.org/10.1017/S0025100316000232 . The paper supports the categories, but documents nontrilled realizations of /r/ too. Existing word pairs are not invalidated; phonemic labels must not be read as guarantees of one universal phonetic realization.",
+    "Italian: checked gemination and the fato/fatto contrast in Bertinetto and Loporcaro, https://ricerca.sns.it/retrieve/bf9bc2cf-6ebc-4f8b-a0fc-6f081b2d64e4/98_Bertinetto%26Loporcaro_Italian_JIPA_post%20review.pdf . Checked Treccani entries for pena, penna, pala1, palla1, fino1, fatto2 and varo1/varo2/varo3. Pena and penna both retain closed e; no vowel correction is supported. Broad /n/ in panca/banca and omission of predictable vowel length were not treated as phonemic errors.",
+    "Mandarin: verified the tone-category descriptions against the Open University teaching source https://www.open.edu/openlearn/mod/oucontent/view.php?id=106435&section=2 . Checked the potentially dialect-sensitive pi3 classifier against its current CC-CEDICT entry at https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E5%8C%B9 . Taiwan Ministry of Education separately lists pi1 for the animal classifier at https://dict.concised.moe.edu.tw/dictView.jsp?ID=2935 ; this is a variety distinction, not grounds for changing the expressly Putonghua-scoped pair. The existing note on the alternate analysis of the syllabic sound in shi is retained as a convention, not marked wrong.",
+    "Portuguese: spot-checked the possibly unfamiliar pala gloss at https://dicionario.priberam.org/pala and the caco/caso pair spelled caço/caso via https://dicionario.priberam.org/ca%C3%A7ar . The declared words and meanings are supported. Accessed the Barbosa/Albano Brazilian Portuguese publisher page; its full phonological text was not available through the HTML view. Broad transcription versus surface unstressed-vowel realization remains outside full certification; no unsupported correction was proposed.",
+    "Russian: checked stress and meanings of угол/уголь against Gramota dictionary results, including https://gramota.ru/poisk?mode=slovari&page=3&query=%D0%A3%D0%B3%D0%BE%D0%BB&simple=0 . Verified the identity and palatalization scope of the cited Yanushevskaya/Buncic Russian paper through its indexed publisher text; the full page could not be retrieved in this pass. Existing broad-phonemic reduction notes were considered, so surface schwa or vowel centralization was not incorrectly treated as an extra phonemic difference.",
+    "Limitations: no claim of full linguistic certification, no acoustic/phonetic judgment, no lesson-effectiveness validation, and no new pairs proposed. Existing editor-curated labels are not upgraded by these checks."
+  ],
+  "findings": [
+    {
+      "languageId": "it",
+      "contrastId": "it-f-v",
+      "pairId": "it-faro-varo",
+      "severity": "correction",
+      "message": "The source URL for varo points to Treccani varo2, an archaic adjective meaning vario, rather than the noun meaning launching a vessel. The curriculum word, gloss and initial /f/-/v/ category order do not need changing on this evidence.",
+      "suggestedCorrection": "Replace only https://www.treccani.it/vocabolario/varo2/ with https://www.treccani.it/vocabolario/varo3/ in this pair’s sources. Varo1 is a medical adjective and is not the correct replacement either.",
+      "sources": [
+        "https://www.treccani.it/vocabolario/varo2/",
+        "https://www.treccani.it/vocabolario/varo3/",
+        "https://www.treccani.it/vocabolario/varo1/"
+      ]
+    }
+  ],
+  "reviewedAt": "2026-09-30T21:03:57.395091+00:00",
+  "status": "preliminary-text-audit"
+}

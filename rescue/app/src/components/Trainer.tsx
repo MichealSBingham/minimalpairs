@@ -1,0 +1,310 @@
+import ReportRecording from './ReportRecording';
+import type {PlayedRecording} from '../lib/audio';
+import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from 'react';
+import { completeMeasuredPractice, measuredAudioFailure, measuredFirstAnswer, startMeasuredPractice } from '../lib/measurement';
+import { recommendReview, type ReviewRecommendation } from '../lib/review-recommendation';
+import { journeyStats, selectJourneyContrasts, type JourneyMode } from '../lib/journey';
+import {assignAvailableVoices, referenceVoices, wordVoices, type AvailableClip} from '../lib/round-voices';
+import MembershipPanel from './MembershipPanel';
+import ReviewSuggestion from './ReviewSuggestion';
+import SessionFeedback from './SessionFeedback';
+import { getAudioStatus, getVoices, getPracticeAudio, playWord, stopAudio } from '../lib/audio';
+import { actualSessionAudioCollection, UNKNOWN_AUDIO_COLLECTION } from '../lib/session-audio-source';
+import { assignSessionVoices, buildSession, revisitMistake, type PracticeQuestion as Question, type WordIndex } from '../lib/practice-engine';
+import { practiceFocus } from '../lib/practice-focus';
+import { Header, Icon, readProgress, writeProgress, type Language, type PracticeSession } from './ui';
+import '../styles/trainer-redesign.css';
+
+type Sample = 'a' | 'b' | 'x';
+type Heard = Record<Sample, boolean>;
+type Voice = { id: string; name: string; description?: string };
+type JourneyQuestion = Question & { contrastId: string };
+type Attempt = { contrastId: string; pairId: string; word: string; chosenWord: string; correct: boolean };
+const unheard = (): Heard => ({ a: false, b: false, x: false });
+const nativeLanguages = ['English', 'French', 'Spanish', 'German', 'Italian', 'Portuguese', 'Russian', 'Mandarin Chinese', 'Other'];
+const nativeLanguageIds: Record<string, string> = { English: 'en', French: 'fr', Spanish: 'es', German: 'de', Italian: 'it', Portuguese: 'pt', Russian: 'ru', 'Mandarin Chinese': 'zh' };
+
+export default function Trainer({ languages = [], initialLanguage, initialContrast, audioManifestPath, audioCollectionId = 'qwen-starter-v1', headerContent, signedIn = false, exerciseAccess = 'paid', onRetryAccess }: { languages: Language[]; initialLanguage?: string; initialContrast?: string; audioManifestPath?: string; audioCollectionId?: string; headerContent?: ReactNode; signedIn?: boolean; exerciseAccess?: 'checking' | 'free' | 'paid' | 'lifetime' | 'error'; onRetryAccess?: () => void }) {
+  const [languageId, setLanguageId] = useState(initialLanguage || languages[0]?.id || '');
+  const language = languages.find(item => item.id === languageId) || languages[0];
+  const [contrastId, setContrastId] = useState(initialContrast || language?.contrasts[0]?.id || '');
+  const contrast = language?.contrasts.find(item => item.id === contrastId) || language?.contrasts[0];
+  const fullAccess = exerciseAccess === 'paid' || exerciseAccess === 'lifetime';
+  const [pendingDiagnostic, setPendingDiagnostic] = useState(false);
+  const [pendingLesson, setPendingLesson] = useState<string | null>(null);
+  const [sessionRounds, setSessionRounds] = useState(12);
+  const [checkRounds, setCheckRounds] = useState(4);
+  const [journeyMode, setJourneyMode] = useState<JourneyMode>('focused');
+  const [history, setHistory] = useState<PracticeSession[]>([]);
+  const selectedContrasts = selectJourneyContrasts(language?.contrasts || [], history, language?.id || '', fullAccess, journeyMode, contrast?.id || '');
+  const roundsPerGroup = journeyMode === 'focused' ? sessionRounds : journeyMode === 'diagnostic' ? checkRounds : Math.max(2, Math.floor(sessionRounds / Math.max(1, selectedContrasts.length)));
+  const plannedTotal = roundsPerGroup * selectedContrasts.length;
+  const locked = journeyMode === 'focused' && !fullAccess && (language?.contrasts.findIndex(item => item.id === contrast?.id) ?? 0) >= 3;
+  const [nativeLanguage, setNativeLanguage] = useState('');
+  const [audioRevision, setAudioRevision] = useState(0);
+  const [availableClips, setAvailableClips] = useState<AvailableClip[]>([]);
+  const [voices, setVoices] = useState<Voice[]>([]);
+  const [preparedAudioKey, setPreparedAudioKey] = useState<string | null>(null);
+  const requiredWords = selectedContrasts.flatMap(c => c.pairs.flatMap(pair => pair.words.map(word => word.text)));
+  const audioKey = JSON.stringify([language?.id, contrast?.id, audioManifestPath || '', requiredWords, audioRevision]);
+  const audioPrepared = preparedAudioKey === audioKey;
+  const [, setAudioStatus] = useState('Preparing audio…');
+  const [phase, setPhase] = useState<'ready' | 'practice' | 'complete'>('ready');
+  const [questions, setQuestions] = useState<JourneyQuestion[]>([]);
+  const [index, setIndex] = useState(0);
+  const [answer, setAnswer] = useState<WordIndex | null>(null);
+  const [attempts, setAttempts] = useState<Attempt[]>([]);
+  const [playedClips,setPlayedClips]=useState<Partial<Record<Sample,PlayedRecording>>>({});
+  useEffect(()=>setPlayedClips({}),[index,phase,contrastId,languageId]);
+  const [heard, setHeard] = useState<Heard>(unheard);
+  const [playing, setPlaying] = useState<Sample | null>(null);
+  const [sequencePlaying, setSequencePlaying] = useState(false);
+  const [audioError, setAudioError] = useState('');
+  const [textHints, setTextHints] = useState(false);
+  const [roundRevealed, setRoundRevealed] = useState(false);
+  const [storageError, setStorageError] = useState(false);
+  const [completedSession, setCompletedSession] = useState<PracticeSession | null>(null);
+  const [reviewSuggestion, setReviewSuggestion] = useState<ReviewRecommendation | null>(null);
+  const [cloudSave, setCloudSave] = useState<'pending' | 'saved' | 'disabled' | 'error'>('disabled');
+  const completingId = useRef<string | null>(null);
+  const attemptId = useRef('');
+  const sessionAudioCollection = useRef(UNKNOWN_AUDIO_COLLECTION);
+  const playbackGeneration = useRef(0);
+  const busy = useRef(false);
+  const hintsUsed = useRef(false);
+  const question = questions[index];
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const saved = readProgress(); setHistory(saved.sessions);
+    const selected = languages.find(item => item.id === (params.get('language') || initialLanguage || saved.preferredLanguage)) || language;
+    if (selected) {
+      setLanguageId(selected.id);
+      setContrastId(selected.contrasts.find(item => item.id === (params.get('contrast') || initialContrast))?.id || selected.contrasts[0]?.id || '');
+    }
+    setNativeLanguage(saved.nativeLanguage || '');
+    try {const settings=JSON.parse(localStorage.getItem('minimalpairs.session-settings') || '{}'); if([6,12,24].includes(settings.rounds)) setSessionRounds(settings.rounds); if([4,8].includes(settings.checkRounds)) setCheckRounds(settings.checkRounds);} catch {}
+    let active = true;
+    void import('../lib/progress-sync').then(({loadAccountProgress}) => loadAccountProgress(saved)).then(result => {if(active) setHistory(previous => [...new Map([...result.progress.sessions, ...previous].map(s => [s.id,s])).values()]);}).catch(() => {});
+    return () => { active = false; playbackGeneration.current += 1; stopAudio(); };
+  }, []);
+  useEffect(() => {
+    if (!language) return;
+    let cancelled = false;
+    setAudioStatus('Preparing audio…'); setPreparedAudioKey(null); setVoices([]);
+    if (!audioManifestPath) {
+      getPracticeAudio(language.id, undefined, true).then(data => {if(!cancelled){setAvailableClips(data.clips);setVoices(data.voices);setPreparedAudioKey(audioKey);}}).catch(() => {if(!cancelled){setAudioError('Audio could not load. Please refresh to retry.');setPreparedAudioKey(audioKey);}});
+      return () => {cancelled=true;};
+    }
+    Promise.all([getVoices(language.id, audioManifestPath, requiredWords), getAudioStatus(language.id, audioManifestPath, requiredWords)]).then(([items, status]) => {
+      if (!cancelled) { setVoices(items); setAudioStatus(status.label); setPreparedAudioKey(audioKey); }
+    }).catch(() => { if (!cancelled) { setVoices([]); setAudioStatus('Audio is unavailable for this sound contrast.'); setPreparedAudioKey(audioKey); } });
+    return () => { cancelled = true; };
+  }, [audioKey]);
+  useEffect(() => {
+    const back = () => { const params = new URLSearchParams(location.search); const chosen = languages.find(l => l.id === params.get('language')) || languages[0]; if(chosen){reset();setJourneyMode('focused');setLanguageId(chosen.id);setContrastId(chosen.contrasts.find(c => c.id === params.get('contrast'))?.id || chosen.contrasts[0].id);} };
+    window.addEventListener('popstate',back); return () => window.removeEventListener('popstate',back);
+  }, [languages]);
+  function cancelPlayback() { playbackGeneration.current += 1; stopAudio(); busy.current = false; setPlaying(null); setSequencePlaying(false); }
+  function reset() { setAudioRevision(v=>v+1); setPendingDiagnostic(false); setPendingLesson(null); cancelPlayback(); setPhase('ready'); setQuestions([]); setIndex(0); setAnswer(null); setRoundRevealed(false); setAttempts([]); setHeard(unheard()); setAudioError(''); setCompletedSession(null); setReviewSuggestion(null); completingId.current = null; }
+  function changeLanguage(id: string) {
+    const selected = languages.find(item => item.id === id);
+    if (!selected) return;
+    reset(); setJourneyMode('focused'); setLanguageId(id); setContrastId(selected.contrasts[0]?.id || '');
+    writeProgress({ ...readProgress(), preferredLanguage: id });
+    const url = new URL(window.location.href); url.searchParams.set('language', id); url.searchParams.delete('contrast'); window.history.pushState(null, '', url);
+  }
+  function sampleWord(item: Question, sample: Sample) { return sample === 'x' ? item.testPair.words[item.target] : item.pair.words[item.order[sample === 'a' ? 0 : 1]]; }
+  async function playSample(item: Question, sample: Sample, token: number) {
+    if (token !== playbackGeneration.current) return;
+    setPlaying(sample);
+    const played=await playWord(language.id, sampleWord(item, sample), sample === 'x' ? item.testVoiceId : item.referenceVoiceId, audioManifestPath);
+    if (token === playbackGeneration.current) { setPlayedClips(previous=>({...previous,[sample]:played})); setHeard(previous => ({ ...previous, [sample]: true })); setPlaying(null); }
+  }
+  async function listen(sample: Sample) {
+    if (!question || busy.current) return;
+    busy.current = true; const token = ++playbackGeneration.current; setAudioError('');
+    try { await playSample(question, sample, token); }
+    catch { if (token === playbackGeneration.current) { setAudioError(`${sample.toUpperCase()} could not play. Try again.`); measuredAudioFailure(attemptId.current, index + 1); } }
+    finally { if (token === playbackGeneration.current) { busy.current = false; setPlaying(null); } }
+  }
+  async function listenSequence(item: Question | undefined = question, round = index + 1) {
+    if (!item || busy.current) return;
+    busy.current = true; const token = ++playbackGeneration.current; setAudioError(''); setSequencePlaying(true);
+    try {
+      for (const sample of ['a', 'b', 'x'] as Sample[]) {
+        if (token !== playbackGeneration.current) break;
+        await playSample(item, sample, token);
+        if (sample !== 'x') await new Promise(resolve => setTimeout(resolve, 350));
+      }
+    } catch { if (token === playbackGeneration.current) { setAudioError('One of the sounds could not play. Use its play button to try again.'); measuredAudioFailure(attemptId.current, round); } }
+    finally { if (token === playbackGeneration.current) { busy.current = false; setPlaying(null); setSequencePlaying(false); } }
+  }
+  function startSession() {
+    if (locked || exerciseAccess === 'checking' || !contrast || busy.current || !audioPrepared || !voices.length) return;
+    let blocks: JourneyQuestion[][];
+    try { blocks = selectedContrasts.map(c => {
+      if(audioManifestPath) return assignSessionVoices(buildSession(c.pairs,roundsPerGroup),voices.map(v=>v.id)).map(q=>({...q,contrastId:c.id}));
+      const pairs=c.pairs.filter(p=>p.words.every(w=>wordVoices(availableClips,language.id,w).length>=2));
+      return assignAvailableVoices(buildSession(pairs,roundsPerGroup,Math.random,p=>referenceVoices(availableClips,language.id,p).length>0),availableClips,language.id).map(q=>({...q,contrastId:c.id}));
+    }); } catch { setAudioError('This session needs updated recordings. Refresh to retry or choose another lesson.'); return; }
+    if (blocks.some(block => !block.length)) { setAudioError('A sound group is not ready for this session yet. Choose a focused exercise.'); return; }
+    const queue = Array.from({length: roundsPerGroup}, (_,i) => blocks.flatMap(block => block[i] ? [block[i]] : [])).flat();
+    if (!queue.length) { setAudioError('This exercise needs more examples before practice can start.'); return; }
+    completingId.current = null; setCloudSave('disabled'); setReviewSuggestion(null);
+    hintsUsed.current = journeyMode === 'diagnostic' ? false : textHints;
+    sessionAudioCollection.current = actualSessionAudioCollection(!audioManifestPath ? `chatterbox-${language.id === 'en' ? 'us' : language.id}-four-voices-v1` : audioCollectionId, queue.flatMap(item => [item.referenceVoiceId, item.testVoiceId]));
+    attemptId.current = `${journeyMode}-${globalThis.crypto?.randomUUID?.() || Date.now()}`;
+    startMeasuredPractice(attemptId.current, { language_id: language.id, contrast_id: contrast.id, audio_collection: sessionAudioCollection.current, text_hints_used: hintsUsed.current, total: queue.length });
+    setQuestions(queue); setIndex(0); setAnswer(null); setRoundRevealed(false); setAttempts([]); setHeard(unheard()); setCompletedSession(null); setStorageError(false); setPhase('practice'); void listenSequence(queue[0], 1);
+  }
+  function continueLesson(id: string) {
+    reset(); setJourneyMode('focused'); setContrastId(id); setPendingLesson(id);
+    const url = new URL(window.location.href); url.searchParams.set('language', language.id); url.searchParams.set('contrast', id); window.history.pushState(null, '', url);
+  }
+  useEffect(() => {
+    if (!pendingLesson || contrast?.id !== pendingLesson || journeyMode !== 'focused' || phase !== 'ready' || !audioPrepared || exerciseAccess === 'checking') return;
+    setPendingLesson(null);
+    if (locked || !voices.length) { setAudioError('This lesson could not start. Choose another lesson or try again.'); return; }
+    startSession();
+    requestAnimationFrame(() => document.querySelector('.trainer-card')?.scrollIntoView({behavior:'smooth', block:'start'}));
+  }, [pendingLesson, contrast?.id, journeyMode, phase, audioPrepared, exerciseAccess, voices]);
+  useEffect(() => {
+    if (!pendingDiagnostic || phase !== 'ready' || !audioPrepared || exerciseAccess === 'checking') return;
+    setPendingDiagnostic(false);
+    if (!voices.length) { setAudioError('The session could not load. Please try again.'); return; }
+    startSession();
+    requestAnimationFrame(() => document.querySelector('.trainer-card')?.scrollIntoView({behavior:'smooth', block:'start'}));
+  }, [pendingDiagnostic, journeyMode, phase, audioPrepared, exerciseAccess, voices]);
+  function choose(reference: WordIndex) {
+    if (!question || answer !== null || !heard.a || !heard.b || !heard.x || busy.current) return;
+    const category = question.order[reference]; const correct = category === question.target;
+    if (index === 0) measuredFirstAnswer(attemptId.current, hintsUsed.current);
+    setAnswer(reference);
+    setAttempts(previous => [...previous, { contrastId: question.contrastId, pairId: question.pair.id, word: sampleWord(question, 'x').text, chosenWord: question.pair.words[category].text, correct }]);
+    if (!correct && journeyMode === 'focused') setQuestions(previous => {const revised=revisitMistake(previous,index);return (audioManifestPath ? revised : revised.map((q,i) => q.pair === previous[i].pair && q.testPair === previous[i].testPair ? previous[i] : assignAvailableVoices([q],availableClips,language.id)[0])).map(q=>({...q,contrastId:contrast.id}));});
+  }
+  function next() {
+    if (answer === null || busy.current) return;
+    if (index + 1 < questions.length) { const item = questions[index + 1]; setIndex(value => value + 1); setAnswer(null); setRoundRevealed(false); setHeard(unheard()); setAudioError(''); void listenSequence(item, index + 2); }
+    else {
+      const session: PracticeSession = { id: attemptId.current, mode: 'abx-cross-word', schemaVersion: 2, audioCollectionId: sessionAudioCollection.current, textHintsUsed: hintsUsed.current, completedAt: new Date().toISOString(), languageId: language.id, contrastId: contrast.id, correct: attempts.filter(item => item.correct).length, total: attempts.length, mistakes: attempts.filter(item => !item.correct).map(({ correct: _, ...item }) => item) };
+      const records = language.contrasts.filter(c => attempts.some(a => a.contrastId === c.id)).map(c => { const subset = attempts.filter(a => a.contrastId === c.id); return {...session, id: `${session.id}-${c.id}`, contrastId: c.id, total: subset.length, correct: subset.filter(a => a.correct).length, mistakes: subset.filter(a => !a.correct).map(({correct, contrastId, ...a}) => a)}; }).filter(s => s.total > 0);
+      const saved = readProgress(); const updated = [...saved.sessions, ...records].slice(-1000); setHistory(previous => [...new Map([...previous, ...updated].map(s => [s.id,s])).values()]); setStorageError(!writeProgress({ ...saved, preferredLanguage: language.id, nativeLanguage, sessions: updated })); setCompletedSession(session); setPhase('complete');
+      completeMeasuredPractice(attemptId.current, { correct: session.correct, total: session.total, text_hints_used: session.textHintsUsed, first_device_completion: !saved.sessions.some(item => item.mode === 'abx-cross-word') });
+      // Experimental libraries may contain contrasts absent from ordinary
+      // practice. Their completion must not produce ordinary-library links.
+      setReviewSuggestion(session.audioCollectionId === 'qwen-starter-v1'
+        ? recommendReview(languages, [...saved.sessions, session], { languageId: language.id }) : null);
+      completingId.current = session.id; setCloudSave('pending');
+      void import('../lib/progress-sync').then(({ saveCompletedSession }) => Promise.all(records.map(record => saveCompletedSession(record)))).then(statuses => { const status = statuses.every(s => s === 'saved') ? 'saved' : 'disabled'; return status; }).then(status => { if (completingId.current === session.id) setCloudSave(status); }).catch(() => { if (completingId.current === session.id) setCloudSave('error'); });
+    }
+  }
+  useLayoutEffect(() => {
+    function onKey(event: KeyboardEvent) {
+      const element = event.target as HTMLElement;
+      if (phase !== 'practice' || ['INPUT', 'TEXTAREA', 'SELECT'].includes(element.tagName) || element.isContentEditable || event.altKey || event.ctrlKey || event.metaKey) return;
+      if (event.repeat) return;
+      if (['ArrowLeft', 'ArrowRight', '1', '2'].includes(event.key)) { event.preventDefault(); choose(event.key === 'ArrowLeft' || event.key === '1' ? 0 : 1); }
+      else if (['a', 'b', 'x'].includes(event.key.toLowerCase())) { event.preventDefault(); void listen(event.key.toLowerCase() as Sample); }
+      else if (event.code === 'Space' && (!['BUTTON', 'A'].includes(element.tagName) || !!element.closest('.active-session'))) { event.preventDefault(); void listenSequence(); }
+      else if (event.key === 'Enter' && answer !== null && !['BUTTON', 'A'].includes(element.tagName)) { event.preventDefault(); next(); }
+    }
+    document.addEventListener('keydown', onKey); return () => document.removeEventListener('keydown', onKey);
+  }, [phase, question, answer, heard, attempts]);
+  if (!language || !contrast) return <><Header active="practice" />{headerContent}<main className="section-wrap empty-state"><h1>Your listening space.</h1><p>The practice library is being prepared.</p><a href="/" className="button button-dark">Back home</a></main></>;
+  const contrastNumber = language.contrasts.findIndex(item => item.id === contrast.id) + 1;
+  const title = journeyMode === 'diagnostic' ? 'Find your starting point' : journeyMode === 'mixed' ? 'Mixed review' : textHints ? contrast.label : `Exercise ${String(contrastNumber).padStart(2, '0')}`;
+  const targetReference = question?.order.indexOf(question.target);
+  const correct = answer === targetReference;
+  const allHeard = heard.a && heard.b && heard.x;
+  const progress = phase === 'ready' ? 0 : phase === 'complete' ? 100 : (index + (answer !== null ? 1 : 0)) / questions.length * 100;
+  const languageNote = contrast.l1Notes?.find(item => item.nativeLanguage.toLowerCase() === nativeLanguage.toLowerCase() || item.nativeLanguage === nativeLanguageIds[nativeLanguage]);
+  const isPlaying = playing !== null || sequencePlaying;
+  const roundContrast = language.contrasts.find(c => c.id === question?.contrastId) || contrast;
+  const stats = journeyStats(language.contrasts, history, language.id);
+  const nextLesson = stats.filter((s,i) => !s.practiced && (fullAccess || i < 3)).sort((a,b) => (a.rate ?? 1) - (b.rate ?? 1))[0]?.contrast;
+  const targetFocus = practiceFocus(roundContrast, phase === 'practice' ? question?.pair : undefined);
+  const showRoundWords = journeyMode !== 'diagnostic' && (textHints || (answer !== null && roundRevealed));
+  const correctCount = attempts.filter(item => item.correct).length;
+  const sessionAccuracy = attempts.length ? Math.round(correctCount / attempts.length * 100) : null;
+  return <><Header active="practice" />{headerContent}
+    <main className={"practice-layout" + (phase === 'practice' ? ' is-practicing' : '')}>
+      {phase !== 'practice' && <aside className="practice-sidebar">
+        <div className="sidebar-heading"><span className="account-plan-badge" role="status">{exerciseAccess === 'checking' ? 'Loading…' : exerciseAccess === 'error' ? 'Plan unavailable' : exerciseAccess === 'lifetime' ? 'Lifetime' : fullAccess ? 'Premium' : 'Free'}</span><span className="eyebrow">MAKE TIME TO LISTEN</span><h2>Your next listen.</h2></div>
+        <label className="field-label" htmlFor="practice-language">I’m learning</label>
+        <div className="select-wrap"><select id="practice-language" value={language.id} onChange={event => changeLanguage(event.target.value)}>{languages.map(item => <option value={item.id} key={item.id}>{item.name}</option>)}</select><Icon name="chevronDown" size={15} /></div>
+        <div className="sidebar-contrasts"><span className="field-label">Choose an exercise</span><div className="contrast-options">
+          {language.contrasts.map((item, position) => <button className={`contrast-option ${item.id === contrast.id ? 'is-selected' : ''}`} aria-label={`${`Exercise ${String(position + 1).padStart(2, '0')} · ${item.phonemes.map(sound => `/${sound}/`).join(' vs ')}`}${!fullAccess && position >= 3 ? ' · Locked' : ''}`} aria-pressed={item.id === contrast.id} key={item.id} onClick={() => { reset(); setJourneyMode('focused'); setContrastId(item.id); const url = new URL(window.location.href); url.searchParams.set('contrast', item.id); window.history.pushState(null, '', url); }}><span>{`${String(position + 1).padStart(2, '0')} · ${item.phonemes.map(sound => `/${sound}/`).join(' vs ')}`}</span>{position < 3 && <span className="lesson-free-badge">Free</span>}<Icon name={!fullAccess && position >= 3 ? "lock" : "chevron"} size={15} /></button>)}
+        </div></div>
+        <p className="sidebar-tip">Let your ears go first. Words stay hidden until you choose to see them.</p>
+        <a className="sidebar-progress" href="/account">Your practice history <Icon name="arrow" size={16} /></a>
+      </aside>}
+      <section className="practice-main">
+        <div className="practice-breadcrumb"><a href="/practice">Practice</a><span>/</span><span>{language.name}</span><span className="dialect-pill">{language.dialect || language.nativeName}</span></div>
+        <div className="practice-heading"><div><span className="eyebrow">{phase === 'complete' ? 'YOUR SESSION' : 'LISTEN A LITTLE CLOSER'}</span><h1>{phase === 'complete' ? 'A good listen.' : 'Train your ear.'}</h1></div><span className="session-length">{textHints && journeyMode !== 'diagnostic' ? 'Text hints on' : 'Sound first. Words later.'}</span></div>
+        {phase === 'ready' && !audioManifestPath && <section className="journey-panel" aria-label="Your learning path"><div className="journey-top"><div><span className="eyebrow">YOUR PATH · {language.name}</span><h2>{stats.filter(s => s.practiced).length} of {stats.length} lessons practiced</h2></div><button className="text-button" disabled={pendingDiagnostic || exerciseAccess === 'checking'} onClick={() => {reset(); setJourneyMode('diagnostic'); setPendingDiagnostic(true);}}>{pendingDiagnostic ? 'Loading…' : 'Check my listening'}</button></div><div className="journey-track" aria-label="Section progress">{Array.from({length: Math.ceil(stats.length / 3)}, (_,stage) => {const items = stats.slice(stage*3,stage*3+3); const done = items.every(s => s.practiced); const current = items.some(s => s.contrast.id === nextLesson?.id); return <span className={`journey-node ${done ? 'is-done' : current ? 'is-current' : ''}`} key={stage} aria-label={`Section ${stage+1}: ${items.filter(s => s.practiced).length} of ${items.length} lessons practiced`}><span>{done ? <Icon name="check" size={15} /> : stage+1}</span></span>;})}</div><div className="journey-actions">{nextLesson && <button className="button button-dark" disabled={Boolean(pendingLesson) || exerciseAccess === 'checking'} onClick={() => continueLesson(nextLesson.id)}>{pendingLesson ? 'Loading…' : 'Continue my path'}<Icon name="arrow" /></button>}<button className="text-button" onClick={() => {reset(); setJourneyMode('mixed');}}>Mixed review</button></div></section>}
+        {phase === 'ready' && !locked && <details className="session-settings"><summary>Session settings</summary><label>{journeyMode === 'diagnostic' ? 'Rounds per sound group' : 'Session length'}<select value={journeyMode === 'diagnostic' ? checkRounds : sessionRounds} onChange={event => {const value = Number(event.target.value); if(journeyMode === 'diagnostic') setCheckRounds(value); else setSessionRounds(value); try {localStorage.setItem('minimalpairs.session-settings',JSON.stringify({rounds:journeyMode === 'diagnostic' ? sessionRounds : value,checkRounds:journeyMode === 'diagnostic' ? value : checkRounds}));}catch{}}}>{(journeyMode === 'diagnostic' ? [4,8] : [6,12,24]).map(n => <option key={n} value={n}>{n} rounds</option>)}</select></label></details>}
+        <div className="training-area">
+          <div className="trainer-stage">
+            <div className="trainer-card">
+              <div className="trainer-card-top"><div><span className="eyebrow">{language.name}</span><h2>{title}</h2></div><div className="trainer-round-tools"><span className="round-counter" hidden={locked || phase === 'ready'}>{phase === 'ready' ? '' : phase === 'complete' ? 'Session complete' : `${index + 1} / ${questions.length}`}</span>{phase === 'practice' && <button className="end-session" onClick={reset}><Icon name="close" size={14} /> End session</button>}</div></div>
+              <div className="session-progress" role="progressbar" aria-label="Session progress" aria-valuenow={Math.round(progress)} aria-valuemin={0} aria-valuemax={100}><span style={{ width: `${phase === 'ready' ? 0 : progress}%` }} /></div>
+              {exerciseAccess === 'checking' ? <div className="session-ready"><p role="status">Loading…</p></div> : locked ? <div className="session-ready">
+                <Icon name="lock" size={28} />
+                <h3>Unlock this exercise.</h3>
+                <p>{exerciseAccess === 'error' ? 'We couldn’t check your access. Try again or choose a free exercise.' : signedIn ? 'Choose Premium to unlock every lesson.' : 'Already a member? Sign in to open the full library.'}</p>
+                {exerciseAccess === 'error' && <button className="button button-light" onClick={onRetryAccess}>Check access again</button>}
+                {!signedIn && <a className="button button-dark" href="/account#account-sign-in">Sign in with Google <Icon name="arrow" /></a>}
+                <a className="text-button" href="#lesson-plans">View plans</a>
+                <p className="quiet-label">The first three exercises in each language are free.</p>
+              </div> : phase === 'ready' ? <div className="session-ready">
+                <div className="abx-ready-diagram" aria-hidden="true"><span>A</span><span>B</span><span className="is-x">X</span></div>
+                <h3>Three listens.<br />One small difference.</h3>
+                <ol className="ready-listening-steps"><li><strong>Listen to A and B.</strong><span>Hear two different sounds.</span></li><li><strong>Listen to X.</strong><span>A new word, with one of those sounds.</span></li><li><strong>Choose A or B.</strong><span>Which one shares X’s sound? Replay as often as you like.</span></li></ol>
+                {targetFocus && <p className="abx-focus-note">{targetFocus}</p>}
+                <button className="button button-dark start-button" onClick={startSession} disabled={contrast.pairs.length < 2 || !audioPrepared || !voices.length}>Start with A, B & X <Icon name="arrow" /></button>
+                
+                {audioError && <p className="audio-error" role="alert">{audioError}</p>}
+              </div> : phase === 'practice' && question ? <div className="active-session abx-active">
+                <div className="abx-players">{(['a', 'b', 'x'] as Sample[]).map(sample => <div className={`abx-sample is-${sample}`} key={sample}>
+                  <button className={`abx-sound-button ${playing === sample ? 'is-playing' : ''} ${heard[sample] ? 'is-heard' : ''}`} onClick={() => void listen(sample)} disabled={isPlaying} aria-label={`Play ${sample.toUpperCase()}`}>
+                    <span className="abx-letter">{sample.toUpperCase()}</span><span className="sample-play-copy"><span className="abx-play-label"><Icon name={playing === sample ? 'volume' : heard[sample] ? 'replay' : 'play'} size={15} />{playing === sample ? 'Listening…' : heard[sample] ? 'Replay' : 'Tap to play'}</span><span className="abx-sample-label">{sample === 'x' ? 'The new word' : 'Listen and compare'}</span></span>
+                    {heard[sample] && <span className="abx-heard-mark"><Icon name="check" size={12} /></span>}
+                  </button>
+                  <ReportRecording clip={playedClips[sample]} label={'Report '+sample.toUpperCase()} />{showRoundWords && <div className="abx-word-hint"><strong>{sampleWord(question, sample).text}</strong><span>{sampleWord(question, sample).ipa}</span><small>{sampleWord(question, sample).meaning}</small></div>}
+                </div>)}</div>
+                <div className="listening-prompt"><h3>Does X share A’s sound or B’s?</h3>{targetFocus && <p className="abx-focus-note">{targetFocus}</p>}</div>
+                <div className="answer-options abx-answer-options">{([0, 1] as WordIndex[]).map(reference => <button key={reference} className={`answer-card ${journeyMode !== 'diagnostic' && answer !== null && reference === targetReference ? 'is-correct' : ''} ${journeyMode !== 'diagnostic' && answer === reference && !correct ? 'is-incorrect' : ''}`} onClick={() => choose(reference)} disabled={answer !== null || !allHeard || isPlaying}>
+                  <span className="answer-key" aria-hidden="true">{reference === 0 ? '←' : '→'}</span><strong>X shares {reference === 0 ? 'A' : 'B'}’s sound</strong>{journeyMode !== 'diagnostic' && answer !== null && reference === targetReference && <span className="answer-marker"><Icon name="check" size={19} /></span>}{journeyMode !== 'diagnostic' && answer === reference && !correct && <span className="answer-marker"><Icon name="close" size={17} /></span>}
+                </button>)}</div>
+                <button className="abx-sequence-button" onClick={() => void listenSequence()} disabled={isPlaying}><Icon name={sequencePlaying ? 'volume' : 'replay'} size={15} />{sequencePlaying ? 'Playing A → B → X' : 'Replay A → B → X · Space'}</button>
+                {audioError && <p className="audio-error trainer-audio-error" role="alert">{audioError} <button className="text-button" onClick={reset}>Reload recordings</button></p>}
+                <div className="feedback-space" aria-live="polite">{answer !== null ? journeyMode === 'diagnostic' ? <p>Answer recorded.</p> : <div className={`answer-feedback ${correct ? 'is-correct' : 'needs-listen'}`}><span className="feedback-symbol"><Icon name={correct ? 'check' : 'headphones'} size={21} /></span><div><strong>{correct ? 'You heard the shared sound.' : `X shares ${targetReference === 0 ? 'A' : 'B'}’s sound.`}</strong><p>{correct ? 'Different words, the same sound. Keep listening.' : 'Replay all three and listen for the sound they share.'}</p></div></div> : <p className="answer-hint">{!allHeard ? 'Listen to A, B and X to unlock your choices.' : ''}</p>}</div>
+                {answer !== null && <><div className="round-follow-up">{journeyMode !== 'diagnostic' && !textHints && <button className="round-reveal" aria-expanded={roundRevealed} onClick={() => { setRoundRevealed(value => !value); if (!roundRevealed) hintsUsed.current = true; }}>{roundRevealed ? 'Hide these words' : 'Reveal these words'}<Icon name={roundRevealed ? 'close' : 'book'} size={15} /></button>}<button className="button button-dark next-button" onClick={next} disabled={isPlaying}>{index + 1 === questions.length ? 'See your session' : 'Next round'}<Icon name="arrow" /></button></div>{journeyMode !== 'diagnostic' && textHints && question.pair.note && <p className="pair-note">{question.pair.note}</p>}</>}
+              </div> : completedSession ? <div className="session-complete">
+                <span className="complete-kicker">SESSION COMPLETE</span><h3>You made time to listen.</h3><p>Keep noticing the small differences.</p>
+                <div className="session-results"><div><strong>{completedSession.correct}<span>/{completedSession.total}</span></strong><span>correct matches</span></div><div><strong>{completedSession.total}</strong><span>listening rounds</span></div><div><strong>{Math.round(completedSession.correct / completedSession.total * 100)}<span>%</span></strong><span>session accuracy</span></div></div>
+                <p className="score-note">This is one practice session, not a measure of fluency.{completedSession.textHintsUsed ? ' Words were shown during this session.' : ' You practiced with sound alone.'}</p>
+                {journeyMode !== 'focused' && <div className="journey-results"><h3>{journeyMode === 'diagnostic' ? 'Your starting profile' : 'Your sound groups'}</h3><p>These results are an early signal. Keep practicing to build a clearer picture.</p>{language.contrasts.filter(c => attempts.some(a => a.contrastId === c.id)).sort((a,b) => attempts.filter(x => x.contrastId === a.id && x.correct).length - attempts.filter(x => x.contrastId === b.id && x.correct).length).map(c => {const group = attempts.filter(a => a.contrastId === c.id); const score = group.filter(a => a.correct).length; return <div className="journey-result" key={c.id}><span>{c.phonemes.map(p => `/${p}/`).join(' vs ')} <strong>{score}/{group.length}</strong></span><button className="text-button" onClick={() => {reset(); setJourneyMode('focused'); setContrastId(c.id);}}>Practice this sound →</button></div>;})}</div>}
+                {reviewSuggestion && <ReviewSuggestion recommendation={reviewSuggestion} compact />}
+                <div className="complete-actions">{!audioManifestPath && nextLesson && <button className="button button-dark" disabled={Boolean(pendingLesson)} onClick={() => continueLesson(nextLesson.id)}>Continue my path <Icon name="arrow" /></button>}<button className="button button-light" onClick={() => {reset();setPendingDiagnostic(true);}}>Listen again <Icon name="replay" size={17} /></button><a className="text-button" href="/account">View your history <Icon name="arrow" size={16} /></a><a className="text-button" href="/account#listening-plan">Your listening plan <Icon name="arrow" size={16} /></a></div>
+                <p className={`save-note ${storageError ? 'audio-error' : ''}`}><Icon name={storageError ? 'close' : 'check'} size={15} />{storageError ? 'This browser could not save your session. Your results are shown above.' : 'Session saved on this device.'}</p>
+                <p className={`cloud-save-note ${cloudSave === 'error' ? 'audio-error' : ''}`} role="status">{cloudSave === 'pending' ? 'Checking account saving…' : cloudSave === 'saved' ? 'Also saved to your account.' : cloudSave === 'error' ? storageError ? 'Account saving could not be confirmed. Your results remain visible on this page.' : <>Account saving could not be confirmed. <a href="/account">Retry from your history page.</a></> : <>Want this history on another device? <a href="/account">Sign in to save your progress.</a></>}</p>
+                <SessionFeedback key={completedSession.id} session={completedSession} />
+              </div> : null}
+            </div>
+            {phase === 'practice' && journeyMode !== 'diagnostic' && <aside className="session-summary" aria-label="This session">
+              <span className="eyebrow">THIS SESSION</span><strong className="live-accuracy">{sessionAccuracy === null ? '—' : `${sessionAccuracy}%`}</strong><p className="live-score">{correctCount} correct of {attempts.length} answered</p>
+              <ol className="round-trail" aria-label="Round results">{Array.from({ length: questions.length }, (_, round) => <li key={round} className={attempts[round] ? attempts[round].correct ? 'is-correct' : 'is-incorrect' : 'is-unanswered'} aria-label={`Round ${round + 1}: ${attempts[round] ? attempts[round].correct ? 'correct' : 'incorrect' : 'not answered'}`}>{attempts[round] && <Icon name={attempts[round].correct ? 'check' : 'close'} size={12} />}</li>)}</ol>
+              
+            </aside>}
+          </div>
+          {locked && exerciseAccess !== 'checking' && <div id="lesson-plans" className="lesson-plans"><MembershipPanel storefront embedded /></div>}
+          <div className="practice-settings"><label className="toggle-label"><input type="checkbox" disabled={journeyMode === 'diagnostic'} checked={journeyMode !== 'diagnostic' && textHints} onChange={event => { setTextHints(event.target.checked); if (phase === 'practice' && event.target.checked) hintsUsed.current = true; }} /><span className="toggle-switch" /><span>Show text hints</span></label></div>
+          {textHints && journeyMode !== 'diagnostic' && <div className="contrast-explainer"><div><span className="eyebrow">ABOUT THESE SOUNDS</span><h3>{contrast.label}</h3><p>{contrast.description}</p><div className="native-language-field"><label htmlFor="native-language">A language you already speak</label><select id="native-language" value={nativeLanguage} onChange={event => { setNativeLanguage(event.target.value); writeProgress({ ...readProgress(), nativeLanguage: event.target.value }); }}><option value="">Choose for a tailored note</option>{nativeLanguages.map(item => <option key={item} value={item}>{item}</option>)}</select></div>{languageNote && <p className="learner-note"><strong>For {nativeLanguage} speakers:</strong> {languageNote.note}</p>}{contrast.sources?.length ? <details className="source-details"><summary>More about these sounds</summary><ul>{contrast.sources.map((source, i) => <li key={i}>{/^https?:\/\//.test(source) ? <a href={source} target="_blank" rel="noopener noreferrer">Reference {i + 1} <span aria-hidden="true">↗</span></a> : source}</li>)}</ul></details> : null}</div></div>}
+          <div className="practice-bottom-note"><span><Icon name="lock" size={13} /> Your progress saves automatically when you’re signed in.</span><span className="keyboard-hint"><kbd>A</kbd><kbd>B</kbd><kbd>X</kbd> replay <kbd>1</kbd><kbd>2</kbd> answer</span></div>
+        </div>
+      </section>
+    </main></>;
+}
