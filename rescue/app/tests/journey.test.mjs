@@ -3,9 +3,10 @@ import assert from 'node:assert/strict';
 import {journeyStats, selectJourneyContrasts} from '../src/lib/journey.ts';
 const contrasts=Array.from({length:8},(_,i)=>({id:`c${i}`,pairs:[]}));
 const record=(contrastId,correct=9,total=12,other={})=>({id:`focused-${contrastId}`,languageId:'en',mode:'abx-cross-word',contrastId,correct,total,textHintsUsed:false,audioCollectionId:'chatterbox-us-four-voices-v1',...other});
-test('every mode respects free access, including a locked selection',()=>{
+test('diagnostic covers the full language while focused and mixed practice respect free access',()=>{
  assert.deepEqual(selectJourneyContrasts(contrasts,[],'en',false,'focused','c5'),[]);
- for(const mode of ['mixed','diagnostic'])assert.deepEqual(selectJourneyContrasts(contrasts,[],'en',false,mode,'c5').map(c=>c.id),['c0','c1','c2']);
+ for(const mode of ['mixed'])assert.deepEqual(selectJourneyContrasts(contrasts,[],'en',false,mode,'c5').map(c=>c.id),['c0','c1','c2']);
+ assert.equal(selectJourneyContrasts(contrasts,[],'en',false,'diagnostic','c0').length,8);
  assert.equal(selectJourneyContrasts(contrasts,[],'en',true,'diagnostic','c0').length,8);
 });
 test('mixed review selects untried sounds first then lower performance',()=>{

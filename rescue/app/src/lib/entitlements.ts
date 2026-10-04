@@ -1,7 +1,7 @@
 import { doc, getDoc, getDocFromServer } from 'firebase/firestore';
 import { getDatabase, getSession } from './auth';
 
-export type Entitlement = { active: boolean; plan: 'lifetime' | 'monthly' | 'annual'; source: 'legacy-purchase' | 'subscription' };
+export type Entitlement = { active: boolean; plan: 'lifetime' | 'monthly' | 'annual'; source: 'legacy-purchase' | 'subscription' | 'one-time-purchase' };
 export async function getEntitlement(options: { expectedUserId?: string; fresh?: boolean } = {}): Promise<Entitlement | null> {
   const db = getDatabase();
   const session = await getSession();
@@ -25,6 +25,7 @@ export async function getEntitlement(options: { expectedUserId?: string; fresh?:
   const subscription = await read('entitlements', session.user.id);
   if (!subscription.exists()) return null;
   const data = subscription.data();
+  if (data.active === true && data.plan === 'lifetime' && data.reason === 'paid_lifetime') return {active:true,plan:'lifetime',source:'one-time-purchase'};
   const active = data.active === true && typeof data.currentPeriodEnd === 'number' && data.currentPeriodEnd > Date.now() / 1000;
   return active && (data.plan === 'monthly' || data.plan === 'annual') ? { active, plan: data.plan, source: 'subscription' } : null;
 }

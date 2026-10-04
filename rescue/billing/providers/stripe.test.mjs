@@ -475,3 +475,47 @@ test('shared cancellation also cancels a stalled response body after headers arr
   await code(f.adapter.retrieveCustomer(binding.customerId), 'stripe_operation_aborted');
   assert.equal(bodyCanceled, true);
 });
+
+const lifetimePrice = {id:'price_lifetime',currency:'usd',interval:null,intervalCount:0,unitAmount:2900};
+function lifetimeFixture(){
+ const f=fixture({prices:{...prices,lifetime:lifetimePrice}});
+ Object.assign(f.data.checkout,{mode:'payment',status:'complete',payment_status:'paid',payment_intent:'pi_synthetic',metadata:{firebaseUid:binding.uid,billingSchema:'1',plan:'lifetime'},currency:'usd',amount_total:2900,amount_subtotal:2900,total_details:{amount_discount:0,amount_shipping:0,amount_tax:0},automatic_tax:{enabled:false}});
+ Object.assign(f.data.intent,{amount:2900,amount_received:2900,metadata:{firebaseUid:binding.uid,billingSchema:'1',plan:'lifetime'}});
+ Object.assign(f.data.charge,{amount:2900,amount_captured:2900});
+ f.data.lifetimeLine={object:'item',id:'li_synthetic',price:'price_lifetime',quantity:1,currency:'usd',amount_subtotal:2900,amount_total:2900,amount_discount:0,amount_tax:0};
+ f.routes.set('GET /v1/checkout/sessions',()=>pageOf([f.data.checkout]));
+ f.routes.set('GET /v1/checkout/sessions/cs_test_synthetic/line_items',()=>pageOf([f.data.lifetimeLine]));
+ f.routes.set('GET /v1/prices/price_lifetime',()=>({...f.data.price,id:'price_lifetime',type:'one_time',recurring:null,unit_amount:2900,unit_amount_decimal:'2900'}));
+ f.data.subscriptions=[];
+ return f;
+}
+test('lifetime requires paid checkout and canonical intent/charge; subscription events cannot remove it',async()=>{
+ const f=lifetimeFixture();f.data.subscriptions=[{...f.data.subscription,status:'canceled'}];
+ const result=await snapshot(f);
+ assert.equal(result.plan,'lifetime');assert.equal(result.amountPaid,2900);
+ const access=subscriptionEntitlement(result,binding,{...config,prices:{...prices,lifetime:lifetimePrice}},NOW);
+ assert.equal(access.active,true);assert.equal(access.currentPeriodEnd,0);assert.equal(access.reason,'paid_lifetime');
+ assert.equal(f.requests.some(r=>r.url.pathname==='/v1/subscriptions'),false);
+});
+test('one-time checkout uses approved lifetime price and binds payment metadata',async()=>{
+ const f=lifetimeFixture();f.data.checkout.status='open';
+ const params=checkoutParameters({...config,prices:{...prices,lifetime:lifetimePrice}}, {uid:binding.uid},binding.customerId,'lifetime');
+ assert.equal(params.mode,'payment');assert.equal(params.subscription_data,undefined);assert.equal(params.payment_intent_data.metadata.plan,'lifetime');
+ assert.equal((await f.adapter.createCheckoutSession(params,'lifetime-fixture')).mode,'payment');
+});
+test('unpaid, fully refunded and disputed lifetime payments do not grant access; partial refund retains it',async()=>{
+ for(const kind of ['unpaid','refund','dispute']){
+  const f=lifetimeFixture();
+  if(kind==='unpaid')f.data.checkout.payment_status='unpaid';
+  if(kind==='refund'){f.data.charge.amount_refunded=2900;f.data.refunds=[{object:'refund',id:'re_synthetic',charge:'ch_synthetic',payment_intent:'pi_synthetic',currency:'usd',amount:2900,status:'succeeded'}];}
+  if(kind==='dispute'){f.data.charge.disputed=true;f.data.disputes=[{object:'dispute',id:'du_synthetic',livemode:false,charge:'ch_synthetic',payment_intent:'pi_synthetic',currency:'usd',amount:2900,status:'lost'}];}
+  assert.notEqual((await snapshot(f)).plan,'lifetime',kind);
+ }
+ const partial=lifetimeFixture();partial.data.charge.amount_refunded=500;partial.data.refunds=[{object:'refund',id:'re_synthetic',charge:'ch_synthetic',currency:'usd',amount:500,status:'succeeded'}];
+ assert.equal((await snapshot(partial)).plan,'lifetime');
+});
+test('lifetime mismatches fail closed across identity, mode, currency, line amount and payment evidence',async()=>{
+ for(const mutate of [f=>f.data.checkout.client_reference_id='other',f=>f.data.checkout.customer='cus_other',f=>f.data.checkout.livemode=true,f=>f.data.checkout.amount_total=1,f=>f.data.checkout.currency='eur',f=>f.data.lifetimeLine.price='price_other',f=>f.data.lifetimeLine.quantity=2,f=>f.data.intent.metadata.firebaseUid='other',f=>f.data.intent.status='processing',f=>f.data.charge.amount_captured=1]){
+  const f=lifetimeFixture();mutate(f);await assert.rejects(snapshot(f));
+ }
+});

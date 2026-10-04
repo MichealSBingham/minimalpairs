@@ -190,7 +190,7 @@ function createPinnedFirebaseAdapter(PROJECT, env, { getOperationContext = () =>
   }
 
   function projectionFields(value) {
-    if (!value || value.schemaVersion !== 1 || typeof value.active !== 'boolean' || ![null, 'monthly', 'annual'].includes(value.plan)
+    if (!value || value.schemaVersion !== 1 || typeof value.active !== 'boolean' || ![null, 'monthly', 'annual', 'lifetime'].includes(value.plan)
       || !whole(value.currentPeriodEnd) || !whole(value.updatedAt) || !/^[a-z_]{1,80}$/.test(value.status || '') || !/^[a-z_]{1,80}$/.test(value.reason || '')) fail('firebase_invalid_projection');
     const fields = {
       schemaVersion: { integerValue: '1' }, active: { booleanValue: value.active },
@@ -198,11 +198,12 @@ function createPinnedFirebaseAdapter(PROJECT, env, { getOperationContext = () =>
       currentPeriodEnd: { integerValue: String(value.currentPeriodEnd) }, updatedAt: { integerValue: String(value.updatedAt) },
       status: { stringValue: value.status }, reason: { stringValue: value.reason },
     };
-    for (const [name, prefix] of [['customerId', 'cus_'], ['subscriptionId', 'sub_']]) {
-      if (value[name] !== undefined && !(new RegExp(`^${prefix}[A-Za-z0-9]+$`)).test(value[name])) fail('firebase_invalid_projection');
+    for (const [name, prefix] of [['customerId', 'cus_'], ['subscriptionId', 'sub_'], ['checkoutSessionId', 'cs_'], ['paymentIntentId', 'pi_']]) {
+      if (value[name] !== undefined && !(new RegExp(`^${prefix}${name === 'checkoutSessionId' ? '(?:test_|live_)?' : ''}[A-Za-z0-9]+$`)).test(value[name])) fail('firebase_invalid_projection');
       fields[name] = value[name] === undefined ? { nullValue: null } : { stringValue: value[name] };
     }
-    if (value.active && (!value.plan || !value.customerId || !value.subscriptionId || value.currentPeriodEnd <= value.updatedAt || value.reason !== 'paid_period')) fail('firebase_invalid_projection');
+    if (value.active && value.plan === 'lifetime' && (!value.customerId || !value.checkoutSessionId || !value.paymentIntentId || value.currentPeriodEnd !== 0 || value.reason !== 'paid_lifetime')) fail('firebase_invalid_projection');
+    if (value.active && value.plan !== 'lifetime' && (!value.plan || !value.customerId || !value.subscriptionId || value.currentPeriodEnd <= value.updatedAt || value.reason !== 'paid_period')) fail('firebase_invalid_projection');
     return fields;
   }
 
@@ -213,7 +214,7 @@ function createPinnedFirebaseAdapter(PROJECT, env, { getOperationContext = () =>
     for (let attempt = 0; attempt < 3; attempt++) {
       const before = await readDocument('entitlements', uid, operation);
       const old = before?.fields || {};
-      if (old.plan?.stringValue === 'lifetime' || (old.adminBlocked && typeof old.adminBlocked.booleanValue !== 'boolean')) fail('firebase_projection_conflict');
+      if ((old.plan?.stringValue === 'lifetime' && !/^pi_[A-Za-z0-9]+$/.test(old.paymentIntentId?.stringValue || '')) || (old.adminBlocked && typeof old.adminBlocked.booleanValue !== 'boolean')) fail('firebase_projection_conflict');
       if (old.updatedAt && (!/^\d{1,16}$/.test(old.updatedAt.integerValue || '') || Number(old.updatedAt.integerValue) > projection.updatedAt)) fail('firebase_projection_stale');
       const fields = structuredClone(initial);
       if (old.adminBlocked?.booleanValue === true) {

@@ -79,10 +79,10 @@ export function createStripeAdapter({ secretKey, expectedAccountId, expectedLive
     && integer(maxRequests) && maxRequests > 0 && maxRequests <= 500
     && integer(maxResponseBytes) && maxResponseBytes > 0 && maxResponseBytes <= 4_194_304, 'stripe_invalid_limits');
   const approved = new Map();
-  for (const plan of ['monthly', 'annual']) {
+  for (const plan of ['monthly', 'annual', 'lifetime']) {
     const p = prices?.[plan];
     if (!p) continue;
-    demand(idValid(p.id, 'price') && p.currency === 'usd' && p.interval === (plan === 'monthly' ? 'month' : 'year') && p.intervalCount === 1
+    demand(idValid(p.id, 'price') && p.currency === 'usd' && (plan === 'lifetime' ? p.interval === null && p.intervalCount === 0 && p.unitAmount === 2900 : p.interval === (plan === 'monthly' ? 'month' : 'year') && p.intervalCount === 1)
       && (p.unitAmount === undefined || (integer(p.unitAmount) && p.unitAmount > 0)), 'stripe_price_not_configured');
     demand(!approved.has(p.id), 'stripe_price_not_configured');
     approved.set(p.id, { ...p, plan });
@@ -208,13 +208,11 @@ export function createStripeAdapter({ secretKey, expectedAccountId, expectedLive
     const expectedPrice = approved.get(priceId);
     demand(expectedPrice, 'stripe_unapproved_price');
     const price = scoped(await request(ctx, 'GET', `/v1/prices/${priceId}`), 'price', 'price', priceId);
-    demand(price.type === 'recurring' && price.currency === expectedPrice.currency
-      && price.recurring?.interval === expectedPrice.interval && price.recurring.interval_count === 1
-      && price.recurring.usage_type === 'licensed' && price.billing_scheme === 'per_unit'
+    demand((expectedPrice.plan === 'lifetime' ? price.type === 'one_time' && price.recurring == null : price.type === 'recurring' && price.recurring?.interval === expectedPrice.interval && price.recurring.interval_count === 1 && price.recurring.usage_type === 'licensed') && price.currency === expectedPrice.currency && price.billing_scheme === 'per_unit'
       && integer(price.unit_amount) && price.unit_amount > 0 && (expectedPrice.unitAmount === undefined || price.unit_amount === expectedPrice.unitAmount)
       && (!price.unit_amount_decimal || (/^\d+(?:\.\d{1,12})?$/.test(price.unit_amount_decimal) && Number(price.unit_amount_decimal) === price.unit_amount))
       && !price.transform_quantity && !price.tiers_mode && !price.custom_unit_amount
-      && (!forSale || price.active === true), 'stripe_price_shape_unsupported');
+      && (!forSale || (price.active === true && expectedPrice.sellable !== false)), 'stripe_price_shape_unsupported');
     return price;
   }
   function normalizeCheckout(session, expectedId) {
@@ -269,9 +267,16 @@ export function createStripeAdapter({ secretKey, expectedAccountId, expectedLive
     demand(currentAllocations.length === 1 && currentAllocations[0].id === payment.id
       && idOf(currentAllocations[0].invoice) === inv.id && currentAllocations[0].status === 'paid'
       && currentAllocations[0].amount_paid === payment.amount_paid, 'stripe_shared_payment_unsupported');
+    const evidence = await chargeCoverage(ctx, paymentIntentId, inv.amount_paid, price.currency, binding);
+    return { invoiceId: inv.id, subscriptionId: sub.id, priceId: price.id, currency: price.currency, invoiceStatus: 'paid',
+      successfulCharge: true, amountPaid: inv.amount_paid, ...evidence, start: line.period.start, end: line.period.end };
+  }
+
+  async function chargeCoverage(ctx, paymentIntentId, amount, currency, binding, lifetime = false) {
     const intent = scoped(await request(ctx, 'GET', `/v1/payment_intents/${paymentIntentId}`), 'payment_intent', 'pi', paymentIntentId);
-    demand(idOf(intent.customer) === binding.customerId && intent.status === 'succeeded' && intent.currency === price.currency
-      && equalMoney(intent.amount, intent.amount_received, payment.amount_paid) && intent.amount_capturable === 0
+    demand(!lifetime || (intent.metadata?.firebaseUid === binding.uid && intent.metadata?.billingSchema === '1' && intent.metadata?.plan === 'lifetime'), 'stripe_lifetime_intent_binding_invalid');
+    demand(idOf(intent.customer) === binding.customerId && intent.status === 'succeeded' && intent.currency === currency
+      && equalMoney(intent.amount, intent.amount_received, amount) && intent.amount_capturable === 0
       && ['automatic', 'automatic_async'].includes(intent.capture_method) && Array.isArray(intent.payment_method_types)
       && intent.payment_method_types.length === 1 && intent.payment_method_types[0] === 'card'
       && !intent.on_behalf_of && !intent.transfer_data && !intent.application, 'stripe_payment_intent_unsupported');
@@ -285,7 +290,7 @@ export function createStripeAdapter({ secretKey, expectedAccountId, expectedLive
     demand(successful.length === 1 && successful[0].status === 'succeeded', 'stripe_charge_shape_unsupported');
     const c = successful[0];
     demand(c.id === idOf(intent.latest_charge) && c.paid === true && c.captured === true
-      && equalMoney(c.amount, c.amount_captured, inv.amount_paid) && c.currency === price.currency
+      && equalMoney(c.amount, c.amount_captured, amount) && c.currency === currency
       && c.payment_method_details?.type === 'card' && typeof c.disputed === 'boolean'
       && integer(c.amount_refunded) && c.amount_refunded <= c.amount_captured
       && !c.on_behalf_of && !c.transfer && !c.transfer_data && !c.application && !c.application_fee,
@@ -298,7 +303,7 @@ export function createStripeAdapter({ secretKey, expectedAccountId, expectedLive
       demand(refund?.object === 'refund' && idValid(refund.id, 're') && idOf(refund.charge) === c.id
         && (refund.payment_intent == null || idOf(refund.payment_intent) === paymentIntentId)
         && (refund.customer == null || idOf(refund.customer) === binding.customerId)
-        && refund.currency === price.currency && integer(refund.amount) && refund.amount > 0
+        && refund.currency === currency && integer(refund.amount) && refund.amount > 0
         && REFUND_STATUSES.has(refund.status), 'stripe_refund_shape_unsupported');
       if (refund.status === 'succeeded') refunded += refund.amount;
     }
@@ -310,19 +315,51 @@ export function createStripeAdapter({ secretKey, expectedAccountId, expectedLive
     for (const dispute of disputes) {
       scoped(dispute, 'dispute', 'du');
       demand(idOf(dispute.charge) === c.id && (dispute.payment_intent == null || idOf(dispute.payment_intent) === paymentIntentId)
-        && dispute.currency === price.currency && integer(dispute.amount) && dispute.amount > 0
+        && dispute.currency === currency && integer(dispute.amount) && dispute.amount > 0
         && DISPUTE_STATUSES.has(dispute.status), 'stripe_dispute_shape_unsupported');
     }
     demand(!c.disputed || disputes.length > 0, 'stripe_dispute_evidence_missing');
     // All non-won dispute states, including warnings, are conservatively blocked.
     const disputeStatus = !disputes.length ? 'none' : disputes.every(d => d.status === 'won') ? 'won'
       : disputes.some(d => d.status === 'lost') ? 'lost' : 'open';
-    return { invoiceId: inv.id, subscriptionId: sub.id, priceId: price.id, currency: price.currency, invoiceStatus: 'paid',
-      successfulCharge: true, amountPaid: inv.amount_paid, amountRefunded: refunded, disputeStatus, start: line.period.start, end: line.period.end };
+    return {amountRefunded: refunded, disputeStatus};
+  }
+
+  async function lifetimeSnapshot(ctx, binding) {
+    const expected = prices?.lifetime;
+    if (!expected) return null;
+    const sessions = await list(ctx, '/v1/checkout/sessions', {customer:binding.customerId, status:'complete'});
+    let valid = null;
+    for (const entry of sessions) {
+      scoped(entry,'checkout.session','cs');
+      demand(idOf(entry.customer) === binding.customerId, 'stripe_checkout_scope_invalid');
+      if (entry.mode !== 'payment' || entry.metadata?.plan !== 'lifetime' || entry.metadata?.billingSchema !== '1') continue;
+      const session = scoped(await request(ctx,'GET',`/v1/checkout/sessions/${entry.id}`),'checkout.session','cs',entry.id);
+      demand(session.mode === 'payment' && idOf(session.customer) === binding.customerId && session.client_reference_id === binding.uid
+        && session.metadata?.firebaseUid === binding.uid && session.metadata?.billingSchema === '1' && session.metadata?.plan === 'lifetime', 'stripe_checkout_scope_invalid');
+      if (session.status !== 'complete' || session.payment_status !== 'paid') continue;
+      const price = await validatedPrice(ctx, expected.id);
+      const lines = await list(ctx,`/v1/checkout/sessions/${session.id}/line_items`);
+      demand(lines.length === 1 && lines[0].object === 'item' && idOf(lines[0].price) === price.id && lines[0].quantity === 1
+        && lines[0].currency === price.currency && equalMoney(lines[0].amount_subtotal,lines[0].amount_total,price.unit_amount)
+        && lines[0].amount_discount === 0 && lines[0].amount_tax === 0, 'stripe_lifetime_line_invalid');
+      demand(session.currency === price.currency && equalMoney(session.amount_subtotal,session.amount_total,price.unit_amount)
+        && session.total_details?.amount_discount === 0 && session.total_details?.amount_shipping === 0 && session.total_details?.amount_tax === 0
+        && session.automatic_tax?.enabled === false && !session.subscription, 'stripe_lifetime_amount_invalid');
+      const paymentIntentId = requireId(idOf(session.payment_intent),'pi');
+      const evidence = await chargeCoverage(ctx,paymentIntentId,price.unit_amount,price.currency,binding,true);
+      if (evidence.amountRefunded < price.unit_amount && ['none','won'].includes(evidence.disputeStatus)) valid = {
+        uid:binding.uid,customerId:binding.customerId,livemode:expectedLivemode,plan:'lifetime',priceId:price.id,
+        currency:price.currency,amountPaid:price.unit_amount,successfulCharge:true,...evidence,checkoutSessionId:session.id,paymentIntentId,
+      };
+    }
+    return valid;
   }
 
   async function currentSnapshot(ctx, binding) {
     await boundCustomer(ctx, binding);
+    const lifetime = await lifetimeSnapshot(ctx,binding);
+    if (lifetime) return lifetime;
     const all = await subscriptions(ctx, binding.customerId);
     const live = all.filter(s => !TERMINAL.has(s.status));
     demand(live.length <= 1, 'stripe_multiple_memberships');
@@ -425,14 +462,14 @@ export function createStripeAdapter({ secretKey, expectedAccountId, expectedLive
       return { id: c.id, livemode: c.livemode, metadata: { firebaseUid: c.metadata.firebaseUid, billingSchema: c.metadata.billingSchema } };
     }),
     createCheckoutSession: operation(async (ctx, params, key) => {
-      demand(params?.mode === 'subscription' && idValid(params.customer, 'cus') && uidValid(params.client_reference_id)
-        && params.metadata?.firebaseUid === params.client_reference_id && params.subscription_data?.metadata?.firebaseUid === params.client_reference_id
+      demand(['subscription','payment'].includes(params?.mode) && idValid(params.customer, 'cus') && uidValid(params.client_reference_id)
+        && params.metadata?.firebaseUid === params.client_reference_id && (params.mode === 'payment' ? params.payment_intent_data?.metadata?.firebaseUid === params.client_reference_id && params.metadata?.plan === 'lifetime' && approved.get(params.line_items?.[0]?.price)?.plan === 'lifetime' : params.subscription_data?.metadata?.firebaseUid === params.client_reference_id && approved.get(params.line_items?.[0]?.price)?.plan !== 'lifetime')
         && params.line_items?.length === 1 && approved.has(params.line_items[0].price) && params.line_items[0].quantity === 1
         && params.payment_method_types?.length === 1 && params.payment_method_types[0] === 'card'
         && typeof key === 'string', 'stripe_invalid_parameters');
       await validatedPrice(ctx, params.line_items[0].price, true);
       const c = normalizeCheckout(await request(ctx, 'POST', '/v1/checkout/sessions', params, key));
-      demand(c.mode === 'subscription' && c.customer === params.customer && c.client_reference_id === params.client_reference_id, 'stripe_checkout_shape_invalid');
+      demand(c.mode === params.mode && c.customer === params.customer && c.client_reference_id === params.client_reference_id, 'stripe_checkout_shape_invalid');
       return c;
     }),
     retrieveCheckoutSession: operation(retrieveCheckout),

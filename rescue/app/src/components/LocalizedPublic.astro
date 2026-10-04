@@ -1,4 +1,6 @@
 ---
+import DiagnosticEntry from './DiagnosticEntry';
+import {diagnosticCopy} from '../lib/diagnostic-i18n';
 import {Header,Footer} from './ui';
 import GuideWordAudio from './GuideWordAudio';
 import {getGuideLanguages, getPracticeLanguages, slugFor} from '../lib/content';
@@ -23,10 +25,11 @@ const category=contrast?((contrast.id.includes('-tone-') || contrast.phonemes.so
 <nav class="crumb"><a href={`/${locale}`}>{t.home}</a>{language&&<><span> / </span><a href={`/${locale}/${slugFor(language)}`}>{name}</a></>}</nav>
 {!language ? <>
 <header class="hero"><p class="eyebrow">MinimalPairs</p><h1>{t.hero}</h1><h2>{t.tagline}</h2><p>{t.intro}</p><a class="primary" href={`/${locale}/practice`}>{t.start} →</a></header>
+<DiagnosticEntry languages={getPracticeLanguages()} locale={locale}/>
 <section id="languages"><h2>{t.languages}</h2><div class="cards">{languages.map(l=><a class="card" href={`/${locale}/${slugFor(l)}`}><h3>{localizedLanguage(l.id,locale)}</h3><span lang={l.locale}>{l.nativeName}</span><p>{l.contrasts.length} {t.contrasts}</p><span aria-hidden="true">→</span></a>)}</div></section>
 <section class="how" id="how-it-works"><h2>{t.how}</h2><p>{t.instructions}</p><p>{t.feedback}</p></section>
 </> : !contrast ? <>
-<header><p class="eyebrow">{t.guides}</p><h1>{name} · {t.minimal}</h1><p>{t.hub}</p><p>{language.contrasts.length} {t.contrasts}</p></header>
+<header><p class="eyebrow">{t.guides}</p><h1>{name} · {t.minimal}</h1><p>{t.hub}</p><p>{language.contrasts.length} {t.contrasts}</p>{getPracticeLanguages().some(l=>l.id===language.id)&&<a class="primary" href={`/${locale}/diagnostic/${language.id}`}>{diagnosticCopy(locale).start} →</a>}</header>
 <div class="cards">{language.contrasts.map(c=><a class="card" href={`/${locale}/learn/${c.id}`}><h2>{sounds(c)}</h2><p lang={language.locale}>{c.pairs[0]?.words.map(w=>w.text).join(' · ')}</p><span aria-hidden="true">→</span></a>)}</div>
 </> : <>
 <header><p class="eyebrow">{name} · {t.minimal}</p><h1>{sounds(contrast)}</h1><p>{t.compare}</p></header>

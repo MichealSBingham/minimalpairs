@@ -1,3 +1,4 @@
+import DiagnosticEntry from './DiagnosticEntry';
 import { useEffect, useRef, useState } from 'react';
 import '../styles/home-redesign.css';
 import { getPracticeAudio, playWord, stopAudio } from '../lib/audio';
@@ -60,11 +61,12 @@ export default function HomeExperience({ languages = [] }: { languages: Language
       <div className="rd-hero-copy"><p className="eyebrow">EAR TRAINING FOR LANGUAGE LEARNERS</p>
         <h1>You can read it.<br /><em>Now learn to<br className="rd-desktop-break" /> hear it.</em></h1>
         <p className="rd-lede">Know the word on the page, but miss it in conversation? Start with the small sound differences that change what you hear.</p>
-        <div className="rd-actions"><a className="button button-dark" href="/practice">Start free practice <Icon name="arrow" size={18} /></a><a className="button button-light" href="#how-it-works">How it works</a></div>
+        <div className="rd-actions"><a className="button button-dark" href="/practice">Start free practice <Icon name="arrow" size={18} /></a><a className="button button-light" href="#listening-check">Find my starting point</a></div>
         
       </div>
       <div className="rd-hero-demo"><ListeningDemo languages={languages} /><p className="rd-demo-footnote">Different words. Different voices. One sound to notice.</p></div>
     </section>
+    <DiagnosticEntry languages={ordered} />
     <section className="rd-method" id="how-it-works"><div className="section-wrap">
       <div className="rd-section-heading"><h2>Hear the difference.<br /><em>Then find it again.</em></h2><p>You don’t need to know phonetics. Hear two examples, then a new word. Decide which example shares the sound you’re listening for.</p></div>
       <div className="rd-method-grid"><article><span className="rd-step-letter">A</span><h3>Hear the first example</h3><p>Listen to the word. Keep your attention on the sound the exercise points out.</p></article><article><span className="rd-step-letter">B</span><h3>Compare the other sound</h3><p>A second word changes that sound. Replay either example whenever you need.</p></article><article><span className="rd-step-letter">X</span><h3>Match it in a new word</h3><p>A different voice says a different word. Does its target sound match A or B? Choose, then get feedback.</p></article></div>

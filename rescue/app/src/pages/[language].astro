@@ -34,6 +34,7 @@ const schema = { '@context': 'https://schema.org', '@type': 'CollectionPage', na
         <h1 id="language-title">{language.name} <em>contrasts.</em></h1>
         <p class="ed-lede">Start with a difference you find hard to hear. Words stay hidden during practice until you choose to show them.</p>
         <div class="language-chooser-meta"><span>{language.dialect}</span><span>{language.contrasts.length} sound contrasts</span></div>
+        {lessonIds.size > 0 && <p><a class="ed-text-link" href={`/diagnostic/${language.id}`}>Not sure where to start? Take the free listening check <Icon name="arrow" size={18} /></a></p>}
         <p class="language-chooser-note">Browse the examples below, then listen to A and B and match their target sound in a different word, X.</p>
 
       </section>

@@ -33,8 +33,8 @@ export function requireVerifiedAccount(account) {
 export function hasLifetimeAccess(grant) { return grant?.active === true && grant?.plan === 'lifetime'; }
 function approvedPrice(config, plan) {
   const price = config.prices?.[plan];
-  if (!['monthly', 'annual'].includes(plan) || !price || !/^price_[A-Za-z0-9]+$/.test(price.id)
-    || price.currency !== 'usd' || price.interval !== (plan === 'monthly' ? 'month' : 'year') || price.intervalCount !== 1) fail('price_not_configured', 503);
+  if (!['monthly', 'annual', 'lifetime'].includes(plan) || !price || !/^price_[A-Za-z0-9]+$/.test(price.id)
+    || price.currency !== 'usd' || (plan === 'lifetime' ? price.interval !== null || price.intervalCount !== 0 || price.unitAmount !== 2900 : price.interval !== (plan === 'monthly' ? 'month' : 'year') || price.intervalCount !== 1)) fail('price_not_configured', 503);
   return price;
 }
 function checkoutAllowed(config) {
@@ -89,11 +89,12 @@ async function boundedBody(request, limit) {
 export function checkoutParameters(config, account, customerId, plan) {
   checkoutAllowed(config);
   const price = approvedPrice(config, plan);
+  if (price.sellable === false) fail('plan_not_available', 409);
   return {
-    mode: 'subscription', customer: customerId, client_reference_id: account.uid,
+    mode: plan === 'lifetime' ? 'payment' : 'subscription', customer: customerId, client_reference_id: account.uid,
     line_items: [{ price: price.id, quantity: 1 }], payment_method_types: ['card'],
-    subscription_data: { metadata: { firebaseUid: account.uid, billingSchema: String(BILLING_SCHEMA) } },
-    metadata: { firebaseUid: account.uid, billingSchema: String(BILLING_SCHEMA) },
+    ...(plan === 'lifetime' ? { payment_intent_data: { metadata: { firebaseUid: account.uid, billingSchema: String(BILLING_SCHEMA), plan: 'lifetime' } } } : { subscription_data: { metadata: { firebaseUid: account.uid, billingSchema: String(BILLING_SCHEMA) } } }),
+    metadata: { firebaseUid: account.uid, billingSchema: String(BILLING_SCHEMA), ...(plan === 'lifetime' ? {plan:'lifetime'} : {}) },
     success_url: `${config.appOrigin}/account?billing=return`, cancel_url: `${config.appOrigin}/pricing`,
     allow_promotion_codes: false,
   };
@@ -140,7 +141,16 @@ export function subscriptionEntitlement(snapshot, binding, config, nowSeconds) {
   const base = { schemaVersion: BILLING_SCHEMA, active: false, plan: null, currentPeriodEnd: 0, status: 'unavailable', reason: 'unverified_snapshot', updatedAt: nowSeconds };
   if (!whole(nowSeconds) || !snapshot || !binding || !uidValid(binding.uid) || !/^cus_[A-Za-z0-9]+$/.test(binding.customerId)
     || snapshot.uid !== binding.uid || snapshot.customerId !== binding.customerId || snapshot.livemode !== config.expectedLivemode
-    || !/^sub_[A-Za-z0-9]+$/.test(snapshot.subscriptionId)) return base;
+    ) return base;
+  if (snapshot.plan === 'lifetime') {
+    const price = config.prices?.lifetime;
+    if (!price || snapshot.priceId !== price.id || snapshot.currency !== 'usd' || snapshot.amountPaid !== 2900 || price.unitAmount !== 2900
+      || !/^cs_(?:test_|live_)?[A-Za-z0-9]+$/.test(snapshot.checkoutSessionId || '') || !/^pi_[A-Za-z0-9]+$/.test(snapshot.paymentIntentId || '')
+      || snapshot.successfulCharge !== true || !whole(snapshot.amountRefunded) || snapshot.amountRefunded >= snapshot.amountPaid
+      || !['none','won'].includes(snapshot.disputeStatus) || snapshot.adminBlocked === true) return {...base, reason:'no_paid_lifetime_coverage'};
+    return {...base, active:true, plan:'lifetime', currentPeriodEnd:0, status:'active', reason:'paid_lifetime', customerId:binding.customerId, checkoutSessionId:snapshot.checkoutSessionId, paymentIntentId:snapshot.paymentIntentId};
+  }
+  if (!/^sub_[A-Za-z0-9]+$/.test(snapshot.subscriptionId)) return base;
   const plan = ['monthly', 'annual'].find(name => config.prices?.[name]?.id === snapshot.priceId);
   if (!plan) return { ...base, reason: 'unapproved_price' };
   const price = approvedPrice(config, plan);
@@ -216,6 +226,10 @@ export function createBillingHandler(config, ports) {
             return response(200, { state: 'none' }, origin);
           }
           bindCustomer(await ports.stripe.retrieveCustomer(customerId), account, config.expectedLivemode, customerId);
+          if (config.prices?.lifetime) {
+            const current = await ports.stripe.currentSubscriptionSnapshot({uid:account.uid,customerId});
+            if (subscriptionEntitlement(current,{uid:account.uid,customerId},config,Math.floor(Date.now()/1000)).plan === 'lifetime') return response(200,{state:'lifetime'},origin);
+          }
           const subscriptions = await ports.stripe.listAllSubscriptions(customerId);
           if (!Array.isArray(subscriptions)) fail('subscription_state_unavailable', 502);
           if (subscriptions.some(subscription => !['canceled', 'incomplete_expired'].includes(subscription.status))) {
@@ -223,13 +237,13 @@ export function createBillingHandler(config, ports) {
           }
           const pending = await ports.billing.pendingCheckout(account.uid);
           if (!pending) return response(200, { state: 'none' }, origin);
-          if (!uuid(pending.requestId) || !['monthly', 'annual'].includes(pending.plan) || !whole(pending.createdAt)
+          if (!uuid(pending.requestId) || !['monthly', 'annual', 'lifetime'].includes(pending.plan) || !whole(pending.createdAt)
             || pending.createdAt <= 0 || pending.createdAt > Date.now() / 1000) fail('checkout_reconciliation_pending', 409);
           const detail = { plan: pending.plan, requestId: pending.requestId, createdAt: pending.createdAt };
           if (!pending.sessionId) return response(200, { state: 'pending', ...detail }, origin);
           const session = await ports.stripe.retrieveCheckoutSession(pending.sessionId);
           if (session.id !== pending.sessionId || session.customer !== customerId || session.client_reference_id !== account.uid
-            || session.livemode !== config.expectedLivemode || session.mode !== 'subscription') fail('checkout_binding_invalid', 502);
+            || session.livemode !== config.expectedLivemode || session.mode !== (pending.plan === 'lifetime' ? 'payment' : 'subscription')) fail('checkout_binding_invalid', 502);
           if (session.status === 'expired') {
             await ports.billing.retirePendingCheckout(account.uid, pending.sessionId);
             // A failed or mismatched retirement is not permission to clear a
@@ -248,7 +262,7 @@ export function createBillingHandler(config, ports) {
           return response(200, { url: safeStripeUrl(portal.url, 'billing.stripe.com') }, origin);
         }
         if (!uuid(body.requestId)) fail('request_id_required');
-        approvedPrice(config, body.plan);
+        if (approvedPrice(config, body.plan).sellable === false) fail('plan_not_available', 409);
         if (hasLifetimeAccess(await ports.legacyEntitlement(account.email))) fail('lifetime_access_already_covers_membership', 409);
         if (!customerId) {
           const reservation = await ports.billing.reserveCustomer(account.uid, { requestId: crypto.randomUUID(), createdAt: Math.floor(Date.now() / 1000), email: account.email });
@@ -260,6 +274,10 @@ export function createBillingHandler(config, ports) {
           customerId = bindCustomer(customer, account, config.expectedLivemode);
           await ports.billing.bindCustomer(account.uid, customerId);
         } else bindCustomer(await ports.stripe.retrieveCustomer(customerId), account, config.expectedLivemode, customerId);
+        if (config.prices?.lifetime) {
+          const current = await ports.stripe.currentSubscriptionSnapshot({uid:account.uid,customerId});
+          if (subscriptionEntitlement(current,{uid:account.uid,customerId},config,Math.floor(Date.now()/1000)).plan === 'lifetime') fail('lifetime_access_already_covers_membership',409);
+        }
         const subscriptions = await ports.stripe.listAllSubscriptions(customerId);
         if (!Array.isArray(subscriptions) || subscriptions.some(subscription => !['canceled', 'incomplete_expired'].includes(subscription.status))) fail('existing_subscription_use_portal', 409);
         const parameters = checkoutParameters(config, account, customerId, body.plan);
@@ -311,7 +329,7 @@ async function projectCanonicalCustomer(binding, config, ports, nowSeconds) {
   if (pending?.sessionId) {
     const checkout = await ports.stripe.retrieveCheckoutSession(pending.sessionId);
     if (checkout.customer !== binding.customerId || checkout.client_reference_id !== binding.uid || checkout.livemode !== config.expectedLivemode) fail('checkout_binding_invalid', 502);
-    if (checkout.status === 'complete' && checkout.subscription === snapshot.subscriptionId) {
+    if (checkout.status === 'complete' && (entitlement.plan === 'lifetime' ? entitlement.active && checkout.id === snapshot.checkoutSessionId : checkout.subscription === snapshot.subscriptionId)) {
       await ports.billing.retirePendingCheckout(binding.uid, pending.sessionId);
     }
   }

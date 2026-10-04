@@ -1,4 +1,4 @@
-// Customer-facing commerce copy. Prices and billing intervals remain unchanged.
+// Customer-facing commerce copy. Annual labels are retained for existing subscriptions only.
 export const commerceLocales = ["en", "es", "fr", "pt", "de", "it", "ru", "ja", "zh"] as const;
 export type CommerceLocale = typeof commerceLocales[number];
 const copy = {
@@ -41,7 +41,7 @@ const copy = {
     "unavailable": "Plan unavailable",
     "lifetimeActive": "Your lifetime access is connected.",
     "memberActive": "Your membership is active.",
-    "lifetimeBody": "Your original purchase is honored. You don’t need another subscription for that access.",
+    "lifetimeBody": "You have lifetime access to your included courses. No subscription is needed.",
     "freeBody": "You’re on the Free plan. Explore more sounds with Premium.",
     "signIn": "Sign in",
     "signGoogle": "Sign in with Google",
@@ -54,7 +54,7 @@ const copy = {
     "helpAccess": "Membership and access help",
     "recheck": "Check again",
     "checkoutStatus": "Check checkout status",
-    "secure": "Secure checkout with Stripe. Cancel renewal in your account; keep access through your paid period.",
+    "secure": "Secure checkout with Stripe. Monthly renews until canceled; lifetime is a one-time purchase.",
     "error": "We couldn’t complete that action. Please try again, or contact support if it continues.",
     "checkoutNone": "No unfinished checkout remains. You can choose a plan.",
     "checkoutOpen": "Your checkout is still open. Choose the same plan to resume it.",
@@ -137,7 +137,13 @@ const copy = {
     "verificationSent": "Open the verification link in your email, then check again here.",
     "verified": "Your email is verified.",
     "addPassword": "Add a password",
-    "passwordConnected": "Password sign-in is connected to this account."
+    "passwordConnected": "Password sign-in is connected to this account.",
+    "payOnce": "PAY ONCE",
+    "lifetimeDetail": "One payment. All current courses and improvements to them.",
+    "chooseLifetime": "Choose lifetime",
+    "lifetimeCharge": "$29 charged once. No recurring payments.",
+    "once": "one time",
+    "freeDiagnostic": "A free listening check across every available sound group, with results included"
   },
   "es": {
     "plans": "Planes de práctica auditiva",
@@ -178,7 +184,7 @@ const copy = {
     "unavailable": "Plan no disponible",
     "lifetimeActive": "Tu acceso de por vida está activo.",
     "memberActive": "Tu suscripción está activa.",
-    "lifetimeBody": "Respetamos tu compra original. No necesitas otra suscripción para ese acceso.",
+    "lifetimeBody": "Tienes acceso de por vida a los cursos incluidos. No necesitas una suscripción.",
     "freeBody": "Estás en el plan gratuito. Explora más sonidos con Premium.",
     "signIn": "Iniciar sesión",
     "signGoogle": "Iniciar sesión con Google",
@@ -191,7 +197,7 @@ const copy = {
     "helpAccess": "Ayuda con la suscripción y el acceso",
     "recheck": "Volver a comprobar",
     "checkoutStatus": "Comprobar estado del pago",
-    "secure": "Pago seguro con Stripe. Cancela la renovación desde tu cuenta y conserva el acceso durante el período pagado.",
+    "secure": "Pago seguro con Stripe. El plan mensual se renueva hasta que lo canceles; el acceso de por vida se paga una sola vez.",
     "error": "No pudimos completar la acción. Inténtalo de nuevo o contacta con soporte si el problema continúa.",
     "checkoutNone": "No hay pagos pendientes. Puedes elegir un plan.",
     "checkoutOpen": "Tu pago sigue abierto. Elige el mismo plan para retomarlo.",
@@ -274,7 +280,13 @@ const copy = {
     "verificationSent": "Abre el enlace de verificación del correo y vuelve a comprobar aquí.",
     "verified": "Tu correo está verificado.",
     "addPassword": "Añadir contraseña",
-    "passwordConnected": "El acceso con contraseña está vinculado a esta cuenta."
+    "passwordConnected": "El acceso con contraseña está vinculado a esta cuenta.",
+    "payOnce": "PAGA UNA VEZ",
+    "lifetimeDetail": "Un pago. Todos los cursos actuales y sus mejoras.",
+    "chooseLifetime": "Elegir acceso de por vida",
+    "lifetimeCharge": "Un solo pago de $29. Sin pagos recurrentes.",
+    "once": "pago único",
+    "freeDiagnostic": "Prueba gratuita de todos los grupos de sonidos disponibles, con resultados incluidos"
   },
   "fr": {
     "plans": "Formules d’entraînement auditif",
@@ -315,7 +327,7 @@ const copy = {
     "unavailable": "Formule indisponible",
     "lifetimeActive": "Votre accès à vie est actif.",
     "memberActive": "Votre abonnement est actif.",
-    "lifetimeBody": "Votre achat initial est conservé. Aucun nouvel abonnement n’est nécessaire pour cet accès.",
+    "lifetimeBody": "Vous avez accès à vie aux cours inclus. Aucun abonnement n’est nécessaire.",
     "freeBody": "Vous utilisez la formule gratuite. Explorez davantage de sons avec Premium.",
     "signIn": "Se connecter",
     "signGoogle": "Se connecter avec Google",
@@ -328,7 +340,7 @@ const copy = {
     "helpAccess": "Aide : abonnement et accès",
     "recheck": "Vérifier à nouveau",
     "checkoutStatus": "Vérifier le statut du paiement",
-    "secure": "Paiement sécurisé avec Stripe. Résiliez le renouvellement depuis votre compte et gardez l’accès jusqu’à la fin de la période payée.",
+    "secure": "Paiement sécurisé avec Stripe. Le forfait mensuel se renouvelle jusqu’à résiliation ; l’accès à vie se paie une seule fois.",
     "error": "L’action n’a pas pu aboutir. Réessayez ou contactez l’assistance si le problème persiste.",
     "checkoutNone": "Aucun paiement en cours. Vous pouvez choisir une formule.",
     "checkoutOpen": "Votre paiement est encore ouvert. Choisissez la même formule pour le reprendre.",
@@ -411,7 +423,13 @@ const copy = {
     "verificationSent": "Ouvrez le lien de vérification reçu par e-mail, puis vérifiez à nouveau ici.",
     "verified": "Votre adresse e-mail est vérifiée.",
     "addPassword": "Ajouter un mot de passe",
-    "passwordConnected": "La connexion par mot de passe est associée à ce compte."
+    "passwordConnected": "La connexion par mot de passe est associée à ce compte.",
+    "payOnce": "UN SEUL PAIEMENT",
+    "lifetimeDetail": "Un paiement. Tous les cours actuels et leurs améliorations.",
+    "chooseLifetime": "Choisir l’accès à vie",
+    "lifetimeCharge": "29 $ en un seul paiement. Aucun paiement récurrent.",
+    "once": "une seule fois",
+    "freeDiagnostic": "Bilan gratuit de tous les groupes de sons disponibles, résultats inclus"
   },
   "pt": {
     "plans": "Planos de prática auditiva",
@@ -452,7 +470,7 @@ const copy = {
     "unavailable": "Plano indisponível",
     "lifetimeActive": "Seu acesso vitalício está ativo.",
     "memberActive": "Sua assinatura está ativa.",
-    "lifetimeBody": "Sua compra original é respeitada. Você não precisa de outra assinatura para esse acesso.",
+    "lifetimeBody": "Você tem acesso vitalício aos cursos incluídos. Não precisa de assinatura.",
     "freeBody": "Você está no plano grátis. Explore mais sons com o Premium.",
     "signIn": "Entrar",
     "signGoogle": "Entrar com o Google",
@@ -465,7 +483,7 @@ const copy = {
     "helpAccess": "Ajuda com assinatura e acesso",
     "recheck": "Verificar novamente",
     "checkoutStatus": "Verificar status do pagamento",
-    "secure": "Pagamento seguro com Stripe. Cancele a renovação na sua conta e mantenha o acesso até o fim do período pago.",
+    "secure": "Pagamento seguro com Stripe. O plano mensal se renova até o cancelamento; o acesso vitalício tem pagamento único.",
     "error": "Não foi possível concluir a ação. Tente novamente ou contate o suporte se o problema continuar.",
     "checkoutNone": "Não há pagamentos pendentes. Você pode escolher um plano.",
     "checkoutOpen": "Seu pagamento ainda está aberto. Escolha o mesmo plano para continuar.",
@@ -548,7 +566,13 @@ const copy = {
     "verificationSent": "Abra o link de verificação no e-mail e confira novamente aqui.",
     "verified": "Seu e-mail está verificado.",
     "addPassword": "Adicionar senha",
-    "passwordConnected": "O acesso por senha está vinculado a esta conta."
+    "passwordConnected": "O acesso por senha está vinculado a esta conta.",
+    "payOnce": "PAGUE UMA VEZ",
+    "lifetimeDetail": "Um pagamento. Todos os cursos atuais e suas melhorias.",
+    "chooseLifetime": "Escolher acesso vitalício",
+    "lifetimeCharge": "Pagamento único de US$ 29. Sem cobranças recorrentes.",
+    "once": "pagamento único",
+    "freeDiagnostic": "Teste gratuito de todos os grupos de sons disponíveis, com resultados incluídos"
   },
   "de": {
     "plans": "Hörtrainingspläne",
@@ -589,7 +613,7 @@ const copy = {
     "unavailable": "Plan nicht verfügbar",
     "lifetimeActive": "Dein lebenslanger Zugang ist aktiv.",
     "memberActive": "Deine Mitgliedschaft ist aktiv.",
-    "lifetimeBody": "Dein ursprünglicher Kauf bleibt gültig. Du brauchst dafür kein weiteres Abo.",
+    "lifetimeBody": "Du hast lebenslangen Zugang zu deinen enthaltenen Kursen. Kein Abo nötig.",
     "freeBody": "Du nutzt den kostenlosen Plan. Entdecke mit Premium mehr Laute.",
     "signIn": "Anmelden",
     "signGoogle": "Mit Google anmelden",
@@ -602,7 +626,7 @@ const copy = {
     "helpAccess": "Hilfe zu Abo und Zugang",
     "recheck": "Erneut prüfen",
     "checkoutStatus": "Zahlungsstatus prüfen",
-    "secure": "Sicher bezahlen mit Stripe. Kündige die Verlängerung im Konto; dein Zugang bleibt bis zum Ende des bezahlten Zeitraums bestehen.",
+    "secure": "Sichere Zahlung mit Stripe. Monatlich verlängert sich bis zur Kündigung; lebenslanger Zugang wird einmal bezahlt.",
     "error": "Die Aktion konnte nicht abgeschlossen werden. Versuche es erneut oder kontaktiere den Support.",
     "checkoutNone": "Kein offener Bezahlvorgang. Du kannst einen Plan wählen.",
     "checkoutOpen": "Dein Bezahlvorgang ist noch offen. Wähle denselben Plan, um fortzufahren.",
@@ -685,7 +709,13 @@ const copy = {
     "verificationSent": "Öffne den Bestätigungslink in der E-Mail und prüfe hier erneut.",
     "verified": "Deine E-Mail ist bestätigt.",
     "addPassword": "Passwort hinzufügen",
-    "passwordConnected": "Die Passwortanmeldung ist mit diesem Konto verbunden."
+    "passwordConnected": "Die Passwortanmeldung ist mit diesem Konto verbunden.",
+    "payOnce": "EINMAL ZAHLEN",
+    "lifetimeDetail": "Eine Zahlung. Alle aktuellen Kurse und deren Verbesserungen.",
+    "chooseLifetime": "Lebenslangen Zugang wählen",
+    "lifetimeCharge": "Einmalig 29 US-Dollar. Keine wiederkehrenden Zahlungen.",
+    "once": "einmalig",
+    "freeDiagnostic": "Kostenloser Hörcheck für alle verfügbaren Lautgruppen, inklusive Ergebnisse"
   },
   "it": {
     "plans": "Piani di allenamento all’ascolto",
@@ -726,7 +756,7 @@ const copy = {
     "unavailable": "Piano non disponibile",
     "lifetimeActive": "Il tuo accesso a vita è attivo.",
     "memberActive": "Il tuo abbonamento è attivo.",
-    "lifetimeBody": "Il tuo acquisto originale resta valido. Non serve un altro abbonamento per quell’accesso.",
+    "lifetimeBody": "Hai accesso a vita ai corsi inclusi. Non serve un abbonamento.",
     "freeBody": "Usi il piano gratuito. Esplora altri suoni con Premium.",
     "signIn": "Accedi",
     "signGoogle": "Accedi con Google",
@@ -739,7 +769,7 @@ const copy = {
     "helpAccess": "Assistenza per abbonamento e accesso",
     "recheck": "Controlla di nuovo",
     "checkoutStatus": "Controlla stato del pagamento",
-    "secure": "Pagamento sicuro con Stripe. Disdici il rinnovo dal tuo account e mantieni l’accesso fino alla fine del periodo pagato.",
+    "secure": "Pagamento sicuro con Stripe. Il piano mensile si rinnova fino alla disdetta; l’accesso a vita si paga una sola volta.",
     "error": "Impossibile completare l’operazione. Riprova o contatta l’assistenza se il problema persiste.",
     "checkoutNone": "Nessun pagamento incompleto. Puoi scegliere un piano.",
     "checkoutOpen": "Il pagamento è ancora aperto. Scegli lo stesso piano per riprenderlo.",
@@ -822,7 +852,13 @@ const copy = {
     "verificationSent": "Apri il link di verifica nell’email, poi controlla di nuovo qui.",
     "verified": "La tua email è verificata.",
     "addPassword": "Aggiungi password",
-    "passwordConnected": "L’accesso con password è collegato a questo account."
+    "passwordConnected": "L’accesso con password è collegato a questo account.",
+    "payOnce": "PAGA UNA VOLTA",
+    "lifetimeDetail": "Un pagamento. Tutti i corsi attuali e i loro miglioramenti.",
+    "chooseLifetime": "Scegli accesso a vita",
+    "lifetimeCharge": "29 $ una sola volta. Nessun pagamento ricorrente.",
+    "once": "una volta",
+    "freeDiagnostic": "Test gratuito su tutti i gruppi di suoni disponibili, risultati inclusi"
   },
   "ru": {
     "plans": "Тарифы для тренировки слуха",
@@ -863,7 +899,7 @@ const copy = {
     "unavailable": "Тариф недоступен",
     "lifetimeActive": "Ваш бессрочный доступ подключён.",
     "memberActive": "Ваша подписка активна.",
-    "lifetimeBody": "Ваша первоначальная покупка остаётся в силе. Новая подписка для этого доступа не нужна.",
+    "lifetimeBody": "У вас бессрочный доступ к включённым курсам. Подписка не нужна.",
     "freeBody": "У вас бесплатный тариф. Откройте больше звуков с Премиум.",
     "signIn": "Войти",
     "signGoogle": "Войти через Google",
@@ -876,7 +912,7 @@ const copy = {
     "helpAccess": "Помощь с подпиской и доступом",
     "recheck": "Проверить снова",
     "checkoutStatus": "Проверить статус оплаты",
-    "secure": "Безопасная оплата через Stripe. Отмените продление в аккаунте; доступ сохранится до конца оплаченного периода.",
+    "secure": "Безопасная оплата через Stripe. Месячный план продлевается до отмены; бессрочный доступ оплачивается один раз.",
     "error": "Не удалось выполнить действие. Повторите попытку или обратитесь в поддержку.",
     "checkoutNone": "Незавершённых оплат нет. Можно выбрать тариф.",
     "checkoutOpen": "Оплата ещё открыта. Выберите тот же тариф, чтобы продолжить.",
@@ -959,7 +995,13 @@ const copy = {
     "verificationSent": "Откройте ссылку в письме, затем повторите проверку здесь.",
     "verified": "Почта подтверждена.",
     "addPassword": "Добавить пароль",
-    "passwordConnected": "Вход по паролю подключён к этому аккаунту."
+    "passwordConnected": "Вход по паролю подключён к этому аккаунту.",
+    "payOnce": "ОДИН ПЛАТЁЖ",
+    "lifetimeDetail": "Один платёж. Все текущие курсы и их улучшения.",
+    "chooseLifetime": "Выбрать бессрочный доступ",
+    "lifetimeCharge": "Один платёж 29 долларов США. Без повторных списаний.",
+    "once": "один раз",
+    "freeDiagnostic": "Бесплатная проверка всех доступных групп звуков с результатами"
   },
   "ja": {
     "plans": "リスニング練習プラン",
@@ -1000,7 +1042,7 @@ const copy = {
     "unavailable": "プランを確認できません",
     "lifetimeActive": "買い切りのアクセスが有効です。",
     "memberActive": "メンバーシップは有効です。",
-    "lifetimeBody": "以前の購入は引き続き有効です。そのアクセスに追加の契約は不要です。",
+    "lifetimeBody": "対象コースを期限なく利用できます。サブスクリプションは不要です。",
     "freeBody": "現在は無料プランです。プレミアムでもっと多くの音を練習できます。",
     "signIn": "ログイン",
     "signGoogle": "Googleでログイン",
@@ -1013,7 +1055,7 @@ const copy = {
     "helpAccess": "契約・アクセスについて",
     "recheck": "再確認",
     "checkoutStatus": "支払い状況を確認",
-    "secure": "Stripeによる安全な決済。アカウントで更新を解約しても、支払い済み期間の終了まで利用できます。",
+    "secure": "Stripeによる安全な決済。月額プランは解約まで更新され、買い切りは一回払いです。",
     "error": "操作を完了できませんでした。再度お試しいただくか、サポートにお問い合わせください。",
     "checkoutNone": "未完了の決済はありません。プランを選べます。",
     "checkoutOpen": "決済はまだ完了していません。同じプランを選んで再開できます。",
@@ -1096,7 +1138,13 @@ const copy = {
     "verificationSent": "メール内の確認リンクを開いてから、ここで再確認してください。",
     "verified": "メールアドレスを確認しました。",
     "addPassword": "パスワードを追加",
-    "passwordConnected": "このアカウントでパスワードによるログインが利用できます。"
+    "passwordConnected": "このアカウントでパスワードによるログインが利用できます。",
+    "payOnce": "一度のお支払い",
+    "lifetimeDetail": "一度の購入で、現在の全コースとその改善にアクセス。",
+    "chooseLifetime": "買い切りを選ぶ",
+    "lifetimeCharge": "29米ドルの一回払い。継続課金はありません。",
+    "once": "一回払い",
+    "freeDiagnostic": "利用可能な全グループの無料リスニングチェックと結果"
   },
   "zh": {
     "plans": "听辨训练方案",
@@ -1137,7 +1185,7 @@ const copy = {
     "unavailable": "暂时无法获取方案",
     "lifetimeActive": "你的终身访问权限已启用。",
     "memberActive": "你的会员资格已生效。",
-    "lifetimeBody": "我们保留你原有购买的权益，无需为这些权限再次订阅。",
+    "lifetimeBody": "你已拥有所含课程的终身访问权限，无需订阅。",
     "freeBody": "你正在使用免费方案。升级高级会员，探索更多语音。",
     "signIn": "登录",
     "signGoogle": "使用Google登录",
@@ -1150,7 +1198,7 @@ const copy = {
     "helpAccess": "会员与访问帮助",
     "recheck": "重新检查",
     "checkoutStatus": "查看付款状态",
-    "secure": "通过Stripe安全付款。在账号中取消续订后，仍可使用至已付费周期结束。",
+    "secure": "通过Stripe安全支付。月付方案续订至取消；终身访问仅需一次付费。",
     "error": "无法完成操作。请重试；如果问题持续，请联系支持。",
     "checkoutNone": "没有未完成的付款，你可以选择方案。",
     "checkoutOpen": "付款尚未完成，选择同一方案可继续。",
@@ -1233,7 +1281,13 @@ const copy = {
     "verificationSent": "打开邮件中的验证链接，然后在这里重新检查。",
     "verified": "邮箱已验证。",
     "addPassword": "添加密码",
-    "passwordConnected": "此账号已启用密码登录。"
+    "passwordConnected": "此账号已启用密码登录。",
+    "payOnce": "一次付费",
+    "lifetimeDetail": "一次购买，包含当前全部课程及其改进。",
+    "chooseLifetime": "选择终身访问",
+    "lifetimeCharge": "一次支付29美元。无持续扣费。",
+    "once": "一次付费",
+    "freeDiagnostic": "免费测试所有可用声音组，并查看结果"
   }
 } as const;
 export function commerce(locale: string = "en") { const chosen = copy[locale as CommerceLocale] || copy.en; return (key: keyof typeof copy.en) => chosen[key]; }

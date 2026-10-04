@@ -1,6 +1,6 @@
 import { getFreshVerifiedIdToken, getSession } from './auth';
 
-export type MembershipPlan = 'monthly' | 'annual';
+export type MembershipPlan = 'monthly' | 'annual' | 'lifetime';
 export type CheckoutStatus = { state: 'none' | 'existing_subscription' | 'lifetime' }
   | { state: 'open' | 'pending'; plan: MembershipPlan; requestId: string; createdAt: number };
 const enabled = import.meta.env.PUBLIC_BILLING_ENABLED === 'true';
@@ -94,7 +94,7 @@ function destination(result: unknown, kind: 'checkout' | 'portal'): string {
 
 /** No request occurs on import or page load. A caller must initiate each action. */
 export async function createMembershipCheckout(plan: MembershipPlan, requestId: string, expectedUserId: string): Promise<string> {
-  if (!['monthly', 'annual'].includes(plan) || !requestIdPattern.test(requestId)) return Promise.reject(failure('billing/invalid-request', 'Choose a membership plan and try again.'));
+  if (!['monthly', 'annual', 'lifetime'].includes(plan) || !requestIdPattern.test(requestId)) return Promise.reject(failure('billing/invalid-request', 'Choose a membership plan and try again.'));
   return destination(await request('checkout', expectedUserId, { plan, requestId }), 'checkout');
 }
 export async function createMembershipPortal(expectedUserId: string): Promise<string> {
@@ -110,7 +110,7 @@ export async function getMembershipCheckoutStatus(expectedUserId: string): Promi
   }
   if (!['open', 'pending'].includes(result.state)
     || Object.keys(result).some(key => !['state', 'plan', 'requestId', 'createdAt'].includes(key))
-    || !('plan' in result) || typeof result.plan !== 'string' || !['monthly', 'annual'].includes(result.plan)
+    || !('plan' in result) || typeof result.plan !== 'string' || !['monthly', 'annual', 'lifetime'].includes(result.plan)
     || !('requestId' in result) || typeof result.requestId !== 'string' || !requestIdPattern.test(result.requestId)
     || !('createdAt' in result) || typeof result.createdAt !== 'number' || !Number.isSafeInteger(result.createdAt)
     || result.createdAt <= 0 || result.createdAt > Math.floor(Date.now() / 1000) + 300) throw unavailable();

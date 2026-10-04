@@ -149,7 +149,7 @@ export class BillingLedgerBase extends DurableObject {
   }
   savePendingCheckout(accountUid, proposed) {
     this.enabled();
-    if (!uid(accountUid) || !['monthly', 'annual'].includes(proposed?.plan) || !uuid(proposed?.requestId)
+    if (!uid(accountUid) || !['monthly', 'annual', 'lifetime'].includes(proposed?.plan) || !uuid(proposed?.requestId)
       || !uuid(proposed?.operationId) || !integer(proposed?.createdAt) || !proposed.parameters
       || JSON.stringify(proposed).length > 8192 || (proposed.sessionId && !/^cs_(?:test_|live_)?[A-Za-z0-9]+$/.test(proposed.sessionId))) fail('checkout_reservation_invalid');
     this.sql.exec('INSERT INTO checkout_reservations(uid, session_id, data_json, updated_at) VALUES(?, ?, ?, ?) ON CONFLICT(uid) DO UPDATE SET session_id = excluded.session_id, data_json = excluded.data_json, updated_at = excluded.updated_at',

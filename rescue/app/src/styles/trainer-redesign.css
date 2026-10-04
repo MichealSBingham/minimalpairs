@@ -239,3 +239,5 @@
 .practice-layout .trainer-card{overflow:clip}
 .practice-layout .complete-actions{flex-wrap:wrap}
 .journey-actions{margin-bottom:16px}
+
+.diagnostic-invite{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:24px;border:1px solid #ccd9de;background:#edf2f4;border-radius:16px;margin-bottom:22px}.diagnostic-invite h2{font-size:26px;margin:8px 0}.diagnostic-invite p{font-size:14px;color:#64675f;max-width:480px;margin:0}.diagnostic-invite>div:last-child{display:grid;justify-items:center;gap:10px;flex-shrink:0}.diagnostic-preparation{margin-bottom:24px}.diagnostic-preparation p{font-size:14px;line-height:1.7}.practice-layout .diagnostic-preparation h3{font-size:32px;margin:12px 0}@media(max-width:740px){.diagnostic-invite{display:block;padding:20px}.diagnostic-invite>div:last-child{margin-top:20px;justify-items:start}.diagnostic-invite h2{font-size:24px}}

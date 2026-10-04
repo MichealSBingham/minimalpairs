@@ -13,6 +13,6 @@ export function journeyStats(contrasts: Contrast[], sessions: PracticeSession[],
 export function selectJourneyContrasts(contrasts: Contrast[], sessions: PracticeSession[], languageId: string, fullAccess: boolean, mode: JourneyMode, selected: string, activityMode: 'abx-cross-word'|'word-identification' = 'abx-cross-word') {
   const available = contrasts.filter((_,i) => fullAccess || i < 3);
   if (mode === 'focused') return available.filter(c => c.id === selected);
-  if (mode === 'diagnostic') return available;
+  if (mode === 'diagnostic') return contrasts;
   return journeyStats(available, sessions, languageId, activityMode).sort((a,b) => (a.rate ?? -1) - (b.rate ?? -1) || a.total - b.total).slice(0,3).map(s => s.contrast);
 }

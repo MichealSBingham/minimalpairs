@@ -77,3 +77,26 @@ These tests do **not** validate Stripe credentials/permissions, actual account s
 ## Actual Sandbox follow-up
 
 The [28 September hosted Sandbox probe](../operator/stripe-sandbox.md) now validates actual monthly Checkout, portal cancellation, full test refund and canonical access projection using this adapter. This is separate from the fixtures and does not establish a deployed Worker/Firebase purchase flow or production readiness. The adapter now accepts an optional idempotency key for portal creation; the 42-check provider suite includes a stable-key uncertain-retry regression. Restricted-key permissions remain untested; the isolated operator used its private test key.
+
+### One-time lifetime offer (October 2026)
+
+The approved lifetime price is a $29 USD one-time payment, with no trial or
+renewal. New annual sales are disabled through `sellable: false`; the annual
+price stays approved for historical subscription invoices and cancellation in
+the portal. Existing active subscriptions block a second purchase, including
+lifetime, to avoid overlapping billing.
+
+Every canonical reconciliation first scans the bound customer's completed
+Checkout sessions for our schema and lifetime metadata. It retrieves the exact
+session, approved price, and one-item line list, then verifies the PaymentIntent
+identity, customer, amount, currency, captured charge, refunds, and disputes.
+Only $29 of verified card payment grants non-expiring `paid_lifetime` access.
+The same recomputation runs on subscription events, so an old cancellation does
+not overwrite valid lifetime access. Full refunds and non-won disputes revoke
+that payment's access; partial refunds retain access, matching the existing
+subscription policy. No refunds or subscription cancellations are performed by
+this code. Legacy email-keyed grants remain untouched.
+
+`operator/prepare-lifetime.mjs --prepare` provisions only the price and verifies
+webhook coverage. It uses a private durable idempotency checkpoint and never
+charges a card. Deployment remains a separate operation.

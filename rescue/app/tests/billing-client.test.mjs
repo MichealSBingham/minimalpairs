@@ -67,7 +67,7 @@ test('pausing checkout leaves explicit portal access possible and passes an empt
 });
 
 test('invalid plans and request identifiers cause zero identity or network calls', async () => {
-  for (const [plan, requestId] of [['lifetime', id], ['monthly', 'untrusted-id'], ['annual', '../path']]) {
+  for (const [plan, requestId] of [['weekly', id], ['monthly', 'untrusted-id'], ['annual', '../path']]) {
     const f = fixture(); await assert.rejects(f.api.createMembershipCheckout(plan, requestId, uid), { code: 'billing/invalid-request' }); assert.deepEqual(f.calls, []);
   }
 });
@@ -157,4 +157,11 @@ test('status failure, disabled service and changed identity never return a clear
   await assert.rejects(switched.api.getMembershipCheckoutStatus(uid), { code: 'app/account-changed' });
   const failed = fixture({ result: { error: 'private_server_detail' }, status: 503 });
   await assert.rejects(failed.api.getMembershipCheckoutStatus(uid), { code: 'billing/unavailable' });
+});
+
+
+test('lifetime checkout sends a one-time plan request through the same verified identity path',async()=>{
+ const f=fixture();
+ await f.api.createMembershipCheckout('lifetime',id,uid);
+ assert.equal(JSON.parse(f.calls.find(c=>c.kind==='http').init.body).plan,'lifetime');
 });

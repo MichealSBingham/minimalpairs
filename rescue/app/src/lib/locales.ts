@@ -4,7 +4,7 @@ export const localeNames: Record<string,string> = {en:'English',es:'Español',fr
 export const ogLocales: Record<string,string> = {en:'en_US',es:'es_ES',fr:'fr_FR',pt:'pt_BR',de:'de_DE',it:'it_IT',ru:'ru_RU',ja:'ja_JP',zh:'zh_CN'};
 export function unlocalizedPath(path: string) { return path.replace(/^\/(es|fr|pt|de|it|ru|ja|zh)(?=\/|$)/,'') || '/'; }
 export function localPath(locale: string, path: string) {const clean=unlocalizedPath(path);return locale==='en'?clean:`/${locale}${clean==='/'?'':clean}`;}
-export function hasTranslations(path: string) {const p=unlocalizedPath(path);return ['/', '/practice','/account','/pricing','/support'].includes(p)||/^\/learn\/[a-z0-9-]+$/.test(p)||/^\/[a-z-]+-minimal-pairs$/.test(p);}
+export function hasTranslations(path: string) {const p=unlocalizedPath(path);return ['/', '/practice','/account','/pricing','/support'].includes(p)||/^\/diagnostic\/(en|fr|es|de|it|pt|ru|ja|zh)$/.test(p)||/^\/learn\/[a-z0-9-]+$/.test(p)||/^\/[a-z-]+-minimal-pairs$/.test(p);}
 export const navCopy: Record<string,string[]> = {
  en:['How it works','Languages','Sound guides','My account','Lessons','Practice','Plans','Help & contact','Privacy','Terms','Small sounds. A world of difference.'],
  es:['Cómo funciona','Idiomas','Guías de sonidos','Mi cuenta','Lecciones','Practicar','Planes','Ayuda y contacto','Privacidad','Condiciones','Pequeños sonidos. Una gran diferencia.'],

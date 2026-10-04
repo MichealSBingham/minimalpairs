@@ -13,7 +13,7 @@ export function readPendingCheckout(store: Store, uid: string): PendingCheckout 
     const raw = store.getItem(checkoutStorageKey(uid));
     if (raw === null) return null;
     const value = JSON.parse(raw);
-    if (value?.version !== 1 || value.uid !== uid || !['monthly', 'annual'].includes(value.plan) || !uuid.test(value.requestId) || !Number.isSafeInteger(value.createdAt) || value.createdAt <= 0) throw unavailable();
+    if (value?.version !== 1 || value.uid !== uid || !['monthly', 'annual', 'lifetime'].includes(value.plan) || !uuid.test(value.requestId) || !Number.isSafeInteger(value.createdAt) || value.createdAt <= 0) throw unavailable();
     return value;
   } catch { throw unavailable(); }
 }
@@ -25,7 +25,7 @@ export function reserveCheckout(store: Store, uid: string, plan: MembershipPlan,
     return existing;
   }
   const value: PendingCheckout = { version: 1, uid, plan, requestId: createId(), createdAt: now };
-  if (!uuid.test(value.requestId) || !['monthly', 'annual'].includes(plan) || !Number.isSafeInteger(now) || now <= 0) throw unavailable();
+  if (!uuid.test(value.requestId) || !['monthly', 'annual', 'lifetime'].includes(plan) || !Number.isSafeInteger(now) || now <= 0) throw unavailable();
   try {
     store.setItem(checkoutStorageKey(uid), JSON.stringify(value));
     const saved = readPendingCheckout(store, uid);
@@ -41,7 +41,7 @@ export function clearConfirmedCheckout(store: Store, uid: string) {
 /** Caller holds the per-account lock and has checked a fresh response's account. */
 export function adoptServerCheckout(store: Store, uid: string, status: Extract<CheckoutStatus, { plan: MembershipPlan }>): PendingCheckout {
   const value: PendingCheckout = { version: 1, uid, plan: status.plan, requestId: status.requestId, createdAt: status.createdAt * 1000 };
-  if (!['open', 'pending'].includes(status.state) || !['monthly', 'annual'].includes(value.plan)
+  if (!['open', 'pending'].includes(status.state) || !['monthly', 'annual', 'lifetime'].includes(value.plan)
     || !uuid.test(value.requestId) || !Number.isSafeInteger(value.createdAt) || value.createdAt <= 0) throw unavailable();
   try {
     store.setItem(checkoutStorageKey(uid), JSON.stringify(value));

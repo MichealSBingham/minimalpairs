@@ -362,3 +362,14 @@ test('Workers-compatible manual redirect mode rejects redirected certificates wi
   assert.equal(f.state.calls.length, 1);
   assert.equal(f.state.calls[0].init.redirect, 'manual');
 });
+
+test('paid lifetime projection persists and a later canonical revocation removes it',async()=>{
+ const f=fixture();
+ const paid={schemaVersion:1,active:true,plan:'lifetime',currentPeriodEnd:0,updatedAt:NOW,status:'active',reason:'paid_lifetime',customerId:'cus_fixture',checkoutSessionId:'cs_test_fixture',paymentIntentId:'pi_fixture'};
+ await f.adapter.entitlements.projectSubscription(uid,paid);
+ assert.equal(f.state.documents.get(name('entitlements',uid)).fields.plan.stringValue,'lifetime');
+ await f.adapter.entitlements.projectSubscription(uid,{...paid,updatedAt:NOW+1});
+ assert.equal(f.state.documents.get(name('entitlements',uid)).fields.active.booleanValue,true);
+ await f.adapter.entitlements.projectSubscription(uid,{schemaVersion:1,active:false,plan:null,currentPeriodEnd:0,updatedAt:NOW+2,status:'unavailable',reason:'unverified_snapshot'});
+ assert.equal(f.state.documents.get(name('entitlements',uid)).fields.active.booleanValue,false);
+});

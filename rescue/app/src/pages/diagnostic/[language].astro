@@ -1,0 +1,9 @@
+---
+import Base from '../../layouts/Base.astro';
+import DiagnosticLanding from '../../components/DiagnosticLanding.astro';
+import {getPracticeLanguages} from '../../lib/content';
+import {diagnosticCopy} from '../../lib/diagnostic-i18n';
+export function getStaticPaths(){return getPracticeLanguages().map(language=>({params:{language:language.id},props:{language}}));}
+const {language}=Astro.props,t=diagnosticCopy('en');
+---
+<Base title={`Free ${language.name} Listening Test | Find Your Difficult Sounds | MinimalPairs`} description={`${language.name}: ${t.intro} ${t.resultsBody}`}><DiagnosticLanding language={language}/></Base>

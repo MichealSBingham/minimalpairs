@@ -503,3 +503,16 @@ test('periodic recovery cannot project a mismatched mode/customer/UID snapshot o
     assert.equal(f.state.projected.length, 0);
   }
 });
+
+test('annual can remain approved for old subscriptions while no longer sold',()=>{
+ const c=config();c.prices.annual.sellable=false;
+ assert.throws(()=>checkoutParameters(c,account,binding.customerId,'annual'),/plan_not_available/);
+ const old=snapshot();old.priceId='price_annual';old.interval='year';old.paidPeriods[0].priceId='price_annual';
+ assert.equal(subscriptionEntitlement(old,binding,c,NOW).active,true);
+});
+test('lifetime projection rejects missing proof and retains no expiry only for verified exact payment',()=>{
+ const c=config();c.prices.lifetime={id:'price_lifetime',currency:'usd',unitAmount:2900,interval:null,intervalCount:0};
+ const value={...binding,livemode:false,plan:'lifetime',priceId:'price_lifetime',currency:'usd',amountPaid:2900,amountRefunded:0,successfulCharge:true,disputeStatus:'none',checkoutSessionId:'cs_test_lifetime',paymentIntentId:'pi_lifetime'};
+ assert.equal(subscriptionEntitlement(value,binding,c,NOW).active,true);
+ for(const change of [{amountPaid:0},{amountPaid:3900},{successfulCharge:false},{amountRefunded:2900},{disputeStatus:'open'},{uid:'wrong'},{livemode:true},{paymentIntentId:null}])assert.equal(subscriptionEntitlement({...value,...change},binding,c,NOW).active,false);
+});
