@@ -5,7 +5,7 @@ export type SessionFeedbackCategory = typeof SESSION_FEEDBACK_CATEGORIES[number]
 export type MeasurementEvent = typeof MEASUREMENT_EVENTS[number];
 export type EventData = Record<string, unknown>;
 const languages = new Set(['en', 'fr', 'de', 'es', 'it', 'zh', 'pt', 'ru', 'ja']);
-const languagePages = new Set(['english', 'french', 'german', 'spanish', 'italian', 'mandarin-chinese', 'portuguese', 'russian', 'japanese'].map(id => `/${id}-minimal-pairs`));
+const languagePages = new Set(['english', 'british-english', 'french', 'german', 'spanish', 'italian', 'mandarin-chinese', 'portuguese', 'russian', 'japanese'].map(id => `/${id}-minimal-pairs`));
 const publicPages = new Set(['/', '/practice', '/account', '/pricing', '/teachers', '/method', '/privacy', '/terms', '/restore-access', '/human-audio-preview', '/audio-comparison', '/audio-credits', '/support']);
 const identifier = /^[a-z0-9][a-z0-9_-]{0,63}$/;
 const contrast = /^(en|fr|de|es|it|zh|pt|ru|ja)-[a-z0-9-]{1,55}$/;

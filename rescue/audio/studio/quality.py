@@ -123,7 +123,7 @@ def serve(port):
                     if audit:
                         item['layer2']=audit;item['flags']=list(dict.fromkeys(item['flags']+audit['flags']))
                 items.sort(key=lambda r:(-len(r['flags']),r['bank'],r['text']))
-                return self.send(200,json.dumps({'clips':items,'summary':fresh['summary'],'layer2':{k:v for k,v in layer.items() if k!='clips'}},ensure_ascii=False).encode())
+                return self.send(200,json.dumps({'sessionToken':token,'clips':items,'summary':fresh['summary'],'layer2':{k:v for k,v in layer.items() if k!='clips'}},ensure_ascii=False).encode())
             if path.startswith('/audio/'):
                 c=clips.get(path.removeprefix('/audio/'))
                 if not c:return self.send(404,b'{}')
