@@ -1,3 +1,4 @@
+import { trackMeasurement } from '../lib/measurement';
 import {diagnosticCopy} from '../lib/diagnostic-i18n';
 import { validSessions } from '../lib/progress-data';
 import { commerce, commercePath } from '../lib/commerce-i18n';
@@ -105,7 +106,7 @@ export default function AccountPanel({ languages = [], authEnabled = authReady, 
   }
   async function authenticate() {
     setBusy(true); setError('');
-    try { if (user) { await signOut(); setUser(null); } else { const session = await signInWithGoogle(); setUser(session?.user || null); } }
+    try { if (user) { await signOut(); setUser(null); } else { const session = await signInWithGoogle(); setUser(session?.user || null); if(session?.user) trackMeasurement('login',{surface:'account',ui_locale:locale,method:'google',outcome:'confirmed'}); } }
     catch (issue) {
       setError(t('error'));
     }

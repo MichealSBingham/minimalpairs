@@ -53,7 +53,7 @@ async function boundedResponse(response: Response, signal: AbortSignal): Promise
   catch { throw unavailable(); }
 }
 
-async function request(kind: 'checkout' | 'portal' | 'checkout-status', expectedUserId: string, body: Record<string, string>): Promise<unknown> {
+async function request(kind: 'checkout' | 'portal' | 'checkout-status', expectedUserId: string, body: Record<string, unknown>): Promise<unknown> {
   const origin = apiOrigin();
   if (!billingAvailable || !origin || (kind === 'checkout' && !checkoutAvailable)) throw unavailable();
   const token = await getFreshVerifiedIdToken(expectedUserId);
@@ -95,7 +95,9 @@ function destination(result: unknown, kind: 'checkout' | 'portal'): string {
 /** No request occurs on import or page load. A caller must initiate each action. */
 export async function createMembershipCheckout(plan: MembershipPlan, requestId: string, expectedUserId: string): Promise<string> {
   if (!['monthly', 'annual', 'lifetime'].includes(plan) || !requestIdPattern.test(requestId)) return Promise.reject(failure('billing/invalid-request', 'Choose a membership plan and try again.'));
-  return destination(await request('checkout', expectedUserId, { plan, requestId }), 'checkout');
+  let analytics: unknown;
+  try { analytics = (await import('./measurement')).checkoutAttribution(); } catch { /* Optional analytics must never block checkout. */ }
+  return destination(await request('checkout', expectedUserId, { plan, requestId, ...(analytics ? { analytics } : {}) }), 'checkout');
 }
 export async function createMembershipPortal(expectedUserId: string): Promise<string> {
   return destination(await request('portal', expectedUserId, {}), 'portal');

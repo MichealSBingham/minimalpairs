@@ -1,3 +1,4 @@
+import {attributionMetadata, attributionFromMetadata} from './analytics.mjs';
 /**
  * Isolated billing policy/HTTP core. No credentials, live adapters, default
  * Worker export, automatic emails, price creation or deployment configuration.
@@ -86,7 +87,7 @@ async function boundedBody(request, limit) {
 }
 
 /** Known prices and Firebase UID come from the server, never Checkout form data. */
-export function checkoutParameters(config, account, customerId, plan) {
+export function checkoutParameters(config, account, customerId, plan, analytics) {
   checkoutAllowed(config);
   const price = approvedPrice(config, plan);
   if (price.sellable === false) fail('plan_not_available', 409);
@@ -94,7 +95,7 @@ export function checkoutParameters(config, account, customerId, plan) {
     mode: plan === 'lifetime' ? 'payment' : 'subscription', customer: customerId, client_reference_id: account.uid,
     line_items: [{ price: price.id, quantity: 1 }], payment_method_types: ['card'],
     ...(plan === 'lifetime' ? { payment_intent_data: { metadata: { firebaseUid: account.uid, billingSchema: String(BILLING_SCHEMA), plan: 'lifetime' } } } : { subscription_data: { metadata: { firebaseUid: account.uid, billingSchema: String(BILLING_SCHEMA) } } }),
-    metadata: { firebaseUid: account.uid, billingSchema: String(BILLING_SCHEMA), ...(plan === 'lifetime' ? {plan:'lifetime'} : {}) },
+    metadata: { firebaseUid: account.uid, billingSchema: String(BILLING_SCHEMA), ...(plan === 'lifetime' ? {plan:'lifetime'} : {}), ...attributionMetadata(analytics) },
     success_url: `${config.appOrigin}/account?billing=return`, cancel_url: `${config.appOrigin}/pricing`,
     allow_promotion_codes: false,
   };
@@ -213,7 +214,7 @@ export function createBillingHandler(config, ports) {
       try { account = requireVerifiedAccount(await ports.auth.verifyIdToken(authorization.slice(7))); } catch { fail('verified_account_required', 401); }
       const raw = new TextDecoder('utf-8', { fatal: true }).decode(await boundedBody(request, 2048));
       let body; try { body = JSON.parse(raw || '{}'); } catch { fail('invalid_request'); }
-      bodyKeys(body, path === '/billing/checkout' ? ['plan', 'requestId'] : []);
+      bodyKeys(body, path === '/billing/checkout' ? ['plan', 'requestId', 'analytics'] : []);
       return await ports.billing.runExclusive(account.uid, async () => {
         let customerId = await ports.billing.customerForUid(account.uid);
         if (path === '/billing/checkout-status') {
@@ -280,8 +281,10 @@ export function createBillingHandler(config, ports) {
         }
         const subscriptions = await ports.stripe.listAllSubscriptions(customerId);
         if (!Array.isArray(subscriptions) || subscriptions.some(subscription => !['canceled', 'incomplete_expired'].includes(subscription.status))) fail('existing_subscription_use_portal', 409);
-        const parameters = checkoutParameters(config, account, customerId, body.plan);
         let pending = await ports.billing.pendingCheckout(account.uid);
+        // Attribution is a reservation snapshot. A retry keeps the original data
+        // (including no data), even after consent, campaign or locale changes.
+        let parameters = checkoutParameters(config, account, customerId, body.plan, pending ? attributionFromMetadata(pending.parameters?.metadata) : body.analytics);
         if (pending?.sessionId) {
           const existing = await ports.stripe.retrieveCheckoutSession(pending.sessionId);
           if (existing.customer !== customerId || existing.client_reference_id !== account.uid || existing.livemode !== config.expectedLivemode) fail('checkout_binding_invalid', 502);
@@ -292,6 +295,7 @@ export function createBillingHandler(config, ports) {
           }
           if (existing.status !== 'expired') fail('checkout_reconciliation_pending', 409);
           pending = null;
+          parameters = checkoutParameters(config, account, customerId, body.plan, body.analytics);
         }
         if (pending && pending.plan !== body.plan) fail('another_checkout_is_open', 409);
         if (pending && !sameCheckoutParameters(pending.parameters, parameters)) fail('checkout_configuration_changed', 409);

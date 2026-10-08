@@ -1,3 +1,4 @@
+import { trackMeasurement } from '../lib/measurement';
 import { useEffect, useRef, useState } from 'react';
 import { getVoices, getPracticeAudio, playWord, stopAudio } from '../lib/audio';
 import {wordVoices} from '../lib/round-voices';
@@ -42,7 +43,7 @@ export default function GuideWordAudio({ languageId, word, ipa, requiredWords, p
   async function listen() {
     if (!voiceId || playing.current) return;
     playing.current = true; setPhase('playing'); setError('');
-    try { await playWord(languageId, {text:word,ipa}, voiceId); }
+    try { await playWord(languageId, {text:word,ipa}, voiceId); trackMeasurement('guide_audio_play',{surface:'guide',ui_locale:locale,language_id:languageId}); }
     catch (cause) {
       // Starting another word intentionally stops this one through the shared adapter.
       if (alive.current && !(cause instanceof Error && cause.message === 'Playback was cancelled.')) {

@@ -1,0 +1,7 @@
+---
+import Base from '../layouts/Base.astro';
+import {Header,Footer} from '../components/ui';
+import AnalyticsSettings from '../components/AnalyticsSettings';
+import '../styles/business.css';
+---
+<Base title="Analytics exclusion | MinimalPairs" description="Keep your own visits out of MinimalPairs analytics." noindex analytics={false}><Header/><main class="editorial-wrap"><h1>Your analytics settings</h1><AnalyticsSettings client:load/></main><Footer/></Base>

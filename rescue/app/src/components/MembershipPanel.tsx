@@ -1,3 +1,5 @@
+import { useMeasuredExposure } from './useMeasuredExposure';
+import { trackMeasurement } from '../lib/measurement';
 import { useEffect, useRef, useState } from 'react';
 import { getSession, observeSession, refreshSession, type SessionUser } from '../lib/auth';
 import { billingAvailable, checkoutAvailable, createMembershipCheckout, createMembershipPortal, getMembershipCheckoutStatus, type MembershipPlan, type CheckoutStatus } from '../lib/billing-client';
@@ -13,6 +15,8 @@ const issueCode = (issue: unknown) => issue && typeof issue === 'object' && 'cod
 /** No checkout or portal request occurs on mount, identity change, focus or return. */
 export default function MembershipPanel({ storefront = false, embedded = false, locale = 'en' }: { storefront?: boolean; embedded?: boolean; locale?: string }) {
   const t = commerce(locale); const path = (value: string) => commercePath(locale, value);
+  const surface = embedded ? 'practice' : storefront ? 'pricing' : 'account';
+  const selectPlan = (plan: MembershipPlan) => trackMeasurement('plan_selected',{surface,ui_locale:locale,plan});
   const issueMessage = (_issue: unknown) => t('error');
   const [user, setUser] = useState<SessionUser | null>(null);
   const [identityReady, setIdentityReady] = useState(false);
@@ -28,6 +32,8 @@ export default function MembershipPanel({ storefront = false, embedded = false, 
   const generation = useRef(0);
   const requestBusy = useRef(false);
   const currentUid = useRef<string | null>(null);
+  const [planExposureNode, setPlanExposureNode] = useState<HTMLDivElement | null>(null);
+  useMeasuredExposure(planExposureNode, `${surface}:${locale}`, 'plans_view', {surface,ui_locale:locale,access_tier:'free'});
 
   function readPending(uid: string) {
     try { setPending(readPendingCheckout(window.localStorage, uid)); setStorageError(''); }
@@ -78,8 +84,10 @@ export default function MembershipPanel({ storefront = false, embedded = false, 
   async function act(kind: 'checkout' | 'portal' | 'status', plan?: MembershipPlan) {
     if (!billingAvailable || !user?.email_verified || requestBusy.current || status !== 'ready') return;
     if (kind === 'checkout' && (!checkoutAvailable || access || storageError || !plan)) return;
+    if (kind === 'checkout' && plan) selectPlan(plan);
     const expectedId = user.id;
     const token = generation.current;
+    let checkoutPlan = plan;
     requestBusy.current = true; setBusy(kind); setError(''); setCheckoutStatus(null);
     const sameAccount = async () => {
       const session = await getSession();
@@ -117,11 +125,17 @@ export default function MembershipPanel({ storefront = false, embedded = false, 
         }
         const reservation = reserveCheckout(window.localStorage, expectedId, plan!);
         setPending(reservation);
+        checkoutPlan = reservation.plan;
         return createMembershipCheckout(reservation.plan, reservation.requestId, expectedId);
       });
       await sameAccount();
-      if (destination) window.location.assign(destination);
+      if (destination) {
+        if(kind === 'checkout') trackMeasurement('begin_checkout',{surface,ui_locale:locale,plan:checkoutPlan});
+        if(kind === 'portal') trackMeasurement('billing_portal_open',{surface,ui_locale:locale});
+        window.location.assign(destination);
+      }
     } catch (issue) {
+      if(kind === 'checkout') trackMeasurement('checkout_error',{surface,ui_locale:locale,plan,outcome:'failed'});
       if (generation.current === token) {
         setError(issueMessage(issue));
         if (issueCode(issue) === 'billing/existing_subscription_use_portal') setPortalSuggested(true);
@@ -137,7 +151,7 @@ export default function MembershipPanel({ storefront = false, embedded = false, 
   const disabled = Boolean(busy) || status !== 'ready';
   const planCards = <div className="membership-plans">
     {storefront && !embedded && <div className="plan-free"><span className="plan-kicker">{t('explore')}</span><h3>{t('free')}</h3><p className="membership-price">$0</p><p>{t('freePitch')}</p><ul><li>{t('freeDiagnostic')}</li><li>{t('freeExercises')}</li><li>{t('freeUnlimited')}</li><li>{t('voicesHidden')}</li></ul><a className="button button-outline" href={path('/practice')}>{t('startFree')}</a><p className="membership-fine">{t('noCard')}</p></div>}
-    {(['monthly','lifetime'] as MembershipPlan[]).map(plan => <div key={plan} className={plan === 'lifetime' ? 'plan-lifetime' : 'plan-monthly'}><span className="plan-kicker">{t(plan === 'lifetime' ? 'payOnce' : 'flexible')}</span><h3>{t(plan)}</h3><p className="membership-price">{plan === 'lifetime' ? '$29' : '$7'}<span> USD {plan === 'lifetime' ? t('once') : `/ ${t('month')}`} </span></p><p>{t(plan === 'lifetime' ? 'lifetimeDetail' : 'monthlyDetail')}</p><ul><li>{t('allExercises')}</li><li>{t('unlimited')}</li><li>{t('voices')}</li><li>{t('feedback')}</li></ul>{user?.email_verified ? <button className="button button-dark" disabled={disabled || Boolean(storageError)} onClick={() => void act('checkout',plan)}>{busy === 'checkout' ? t('opening') : t(plan === 'lifetime' ? 'chooseLifetime' : 'chooseMonthly')}</button> : <a className="button button-dark" href={path('/account#account-sign-in')}>{t(plan === 'lifetime' ? 'chooseLifetime' : 'chooseMonthly')}</a>}<p className="membership-fine">{t(plan === 'lifetime' ? 'lifetimeCharge' : 'monthlyCharge')}</p></div>)}
+    {(['monthly','lifetime'] as MembershipPlan[]).map(plan => <div key={plan} ref={plan === 'monthly' ? setPlanExposureNode : undefined} className={plan === 'lifetime' ? 'plan-lifetime' : 'plan-monthly'}><span className="plan-kicker">{t(plan === 'lifetime' ? 'payOnce' : 'flexible')}</span><h3>{t(plan)}</h3><p className="membership-price">{plan === 'lifetime' ? '$29' : '$7'}<span> USD {plan === 'lifetime' ? t('once') : `/ ${t('month')}`} </span></p><p>{t(plan === 'lifetime' ? 'lifetimeDetail' : 'monthlyDetail')}</p><ul><li>{t('allExercises')}</li><li>{t('unlimited')}</li><li>{t('voices')}</li><li>{t('feedback')}</li></ul>{user?.email_verified ? <button className="button button-dark" disabled={disabled || Boolean(storageError)} onClick={() => void act('checkout',plan)}>{busy === 'checkout' ? t('opening') : t(plan === 'lifetime' ? 'chooseLifetime' : 'chooseMonthly')}</button> : <a className="button button-dark" onClick={() => selectPlan(plan)} href={path('/account#account-sign-in')}>{t(plan === 'lifetime' ? 'chooseLifetime' : 'chooseMonthly')}</a>}<p className="membership-fine">{t(plan === 'lifetime' ? 'lifetimeCharge' : 'monthlyCharge')}</p></div>)}
   </div>;
   return <section id="membership" className={`membership-panel ${storefront ? 'membership-storefront' : ''}`} aria-labelledby="membership-heading">
     <span className="account-plan-badge" role="status">{!identityReady || status === 'loading' ? t('loading') : status === 'error' ? t('unavailable') : lifetime ? t('lifetime') : membership ? t('premium') : t('free')}</span>

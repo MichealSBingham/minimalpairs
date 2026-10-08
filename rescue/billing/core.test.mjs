@@ -516,3 +516,34 @@ test('lifetime projection rejects missing proof and retains no expiry only for v
  assert.equal(subscriptionEntitlement(value,binding,c,NOW).active,true);
  for(const change of [{amountPaid:0},{amountPaid:3900},{successfulCharge:false},{amountRefunded:2900},{disputeStatus:'open'},{uid:'wrong'},{livemode:true},{paymentIntentId:null}])assert.equal(subscriptionEntitlement({...value,...change},binding,c,NOW).active,false);
 });
+
+test('coarse attribution is snapshotted before Stripe and retries preserve it', async () => {
+ for(const ambiguous of [false,true]){
+  const f=fixture();
+  const analytics={source:'google',medium:'organic',campaign:'diagnostic',ui_locale:'fr'};
+  assert.equal((await f.handler(request(undefined,{plan:'monthly',requestId,analytics}))).status,200);
+  const original=structuredClone(f.state.pending.parameters);
+  assert.equal(original.metadata.mp_source,'google');
+  assert.equal(original.metadata.mp_ui_locale,'fr');
+  assert.equal(original.subscription_data.metadata.mp_source,undefined);
+  if(ambiguous)delete f.state.pending.sessionId;
+  assert.equal((await f.handler(request(undefined,{plan:'monthly',requestId:secondRequestId,analytics:{source:'reddit',medium:'social',ui_locale:'en'}}))).status,200);
+  assert.deepEqual(f.state.pending.parameters,original);
+ }
+});
+test('freeform attribution is dropped and normal checkout remains possible',async()=>{
+ for(const analytics of [{source:'someone@example.com',medium:'organic',ui_locale:'en'},{source:'google',medium:'organic',ui_locale:'en',email:'private@example.invalid'},{source:'google',medium:'organic',ui_locale:'en',campaign:'https://secret.invalid/'},'private',null]){
+  const f=fixture();assert.equal((await f.handler(request(undefined,{plan:'monthly',requestId,analytics}))).status,200);
+  assert.equal(Object.keys(f.state.pending.parameters.metadata).some(k=>k.startsWith('mp_')),false);
+ }
+ const f=fixture();await f.handler(request());delete f.state.pending.sessionId;
+ await f.handler(request(undefined,{plan:'monthly',requestId,analytics:{source:'google',medium:'organic',ui_locale:'en'}}));
+ assert.equal(f.state.pending.parameters.metadata.mp_source,undefined);
+});
+test('an expired checkout gets fresh attribution while retaining normal plan validation',async()=>{
+ const f=fixture();await f.handler(request(undefined,{plan:'monthly',requestId,analytics:{source:'google',medium:'organic',ui_locale:'en'}}));
+ f.ports.stripe.retrieveCheckoutSession=async()=>({...checkout(),status:'expired'});
+ assert.equal((await f.handler(request(undefined,{plan:'monthly',requestId:secondRequestId,analytics:{source:'reddit',medium:'social',ui_locale:'fr'}}))).status,200);
+ assert.equal(f.state.pending.parameters.metadata.mp_source,'reddit');
+ assert.equal(f.state.pending.parameters.metadata.mp_ui_locale,'fr');
+});

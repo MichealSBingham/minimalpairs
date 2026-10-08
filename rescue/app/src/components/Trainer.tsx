@@ -1,3 +1,5 @@
+import { useMeasuredExposure } from './useMeasuredExposure';
+import { trackMeasuredPracticeEvent } from '../lib/measurement';
 import {diagnosticCopy} from '../lib/diagnostic-i18n';
 import DiagnosticResults from './DiagnosticResults';
 import CourseProgress from './CourseProgress';
@@ -87,6 +89,18 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
   const busy = useRef(false);
   const hintsUsed = useRef(false);
   const question = questions[index];
+  const measuredSession = useRef<{data: Record<string,string|number>; started: number; finished: boolean; answered: number; correct: number} | null>(null);
+  function recordExit() {
+    const active = measuredSession.current;
+    if (!active || active.finished) return;
+    active.finished = true;
+    trackMeasuredPracticeEvent('practice_exit',{...active.data,total:active.answered,correct:active.correct,duration_ms:Date.now()-active.started});
+  }
+  // A page in the back/forward cache can resume the same unfinished session.
+  useEffect(() => { const exit = (event: PageTransitionEvent) => { if (!event.persisted) recordExit(); }; window.addEventListener('pagehide',exit); return () => { window.removeEventListener('pagehide',exit); recordExit(); }; },[]);
+  const [paywallNode, setPaywallNode] = useState<HTMLDivElement | null>(null);
+  const paywallKey = locked && exerciseAccess !== 'checking' && exerciseAccess !== 'error' ? `${languageId}:${contrastId}` : '';
+  useMeasuredExposure(paywallNode,paywallKey,'paywall_view',{surface:'practice',ui_locale:locale,language_id:languageId,contrast_id:contrastId,access_tier:'free'});
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -122,7 +136,7 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
     window.addEventListener('popstate',back); return () => window.removeEventListener('popstate',back);
   }, [languages]);
   function cancelPlayback() { playbackGeneration.current += 1; stopAudio(); busy.current = false; setPlaying(null); setSequencePlaying(false); }
-  function reset() { setAudioRevision(v=>v+1); setPendingDiagnostic(false); setPendingLesson(null); cancelPlayback(); setPhase('ready'); setQuestions([]); setIndex(0); setAnswer(null); setRoundRevealed(false); setAttempts([]); setHeard(unheard()); setAudioError(''); setCompletedSession(null); setReviewSuggestion(null); completingId.current = null; }
+  function reset() { recordExit(); setAudioRevision(v=>v+1); setPendingDiagnostic(false); setPendingLesson(null); cancelPlayback(); setPhase('ready'); setQuestions([]); setIndex(0); setAnswer(null); setRoundRevealed(false); setAttempts([]); setHeard(unheard()); setAudioError(''); setCompletedSession(null); setReviewSuggestion(null); completingId.current = null; }
   function changeLanguage(id: string) {
     const selected = languages.find(item => item.id === id);
     if (!selected) return;
@@ -171,7 +185,10 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
     hintsUsed.current = journeyMode === 'diagnostic' ? false : identifying || textHints;
     sessionAudioCollection.current = actualSessionAudioCollection(!audioManifestPath ? `chatterbox-${language.id === 'en' ? 'us' : language.id}-four-voices-v1` : audioCollectionId, queue.flatMap(item => [item.referenceVoiceId, item.testVoiceId]));
     attemptId.current = `${journeyMode}-${globalThis.crypto?.randomUUID?.() || Date.now()}`;
-    startMeasuredPractice(attemptId.current, { language_id: language.id, contrast_id: contrast.id, audio_collection: sessionAudioCollection.current, text_hints_used: hintsUsed.current, total: queue.length });
+    const measurement = { language_id: language.id, ...(journeyMode === 'focused' ? {contrast_id: contrast.id} : {}), audio_collection: sessionAudioCollection.current, activity_mode: identifying ? 'word-identification' : 'abx-cross-word', session_kind: journeyMode, access_tier:exerciseAccess === 'lifetime' ? 'lifetime' : fullAccess ? 'paid' : 'free', ui_locale:locale, groups_count:blocks.length, total:queue.length, attempt_id:attemptId.current };
+    measuredSession.current = {data:measurement,started:Date.now(),finished:false,answered:0,correct:0};
+    startMeasuredPractice(attemptId.current, {...measurement,text_hints_used:hintsUsed.current});
+    if(journeyMode === 'diagnostic') trackMeasuredPracticeEvent('diagnostic_start',measurement);
     setQuestions(queue); setIndex(0); setAnswer(null); setRoundRevealed(false); setAttempts([]); setHeard(unheard()); setCompletedSession(null); setStorageError(false); setPhase('practice'); void listenSequence(queue[0], 1);
   }
   function prepareDiagnostic() {
@@ -202,6 +219,7 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
   function choose(reference: WordIndex) {
     if (!question || answer !== null || (!identifying && (!heard.a || !heard.b)) || !heard.x || busy.current) return;
     const category = question.order[reference]; const correct = category === question.target;
+    if(measuredSession.current){measuredSession.current.answered++;if(correct) measuredSession.current.correct++;}
     if (index === 0) measuredFirstAnswer(attemptId.current, hintsUsed.current);
     busy.current = true;
     if (journeyMode !== 'diagnostic') answerCue(correct);
@@ -216,7 +234,14 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
       const session: PracticeSession = { id: attemptId.current, mode: identifying ? 'word-identification' : 'abx-cross-word', purpose: journeyMode, schemaVersion: 2, audioCollectionId: sessionAudioCollection.current, textHintsUsed: hintsUsed.current, completedAt: new Date().toISOString(), languageId: language.id, contrastId: contrast.id, correct: attempts.filter(item => item.correct).length, total: attempts.length, mistakes: attempts.filter(item => !item.correct).map(({ correct: _, ...item }) => item) };
       const records = language.contrasts.filter(c => attempts.some(a => a.contrastId === c.id)).map(c => { const subset = attempts.filter(a => a.contrastId === c.id); return {...session, id: `${session.id}-${c.id}`, contrastId: c.id, total: subset.length, correct: subset.filter(a => a.correct).length, mistakes: subset.filter(a => !a.correct).map(({correct, contrastId, ...a}) => a)}; }).filter(s => s.total > 0);
       const saved = readProgress(); const updated = [...saved.sessions, ...records].slice(-1000); setHistory(previous => [...new Map([...previous, ...updated].map(s => [s.id,s])).values()]); setStorageError(!writeProgress({ ...saved, preferredLanguage: language.id, nativeLanguage, sessions: updated })); setCompletedSession(session); setPhase('complete');
-      completeMeasuredPractice(attemptId.current, { correct: session.correct, total: session.total, text_hints_used: session.textHintsUsed, first_device_completion: !saved.sessions.some(item => item.mode === 'abx-cross-word') });
+      completeMeasuredPractice(attemptId.current, { correct: session.correct, total: session.total, text_hints_used: session.textHintsUsed, first_device_completion: saved.sessions.length === 0 });
+      const active = measuredSession.current;
+      if(active && !active.finished) {
+        active.finished = true;
+        const result = {...active.data,correct:session.correct,total:session.total,duration_ms:Date.now()-active.started};
+        for(const record of records) trackMeasuredPracticeEvent('practice_group_complete',{...result,contrast_id:record.contrastId,correct:record.correct,total:record.total});
+        if(journeyMode === 'diagnostic') { trackMeasuredPracticeEvent('diagnostic_complete',result); trackMeasuredPracticeEvent('diagnostic_results_view',{...result,surface:'diagnostic'}); }
+      }
       // Experimental libraries may contain contrasts absent from ordinary
       // practice. Their completion must not produce ordinary-library links.
       setReviewSuggestion(session.audioCollectionId === 'qwen-starter-v1'
@@ -294,7 +319,7 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
             <div className="trainer-card">
               <div className="trainer-card-top"><div><span className="eyebrow">{t(language.name)}</span><h2>{title}</h2>{journeyMode!=='diagnostic' && <span className="quiet-label">{it(identifying?1:0)}</span>}</div><div className="trainer-round-tools"><span className="round-counter" hidden={locked || phase === 'ready'}>{phase === 'ready' ? '' : phase === 'complete' ? t("Session complete") : `${index + 1} / ${questions.length}`}</span>{phase === 'practice' && <button className="end-session" onClick={reset}><Icon name="close" size={14} /> {t("End session")}</button>}</div></div>
               <div className="session-progress" role="progressbar" aria-label={t("Session progress")} aria-valuenow={Math.round(progress)} aria-valuemin={0} aria-valuemax={100}><span style={{ width: `${phase === 'ready' ? 0 : progress}%` }} /></div>
-              {exerciseAccess === 'checking' ? <div className="session-ready"><p role="status">{t("Loading…")}</p></div> : locked ? <div className="session-ready">
+              {exerciseAccess === 'checking' ? <div className="session-ready"><p role="status">{t("Loading…")}</p></div> : locked ? <div ref={setPaywallNode} className="session-ready">
                 <Icon name="lock" size={28} />
                 <h3>{t("Unlock this exercise.")}</h3>
                 <p>{exerciseAccess === 'error' ? t("We couldn’t check your access. Try again or choose a free exercise.") : signedIn ? t("Choose Premium to unlock every lesson.") : t("Already a member? Sign in to open the full library.")}</p>

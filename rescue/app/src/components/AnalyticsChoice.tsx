@@ -1,6 +1,6 @@
 import {feedbackText} from '../lib/feedback-i18n';
 import { useEffect, useState } from 'react';
-import { analyticsChoice, browserDeclinesAnalytics, initializeMeasurement, measurementAvailable, setAnalyticsChoice, watchAnalyticsChoice } from '../lib/measurement';
+import { analyticsChoice, analyticsExcluded, browserDeclinesAnalytics, initializeMeasurement, measurementAvailable, setAnalyticsChoice, watchAnalyticsChoice } from '../lib/measurement';
 
 export default function AnalyticsChoice({locale='en'}:{locale?:string}) {
   const t=(index:number)=>feedbackText(locale,index);
@@ -12,7 +12,7 @@ export default function AnalyticsChoice({locale='en'}:{locale?:string}) {
   useEffect(() => {
     initializeMeasurement(); const configured = measurementAvailable(); setAvailable(configured); setBrowserDeclines(browserDeclinesAnalytics());
     const update = () => { const value = analyticsChoice(); setChoice(value); if (value) setOpen(false); };
-    update(); setOpen(configured && analyticsChoice() === null && !browserDeclinesAnalytics());
+    update(); setOpen(configured && !analyticsExcluded() && analyticsChoice() === null && !browserDeclinesAnalytics());
     return watchAnalyticsChoice(update);
   }, []);
   if (!available) return null;

@@ -1,8 +1,11 @@
-import { acquisitionChannel, measurementData, measurementPath, recommendationAttribution, type EventData, type MeasurementEvent } from './measurement-data';
+import { acquisitionDetails, measurementData, measurementPath, recommendationAttribution, type EventData, type MeasurementEvent } from './measurement-data';
 
 declare global { interface Window { dataLayer?: unknown[]; gtag?: (...args: unknown[]) => void; } }
 const CHOICE_KEY = 'minimalpairs.analytics-choice.v1';
 const CHOICE_EVENT = 'minimalpairs:analytics-choice';
+const EXCLUSION_KEY = 'minimalpairs.analytics-excluded.v1';
+const ACQUISITION_KEY = 'minimalpairs.analytics-acquisition.v1';
+const RETURN_KEY = 'minimalpairs.analytics-last-practice.v1';
 const RECOMMENDATION_KEY = 'minimalpairs.analytics-recommendation.v1';
 type Choice = 'allowed' | 'declined' | null;
 let loaded = false;
@@ -14,7 +17,7 @@ const openedRecommendations = new Set<string>();
 // Only duplicate protection, never a delivery queue. No feedback is persisted.
 const sharedFeedback = new Set<string>();
 function clearRecommendation() { try { window.sessionStorage.removeItem(RECOMMENDATION_KEY); } catch { /* Measurement must not interrupt practice. */ } }
-function clearPendingMeasurement() { attempts.clear(); openedRecommendations.clear(); clearRecommendation(); }
+function clearPendingMeasurement() { attempts.clear(); openedRecommendations.clear(); clearRecommendation(); try { window.sessionStorage.removeItem(ACQUISITION_KEY); window.localStorage.removeItem?.(RETURN_KEY); } catch {} }
 function configuration() {
   if (typeof document === 'undefined') return null;
   const id = document.documentElement.dataset.measurementId || '';
@@ -28,8 +31,16 @@ export function measurementAvailable() { return Boolean(configuration()); }
 export function browserDeclinesAnalytics() {
   return typeof navigator !== 'undefined' && (navigator.doNotTrack === '1' || Boolean((navigator as Navigator & { globalPrivacyControl?: boolean }).globalPrivacyControl));
 }
+export function analyticsExcluded() {
+  try { return window.localStorage.getItem(EXCLUSION_KEY) === 'true' || /^(localhost|127\.0\.0\.1)$/.test(window.location.hostname) || Boolean(navigator.webdriver); } catch { return true; }
+}
+export function setAnalyticsExcluded(value: boolean) {
+  try { window.localStorage.setItem(EXCLUSION_KEY, String(value)); } catch { storageBlocked = true; disabled(true); return false; }
+  if(value) { setAnalyticsChoice('declined'); clearPendingMeasurement(); }
+  window.dispatchEvent(new Event(CHOICE_EVENT)); return true;
+}
 function permitted() {
-  return !storageBlocked && Boolean(configuration()) && analyticsChoice() === 'allowed' && !browserDeclinesAnalytics();
+  return !analyticsExcluded() && !storageBlocked && Boolean(configuration()) && analyticsChoice() === 'allowed' && !browserDeclinesAnalytics();
 }
 export function sessionFeedbackPermission(): 'allowed' | 'off' | 'unavailable' {
   if (!configuration()) return 'unavailable';
@@ -50,11 +61,34 @@ export function shareSessionFeedback(raw: EventData): 'queued' | 'duplicate' | '
 function disabled(value: boolean) {
   const config = configuration(); if (config) (window as unknown as Record<string, unknown>)[`ga-disable-${config.id}`] = value;
 }
+function acquisition(): {channel:string;source?:string;medium?:string;campaign?:string} {
+  const current = acquisitionDetails(document.referrer, window.location.origin, window.location.search);
+  try {
+    const stored = JSON.parse(window.sessionStorage.getItem(ACQUISITION_KEY) || 'null');
+    const fresh = stored && Number.isFinite(stored.at) && Date.now() >= stored.at && Date.now() - stored.at < 30 * 60_000;
+    const values = (current.channel === 'internal' || current.channel === 'direct') && fresh ? stored.values : current;
+    // Re-sanitize stored values so edited browser storage cannot leak arbitrary strings.
+    const clean = values.source ? acquisitionDetails('', window.location.origin, new URLSearchParams({utm_source:values.source,utm_medium:values.medium,utm_campaign:values.campaign || ''}).toString()) : {channel:current.channel};
+    const selected = clean.channel === 'direct' && values.channel === 'referral' ? {channel:'referral',source:'other',medium:'referral'} : clean;
+    window.sessionStorage.setItem(ACQUISITION_KEY, JSON.stringify({at:Date.now(),values:selected}));
+    return selected;
+  } catch { return current; }
+}
+/** Coarse purchase attribution only after analytics consent; never identity or URL data. */
+export function checkoutAttribution() {
+  if (!permitted()) return undefined;
+  const source = acquisition();
+  const locale = /^(en|es|fr|pt|de|it|ru|ja|zh)$/.test(document.documentElement.lang || '') ? document.documentElement.lang : 'en';
+  if (source.channel === 'unknown' || source.channel === 'internal') return undefined;
+  return {source:source.source || 'direct', medium:source.medium || 'none', ...(source.campaign ? {campaign:source.campaign} : {}), ui_locale:locale};
+}
 function common() {
   const config = configuration()!;
   const path = measurementPath(window.location.pathname);
+  const source = acquisition();
+  const locale = /^(en|es|fr|pt|de|it|ru|ja|zh)$/.test(document.documentElement.lang || '') ? document.documentElement.lang : 'en';
   // Google requires the debug parameter to be absent, not false, to disable it.
-  return { environment: config.environment, ...(config.environment === 'preview' ? { debug_mode: true } : {}), page_location: window.location.origin + path, page_title: `MinimalPairs ${path}`, page_referrer: '', acquisition_channel: acquisitionChannel(document.referrer, window.location.origin) };
+  return { environment: config.environment, ...(config.environment === 'preview' ? { debug_mode: true } : {}), page_location: window.location.origin + path, page_title: `MinimalPairs ${path}`, page_referrer: '', ui_locale:locale, acquisition_channel: source.channel, ...('source' in source ? {campaign_source:source.source,campaign_medium:source.medium} : {}), ...('campaign' in source ? {campaign_name:source.campaign} : {}) };
 }
 function loadTag() {
   const config = configuration(); if (!config || !permitted()) return false;
@@ -106,7 +140,7 @@ export function setAnalyticsChoice(choice: Exclude<Choice, null>) {
 export function initializeMeasurement() {
   if (initialized || typeof window === 'undefined') return;
   initialized = true; disabled(!permitted()); if (!permitted()) clearPendingMeasurement(); recordPage();
-  window.addEventListener('storage', event => { if (event.key === CHOICE_KEY || event.key === null) { disabled(!permitted()); if (permitted()) { if (loaded) window.gtag?.('consent', 'update', { analytics_storage: 'granted' }); recordPage(); } else { clearPendingMeasurement(); if (loaded) window.gtag?.('consent', 'update', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' }); } window.dispatchEvent(new Event(CHOICE_EVENT)); } });
+  window.addEventListener('storage', event => { if (event.key === CHOICE_KEY || event.key === EXCLUSION_KEY || event.key === null) { disabled(!permitted()); if (permitted()) { if (loaded) window.gtag?.('consent', 'update', { analytics_storage: 'granted' }); recordPage(); } else { clearPendingMeasurement(); if (loaded) window.gtag?.('consent', 'update', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' }); } window.dispatchEvent(new Event(CHOICE_EVENT)); } });
 }
 export function watchAnalyticsChoice(listener: () => void) { window.addEventListener(CHOICE_EVENT, listener); return () => window.removeEventListener(CHOICE_EVENT, listener); }
 /** Save a consented same-tab intent. Do not delay navigation for analytics. */
@@ -129,12 +163,12 @@ export function openMeasuredRecommendation(data: EventData, sameTab: boolean) {
 /** Count arrival on the matching destination, rather than a fragile unload-time click. */
 function recordRecommendationArrival() {
   try {
-    if (!permitted() || window.location.pathname.replace(/\/$/, '') !== '/practice') return;
+    if (!permitted() || window.location.pathname.replace(/^\/(es|fr|pt|de|it|ru|ja|zh)(?=\/)/,'').replace(/\/$/, '') !== '/practice') return;
     const raw = window.sessionStorage.getItem(RECOMMENDATION_KEY);
     if (!raw) return;
     const saved = JSON.parse(raw);
     const query = new URLSearchParams(window.location.search);
-    const target = { language_id: query.get('language'), contrast_id: query.get('contrast'), audio_collection: 'qwen-starter-v1' };
+    const target = { language_id: query.get('language'), contrast_id: query.get('contrast'), audio_collection: saved.audio_collection };
     const attribution = recommendationAttribution(saved, target, Date.now());
     if (!attribution || saved.arrived !== false) return;
     // Write first so a reload cannot repeatedly count the same arrival.
@@ -148,7 +182,7 @@ function takeRecommendation(target: EventData): EventData | null {
   try {
     const raw = window.sessionStorage.getItem(RECOMMENDATION_KEY);
     window.sessionStorage.removeItem(RECOMMENDATION_KEY);
-    if (!raw || !permitted() || window.location.pathname.replace(/\/$/, '') !== '/practice') return null;
+    if (!raw || !permitted() || window.location.pathname.replace(/^\/(es|fr|pt|de|it|ru|ja|zh)(?=\/)/,'').replace(/\/$/, '') !== '/practice') return null;
     const saved = JSON.parse(raw);
     return saved?.arrived === true ? recommendationAttribution(saved, target, Date.now()) : null;
   } catch { return null; }
@@ -159,6 +193,12 @@ export function startMeasuredPractice(attemptId: string, data: EventData) {
   const recommendation = takeRecommendation(data);
   const start = { ...data, ...recommendation, attempt_id: attemptId };
   if (trackMeasurement('practice_start', start)) {
+    try {
+      const previous = Number(window.localStorage.getItem(RETURN_KEY));
+      const days = Math.floor((Date.now()-previous)/86_400_000);
+      if(previous > 0 && days >= 0 && days <= 3650) trackMeasurement('return_practice', {...start,days_since_previous:days,return_window:days===0?'same_day':days===1?'day_1':days<=7?'days_2_7':days<=30?'days_8_30':'later'});
+      window.localStorage.setItem(RETURN_KEY,String(Date.now()));
+    } catch { /* Retention measurement cannot block a lesson. */ }
     if (attempts.size >= 100) attempts.delete(attempts.keys().next().value!);
     attempts.set(attemptId, { started: Date.now(), firstAnswer: false, finished: false, errors: new Set(), data: start });
     if (recommendation) trackMeasurement('review_practice_start', start);
@@ -176,4 +216,11 @@ export function completeMeasuredPractice(attemptId: string, result: EventData) {
   const attempt = attempts.get(attemptId); if (!attempt || attempt.finished) return;
   attempt.finished = true; trackMeasurement('practice_complete', { ...attempt.data, ...result, duration_ms: Date.now() - attempt.started });
   if (attempt.data.recommendation_id) trackMeasurement('review_practice_complete', { ...attempt.data, ...result, duration_ms: Date.now() - attempt.started });
+}
+
+/** Lifecycle events require a consented start; no orphan completion after late opt-in. */
+export function trackMeasuredPracticeEvent(event: MeasurementEvent, raw: EventData) {
+  const attempt = attempts.get(String(raw.attempt_id));
+  if(!attempt) return false;
+  return trackMeasurement(event,{...attempt.data,...raw});
 }

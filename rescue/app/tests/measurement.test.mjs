@@ -33,7 +33,7 @@ function client(options = {}) {
     get cookie() { return '_ga=existing; _ga_TEST123=existing; session=keep'; },
     set cookie(value) { cookies.push(value); },
   };
-  const navigator = { doNotTrack: options.dnt, globalPrivacyControl: options.gpc };
+  const navigator = { doNotTrack: options.dnt, globalPrivacyControl: options.gpc, webdriver: options.webdriver };
   const compiled = ts.transpileModule(readFileSync(new URL('../src/lib/measurement.ts', import.meta.url), 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;
   const exports = {};
   new Function('require', 'exports', 'window', 'document', 'navigator', 'Event', compiled)(name => { assert.equal(name, './measurement-data'); return data; }, exports, window, document, navigator, Event);
@@ -164,7 +164,7 @@ test('a followed suggestion attributes exactly one matching attempt across page 
   assert.ok(nextPage.measured().filter(call => call[1] !== 'page_view').every(call => call[2].recommendation_id === recommendationId));
   assert.equal(nextPage.session.has(PENDING), false);
   nextPage.api.startMeasuredPractice('00000000-0000-4000-8000-000000000003', trial);
-  assert.equal(nextPage.measured().at(-1)[1], 'practice_start');
+  assert.equal(nextPage.measured().filter(c=>c[1]==='practice_start').at(-1)[1], 'practice_start');
   assert.equal(nextPage.measured().at(-1)[2].recommendation_id, undefined);
 });
 
@@ -203,7 +203,7 @@ test('new-tab clicks and unavailable storage cannot fabricate arrival or attribu
 test('modified clicks do not arm attribution and a later ordinary click can arm it once', () => {
   const c = client({ choice: 'allowed' });
   assert.equal(c.api.openMeasuredRecommendation(suggestion, false), false);
-  assert.equal(c.session.size, 0);
+  assert.equal(Number(c.session.has(PENDING)), 0);
   assert.equal(c.api.openMeasuredRecommendation(suggestion, true), true);
   assert.deepEqual(c.measured(), []);
   c.window.location.search = '?language=fr&contrast=fr-u-y';
@@ -211,7 +211,7 @@ test('modified clicks do not arm attribution and a later ordinary click can arm 
   c.api.startMeasuredPractice(attempt, trial);
   assert.equal(c.measured().at(-1)[1], 'review_practice_start');
   assert.equal(c.api.openMeasuredRecommendation(suggestion, true), false);
-  assert.equal(c.session.size, 0);
+  assert.equal(Number(c.session.has(PENDING)), 0);
 });
 
 test('arrival is counted on the matching destination once across reloads, without navigation delays', () => {
@@ -248,7 +248,7 @@ test('consent withdrawal and browser privacy preferences clear suggestion attrib
 test('invalid data cannot arm attribution and a blocked tag does not block navigation intent', () => {
   const c = client({ choice: 'allowed' });
   for (const malformed of [{ ...suggestion, recommendation_id: undefined }, { ...suggestion, recommendation_kind: 'anything' }, { ...suggestion, language_id: 'en' }]) assert.equal(c.api.openMeasuredRecommendation(malformed, true), false);
-  assert.equal(c.session.size, 0);
+  assert.equal(Number(c.session.has(PENDING)), 0);
   const failed = client({ choice: 'allowed', blockScript: true });
   assert.equal(failed.api.openMeasuredRecommendation(suggestion, true), true);
   failed.window.location.search = '?language=fr&contrast=fr-u-y'; failed.api.initializeMeasurement();
@@ -273,7 +273,7 @@ test('session feedback is absent without consent, with unavailable configuration
     const c = client(options);
     assert.notEqual(c.api.sessionFeedbackPermission(), 'allowed');
     assert.equal(c.api.shareSessionFeedback(feedback), 'off');
-    assert.deepEqual(c.calls(), []); assert.deepEqual(c.scripts, []); assert.equal(c.session.size, 0);
+    assert.deepEqual(c.calls(), []); assert.deepEqual(c.scripts, []); assert.equal(Number(c.session.has(PENDING)), 0);
   }
 });
 test('feedback accepts only one fixed category and the exact privacy-safe session fields', () => {
@@ -292,7 +292,7 @@ test('feedback queues once per completion even after repeated clicks, new catego
   c.api.setAnalyticsChoice('allowed'); assert.equal(c.api.shareSessionFeedback(feedback), 'duplicate');
   const rows = c.measured().filter(row => row[1] === 'practice_feedback'); assert.equal(rows.length, 1);
   assert.equal(rows[0][2].feedback_category, 'audio_unclear'); assert.equal(rows[0][2].attempt_id, attempt);
-  assert.equal(c.session.size, 0); assert.deepEqual([...c.storage.keys()], [CHOICE]);
+  assert.equal(Number(c.session.has(PENDING)), 0); assert.deepEqual([...c.storage.keys()], [CHOICE]);
 });
 test('late consent never sends an earlier feedback choice or invents practice funnel events', () => {
   const c = client();
@@ -310,4 +310,50 @@ test('unqueueable feedback reports failure and withdrawal in another tab blocks 
   assert.equal(noTag.measured().filter(row => row[1] === 'practice_feedback').length, 0);
   const c = client({ choice: 'allowed' }); c.api.initializeMeasurement(); c.storage.set(CHOICE, 'declined'); c.storageEvent(CHOICE);
   assert.equal(c.api.shareSessionFeedback(feedback), 'off'); assert.equal(c.measured().filter(row => row[1] === 'practice_feedback').length, 0);
+});
+
+test('owner exclusion blocks saved consent and propagates across tabs',()=>{
+ const c=client({choice:'allowed'});assert.equal(c.api.setAnalyticsExcluded(true),true);c.api.initializeMeasurement();c.api.setAnalyticsChoice('allowed');c.api.startMeasuredPractice(attempt,trial);assert.deepEqual(c.scripts,[]);assert.deepEqual(c.measured(),[]);
+ const other=client({choice:'allowed'});other.api.initializeMeasurement();const n=other.measured().length;other.storage.set('minimalpairs.analytics-excluded.v1','true');other.storageEvent('minimalpairs.analytics-excluded.v1');assert.equal(other.window['ga-disable-G-TEST123'],true);other.api.trackMeasurement('page_view');assert.equal(other.measured().length,n);
+});
+test('localhost is excluded and removing exclusion never grants consent',()=>{
+ const c=client({choice:'allowed'});c.window.location.hostname='127.0.0.1';c.api.initializeMeasurement();assert.deepEqual(c.scripts,[]);
+ const owner=client({choice:'allowed'});owner.api.setAnalyticsExcluded(true);owner.api.setAnalyticsExcluded(false);assert.equal(owner.api.analyticsChoice(),'declined');assert.equal(owner.api.trackMeasurement('page_view'),false);
+});
+test('prefixed attempt IDs, Japanese, full diagnostics and localized paths are recognized',()=>{
+ const d={attempt_id:'diagnostic-'+attempt,language_id:'ja',session_kind:'diagnostic',activity_mode:'abx-cross-word',total:108,correct:90};assert.ok(data.measurementData('practice_start',d));assert.equal(data.measurementData('practice_complete',d).total,108);
+ for(const p of ['/ja/learn/ja-a-o','/fr/diagnostic/en','/es/pricing','/japanese-minimal-pairs'])assert.equal(data.measurementPath(p+'?email=private@example.com'),p);assert.equal(data.measurementPath('/fr/private@example.com'),'/other');
+});
+test('diagnostic events require an observed consented start',()=>{
+ const c=client();const d={attempt_id:'diagnostic-'+attempt,language_id:'ja',session_kind:'diagnostic'};c.api.startMeasuredPractice(d.attempt_id,d);c.api.setAnalyticsChoice('allowed');assert.equal(c.api.trackMeasuredPracticeEvent('diagnostic_complete',d),false);c.api.startMeasuredPractice(d.attempt_id,d);assert.equal(c.api.trackMeasuredPracticeEvent('diagnostic_complete',d),true);c.api.setAnalyticsChoice('declined');assert.equal(c.api.trackMeasuredPracticeEvent('diagnostic_complete',d),false);
+});
+test('acquisition preserves source without raw referrers or arbitrary UTM',()=>{
+ const c=client({choice:'allowed'});c.api.initializeMeasurement();assert.equal(c.measured()[0][2].campaign_source,'google');assert.equal(c.measured()[0][2].campaign_medium,'organic');assert.equal(c.measured()[0][2].page_referrer,'');
+ const next=client({storage:c.storage,session:c.session});next.document.referrer='https://minimalpairs.web.app/learn/fr-u-y';next.api.initializeMeasurement();assert.equal(next.measured()[0][2].campaign_source,'google');assert.deepEqual(data.acquisitionDetails('', 'https://minimalpairs.co','?utm_source=private@example.com&utm_medium=email'),{channel:'direct'});
+ const evil=client({choice:'allowed',session:new Map([['minimalpairs.analytics-acquisition.v1',JSON.stringify({at:Date.now(),values:{channel:'social',source:'private@example.com',medium:'email'}})]])});evil.document.referrer='https://minimalpairs.web.app/';evil.api.initializeMeasurement();assert.doesNotMatch(JSON.stringify(evil.calls()),/private@example/);
+});
+test('business payloads discard words, identity, payment IDs and error text',()=>{
+ for(const event of ['plan_selected','begin_checkout','checkout_error','audio_report_submitted','support_submitted','guide_audio_play','plans_view']){const clean=data.measurementData(event,{plan:'lifetime',language_id:'es',reason:'noise',topic:'billing',email:'private@example.com',word:'cosa',uid:'secret',transaction_id:'secret',error:'secret'});assert.ok(clean);assert.doesNotMatch(JSON.stringify(clean),/private|secret|cosa/);}
+});
+
+test('checkout attribution is coarse, consented, and excluded for owner traffic', () => {
+  const c = client(); assert.equal(c.api.checkoutAttribution(), undefined);
+  c.api.setAnalyticsChoice('allowed');
+  assert.deepEqual(c.api.checkoutAttribution(), {source:'google',medium:'organic',ui_locale:'en'});
+  c.api.setAnalyticsExcluded(true); assert.equal(c.api.checkoutAttribution(), undefined);
+});
+test('Yahoo acquisition survives billing return without leaking queries', () => {
+  const c = client({choice:'allowed'}); c.document.referrer='https://search.yahoo.com/search?p=secret';
+  assert.equal(c.api.checkoutAttribution().source,'yahoo');
+  c.document.referrer='https://checkout.stripe.com/c/pay/private';
+  assert.deepEqual(c.api.checkoutAttribution(),{source:'yahoo',medium:'organic',ui_locale:'en'});
+});
+test('enum payloads cannot smuggle nested free text via string coercion', () => {
+  const nested = {toString:()=> 'monthly',email:'private@example.invalid'};
+  assert.equal(data.measurementData('begin_checkout',{plan:nested}),null);
+  assert.equal(data.measurementData('plans_view',{surface:{toString:()=> 'pricing',email:'private@example.invalid'}}).surface,undefined);
+});
+
+test('WebDriver browsers never emit analytics even with prior consent', () => {
+ const c=client({choice:'allowed',webdriver:true}); c.api.initializeMeasurement(); c.api.startMeasuredPractice(attempt,trial); assert.deepEqual(c.calls(),[]); assert.equal(c.api.checkoutAttribution(),undefined);
 });

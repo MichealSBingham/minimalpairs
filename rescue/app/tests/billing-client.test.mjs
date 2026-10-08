@@ -24,7 +24,7 @@ function fixture(options = {}) {
   };
   const module = { exports: {} };
   const timer = options.shortTimeout ? ((fn) => setTimeout(fn, 10)) : setTimeout;
-  new Function('require', 'module', 'exports', 'fetch', 'setTimeout', 'clearTimeout', compiled)(name => { assert.equal(name, './auth'); return auth; }, module, module.exports, transport, timer, clearTimeout);
+  new Function('require', 'module', 'exports', 'fetch', 'setTimeout', 'clearTimeout', compiled)(name => { if (name === './measurement') return { checkoutAttribution: () => { if (options.analyticsError) throw new Error('optional analytics unavailable'); return options.analytics; } }; assert.equal(name, './auth'); return auth; }, module, module.exports, transport, timer, clearTimeout);
   return { api: module.exports, calls };
 }
 const checkout = subject => subject.api.createMembershipCheckout('monthly', id, uid);
@@ -164,4 +164,13 @@ test('lifetime checkout sends a one-time plan request through the same verified 
  const f=fixture();
  await f.api.createMembershipCheckout('lifetime',id,uid);
  assert.equal(JSON.parse(f.calls.find(c=>c.kind==='http').init.body).plan,'lifetime');
+});
+
+
+test('checkout optionally includes consent-gated coarse attribution and survives analytics failure', async () => {
+ const analytics={source:'google',medium:'organic',ui_locale:'fr'};
+ const f=fixture({analytics}); await checkout(f);
+ assert.deepEqual(JSON.parse(f.calls.find(c=>c.kind==='http').init.body).analytics,analytics);
+ const broken=fixture({analyticsError:true}); await checkout(broken);
+ assert.equal('analytics' in JSON.parse(broken.calls.find(c=>c.kind==='http').init.body),false);
 });
