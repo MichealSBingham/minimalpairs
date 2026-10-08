@@ -9,6 +9,10 @@ export function referenceVoices(clips: readonly AvailableClip[], languageId: str
   const a=wordVoices(clips,languageId,pair.words[0]),b=wordVoices(clips,languageId,pair.words[1]);
   return a.filter(v=>b.includes(v));
 }
+/** Exclude temporarily under-covered words before either game builds its queue. */
+export function playablePairs(pairs: readonly Pair[], clips: readonly AvailableClip[], languageId: string): Pair[] {
+  return pairs.filter(pair => pair.words.every(word => wordVoices(clips, languageId, word).length >= 2));
+}
 /** Choose only real recordings, without tying voice identity to the answer category. */
 export function assignAvailableVoices(questions: readonly PracticeQuestion[], clips: readonly AvailableClip[], languageId: string, random = Math.random): PracticeQuestion[] {
   const pick=(items:string[])=>items[Math.min(items.length-1,Math.floor(random()*items.length))];

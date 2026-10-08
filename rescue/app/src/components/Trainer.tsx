@@ -19,7 +19,7 @@ import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from 're
 import { completeMeasuredPractice, measuredAudioFailure, measuredFirstAnswer, startMeasuredPractice } from '../lib/measurement';
 import { recommendReview, type ReviewRecommendation } from '../lib/review-recommendation';
 import { selectJourneyContrasts, type JourneyMode } from '../lib/journey';
-import {assignAvailableVoices, referenceVoices, wordVoices, type AvailableClip} from '../lib/round-voices';
+import {assignAvailableVoices, referenceVoices, playablePairs, type AvailableClip} from '../lib/round-voices';
 import MembershipPanel from './MembershipPanel';
 import ReviewSuggestion from './ReviewSuggestion';
 import SessionFeedback from './SessionFeedback';
@@ -186,7 +186,7 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
     let blocks: JourneyQuestion[][];
     try { blocks = selectedContrasts.map(c => {
       if(audioManifestPath) return assignSessionVoices((identifying ? buildIdentificationSession(c.pairs,roundsPerGroup) : buildSession(c.pairs,roundsPerGroup)),voices.map(v=>v.id)).map(q=>({...q,contrastId:c.id}));
-      const pairs=c.pairs.filter(p=>p.words.every(w=>wordVoices(availableClips,language.id,w).length>=2));
+      const pairs=playablePairs(c.pairs,availableClips,language.id);
       return assignAvailableVoices(identifying ? buildIdentificationSession(pairs.filter(p=>referenceVoices(availableClips,language.id,p).length>0),roundsPerGroup) : buildSession(pairs,roundsPerGroup,Math.random,p=>referenceVoices(availableClips,language.id,p).length>0),availableClips,language.id).map(q=>({...q,contrastId:c.id}));
     }); } catch { setAudioError(t("This session needs updated recordings. Refresh to retry or choose another lesson.")); return; }
     if (blocks.some(block => !block.length)) { setAudioError(t("A sound group is not ready for this session yet. Choose a focused exercise.")); return; }
