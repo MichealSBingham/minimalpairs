@@ -25,7 +25,7 @@
     }
   ],
   "vars": {
-    "NOTIFICATIONS_ENABLED": "false",
+    "NOTIFICATIONS_ENABLED": "true",
     "NOTIFY_TO": "sirmichealbingham@gmail.com",
     "NOTIFY_FROM": "support@minimalpairs.co"
   }

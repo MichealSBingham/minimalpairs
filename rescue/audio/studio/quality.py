@@ -117,6 +117,7 @@ def serve(port):
                     item['triage']=triage.get((item['id'],item['sha']))
                     item['launchSample']=(item['id'],item['sha']) in sample_ids
                     item['nextReview']=(item['id'],item['sha']) in next_ids
+                    item['customerReported']=customer_times.get((item['id'],item['sha']),0)>decisions.get((item['id'],item['sha']),{}).get('created',0)
                     if customer_times.get((item['id'],item['sha']),0)>decisions.get((item['id'],item['sha']),{}).get('created',0):item['review']='unreviewed'
                     audit=second.get((item['id'],item['sha']))
                     if audit:
