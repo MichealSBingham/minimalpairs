@@ -1,3 +1,6 @@
+import DiagnosticHistory from './DiagnosticHistory';
+import DiagnosticPreview from './DiagnosticPreview';
+import {diagnosticShortCopy} from '../lib/diagnostic-short-copy';
 import { useMeasuredExposure } from './useMeasuredExposure';
 import { trackMeasuredPracticeEvent } from '../lib/measurement';
 import {diagnosticCopy} from '../lib/diagnostic-i18n';
@@ -38,6 +41,7 @@ const nativeLanguageIds: Record<string, string> = { English: 'en', French: 'fr',
 export default function Trainer({ locale = 'en', languages = [], initialLanguage, initialContrast, audioManifestPath, audioCollectionId = 'qwen-starter-v1', headerContent, signedIn = false, exerciseAccess = 'paid', onRetryAccess }: { locale?: TrainerLocale; languages: Language[]; initialLanguage?: string; initialContrast?: string; audioManifestPath?: string; audioCollectionId?: string; headerContent?: ReactNode; signedIn?: boolean; exerciseAccess?: 'checking' | 'free' | 'paid' | 'lifetime' | 'error'; onRetryAccess?: () => void }) {
   const t = (text: string, values: Record<string,string|number> = {}) => tr(locale, text, values);
   const dc = diagnosticCopy(locale);
+  const short = diagnosticShortCopy(locale);
   const it = (index: number) => identificationText(locale,index);
   const [activityMode,setActivityMode] = useState<'abx-cross-word'|'word-identification'>('abx-cross-word');
   const path = (url: string) => trainerPath(locale, url);
@@ -49,7 +53,7 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
   const [pendingDiagnostic, setPendingDiagnostic] = useState(false);
   const [pendingLesson, setPendingLesson] = useState<string | null>(null);
   const [sessionRounds, setSessionRounds] = useState(12);
-  const [checkRounds, setCheckRounds] = useState(2);
+  const checkRounds = 2;
   const [journeyMode, setJourneyMode] = useState<JourneyMode>('focused');
   const identifying = activityMode === 'word-identification' && journeyMode !== 'diagnostic';
   const [history, setHistory] = useState<PracticeSession[]>([]);
@@ -113,7 +117,7 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
       setContrastId(selected.contrasts.find(item => item.id === (params.get('contrast') || initialContrast))?.id || selected.contrasts[0]?.id || '');
     }
     setNativeLanguage(saved.nativeLanguage || '');
-    try {const settings=JSON.parse(localStorage.getItem('minimalpairs.session-settings') || '{}'); if([6,12,24].includes(settings.rounds)) setSessionRounds(settings.rounds); if([2,4].includes(settings.checkRounds)) setCheckRounds(settings.checkRounds);} catch {}
+    try {const settings=JSON.parse(localStorage.getItem('minimalpairs.session-settings') || '{}'); if([6,12,24].includes(settings.rounds)) setSessionRounds(settings.rounds);} catch {}
     let active = true;
     void import('../lib/progress-sync').then(({loadAccountProgress}) => loadAccountProgress(saved)).then(result => {if(active) setHistory(previous => [...new Map([...result.progress.sessions, ...previous].map(s => [s.id,s])).values()]);}).catch(() => {});
     return () => { active = false; playbackGeneration.current += 1; stopAudio(); };
@@ -193,7 +197,7 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
   }
   function prepareDiagnostic() {
     reset();setJourneyMode('diagnostic');
-    const url=new URL(location.href);url.searchParams.set('language',language.id);url.searchParams.set('session','diagnostic');window.history.pushState(null,'',url);
+    const url=new URL(location.href);url.searchParams.set('language',language.id);url.searchParams.set('session','diagnostic');url.searchParams.delete('contrast');window.history.pushState(null,'',url);
     requestAnimationFrame(()=>document.querySelector('.trainer-card')?.scrollIntoView({behavior:'smooth',block:'start'}));
   }
   function continueLesson(id: string, mode: 'abx-cross-word'|'word-identification' = activityMode) {
@@ -303,8 +307,9 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
         <div className="sidebar-heading"><span className="account-plan-badge" role="status">{exerciseAccess === 'checking' ? t("Loading…") : exerciseAccess === 'error' ? t("Plan unavailable") : exerciseAccess === 'lifetime' ? t("Lifetime") : fullAccess ? t("Premium") : t("Free")}</span><span className="eyebrow">{t("MAKE TIME TO LISTEN")}</span><h2>{t("Your next listen.")}</h2></div>
         <label className="field-label" htmlFor="practice-language">{t("I’m learning")}</label>
         <div className="select-wrap"><select id="practice-language" value={language.id} onChange={event => changeLanguage(event.target.value)}>{languages.map(item => <option value={item.id} key={item.id}>{t(item.name)}</option>)}</select><Icon name="chevronDown" size={15} /></div>
+        <button className={`contrast-option diagnostic-nav ${journeyMode==='diagnostic'?'is-selected':''}`} aria-pressed={journeyMode==='diagnostic'} onClick={prepareDiagnostic}><span>{short.diagnostics}</span><Icon name="arrow" size={15}/></button>
         <div className="sidebar-contrasts"><span className="field-label">{t("Choose an exercise")}</span><div className="contrast-options">
-          {language.contrasts.map((item, position) => <button className={`contrast-option ${item.id === contrast.id ? 'is-selected' : ''}`} aria-label={`${`${t("Exercise")} ${String(position + 1).padStart(2, '0')} · ${item.phonemes.map(sound => `/${sound}/`).join(' vs ')}`}${!fullAccess && position >= 3 ? ` · ${t('Locked')}` : ''}`} aria-pressed={item.id === contrast.id} key={item.id} onClick={() => { reset(); setJourneyMode('focused'); setContrastId(item.id); const url = new URL(window.location.href); url.searchParams.set('contrast', item.id); url.searchParams.delete('session'); window.history.pushState(null, '', url); }}><span>{`${String(position + 1).padStart(2, '0')} · ${item.phonemes.map(sound => `/${sound}/`).join(' vs ')}`}</span>{position < 3 && <span className="lesson-free-badge">{t("Free")}</span>}<Icon name={!fullAccess && position >= 3 ? "lock" : "chevron"} size={15} /></button>)}
+          {language.contrasts.map((item, position) => <button className={`contrast-option ${journeyMode === 'focused' && item.id === contrast.id ? 'is-selected' : ''}`} aria-label={`${`${t("Exercise")} ${String(position + 1).padStart(2, '0')} · ${item.phonemes.map(sound => `/${sound}/`).join(' vs ')}`}${!fullAccess && position >= 3 ? ` · ${t('Locked')}` : ''}`} aria-pressed={journeyMode === 'focused' && item.id === contrast.id} key={item.id} onClick={() => { reset(); setJourneyMode('focused'); setContrastId(item.id); const url = new URL(window.location.href); url.searchParams.set('contrast', item.id); url.searchParams.delete('session'); window.history.pushState(null, '', url); }}><span>{`${String(position + 1).padStart(2, '0')} · ${item.phonemes.map(sound => `/${sound}/`).join(' vs ')}`}</span>{position < 3 && <span className="lesson-free-badge">{t("Free")}</span>}<Icon name={!fullAccess && position >= 3 ? "lock" : "chevron"} size={15} /></button>)}
         </div></div>
         <p className="sidebar-tip">{t("Let your ears go first. Words stay hidden until you choose to see them.")}</p>
         <a className="sidebar-progress" href={path("/account")}>{t("Your practice history")}<Icon name="arrow" size={16} /></a>
@@ -313,7 +318,7 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
         <div className="practice-breadcrumb"><a href={path("/practice")}>{t("Practice")}</a><span>/</span><span>{t(language.name)}</span><span className="dialect-pill">{t(language.dialect || language.nativeName)}</span></div>
         <div className="practice-heading"><div><span className="eyebrow">{phase === 'complete' ? t("YOUR SESSION") : t("LISTEN A LITTLE CLOSER")}</span><h1>{phase === 'complete' ? t("A good listen.") : t("Train your ear.")}</h1></div><span className="session-length">{identifying ? it(1) : textHints && journeyMode !== 'diagnostic' ? t("Text hints on") : t("Sound first. Words later.")}</span></div>
         {phase === 'ready' && journeyMode !== 'diagnostic' && !audioManifestPath && <><section className="diagnostic-invite"><div><span className="eyebrow">{dc.eyebrow}</span><h2>{dc.title}</h2><p>{dc.resultsBody}</p></div><div><button className="button button-dark" disabled={exerciseAccess==='checking'} onClick={prepareDiagnostic}>{dc.start}<Icon name="arrow"/></button><a className="text-button" href={path(`/diagnostic/${language.id}`)}>{dc.how}</a></div></section><CourseProgress locale={locale} language={language} sessions={history} fullAccess={fullAccess} disabled={Boolean(pendingLesson)||exerciseAccess==='checking'} onStart={continueLesson}/><div className="journey-actions"><button className="text-button" onClick={()=>{reset();setJourneyMode('mixed');}}>{it(12)}</button></div></>}
-        {phase === 'ready' && !locked && <details className="session-settings"><summary>{t("Session settings")}</summary><label>{journeyMode === 'diagnostic' ? t("Rounds per sound group") : t("Session length")}<select value={journeyMode === 'diagnostic' ? checkRounds : sessionRounds} onChange={event => {const value = Number(event.target.value); if(journeyMode === 'diagnostic') setCheckRounds(value); else setSessionRounds(value); try {localStorage.setItem('minimalpairs.session-settings',JSON.stringify({rounds:journeyMode === 'diagnostic' ? sessionRounds : value,checkRounds:journeyMode === 'diagnostic' ? value : checkRounds}));}catch{}}}>{(journeyMode === 'diagnostic' ? [2,4] : [6,12,24]).map(n => <option key={n} value={n}>{n} {t("rounds")}</option>)}</select></label></details>}
+        {phase === 'ready' && !locked && journeyMode !== 'diagnostic' && <details className="session-settings"><summary>{t("Session settings")}</summary><label>{t("Session length")}<select value={sessionRounds} onChange={event => {const value=Number(event.target.value);setSessionRounds(value);try{localStorage.setItem('minimalpairs.session-settings',JSON.stringify({rounds:value}));}catch{}}}>{[6,12,24].map(n=><option key={n} value={n}>{n} {t("rounds")}</option>)}</select></label></details>}
         <div className="training-area">
           <div className="trainer-stage">
             <div className="trainer-card">
@@ -336,9 +341,9 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
                 <ol className="ready-listening-steps"><li><strong>{t("Listen to A and B.")}</strong><span>{t("Hear two different sounds.")}</span></li><li><strong>{t("Listen to X.")}</strong><span>{t("A new word, with one of those sounds.")}</span></li><li><strong>{t("Choose A or B.")}</strong><span>{t("Which one shares X’s sound? Replay as often as you like.")}</span></li></ol>
                 </>}
                 {targetFocus && <p className="abx-focus-note">{locale !== "en" && t(targetFocus) === targetFocus ? t("Listen for the target sound in each word.") : t(targetFocus)}</p>}
-                <button className="button button-dark start-button" onClick={startSession} disabled={contrast.pairs.length < 2 || !audioPrepared || !voices.length}>{journeyMode === 'diagnostic' ? dc.start : identifying ? it(6) : t("Start with A, B & X")}<Icon name="arrow" /></button>
+                <button className="button button-dark start-button" onClick={startSession} disabled={contrast.pairs.length < 2 || !audioPrepared || !voices.length}>{journeyMode === 'diagnostic' ? (history.some(s=>s.languageId===language.id && (s.purpose==='diagnostic'||s.id.startsWith('diagnostic-'))) ? short.retake : dc.start) : identifying ? it(6) : t("Start with A, B & X")}<Icon name="arrow" /></button>
                 
-                {audioError && <p className="audio-error" role="alert">{audioError}</p>}
+                {audioError && <p className="audio-error" role="alert">{audioError}</p>}{journeyMode==='diagnostic' && <div className="diagnostic-extras"><details><summary>{short.previewTitle}</summary><DiagnosticPreview language={language} locale={locale}/></details><DiagnosticHistory language={language} sessions={history} locale={locale}/></div>}
               </div> : phase === 'practice' && question ? <div className="active-session abx-active">
                 <div className="abx-players">{((identifying ? ['x'] : ['a', 'b', 'x']) as Sample[]).map(sample => <div className={`abx-sample is-${sample}`} key={sample}>
                   <button className={`abx-sound-button ${playing === sample ? 'is-playing' : ''} ${heard[sample] ? 'is-heard' : ''}`} onClick={() => void listen(sample)} disabled={isPlaying} aria-label={`${t("Play")} ${sample.toUpperCase()}`}>
