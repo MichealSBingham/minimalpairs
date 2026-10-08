@@ -94,7 +94,14 @@ def cartesia_request(endpoint,payload=None):
         raise RuntimeError('Cartesia request failed; HTTP '+str(getattr(e,'code','unavailable'))+'. No automatic retry.') from None
 
 def bank_refs(bank):
-    if bank=='en-US-ga':return REFS
+    if bank=='en-US-ga':
+        refs=dict(REFS)
+        override=STATE/'us-active-reference-overrides.json'
+        if override.exists():
+            for label,value in json.loads(override.read_text()).items():
+                if label not in refs:raise ValueError('Unknown replacement speaker slot')
+                refs[label]=(value['filename'],value['sha256'])
+        return refs
     path=STATE/(bank+'-references.json')
     if not path.exists():raise ValueError('No auditioned reference profiles configured for '+bank)
     return {v['label']:(v['filename'],v['sha256']) for v in json.loads(path.read_text())}
