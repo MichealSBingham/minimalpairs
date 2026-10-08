@@ -1,10 +1,11 @@
-import { acquisitionDetails, measurementData, measurementPath, recommendationAttribution, type EventData, type MeasurementEvent } from './measurement-data';
+import { landingPath, acquisitionDetails, measurementData, measurementPath, recommendationAttribution, type EventData, type MeasurementEvent } from './measurement-data';
 
 declare global { interface Window { dataLayer?: unknown[]; gtag?: (...args: unknown[]) => void; } }
 const CHOICE_KEY = 'minimalpairs.analytics-choice.v1';
 const CHOICE_EVENT = 'minimalpairs:analytics-choice';
 const EXCLUSION_KEY = 'minimalpairs.analytics-excluded.v1';
 const ACQUISITION_KEY = 'minimalpairs.analytics-acquisition.v1';
+const LANDING_KEY = 'minimalpairs.analytics-landing.v1';
 const RETURN_KEY = 'minimalpairs.analytics-last-practice.v1';
 const RECOMMENDATION_KEY = 'minimalpairs.analytics-recommendation.v1';
 type Choice = 'allowed' | 'declined' | null;
@@ -17,7 +18,7 @@ const openedRecommendations = new Set<string>();
 // Only duplicate protection, never a delivery queue. No feedback is persisted.
 const sharedFeedback = new Set<string>();
 function clearRecommendation() { try { window.sessionStorage.removeItem(RECOMMENDATION_KEY); } catch { /* Measurement must not interrupt practice. */ } }
-function clearPendingMeasurement() { attempts.clear(); openedRecommendations.clear(); clearRecommendation(); try { window.sessionStorage.removeItem(ACQUISITION_KEY); window.localStorage.removeItem?.(RETURN_KEY); } catch {} }
+function clearPendingMeasurement() { attempts.clear(); openedRecommendations.clear(); clearRecommendation(); try { window.sessionStorage.removeItem(ACQUISITION_KEY); window.sessionStorage.removeItem(LANDING_KEY); window.localStorage.removeItem?.(RETURN_KEY); } catch {} }
 function configuration() {
   if (typeof document === 'undefined') return null;
   const id = document.documentElement.dataset.measurementId || '';
@@ -74,13 +75,28 @@ function acquisition(): {channel:string;source?:string;medium?:string;campaign?:
     return selected;
   } catch { return current; }
 }
+/** First observed public page after consent, same tab, with a 30-minute idle expiry.
+ * Never reconstruct a pre-consent visit from referrers or an older source record. */
+function landing() {
+  if (!permitted()) return undefined;
+  try {
+    const now = Date.now();
+    const stored = JSON.parse(window.sessionStorage.getItem(LANDING_KEY) || 'null');
+    const fresh = stored && Number.isFinite(stored.at) && now >= stored.at && now - stored.at < 30 * 60_000;
+    const page = (fresh ? landingPath(stored.page) : undefined) || landingPath(window.location.pathname);
+    if (page) window.sessionStorage.setItem(LANDING_KEY, JSON.stringify({at:now,page}));
+    else window.sessionStorage.removeItem(LANDING_KEY);
+    return page;
+  } catch { return undefined; }
+}
 /** Coarse purchase attribution only after analytics consent; never identity or URL data. */
 export function checkoutAttribution() {
   if (!permitted()) return undefined;
   const source = acquisition();
   const locale = /^(en|es|fr|pt|de|it|ru|ja|zh)$/.test(document.documentElement.lang || '') ? document.documentElement.lang : 'en';
   if (source.channel === 'unknown' || source.channel === 'internal') return undefined;
-  return {source:source.source || 'direct', medium:source.medium || 'none', ...(source.campaign ? {campaign:source.campaign} : {}), ui_locale:locale};
+  const page = landing();
+  return {...(page ? {landing_page:page} : {}), source:source.source || 'direct', medium:source.medium || 'none', ...(source.campaign ? {campaign:source.campaign} : {}), ui_locale:locale};
 }
 function common() {
   const config = configuration()!;
@@ -88,7 +104,8 @@ function common() {
   const source = acquisition();
   const locale = /^(en|es|fr|pt|de|it|ru|ja|zh)$/.test(document.documentElement.lang || '') ? document.documentElement.lang : 'en';
   // Google requires the debug parameter to be absent, not false, to disable it.
-  return { environment: config.environment, ...(config.environment === 'preview' ? { debug_mode: true } : {}), page_location: window.location.origin + path, page_title: `MinimalPairs ${path}`, page_referrer: '', ui_locale:locale, acquisition_channel: source.channel, ...('source' in source ? {campaign_source:source.source,campaign_medium:source.medium} : {}), ...('campaign' in source ? {campaign_name:source.campaign} : {}) };
+  const page = landing();
+  return { ...(page ? {landing_page:page} : {}), environment: config.environment, ...(config.environment === 'preview' ? { debug_mode: true } : {}), page_location: window.location.origin + path, page_title: `MinimalPairs ${path}`, page_referrer: '', ui_locale:locale, acquisition_channel: source.channel, ...('source' in source ? {campaign_source:source.source,campaign_medium:source.medium} : {}), ...('campaign' in source ? {campaign_name:source.campaign} : {}) };
 }
 function loadTag() {
   const config = configuration(); if (!config || !permitted()) return false;

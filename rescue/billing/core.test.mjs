@@ -520,11 +520,12 @@ test('lifetime projection rejects missing proof and retains no expiry only for v
 test('coarse attribution is snapshotted before Stripe and retries preserve it', async () => {
  for(const ambiguous of [false,true]){
   const f=fixture();
-  const analytics={source:'google',medium:'organic',campaign:'diagnostic',ui_locale:'fr'};
+  const analytics={source:'google',medium:'organic',campaign:'diagnostic',ui_locale:'fr',landing_page:'/fr/diagnostic/en'};
   assert.equal((await f.handler(request(undefined,{plan:'monthly',requestId,analytics}))).status,200);
   const original=structuredClone(f.state.pending.parameters);
   assert.equal(original.metadata.mp_source,'google');
   assert.equal(original.metadata.mp_ui_locale,'fr');
+  assert.equal(original.metadata.mp_landing_page,'/fr/diagnostic/en');
   assert.equal(original.subscription_data.metadata.mp_source,undefined);
   if(ambiguous)delete f.state.pending.sessionId;
   assert.equal((await f.handler(request(undefined,{plan:'monthly',requestId:secondRequestId,analytics:{source:'reddit',medium:'social',ui_locale:'en'}}))).status,200);

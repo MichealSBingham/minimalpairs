@@ -1,3 +1,4 @@
+export { landingPath } from './landing-path.mjs';
 export const MEASUREMENT_VERSION = 'business-funnel-v3';
 export const MEASUREMENT_EVENTS = ['page_view', 'practice_start', 'practice_first_answer', 'practice_complete', 'practice_audio_error', 'practice_feedback', 'review_shown', 'review_open', 'review_practice_start', 'review_practice_complete', 'diagnostic_start', 'diagnostic_complete', 'diagnostic_results_view', 'paywall_view', 'plans_view', 'plan_selected', 'begin_checkout', 'checkout_error', 'billing_portal_open', 'login', 'audio_report_submitted', 'support_submitted', 'guide_audio_play', 'practice_group_complete', 'practice_exit', 'return_practice'] as const;
 export const SESSION_FEEDBACK_CATEGORIES = ['audio_unclear', 'instructions_unclear', 'too_easy', 'too_difficult', 'about_right'] as const;

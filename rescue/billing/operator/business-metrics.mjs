@@ -12,7 +12,7 @@ const scoped=x=>x.livemode===true && x.metadata?.billingSchema==='1' && !!x.meta
 export function summarize({sessions,subscriptions,charges,refunds,prices,start,end}) {
  const plans=Object.fromEntries(Object.entries(prices).map(([plan,p])=>[p.id,plan]));
  const paid={monthly:0,annual:0,lifetime:0,unclassified:0};
- const paidCheckoutBySource={},paidCheckoutGrossMinor={},subStates={},activePlans={monthly:0,annual:0};
+ const paidCheckoutByLandingPage={},paidCheckoutBySource={},paidCheckoutGrossMinor={},subStates={},activePlans={monthly:0,annual:0};
  const recurringListPriceMonthlyMinor={},scheduledCancellationMonthlyMinor={};
  let scheduledCancellations=0,canceledInWindow=0,unscopedPaidCheckouts=0,excludedActiveItems=0;
  const bySubscription=new Map(subscriptions.map(s=>[s.id,s]));
@@ -28,6 +28,8 @@ export function summarize({sessions,subscriptions,charges,refunds,prices,start,e
   const source=attribution?.source??'unattributed';
   const group=paidCheckoutBySource[source]??={purchases:0,grossMinor:{}};
   group.purchases++;money(group.grossMinor,s.currency,s.amount_total??0);
+  const pageGroup=paidCheckoutByLandingPage[attribution?.landing_page??'unattributed']??={purchases:0,grossMinor:{}};
+  pageGroup.purchases++;money(pageGroup.grossMinor,s.currency,s.amount_total??0);
  }
  for(const s of subscriptions){
   if(!scoped(s))continue;
@@ -49,7 +51,7 @@ export function summarize({sessions,subscriptions,charges,refunds,prices,start,e
  for(const r of refunds)if(r.status==='succeeded'){successfulRefunds++;money(refundedMinor,r.currency,r.amount);}
  return {
   window:{start:new Date(start*1000).toISOString(),endExclusive:new Date(end*1000).toISOString()},
-  currentOffer:{paidCheckoutPurchases:paid,paidCheckoutBySource,paidCheckoutGrossMinor,subscriptionStates:subStates,activeSubscriptionItemsByPlan:activePlans,recurringListPriceMonthlyMinor,scheduledCancellations,scheduledCancellationMonthlyMinor,canceledInWindow,excludedActiveItems},
+  currentOffer:{paidCheckoutPurchases:paid,paidCheckoutBySource,paidCheckoutByLandingPage,paidCheckoutGrossMinor,subscriptionStates:subStates,activeSubscriptionItemsByPlan:activePlans,recurringListPriceMonthlyMinor,scheduledCancellations,scheduledCancellationMonthlyMinor,canceledInWindow,excludedActiveItems},
   accountWideCash:{capturedCharges,capturedGrossMinor,successfulRefunds,refundedMinor,unscopedPaidCheckouts},
   definitions:[
    'All money is in the smallest currency unit; currencies are never combined.',
@@ -58,6 +60,7 @@ export function summarize({sessions,subscriptions,charges,refunds,prices,start,e
    'Recurring monthly value is current active subscription list price normalized to a month, before discounts, taxes, fees and refunds. It is not net MRR or cash received. Lifetime payments are excluded.',
    'Scheduled cancellation remains active until access expires. canceledInWindow uses the current canceled state and canceled_at timestamp, not a historical churn cohort.',
    'Account-wide cash includes all Stripe products, including legacy sales. Charges use creation time; refunds use refund creation time. Refunds may concern older charges. Cash is before processing fees, disputes and payouts.',
+   'Landing-page purchases use the first eligible public page observed after consent in the same tab, expiring after 30 minutes idle. No earlier visits or missing historical data are reconstructed. Counts are purchases and gross revenue, not conversion rates; visitor denominators are not available in this report.',
    'Paid checkout source uses only consented coarse metadata saved when the checkout was reserved. Unknown or invalid metadata is unattributed, never inferred. Source is browser-reported, not proof of causation. No unique-customer conversion rate, trial conversion or retention is inferred.'
   ]
  };

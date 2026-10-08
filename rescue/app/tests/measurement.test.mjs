@@ -339,14 +339,14 @@ test('business payloads discard words, identity, payment IDs and error text',()=
 test('checkout attribution is coarse, consented, and excluded for owner traffic', () => {
   const c = client(); assert.equal(c.api.checkoutAttribution(), undefined);
   c.api.setAnalyticsChoice('allowed');
-  assert.deepEqual(c.api.checkoutAttribution(), {source:'google',medium:'organic',ui_locale:'en'});
+  assert.deepEqual(c.api.checkoutAttribution(), {landing_page:'/practice',source:'google',medium:'organic',ui_locale:'en'});
   c.api.setAnalyticsExcluded(true); assert.equal(c.api.checkoutAttribution(), undefined);
 });
 test('Yahoo acquisition survives billing return without leaking queries', () => {
   const c = client({choice:'allowed'}); c.document.referrer='https://search.yahoo.com/search?p=secret';
   assert.equal(c.api.checkoutAttribution().source,'yahoo');
   c.document.referrer='https://checkout.stripe.com/c/pay/private';
-  assert.deepEqual(c.api.checkoutAttribution(),{source:'yahoo',medium:'organic',ui_locale:'en'});
+  assert.deepEqual(c.api.checkoutAttribution(),{landing_page:'/practice',source:'yahoo',medium:'organic',ui_locale:'en'});
 });
 test('enum payloads cannot smuggle nested free text via string coercion', () => {
   const nested = {toString:()=> 'monthly',email:'private@example.invalid'};
@@ -367,7 +367,7 @@ test('AI discovery uses fixed provider labels, never prompts or referring paths'
     assert.equal(c.measured()[0][2].acquisition_channel,'ai_referral');
     assert.equal(c.measured()[0][2].campaign_source,source);
     c.document.referrer='https://minimalpairs.web.app/pricing';
-    assert.deepEqual(c.api.checkoutAttribution(),{source,medium:'referral',ui_locale:'en'});
+    assert.deepEqual(c.api.checkoutAttribution(),{landing_page:'/practice',source,medium:'referral',ui_locale:'en'});
     assert.doesNotMatch(JSON.stringify(c.calls()),/private-conversation|prompt|secret/);
   }
 });
@@ -376,4 +376,31 @@ test('AI UTM links work without referrers and spoofed domains are not AI', () =>
   assert.deepEqual(data.acquisitionDetails('','https://minimalpairs.co','?utm_source=claude&utm_medium=referral'),{channel:'ai_referral',source:'claude',medium:'referral'});
   for(const host of ['evilchatgpt.com','chatgpt.com.evil.test','google.com']) assert.notEqual(data.acquisitionDetails(`https://${host}/`,'https://minimalpairs.co').channel,'ai_referral');
   assert.deepEqual(data.acquisitionDetails('','https://minimalpairs.co','?utm_source=someone@example.com'),{channel:'direct'});
+});
+
+
+test('landing attribution retains the first consented public page through checkout and strips private URL data', () => {
+ const c=client({choice:'allowed'});
+ c.window.location.pathname='/fr/learn/fr-u-y'; c.api.initializeMeasurement();
+ c.window.location.pathname='/pricing'; c.document.referrer='https://minimalpairs.web.app/fr/learn/fr-u-y';
+ assert.equal(c.api.checkoutAttribution().landing_page,'/fr/learn/fr-u-y');
+ assert.ok(c.measured().every(call=>call[2].landing_page==='/fr/learn/fr-u-y'));
+ c.api.setAnalyticsChoice('declined'); assert.equal(c.session.has('minimalpairs.analytics-landing.v1'),false);
+ c.window.location.pathname='/pricing'; c.document.referrer=''; c.api.setAnalyticsChoice('allowed');
+ assert.equal(c.api.checkoutAttribution().landing_page,'/pricing');
+});
+test('late consent never reconstructs an earlier landing and malformed or expired storage is discarded', () => {
+ const c=client(); c.window.location.pathname='/learn/fr-u-y';c.api.initializeMeasurement();
+ assert.equal(c.session.has('minimalpairs.analytics-landing.v1'),false);
+ c.window.location.pathname='/pricing';c.api.setAnalyticsChoice('allowed');
+ assert.equal(c.api.checkoutAttribution().landing_page,'/pricing');
+ for(const stored of [{at:Date.now()-31*60000,page:'/learn/fr-u-y'},{at:Date.now()+10000,page:'/learn/fr-u-y'},{at:Date.now(),page:'/learn/en-private-customer-name'}]) {
+  c.session.set('minimalpairs.analytics-landing.v1',JSON.stringify(stored));
+  assert.equal(c.api.checkoutAttribution().landing_page,'/pricing');
+ }
+ c.api.setAnalyticsExcluded(true);assert.equal(c.session.has('minimalpairs.analytics-landing.v1'),false);
+});
+test('fixed landing route allowlist excludes account details, invented guide IDs and external URLs',()=>{
+ assert.equal(data.landingPath('/fr/learn/fr-u-y/?email=private@example.com#token'),'/fr/learn/fr-u-y');
+ for(const path of ['/account','/restore-access','/learn/en-private-customer-name','https://minimalpairs.co/pricing','//evil.test','/pricing/extra','/learn/en-%40private'])assert.equal(data.landingPath(path),undefined);
 });

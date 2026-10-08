@@ -13,7 +13,7 @@ export function emailPayload(job, env) {
   const r=job.record;
   const text=job.kind==='support'
     ? `A customer submitted a MinimalPairs support request.\n\nReference: ${r.ticketId}\nTopic: ${r.topic}\nEmail: ${r.email}\nReceived: ${r.createdAt}\n\nCustomer message:\n${r.message}\n\nReply to this email to respond to the customer.`
-    : `A MinimalPairs recording was reported.\n\nLanguage: ${r.languageId}\nIssue: ${r.reason}\nVoice: ${r.voiceId}\nClip: ${r.clipId}\nFile version: ${r.sha256}\nReceived: ${r.firstSeen}\n\nThe report is saved in the private audio review inbox. This notification does not reject or delete the recording.`;
+    : `A MinimalPairs recording was reported.\n\nLanguage: ${r.languageId}\nIssue: ${r.reason}\nVoice: ${r.voiceId}\nClip: ${r.clipId}\nFile version: ${r.sha256}\nReceived: ${r.firstSeen}\nSource: ${r.context ? `${r.context.surface} · ${r.context.pagePath} · ${r.context.contrastId} · ${r.context.activityMode} · ${r.context.sessionKind}` : 'Not recorded (legacy report)'}\n\nThe report is saved in the private audio review inbox. This notification does not reject or delete the recording.`;
   return {from:`MinimalPairs Support <${env.NOTIFY_FROM}>`,to:[OWNER_EMAIL],subject:job.kind==='support'?`MinimalPairs support: ${r.topic}`:`MinimalPairs audio report: ${r.languageId} / ${r.reason}`,text,...(job.kind==='support'?{reply_to:r.email}:{})};
 }
 export async function notificationStatus(storage, env) {

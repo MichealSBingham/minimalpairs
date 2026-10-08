@@ -28,3 +28,10 @@ test('paid source breakdown uses allowlisted saved attribution and preserves una
  assert.deepEqual(report.currentOffer.paidCheckoutBySource,{google:{purchases:1,grossMinor:{usd:2900}},unattributed:{purchases:2,grossMinor:{usd:5800}}});
  assert.ok(!JSON.stringify(report).includes('private@example.com'));
 });
+
+test('landing purchase groups separate unknown history and never manufacture conversion rates',()=>{
+ const base={livemode:true,metadata:{...meta,plan:'lifetime',mp_source:'google',mp_medium:'organic',mp_ui_locale:'en'},status:'complete',payment_status:'paid',mode:'payment',currency:'usd',amount_total:2900};
+ const report=summarize({start:1,end:100,prices:{},subscriptions:[],charges:[],refunds:[],sessions:[{...base,metadata:{...base.metadata,mp_landing_page:'/learn/fr-u-y'}},base,{...base,metadata:{...base.metadata,mp_landing_page:'/account/private'}}]});
+ assert.deepEqual(report.currentOffer.paidCheckoutByLandingPage,{'/learn/fr-u-y':{purchases:1,grossMinor:{usd:2900}},unattributed:{purchases:2,grossMinor:{usd:5800}}});
+ assert.ok(!JSON.stringify(report.currentOffer).includes('private'));
+});

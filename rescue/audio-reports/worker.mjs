@@ -1,7 +1,8 @@
 import {queueNotification, deliverNext, notificationStatus} from './notifications.mjs';
 const origins=new Set(['https://minimalpairs.web.app','https://minimalpairs.co','https://www.minimalpairs.co']);
 const hex=/^[a-f0-9]{64}$/;
-export function validReport(x){return x&&Object.keys(x).every(k=>['clipId','sha256','languageId','voiceId','reason'].includes(k))&&hex.test(x.clipId)&&hex.test(x.sha256)&&/^[a-zA-Z0-9-]{1,24}$/.test(x.languageId)&&/^[a-zA-Z0-9_-]{1,100}$/.test(x.voiceId)&&['pronunciation','repetition','noise','playback'].includes(x.reason);}
+export function validReportContext(x){return x&&typeof x==='object'&&!Array.isArray(x)&&Object.keys(x).every(k=>['surface','pagePath','contrastId','activityMode','sessionKind'].includes(k))&&x.surface==='practice'&&/^\/(?:es\/|fr\/|pt\/|de\/|it\/|ru\/|ja\/|zh\/)?practice\/?$/.test(x.pagePath)&&/^[a-zA-Z0-9-]{1,80}$/.test(x.contrastId)&&['abx-cross-word','word-identification'].includes(x.activityMode)&&['focused','path','mixed','diagnostic'].includes(x.sessionKind);}
+export function validReport(x){return x&&Object.keys(x).every(k=>['clipId','sha256','languageId','voiceId','reason','context'].includes(k))&&(x.context===undefined||validReportContext(x.context))&&hex.test(x.clipId)&&hex.test(x.sha256)&&/^[a-zA-Z0-9-]{1,24}$/.test(x.languageId)&&/^[a-zA-Z0-9_-]{1,100}$/.test(x.voiceId)&&['pronunciation','repetition','noise','playback'].includes(x.reason);}
 export function validSupport(x){return x&&Object.keys(x).every(k=>['email','topic','message','requestId'].includes(k))&&typeof x.email==='string'&&x.email.length<=254&&!/[<>,;\"\r\n]/.test(x.email)&&/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(x.email)&&['account','billing','audio','other'].includes(x.topic)&&typeof x.message==='string'&&x.message.trim().length>=5&&x.message.length<=4000&&/^[a-f0-9-]{36}$/.test(x.requestId);}
 const json=(data,status=200)=>Response.json(data,{status});
 export class ReportInbox{
@@ -55,7 +56,7 @@ export class ReportInbox{
    const old=await tx.get(key),total=await tx.get('total')||0;
    if(!old&&total>=10000)return json({error:'Please try again later'},503);
    await tx.put(rateKey,n+1);await tx.put(duplicate,true);
-   await tx.put(key,{...body,count:(old?.count||0)+1,firstSeen:old?.firstSeen||new Date().toISOString(),lastSeen:new Date().toISOString()});
+   await tx.put(key,{...body,...(old?.context?{context:old.context}:{}),...(body.context?{latestContext:body.context}:{}),count:(old?.count||0)+1,firstSeen:old?.firstSeen||new Date().toISOString(),lastSeen:new Date().toISOString()});
    if(!old){await tx.put('total',total+1);await queueNotification(tx,body.clipId+'-'+body.sha256+'-'+body.reason,'report',{...body,firstSeen:new Date().toISOString()});}
    else await tx.setAlarm(Date.now()+2000);return json({saved:true});
   });
