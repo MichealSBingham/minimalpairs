@@ -29,3 +29,15 @@ test('legacy homographs never invent chosen, heard or matching IPA',()=>{
  const explicit=diagnosticAttemptWords({contrastId:'stress',pairId:'record',word:'record',chosenWord:'record',correct:false,chosenIpa:'/ˈrɛkərd/',correctWord:'record',correctIpa:'/rɪˈkɔrd/'},homograph);
  assert.deepEqual(explicit.correct,{text:'record',ipa:'/rɪˈkɔrd/'});
 });
+
+const {diagnosticInsightCopy}=await import('../src/lib/diagnostic-insight-copy.ts');
+test('summaries count sampled groups without unresolved placeholders in every interface language',()=>{
+ for(const locale of ['en','es','fr','pt','de','it','ru','ja','zh']){
+  const copy=diagnosticInsightCopy(locale,{solid:2,groups:6,focus:4});
+  assert.ok(copy.summary.includes('2')&&copy.summary.includes('6'),locale);
+  assert.ok(copy.focus.includes('4'),locale);
+  for(const value of Object.values(copy))assert.ok(value&&!/[{}]/.test(value),locale);
+ }
+ assert.match(diagnosticInsightCopy('en',{solid:6,groups:6,focus:0}).perfect,/this check/);
+ assert.equal(diagnosticInsightCopy('unknown').title,diagnosticInsightCopy('en').title);
+});

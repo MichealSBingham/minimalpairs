@@ -17,6 +17,9 @@ test('free diagnostic samples key contrasts, reveals results, and keeps premium 
  await expect(page.locator('.diagnostic-results')).toBeVisible();
  await expect(page.locator('.session-results')).toHaveCount(0);
  await expect(page.locator('.diagnostic-donut')).toBeVisible();
+ await expect(page.locator('.diagnostic-overview-label .ipa-text')).toHaveCount(6);
+ await expect(page.locator('.diagnostic-report-header')).toContainText('of 6 sound groups');
+ await expect(page.locator('.diagnostic-offer a')).toHaveAttribute('href','/pricing');
  await expect(page.locator('.diagnostic-word-cell.chosen').first()).toBeVisible();
  await expect(page.locator('.diagnostic-word-cell.correct').first()).toBeVisible();
  const progress=await page.evaluate(()=>JSON.parse(localStorage.getItem('minimalpairs.progress.v1')));

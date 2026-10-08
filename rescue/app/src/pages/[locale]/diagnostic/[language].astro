@@ -2,10 +2,11 @@
 import Base from '../../../layouts/Base.astro';
 import DiagnosticLanding from '../../../components/DiagnosticLanding.astro';
 import {getPracticeLanguages} from '../../../lib/content';
+import {diagnosticDiscovery} from '../../../lib/diagnostic-discovery';
 import {diagnosticCopy} from '../../../lib/diagnostic-i18n';
 import {locales,type Locale} from '../../../lib/locales';
 import {localizedLanguage,type PublicLocale} from '../../../lib/localized-public';
 export function getStaticPaths(){return locales.filter(l=>l!=='en').flatMap(locale=>getPracticeLanguages().map(language=>({params:{locale,language:language.id},props:{language}})));}
-const locale=Astro.params.locale as Locale,{language}=Astro.props,t=diagnosticCopy(locale),name=localizedLanguage(language.id,locale as PublicLocale);
+const locale=Astro.params.locale as Locale,{language}=Astro.props,t=diagnosticCopy(locale),discovery=diagnosticDiscovery(locale),name=localizedLanguage(language.id,locale as PublicLocale);
 ---
-<Base locale={locale} title={`${name} · ${t.eyebrow} | MinimalPairs`} description={`${name}: ${t.intro} ${t.resultsBody}`}><DiagnosticLanding language={language} locale={locale}/></Base>
+<Base locale={locale} title={`${name} · ${discovery.title} | MinimalPairs`} description={`${name}: ${discovery.title}. ${t.resultsBody}`}><DiagnosticLanding language={language} locale={locale}/></Base>
