@@ -21,10 +21,21 @@ export function measurementPath(value: string) {
   return '/other';
 }
 
+const aiReferrers: Record<string, string> = {
+  'chatgpt.com': 'chatgpt', 'chat.openai.com': 'chatgpt',
+  'claude.ai': 'claude', 'perplexity.ai': 'perplexity',
+  'copilot.microsoft.com': 'copilot', 'gemini.google.com': 'gemini',
+};
+const aiSources = new Set(Object.values(aiReferrers));
+function aiSource(host: string) {
+  return Object.entries(aiReferrers).find(([domain]) => host === domain || host.endsWith(`.${domain}`))?.[1];
+}
+
 export function acquisitionChannel(referrer: string, origin: string) {
   if (!referrer) return 'direct';
   try {
     const url = new URL(referrer); if (url.origin === origin || ['minimalpairs.co','www.minimalpairs.co','minimalpairs.web.app','checkout.stripe.com','billing.stripe.com','accounts.google.com'].includes(url.hostname)) return 'internal';
+    if (aiSource(url.hostname)) return 'ai_referral';
     if (/(^|\.)(google\.[a-z.]+|bing\.com|duckduckgo\.com|search\.yahoo\.com)$/.test(url.hostname)) return 'organic_search';
     if (/(^|\.)(reddit\.com|facebook\.com|instagram\.com|tiktok\.com|linkedin\.com|x\.com|t\.co)$/.test(url.hostname)) return 'social';
     return 'referral';
@@ -84,16 +95,17 @@ export function recommendationAttribution(raw: unknown, target: EventData, now: 
 /** Fixed categories only: never collect a search query, arbitrary UTM value or referring path. */
 export function acquisitionDetails(referrer: string, origin: string, search = ''): {channel:string;source?:string;medium?:string;campaign?:string} {
   const query = new URLSearchParams(search);
-  const sources = ['google','bing','duckduckgo','yahoo','other','reddit','facebook','instagram','tiktok','linkedin','x','youtube','newsletter','refold','partner'];
+  const sources = ['google','bing','duckduckgo','yahoo','other','reddit','facebook','instagram','tiktok','linkedin','x','youtube','newsletter','refold','partner',...aiSources];
   const mediums = ['organic','social','email','referral','cpc'];
-  const source = query.get('utm_source') || '', medium = query.get('utm_medium') || '';
+  const rawSource = (query.get('utm_source') || '').toLowerCase();
+  const source = aiReferrers[rawSource] || rawSource, medium = query.get('utm_medium') || (aiSources.has(source) ? 'referral' : '');
   const campaign = query.get('utm_campaign') || '';
-  if (sources.includes(source) && mediums.includes(medium)) return {channel: medium === 'organic' ? 'organic_search' : medium === 'cpc' ? 'paid' : medium, source, medium, ...(['launch','diagnostic','sound-guide','comparison'].includes(campaign) ? {campaign} : {})};
+  if (sources.includes(source) && mediums.includes(medium)) return {channel: aiSources.has(source) && medium === 'referral' ? 'ai_referral' : medium === 'organic' ? 'organic_search' : medium === 'cpc' ? 'paid' : medium, source, medium, ...(['launch','diagnostic','sound-guide','comparison'].includes(campaign) ? {campaign} : {})};
   const channel = acquisitionChannel(referrer, origin);
   if (channel === 'internal' || channel === 'direct' || channel === 'unknown') return {channel};
   try {
     const host = new URL(referrer).hostname;
-    const provider = /(^|\.)google\.[a-z.]+$/.test(host) ? 'google' : sources.find(s => host === `${s}.com` || host.endsWith(`.${s}.com`)) || (host === 't.co' ? 'x' : 'other');
+    const provider = aiSource(host) || (/(^|\.)google\.[a-z.]+$/.test(host) ? 'google' : sources.find(s => host === `${s}.com` || host.endsWith(`.${s}.com`)) || (host === 't.co' ? 'x' : 'other'));
     return {channel, source:provider, medium:channel === 'organic_search' ? 'organic' : channel === 'social' ? 'social' : 'referral'};
   } catch { return {channel:'unknown'}; }
 }

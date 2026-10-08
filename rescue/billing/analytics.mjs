@@ -1,5 +1,5 @@
 // Optional, coarse, consented browser attribution. Never authorizes a purchase.
-const sources=new Set(['google','bing','duckduckgo','yahoo','reddit','facebook','instagram','tiktok','linkedin','x','youtube','newsletter','refold','partner','other','direct']);
+const sources=new Set(['google','bing','duckduckgo','yahoo','reddit','facebook','instagram','tiktok','linkedin','x','youtube','newsletter','refold','partner','other','direct','chatgpt','claude','perplexity','copilot','gemini']);
 const mediums=new Set(['organic','social','email','referral','cpc','none']);
 const campaigns=new Set(['launch','diagnostic','sound-guide','comparison']);
 const locales=new Set(['en','es','fr','pt','de','it','ru','ja','zh']);

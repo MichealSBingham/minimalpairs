@@ -357,3 +357,23 @@ test('enum payloads cannot smuggle nested free text via string coercion', () => 
 test('WebDriver browsers never emit analytics even with prior consent', () => {
  const c=client({choice:'allowed',webdriver:true}); c.api.initializeMeasurement(); c.api.startMeasuredPractice(attempt,trial); assert.deepEqual(c.calls(),[]); assert.equal(c.api.checkoutAttribution(),undefined);
 });
+
+test('AI discovery uses fixed provider labels, never prompts or referring paths', () => {
+  const hosts = {'chatgpt.com':'chatgpt','chat.openai.com':'chatgpt','claude.ai':'claude','www.perplexity.ai':'perplexity','copilot.microsoft.com':'copilot','gemini.google.com':'gemini'};
+  for (const [host, source] of Object.entries(hosts)) {
+    const referrer=`https://${host}/private-conversation?prompt=secret`;
+    assert.deepEqual(data.acquisitionDetails(referrer,'https://minimalpairs.co'), {channel:'ai_referral',source,medium:'referral'});
+    const c=client({choice:'allowed'});c.document.referrer=referrer;c.api.initializeMeasurement();
+    assert.equal(c.measured()[0][2].acquisition_channel,'ai_referral');
+    assert.equal(c.measured()[0][2].campaign_source,source);
+    c.document.referrer='https://minimalpairs.web.app/pricing';
+    assert.deepEqual(c.api.checkoutAttribution(),{source,medium:'referral',ui_locale:'en'});
+    assert.doesNotMatch(JSON.stringify(c.calls()),/private-conversation|prompt|secret/);
+  }
+});
+test('AI UTM links work without referrers and spoofed domains are not AI', () => {
+  assert.deepEqual(data.acquisitionDetails('','https://minimalpairs.co','?utm_source=chatgpt.com'),{channel:'ai_referral',source:'chatgpt',medium:'referral'});
+  assert.deepEqual(data.acquisitionDetails('','https://minimalpairs.co','?utm_source=claude&utm_medium=referral'),{channel:'ai_referral',source:'claude',medium:'referral'});
+  for(const host of ['evilchatgpt.com','chatgpt.com.evil.test','google.com']) assert.notEqual(data.acquisitionDetails(`https://${host}/`,'https://minimalpairs.co').channel,'ai_referral');
+  assert.deepEqual(data.acquisitionDetails('','https://minimalpairs.co','?utm_source=someone@example.com'),{channel:'direct'});
+});
