@@ -9,7 +9,8 @@ async function fixture(post){
  const elements=new Map();const element=id=>{if(!elements.has(id))elements.set(id,{value:'',textContent:'',disabled:false,hidden:false,paused:true,append(){},pause(){},play:async()=>{},click(){this.onclick?.({detail:1});}});return elements.get(id);};
  const calls=[];let rows=[clip(),clip('b')];let token='new';
  const fetch=async(url,init)=>{calls.push({url,init});return url==='/api/queue'?{ok:true,json:async()=>({sessionToken:token,clips:structuredClone(rows)})}:post(init);};
- const context=vm.createContext({document:{getElementById:element,createElement:()=>({}),addEventListener(){},hidden:false},window:{addEventListener(){}},location:{search:'?scope=followup'},URLSearchParams,AbortSignal,setInterval(){},fetch,console});vm.runInContext(script,context);await tick();await tick();
+ const storage=new Map();const sessionStorage={getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v),removeItem:k=>storage.delete(k)};
+ const context=vm.createContext({sessionStorage,history:{replaceState(){}},document:{getElementById:element,createElement:()=>({}),addEventListener(){},hidden:false},window:{addEventListener(){}},location:{search:'?scope=followup'},URLSearchParams,AbortSignal,setInterval(){},fetch,console});vm.runInContext(script,context);await tick();await tick();
  return {context,element,calls,setRows(v){rows=v;},run:s=>vm.runInContext(s,context)};
 }
 test('does not advance or accept duplicate action before confirmed save; blocks filter changes',async()=>{
@@ -30,4 +31,23 @@ test('changed recording is never approved using old hash',async()=>{
 });
 test('sync keeps listening progress for unchanged clip and refreshes replaced clip',async()=>{
  const f=await fixture(async()=>({ok:true,json:async()=>({saved:true})}));f.run('heard=true;covered=2');await f.run('syncQueue()');assert.equal(f.run('heard'),true);f.setRows([clip('a','new')]);await f.run('syncQueue()');assert.equal(f.run('current.sha'),'new');assert.equal(f.run('heard'),false);
+});
+
+test('production filters exclude candidates, rejected and stale hashes; include passed only on request',async()=>{
+ const f=await fixture(async()=>({ok:true,json:async()=>({saved:true})}));
+ f.setRows([{...clip('live'),production:true},{...clip('passed'),production:true,review:'pass'},{...clip('reject'),production:false,review:'reject'},{...clip('candidate'),production:false}]);
+ f.element('scope').value='production';await f.run('syncQueue()');assert.equal(f.run('queue.length'),1);assert.equal(f.run('current.id'),'live');
+ f.element('scope').value='production-all';f.run('refresh()');assert.equal(f.run('queue.length'),2);
+ await f.run("decide('reject')");assert.equal(f.run('current.id'),'passed');f.run('refresh()');assert.equal(f.run('queue.length'),1);
+});
+test('production flag queue includes high flags and customer reports only',async()=>{
+ const f=await fixture(async()=>({ok:true,json:async()=>({saved:true})}));f.setRows([{...clip('low'),production:true,triage:{priority:'lower'}},{...clip('high'),production:true,triage:{priority:'high'}},{...clip('report'),production:true,customerReported:true}]);f.element('scope').value='production-high';await f.run('syncQueue()');assert.equal(f.run('queue.length'),2);assert.equal(f.run('current.id'),'report');
+});
+
+test('undo immediately restores production eligibility and counts after rejection',async()=>{
+ const f=await fixture(async()=>({ok:true,json:async()=>({saved:true})}));f.setRows([{...clip('live'),production:true}]);f.element('scope').value='production';await f.run('syncQueue()');await f.run("decide('reject')");assert.equal(f.run('clips[0].production'),false);await f.element('undo').onclick();assert.equal(f.run('current.id'),'live');assert.equal(f.run('current.production'),true);assert.equal(f.run('current.review'),'unreviewed');
+});
+
+test('undo cannot reintroduce a clip removed in a newer production snapshot',async()=>{
+ const f=await fixture(async()=>({ok:true,json:async()=>({saved:true})}));f.setRows([{...clip('live'),production:true,productionEligible:true}]);f.element('scope').value='production';await f.run('syncQueue()');await f.run("decide('reject')");f.setRows([{...clip('live'),review:'reject',production:false,productionEligible:false}]);await f.run('syncQueue()');await f.element('undo').onclick();assert.equal(f.run('queue.length'),0);assert.equal(f.run('clips[0].review'),'unreviewed');assert.equal(f.run('clips[0].production'),false);
 });

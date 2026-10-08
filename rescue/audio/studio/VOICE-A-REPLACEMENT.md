@@ -41,3 +41,13 @@ This preserves rejected database rows, supersedes only complete old A rows, reta
 Run the existing application audio coverage/build checks and the usual production deployment (`node scripts/deploy-preview.mjs --production` from `rescue/app`). Verify deployed manifest/hash and representative audio URLs afterward. Re-scan local QA to include the new clips; retain all prior hash-bound review decisions. The chosen speaker needs no second approval; persistent anomalous word renders can be presented individually. Never label all generated clips human-reviewed.
 
 If promotion fails partway, do not delete old recordings. Inspect the saved pre-promotion state and finish or restore atomically before deploying. Database insertions are additive and repeat-safe; old files remain for rollback.
+
+## Second-layer audit of the replacement hashes
+
+Generation checks repeated waveform bursts and signal metrics; it does not transcribe. After local integration, run the existing hash-cached second layer:
+
+```sh
+rescue/audio/.venv/bin/python rescue/audio/studio/audit_layer2.py --model medium
+```
+
+This reuses existing results and transcribes only new hashes using cached Whisper medium on the CPU. Candidate F started with exactly 250 uncached recordings and 3,222 cached others. The report is `private/layer2-report.json`; completion requires `complete: true`, all 250 new clip IDs with current hashes, and no audit errors. ASR mismatches and low confidence are triage signals, not pronunciation failures. Confirmed repeated words can be separately quarantined, with coverage checked; no result automatically becomes human-approved. The three peer-duration outliers already quarantined remain excluded regardless of transcription results.

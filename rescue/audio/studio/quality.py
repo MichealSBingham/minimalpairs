@@ -86,6 +86,24 @@ def record_decision(clip, submitted_sha, decision):
         db.execute('INSERT INTO decisions(clip_id,sha,decision,created) VALUES(?,?,?,?)',(clip['id'],clip['sha'],decision,time.time()));db.commit()
     finally:db.close()
 
+def production_membership(items):
+    """Exact deployed ID/hash membership; no local manifest fallback."""
+    path=PRIVATE/'production-review.json'
+    snapshot=json.loads(path.read_text()) if path.exists() else {}
+    members={(c['id'],c['sha256']):c for c in snapshot.get('clips',[])}
+    exclusions_path=PRIVATE/'production-review-exclusions.json'
+    exclusions=json.loads(exclusions_path.read_text()) if exclusions_path.exists() else []
+    excluded={(c['id'],c['sha']) for c in exclusions}
+    matched=set()
+    for item in items:
+        identity=(item['id'],item['sha'])
+        member=members.get(identity)
+        item['productionEligible']=bool(member) and identity not in excluded
+        item['production']=item['productionEligible'] and item['review']!='reject'
+        if member:matched.add(identity)
+        item['productionUrl']=member.get('url') if member else None
+    return {'fetchedAt':snapshot.get('fetchedAt'),'origin':snapshot.get('origin'),'manifestClips':len(members),'missingLocal':len(set(members)-matched),'excludedPending':len(set(members)&excluded)}
+
 def serve(port):
     token=secrets.token_urlsafe(32)
     report=json.loads((PRIVATE/'quality-report.json').read_text());clips={r['id']:r for r in report['clips']}
@@ -122,8 +140,9 @@ def serve(port):
                     audit=second.get((item['id'],item['sha']))
                     if audit:
                         item['layer2']=audit;item['flags']=list(dict.fromkeys(item['flags']+audit['flags']))
+                production=production_membership(items)
                 items.sort(key=lambda r:(-len(r['flags']),r['bank'],r['text']))
-                return self.send(200,json.dumps({'sessionToken':token,'clips':items,'summary':fresh['summary'],'layer2':{k:v for k,v in layer.items() if k!='clips'}},ensure_ascii=False).encode())
+                return self.send(200,json.dumps({'sessionToken':token,'production':production,'clips':items,'summary':fresh['summary'],'layer2':{k:v for k,v in layer.items() if k!='clips'}},ensure_ascii=False).encode())
             if path.startswith('/audio/'):
                 c=clips.get(path.removeprefix('/audio/'))
                 if not c:return self.send(404,b'{}')
