@@ -19,7 +19,7 @@ const start=`${localPath(locale,'/practice')}?language=${language.id}&session=di
   <div class="diagnostic-hero"><header><p class="eyebrow">{name} · {t.eyebrow}</p><h1>{t.title}</h1><p class="intro">{short.intro}</p><div class="facts"><span>{contrasts.length} {t.coverage}</span><span>{contrasts.length*DIAGNOSTIC_ROUNDS_PER_GROUP} {t.rounds}</span></div><a class="start" href={start}>{short.start} <span aria-hidden="true">→</span></a><p class="scope">{short.scope}</p></header><DiagnosticPreview language={language} locale={locale}/></div>
   <section class="steps"><h2>{t.how}</h2><ol>{t.steps.map((step,i)=><li><span>{i+1}</span>{step}</li>)}</ol></section>
   <section class="benefits"><article><h2>{t.results}</h2><p>{t.resultsBody}</p></article><article><h2>{t.practice}</h2><p>{t.practiceBody}</p></article></section>
-  <section><h2>{t.examples}</h2><div class="sound-grid">{contrasts.map(c=><a href={localPath(locale,`/learn/${c.id}`)}>{c.phonemes.map((sound,i)=><>{i>0&&<span class="versus"> ↔ </span>}<span>{locale==='en'?(sound.includes(' ')?sound:`/${sound}/`):localizedSound(sound,locale as PublicLocale)}</span></>)}</a>)}</div><a class="browse" href={localPath(locale,`/${slugFor(language)}`)}>{t.browse} →</a></section>
+  <section><h2>{t.examples}</h2><div class="sound-grid">{contrasts.map(c=><a href={localPath(locale,`/learn/${c.id}`)}>{c.phonemes.map((sound,i)=><>{i>0&&<span class="versus"> ↔ </span>}<span class="ipa-text">{(locale==='en'?(sound.includes(' ')?sound:`/${sound}/`):localizedSound(sound,locale as PublicLocale)).normalize('NFC')}</span></>)}</a>)}</div><a class="browse" href={localPath(locale,`/${slugFor(language)}`)}>{t.browse} →</a></section>
 </main>
 <Footer locale={locale}/>
 <style>

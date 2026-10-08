@@ -1,20 +1,33 @@
 import type {Contrast} from './types';
-// A short, fixed starting-point sample, not a calibrated proficiency exam.
-// Selection reflects core contrasts in the existing sourced curriculum. Difficulty
-// depends on the learner's L1; never choose items or alter scoring to force failure.
-const priorities: Record<string,string[]> = {
- en:['en-i-ih','en-r-l','en-th-s','en-foot-goose','en-v-w','en-trap-dress'],
- fr:['fr-u-y','fr-an-on','fr-an-in','fr-e-e-open','fr-eu-closed-open','fr-zh-sh'],
- de:['de-u-ue','de-i-length','de-o-oe','de-e-tense-lax','de-y-tense-lax','de-s-z'],
- es:['es-tap-trill','es-stress','es-d-tap','es-n-ny','es-e-i','es-p-b'],
- it:['it-p-length','it-t-length','it-e-open-e','it-o-open-o','it-l-length','it-p-b'],
- pt:['pt-oral-nasal-a','pt-tap-strong-r','pt-e-open-e','pt-o-open-o','pt-s-z','pt-p-b'],
- ru:['ru-y-i','ru-l-palatalized','ru-n-palatalized','ru-s-sh','ru-o-u','ru-b-p'],
- ja:['ja-i-length','ja-u-length','ja-k-length','ja-t-length','ja-s-sh','ja-k-g'],
- zh:['zh-tone-2-3','zh-tone-1-2','zh-tone-3-4','zh-p-aspiration','zh-s-sh','zh-n-ng'],
-};
+import type {DiagnosticLanguage} from './diagnostic-priorities.ts';
+import {DIAGNOSTIC_LANGUAGES,DIAGNOSTIC_PRIORITIES,DIRECT_STUDY_PRIORITIES,L1_TRANSFER_PREDICTIONS,normalizeDiagnosticLanguage} from './diagnostic-priorities.ts';
 export const DIAGNOSTIC_ROUNDS_PER_GROUP=2;
-export function selectDiagnosticContrasts(contrasts:Contrast[], languageId:string) {
- const ids=priorities[languageId]||[];
- return [...contrasts].sort((a,b)=>(ids.includes(a.id)?ids.indexOf(a.id):999)-(ids.includes(b.id)?ids.indexOf(b.id):999)).slice(0,6);
+export const DIAGNOSTIC_MAX_GROUPS=6;
+/** A short starting-point sample. L1 changes selection, never scoring or access.
+ * Inventory predictions and study-supported contrasts are not calibrated norms.
+ * Same-language, missing and unsupported L1s receive the broad sample. */
+export function selectDiagnosticContrasts(contrasts:Contrast[], languageId:string, nativeLanguage?:string|null) {
+ const targetCode=normalizeDiagnosticLanguage(languageId),native=normalizeDiagnosticLanguage(nativeLanguage);
+ const target=DIAGNOSTIC_LANGUAGES.includes(targetCode as DiagnosticLanguage)?targetCode as DiagnosticLanguage:undefined;
+ const priorities=target?DIAGNOSTIC_PRIORITIES[target]:[];
+ const tailored=!!(target&&native&&target!==native);
+ const direct=tailored?DIRECT_STUDY_PRIORITIES[target!]?.[native!]||[]:[];
+ const profile=tailored?L1_TRANSFER_PREDICTIONS[native!]:{};
+ const available=new Map(contrasts.map(c=>[c.id,c]));
+ const ranked=priorities.map((p,index)=>({...p,index,score:(profile[p.feature]||0)+(direct.includes(p.id)?4:0)}))
+  .filter(p=>available.has(p.id)).sort((a,b)=>b.score-a.score||a.index-b.index);
+ const selected:Contrast[]=[],families=new Map<string,number>(),used=new Set<string>();
+ for(const p of ranked){
+  // Reserve diversity: Mandarin includes up to three tone pairs; other families
+  // contribute at most two, before filling gaps in unusually sparse inventories.
+  const cap=p.family==='tones'?3:2;
+  if((families.get(p.family)||0)>=cap)continue;
+  selected.push(available.get(p.id)!);used.add(p.id);families.set(p.family,(families.get(p.family)||0)+1);
+  if(selected.length===DIAGNOSTIC_MAX_GROUPS)return selected;
+ }
+ for(const c of [...ranked.map(p=>available.get(p.id)!),...contrasts]){
+  if(!used.has(c.id)){selected.push(c);used.add(c.id);}
+  if(selected.length===DIAGNOSTIC_MAX_GROUPS)break;
+ }
+ return selected;
 }

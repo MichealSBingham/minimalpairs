@@ -172,3 +172,9 @@ test('identification schema2 preserves mode and purpose through verified account
   assert.equal((await subject.api.loadAccountProgress({sessions: []})).progress.sessions[0].mode, 'word-identification');
   for (const purpose of ['focused', 'mixed', 'diagnostic']) assert.equal(data.normalizeSession(sample(purpose, {purpose})).purpose, purpose);
 });
+
+ test('diagnostic answer details survive normalization and reject oversized text',()=>{
+ const value=sample('diagnostic-detail',{purpose:'diagnostic',mistakes:[{pairId:'fr-u-y-1',word:'tu',chosenWord:'tout',correctWord:'du',heardIpa:'/ty/',chosenIpa:'/tu/',correctIpa:'/dy/'}]});
+ assert.deepEqual(data.normalizeSession(value).mistakes,value.mistakes);
+ value.mistakes[0].correctWord='x'.repeat(121);assert.equal(data.normalizeSession(value),null);
+ });

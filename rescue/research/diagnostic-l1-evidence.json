@@ -1,0 +1,5047 @@
+{
+  "version": 1,
+  "reviewDate": "2026-10-08",
+  "implementation": "rescue/app/src/lib/diagnostic-priorities.ts",
+  "targetLanguages": [
+    "en",
+    "fr",
+    "de",
+    "es",
+    "it",
+    "pt",
+    "ru",
+    "ja",
+    "zh"
+  ],
+  "nativeLanguages": [
+    "en",
+    "fr",
+    "de",
+    "es",
+    "it",
+    "pt",
+    "ru",
+    "ja",
+    "zh",
+    "ar",
+    "hi",
+    "ko"
+  ],
+  "scope": "Six available contrast groups, two listening rounds per group; same selection for free and paid access. This is a starting-point sample, not a whole-language proficiency test.",
+  "selectionPolicy": {
+    "basis": "L1 inventory-transfer prediction with direct population/feature study support where listed",
+    "weightMeaning": "Editorial priority weights, not probabilities, calibrated error rates or empirical rankings. Four-point study bonus selects studied contrasts but does not claim those are hardest.",
+    "diversity": "At most two groups per feature family, except up to three tone groups. Sparse available banks may relax this only to fill the sample.",
+    "fallback": "Same target/native language, unknown or Other native language uses broad editorial defaults. Missing production groups are skipped.",
+    "scoring": "Answers and scores are never altered to cause failure or motivate purchase."
+  },
+  "evidenceLevels": {
+    "direct-study-supported": "Primary research directly tested the relevant population and contrast. The current word list, short diagnostic and ordering are not validated by that fact.",
+    "predicted": "Editorial cross-inventory inference. No direct L1-L2 empirical difficulty ranking is asserted.",
+    "broad-sample": "Target-language sample with no L1 difficulty claim.",
+    "study-feature-supported": "Primary research tested the relevant population and sound categories or feature in a broader identification task; this is not evidence that the exact binary contrast was separately tested."
+  },
+  "directStudyLinks": {
+    "en:ja": {
+      "en-r-l": [
+        "logan1991"
+      ],
+      "en-th-s": [
+        "lambacher2001"
+      ]
+    },
+    "fr:en": {
+      "fr-u-y": [
+        "fr-levy-2009"
+      ],
+      "fr-y-i": [
+        "fr-levy-2009"
+      ],
+      "fr-eh-eu-open": [
+        "fr-levy-2009"
+      ]
+    },
+    "de:en": {
+      "de-u-ue": [
+        "de-kingston-2003"
+      ],
+      "de-o-oe": [
+        "de-kingston-2003"
+      ]
+    },
+    "de:zh": {
+      "de-i-length": [
+        "de-gao-2019"
+      ],
+      "de-y-tense-lax": [
+        "de-gao-2019"
+      ],
+      "de-e-tense-lax": [
+        "de-gao-2019"
+      ]
+    },
+    "es:en": {
+      "es-d-tap": [
+        "es-herd-2013"
+      ],
+      "es-tap-trill": [
+        "es-herd-2013"
+      ]
+    },
+    "es:fr": {
+      "es-stress": [
+        "stress-schwab2017"
+      ]
+    },
+    "it:en": {
+      "it-p-length": [
+        "it-deiacovo-2025"
+      ],
+      "it-t-length": [
+        "it-deiacovo-2025"
+      ]
+    },
+    "pt:ru": {
+      "pt-e-open-e": [
+        "pt-smirnova-2019"
+      ],
+      "pt-o-open-o": [
+        "pt-smirnova-2019"
+      ]
+    },
+    "ru:es": {
+      "ru-y-i": [
+        "ru-kogan-2020-vowel-perception"
+      ]
+    },
+    "ja:en": {
+      "ja-i-length": [
+        "ja-tajima2008"
+      ],
+      "ja-u-length": [
+        "ja-tajima2008"
+      ],
+      "ja-k-length": [
+        "ja-tajima2008"
+      ],
+      "ja-t-length": [
+        "ja-tajima2008"
+      ]
+    },
+    "zh:en": {
+      "zh-tone-2-3": [
+        "tone-tsukada2022"
+      ],
+      "zh-tone-1-2": [
+        "tone-tsukada2022"
+      ]
+    },
+    "zh:ja": {
+      "zh-tone-2-3": [
+        "tone-tsukada2022"
+      ],
+      "zh-tone-1-2": [
+        "tone-tsukada2022"
+      ]
+    },
+    "en:ko": {
+      "en-i-ih": [
+        "nishi2008"
+      ],
+      "en-trap-dress": [
+        "nishi2008"
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "logan1991",
+      "title": "Logan, Lively & Pisoni (1991): Training Japanese listeners to identify English /r/ and /l/: A first report",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3518834/",
+      "kind": "l2-study",
+      "whatItSupports": "Japanese adults; natural /r–l/ words, varied speakers and phonetic environments; held-out words and speaker tests.",
+      "limitations": "Identification training with visible alternatives, not this product’s cross-word audio-only ABX. Small initial study. Full stimulus table not recovered in this pass."
+    },
+    {
+      "id": "lambacher2001",
+      "title": "Lambacher et al. (2001): Identification of English voiceless fricatives by Japanese listeners: The influence of vowel context on sensitivity and response bias",
+      "url": "https://www.jstage.jst.go.jp/article/ast/22/5/22_5_334/_pdf",
+      "kind": "l2-study",
+      "whatItSupports": "104 Japanese listeners identified /f,s,ʃ,θ,h/ in varied syllable/vowel contexts. Confusions motivate /θ–s/, /ʃ–s/ and /f–h/.",
+      "limitations": "Perception study, not an intervention trial. Stimuli were nonsense syllables; our real words are editorial. Vowel context materially changes difficulty, especially /ʃ–s/ near /i/ and /f–h/ near /u/."
+    },
+    {
+      "id": "nishi2008",
+      "title": "Nishi & Kewley-Port (2008): Non-native speech perception training using vowel subsets: Effects of vowels in sets and order of training",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2588476/",
+      "kind": "l2-study",
+      "whatItSupports": "Fifteen Korean listeners received nine-category American English vowel identification training. The vowel inventory includes /i,ɪ,ɛ,æ/. Japanese results are discussed from the earlier 2007 study.",
+      "limitations": "Korean population/feature evidence, not a dedicated binary /i-ɪ/ or /æ-ɛ/ diagnostic validation. No Japanese direct bonus is drawn from this 2008 source."
+    },
+    {
+      "id": "fr-levy-2009",
+      "title": "Levy (2009), On the assimilation-discrimination relationship in American English adults’ French vowel learning",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2787078/",
+      "kind": "l2-study",
+      "whatItSupports": "Three American English groups differing in French experience discriminated French vowel pairs; Figure 2 explicitly includes /y-u/, /y-i/, and /œ-ɛ/, alongside eight other pairs.",
+      "limitations": "Contexts were bilabial /rabVp/ and alveolar /radVt/. Tested pair membership is verified, but difficulty varies by context and experience; this does not validate our words, recordings or ordering.",
+      "verificationLocator": "Figure 2 caption and discrimination analysis: https://pmc.ncbi.nlm.nih.gov/articles/PMC2787078/"
+    },
+    {
+      "id": "de-kingston-2003",
+      "title": "Kingston (2003), Learning Foreign Vowels",
+      "url": "https://bpb-us-e2.wpmucdn.com/websites.umass.edu/dist/7/4019/files/2019/04/kingston2003LgSp.pdf",
+      "kind": "l2-study",
+      "whatItSupports": "American-English learners, 12 German nonlow vowel categories, identification training with five speakers and varied consonantal frames.",
+      "limitations": "Words and pseudowords in stressed CVCn frames. No full lexical bank recovered. Inventory coverage does not prove every selected binary contrast below was separately trained."
+    },
+    {
+      "id": "de-gao-2019",
+      "title": "Gao et al. (2019), Perception of German tense and lax vowel contrast by Chinese learners",
+      "url": "https://www.vocaltractlab.de/publications/gao-2019-essv.pdf",
+      "kind": "l2-study",
+      "whatItSupports": "Seven tense/lax vowel pairs; Mandarin-Chinese listeners and German controls; quality/duration manipulations.",
+      "limitations": "Perception experiment with synthesized words, not HVPT. Full 70-word list not recovered; no word below is claimed as its stimulus."
+    },
+    {
+      "id": "es-herd-2013",
+      "title": "Herd, Jongman & Sereno: Perceptual and production training of intervocalic /d, ɾ, r/ in American English learners of Spanish",
+      "url": "https://kuppl.ku.edu/sites/kuppl/files/documents/publications/Herd_Jongman_Sereno_perc_prod_training_JASA_2013.pdf",
+      "kind": "l2-study",
+      "whatItSupports": "Direct L2 training of three intervocalic contrasts; generalization measures.",
+      "limitations": "Identification used written choices. Does not validate text-free cross-word ABX. Published article does not provide the full lexical table; candidate words are not labeled table-confirmed stimuli."
+    },
+    {
+      "id": "it-deiacovo-2025",
+      "title": "De Iacovo et al.: The perception of gemination in Italian by first-language speakers in Italy and heritage and second-language speakers in Australia",
+      "url": "https://iris.unito.it/retrieve/3d09114f-2677-4c13-b8f2-c7fd6c88136d/10.1515_phon-2025-0012.pdf",
+      "kind": "l2-study",
+      "whatItSupports": "L2 singleton/geminate perception; explicitly names papa/pappa, fata/fatta, paca/pacca.",
+      "limitations": "Synthetic and duration-manipulated identification experiment; not a training intervention. Named words occur in methods prose, not a lexical table; stimulusSourceIds deliberately empty under table-only policy."
+    },
+    {
+      "id": "pt-smirnova-2019",
+      "title": "Smirnova Henriques et al.: The perception of Brazilian Portuguese open and close mid vowels by native Russian speakers",
+      "url": "https://econtents.sbu.unicamp.br/inpec/index.php/joss/article/download/14995/10054",
+      "kind": "l2-study",
+      "whatItSupports": "Table-confirmed real words for stressed e/ɛ and o/ɔ; Russian-L1 perception difficulty.",
+      "limitations": "Perception assessment, not training efficacy. Loanword and nonminimal contexts were not imported. Full IPA below is editorial normalization; tables mark target vowels."
+    },
+    {
+      "id": "pt-martinez-goad-dow",
+      "title": "Martinez, Goad & Dow: L1 phonological effects on L2 (non-)naïve perception: a cross-language investigation of the oral–nasal vowel contrast in Brazilian Portuguese",
+      "url": "https://journals.sagepub.com/doi/10.1177/02676583211044953",
+      "kind": "l2-study",
+      "whatItSupports": "L1-dependent oral–nasal perception across French, English and Spanish varieties.",
+      "limitations": "Artificial monosyllables: not evidence for real-word pools or the proposed low-vowel pair."
+    },
+    {
+      "id": "ru-kogan-2020-vowel-perception",
+      "title": "Vita Kogan: The Effect of First Language Perception on the Discrimination of a Non-native Vowel Contrast: Investigating Individual Differences",
+      "url": "https://diposit.ub.edu/server/api/core/bitstreams/f28b2105-de18-4952-bce2-1df605199f4b/content",
+      "kind": "l2-study",
+      "whatItSupports": "Russian i/ɨ perception examined in 68 Spanish participants against a Russian baseline; vowel tokens were spliced and rated for dissimilarity.",
+      "limitations": "Non-native perception assessment, not a training efficacy experiment. Most Spanish participants reported some basic foreign-language knowledge. No word pool below is attributed as its stimulus list."
+    },
+    {
+      "id": "ja-tajima2008",
+      "title": "Tajima et al. (2008): Training English listeners to perceive phonemic length contrasts in Japanese",
+      "url": "https://www.queensu.ca/psychology/sites/psycwww/files/uploaded_files/Faculty/Kevin%20Munhall/Tajima_et_al_2008_Training_English_listeners_to_perceive_phonemic_length_contrasts_in_Japanese.pdf",
+      "kind": "l2-study",
+      "whatItSupports": "Vowel-length identification training and tests of rate, word position, presentation context and transfer. Results support treating those variables explicitly.",
+      "limitations": "Reported generalization was limited. Identification with feedback is not our cross-word audio-only ABX; the paper does not establish its superiority. No word-list membership imported here."
+    },
+    {
+      "id": "ja-tsukada2014",
+      "title": "Tsukada, Hirata & Roengpitya (2014): Cross-language perception of Japanese vowel length contrasts",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24687127/",
+      "kind": "l2-study",
+      "whatItSupports": "American English, Italian and Thai listeners were tested on Japanese vowel length with AXB discrimination.",
+      "limitations": "Abstract inspected; full stimulus list not recovered. Evidence concerns the length class, not every vowel-specific bank or training success. No word receives stimulus provenance from it."
+    },
+    {
+      "id": "fr-fougeron-smith-1993",
+      "title": "Fougeron & Smith (1993), French: Illustrations of the IPA",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/E2BC8B1DD975FE4B272B088B8345B933/S0025100300004874a.pdf/french.pdf",
+      "kind": "phonology",
+      "whatItSupports": "Parisian vowel/consonant inventory, mid-vowel distributions, nasal notation and rhotic variation.",
+      "limitations": "Descriptive reference, not learner outcome evidence or certification of this word bank."
+    },
+    {
+      "id": "es-avelino-2018",
+      "title": "Avelino: Mexico City Spanish",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/mexico-city-spanish/C35C97AE9A19C9C222FD614D2D4125AA",
+      "kind": "phonology",
+      "whatItSupports": "Mexican Spanish inventory and contextual variation.",
+      "limitations": "Descriptive phonology; neither a training trial nor verification of every proposed lemma."
+    },
+    {
+      "id": "it-bertinetto-loporcaro-2005",
+      "title": "Bertinetto & Loporcaro: The sound pattern of Standard Italian, as compared with Florence, Milan and Rome",
+      "url": "https://ricerca.sns.it/retrieve/bf9bc2cf-6ebc-4f8b-a0fc-6f081b2d64e4/98_Bertinetto%26Loporcaro_Italian_JIPA_post%20review.pdf",
+      "kind": "phonology",
+      "whatItSupports": "Standard Italian length and stressed mid-vowel contrasts.",
+      "limitations": "Regional lexical distributions differ. Predictable vowel duration is not an independent vowel-length contrast."
+    },
+    {
+      "id": "pt-barbosa-albano-2004",
+      "title": "Barbosa & Albano: Brazilian Portuguese",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/brazilian-portuguese/8EE69D52AE2D06C1EDA2841EA2E14FEC",
+      "kind": "phonology",
+      "whatItSupports": "Reference target variety for existing Brazilian Portuguese pools.",
+      "limitations": "Full text not extracted here; new rhotic candidates require a chosen regional realization."
+    },
+    {
+      "id": "zh-lee-zee-2003",
+      "title": "Lee & Zee: Standard Chinese (Beijing)",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/standard-chinese-beijing/050A393AF2D3C325E3C6796FE8CA99A3",
+      "kind": "phonology",
+      "whatItSupports": "Reference for target-variety inventory.",
+      "limitations": "Publisher HTML record accessed; full phonetic illustration not extracted. New consonant pools remain editorial candidates pending complete source and lexical checks."
+    },
+    {
+      "id": "ja-okada1991",
+      "title": "Okada (1991): Japanese — Illustrations of the IPA",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/EF0E01DD40A1B2779F3ADFF96B5D97E3/S002510030000445Xa.pdf/japanese.pdf",
+      "kind": "phonology",
+      "whatItSupports": "Tokyo-area sound inventory, length contrasts, predictable consonant variants, high-vowel devoicing and independent pitch accent.",
+      "limitations": "Descriptive illustration of one speaker, not learner-training evidence. Our IPA conventions normalize its older symbols and omit pitch labels. No recordings reused."
+    },
+    {
+      "id": "ru-msu-softness-vowels",
+      "title": "Moscow State University phonetics: meaning-distinguishing role of consonant hardness/softness",
+      "url": "https://www.philol.msu.ru/~fonetica/kons/n-24.htm",
+      "kind": "phonology",
+      "whatItSupports": "Explicit hard-onset [mɨl] versus soft-onset [mʲil] coupling.",
+      "limitations": "Pedagogical phonetic description, not a training trial. Its articulatory classification should not be treated as the only theoretical analysis."
+    },
+    {
+      "id": "de-moebius-trouvain-2014",
+      "title": "Möbius & Trouvain (2014), Phonology, Saarland University",
+      "url": "https://www.coli.uni-saarland.de/courses/FLST/2011/slides/phonology_FLST_2014.pdf",
+      "kind": "phonology",
+      "whatItSupports": "German minimal-pair examples, inventories, contextual ich/ach allophones and final neutralization.",
+      "limitations": "University phonetics teaching material, not an L2 outcome experiment."
+    },
+    {
+      "id": "ame-inventory",
+      "title": "University of Saarland eLAUT: American English (California) sound inventory",
+      "url": "https://www.coli.uni-saarland.de/elaut/Languages_Sites/sampaAmE.htm",
+      "kind": "phonology",
+      "whatItSupports": "Reference inventory and selected example words for American consonant/vowel contrasts.",
+      "limitations": "University phonetics teaching resource, not L2 efficacy evidence. California inventory does not license every British distinction; contrast-level dialect restrictions override it."
+    },
+    {
+      "id": "stress-schwab2017",
+      "title": "Schwab and Dellwo (2017): Intonation and talker variability in the discrimination of Spanish lexical stress contrasts by Spanish, German and French listeners",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29092541/",
+      "kind": "primary-perception-study",
+      "whatItSupports": "Native French (N=27), German (N=21), Spanish (N=17) listeners completed 216 odd-one-out trials of Spanish disyllabic words contrasting lexical stress. French listeners performed above chance without intonation variability and at chance with it.",
+      "limitations": "Task and intonation conditions differ from this product. Supports French-background stress sampling, not a fixed expected error rate or a universal impairment."
+    },
+    {
+      "id": "tone-tsukada2022",
+      "title": "Effects of First Language Background and Learning Experience in Perceiving Mandarin Lexical Tones (2022)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35015971/",
+      "kind": "primary-perception-study",
+      "whatItSupports": "English and Japanese backgrounds compared on all six Mandarin tone pairs.",
+      "limitations": "Relative performance depends on pair and learning experience. Chosen tone subset/order is editorial, not a published six-item diagnostic."
+    },
+    {
+      "id": "arabic-thelwall1990",
+      "title": "Thelwall and Sa’Adeddin (1990), Arabic, Illustrations of the IPA",
+      "url": "https://www.cambridge.org/core/journals/journal-of-the-international-phonetic-association/article/arabic/D54098F7BBE7821861A80617B872FA24",
+      "kind": "primary-inventory-description",
+      "whatItSupports": "Standard Arabic consonant/vowel inventory, quantity contrasts and absence of native /p/ and /v/.",
+      "limitations": "Broad prediction only; regional Arabic, loanwords and learner experience differ. Not L2 perceptual ranking."
+    },
+    {
+      "id": "hindi-ohala1994",
+      "title": "Ohala (1994), Hindi, Illustrations of the IPA",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/959264D9E0A6A48F16B0BD6A17DB678F/S0025100300004990a.pdf/div-class-title-hindi-div.pdf",
+      "kind": "primary-inventory-description",
+      "whatItSupports": "Standard Hindi inventory and contrasts, including quantity, nasal vowels and laryngeal distinctions.",
+      "limitations": "/v-w/ and other L2 priority weights are predictions; regional Hindi and bilingual experience differ."
+    },
+    {
+      "id": "korean-cho2002",
+      "title": "Cho, Jun and Ladefoged (2002), Acoustic and aerodynamic correlates of Korean stops and fricatives",
+      "url": "https://linguistics.ucla.edu/people/jun/Cho%20et%20al-JPhon.pdf",
+      "kind": "primary-phonetic-study",
+      "whatItSupports": "Korean laryngeal contrast differs from a simple English voiced/voiceless opposition.",
+      "limitations": "Does not empirically rank all Korean-to-L2 contrasts; Seoul and regional/age differences matter."
+    },
+    {
+      "id": "korean-national-inventory",
+      "title": "National Institute of Korean Language: The Korean Alphabet, Hangeul",
+      "url": "https://www.korean.go.kr/common/download.do?c_file_name=89c36d8f-0c82-401b-b293-9394b66a058e_0.pdf&file_path=reportData&o_file_name=The+Korean+Alphabet_Hangeul.pdf",
+      "kind": "official-inventory-description",
+      "whatItSupports": "Korean consonant and vowel categories for inventory-based predictions.",
+      "limitations": "Not an L2 perception study. /r-l/, labiodental and vowel priorities are editorial predictions, not measured rates."
+    }
+  ],
+  "limitations": [
+    "Not all 108 native-to-target combinations have direct study evidence. All nonlisted selections are predictions.",
+    "Prior L2 experience, dialect, individual perception and task can override L1-based expectations.",
+    "Broad labels are coarse: Spanish dental fricatives vary geographically, Arabic covers many varieties, Korean vowel length varies by age/region, and Portuguese covers different vowel systems.",
+    "German curriculum currently offers almost entirely vowel contrasts; apparent vowel concentration reflects available bank coverage.",
+    "Mandarin bank contains tones and segmental contrasts but this short sample does not assess tone sandhi or connected speech.",
+    "Two observations per group have high uncertainty; do not describe a low result as a diagnosed deficit or proficiency level.",
+    "Nishi 2008 is used only as Korean population/feature evidence; the Japanese vowel direct bonuses were removed. French /y-i/ and /œ-ɛ/ tested membership was independently verified in Levy 2009 Figure 2. Study-feature support is separate from exact-contrast support."
+  ],
+  "selectionExamples": [
+    {
+      "target": "en",
+      "native": "en",
+      "selected": [
+        {
+          "id": "en-i-ih",
+          "feature": "highVowelQuality",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "en-r-l",
+          "feature": "liquidContrast",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "en-th-s",
+          "feature": "dentalFricative",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "en-foot-goose",
+          "feature": "highVowelQuality",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "en-v-w",
+          "feature": "labiodentalApproximant",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "en-trap-dress",
+          "feature": "lowVowelQuality",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "en",
+      "native": "fr",
+      "selected": [
+        {
+          "id": "en-i-ih",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-th-s",
+          "feature": "dentalFricative",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-foot-goose",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-th-t",
+          "feature": "dentalFricative",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-trap-dress",
+          "feature": "lowVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-ae-strut",
+          "feature": "lowVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "en",
+      "native": "de",
+      "selected": [
+        {
+          "id": "en-th-s",
+          "feature": "dentalFricative",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-v-w",
+          "feature": "labiodentalApproximant",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-th-t",
+          "feature": "dentalFricative",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-trap-dress",
+          "feature": "lowVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-ae-strut",
+          "feature": "lowVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-i-ih",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "en",
+      "native": "es",
+      "selected": [
+        {
+          "id": "en-i-ih",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-foot-goose",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-trap-dress",
+          "feature": "lowVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-v-b",
+          "feature": "bilabialLabiodental",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-s-z",
+          "feature": "fricativeVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-f-v",
+          "feature": "labiodentalVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "en",
+      "native": "it",
+      "selected": [
+        {
+          "id": "en-i-ih",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-th-s",
+          "feature": "dentalFricative",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-foot-goose",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-trap-dress",
+          "feature": "lowVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-th-t",
+          "feature": "dentalFricative",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-ae-strut",
+          "feature": "lowVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "en",
+      "native": "pt",
+      "selected": [
+        {
+          "id": "en-i-ih",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-th-s",
+          "feature": "dentalFricative",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-foot-goose",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-trap-dress",
+          "feature": "lowVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-th-t",
+          "feature": "dentalFricative",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-ae-strut",
+          "feature": "lowVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "en",
+      "native": "ru",
+      "selected": [
+        {
+          "id": "en-i-ih",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-th-s",
+          "feature": "dentalFricative",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-foot-goose",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-v-w",
+          "feature": "labiodentalApproximant",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-th-t",
+          "feature": "dentalFricative",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-trap-dress",
+          "feature": "lowVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "en",
+      "native": "ja",
+      "selected": [
+        {
+          "id": "en-r-l",
+          "feature": "liquidContrast",
+          "evidence": "direct-study-supported",
+          "sourceIds": [
+            "logan1991"
+          ]
+        },
+        {
+          "id": "en-th-s",
+          "feature": "dentalFricative",
+          "evidence": "study-feature-supported",
+          "sourceIds": [
+            "lambacher2001"
+          ]
+        },
+        {
+          "id": "en-i-ih",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-foot-goose",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-v-w",
+          "feature": "labiodentalApproximant",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-trap-dress",
+          "feature": "lowVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "en",
+      "native": "zh",
+      "selected": [
+        {
+          "id": "en-i-ih",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-th-s",
+          "feature": "dentalFricative",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-foot-goose",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-v-w",
+          "feature": "labiodentalApproximant",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-trap-dress",
+          "feature": "lowVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-v-b",
+          "feature": "bilabialLabiodental",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "en",
+      "native": "ar",
+      "selected": [
+        {
+          "id": "en-p-b",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-i-ih",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-foot-goose",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-v-w",
+          "feature": "labiodentalApproximant",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-trap-dress",
+          "feature": "lowVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-v-b",
+          "feature": "bilabialLabiodental",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "en",
+      "native": "hi",
+      "selected": [
+        {
+          "id": "en-th-s",
+          "feature": "dentalFricative",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-v-w",
+          "feature": "labiodentalApproximant",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-th-t",
+          "feature": "dentalFricative",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-trap-dress",
+          "feature": "lowVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-v-b",
+          "feature": "bilabialLabiodental",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-ae-strut",
+          "feature": "lowVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "en",
+      "native": "ko",
+      "selected": [
+        {
+          "id": "en-i-ih",
+          "feature": "highVowelQuality",
+          "evidence": "study-feature-supported",
+          "sourceIds": [
+            "nishi2008"
+          ]
+        },
+        {
+          "id": "en-trap-dress",
+          "feature": "lowVowelQuality",
+          "evidence": "study-feature-supported",
+          "sourceIds": [
+            "nishi2008"
+          ]
+        },
+        {
+          "id": "en-r-l",
+          "feature": "liquidContrast",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-th-s",
+          "feature": "dentalFricative",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-foot-goose",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "en-v-w",
+          "feature": "labiodentalApproximant",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "fr",
+      "native": "en",
+      "selected": [
+        {
+          "id": "fr-u-y",
+          "feature": "frontRounded",
+          "evidence": "direct-study-supported",
+          "sourceIds": [
+            "fr-levy-2009"
+          ]
+        },
+        {
+          "id": "fr-y-i",
+          "feature": "frontRounded",
+          "evidence": "direct-study-supported",
+          "sourceIds": [
+            "fr-levy-2009"
+          ]
+        },
+        {
+          "id": "fr-an-on",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-an-in",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-n-gn",
+          "feature": "palatalNasal",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-e-e-open",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "fr",
+      "native": "fr",
+      "selected": [
+        {
+          "id": "fr-u-y",
+          "feature": "frontRounded",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-an-on",
+          "feature": "nasalVowels",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-an-in",
+          "feature": "nasalVowels",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-e-e-open",
+          "feature": "midVowelHeight",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-eu-closed-open",
+          "feature": "midVowelHeight",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-zh-sh",
+          "feature": "fricativeVoicing",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "fr",
+      "native": "de",
+      "selected": [
+        {
+          "id": "fr-an-on",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-an-in",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-n-gn",
+          "feature": "palatalNasal",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-u-y",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-e-e-open",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-eu-closed-open",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "fr",
+      "native": "es",
+      "selected": [
+        {
+          "id": "fr-u-y",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-an-on",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-an-in",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-e-e-open",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-eu-closed-open",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-zh-sh",
+          "feature": "fricativeVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "fr",
+      "native": "it",
+      "selected": [
+        {
+          "id": "fr-u-y",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-an-on",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-an-in",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-y-i",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-e-e-open",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-eu-closed-open",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "fr",
+      "native": "pt",
+      "selected": [
+        {
+          "id": "fr-u-y",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-y-i",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-an-on",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-an-in",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-e-e-open",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-eu-closed-open",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "fr",
+      "native": "ru",
+      "selected": [
+        {
+          "id": "fr-u-y",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-an-on",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-an-in",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-e-e-open",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-eu-closed-open",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-y-i",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "fr",
+      "native": "ja",
+      "selected": [
+        {
+          "id": "fr-u-y",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-an-on",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-an-in",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-y-i",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-l-r",
+          "feature": "liquidContrast",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-b-v",
+          "feature": "bilabialLabiodental",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "fr",
+      "native": "zh",
+      "selected": [
+        {
+          "id": "fr-an-on",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-an-in",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-zh-sh",
+          "feature": "fricativeVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-b-v",
+          "feature": "bilabialLabiodental",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-e-e-open",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-eu-closed-open",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "fr",
+      "native": "ar",
+      "selected": [
+        {
+          "id": "fr-u-y",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-an-on",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-an-in",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-y-i",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-b-v",
+          "feature": "bilabialLabiodental",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-n-gn",
+          "feature": "palatalNasal",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "fr",
+      "native": "hi",
+      "selected": [
+        {
+          "id": "fr-u-y",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-y-i",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-b-v",
+          "feature": "bilabialLabiodental",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-n-gn",
+          "feature": "palatalNasal",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-an-on",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-an-in",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "fr",
+      "native": "ko",
+      "selected": [
+        {
+          "id": "fr-u-y",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-an-on",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-an-in",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-zh-sh",
+          "feature": "fricativeVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-y-i",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "fr-l-r",
+          "feature": "liquidContrast",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "de",
+      "native": "en",
+      "selected": [
+        {
+          "id": "de-u-ue",
+          "feature": "frontRounded",
+          "evidence": "study-feature-supported",
+          "sourceIds": [
+            "de-kingston-2003"
+          ]
+        },
+        {
+          "id": "de-o-oe",
+          "feature": "frontRounded",
+          "evidence": "study-feature-supported",
+          "sourceIds": [
+            "de-kingston-2003"
+          ]
+        },
+        {
+          "id": "de-a-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-e-tense-lax",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-o-tense-lax",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-i-length",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "de",
+      "native": "fr",
+      "selected": [
+        {
+          "id": "de-i-length",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-y-tense-lax",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-a-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-u-ue",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-o-oe",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-e-tense-lax",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "de",
+      "native": "de",
+      "selected": [
+        {
+          "id": "de-u-ue",
+          "feature": "frontRounded",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "de-i-length",
+          "feature": "highVowelQuality",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "de-o-oe",
+          "feature": "frontRounded",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "de-e-tense-lax",
+          "feature": "midVowelHeight",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "de-y-tense-lax",
+          "feature": "highVowelQuality",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "de-s-z",
+          "feature": "fricativeVoicing",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "de",
+      "native": "es",
+      "selected": [
+        {
+          "id": "de-u-ue",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-i-length",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-o-oe",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-e-tense-lax",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-y-tense-lax",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-s-z",
+          "feature": "fricativeVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "de",
+      "native": "it",
+      "selected": [
+        {
+          "id": "de-u-ue",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-i-length",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-o-oe",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-y-tense-lax",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-a-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-e-tense-lax",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "de",
+      "native": "pt",
+      "selected": [
+        {
+          "id": "de-u-ue",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-i-length",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-o-oe",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-y-tense-lax",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-a-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-e-tense-lax",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "de",
+      "native": "ru",
+      "selected": [
+        {
+          "id": "de-u-ue",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-i-length",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-o-oe",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-e-tense-lax",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-y-tense-lax",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-a-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "de",
+      "native": "ja",
+      "selected": [
+        {
+          "id": "de-u-ue",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-i-length",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-o-oe",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-y-tense-lax",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-e-tense-lax",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-o-tense-lax",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "de",
+      "native": "zh",
+      "selected": [
+        {
+          "id": "de-i-length",
+          "feature": "highVowelQuality",
+          "evidence": "direct-study-supported",
+          "sourceIds": [
+            "de-gao-2019"
+          ]
+        },
+        {
+          "id": "de-y-tense-lax",
+          "feature": "highVowelQuality",
+          "evidence": "direct-study-supported",
+          "sourceIds": [
+            "de-gao-2019"
+          ]
+        },
+        {
+          "id": "de-e-tense-lax",
+          "feature": "midVowelHeight",
+          "evidence": "direct-study-supported",
+          "sourceIds": [
+            "de-gao-2019"
+          ]
+        },
+        {
+          "id": "de-s-z",
+          "feature": "fricativeVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-a-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-o-tense-lax",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "de",
+      "native": "ar",
+      "selected": [
+        {
+          "id": "de-u-ue",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-i-length",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-o-oe",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-y-tense-lax",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-e-tense-lax",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-o-tense-lax",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "de",
+      "native": "hi",
+      "selected": [
+        {
+          "id": "de-u-ue",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-o-oe",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-i-length",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-e-tense-lax",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-y-tense-lax",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-s-z",
+          "feature": "fricativeVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "de",
+      "native": "ko",
+      "selected": [
+        {
+          "id": "de-u-ue",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-i-length",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-o-oe",
+          "feature": "frontRounded",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-y-tense-lax",
+          "feature": "highVowelQuality",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-s-z",
+          "feature": "fricativeVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "de-e-tense-lax",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "es",
+      "native": "en",
+      "selected": [
+        {
+          "id": "es-tap-trill",
+          "feature": "tapTrill",
+          "evidence": "direct-study-supported",
+          "sourceIds": [
+            "es-herd-2013"
+          ]
+        },
+        {
+          "id": "es-d-tap",
+          "feature": "dTap",
+          "evidence": "direct-study-supported",
+          "sourceIds": [
+            "es-herd-2013"
+          ]
+        },
+        {
+          "id": "es-n-ny",
+          "feature": "palatalNasal",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-e-i",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-o-u",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-stress",
+          "feature": "lexicalStress",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "es",
+      "native": "fr",
+      "selected": [
+        {
+          "id": "es-stress",
+          "feature": "lexicalStress",
+          "evidence": "direct-study-supported",
+          "sourceIds": [
+            "stress-schwab2017"
+          ]
+        },
+        {
+          "id": "es-tap-trill",
+          "feature": "tapTrill",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-d-trill",
+          "feature": "tapTrill",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-n-ny",
+          "feature": "palatalNasal",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-e-i",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-p-b",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "es",
+      "native": "de",
+      "selected": [
+        {
+          "id": "es-tap-trill",
+          "feature": "tapTrill",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-d-tap",
+          "feature": "dTap",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-n-ny",
+          "feature": "palatalNasal",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-stress",
+          "feature": "lexicalStress",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-e-i",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-p-b",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "es",
+      "native": "es",
+      "selected": [
+        {
+          "id": "es-tap-trill",
+          "feature": "tapTrill",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "es-stress",
+          "feature": "lexicalStress",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "es-d-tap",
+          "feature": "dTap",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "es-n-ny",
+          "feature": "palatalNasal",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "es-e-i",
+          "feature": "midVowelHeight",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "es-p-b",
+          "feature": "stopVoicing",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "es",
+      "native": "it",
+      "selected": [
+        {
+          "id": "es-tap-trill",
+          "feature": "tapTrill",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-stress",
+          "feature": "lexicalStress",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-d-tap",
+          "feature": "dTap",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-n-ny",
+          "feature": "palatalNasal",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-e-i",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-p-b",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "es",
+      "native": "pt",
+      "selected": [
+        {
+          "id": "es-tap-trill",
+          "feature": "tapTrill",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-stress",
+          "feature": "lexicalStress",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-d-tap",
+          "feature": "dTap",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-n-ny",
+          "feature": "palatalNasal",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-e-i",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-p-b",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "es",
+      "native": "ru",
+      "selected": [
+        {
+          "id": "es-e-i",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-o-u",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-tap-trill",
+          "feature": "tapTrill",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-d-tap",
+          "feature": "dTap",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-n-ny",
+          "feature": "palatalNasal",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-stress",
+          "feature": "lexicalStress",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "es",
+      "native": "ja",
+      "selected": [
+        {
+          "id": "es-tap-trill",
+          "feature": "tapTrill",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-d-trill",
+          "feature": "tapTrill",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-stress",
+          "feature": "lexicalStress",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-e-i",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-o-u",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-n-ny",
+          "feature": "palatalNasal",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "es",
+      "native": "zh",
+      "selected": [
+        {
+          "id": "es-tap-trill",
+          "feature": "tapTrill",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-p-b",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-d-trill",
+          "feature": "tapTrill",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-t-d",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-stress",
+          "feature": "lexicalStress",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-n-ny",
+          "feature": "palatalNasal",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "es",
+      "native": "ar",
+      "selected": [
+        {
+          "id": "es-p-b",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-t-d",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-n-ny",
+          "feature": "palatalNasal",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-d-tap",
+          "feature": "dTap",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-e-i",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-o-u",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "es",
+      "native": "hi",
+      "selected": [
+        {
+          "id": "es-tap-trill",
+          "feature": "tapTrill",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-d-tap",
+          "feature": "dTap",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-n-ny",
+          "feature": "palatalNasal",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-e-i",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-o-u",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-stress",
+          "feature": "lexicalStress",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "es",
+      "native": "ko",
+      "selected": [
+        {
+          "id": "es-tap-trill",
+          "feature": "tapTrill",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-stress",
+          "feature": "lexicalStress",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-p-b",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-d-trill",
+          "feature": "tapTrill",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-t-d",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "es-n-ny",
+          "feature": "palatalNasal",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "it",
+      "native": "en",
+      "selected": [
+        {
+          "id": "it-p-length",
+          "feature": "consonantLength",
+          "evidence": "direct-study-supported",
+          "sourceIds": [
+            "it-deiacovo-2025"
+          ]
+        },
+        {
+          "id": "it-t-length",
+          "feature": "consonantLength",
+          "evidence": "direct-study-supported",
+          "sourceIds": [
+            "it-deiacovo-2025"
+          ]
+        },
+        {
+          "id": "it-l-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-n-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-e-open-e",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-o-open-o",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "it",
+      "native": "fr",
+      "selected": [
+        {
+          "id": "it-p-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-t-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-l-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-n-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-e-open-e",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-o-open-o",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "it",
+      "native": "de",
+      "selected": [
+        {
+          "id": "it-p-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-t-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-l-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-n-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-e-open-e",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-o-open-o",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "it",
+      "native": "es",
+      "selected": [
+        {
+          "id": "it-p-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-t-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-e-open-e",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-o-open-o",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-l-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-n-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "it",
+      "native": "it",
+      "selected": [
+        {
+          "id": "it-p-length",
+          "feature": "consonantLength",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "it-t-length",
+          "feature": "consonantLength",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "it-e-open-e",
+          "feature": "midVowelHeight",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "it-o-open-o",
+          "feature": "midVowelHeight",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "it-l-length",
+          "feature": "consonantLength",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "it-p-b",
+          "feature": "stopVoicing",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "it",
+      "native": "pt",
+      "selected": [
+        {
+          "id": "it-p-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-t-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-l-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-n-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-e-open-e",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-o-open-o",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "it",
+      "native": "ru",
+      "selected": [
+        {
+          "id": "it-e-open-e",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-o-open-o",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-p-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-t-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-l-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-n-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "it",
+      "native": "ja",
+      "selected": [
+        {
+          "id": "it-f-v",
+          "feature": "labiodentalVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-e-open-e",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-o-open-o",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-p-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-t-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-l-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "it",
+      "native": "zh",
+      "selected": [
+        {
+          "id": "it-p-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-t-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-l-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-p-b",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-n-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-f-v",
+          "feature": "labiodentalVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "it",
+      "native": "ar",
+      "selected": [
+        {
+          "id": "it-p-b",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-f-v",
+          "feature": "labiodentalVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-e-open-e",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-o-open-o",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-p-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-t-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "it",
+      "native": "hi",
+      "selected": [
+        {
+          "id": "it-f-v",
+          "feature": "labiodentalVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-e-open-e",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-o-open-o",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-p-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-t-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-l-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "it",
+      "native": "ko",
+      "selected": [
+        {
+          "id": "it-p-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-t-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-l-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-p-b",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-n-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "it-f-v",
+          "feature": "labiodentalVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "pt",
+      "native": "en",
+      "selected": [
+        {
+          "id": "pt-oral-nasal-a",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-tap-strong-r",
+          "feature": "tapTrill",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-e-open-e",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-o-open-o",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-s-z",
+          "feature": "fricativeVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-p-b",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "pt",
+      "native": "fr",
+      "selected": [
+        {
+          "id": "pt-tap-strong-r",
+          "feature": "tapTrill",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-oral-nasal-a",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-e-open-e",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-o-open-o",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-s-z",
+          "feature": "fricativeVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-p-b",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "pt",
+      "native": "de",
+      "selected": [
+        {
+          "id": "pt-oral-nasal-a",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-tap-strong-r",
+          "feature": "tapTrill",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-e-open-e",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-o-open-o",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-s-z",
+          "feature": "fricativeVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-p-b",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "pt",
+      "native": "es",
+      "selected": [
+        {
+          "id": "pt-oral-nasal-a",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-e-open-e",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-o-open-o",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-s-z",
+          "feature": "fricativeVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-f-v",
+          "feature": "labiodentalVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-tap-strong-r",
+          "feature": "tapTrill",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "pt",
+      "native": "it",
+      "selected": [
+        {
+          "id": "pt-oral-nasal-a",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-tap-strong-r",
+          "feature": "tapTrill",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-e-open-e",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-o-open-o",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-s-z",
+          "feature": "fricativeVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-p-b",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "pt",
+      "native": "pt",
+      "selected": [
+        {
+          "id": "pt-oral-nasal-a",
+          "feature": "nasalVowels",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-tap-strong-r",
+          "feature": "tapTrill",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-e-open-e",
+          "feature": "midVowelHeight",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-o-open-o",
+          "feature": "midVowelHeight",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-s-z",
+          "feature": "fricativeVoicing",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-p-b",
+          "feature": "stopVoicing",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "pt",
+      "native": "ru",
+      "selected": [
+        {
+          "id": "pt-e-open-e",
+          "feature": "midVowelHeight",
+          "evidence": "direct-study-supported",
+          "sourceIds": [
+            "pt-smirnova-2019"
+          ]
+        },
+        {
+          "id": "pt-o-open-o",
+          "feature": "midVowelHeight",
+          "evidence": "direct-study-supported",
+          "sourceIds": [
+            "pt-smirnova-2019"
+          ]
+        },
+        {
+          "id": "pt-oral-nasal-a",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-tap-strong-r",
+          "feature": "tapTrill",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-s-z",
+          "feature": "fricativeVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-p-b",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "pt",
+      "native": "ja",
+      "selected": [
+        {
+          "id": "pt-oral-nasal-a",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-tap-strong-r",
+          "feature": "tapTrill",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-f-v",
+          "feature": "labiodentalVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-e-open-e",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-o-open-o",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-s-z",
+          "feature": "fricativeVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "pt",
+      "native": "zh",
+      "selected": [
+        {
+          "id": "pt-oral-nasal-a",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-tap-strong-r",
+          "feature": "tapTrill",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-s-z",
+          "feature": "fricativeVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-p-b",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-f-v",
+          "feature": "labiodentalVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-e-open-e",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "pt",
+      "native": "ar",
+      "selected": [
+        {
+          "id": "pt-p-b",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-oral-nasal-a",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-f-v",
+          "feature": "labiodentalVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-e-open-e",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-o-open-o",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-tap-strong-r",
+          "feature": "tapTrill",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "pt",
+      "native": "hi",
+      "selected": [
+        {
+          "id": "pt-tap-strong-r",
+          "feature": "tapTrill",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-f-v",
+          "feature": "labiodentalVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-oral-nasal-a",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-e-open-e",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-o-open-o",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-s-z",
+          "feature": "fricativeVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "pt",
+      "native": "ko",
+      "selected": [
+        {
+          "id": "pt-oral-nasal-a",
+          "feature": "nasalVowels",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-tap-strong-r",
+          "feature": "tapTrill",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-s-z",
+          "feature": "fricativeVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-p-b",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-f-v",
+          "feature": "labiodentalVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "pt-e-open-e",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "ru",
+      "native": "en",
+      "selected": [
+        {
+          "id": "ru-y-i",
+          "feature": "centralHighVowel",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-l-palatalized",
+          "feature": "palatalization",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-n-palatalized",
+          "feature": "palatalization",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-y-u",
+          "feature": "centralHighVowel",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-o-u",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-s-sh",
+          "feature": "sibilantPlace",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "ru",
+      "native": "fr",
+      "selected": [
+        {
+          "id": "ru-y-i",
+          "feature": "centralHighVowel",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-l-palatalized",
+          "feature": "palatalization",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-n-palatalized",
+          "feature": "palatalization",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-y-u",
+          "feature": "centralHighVowel",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-s-sh",
+          "feature": "sibilantPlace",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-o-u",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "ru",
+      "native": "de",
+      "selected": [
+        {
+          "id": "ru-y-i",
+          "feature": "centralHighVowel",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-l-palatalized",
+          "feature": "palatalization",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-n-palatalized",
+          "feature": "palatalization",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-y-u",
+          "feature": "centralHighVowel",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-s-sh",
+          "feature": "sibilantPlace",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-o-u",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "ru",
+      "native": "es",
+      "selected": [
+        {
+          "id": "ru-y-i",
+          "feature": "centralHighVowel",
+          "evidence": "direct-study-supported",
+          "sourceIds": [
+            "ru-kogan-2020-vowel-perception"
+          ]
+        },
+        {
+          "id": "ru-l-palatalized",
+          "feature": "palatalization",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-n-palatalized",
+          "feature": "palatalization",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-o-u",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-y-u",
+          "feature": "centralHighVowel",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-s-sh",
+          "feature": "sibilantPlace",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "ru",
+      "native": "it",
+      "selected": [
+        {
+          "id": "ru-y-i",
+          "feature": "centralHighVowel",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-l-palatalized",
+          "feature": "palatalization",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-n-palatalized",
+          "feature": "palatalization",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-y-u",
+          "feature": "centralHighVowel",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-s-sh",
+          "feature": "sibilantPlace",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-o-u",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "ru",
+      "native": "pt",
+      "selected": [
+        {
+          "id": "ru-y-i",
+          "feature": "centralHighVowel",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-l-palatalized",
+          "feature": "palatalization",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-n-palatalized",
+          "feature": "palatalization",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-y-u",
+          "feature": "centralHighVowel",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-s-sh",
+          "feature": "sibilantPlace",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-o-u",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "ru",
+      "native": "ru",
+      "selected": [
+        {
+          "id": "ru-y-i",
+          "feature": "centralHighVowel",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-l-palatalized",
+          "feature": "palatalization",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-n-palatalized",
+          "feature": "palatalization",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-s-sh",
+          "feature": "sibilantPlace",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-o-u",
+          "feature": "midVowelHeight",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-b-p",
+          "feature": "stopVoicing",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "ru",
+      "native": "ja",
+      "selected": [
+        {
+          "id": "ru-y-i",
+          "feature": "centralHighVowel",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-l-palatalized",
+          "feature": "palatalization",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-n-palatalized",
+          "feature": "palatalization",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-o-u",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-y-u",
+          "feature": "centralHighVowel",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-s-sh",
+          "feature": "sibilantPlace",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "ru",
+      "native": "zh",
+      "selected": [
+        {
+          "id": "ru-b-p",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-d-t",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-y-i",
+          "feature": "centralHighVowel",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-l-palatalized",
+          "feature": "palatalization",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-n-palatalized",
+          "feature": "palatalization",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-o-u",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "ru",
+      "native": "ar",
+      "selected": [
+        {
+          "id": "ru-b-p",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-d-t",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-y-i",
+          "feature": "centralHighVowel",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-l-palatalized",
+          "feature": "palatalization",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-n-palatalized",
+          "feature": "palatalization",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-y-u",
+          "feature": "centralHighVowel",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "ru",
+      "native": "hi",
+      "selected": [
+        {
+          "id": "ru-y-i",
+          "feature": "centralHighVowel",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-l-palatalized",
+          "feature": "palatalization",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-n-palatalized",
+          "feature": "palatalization",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-y-u",
+          "feature": "centralHighVowel",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-o-u",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-s-sh",
+          "feature": "sibilantPlace",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "ru",
+      "native": "ko",
+      "selected": [
+        {
+          "id": "ru-b-p",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-d-t",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-y-i",
+          "feature": "centralHighVowel",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-l-palatalized",
+          "feature": "palatalization",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-n-palatalized",
+          "feature": "palatalization",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ru-o-u",
+          "feature": "midVowelHeight",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "ja",
+      "native": "en",
+      "selected": [
+        {
+          "id": "ja-k-length",
+          "feature": "consonantLength",
+          "evidence": "direct-study-supported",
+          "sourceIds": [
+            "ja-tajima2008"
+          ]
+        },
+        {
+          "id": "ja-t-length",
+          "feature": "consonantLength",
+          "evidence": "direct-study-supported",
+          "sourceIds": [
+            "ja-tajima2008"
+          ]
+        },
+        {
+          "id": "ja-i-length",
+          "feature": "vowelLength",
+          "evidence": "direct-study-supported",
+          "sourceIds": [
+            "ja-tajima2008"
+          ]
+        },
+        {
+          "id": "ja-u-length",
+          "feature": "vowelLength",
+          "evidence": "direct-study-supported",
+          "sourceIds": [
+            "ja-tajima2008"
+          ]
+        },
+        {
+          "id": "ja-s-sh",
+          "feature": "sibilantPlace",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-k-g",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "ja",
+      "native": "fr",
+      "selected": [
+        {
+          "id": "ja-i-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-u-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-k-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-t-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-s-sh",
+          "feature": "sibilantPlace",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-k-g",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "ja",
+      "native": "de",
+      "selected": [
+        {
+          "id": "ja-k-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-t-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-i-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-u-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-s-sh",
+          "feature": "sibilantPlace",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-k-g",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "ja",
+      "native": "es",
+      "selected": [
+        {
+          "id": "ja-i-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-u-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-k-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-t-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-s-sh",
+          "feature": "sibilantPlace",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-k-g",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "ja",
+      "native": "it",
+      "selected": [
+        {
+          "id": "ja-i-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-u-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-k-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-t-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-s-sh",
+          "feature": "sibilantPlace",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-k-g",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "ja",
+      "native": "pt",
+      "selected": [
+        {
+          "id": "ja-i-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-u-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-k-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-t-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-s-sh",
+          "feature": "sibilantPlace",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-k-g",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "ja",
+      "native": "ru",
+      "selected": [
+        {
+          "id": "ja-i-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-u-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-k-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-t-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-s-sh",
+          "feature": "sibilantPlace",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-k-g",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "ja",
+      "native": "ja",
+      "selected": [
+        {
+          "id": "ja-i-length",
+          "feature": "vowelLength",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-u-length",
+          "feature": "vowelLength",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-k-length",
+          "feature": "consonantLength",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-t-length",
+          "feature": "consonantLength",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-s-sh",
+          "feature": "sibilantPlace",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-k-g",
+          "feature": "stopVoicing",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "ja",
+      "native": "zh",
+      "selected": [
+        {
+          "id": "ja-i-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-u-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-k-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-t-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-k-g",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-t-d",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "ja",
+      "native": "ar",
+      "selected": [
+        {
+          "id": "ja-k-g",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-t-d",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-i-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-u-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-k-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-t-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "ja",
+      "native": "hi",
+      "selected": [
+        {
+          "id": "ja-i-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-u-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-k-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-t-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-s-sh",
+          "feature": "sibilantPlace",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-k-g",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "ja",
+      "native": "ko",
+      "selected": [
+        {
+          "id": "ja-k-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-t-length",
+          "feature": "consonantLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-k-g",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-t-d",
+          "feature": "stopVoicing",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-i-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "ja-u-length",
+          "feature": "vowelLength",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "zh",
+      "native": "en",
+      "selected": [
+        {
+          "id": "zh-tone-2-3",
+          "feature": "lexicalTone",
+          "evidence": "direct-study-supported",
+          "sourceIds": [
+            "tone-tsukada2022"
+          ]
+        },
+        {
+          "id": "zh-tone-1-2",
+          "feature": "lexicalTone",
+          "evidence": "direct-study-supported",
+          "sourceIds": [
+            "tone-tsukada2022"
+          ]
+        },
+        {
+          "id": "zh-tone-3-4",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-p-aspiration",
+          "feature": "aspiration",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-t-aspiration",
+          "feature": "aspiration",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-s-sh",
+          "feature": "sibilantPlace",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "zh",
+      "native": "fr",
+      "selected": [
+        {
+          "id": "zh-tone-2-3",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-tone-1-2",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-tone-3-4",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-p-aspiration",
+          "feature": "aspiration",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-t-aspiration",
+          "feature": "aspiration",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-n-ng",
+          "feature": "velarNasal",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "zh",
+      "native": "de",
+      "selected": [
+        {
+          "id": "zh-tone-2-3",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-tone-1-2",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-tone-3-4",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-p-aspiration",
+          "feature": "aspiration",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-s-sh",
+          "feature": "sibilantPlace",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-n-ng",
+          "feature": "velarNasal",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "zh",
+      "native": "es",
+      "selected": [
+        {
+          "id": "zh-tone-2-3",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-tone-1-2",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-tone-3-4",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-p-aspiration",
+          "feature": "aspiration",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-t-aspiration",
+          "feature": "aspiration",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-s-sh",
+          "feature": "sibilantPlace",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "zh",
+      "native": "it",
+      "selected": [
+        {
+          "id": "zh-tone-2-3",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-tone-1-2",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-tone-3-4",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-p-aspiration",
+          "feature": "aspiration",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-t-aspiration",
+          "feature": "aspiration",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-n-ng",
+          "feature": "velarNasal",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "zh",
+      "native": "pt",
+      "selected": [
+        {
+          "id": "zh-tone-2-3",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-tone-1-2",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-tone-3-4",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-p-aspiration",
+          "feature": "aspiration",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-t-aspiration",
+          "feature": "aspiration",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-n-ng",
+          "feature": "velarNasal",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "zh",
+      "native": "ru",
+      "selected": [
+        {
+          "id": "zh-tone-2-3",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-tone-1-2",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-tone-3-4",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-p-aspiration",
+          "feature": "aspiration",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-t-aspiration",
+          "feature": "aspiration",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-n-ng",
+          "feature": "velarNasal",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "zh",
+      "native": "ja",
+      "selected": [
+        {
+          "id": "zh-tone-2-3",
+          "feature": "lexicalTone",
+          "evidence": "direct-study-supported",
+          "sourceIds": [
+            "tone-tsukada2022"
+          ]
+        },
+        {
+          "id": "zh-tone-1-2",
+          "feature": "lexicalTone",
+          "evidence": "direct-study-supported",
+          "sourceIds": [
+            "tone-tsukada2022"
+          ]
+        },
+        {
+          "id": "zh-tone-3-4",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-p-aspiration",
+          "feature": "aspiration",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-t-aspiration",
+          "feature": "aspiration",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-n-ng",
+          "feature": "velarNasal",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "zh",
+      "native": "zh",
+      "selected": [
+        {
+          "id": "zh-tone-2-3",
+          "feature": "lexicalTone",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-tone-1-2",
+          "feature": "lexicalTone",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-tone-3-4",
+          "feature": "lexicalTone",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-p-aspiration",
+          "feature": "aspiration",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-s-sh",
+          "feature": "sibilantPlace",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-n-ng",
+          "feature": "velarNasal",
+          "evidence": "broad-sample",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "zh",
+      "native": "ar",
+      "selected": [
+        {
+          "id": "zh-tone-2-3",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-tone-1-2",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-tone-3-4",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-n-ng",
+          "feature": "velarNasal",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-p-aspiration",
+          "feature": "aspiration",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-t-aspiration",
+          "feature": "aspiration",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "zh",
+      "native": "hi",
+      "selected": [
+        {
+          "id": "zh-tone-2-3",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-tone-1-2",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-tone-3-4",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-n-ng",
+          "feature": "velarNasal",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-p-aspiration",
+          "feature": "aspiration",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-s-sh",
+          "feature": "sibilantPlace",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    },
+    {
+      "target": "zh",
+      "native": "ko",
+      "selected": [
+        {
+          "id": "zh-tone-2-3",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-tone-1-2",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-tone-3-4",
+          "feature": "lexicalTone",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-p-aspiration",
+          "feature": "aspiration",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-s-sh",
+          "feature": "sibilantPlace",
+          "evidence": "predicted",
+          "sourceIds": []
+        },
+        {
+          "id": "zh-n-ng",
+          "feature": "velarNasal",
+          "evidence": "predicted",
+          "sourceIds": []
+        }
+      ]
+    }
+  ],
+  "supportTypeByLink": {
+    "en:ja": {
+      "en-r-l": "direct-study-supported",
+      "en-th-s": "study-feature-supported"
+    },
+    "fr:en": {
+      "fr-u-y": "direct-study-supported",
+      "fr-y-i": "direct-study-supported",
+      "fr-eh-eu-open": "direct-study-supported"
+    },
+    "de:en": {
+      "de-u-ue": "study-feature-supported",
+      "de-o-oe": "study-feature-supported"
+    },
+    "de:zh": {
+      "de-i-length": "direct-study-supported",
+      "de-y-tense-lax": "direct-study-supported",
+      "de-e-tense-lax": "direct-study-supported"
+    },
+    "es:en": {
+      "es-d-tap": "direct-study-supported",
+      "es-tap-trill": "direct-study-supported"
+    },
+    "es:fr": {
+      "es-stress": "direct-study-supported"
+    },
+    "it:en": {
+      "it-p-length": "direct-study-supported",
+      "it-t-length": "direct-study-supported"
+    },
+    "pt:ru": {
+      "pt-e-open-e": "direct-study-supported",
+      "pt-o-open-o": "direct-study-supported"
+    },
+    "ru:es": {
+      "ru-y-i": "direct-study-supported"
+    },
+    "ja:en": {
+      "ja-i-length": "direct-study-supported",
+      "ja-u-length": "direct-study-supported",
+      "ja-k-length": "direct-study-supported",
+      "ja-t-length": "direct-study-supported"
+    },
+    "zh:en": {
+      "zh-tone-2-3": "direct-study-supported",
+      "zh-tone-1-2": "direct-study-supported"
+    },
+    "zh:ja": {
+      "zh-tone-2-3": "direct-study-supported",
+      "zh-tone-1-2": "direct-study-supported"
+    },
+    "en:ko": {
+      "en-i-ih": "study-feature-supported",
+      "en-trap-dress": "study-feature-supported"
+    }
+  },
+  "finalEvidenceAudit": {
+    "date": "2026-10-08",
+    "japaneseVowelOverrides": "Removed; retained as inventory predictions, not cited to Korean 2008 sample.",
+    "frenchVowels": "Verified /y-u/, /y-i/, /œ-ɛ/ explicitly present in primary Levy 2009 Figure 2 discrimination pairs.",
+    "frenchSpanishStress": "Verified French N=27, German N=21, Spanish N=17 and Spanish disyllabic lexical-stress odd-one-out task in Schwab and Dellwo 2017 abstract.",
+    "inventorySources": "No inventory-only source confers a direct-study bonus."
+  }
+}

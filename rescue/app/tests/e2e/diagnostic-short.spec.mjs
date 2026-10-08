@@ -5,6 +5,8 @@ test('short diagnostic has its own navigation, saved history and twelve rounds',
  const nav=page.locator('.diagnostic-nav');await expect(nav).toHaveAttribute('aria-pressed','true');
  await expect(page.locator('.contrast-options .is-selected')).toHaveCount(0);
  await expect(page.locator('.diagnostic-preparation')).toContainText('12');
+ await page.getByLabel('What is your first language?').selectOption('Japanese');
+ expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('minimalpairs.progress.v1')).nativeLanguage)).toBe('Japanese');
  await expect(page.locator('.session-settings')).toHaveCount(0);
  await expect(page.locator('.diagnostic-history')).toContainText('1 / 2');
  const start=page.getByRole('button',{name:'Retake the check'});

@@ -21,7 +21,14 @@ export function normalizeSession(value: unknown): PracticeSession | null {
     if (!mistake || typeof mistake !== 'object' || !identifier(mistake.pairId)
       || typeof mistake.word !== 'string' || mistake.word.length > 120
       || typeof mistake.chosenWord !== 'string' || mistake.chosenWord.length > 120) return null;
-    mistakes.push({ pairId: mistake.pairId, word: mistake.word, chosenWord: mistake.chosenWord });
+    const detail: Record<string,string> = {};
+    for (const key of ['correctWord','heardIpa','chosenIpa','correctIpa']) {
+      if (mistake[key] !== undefined) {
+        if (typeof mistake[key] !== 'string' || mistake[key].length > 120) return null;
+        detail[key] = mistake[key];
+      }
+    }
+    mistakes.push({ ...detail, pairId: mistake.pairId, word: mistake.word, chosenWord: mistake.chosenWord });
   }
   return {
     id: item.id as string, mode: item.mode as PracticeSession['mode'], schemaVersion: 2,

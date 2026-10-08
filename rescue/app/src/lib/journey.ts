@@ -11,9 +11,9 @@ export function journeyStats(contrasts: Contrast[], sessions: PracticeSession[],
     return { contrast, total, correct, practiced: eligible.filter(s => !s.id.startsWith('diagnostic-') && !s.id.startsWith('mixed-')).reduce((n,s) => n+s.total,0) >= 12, rate: total ? correct / total : null };
   });
 }
-export function selectJourneyContrasts(contrasts: Contrast[], sessions: PracticeSession[], languageId: string, fullAccess: boolean, mode: JourneyMode, selected: string, activityMode: 'abx-cross-word'|'word-identification' = 'abx-cross-word') {
+export function selectJourneyContrasts(contrasts: Contrast[], sessions: PracticeSession[], languageId: string, fullAccess: boolean, mode: JourneyMode, selected: string, activityMode: 'abx-cross-word'|'word-identification' = 'abx-cross-word', nativeLanguage = '') {
   const available = contrasts.filter((_,i) => fullAccess || i < 3);
   if (mode === 'focused') return available.filter(c => c.id === selected);
-  if (mode === 'diagnostic') return selectDiagnosticContrasts(contrasts, languageId);
+  if (mode === 'diagnostic') return selectDiagnosticContrasts(contrasts, languageId, nativeLanguage);
   return journeyStats(available, sessions, languageId, activityMode).sort((a,b) => (a.rate ?? -1) - (b.rate ?? -1) || a.total - b.total).slice(0,3).map(s => s.contrast);
 }
