@@ -31,7 +31,7 @@ const symbolic = (sound: string) => !sound.includes(' ');
 const soundLabel = (sound: string) => symbolic(sound) ? `/${sound}/` : sound;
 const pairTitle = (item: Contrast) => item.pairs[0].words.map(word => word.text).join(' · ');
 const contrastTitle = (item: Contrast) => item.phonemes.map(soundLabel).join(' vs ');
-const description = `${language.name} ${contrastTitle(contrast)}: compare ${contrast.pairs[0].words.map(word => word.text).join(' and ')} and more word pairs. Hear the examples, learn the difference, and try a listening exercise.`;
+const description = contrast.id === 'en-zh-j' ? 'Hear English /ʒ/ vs /dʒ/ in lesion and legion. Compare word audio and IPA, learn the sound difference, then practice listening with feedback.' : `${language.name} ${contrastTitle(contrast)}: compare ${contrast.pairs[0].words.map(word => word.text).join(' and ')} and more word pairs. Hear the examples, learn the difference, and try a listening exercise.`;
 const kind = contrast.pairs[0].kind;
 // Broad sound labels explain the notation, while contrast-specific focus, traps,
 // dialect scope and first-language notes below remain the curated source copy.
@@ -91,7 +91,7 @@ const soundCards: Record<string, { title: string; description: string }> = {
 };
 const schema = { '@context': 'https://schema.org', '@type': 'LearningResource', name: `${contrast.label} ${language.name} listening practice`, description: contrast.description, url: absoluteUrl(`/learn/${contrast.id}`), inLanguage: 'en', learningResourceType: 'Listening practice guide', about: { '@type': 'Thing', name: `${language.name}: ${contrast.phonemes.join(' / ')}` }, isPartOf: { '@type': 'CollectionPage', name: `${language.name} minimal pairs`, url: absoluteUrl(`/${slugFor(language)}`) } };
 ---
-<Base title={`${language.name} ${contrastTitle(contrast)} Minimal Pairs ${audioStatus.hasCachedAudio ? '& Audio' : 'Guide'} | MinimalPairs`} description={description.slice(0, 175)}>
+<Base title={contrast.id === 'en-zh-j' ? '/ʒ/ vs /dʒ/ Minimal Pairs: Lesion vs Legion + Audio | MinimalPairs' : `${language.name} ${contrastTitle(contrast)} Minimal Pairs ${audioStatus.hasCachedAudio ? '& Audio' : 'Guide'} | MinimalPairs`} description={description.slice(0, 175)}>
   <Header />
   <main class="guide-page">
     <div class="guide-layout">
@@ -106,7 +106,7 @@ const schema = { '@context': 'https://schema.org', '@type': 'LearningResource', 
           <p class="guide-eyebrow">{kindLabel(kind)} · {language.dialect}</p>
           <h1>{language.name} <span class:list={{ 'guide-symbol': symbolic(categories[0]), 'guide-category-text': !symbolic(categories[0]) }}>{soundLabel(categories[0])}</span><span class="guide-versus"> vs </span><span class:list={{ 'guide-symbol': symbolic(categories[1]), 'guide-category-text': !symbolic(categories[1]), 'is-second': true }}>{soundLabel(categories[1])}</span><em>{contrast.label}</em></h1>
           <div class="guide-intro"><p>{contrast.description}</p><a class="guide-button" href={lessonUrl}>{hasLesson ? 'Practice these sounds' : 'Explore listening lessons'}<Icon name="arrow" size={20} /></a></div>
-          
+          {contrast.id === 'en-zh-j' && <p class="guide-small">Think of the middle sounds in <strong>lesion</strong> and <strong>legion</strong>: /ʒ/ flows continuously; /dʒ/ starts with a brief stop. Listen to the words below, then test the difference in practice.</p>}
         </header>
 
         <section class="guide-sound-cards" aria-label="The two sound categories">{categories.map((category, side) => <div class:list={{ 'guide-sound-card': true, 'is-second': side === 1 }}><span class:list={{ 'guide-card-symbol': symbolic(category), 'guide-card-category': !symbolic(category) }}>{soundLabel(category)}</span><h2>{soundCards[category]?.title || `The ${category} category`}</h2><p>{soundCards[category]?.description || abx.targetSoundFocus || contrast.description}</p><div class="guide-card-example"><span>As in</span><strong lang={language.locale}>{contrast.pairs[0].words[side].text}</strong>{readingFor(contrast.pairs[0].words[side]) && <small>{readingFor(contrast.pairs[0].words[side])}</small>}</div></div>)}</section>
@@ -124,6 +124,8 @@ const schema = { '@context': 'https://schema.org', '@type': 'LearningResource', 
         <section class="guide-practice-banner"><div><h2>Now, let your <em>ears decide.</em></h2><p>Can you hear the difference? Listen to two examples, then decide which sound you hear in a new word. Get feedback after every answer.</p></div><a class="guide-button is-light" href={lessonUrl}>{hasLesson ? 'Practice these sounds' : 'Explore listening lessons'}<Icon name="arrow" size={20} /></a></section>
 
         {contrast.l1Notes && contrast.l1Notes.length > 0 && <section class="guide-starting-points" aria-labelledby="guide-l1-title"><h2 id="guide-l1-title">A note for your starting point.</h2>{contrast.l1Notes.map(note => <div><h3>If you speak {l1Label(note.nativeLanguage)}</h3><p>{note.note}</p></div>)}<p class="guide-small">Your first language is a useful starting point, not a prediction of what you will find easy or difficult.</p></section>}
+
+        {hasLesson && <p class="guide-small"><a class="guide-text-link" href={`/diagnostic/${language.id}`}>Not sure which sounds to practice? Take the free {language.name} listening diagnostic <Icon name="arrow" size={17} /></a></p>}
 
         <section class="guide-next-step"><h2>Keep the sound. Change the word.</h2><p>{copy?.next || contrast.description}</p><a class="guide-text-link" href={`/${slugFor(language)}`}>Explore all {language.name} contrasts <Icon name="arrow" size={17} /></a></section>
 

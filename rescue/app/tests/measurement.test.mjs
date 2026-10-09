@@ -410,3 +410,22 @@ test('checkout recovery requires a supported plan and excludes customer identifi
  const payload=data.measurementData('checkout_resumed',{plan:'lifetime',surface:'pricing',email:'private@example.com',session_id:'secret'});
  assert.equal(payload.plan,'lifetime'); assert.equal(payload.email,undefined); assert.equal(payload.session_id,undefined);
 });
+
+for (const [referrer,source,medium,channel] of [
+  ['https://www.google.com/search?q=private','google','organic','organic_search'],
+  ['https://www.reddit.com/r/French/comments/private','reddit','social','social'],
+  ['https://chatgpt.com/c/private','chatgpt','referral','ai_referral'],
+]) test(`discovery source survives consented navigation and checkout: ${source}`, () => {
+  const c=client({choice:'allowed',environment:'production'});c.document.referrer=referrer;
+  c.window.location.pathname='/french-minimal-pairs';c.window.location.search='';
+  c.api.initializeMeasurement();
+  const config=c.calls().find(call=>call[0]==='config')[2];
+  assert.equal(config.campaign_source,source);assert.equal(config.campaign_medium,medium);
+  assert.equal(config.acquisition_channel,channel);assert.equal(config.page_referrer,'');
+  c.document.referrer='https://minimalpairs.web.app/french-minimal-pairs';c.window.location.pathname='/practice';
+  const attribution=c.api.checkoutAttribution();
+  assert.equal(attribution.source,source);assert.equal(attribution.medium,medium);
+  assert.equal(attribution.landing_page,'/french-minimal-pairs');
+  assert.doesNotMatch(JSON.stringify(c.calls()), /q=private|comments\/private|c\/private/);
+  c.api.setAnalyticsChoice('declined');assert.equal(c.api.checkoutAttribution(),undefined);
+});

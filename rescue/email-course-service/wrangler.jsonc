@@ -1,0 +1,12 @@
+{
+  "name": "minimalpairs-email-course",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-09-26",
+  "workers_dev": false,
+  "preview_urls": false,
+  "send_metrics": false,
+  "observability": {"enabled": false},
+  "durable_objects": {"bindings": [{"name": "AUDIENCE", "class_name": "EmailAudience"}]},
+  "migrations": [{"tag": "v1", "new_sqlite_classes": ["EmailAudience"]}],
+  "vars": {"INTAKE_ENABLED": "false", "SENDING_ENABLED": "false"}
+}

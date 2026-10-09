@@ -17,7 +17,12 @@ const lessonIds = new Set(getPracticeLanguages().find(l => l.id === language.id)
 const audioByContrast = new Map(language.contrasts.map(contrast => [contrast.id, guideAudioStatus(language.id, contrast)]));
 const deviceOnlyCount = [...audioByContrast.values()].filter(status => !status.hasCachedAudio).length;
 const languages = [language, ...getLanguages().filter(item => item.id !== language.id)];
-const description = `${language.name} listening practice with ${count} word pairs, IPA, meanings and focused sound guides. Explore ${language.dialect.toLowerCase()} one contrast at a time.`;
+const entranceCopy: Record<string, { intro: string; description: string }> = {
+  fr: { intro: 'Hear the difference between French words like tu and tout. Explore vowels, nasal vowels and consonants with audio examples, then practice the sounds you find hardest.', description: 'French minimal pairs with audio, IPA and word examples. Compare tu vs tout, nasal vowels and more. Take a free listening diagnostic to find your next lesson.' },
+  en: { intro: 'Hear the difference between English words like ship and sheep. Explore vowel and consonant contrasts with audio examples, then practice the sounds you find hardest.', description: 'English minimal pairs with audio, IPA and word examples. Explore American English vowel and consonant contrasts, then try a free listening diagnostic.' },
+};
+const entrance = entranceCopy[language.id];
+const description = entrance?.description || `${language.name} listening practice with ${count} word pairs, IPA, meanings and focused sound guides. Explore ${language.dialect.toLowerCase()} one contrast at a time.`;
 const url = absoluteUrl(`/${slugFor(language)}`);
 const schema = { '@context': 'https://schema.org', '@type': 'CollectionPage', name: `${language.name} minimal pairs`, description, url, inLanguage: 'en', hasPart: language.contrasts.map(contrast => ({ '@type': 'LearningResource', name: contrast.label, url: absoluteUrl(`/learn/${contrast.id}`), learningResourceType: 'Listening practice guide' })) };
 ---
@@ -31,11 +36,11 @@ const schema = { '@context': 'https://schema.org', '@type': 'CollectionPage', na
       </nav>
       <section class="language-chooser-heading" aria-labelledby="language-title">
         <p class="ed-eyebrow">CHOOSE A SOUND</p>
-        <h1 id="language-title">{language.name} <em>contrasts.</em></h1>
-        <p class="ed-lede">Start with a difference you find hard to hear. Words stay hidden during practice until you choose to show them.</p>
+        <h1 id="language-title">{language.name} <em>minimal pairs.</em></h1>
+        <p class="ed-lede">{entrance?.intro || 'Start with a difference you find hard to hear. Words stay hidden during practice until you choose to show them.'}</p>
         <div class="language-chooser-meta"><span>{language.dialect}</span><span>{language.contrasts.length} sound contrasts</span></div>
-        {lessonIds.size > 0 && <p><a class="ed-text-link" href={`/diagnostic/${language.id}`}>Not sure where to start? Take the free listening check <Icon name="arrow" size={18} /></a></p>}
-        <p class="language-chooser-note">Browse the examples below, then listen to A and B and match their target sound in a different word, X.</p>
+        {lessonIds.size > 0 && <p><a class="ed-text-link" href={`/diagnostic/${language.id}`}>Find your starting point: free listening diagnostic <Icon name="arrow" size={18} /></a></p>}
+        <p class="language-chooser-note">{lessonIds.size > 0 ? 'Get a short listening check and a sound-by-sound result, or choose a contrast below. Practice keeps the words hidden until you choose to reveal them.' : 'Explore the sound contrasts and word examples below.'}</p>
 
       </section>
 
