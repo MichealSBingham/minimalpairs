@@ -12,15 +12,15 @@ await context.addInitScript(()=>Object.defineProperty(navigator,'webdriver',{get
 await context.route('**/*',async route=>{const request=route.request(),url=new URL(request.url());
 if(url.hostname==='audit.invalid')return route.fulfill({contentType:'text/html',body:`<html lang="en" data-measurement-id="G-82W1PVNSFS" data-measurement-environment="production"><button>Allow analytics in isolated fixture</button><script type="module">${outputFiles[0].text}</script></html>`});
 if(url.hostname==='www.googletagmanager.com'&&url.pathname==='/gtag/js')return route.continue();
-if(url.pathname.includes('collect'))for(const line of (request.postData()||'').split('\n')){const params=new URLSearchParams(url.search);for(const [k,v]of new URLSearchParams(line))params.set(k,v);rows.push(Object.fromEntries([...params].filter(([k])=>['en','cs','cm','cn','dr','dl','ep.campaign_source','ep.campaign_medium','ep.acquisition_channel'].includes(k))));}
+if(url.pathname.includes('collect'))for(const line of (request.postData()||'').split('\n')){const params=new URLSearchParams(url.search);for(const [k,v]of new URLSearchParams(line))params.set(k,v);rows.push(Object.fromEntries([...params].filter(([k])=>['en','cs','cm','cn','dr','dl','ep.campaign_source','ep.campaign_medium','ep.acquisition_channel','ep.acquisition_source','ep.acquisition_medium'].includes(k))));}
 return route.abort();});
-const page=await context.newPage();await page.goto('https://audit.invalid/french-minimal-pairs',{referer:referrer});await page.getByRole('button').click();await page.waitForTimeout(6000);results.push({label,rows});await context.close();
+const page=await context.newPage();await page.goto('https://audit.invalid/french-minimal-pairs',{referer:referrer});await page.getByRole('button').click();await page.waitForTimeout(15000);results.push({label,rows});await context.close();
 }}finally{await browser.close();}
 for (const result of results) {
  const expected={Google:['google','organic'],Reddit:['reddit','social'],ChatGPT:['chatgpt','referral']}[result.label];
  assert.ok(result.rows.some(row=>row.en==='page_view'),'Missing real tag collection attempt');
  assert.ok(result.rows.some(row=>row.en==='plans_view'),'Missing real tag event attempt');
- for(const row of result.rows){assert.equal(row.cs,expected[0]);assert.equal(row.cm,expected[1]);assert.equal(row.dr,'');}
+ for(const row of result.rows){assert.equal(row.cs,expected[0]);assert.equal(row.cm,expected[1]);assert.equal(row['ep.acquisition_source'],expected[0]);assert.equal(row['ep.acquisition_medium'],expected[1]);assert.equal(row.dr,'');}
 }
 // Aborted sendBeacon/fetch delivery can trigger fallback attempts; rows are not event counts.
 const report={checkedAt:new Date().toISOString(),mode:'local source fixture; real Google tag; all collection requests aborted',results};await writeFile('../qa/attribution-wire-2026-10-08.json',JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));

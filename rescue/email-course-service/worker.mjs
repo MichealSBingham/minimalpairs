@@ -1,8 +1,9 @@
-// Review-only subscriber intake. There is deliberately no email delivery code.
+import {enqueue,deliverOne,suppressProviderEvent,verifyProviderWebhook} from './delivery.mjs';
+// Consent and delivery infrastructure. Intake and sending are OFF until approved activation.
 const randomToken=()=>Array.from(crypto.getRandomValues(new Uint8Array(32)),n=>n.toString(16).padStart(2,'0')).join('');
 const ORIGINS=new Set(['https://minimalpairs.co','https://www.minimalpairs.co','https://minimalpairs.web.app']);
 export const CONSENT_VERSION='listening-course-2026-10-09-v1';
-const LANGUAGES=new Set(['en-US-ga','en-GB-ssbe','fr','es','de','it','pt','ru','zh','ja']);
+const LANGUAGES=new Set(['en-US-ga','fr','es','de','it','pt','ru','zh','ja']);
 const response=(data,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer'}});
 const digest=async value=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(value))),v=>v.toString(16).padStart(2,'0')).join('');
 export function validateSubscription(x){
@@ -11,10 +12,10 @@ export function validateSubscription(x){
  if(!LANGUAGES.has(x.language)||typeof x.course!=='boolean'||typeof x.weekly!=='boolean'||! (x.course||x.weekly)||x.consentVersion!==CONSENT_VERSION)return null;
  return {...x,email:x.email.trim().toLowerCase()};
 }
-async function readBody(request){
+async function readBody(request,raw=false){
  const reader=request.body?.getReader();if(!reader)throw Error('body');let count=0;const parts=[];
  while(true){const {done,value}=await reader.read();if(done)break;count+=value.length;if(count>2048){await reader.cancel();throw Error('body');}parts.push(value);}
- const out=new Uint8Array(count);let at=0;for(const p of parts){out.set(p,at);at+=p.length;}return JSON.parse(new TextDecoder().decode(out));
+ const out=new Uint8Array(count);let at=0;for(const p of parts){out.set(p,at);at+=p.length;}const text=new TextDecoder().decode(out);return raw?text:JSON.parse(text);
 }
 export class EmailAudience{
  constructor(ctx,env){this.ctx=ctx;this.env=env;}
@@ -36,10 +37,27 @@ export class EmailAudience{
    return removed;
   });
  }
- async alarm(){await this.cleanup();await this.ctx.storage.setAlarm(Date.now()+86400000);}
+ async alarm(){await this.cleanup();await deliverOne(this.ctx.storage,this.env);await this.ctx.storage.setAlarm(Date.now()+3600000);}
 
  async fetch(request){
   const path=new URL(request.url).pathname;
+  if(path==='/webhooks/resend'){
+   if(request.method!=='POST')return response({error:'Method not allowed'},405);
+   let raw;try{raw=await readBody(request,true);}catch{return response({error:'Invalid request'},400);}
+   if(!await verifyProviderWebhook(raw,request.headers,this.env.RESEND_WEBHOOK_SECRET))return response({error:'Unauthorized'},401);
+   try{const data=JSON.parse(raw),type={'email.bounced':'bounce','email.complained':'complaint'}[data.type];if(type)await suppressProviderEvent(this.ctx.storage,{type,providerId:data.data?.email_id});return response({received:true});}catch{return response({error:'Invalid event'},400);}
+  }
+  if(['/admin/queue' ,'/admin/deliver','/admin/provider-event'].includes(path)){
+   const secret=path==='/admin/provider-event'?this.env.PROVIDER_EVENT_TOKEN:this.env.ADMIN_TOKEN;
+   if(!secret||request.headers.get('Authorization')!==`Bearer ${secret}`)return response({error:'Unauthorized'},401);
+   if(request.method!=='POST')return response({error:'Method not allowed'},405);
+   try{
+    if(path==='/admin/deliver')return response(await deliverOne(this.ctx.storage,this.env));
+    const data=await readBody(request);
+    if(path==='/admin/provider-event')return response({suppressed:await suppressProviderEvent(this.ctx.storage,data)});
+    const queued=await this.ctx.storage.transaction(tx=>enqueue(tx,data));await this.ctx.storage.setAlarm(Date.now()+60000);return response({queued});
+   }catch{return response({error:'Invalid request'},400);}
+  }
   if(path==='/admin/preferences'){
    if(!this.env.ADMIN_TOKEN||request.headers.get('Authorization')!==`Bearer ${this.env.ADMIN_TOKEN}`)return response({error:'Unauthorized'},401);
    if(request.method!=='POST')return response({error:'Method not allowed'},405);
@@ -66,7 +84,7 @@ export class EmailAudience{
    if(!this.env.ADMIN_TOKEN||request.headers.get('Authorization')!==`Bearer ${this.env.ADMIN_TOKEN}`)return response({error:'Unauthorized'},401);
    if(request.method!=='GET')return response({error:'Method not allowed'},405);
    const rows=[...(await this.ctx.storage.list({prefix:'subscriber:',limit:5000})).values()];
-   return response({sendingEnabled:false,subscribers:rows.map(({email,language,course,weekly,status,createdAt,consentVersion,unsubscribedAt})=>({email,language,course,weekly,status,createdAt,consentVersion,unsubscribedAt}))});
+   return response({sendingEnabled:this.env.SENDING_ENABLED==='true',subscribers:rows.map(({email,language,course,weekly,status,createdAt,consentVersion,unsubscribedAt})=>({email,language,course,weekly,status,createdAt,consentVersion,unsubscribedAt}))});
   }
   if(!['/subscribe','/unsubscribe','/confirm'].includes(path))return response({error:'Not found'},404);
   // Link scanners and crawlers cannot unsubscribe anyone with GET.
@@ -82,7 +100,9 @@ export class EmailAudience{
     const key=await tx.get('verify:'+hash);const row=key&&await tx.get(key);
     if(!row||row.status!=='pending-verification'||Date.parse(row.verificationExpiresAt)<Date.now())return response({error:'This confirmation link is expired or already used'},410);
     row.status='verified';row.verifiedAt=new Date().toISOString();row.audit.push({event:'verified',at:row.verifiedAt});delete row.verificationToken;delete row.verificationExpiresAt;
-    await tx.delete('verify:'+hash);await tx.put(key,row);return response({confirmed:true,sendingEnabled:false});
+    await tx.delete('verify:'+hash);await tx.put(key,row);
+    if(row.course)for(const day of [0,3,7])await enqueue(tx,{id:`course_${hash}_${day}`,subscriberKey:key,templateId:`course-day${day}`,kind:'course',dueAt:Date.now()+day*86400000});
+    await tx.setAlarm(Date.now()+60000);return response({confirmed:true,sendingEnabled:this.env.SENDING_ENABLED==='true'});
    });
   }
   if(path==='/unsubscribe'){
@@ -101,14 +121,14 @@ export class EmailAudience{
    // One bounded, rotating rate map; neither addresses nor raw IPs appear here.
    let rate=await tx.get('rate');if(rate?.day!==day)rate={day,counts:{}};
    const count=rate.counts[ipHash]||0;
-   if(count>=5||(!count&&Object.keys(rate.counts).length>=5000))return response({error:'Please try later'},429);
+   if(count>=5||(!count&&Object.keys(rate.counts).length>=1000))return response({error:'Please try later'},429);
    rate.counts[ipHash]=count+1;await tx.put('rate',rate);
    const old=await tx.get(key);if(old)return response({received:true}); // No address enumeration or opt-in resurrection.
    const total=await tx.get('total')||0;if(total>=5000)return response({error:'Please try later'},503);
    const token=randomToken(),verificationToken=randomToken();
    // Future approved mailer reads this capability internally; no public endpoint exposes it.
    await tx.put(key,{...clean,status:'pending-verification',createdAt:now,unsubscribeToken:token,verificationToken,verificationExpiresAt:new Date(Date.now()+48*3600000).toISOString(),audit:[{event:'requested',at:now,course:clean.course,weekly:clean.weekly,consentVersion:clean.consentVersion}]});
-   await tx.put('verify:'+await digest(verificationToken),key);await tx.setAlarm(Date.now()+86400000);
+   await tx.put('verify:'+await digest(verificationToken),key);await enqueue(tx,{id:'verify_'+await digest(verificationToken),subscriberKey:key,templateId:'confirmation-v1',kind:'confirmation'});await tx.setAlarm(Date.now()+60000);
    await tx.put('token:'+await digest(token),key);await tx.put('total',total+1);
    return response({received:true});
   });

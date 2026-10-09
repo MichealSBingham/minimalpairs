@@ -105,7 +105,7 @@ function common() {
   const locale = /^(en|es|fr|pt|de|it|ru|ja|zh)$/.test(document.documentElement.lang || '') ? document.documentElement.lang : 'en';
   // Google requires the debug parameter to be absent, not false, to disable it.
   const page = landing();
-  return { ...(page ? {landing_page:page} : {}), environment: config.environment, ...(config.environment === 'preview' ? { debug_mode: true } : {}), page_location: window.location.origin + path, page_title: `MinimalPairs ${path}`, page_referrer: '', ui_locale:locale, acquisition_channel: source.channel, ...('source' in source ? {campaign_source:source.source,campaign_medium:source.medium} : {}), ...('campaign' in source ? {campaign_name:source.campaign} : {}) };
+  return { ...(page ? {landing_page:page} : {}), environment: config.environment, ...(config.environment === 'preview' ? { debug_mode: true } : {}), page_location: window.location.origin + path, page_title: `MinimalPairs ${path}`, page_referrer: '', ui_locale:locale, acquisition_channel: source.channel, acquisition_source: source.source || (source.channel === 'direct' ? 'direct' : 'unknown'), acquisition_medium: source.medium || (source.channel === 'direct' ? 'none' : 'unknown'), ...('source' in source ? {campaign_source:source.source,campaign_medium:source.medium} : {}), ...('campaign' in source ? {campaign_name:source.campaign} : {}) };
 }
 function loadTag() {
   const config = configuration(); if (!config || !permitted()) return false;

@@ -1,12 +1,17 @@
 ---
 import Base from '../layouts/Base.astro';
+import EmailCourseSignup from '../components/EmailCourseSignup';
+import { courseEnabled } from '../lib/email-course.mjs';
 import AccountPanel from '../components/AccountPanel';
 import { authReady } from '../lib/auth';
 import { getPracticeLanguages as getLanguages } from '../lib/content';
 import { getListeningPlanCatalog } from '../lib/listening-plan-catalog';
+const emailCourseEndpoint = import.meta.env.PUBLIC_EMAIL_COURSE_ENDPOINT || '';
+const emailCourseApproved = courseEnabled(import.meta.env.PUBLIC_EMAIL_COURSE_APPROVED, emailCourseEndpoint);
 const languages = getLanguages();
 const planCatalog = getListeningPlanCatalog(languages);
 ---
 <Base title="Your progress — MinimalPairs" description="Your practice history, account and access." noindex>
   <AccountPanel languages={languages} planCatalog={planCatalog} authEnabled={authReady} client:load />
+  {emailCourseApproved && <EmailCourseSignup endpoint={emailCourseEndpoint} client:visible />}
 </Base>

@@ -422,6 +422,7 @@ for (const [referrer,source,medium,channel] of [
   const config=c.calls().find(call=>call[0]==='config')[2];
   assert.equal(config.campaign_source,source);assert.equal(config.campaign_medium,medium);
   assert.equal(config.acquisition_channel,channel);assert.equal(config.page_referrer,'');
+  assert.equal(config.acquisition_source,source);assert.equal(config.acquisition_medium,medium);
   c.document.referrer='https://minimalpairs.web.app/french-minimal-pairs';c.window.location.pathname='/practice';
   const attribution=c.api.checkoutAttribution();
   assert.equal(attribution.source,source);assert.equal(attribution.medium,medium);

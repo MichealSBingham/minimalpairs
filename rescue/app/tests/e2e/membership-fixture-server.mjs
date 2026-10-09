@@ -23,6 +23,7 @@ export async function startMembershipFixture() {
   for (const enabled of [true, false]) {
     const result = await build({
       stdin: { contents: `import React from 'react'; import {createRoot} from 'react-dom/client'; import MembershipPanel from './src/components/MembershipPanel'; import './src/styles/global.css'; createRoot(document.getElementById('root')).render(<MembershipPanel/>);`, resolveDir: app, loader: 'tsx' },
+      external: ['/fonts/*'],
       bundle: true, write: false, outdir: '/fixture', format: 'esm', jsx: 'automatic',
       define: { 'import.meta.env': JSON.stringify({ PUBLIC_BILLING_ENABLED: String(enabled), PUBLIC_BILLING_CHECKOUT_ENABLED: 'true', PUBLIC_BILLING_API_ORIGIN: 'https://billing.example.invalid' }) },
       plugins: [{ name: 'synthetic-account-boundary', setup(plugin) {
@@ -34,6 +35,7 @@ export async function startMembershipFixture() {
   }
   const server = createServer((request, response) => {
     const url = new URL(request.url, 'http://fixture.invalid');
+    if (url.pathname.startsWith('/fonts/')) { response.writeHead(404); response.end(); return; }
     const name = url.pathname.startsWith('/disabled') ? 'disabled' : 'enabled';
     if (url.pathname.endsWith('.js') || url.pathname.endsWith('.css')) {
       const type = url.pathname.endsWith('.css') ? 'css' : 'js'; response.setHeader('Content-Type', type === 'css' ? 'text/css' : 'text/javascript'); response.end(bundles[name][type]); return;

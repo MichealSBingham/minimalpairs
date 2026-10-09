@@ -1,3 +1,5 @@
+import EmailCourseSignup from './EmailCourseSignup';
+import { courseEnabled } from '../lib/email-course.mjs';
 import {nativeLanguageCopy} from '../lib/native-language-copy';
 import DiagnosticHistory from './DiagnosticHistory';
 import DiagnosticPreview from './DiagnosticPreview';
@@ -377,6 +379,7 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
                 <div className="complete-actions">{!audioManifestPath && nextStep && <button className="button button-dark" disabled={Boolean(pendingLesson)} onClick={() => continueLesson(nextStep.contrast.id,nextStep.mode)}>{t("Continue my path")}<Icon name="arrow" /></button>}<button className="button button-light" onClick={() => {reset();setPendingDiagnostic(true);}}>{t("Listen again")}<Icon name="replay" size={17} /></button><button className="text-button" onClick={()=>{reset();setJourneyMode('focused');const url=new URL(location.href);url.searchParams.delete('session');window.history.replaceState(null,'',url);}}>{it(10)}</button><a className="text-button" href={path("/account")}>{t("View your history")}<Icon name="arrow" size={16} /></a><a className="text-button" href={path("/account#listening-plan")}>{t("Your listening plan")}<Icon name="arrow" size={16} /></a></div>
                 <p className={`save-note ${storageError ? 'audio-error' : ''}`}><Icon name={storageError ? 'close' : 'check'} size={15} />{storageError ? t("This browser could not save your session. Your results are shown above.") : t("Session saved on this device.")}</p>
                 <p className={`cloud-save-note ${cloudSave === 'error' ? 'audio-error' : ''}`} role="status">{cloudSave === 'pending' ? t("Checking account saving…") : cloudSave === 'saved' ? t("Also saved to your account.") : cloudSave === 'error' ? storageError ? t("Account saving could not be confirmed. Your results remain visible on this page.") : <>{t("Account saving could not be confirmed.")}<a href={path("/account")}>{t("Retry from your history page.")}</a></> : <>{t("Want this history on another device?")}<a href={path("/account")}>{t("Sign in to save your progress.")}</a></>}</p>
+                {journeyMode === 'diagnostic' && courseEnabled(import.meta.env.PUBLIC_EMAIL_COURSE_APPROVED, import.meta.env.PUBLIC_EMAIL_COURSE_ENDPOINT) && <EmailCourseSignup key={language.id} endpoint={import.meta.env.PUBLIC_EMAIL_COURSE_ENDPOINT} defaultLanguage={language.id === 'en' ? 'en-US-ga' : language.id} />}
                 {journeyMode !== 'diagnostic' && <SessionFeedback locale={locale} key={completedSession.id} session={completedSession} />}
               </div> : null}
             </div>
