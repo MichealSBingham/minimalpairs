@@ -36,10 +36,15 @@ export async function deliverOne(storage,env,{now=Date.now(),fetcher=fetch,testT
    if(j.kind==='confirmation'?!t.text.includes('{{confirmation_url}}'):!t.text.includes('{{unsubscribe_url}}'))continue;
    if(j.kind!=='confirmation'&&(!env.POSTAL_ADDRESS||env.POSTAL_ADDRESS.trim().length<5))continue;
    if(j.kind!=='confirmation'&&r.lastMarketingAt&&now-r.lastMarketingAt<48*3600000)continue;
+   if(j.kind==='weekly'){
+    if(r.lastWeeklyAt!==undefined&&now-r.lastWeeklyAt<7*86400000)continue;
+    const pendingCourse=[...(await tx.list({prefix:'outbox:',limit:5000})).values()].some(other=>other.subscriberKey===j.subscriberKey&&other.kind==='course'&&['queued','sending','uncertain'].includes(other.state));
+    if(r.course&&pendingCourse)continue;
+   }
    // Reserve budget BEFORE network, including ambiguous outcomes; never exceed the hard free-tier ceiling.
    quota.count++;await tx.put('sendQuota',quota);
    // Reserve recipient spacing atomically with the job, including uncertain outcomes.
-   if(j.kind!=='confirmation'){r.lastMarketingAt=now;await tx.put(j.subscriberKey,r);}
+   if(j.kind!=='confirmation'){r.lastMarketingAt=now;if(j.kind==='weekly')r.lastWeeklyAt=now;await tx.put(j.subscriberKey,r);}
    j.state='sending';j.attempts++;j.attemptedAt=now;await tx.put(key,j);return {key,j,r,t};
   }
   return null;
