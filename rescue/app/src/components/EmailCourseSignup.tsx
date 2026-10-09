@@ -10,13 +10,13 @@ export default function EmailCourseSignup({ endpoint, defaultLanguage = 'fr' }: 
   catch(error){setStatus(error instanceof Error?error.message:'Please try again.');}finally{setBusy(false);}
  }
  return <section className="email-course-signup" aria-labelledby="email-course-title" style={{maxWidth:650,margin:'32px auto',padding:24,border:'1px solid var(--line)',borderRadius:12}}>
- <h2 id="email-course-title">Keep working on your listening.</h2><p>Three short listening challenges over a week, from Micheal at MinimalPairs. Your results stay available whether you subscribe or not.</p>
+ <h2 id="email-course-title">Keep working on your listening.</h2><p>Three short listening challenges over a week, from Micheal at MinimalPairs.</p>
  <form onSubmit={submit}><fieldset disabled={busy||done} style={{border:0,padding:0}}>
  <label style={{display:'block',marginBottom:16}}>Email address<input type="email" autoComplete="email" maxLength={254} required value={email} onChange={e=>setEmail(e.target.value)} style={{display:'block',width:'100%',padding:12}} /></label>
  <label style={{display:'block',marginBottom:16}}>Listening language<select value={language} onChange={e=>setLanguage(e.target.value)} style={{display:'block',padding:12}}>{templates.languages.map(item=><option key={item.bankId} value={item.bankId}>{item.name}</option>)}</select></label>
  <p>The emails are written in English, with listening exercises for your selected language.</p>
   <label style={{display:'block',marginBottom:16}}><input type="checkbox" checked={weekly} onChange={e=>setWeekly(e.target.checked)} /> Also send me a weekly listening tip. I can unsubscribe at any time.</label>
- <p>Emails include practice links and information about full access. By selecting “Send my listening plan”, you subscribe to the three-part course. Weekly tips are optional. Email signup is separate from analytics consent. <a href="/privacy#listening-emails">How we use your email</a>.</p>
+ <p>Emails include practice links and information about full access. By selecting “Send my listening plan”, you subscribe to the three-part course. Email signup is separate from analytics consent. <a href="/privacy#listening-emails">How we use your email</a>.</p>
  <button className="button button-dark" type="submit" disabled={busy||done}>{busy?'Saving…':done?'Request saved':'Send my listening plan'}</button>
  </fieldset><p role="status" aria-live="polite">{status}</p></form>
  <p>To stop listening emails, use the unsubscribe link in any message. To change your language or preferences, <a href="/support">contact us</a>.</p>
