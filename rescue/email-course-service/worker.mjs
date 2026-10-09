@@ -2,7 +2,7 @@ import {enqueue,deliverOne,suppressProviderEvent,verifyProviderWebhook} from './
 // Consent and delivery infrastructure. Intake and sending are OFF until approved activation.
 const randomToken=()=>Array.from(crypto.getRandomValues(new Uint8Array(32)),n=>n.toString(16).padStart(2,'0')).join('');
 const ORIGINS=new Set(['https://minimalpairs.co','https://www.minimalpairs.co','https://minimalpairs.web.app']);
-export const CONSENT_VERSION='listening-course-2026-10-09-v2';
+export const CONSENT_VERSION='listening-course-2026-10-09-v3';
 const LANGUAGES=new Set(['en-US-ga','fr','es','de','it','pt','ru','zh','ja']);
 const response=(data,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer'}});
 const digest=async value=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(value))),v=>v.toString(16).padStart(2,'0')).join('');
@@ -114,6 +114,7 @@ export class EmailAudience{
    });
   }
   const clean=validateSubscription(input);if(!clean)return response({error:'Invalid subscription'},400);
+  if(clean.weekly && this.env.WEEKLY_SERIES_READY!=='true')return response({error:'The weekly listening series is not open yet'},503);
   const day=new Date().toISOString().slice(0,10);
   const ipHash=await digest(this.env.RATE_SECRET+'|'+day+'|'+(request.headers.get('CF-Connecting-IP')||'unknown'));
   const key='subscriber:'+await digest(clean.email);const now=new Date().toISOString();

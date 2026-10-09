@@ -1,4 +1,4 @@
-export const CONSENT_VERSION='listening-course-2026-10-09-v2';
+export const CONSENT_VERSION='listening-course-2026-10-09-v3';
 export function courseEnabled(enabled, endpoint) {try{return enabled==='true' && new URL(endpoint).protocol==='https:';}catch{return false;}}
 export function subscriptionPayload({email,language,course,weekly}) {
  const clean=email.trim();

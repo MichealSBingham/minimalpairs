@@ -144,7 +144,7 @@ const copy = {
     "chooseLifetime": "Choose lifetime",
     "lifetimeCharge": "$29 charged once. No recurring payments.",
     "once": "one time",
-    "freeDiagnostic": "A free listening check across every available sound group, with results included"
+    "freeDiagnostic": "Free listening check and overall score"
   },
   "es": {
     "resumeCheckout": "Continuar con el pago",
@@ -288,7 +288,7 @@ const copy = {
     "chooseLifetime": "Elegir acceso de por vida",
     "lifetimeCharge": "Un solo pago de $29. Sin pagos recurrentes.",
     "once": "pago único",
-    "freeDiagnostic": "Prueba gratuita de todos los grupos de sonidos disponibles, con resultados incluidos"
+    "freeDiagnostic": "Prueba de escucha y puntuación general gratuitas"
   },
   "fr": {
     "resumeCheckout": "Continuer le paiement",
@@ -432,7 +432,7 @@ const copy = {
     "chooseLifetime": "Choisir l’accès à vie",
     "lifetimeCharge": "29 $ en un seul paiement. Aucun paiement récurrent.",
     "once": "une seule fois",
-    "freeDiagnostic": "Bilan gratuit de tous les groupes de sons disponibles, résultats inclus"
+    "freeDiagnostic": "Bilan d’écoute et score global gratuits"
   },
   "pt": {
     "resumeCheckout": "Continuar o pagamento",
@@ -576,7 +576,7 @@ const copy = {
     "chooseLifetime": "Escolher acesso vitalício",
     "lifetimeCharge": "Pagamento único de US$ 29. Sem cobranças recorrentes.",
     "once": "pagamento único",
-    "freeDiagnostic": "Teste gratuito de todos os grupos de sons disponíveis, com resultados incluídos"
+    "freeDiagnostic": "Teste de escuta e pontuação geral gratuitos"
   },
   "de": {
     "resumeCheckout": "Zahlung fortsetzen",
@@ -720,7 +720,7 @@ const copy = {
     "chooseLifetime": "Lebenslangen Zugang wählen",
     "lifetimeCharge": "Einmalig 29 US-Dollar. Keine wiederkehrenden Zahlungen.",
     "once": "einmalig",
-    "freeDiagnostic": "Kostenloser Hörcheck für alle verfügbaren Lautgruppen, inklusive Ergebnisse"
+    "freeDiagnostic": "Kostenloser Hörtest mit Gesamtergebnis"
   },
   "it": {
     "resumeCheckout": "Continua il pagamento",
@@ -864,7 +864,7 @@ const copy = {
     "chooseLifetime": "Scegli accesso a vita",
     "lifetimeCharge": "29 $ una sola volta. Nessun pagamento ricorrente.",
     "once": "una volta",
-    "freeDiagnostic": "Test gratuito su tutti i gruppi di suoni disponibili, risultati inclusi"
+    "freeDiagnostic": "Test di ascolto e punteggio complessivo gratuiti"
   },
   "ru": {
     "resumeCheckout": "Продолжить оплату",
@@ -1008,7 +1008,7 @@ const copy = {
     "chooseLifetime": "Выбрать бессрочный доступ",
     "lifetimeCharge": "Один платёж 29 долларов США. Без повторных списаний.",
     "once": "один раз",
-    "freeDiagnostic": "Бесплатная проверка всех доступных групп звуков с результатами"
+    "freeDiagnostic": "Бесплатная проверка слуха и общий балл"
   },
   "ja": {
     "resumeCheckout": "購入手続きを続ける",
@@ -1152,7 +1152,7 @@ const copy = {
     "chooseLifetime": "買い切りを選ぶ",
     "lifetimeCharge": "29米ドルの一回払い。継続課金はありません。",
     "once": "一回払い",
-    "freeDiagnostic": "利用可能な全グループの無料リスニングチェックと結果"
+    "freeDiagnostic": "無料の聞き分けチェックと総合スコア"
   },
   "zh": {
     "resumeCheckout": "继续结账",
@@ -1296,7 +1296,7 @@ const copy = {
     "chooseLifetime": "选择终身访问",
     "lifetimeCharge": "一次支付29美元。无持续扣费。",
     "once": "一次付费",
-    "freeDiagnostic": "免费测试所有可用声音组，并查看结果"
+    "freeDiagnostic": "免费听辨测试和总分"
   }
 } as const;
 export function commerce(locale: string = "en") { const chosen = copy[locale as CommerceLocale] || copy.en; return (key: keyof typeof copy.en) => chosen[key]; }

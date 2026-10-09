@@ -29,6 +29,8 @@
     "SENDING_ENABLED": "false",
     "PUBLIC_ORIGIN": "https://minimalpairs-email-course.sirmichealbingham.workers.dev",
     "FROM_ADDRESS": "Micheal at MinimalPairs <micheal@minimalpairs.co>",
-    "DAILY_SEND_CAP": "0"
+    "DAILY_SEND_CAP": "0",
+    "POSTAL_ADDRESS": "140 E 14th St, New York, NY 10003",
+    "WEEKLY_SERIES_READY": "false"
   }
 }

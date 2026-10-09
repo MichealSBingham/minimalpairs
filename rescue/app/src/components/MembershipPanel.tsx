@@ -1,3 +1,4 @@
+import {diagnosticReturnPath, diagnosticReturnLabel} from '../lib/diagnostic-return';
 import { useMeasuredExposure } from './useMeasuredExposure';
 import { trackMeasurement } from '../lib/measurement';
 import { useEffect, useRef, useState } from 'react';
@@ -28,6 +29,8 @@ export default function MembershipPanel({ storefront = false, embedded = false, 
   const [busy, setBusy] = useState<'checkout' | 'portal' | 'status' | null>(null);
   const [checkoutStatus, setCheckoutStatus] = useState<CheckoutStatus | null>(null);
   const [returning, setReturning] = useState(false);
+  const [reportReturn, setReportReturn] = useState<string | null>(null);
+  useEffect(() => { setReportReturn(diagnosticReturnPath(window.localStorage)); }, []);
   const [portalSuggested, setPortalSuggested] = useState(false);
   const generation = useRef(0);
   const requestBusy = useRef(false);
@@ -51,6 +54,10 @@ export default function MembershipPanel({ storefront = false, embedded = false, 
       setAccess(value); setStatus('ready');
       if (value) {
         setPortalSuggested(false); setCheckoutStatus(null);
+        if (new URLSearchParams(window.location.search).get('billing') === 'return') {
+          const report = diagnosticReturnPath(window.localStorage);
+          if (report) window.location.replace(path(report));
+        }
         try { clearConfirmedCheckout(window.localStorage, expectedUser.id); setPending(null); setStorageError(''); }
         catch { setStorageError(t('error')); }
       }
@@ -158,6 +165,7 @@ export default function MembershipPanel({ storefront = false, embedded = false, 
     {(['monthly','lifetime'] as MembershipPlan[]).map(plan => <div key={plan} ref={plan === 'monthly' ? setPlanExposureNode : undefined} className={plan === 'lifetime' ? 'plan-lifetime' : 'plan-monthly'}><span className="plan-kicker">{t(plan === 'lifetime' ? 'payOnce' : 'flexible')}</span><h3>{t(plan)}</h3><p className="membership-price">{plan === 'lifetime' ? '$29' : '$7'}<span> USD {plan === 'lifetime' ? t('once') : `/ ${t('month')}`} </span></p><p>{t(plan === 'lifetime' ? 'lifetimeDetail' : 'monthlyDetail')}</p><ul><li>{t('allExercises')}</li><li>{t('unlimited')}</li><li>{t('voices')}</li><li>{t('feedback')}</li></ul>{user?.email_verified ? <button className="button button-dark" disabled={disabled || Boolean(storageError)} onClick={() => void act('checkout',plan)}>{busy === 'checkout' ? t('opening') : pending?.plan === plan ? t('resumeCheckout') : t(plan === 'lifetime' ? 'chooseLifetime' : 'chooseMonthly')}</button> : <a className="button button-dark" onClick={() => selectPlan(plan)} href={path('/account#account-sign-in')}>{t(plan === 'lifetime' ? 'chooseLifetime' : 'chooseMonthly')}</a>}<p className="membership-fine">{t(plan === 'lifetime' ? 'lifetimeCharge' : 'monthlyCharge')}</p></div>)}
   </div>;
   return <section id="membership" className={`membership-panel ${storefront ? 'membership-storefront' : ''}`} aria-labelledby="membership-heading">
+    {!embedded && reportReturn && <p><a className="button button-outline" href={path(reportReturn)}>{diagnosticReturnLabel(locale)} →</a></p>}
     <span className="account-plan-badge" role="status">{!identityReady || status === 'loading' ? t('loading') : status === 'error' ? t('unavailable') : lifetime ? t('lifetime') : membership ? t('premium') : t('free')}</span>
     <h2 id="membership-heading">{t(lifetime ? 'lifetimeActive' : membership ? 'memberActive' : 'choose')}</h2>
     {!identityReady ? <p role="status">{t('loading')}</p> : !user ? <>{storefront && planCards}<p>{t('signInBody')}</p><a className="button button-outline" href={path('/account#account-sign-in')}>{t('signGoogle')}</a><p>{t('restoreBody')} <a href={path('/account#account-sign-in')}>{t('restore')} →</a></p></> : !verified ? <>{storefront && planCards}<p>{t('verify')}</p><a href={path('/account#account-sign-in')}>{t('account')} →</a></> : <>

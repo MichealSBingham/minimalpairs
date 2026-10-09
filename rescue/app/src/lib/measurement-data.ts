@@ -1,6 +1,6 @@
 export { landingPath } from './landing-path.mjs';
 export const MEASUREMENT_VERSION = 'business-funnel-v3';
-export const MEASUREMENT_EVENTS = ['page_view', 'practice_start', 'practice_first_answer', 'practice_complete', 'practice_audio_error', 'practice_feedback', 'review_shown', 'review_open', 'review_practice_start', 'review_practice_complete', 'diagnostic_start', 'diagnostic_complete', 'diagnostic_results_view', 'paywall_view', 'plans_view', 'plan_selected', 'begin_checkout', 'checkout_resumed', 'checkout_error', 'billing_portal_open', 'login', 'audio_report_submitted', 'support_submitted', 'guide_audio_play', 'practice_group_complete', 'practice_exit', 'return_practice'] as const;
+export const MEASUREMENT_EVENTS = ['page_view', 'practice_start', 'practice_first_answer', 'practice_complete', 'practice_audio_error', 'practice_feedback', 'review_shown', 'review_open', 'review_practice_start', 'review_practice_complete', 'diagnostic_start', 'diagnostic_complete', 'diagnostic_results_view', 'diagnostic_report_preview', 'diagnostic_report_unlock_click', 'diagnostic_report_open', 'paywall_view', 'plans_view', 'plan_selected', 'begin_checkout', 'checkout_resumed', 'checkout_error', 'billing_portal_open', 'login', 'audio_report_submitted', 'support_submitted', 'guide_audio_play', 'practice_group_complete', 'practice_exit', 'return_practice'] as const;
 export const SESSION_FEEDBACK_CATEGORIES = ['audio_unclear', 'instructions_unclear', 'too_easy', 'too_difficult', 'about_right'] as const;
 export type SessionFeedbackCategory = typeof SESSION_FEEDBACK_CATEGORIES[number];
 export type MeasurementEvent = typeof MEASUREMENT_EVENTS[number];
@@ -73,7 +73,7 @@ export function measurementData(event: string, raw: EventData = {}): EventData |
   if (event === 'login' && clean.method !== 'google') return null;
   if (event === 'audio_report_submitted' && (!clean.language_id || !clean.reason)) return null;
   if (event === 'support_submitted' && !clean.topic) return null;
-  if (event.startsWith('diagnostic_') && (!clean.attempt_id || !clean.language_id)) return null;
+  if (event.startsWith('diagnostic_') && (!clean.language_id || (!event.startsWith('diagnostic_report_') && !clean.attempt_id))) return null;
   if (typeof raw.recommendation_kind === 'string' && ['start', 'explore', 'revisit', 'review-due'].includes(raw.recommendation_kind)) clean.recommendation_kind = raw.recommendation_kind;
   if (typeof raw.recommendation_surface === 'string' && ['completion', 'history'].includes(raw.recommendation_surface)) clean.recommendation_surface = raw.recommendation_surface;
   if (event === 'practice_audio_error') clean.failure_kind = 'playback_failed';

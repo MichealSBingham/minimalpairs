@@ -1,4 +1,6 @@
 ---
+import EmailCourseSignup from '../../components/EmailCourseSignup';
+import { courseEnabled } from '../../lib/email-course.mjs';
 import Base from '../../layouts/Base.astro';
 import { Header, Footer, Icon } from '../../components/ui';
 import GuideWordAudio from '../../components/GuideWordAudio';
@@ -129,6 +131,7 @@ const schema = { '@context': 'https://schema.org', '@type': 'LearningResource', 
 
         <section class="guide-next-step"><h2>Keep the sound. Change the word.</h2><p>{copy?.next || contrast.description}</p><a class="guide-text-link" href={`/${slugFor(language)}`}>Explore all {language.name} contrasts <Icon name="arrow" size={17} /></a></section>
 
+        {hasLesson && courseEnabled(import.meta.env.PUBLIC_EMAIL_COURSE_APPROVED, import.meta.env.PUBLIC_EMAIL_COURSE_ENDPOINT) && <EmailCourseSignup endpoint={import.meta.env.PUBLIC_EMAIL_COURSE_ENDPOINT} defaultLanguage={language.id === 'en' ? 'en-US-ga' : language.id} client:visible />}
       </article>
     </div>
   </main>

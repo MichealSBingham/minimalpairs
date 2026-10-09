@@ -3,7 +3,7 @@ import { trackMeasurement, watchAnalyticsChoice } from '../lib/measurement';
 import type { EventData } from '../lib/measurement-data';
 
 /** Measure a currently visible offer, once per exposure key, including late opt-in. */
-export function useMeasuredExposure(node: HTMLElement | null, key: string, event: 'plans_view' | 'paywall_view', data: EventData) {
+export function useMeasuredExposure(node: HTMLElement | null, key: string, event: 'plans_view' | 'paywall_view' | 'diagnostic_report_preview', data: EventData) {
   const sent = useRef('');
   const exposure = useRef('');
   const latestData = useRef(data);
