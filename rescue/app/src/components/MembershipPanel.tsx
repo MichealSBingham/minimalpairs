@@ -88,6 +88,7 @@ export default function MembershipPanel({ storefront = false, embedded = false, 
     const expectedId = user.id;
     const token = generation.current;
     let checkoutPlan = plan;
+    let resumingOpenCheckout = false;
     requestBusy.current = true; setBusy(kind); setError(''); setCheckoutStatus(null);
     const sameAccount = async () => {
       const session = await getSession();
@@ -119,7 +120,7 @@ export default function MembershipPanel({ storefront = false, embedded = false, 
           const checked = await getMembershipCheckoutStatus(expectedId);
           await sameAccount();
           if (checked.state === 'none') { clearConfirmedCheckout(window.localStorage, expectedId); setPending(null); }
-          else if ('plan' in checked) setPending(adoptServerCheckout(window.localStorage, expectedId, checked));
+          else if ('plan' in checked) { setPending(adoptServerCheckout(window.localStorage, expectedId, checked)); resumingOpenCheckout = checked.state === 'open' && checked.plan === plan; }
           else if (checked.state === 'existing_subscription') { setPortalSuggested(true); throw new Error('You already have a subscription. Manage it from your account.'); }
           else if (checked.state === 'lifetime') { void checkAccess(user, token); return null; }
         }
@@ -130,7 +131,10 @@ export default function MembershipPanel({ storefront = false, embedded = false, 
       });
       await sameAccount();
       if (destination) {
-        if(kind === 'checkout') trackMeasurement('begin_checkout',{surface,ui_locale:locale,plan:checkoutPlan});
+        if(kind === 'checkout') {
+          trackMeasurement('begin_checkout',{surface,ui_locale:locale,plan:checkoutPlan});
+          if (resumingOpenCheckout) trackMeasurement('checkout_resumed',{surface,ui_locale:locale,plan:checkoutPlan});
+        }
         if(kind === 'portal') trackMeasurement('billing_portal_open',{surface,ui_locale:locale});
         window.location.assign(destination);
       }
@@ -151,14 +155,14 @@ export default function MembershipPanel({ storefront = false, embedded = false, 
   const disabled = Boolean(busy) || status !== 'ready';
   const planCards = <div className="membership-plans">
     {storefront && !embedded && <div className="plan-free"><span className="plan-kicker">{t('explore')}</span><h3>{t('free')}</h3><p className="membership-price">$0</p><p>{t('freePitch')}</p><ul><li>{t('freeDiagnostic')}</li><li>{t('freeExercises')}</li><li>{t('freeUnlimited')}</li><li>{t('voicesHidden')}</li></ul><a className="button button-outline" href={path('/practice')}>{t('startFree')}</a><p className="membership-fine">{t('noCard')}</p></div>}
-    {(['monthly','lifetime'] as MembershipPlan[]).map(plan => <div key={plan} ref={plan === 'monthly' ? setPlanExposureNode : undefined} className={plan === 'lifetime' ? 'plan-lifetime' : 'plan-monthly'}><span className="plan-kicker">{t(plan === 'lifetime' ? 'payOnce' : 'flexible')}</span><h3>{t(plan)}</h3><p className="membership-price">{plan === 'lifetime' ? '$29' : '$7'}<span> USD {plan === 'lifetime' ? t('once') : `/ ${t('month')}`} </span></p><p>{t(plan === 'lifetime' ? 'lifetimeDetail' : 'monthlyDetail')}</p><ul><li>{t('allExercises')}</li><li>{t('unlimited')}</li><li>{t('voices')}</li><li>{t('feedback')}</li></ul>{user?.email_verified ? <button className="button button-dark" disabled={disabled || Boolean(storageError)} onClick={() => void act('checkout',plan)}>{busy === 'checkout' ? t('opening') : t(plan === 'lifetime' ? 'chooseLifetime' : 'chooseMonthly')}</button> : <a className="button button-dark" onClick={() => selectPlan(plan)} href={path('/account#account-sign-in')}>{t(plan === 'lifetime' ? 'chooseLifetime' : 'chooseMonthly')}</a>}<p className="membership-fine">{t(plan === 'lifetime' ? 'lifetimeCharge' : 'monthlyCharge')}</p></div>)}
+    {(['monthly','lifetime'] as MembershipPlan[]).map(plan => <div key={plan} ref={plan === 'monthly' ? setPlanExposureNode : undefined} className={plan === 'lifetime' ? 'plan-lifetime' : 'plan-monthly'}><span className="plan-kicker">{t(plan === 'lifetime' ? 'payOnce' : 'flexible')}</span><h3>{t(plan)}</h3><p className="membership-price">{plan === 'lifetime' ? '$29' : '$7'}<span> USD {plan === 'lifetime' ? t('once') : `/ ${t('month')}`} </span></p><p>{t(plan === 'lifetime' ? 'lifetimeDetail' : 'monthlyDetail')}</p><ul><li>{t('allExercises')}</li><li>{t('unlimited')}</li><li>{t('voices')}</li><li>{t('feedback')}</li></ul>{user?.email_verified ? <button className="button button-dark" disabled={disabled || Boolean(storageError)} onClick={() => void act('checkout',plan)}>{busy === 'checkout' ? t('opening') : pending?.plan === plan ? t('resumeCheckout') : t(plan === 'lifetime' ? 'chooseLifetime' : 'chooseMonthly')}</button> : <a className="button button-dark" onClick={() => selectPlan(plan)} href={path('/account#account-sign-in')}>{t(plan === 'lifetime' ? 'chooseLifetime' : 'chooseMonthly')}</a>}<p className="membership-fine">{t(plan === 'lifetime' ? 'lifetimeCharge' : 'monthlyCharge')}</p></div>)}
   </div>;
   return <section id="membership" className={`membership-panel ${storefront ? 'membership-storefront' : ''}`} aria-labelledby="membership-heading">
     <span className="account-plan-badge" role="status">{!identityReady || status === 'loading' ? t('loading') : status === 'error' ? t('unavailable') : lifetime ? t('lifetime') : membership ? t('premium') : t('free')}</span>
     <h2 id="membership-heading">{t(lifetime ? 'lifetimeActive' : membership ? 'memberActive' : 'choose')}</h2>
     {!identityReady ? <p role="status">{t('loading')}</p> : !user ? <>{storefront && planCards}<p>{t('signInBody')}</p><a className="button button-outline" href={path('/account#account-sign-in')}>{t('signGoogle')}</a><p>{t('restoreBody')} <a href={path('/account#account-sign-in')}>{t('restore')} →</a></p></> : !verified ? <>{storefront && planCards}<p>{t('verify')}</p><a href={path('/account#account-sign-in')}>{t('account')} →</a></> : <>
       <div className="membership-status" aria-live="polite">{status === 'loading' ? <p>{t('loading')}</p> : lifetime ? <p>{t('lifetimeBody')}</p> : membership ? <p>{t('memberActive')}</p> : status === 'ready' ? <p>{t('freeBody')}</p> : null}</div>
-      {error && <p className="membership-error" role="alert">{error}</p>}
+      {error && <p className="membership-error" role="alert">{error} <a href={path('/support')}>{t('support')} →</a></p>}
       {storageError && <p className="membership-error" role="alert">{storageError}</p>}
       {checkoutStatus && <p role="status">{t(checkoutStatus.state === 'none' ? 'checkoutNone' : checkoutStatus.state === 'open' ? 'checkoutOpen' : checkoutStatus.state === 'existing_subscription' ? 'manage' : checkoutStatus.state === 'lifetime' ? 'lifetimeActive' : 'checkoutPending')}</p>}
       {!lifetime && !membership && status === 'ready' && checkoutAvailable && !portalSuggested && <>{planCards}<p className="membership-fine">{t('secure')}</p></>}

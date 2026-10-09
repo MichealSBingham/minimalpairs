@@ -404,3 +404,9 @@ test('fixed landing route allowlist excludes account details, invented guide IDs
  assert.equal(data.landingPath('/fr/learn/fr-u-y/?email=private@example.com#token'),'/fr/learn/fr-u-y');
  for(const path of ['/account','/restore-access','/learn/en-private-customer-name','https://minimalpairs.co/pricing','//evil.test','/pricing/extra','/learn/en-%40private'])assert.equal(data.landingPath(path),undefined);
 });
+
+test('checkout recovery requires a supported plan and excludes customer identifiers',()=>{
+ assert.equal(data.measurementData('checkout_resumed',{}),null);
+ const payload=data.measurementData('checkout_resumed',{plan:'lifetime',surface:'pricing',email:'private@example.com',session_id:'secret'});
+ assert.equal(payload.plan,'lifetime'); assert.equal(payload.email,undefined); assert.equal(payload.session_id,undefined);
+});

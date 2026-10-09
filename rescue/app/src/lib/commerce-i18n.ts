@@ -3,6 +3,7 @@ export const commerceLocales = ["en", "es", "fr", "pt", "de", "it", "ru", "ja", 
 export type CommerceLocale = typeof commerceLocales[number];
 const copy = {
   "en": {
+    "resumeCheckout": "Continue checkout",
     "plans": "Listening practice plans",
     "plansDescription": "Practice listening free, or unlock every available sound contrast in nine languages.",
     "hero": "Hear the difference.",
@@ -146,6 +147,7 @@ const copy = {
     "freeDiagnostic": "A free listening check across every available sound group, with results included"
   },
   "es": {
+    "resumeCheckout": "Continuar con el pago",
     "plans": "Planes de práctica auditiva",
     "plansDescription": "Practica gratis o desbloquea todos los contrastes de sonidos disponibles en nueve idiomas.",
     "hero": "Escucha la diferencia.",
@@ -289,6 +291,7 @@ const copy = {
     "freeDiagnostic": "Prueba gratuita de todos los grupos de sonidos disponibles, con resultados incluidos"
   },
   "fr": {
+    "resumeCheckout": "Continuer le paiement",
     "plans": "Formules d’entraînement auditif",
     "plansDescription": "Entraînez votre oreille gratuitement ou débloquez tous les contrastes disponibles dans neuf langues.",
     "hero": "Entendez la différence.",
@@ -432,6 +435,7 @@ const copy = {
     "freeDiagnostic": "Bilan gratuit de tous les groupes de sons disponibles, résultats inclus"
   },
   "pt": {
+    "resumeCheckout": "Continuar o pagamento",
     "plans": "Planos de prática auditiva",
     "plansDescription": "Pratique de graça ou desbloqueie todos os contrastes sonoros disponíveis em nove idiomas.",
     "hero": "Ouça a diferença.",
@@ -575,6 +579,7 @@ const copy = {
     "freeDiagnostic": "Teste gratuito de todos os grupos de sons disponíveis, com resultados incluídos"
   },
   "de": {
+    "resumeCheckout": "Zahlung fortsetzen",
     "plans": "Hörtrainingspläne",
     "plansDescription": "Übe kostenlos oder schalte alle verfügbaren Lautkontraste in neun Sprachen frei.",
     "hero": "Hör den Unterschied.",
@@ -718,6 +723,7 @@ const copy = {
     "freeDiagnostic": "Kostenloser Hörcheck für alle verfügbaren Lautgruppen, inklusive Ergebnisse"
   },
   "it": {
+    "resumeCheckout": "Continua il pagamento",
     "plans": "Piani di allenamento all’ascolto",
     "plansDescription": "Esercitati gratis o sblocca tutti i contrasti sonori disponibili in nove lingue.",
     "hero": "Senti la differenza.",
@@ -861,6 +867,7 @@ const copy = {
     "freeDiagnostic": "Test gratuito su tutti i gruppi di suoni disponibili, risultati inclusi"
   },
   "ru": {
+    "resumeCheckout": "Продолжить оплату",
     "plans": "Тарифы для тренировки слуха",
     "plansDescription": "Тренируйте слух бесплатно или откройте все доступные звуковые контрасты на девяти языках.",
     "hero": "Услышьте разницу.",
@@ -1004,6 +1011,7 @@ const copy = {
     "freeDiagnostic": "Бесплатная проверка всех доступных групп звуков с результатами"
   },
   "ja": {
+    "resumeCheckout": "購入手続きを続ける",
     "plans": "リスニング練習プラン",
     "plansDescription": "無料で練習するか、9言語のすべての対応する音の違いを練習しましょう。",
     "hero": "音の違いが、わかる。",
@@ -1147,6 +1155,7 @@ const copy = {
     "freeDiagnostic": "利用可能な全グループの無料リスニングチェックと結果"
   },
   "zh": {
+    "resumeCheckout": "继续结账",
     "plans": "听辨训练方案",
     "plansDescription": "免费练习，或解锁九种语言中所有可用的语音对比练习。",
     "hero": "听出不同。",

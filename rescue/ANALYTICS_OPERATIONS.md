@@ -72,3 +72,9 @@ No retrospective reconstruction is possible for missing historical tracking. Thi
 - [Saved practice activation funnel](https://analytics.google.com/analytics/web/#/analysis/a199724961p556274368/edit/9S4ynw_dSpWeDsYB_ryKTg): page view → practice start → first answer → completion, filtered to `measurement_version=business-funnel-v3`. This is a consenting-browser funnel, not a same-attempt join. Its rolling date range initially has no new-version data; allow fresh traffic/report processing before interpreting it. Diagnostic starts are included in overall practice activation.
 - Codex in-app browser exclusion confirmed on both production and Firebase hostnames. Other owner browsers/devices must open the exclusion link separately.
 - Billing deployment `cc006acb-b575-4d5d-9459-b05cebcab92f` verified serving 100%; authenticated endpoint rejects unauthenticated requests as expected. No test charges or customer communications were performed.
+
+## Checkout continuation — October 8
+
+A returning verified user with a locally remembered plan sees Continue checkout on that plan's existing button. The normal locked, fresh-entitlement-checked checkout action reconciles the server state before opening a destination. Prices remain $7 monthly/$29 lifetime. A successful handoff from a server-confirmed open checkout of the same plan emits checkout_resumed alongside begin_checkout, only with analytics permission. It is a subset, not additional checkout volume, and does not prove payment or incremental conversion. Generic checkout errors now link directly to support. No abandonment emails, coupons, exit popups, or new automatic charges were enabled.
+
+Monitor unique checkout_resumed users and checkout errors; reconcile Stripe payments independently until a validated consented payment attribution mechanism exists. This is a usability rollout, not a randomized experiment.
