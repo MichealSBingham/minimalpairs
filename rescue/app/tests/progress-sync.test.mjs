@@ -178,3 +178,10 @@ test('identification schema2 preserves mode and purpose through verified account
  assert.deepEqual(data.normalizeSession(value).mistakes,value.mistakes);
  value.mistakes[0].correctWord='x'.repeat(121);assert.equal(data.normalizeSession(value),null);
  });
+
+test('diagnostic length metadata survives synchronization without assigning historical defaults',()=>{
+ const saved=data.normalizeSession(sample('diagnostic-length',{purpose:'diagnostic',diagnosticLength:'full',diagnosticVersion:'diagnostic-v2',diagnosticGroups:32}));
+ assert.equal(saved.diagnosticLength,'full');assert.equal(saved.diagnosticVersion,'diagnostic-v2');assert.equal(saved.diagnosticGroups,32);
+ assert.equal(data.normalizeSession(sample()).diagnosticLength,undefined);
+ for(const patch of [{diagnosticLength:'other'},{diagnosticVersion:'bogus'},{diagnosticGroups:201},{diagnosticGroups:0}])assert.equal(data.normalizeSession(sample('bad',patch)),null);
+});

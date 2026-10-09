@@ -16,7 +16,7 @@ service cloud.firestore {
       allow read, delete: if verified() && request.auth.uid == uid;
       allow create, update: if verified() && request.auth.uid == uid
         && (request.method == 'create' || request.resource.data == resource.data)
-        && request.resource.data.keys().hasOnly(['id', 'completedAt', 'languageId', 'contrastId', 'correct', 'total', 'mistakes', 'mode', 'schemaVersion', 'textHintsUsed', 'audioCollectionId', 'purpose'])
+        && request.resource.data.keys().hasOnly(['id', 'completedAt', 'languageId', 'contrastId', 'correct', 'total', 'mistakes', 'mode', 'schemaVersion', 'textHintsUsed', 'audioCollectionId', 'purpose', 'diagnosticLength', 'diagnosticVersion', 'diagnosticGroups'])
         && request.resource.data.get('textHintsUsed', false) is bool
         && request.resource.data.get('audioCollectionId', 'legacy-unspecified') is string
         && request.resource.data.get('audioCollectionId', 'legacy-unspecified').matches('^[A-Za-z0-9_-]{1,160}$')
@@ -24,6 +24,10 @@ service cloud.firestore {
         && request.resource.data.get('schemaVersion', 0) == 2
         && (request.resource.data.mode != 'word-identification' || request.resource.data.get('textHintsUsed', false) == true)
         && request.resource.data.get('purpose', 'focused') in ['focused', 'mixed', 'diagnostic']
+        && request.resource.data.get('diagnosticLength', 'short') in ['short','full']
+        && request.resource.data.get('diagnosticVersion', 'diagnostic-v2') == 'diagnostic-v2'
+        && request.resource.data.get('diagnosticGroups', 1) is int
+        && request.resource.data.get('diagnosticGroups', 1) >= 1 && request.resource.data.get('diagnosticGroups', 1) <= 200
         && request.resource.data.id == sessionId
         && request.resource.data.completedAt is string
         && request.resource.data.languageId is string

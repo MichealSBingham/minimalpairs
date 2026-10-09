@@ -1,5 +1,5 @@
 import test from 'node:test'; import assert from 'node:assert/strict'; import {planNext} from './eligibility.mjs';
-const subscriber={id:'test', enrollmentId:'one', verified:true, hasPaidAccess:false, courseConsentAt:'2026-10-01T00:00:00Z'};
+const subscriber={id:'test', enrollmentId:'one', subscribed:true, hasPaidAccess:false, courseConsentAt:'2026-10-01T00:00:00Z'};
 const base={subscriber,now:Date.parse('2026-10-08T00:00:00Z'),active:true};
 test('off by default, no accidental campaign activation',()=>assert.equal(planNext({...base,active:undefined}).eligible,false));
 test('account creation is not course consent',()=>assert.equal(planNext({...base,subscriber:{...subscriber,courseConsentAt:null}}).eligible,false));

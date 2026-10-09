@@ -6,7 +6,8 @@ export const DIAGNOSTIC_MAX_GROUPS=6;
 /** A short starting-point sample. L1 changes selection, never scoring or access.
  * Inventory predictions and study-supported contrasts are not calibrated norms.
  * Same-language, missing and unsupported L1s receive the broad sample. */
-export function selectDiagnosticContrasts(contrasts:Contrast[], languageId:string, nativeLanguage?:string|null) {
+export function selectDiagnosticContrasts(contrasts:Contrast[], languageId:string, nativeLanguage?:string|null, length:'short'|'full'='short') {
+ if(length==='full')return contrasts.filter(c=>c.pairs.length>=2);
  const targetCode=normalizeDiagnosticLanguage(languageId),native=normalizeDiagnosticLanguage(nativeLanguage);
  const target=DIAGNOSTIC_LANGUAGES.includes(targetCode as DiagnosticLanguage)?targetCode as DiagnosticLanguage:undefined;
  const priorities=target?DIAGNOSTIC_PRIORITIES[target]:[];

@@ -1,3 +1,4 @@
+import {diagnosticLengthCopy,type DiagnosticLength} from '../lib/diagnostic-length';
 import EmailCourseSignup from './EmailCourseSignup';
 import { courseEnabled } from '../lib/email-course.mjs';
 import {nativeLanguageCopy} from '../lib/native-language-copy';
@@ -57,6 +58,7 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
   const [pendingLesson, setPendingLesson] = useState<string | null>(null);
   const [sessionRounds, setSessionRounds] = useState(12);
   const checkRounds = 2;
+  const [diagnosticLength,setDiagnosticLength] = useState<DiagnosticLength>('short');
   const [journeyMode, setJourneyMode] = useState<JourneyMode>('focused');
   const identifying = activityMode === 'word-identification' && journeyMode !== 'diagnostic';
   const [history, setHistory] = useState<PracticeSession[]>([]);
@@ -67,11 +69,14 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
     if(!id)return t(name);
     try{return new Intl.DisplayNames([locale],{type:'language'}).of(id)||t(name);}catch{return t(name);}
   };
-  const selectedContrasts = selectJourneyContrasts(language?.contrasts || [], history, language?.id || '', fullAccess, journeyMode, contrast?.id || '', activityMode, nativeLanguage);
+  const [availableClips, setAvailableClips] = useState<AvailableClip[]>([]);
+  const eligibleContrasts = journeyMode==='diagnostic' && !audioManifestPath && availableClips.some(c=>c.languageId===language?.id)
+    ? (language?.contrasts || []).filter(c=>{try {const pairs=playablePairs(c.pairs,availableClips,language.id);return buildSession(pairs,2,()=>0.5,p=>referenceVoices(availableClips,language.id,p).length>0).length>0;}catch{return false;}})
+    : language?.contrasts || [];
+  const selectedContrasts = selectJourneyContrasts(eligibleContrasts, history, language?.id || '', fullAccess, journeyMode, contrast?.id || '', activityMode, nativeLanguage, diagnosticLength);
   const roundsPerGroup = journeyMode === 'focused' ? sessionRounds : journeyMode === 'diagnostic' ? checkRounds : Math.max(2, Math.floor(sessionRounds / Math.max(1, selectedContrasts.length)));
   const locked = journeyMode === 'focused' && !fullAccess && (language?.contrasts.findIndex(item => item.id === contrast?.id) ?? 0) >= 3;
   const [audioRevision, setAudioRevision] = useState(0);
-  const [availableClips, setAvailableClips] = useState<AvailableClip[]>([]);
   const [voices, setVoices] = useState<Voice[]>([]);
   const [preparedAudioKey, setPreparedAudioKey] = useState<string | null>(null);
   const requiredWords = selectedContrasts.flatMap(c => c.pairs.flatMap(pair => pair.words.map(word => word.text)));
@@ -198,7 +203,7 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
     hintsUsed.current = journeyMode === 'diagnostic' ? false : identifying || textHints;
     sessionAudioCollection.current = actualSessionAudioCollection(!audioManifestPath ? `chatterbox-${language.id === 'en' ? 'us' : language.id}-four-voices-v1` : audioCollectionId, queue.flatMap(item => [item.referenceVoiceId, item.testVoiceId]));
     attemptId.current = `${journeyMode}-${globalThis.crypto?.randomUUID?.() || Date.now()}`;
-    const measurement = { language_id: language.id, ...(journeyMode === 'focused' ? {contrast_id: contrast.id} : {}), audio_collection: sessionAudioCollection.current, activity_mode: identifying ? 'word-identification' : 'abx-cross-word', session_kind: journeyMode, access_tier:exerciseAccess === 'lifetime' ? 'lifetime' : fullAccess ? 'paid' : 'free', ui_locale:locale, groups_count:blocks.length, total:queue.length, attempt_id:attemptId.current };
+    const measurement = { ...(journeyMode==='diagnostic'?{diagnostic_length:diagnosticLength,diagnostic_version:'diagnostic-v2'}:{}), language_id: language.id, ...(journeyMode === 'focused' ? {contrast_id: contrast.id} : {}), audio_collection: sessionAudioCollection.current, activity_mode: identifying ? 'word-identification' : 'abx-cross-word', session_kind: journeyMode, access_tier:exerciseAccess === 'lifetime' ? 'lifetime' : fullAccess ? 'paid' : 'free', ui_locale:locale, groups_count:blocks.length, total:queue.length, attempt_id:attemptId.current };
     measuredSession.current = {data:measurement,started:Date.now(),finished:false,answered:0,correct:0};
     startMeasuredPractice(attemptId.current, {...measurement,text_hints_used:hintsUsed.current});
     if(journeyMode === 'diagnostic') trackMeasuredPracticeEvent('diagnostic_start',measurement);
@@ -244,7 +249,7 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
     if (answer === null || busy.current) return;
     if (index + 1 < questions.length) { const item = questions[index + 1]; setIndex(value => value + 1); setAnswer(null); setRoundRevealed(false); setHeard(unheard()); setAudioError(''); void listenSequence(item, index + 2); }
     else {
-      const session: PracticeSession = { id: attemptId.current, mode: identifying ? 'word-identification' : 'abx-cross-word', purpose: journeyMode, schemaVersion: 2, audioCollectionId: sessionAudioCollection.current, textHintsUsed: hintsUsed.current, completedAt: new Date().toISOString(), languageId: language.id, contrastId: contrast.id, correct: attempts.filter(item => item.correct).length, total: attempts.length, mistakes: attempts.filter(item => !item.correct).map(({ correct: _, ...item }) => item) };
+      const session: PracticeSession = { ...(journeyMode==='diagnostic'?{diagnosticLength,diagnosticVersion:'diagnostic-v2' as const,diagnosticGroups:selectedContrasts.length}:{}), id: attemptId.current, mode: identifying ? 'word-identification' : 'abx-cross-word', purpose: journeyMode, schemaVersion: 2, audioCollectionId: sessionAudioCollection.current, textHintsUsed: hintsUsed.current, completedAt: new Date().toISOString(), languageId: language.id, contrastId: contrast.id, correct: attempts.filter(item => item.correct).length, total: attempts.length, mistakes: attempts.filter(item => !item.correct).map(({ correct: _, ...item }) => item) };
       const records = language.contrasts.filter(c => attempts.some(a => a.contrastId === c.id)).map(c => { const subset = attempts.filter(a => a.contrastId === c.id); return {...session, id: `${session.id}-${c.id}`, contrastId: c.id, total: subset.length, correct: subset.filter(a => a.correct).length, mistakes: subset.filter(a => !a.correct).map(({correct, contrastId, ...a}) => a)}; }).filter(s => s.total > 0);
       const saved = readProgress(); const updated = [...saved.sessions, ...records].slice(-1000); setHistory(previous => [...new Map([...previous, ...updated].map(s => [s.id,s])).values()]); setStorageError(!writeProgress({ ...saved, preferredLanguage: language.id, nativeLanguage, sessions: updated })); setCompletedSession(session); setPhase('complete');
       completeMeasuredPractice(attemptId.current, { correct: session.correct, total: session.total, text_hints_used: session.textHintsUsed, first_device_completion: saved.sessions.length === 0 });
@@ -298,6 +303,7 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
   const contrastNumber = language.contrasts.findIndex(item => item.id === contrast.id) + 1;
   const contrastLabel = locale === 'en' ? contrast.label : contrast.phonemes.map(sound => localizedSound(sound, locale)).join(' / ');
   const title = journeyMode === 'diagnostic' ? t("Find your starting point") : journeyMode === 'mixed' ? t("Mixed review") : textHints ? contrastLabel : `${t("Exercise")} ${String(contrastNumber).padStart(2, '0')}`;
+  const lengthCopy = diagnosticLengthCopy(locale, selectedContrasts.length*checkRounds);
   const targetReference = question?.order.indexOf(question.target);
   const correct = answer === targetReference;
   const allHeard = heard.x && (identifying || (heard.a && heard.b));
@@ -343,7 +349,7 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
                 <p className="quiet-label">{t("The first three exercises in each language are free.")}</p>
               </div> : phase === 'ready' ? <div className="session-ready">
                 {journeyMode !== 'diagnostic' && <div className="activity-picker" role="group" aria-label={it(9)}>{(['abx-cross-word','word-identification'] as const).map((mode,i)=><button className={activityMode===mode?'is-selected':''} aria-pressed={activityMode===mode} key={mode} onClick={()=>{setActivityMode(mode);const url=new URL(location.href);url.searchParams.set('mode',mode==='word-identification'?'identify':'match');window.history.replaceState(null,'',url);}}>{it(i)}</button>)}</div>}
-                {journeyMode === 'diagnostic' && <div className="diagnostic-preparation"><span className="eyebrow">{dc.eyebrow}</span><h3>{dc.title}</h3><p><strong>{selectedContrasts.length}</strong> {dc.coverage} · <strong>{selectedContrasts.length*checkRounds}</strong> {dc.rounds}</p><p>{dc.resultsBody}</p><div className="diagnostic-native-language"><label htmlFor="diagnostic-native-language">{nativeCopy.label}</label><select id="diagnostic-native-language" value={nativeLanguage} onChange={event=>{setNativeLanguage(event.target.value);writeProgress({...readProgress(),nativeLanguage:event.target.value});}}><option value="">{nativeCopy.choose}</option>{nativeLanguages.map(item=><option key={item} value={item}>{nativeLabel(item)}</option>)}</select><small>{nativeCopy.hint}</small></div></div>}
+                {journeyMode === 'diagnostic' && <div className="diagnostic-preparation"><span className="eyebrow">{dc.eyebrow}</span><h3>{dc.title}</h3><div className="activity-picker" role="group" aria-label={lengthCopy.label}>{(['short','full'] as const).map(length=><button key={length} className={diagnosticLength===length?'is-selected':''} aria-pressed={diagnosticLength===length} onClick={()=>setDiagnosticLength(length)}>{lengthCopy[length]}</button>)}</div><p><strong>{selectedContrasts.length}</strong> {dc.coverage} · <strong>{selectedContrasts.length*checkRounds}</strong> {dc.rounds}</p><p>{lengthCopy.duration}</p><p>{dc.resultsBody}</p><div className="diagnostic-native-language"><label htmlFor="diagnostic-native-language">{nativeCopy.label}</label><select id="diagnostic-native-language" value={nativeLanguage} onChange={event=>{setNativeLanguage(event.target.value);writeProgress({...readProgress(),nativeLanguage:event.target.value});}}><option value="">{nativeCopy.choose}</option>{nativeLanguages.map(item=><option key={item} value={item}>{nativeLabel(item)}</option>)}</select><small>{nativeCopy.hint}</small></div></div>}
                 {identifying ? <><Icon name="headphones" size={42}/><h3>{it(2)}</h3><p>{it(3)}</p></> : <>
                 <div className="abx-ready-diagram" aria-hidden="true"><span>A</span><span>B</span><span className="is-x">X</span></div>
                 {journeyMode !== 'diagnostic' && <h3>{t("Three listens.")}<br />{t("One small difference.")}</h3>}

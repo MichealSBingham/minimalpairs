@@ -3,7 +3,7 @@ export const STEPS = [{id:'day0', day:0}, {id:'day3', day:3}, {id:'day7', day:7}
 const DAY = 86400000;
 export function planNext({subscriber, sent=[], now=Date.now(), active=false}) {
   if (!active) return {eligible:false, reason:'campaign-not-approved'};
-  if (!subscriber?.id || !subscriber.verified || !subscriber.courseConsentAt || !subscriber.enrollmentId) return {eligible:false, reason:'explicit-verified-consent-required'};
+  if (!subscriber?.id || !subscriber.subscribed || !subscriber.courseConsentAt || !subscriber.enrollmentId) return {eligible:false, reason:'explicit-consent-required'};
   if (subscriber.unsubscribed || subscriber.bounced || subscriber.complained || subscriber.suppressed) return {eligible:false, reason:'suppressed'};
   const start=Date.parse(subscriber.courseConsentAt);
   if (!Number.isFinite(start) || now<start) return {eligible:false, reason:'invalid-consent-date'};

@@ -9,6 +9,6 @@ function convert(message){
  return {approved:false,promotional:false,subject:message.subject,text:[...paragraphs,`${message.cta.label}: ${url}`,message.step==='confirmation-v1'?'':input.footer.replaceAll('{{unsubscribeUrl}}','{{unsubscribe_url}}').replaceAll('{{postalAddress}}','{{postal_address}}')].filter(Boolean).join('\n\n')};
 }
 for(const lang of input.languages)for(const message of lang.messages)out[message.step+':'+lang.bankId]=convert(message);
-out['confirmation-v1']=convert(input.confirmation);
+
 fs.writeFileSync(new URL('templates.unapproved.json',import.meta.url),JSON.stringify({sourceSha256:createHash('sha256').update(raw).digest('hex'),templates:out},null,2)+'\n');
 console.log(`Prepared ${Object.keys(out).length} templates, all unapproved.`);

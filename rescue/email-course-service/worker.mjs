@@ -2,7 +2,7 @@ import {enqueue,deliverOne,suppressProviderEvent,verifyProviderWebhook} from './
 // Consent and delivery infrastructure. Intake and sending are OFF until approved activation.
 const randomToken=()=>Array.from(crypto.getRandomValues(new Uint8Array(32)),n=>n.toString(16).padStart(2,'0')).join('');
 const ORIGINS=new Set(['https://minimalpairs.co','https://www.minimalpairs.co','https://minimalpairs.web.app']);
-export const CONSENT_VERSION='listening-course-2026-10-09-v1';
+export const CONSENT_VERSION='listening-course-2026-10-09-v2';
 const LANGUAGES=new Set(['en-US-ga','fr','es','de','it','pt','ru','zh','ja']);
 const response=(data,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer'}});
 const digest=async value=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(value))),v=>v.toString(16).padStart(2,'0')).join('');
@@ -66,7 +66,7 @@ export class EmailAudience{
    if(!clean||typeof choices.course!=='boolean'||typeof choices.weekly!=='boolean'||typeof evidence!=='string'||evidence.length<5||evidence.length>300)return response({error:'Consent evidence required'},400);
    const key='subscriber:'+await digest(clean.email);
    return this.ctx.storage.transaction(async tx=>{
-    const row=await tx.get(key);if(!row||row.status!=='verified')return response({error:'Only verified, unsuppressed subscriptions can change'},409);
+    const row=await tx.get(key);if(!row||!['subscribed','verified'].includes(row.status))return response({error:'Only active, unsuppressed subscriptions can change'},409);
     if((row.audit||[]).length>=100)return response({error:'Operator archive required'},409);
     const at=new Date().toISOString();row.language=clean.language;row.course=choices.course;row.weekly=choices.weekly;row.consentVersion=clean.consentVersion;
     row.audit.push({event:'preferences',at,course:row.course,weekly:row.weekly,consentVersion:clean.consentVersion,evidence});
@@ -125,10 +125,10 @@ export class EmailAudience{
    rate.counts[ipHash]=count+1;await tx.put('rate',rate);
    const old=await tx.get(key);if(old)return response({received:true}); // No address enumeration or opt-in resurrection.
    const total=await tx.get('total')||0;if(total>=5000)return response({error:'Please try later'},503);
-   const token=randomToken(),verificationToken=randomToken();
-   // Future approved mailer reads this capability internally; no public endpoint exposes it.
-   await tx.put(key,{...clean,status:'pending-verification',createdAt:now,unsubscribeToken:token,verificationToken,verificationExpiresAt:new Date(Date.now()+48*3600000).toISOString(),audit:[{event:'requested',at:now,course:clean.course,weekly:clean.weekly,consentVersion:clean.consentVersion}]});
-   await tx.put('verify:'+await digest(verificationToken),key);await enqueue(tx,{id:'verify_'+await digest(verificationToken),subscriberKey:key,templateId:'confirmation-v1',kind:'confirmation'});await tx.setAlarm(Date.now()+60000);
+   const token=randomToken();
+   await tx.put(key,{...clean,status:'subscribed',createdAt:now,subscribedAt:now,ownershipVerified:false,unsubscribeToken:token,audit:[{event:'subscribed',at:now,course:clean.course,weekly:clean.weekly,consentVersion:clean.consentVersion}]});
+   if(clean.course)for(const day of [0,3,7])await enqueue(tx,{id:`course_${await digest(token)}_${day}`,subscriberKey:key,templateId:`course-day${day}`,kind:'course',dueAt:Date.now()+day*86400000});
+   await tx.setAlarm(Date.now()+60000);
    await tx.put('token:'+await digest(token),key);await tx.put('total',total+1);
    return response({received:true});
   });

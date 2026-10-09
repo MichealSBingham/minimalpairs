@@ -1,0 +1,21 @@
+import {test,expect} from '@playwright/test';
+test('free diagnostic toggles quick/full using actual group counts',async({page},testInfo)=>{
+ await page.route(/google-analytics|googletagmanager/,r=>r.abort());
+ await page.goto('/practice?language=fr&session=diagnostic');
+ const prep=page.locator('.diagnostic-preparation'), start=page.locator('.start-button');
+ await expect(start).toBeEnabled();
+ await expect(prep.getByRole('button',{name:'Quick check',exact:true})).toHaveAttribute('aria-pressed','true');
+ await expect(prep.locator('p').first()).toContainText('12');
+ await prep.getByRole('button',{name:'Full check',exact:true}).click();
+ await expect(start).toBeEnabled();
+ const numbers=await prep.locator('p').first().locator('strong').allTextContents();
+ const groups=Number(numbers[0]),rounds=Number(numbers[1]);
+ expect(groups).toBeGreaterThan(6);expect(rounds).toBe(groups*2);
+ await expect(page.locator('.contrast-options .is-selected')).toHaveCount(0);
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(testInfo.project.name==='mobile'?390:1440);
+ await page.screenshot({path:`/tmp/mp-diagnostic-length-${testInfo.project.name}.png`,fullPage:true});
+ await start.click();await expect(page.locator('.round-counter')).toHaveText(`1 / ${rounds}`);
+ await page.getByRole('button',{name:'End session',exact:true}).click();
+ await prep.getByRole('button',{name:'Quick check',exact:true}).click();await expect(start).toBeEnabled();
+ await start.click();await expect(page.locator('.round-counter')).toHaveText('1 / 12');
+});

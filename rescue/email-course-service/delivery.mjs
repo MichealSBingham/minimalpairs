@@ -6,7 +6,7 @@ export function brandedHtml(text){
   const parts=paragraph.split(/(https:\/\/[^\s<>"']+)/g);
   return '<p style="margin:0 0 20px;line-height:1.65">'+parts.map(part=>part.startsWith('https://')?'<a style="color:#28588a;text-decoration:underline" href="'+escapeHtml(part)+'">'+escapeHtml(part)+'</a>':escapeHtml(part).replaceAll('\n','<br>')).join('')+'</p>';
  }).join('');
- return '<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body style="margin:0;background:#f3eee3;color:#24231e"><table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr><td align="center" style="padding:28px 16px"><table role="presentation" width="560" style="width:100%;max-width:560px;background:#fbf8f1;border:1px solid #e1d8c7;border-radius:12px"><tr><td style="padding:32px;font-family:Arial,sans-serif;font-size:16px"><div style="font-family:Georgia,serif;font-size:28px;margin-bottom:28px">Minimal<span style="color:#b7442b;font-style:italic">Pairs</span></div>'+paragraphs+'</td></tr></table></td></tr></table></body></html>';
+ return '<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body style="margin:0;background:#f3eee3;color:#24231e"><table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr><td align="center" style="padding:28px 16px"><table role="presentation" width="560" style="width:100%;max-width:560px;background:#fbf8f1;border:1px solid #e1d8c7;border-radius:12px"><tr><td style="padding:32px;font-family:Arial,sans-serif;font-size:16px"><div style="font-family:Georgia,serif;font-size:28px;margin-bottom:28px">Minimal<span style="color:#b7442b;font-style:italic">Pairs</span><span style="font-family:Georgia,serif;font-size:13px;color:#777;white-space:nowrap;margin-left:10px">/ˈmɪnɪməl pɛəz/</span></div>'+paragraphs+'</td></tr></table></td></tr></table></body></html>';
 }
 export function approvedTemplates(env){
  // A short exact-content approval avoids large secrets; no fuzzy/version-only approval.
@@ -30,7 +30,8 @@ export async function deliverOne(storage,env,{now=Date.now(),fetcher=fetch,testT
    const r=await tx.get(j.subscriberKey);const t=templates[j.templateId+':'+r?.language]||templates[j.templateId];
    if(!r||r.status==='suppressed'){j.state='suppressed';await tx.put(key,j);continue;}
    if(!t||typeof t.subject!=='string'||typeof t.text!=='string'||t.approved!==true)continue;
-   if(j.kind==='confirmation'?r.status!=='pending-verification'||Date.parse(r.verificationExpiresAt)<now:r.status!=='verified'||!(j.kind==='weekly'?r.weekly:r.course)){j.state='ineligible';await tx.put(key,j);continue;}
+   if(j.kind==='confirmation'){j.state='ineligible';await tx.put(key,j);continue;}
+   if(j.kind==='confirmation'?r.status!=='pending-verification'||Date.parse(r.verificationExpiresAt)<now:!['subscribed','verified'].includes(r.status)||!(j.kind==='weekly'?r.weekly:r.course)){j.state='ineligible';await tx.put(key,j);continue;}
    // Only neutral lessons may be queued: no purchase-dependent upsell without fresh billing evidence.
    if(t.promotional===true)continue;
    if(j.kind==='confirmation'?!t.text.includes('{{confirmation_url}}'):!t.text.includes('{{unsubscribe_url}}'))continue;

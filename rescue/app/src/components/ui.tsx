@@ -3,7 +3,7 @@ import { navCopy, localPath } from '../lib/locales';
 import type { ReactNode } from 'react';
 
 export type { Word, Pair, Contrast, Language } from '../lib/types';
-export type PracticeSession = { id: string; mode?: 'abx-cross-word' | 'word-identification'; schemaVersion?: number; purpose?: 'focused' | 'mixed' | 'diagnostic'; textHintsUsed?: boolean; audioCollectionId?: string; completedAt: string; languageId: string; contrastId: string; correct: number; total: number; mistakes: { pairId: string; word: string; chosenWord: string; correctWord?: string; heardIpa?: string; chosenIpa?: string; correctIpa?: string }[] };
+export type PracticeSession = { id: string; mode?: 'abx-cross-word' | 'word-identification'; schemaVersion?: number; purpose?: 'focused' | 'mixed' | 'diagnostic'; diagnosticLength?: 'short' | 'full'; diagnosticVersion?: 'diagnostic-v2'; diagnosticGroups?: number; textHintsUsed?: boolean; audioCollectionId?: string; completedAt: string; languageId: string; contrastId: string; correct: number; total: number; mistakes: { pairId: string; word: string; chosenWord: string; correctWord?: string; heardIpa?: string; chosenIpa?: string; correctIpa?: string }[] };
 export type Progress = { sessions: PracticeSession[]; preferredLanguage?: string; nativeLanguage?: string };
 export const PROGRESS_KEY = 'minimalpairs.progress.v1';
 

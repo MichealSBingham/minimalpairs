@@ -9,6 +9,9 @@ export function normalizeSession(value: unknown): PracticeSession | null {
     || !['abx-cross-word', 'word-identification'].includes(item.mode as string) || item.schemaVersion !== 2
     || (item.mode === 'word-identification' && item.textHintsUsed !== true)
     || (item.purpose !== undefined && !['focused', 'mixed', 'diagnostic'].includes(item.purpose as string))
+    || (item.diagnosticLength !== undefined && !['short','full'].includes(item.diagnosticLength as string))
+    || (item.diagnosticVersion !== undefined && item.diagnosticVersion !== 'diagnostic-v2')
+    || (item.diagnosticGroups !== undefined && (!Number.isInteger(item.diagnosticGroups) || Number(item.diagnosticGroups)<1 || Number(item.diagnosticGroups)>200))
     || typeof item.completedAt !== 'string' || !/^\d{4}-\d{2}-\d{2}T/.test(item.completedAt) || !Number.isFinite(Date.parse(item.completedAt))
     || !Number.isInteger(item.correct) || !Number.isInteger(item.total)
     || (item.total as number) < 1 || (item.total as number) > 100
@@ -33,6 +36,9 @@ export function normalizeSession(value: unknown): PracticeSession | null {
   return {
     id: item.id as string, mode: item.mode as PracticeSession['mode'], schemaVersion: 2,
     ...(item.purpose ? { purpose: item.purpose as PracticeSession['purpose'] } : {}),
+    ...(item.diagnosticLength ? {diagnosticLength:item.diagnosticLength as PracticeSession['diagnosticLength']} : {}),
+    ...(item.diagnosticVersion ? {diagnosticVersion:item.diagnosticVersion as PracticeSession['diagnosticVersion']} : {}),
+    ...(item.diagnosticGroups !== undefined ? {diagnosticGroups:item.diagnosticGroups as number} : {}),
     completedAt: new Date(item.completedAt).toISOString(), languageId: item.languageId as string,
     contrastId: item.contrastId as string, correct: item.correct as number, total: item.total as number,
     mistakes, ...(typeof item.textHintsUsed === 'boolean' ? { textHintsUsed: item.textHintsUsed } : {}),

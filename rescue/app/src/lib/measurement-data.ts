@@ -61,6 +61,7 @@ export function measurementData(event: string, raw: EventData = {}): EventData |
     const n = raw[key]; if (Number.isInteger(n) && Number(n) >= 0 && Number(n) <= max) clean[key] = n;
   }
   const enums: Record<string, readonly string[]> = {
+    diagnostic_length:['short','full'], diagnostic_version:['diagnostic-v2'],
     activity_mode: ['abx-cross-word','word-identification'], session_kind:['focused','mixed','diagnostic'],
     plan:['monthly','lifetime'], surface:['pricing','practice','account','diagnostic','guide','support'],
     access_tier:['free','paid','lifetime'], ui_locale:['en','fr','de','es','it','zh','pt','ru','ja'],
