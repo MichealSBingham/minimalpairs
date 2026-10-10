@@ -4,6 +4,7 @@ import { createStripeAdapter } from '../providers/stripe.mjs';
 import { BillingLedgerBase } from './ledger.mjs';
 import { billingConfig, unavailable } from './config.mjs';
 import { billingLedgerName, wakeBillingLedger } from './scheduled.mjs';
+import {purchaseFeed} from './purchase-feed.mjs';
 
 export class BillingLedger extends BillingLedgerBase {
   createExternalPorts() {
@@ -20,6 +21,7 @@ export class BillingLedger extends BillingLedgerBase {
 
 export default {
   async fetch(request, env) {
+    if(new URL(request.url).pathname==='/internal/buyer-events')return purchaseFeed(request,env);
     try {
       const config = billingConfig(env);
       if (!config.serviceEnabled) return createBillingHandler(config, {})(request);

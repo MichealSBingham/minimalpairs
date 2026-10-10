@@ -9,5 +9,16 @@ ru:['Сообщить об аудио','Что звучит неправильн
 ja:['音声を報告','どのような問題ですか？','音が違う','単語の繰り返し','雑音・音のひずみ','キャンセル','送信中…','報告しました。ありがとうございます。','送信できませんでした。再試行してください。','アクセス解析の設定','サービスの改善にご協力いただけますか？','任意のGoogle Analyticsで訪問数や練習の利用状況を測定します。マイクの録音やアカウントのメールアドレスは送信しません。どちらを選んでも練習できます。','ブラウザーが追跡を拒否しているため、解析は無効です。','仕組みを見る','無効のままにする','利用状況の解析を許可','閉じる','設定を保存できませんでした。このページでは解析は無効です。','今回の練習はいかがでしたか？','任意','音声が不明瞭','説明が分かりにくい','簡単すぎる','難しすぎる','ちょうどよい','回答を選択','感想を送信','送信される情報','感想の送信は無効です。設定で任意の解析を有効にできます。','ありがとうございます。感想は送信待ちです。','感想を保存できませんでした。再試行してください。','回答、練習言語、音のグループを送信します。アカウント情報は含みません。'],
 zh:['报告音频问题','有什么问题？','发音错误','单词重复','杂音或失真','取消','正在发送…','已报告，谢谢。','发送失败，请重试。','分析设置','愿意帮助我们改善体验吗？','可选的Google Analytics用于统计访问和练习使用情况。不会发送麦克风录音或账户邮箱。无论是否允许，都可以练习。','浏览器要求不追踪，分析已关闭。','了解详情','保持关闭','允许使用情况分析','关闭','无法保存选择。本页的分析已关闭。','这次练习怎么样？','选填','音频不清晰','说明不清晰','太简单','太难','难度合适','选择一个回答','提交反馈','会分享什么？','反馈已关闭。你可以在设置中启用可选的分析。','谢谢，反馈正在等待发送。','无法保存反馈，请重试。','我们会分享你的回答、练习语言和语音组，不包含账户信息。'],
 };
-export function feedbackText(locale:string,index:number){return (rows[locale]||rows.en)[index]||rows.en[index];}
+const statisticalNotice: Record<string,string> = {
+en:'This choice applies to Google Analytics. We separately collect first-party usage and purchase statistics without analytics cookies.',
+es:'Esta elección se aplica a Google Analytics. Recopilamos por separado estadísticas propias de uso y compras sin cookies de analítica.',
+fr:'Ce choix concerne Google Analytics. Nous recueillons séparément nos statistiques d’utilisation et d’achat, sans cookies analytiques.',
+pt:'Esta escolha se aplica ao Google Analytics. Coletamos separadamente estatísticas próprias de uso e compras sem cookies de análise.',
+de:'Diese Auswahl gilt für Google Analytics. Eigene Nutzungs- und Kaufstatistiken erfassen wir separat ohne Analyse-Cookies.',
+it:'Questa scelta riguarda Google Analytics. Raccogliamo separatamente statistiche interne di utilizzo e acquisto senza cookie analitici.',
+ru:'Этот выбор относится к Google Analytics. Собственную статистику использования и покупок мы собираем отдельно, без аналитических cookie.',
+ja:'この選択はGoogle Analyticsに適用されます。利用状況と購入の自社統計は、解析用Cookieを使わず別途集計します。',
+zh:'此选择适用于Google Analytics。我们另行收集第一方使用和购买统计，不使用分析Cookie。'
+};
+export function feedbackText(locale:string,index:number){const text=(rows[locale]||rows.en)[index]||rows.en[index];return index===11?text+' '+(statisticalNotice[locale]||statisticalNotice.en):text;}
 export function feedbackTranslate(locale:string,text:string){const index=rows.en.indexOf(text);return index<0?text:feedbackText(locale,index);}

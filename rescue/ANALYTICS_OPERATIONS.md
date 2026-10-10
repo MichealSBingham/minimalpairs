@@ -1,5 +1,17 @@
 # MinimalPairs business and product measurement
 
+## October 10 update — supersedes consent dependency below
+
+First-party product reporting uses `/events` and private `/admin/analytics` on the existing audio-reporting service. Run `python3 rescue/audio-reports/fetch_product_metrics.py` to refresh `company/private/product-metrics-latest.json`. Failed fetches mean unavailable, never zero. Browser series start at this release; earlier verified purchases are backfilled but earlier browser activity cannot be reconstructed.
+
+The Google Analytics choice controls Google Analytics only. First-party events cover public page/source, language/contrast, practice start, first answer, every submitted answer, completion, exit, playback errors, diagnostics/report/offers, course signup, login and checkout handoff. Payloads have no raw referrer, word answers, email or account ID. Owner/local/WebDriver exclusions remain. Known crawlers are excluded; residual automated traffic is possible.
+
+Daily salted network/browser estimates join stages without analytics cookies or persistent browser IDs. These are not exact people or cross-day retention. Short-lived journey records expire within three days; aggregate totals remain 90 days. Attempt summaries include answered rounds, completed/exited attempts and inactive incomplete attempts. Exit is best-effort; inactive incomplete means no completion observed after 30 minutes, not proven abandonment. Mixed-session per-round contrast counts are available separately.
+
+Checkout snapshots limited source, public landing page, language, contrast, session kind, surface and a signed daily journey receipt in Stripe metadata independently of Google Analytics. Pending checkout snapshots stay frozen. The narrow authenticated billing feed provides verified paid current-product events to a ten-minute cloud collector; the Stripe credential remains in billing. Payment-event and checkout-created times are separate. Source is observed context, not buying motivation. Missing historical attribution remains unknown.
+
+Use `purchases` and `grossMinor` for confirmed revenue; `funnel.purchased` is the subset with an observed checkout and a surviving daily receipt. Do not divide historical backfilled purchases by newly instrumented visitors, combine these counts with GA4 or the older `/admin/usage`, or merge currencies. Purchase identifiers and customer identities are absent from the owner aggregate report.
+
 Updated 7 October 2026. This describes implemented events and how to interpret them; it does not claim that every report below has been saved in the Google Analytics UI.
 
 ## Sources of truth

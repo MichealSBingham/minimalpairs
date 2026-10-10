@@ -1,3 +1,4 @@
+import {collectBuyers,deliverBuyer,buyerStatus,seedBuyer} from './buyers.mjs';
 import {enqueue,deliverOne,suppressProviderEvent,verifyProviderWebhook} from './delivery.mjs';
 import {scheduleWeekly} from './weekly.mjs';
 // Consent and delivery infrastructure. Intake and sending are OFF until approved activation.
@@ -42,11 +43,17 @@ export class EmailAudience{
 
  async fetch(request){
   const path=new URL(request.url).pathname;
+  if(path==='/admin/buyers/tick'||path==='/admin/buyers/seed'){
+   if(!this.env.ADMIN_TOKEN||request.headers.get('Authorization')!==`Bearer ${this.env.ADMIN_TOKEN}`)return response({error:'Unauthorized'},401);
+   if(request.method!=='POST')return response({error:'Method not allowed'},405);
+   if(path.endsWith('/seed')){try{return response({seeded:await seedBuyer(this.ctx.storage,await readBody(request))});}catch{return response({error:'Invalid receipt'},400);}}
+   await collectBuyers(this.ctx.storage,this.env);await deliverBuyer(this.ctx.storage,this.env);return response(await buyerStatus(this.ctx.storage));
+  }
   if(path==='/admin/status'){
    if(!this.env.ADMIN_TOKEN||request.headers.get('Authorization')!==`Bearer ${this.env.ADMIN_TOKEN}`)return response({error:'Unauthorized'},401);
    if(request.method!=='GET')return response({error:'Method not allowed'},405);
    const states={};for(const job of (await this.ctx.storage.list({prefix:'outbox:',limit:5000})).values())states[job.state]=(states[job.state]||0)+1;
-   return response({sendingEnabled:this.env.SENDING_ENABLED==='true',intakeEnabled:this.env.INTAKE_ENABLED==='true',outbox:states,weekly:await this.ctx.storage.get('weeklySchedule')||null});
+   return response({sendingEnabled:this.env.SENDING_ENABLED==='true',intakeEnabled:this.env.INTAKE_ENABLED==='true',outbox:states,buyers:await buyerStatus(this.ctx.storage),weekly:await this.ctx.storage.get('weeklySchedule')||null});
   }
   if(path==='/webhooks/resend'){
    if(request.method!=='POST')return response({error:'Method not allowed'},405);
@@ -116,7 +123,7 @@ export class EmailAudience{
    if(!input||Object.keys(input).some(k=>k!=='token')||typeof input.token!=='string'||! /^[a-f0-9]{64}$/.test(input.token))return response({error:'Invalid request'},400);
    const hash=await digest(input.token);
    return this.ctx.storage.transaction(async tx=>{
-    const key=await tx.get('token:'+hash);if(key){const row=await tx.get(key);if(row&&row.status!=='suppressed'){if(row.verificationToken){await tx.delete('verify:'+await digest(row.verificationToken));delete row.verificationToken;delete row.verificationExpiresAt;}row.audit.push({event:'unsubscribed',at:new Date().toISOString()});row.status='suppressed';row.course=false;row.weekly=false;row.unsubscribedAt=new Date().toISOString();await tx.put(key,row);}}
+    const key=await tx.get('token:'+hash);if(key){const row=await tx.get(key);if(row&&row.status!=='suppressed'){if(row.verificationToken){await tx.delete('verify:'+await digest(row.verificationToken));delete row.verificationToken;delete row.verificationExpiresAt;}row.audit.push({event:'unsubscribed',at:new Date().toISOString()});row.status='suppressed';row.course=false;row.weekly=false;row.unsubscribedAt=new Date().toISOString();await tx.put(key,row);const otherKey=key.startsWith('buyer:')?key.replace('buyer:','subscriber:'):key.replace('subscriber:','buyer:');const other=await tx.get(otherKey);if(other){other.status='suppressed';other.course=false;other.weekly=false;other.audit.push({event:'unsubscribed',at:row.unsubscribedAt});await tx.put(otherKey,other);}}}
     return response({unsubscribed:true});
    });
   }
@@ -143,7 +150,9 @@ export class EmailAudience{
   });
  }
 }
-export default {async fetch(request,env){
+export default {async scheduled(event,env,ctx){
+ ctx.waitUntil(env.AUDIENCE.get(env.AUDIENCE.idFromName('audience-v1')).fetch(new Request('https://internal/admin/buyers/tick',{method:'POST',headers:{Authorization:`Bearer ${env.ADMIN_TOKEN}`}})));
+},async fetch(request,env){
  const origin=request.headers.get('Origin');
  if(request.method==='OPTIONS')return new Response(null,{status:ORIGINS.has(origin)?204:403,headers:ORIGINS.has(origin)?{'Access-Control-Allow-Origin':origin,'Access-Control-Allow-Methods':'POST','Access-Control-Allow-Headers':'Content-Type','Vary':'Origin'}:{}});
  const result=await env.AUDIENCE.get(env.AUDIENCE.idFromName('audience-v1')).fetch(request);

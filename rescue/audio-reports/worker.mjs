@@ -1,3 +1,5 @@
+import {productAnalytics,pruneProductAnalytics} from './product-analytics.mjs';
+import { aggregateRequest, pruneUsage, scheduleUsageCleanup } from './aggregate.mjs';
 import {queueNotification, deliverNext, notificationStatus} from './notifications.mjs';
 const origins=new Set(['https://minimalpairs.web.app','https://minimalpairs.co','https://www.minimalpairs.co']);
 const hex=/^[a-f0-9]{64}$/;
@@ -9,6 +11,8 @@ export class ReportInbox{
  constructor(ctx,env){this.ctx=ctx;this.env=env;}
  async fetch(request){
   const u=new URL(request.url),s=this.ctx.storage;
+  if(['/events','/admin/analytics','/internal/purchase'].includes(u.pathname))return productAnalytics(request,s,this.env);
+  if(['/usage','/admin/usage'].includes(u.pathname))return aggregateRequest(request,s,this.env.ADMIN_TOKEN);
   if(u.pathname==='/admin/notifications'){
    if(!this.env.ADMIN_TOKEN||request.headers.get('Authorization')!=='Bearer '+this.env.ADMIN_TOKEN)return json({error:'Unauthorized'},401);
    if(request.method==='POST'){
@@ -62,13 +66,16 @@ export class ReportInbox{
   });
  }
  async alarm(){
+  await pruneUsage(this.ctx.storage);
+  await pruneProductAnalytics(this.ctx.storage);
   const s=this.ctx.storage,today=new Date().toISOString().slice(0,10);
   for(const prefix of ['rate:','seen:']){let cursor;do{const rows=await s.list({prefix,limit:500,...(cursor?{startAfter:cursor}:{})});if(!rows.size)break;cursor=[...rows.keys()].at(-1);for(const key of rows.keys())if(!key.startsWith(prefix+today+':'))await s.delete(key);}while(cursor);}
   await deliverNext(s,this.env);
+  await scheduleUsageCleanup(s);
  }
 }
 export default{async fetch(request,env){
- const origin=request.headers.get('Origin');const admin=['/admin/reports','/admin/support','/admin/notifications'].includes(new URL(request.url).pathname);
+ const origin=request.headers.get('Origin');const admin=['/internal/purchase','/admin/analytics','/admin/usage','/admin/reports','/admin/support','/admin/notifications'].includes(new URL(request.url).pathname);
  if(!admin&&!origins.has(origin))return json({error:'Origin not allowed'},403);
  if(request.method==='OPTIONS')return new Response(null,{status:204,headers:{'Access-Control-Allow-Origin':origin,'Access-Control-Allow-Methods':'POST','Access-Control-Allow-Headers':'Content-Type','Vary':'Origin'}});
  const response=await env.REPORTS.getByName('inbox').fetch(request);const headers=new Headers(response.headers);headers.set('Cache-Control','no-store');if(origins.has(origin)){headers.set('Access-Control-Allow-Origin',origin);headers.set('Vary','Origin');}return new Response(response.body,{status:response.status,headers});

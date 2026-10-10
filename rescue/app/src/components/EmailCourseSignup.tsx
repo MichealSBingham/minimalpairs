@@ -1,3 +1,4 @@
+import {productEvent} from '../lib/product-reporting';
 import templates from '../../../company/email-course/templates.json';
 import { useState } from 'react';
 import { requestSubscription, subscriptionPayload } from '../lib/email-course.mjs';
@@ -7,7 +8,7 @@ export default function EmailCourseSignup({ endpoint, defaultLanguage = 'fr' }: 
 
  const [busy,setBusy]=useState(false); const [status,setStatus]=useState(''); const [done,setDone]=useState(false);
  async function submit(event: React.FormEvent) {event.preventDefault();if(busy||done)return;setStatus('');setBusy(true);
-  try {await requestSubscription(endpoint,subscriptionPayload({email,language,course:true,weekly:true}));setDone(true);setEmail('');setStatus('Your subscription request has been saved.');}
+  try {await requestSubscription(endpoint,subscriptionPayload({email,language,course:true,weekly:true}));void productEvent('course_signup',{language_id:language==='en-US-ga'?'en':language});setDone(true);setEmail('');setStatus('Your subscription request has been saved.');}
   catch(error){setStatus(error instanceof Error?error.message:'Please try again.');}finally{setBusy(false);}
  }
  return <section className="email-course-signup" aria-labelledby="email-course-title" style={{maxWidth:650,margin:'32px auto',padding:24,border:'1px solid var(--line)',borderRadius:12}}>

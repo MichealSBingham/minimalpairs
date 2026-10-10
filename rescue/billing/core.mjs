@@ -95,7 +95,7 @@ export function checkoutParameters(config, account, customerId, plan, analytics)
     mode: plan === 'lifetime' ? 'payment' : 'subscription', customer: customerId, client_reference_id: account.uid,
     line_items: [{ price: price.id, quantity: 1 }], payment_method_types: ['card'],
     ...(plan === 'lifetime' ? { payment_intent_data: { metadata: { firebaseUid: account.uid, billingSchema: String(BILLING_SCHEMA), plan: 'lifetime' } } } : { subscription_data: { metadata: { firebaseUid: account.uid, billingSchema: String(BILLING_SCHEMA) } } }),
-    metadata: { firebaseUid: account.uid, billingSchema: String(BILLING_SCHEMA), ...(plan === 'lifetime' ? {plan:'lifetime'} : {}), ...attributionMetadata(analytics) },
+    metadata: { firebaseUid: account.uid, billingSchema: String(BILLING_SCHEMA), plan, ...attributionMetadata(analytics) },
     success_url: `${config.appOrigin}/account?billing=return`, cancel_url: `${config.appOrigin}/pricing`,
     allow_promotion_codes: false,
   };
@@ -285,6 +285,9 @@ export function createBillingHandler(config, ports) {
         // Attribution is a reservation snapshot. A retry keeps the original data
         // (including no data), even after consent, campaign or locale changes.
         let parameters = checkoutParameters(config, account, customerId, body.plan, pending ? attributionFromMetadata(pending.parameters?.metadata) : body.analytics);
+        // Reservations made before monthly plan metadata was introduced retain
+        // their exact Stripe idempotency payload until they expire.
+        if(pending && body.plan !== 'lifetime' && pending.parameters?.metadata?.plan === undefined) delete parameters.metadata.plan;
         if (pending?.sessionId) {
           const existing = await ports.stripe.retrieveCheckoutSession(pending.sessionId);
           if (existing.customer !== customerId || existing.client_reference_id !== account.uid || existing.livemode !== config.expectedLivemode) fail('checkout_binding_invalid', 502);

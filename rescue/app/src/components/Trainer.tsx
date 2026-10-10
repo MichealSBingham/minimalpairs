@@ -20,7 +20,7 @@ import { runAnswerFeedback, answerCue } from '../lib/answer-feedback';
 import ReportRecording from './ReportRecording';
 import type {PlayedRecording} from '../lib/audio';
 import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from 'react';
-import { completeMeasuredPractice, measuredAudioFailure, measuredFirstAnswer, startMeasuredPractice } from '../lib/measurement';
+import { measuredPracticeAnswer, completeMeasuredPractice, measuredAudioFailure, measuredFirstAnswer, startMeasuredPractice } from '../lib/measurement';
 import { recommendReview, type ReviewRecommendation } from '../lib/review-recommendation';
 import { selectJourneyContrasts, type JourneyMode } from '../lib/journey';
 import {assignAvailableVoices, referenceVoices, playablePairs, type AvailableClip} from '../lib/round-voices';
@@ -115,8 +115,13 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
     active.finished = true;
     trackMeasuredPracticeEvent('practice_exit',{...active.data,total:active.answered,correct:active.correct,duration_ms:Date.now()-active.started});
   }
-  // A page in the back/forward cache can resume the same unfinished session.
-  useEffect(() => { const exit = (event: PageTransitionEvent) => { if (!event.persisted) recordExit(); }; window.addEventListener('pagehide',exit); return () => { window.removeEventListener('pagehide',exit); recordExit(); }; },[]);
+  // Leaving also counts when the browser caches the page for Back navigation.
+  useEffect(() => {
+    const exit = () => recordExit();
+    const resume = (event: PageTransitionEvent) => { if(event.persisted && measuredSession.current && !completingId.current) measuredSession.current.finished=false; };
+    window.addEventListener('pagehide',exit); window.addEventListener('pageshow',resume);
+    return () => { window.removeEventListener('pagehide',exit); window.removeEventListener('pageshow',resume); recordExit(); };
+  },[]);
   const [paywallNode, setPaywallNode] = useState<HTMLDivElement | null>(null);
   const paywallKey = locked && exerciseAccess !== 'checking' && exerciseAccess !== 'error' ? `${languageId}:${contrastId}` : '';
   useMeasuredExposure(paywallNode,paywallKey,'paywall_view',{surface:'practice',ui_locale:locale,language_id:languageId,contrast_id:contrastId,access_tier:'free'});
@@ -240,6 +245,7 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
     const category = question.order[reference]; const correct = category === question.target;
     if(measuredSession.current){measuredSession.current.answered++;if(correct) measuredSession.current.correct++;}
     if (index === 0) measuredFirstAnswer(attemptId.current, hintsUsed.current);
+    measuredPracticeAnswer(attemptId.current,{contrast_id:question.contrastId,round:index,correct:correct?1:0});
     busy.current = true;
     if (journeyMode !== 'diagnostic') answerCue(correct);
     setAnswer(reference);

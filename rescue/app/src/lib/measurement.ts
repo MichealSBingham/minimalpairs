@@ -1,3 +1,4 @@
+import {productEvent,productCheckoutContext} from './product-reporting';
 import { landingPath, acquisitionDetails, measurementData, measurementPath, recommendationAttribution, type EventData, type MeasurementEvent } from './measurement-data';
 
 declare global { interface Window { dataLayer?: unknown[]; gtag?: (...args: unknown[]) => void; } }
@@ -43,6 +44,9 @@ export function setAnalyticsExcluded(value: boolean) {
 function permitted() {
   return !analyticsExcluded() && !storageBlocked && Boolean(configuration()) && analyticsChoice() === 'allowed' && !browserDeclinesAnalytics();
 }
+// First-party reporting is separate from the optional Google Analytics choice.
+const statisticalAttempts = new Map<string, EventData>();
+function countUsage(event: string, data: EventData = {}) { void productEvent(event,data); }
 export function sessionFeedbackPermission(): 'allowed' | 'off' | 'unavailable' {
   if (!configuration()) return 'unavailable';
   return permitted() ? 'allowed' : 'off';
@@ -89,15 +93,8 @@ function landing() {
     return page;
   } catch { return undefined; }
 }
-/** Coarse purchase attribution only after analytics consent; never identity or URL data. */
-export function checkoutAttribution() {
-  if (!permitted()) return undefined;
-  const source = acquisition();
-  const locale = /^(en|es|fr|pt|de|it|ru|ja|zh)$/.test(document.documentElement.lang || '') ? document.documentElement.lang : 'en';
-  if (source.channel === 'unknown' || source.channel === 'internal') return undefined;
-  const page = landing();
-  return {...(page ? {landing_page:page} : {}), source:source.source || 'direct', medium:source.medium || 'none', ...(source.campaign ? {campaign:source.campaign} : {}), ui_locale:locale};
-}
+/** First-party coarse checkout context; Google Analytics consent is not consulted. */
+export async function checkoutAttribution() { return productCheckoutContext(); }
 function common() {
   const config = configuration()!;
   const path = measurementPath(window.location.pathname);
@@ -126,6 +123,7 @@ export function trackMeasurement(event: MeasurementEvent, raw: EventData = {}) {
   // Measurement is best-effort: an extension, storage policy or failed tag must
   // never block audio playback, answering a question, or saving a result.
   try {
+    if (!['page_view','practice_start','practice_complete','practice_first_answer','practice_audio_error','practice_exit','practice_group_complete','diagnostic_start','diagnostic_complete','diagnostic_results_view'].includes(event)) countUsage(event, raw);
     const data = measurementData(event, raw);
     if (!data || !permitted() || !loadTag()) return false;
     if (typeof window.gtag !== 'function') return false;
@@ -156,7 +154,7 @@ export function setAnalyticsChoice(choice: Exclude<Choice, null>) {
 }
 export function initializeMeasurement() {
   if (initialized || typeof window === 'undefined') return;
-  initialized = true; disabled(!permitted()); if (!permitted()) clearPendingMeasurement(); recordPage();
+  initialized = true; countUsage('page_view'); disabled(!permitted()); if (!permitted()) clearPendingMeasurement(); recordPage();
   window.addEventListener('storage', event => { if (event.key === CHOICE_KEY || event.key === EXCLUSION_KEY || event.key === null) { disabled(!permitted()); if (permitted()) { if (loaded) window.gtag?.('consent', 'update', { analytics_storage: 'granted' }); recordPage(); } else { clearPendingMeasurement(); if (loaded) window.gtag?.('consent', 'update', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' }); } window.dispatchEvent(new Event(CHOICE_EVENT)); } });
 }
 export function watchAnalyticsChoice(listener: () => void) { window.addEventListener(CHOICE_EVENT, listener); return () => window.removeEventListener(CHOICE_EVENT, listener); }
@@ -205,6 +203,10 @@ function takeRecommendation(target: EventData): EventData | null {
   } catch { return null; }
 }
 export function startMeasuredPractice(attemptId: string, data: EventData) {
+  if (!statisticalAttempts.has(attemptId)) {
+    if (statisticalAttempts.size >= 100) statisticalAttempts.delete(statisticalAttempts.keys().next().value!);
+    statisticalAttempts.set(attemptId, {...data, attempt_id:attemptId}); countUsage('practice_start', {...data, attempt_id:attemptId});
+  }
   if (attempts.has(attemptId)) return;
   recordRecommendationArrival();
   const recommendation = takeRecommendation(data);
@@ -222,22 +224,30 @@ export function startMeasuredPractice(attemptId: string, data: EventData) {
   }
 }
 export function measuredFirstAnswer(attemptId: string, hintsUsed: boolean) {
+  const stat=statisticalAttempts.get(attemptId); if(stat&&!stat.firstAnswered){stat.firstAnswered=true;countUsage('practice_first_answer',stat);}
   const attempt = attempts.get(attemptId); if (!attempt || attempt.firstAnswer) return;
   attempt.firstAnswer = true; trackMeasurement('practice_first_answer', { ...attempt.data, text_hints_used: hintsUsed, duration_ms: Date.now() - attempt.started });
 }
 export function measuredAudioFailure(attemptId: string, round: number) {
+  const stat=statisticalAttempts.get(attemptId); if(stat)countUsage('practice_audio_error',{...stat,round});
   const attempt = attempts.get(attemptId); if (!attempt || attempt.errors.has(round)) return;
   attempt.errors.add(round); trackMeasurement('practice_audio_error', { ...attempt.data, round });
 }
 export function completeMeasuredPractice(attemptId: string, result: EventData) {
+  const statistical = statisticalAttempts.get(attemptId);
+  if (statistical && !statistical.aggregateFinished) {statistical.aggregateFinished = true; countUsage('practice_complete', {...statistical,...result});}
   const attempt = attempts.get(attemptId); if (!attempt || attempt.finished) return;
   attempt.finished = true; trackMeasurement('practice_complete', { ...attempt.data, ...result, duration_ms: Date.now() - attempt.started });
   if (attempt.data.recommendation_id) trackMeasurement('review_practice_complete', { ...attempt.data, ...result, duration_ms: Date.now() - attempt.started });
 }
 
-/** Lifecycle events require a consented start; no orphan completion after late opt-in. */
+/** First-party lifecycle events are independent; GA events require a consented start. */
 export function trackMeasuredPracticeEvent(event: MeasurementEvent, raw: EventData) {
+  const stat=statisticalAttempts.get(String(raw.attempt_id)); if(stat)countUsage(event,{...stat,...raw});
   const attempt = attempts.get(String(raw.attempt_id));
   if(!attempt) return false;
   return trackMeasurement(event,{...attempt.data,...raw});
 }
+
+/** Every submitted answer, including sessions never completed or saved to an account. */
+export function measuredPracticeAnswer(attemptId:string,raw:EventData){const stat=statisticalAttempts.get(attemptId);if(stat)countUsage('practice_answer',{...stat,...raw});}

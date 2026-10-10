@@ -532,6 +532,12 @@ test('coarse attribution is snapshotted before Stripe and retries preserve it', 
   assert.deepEqual(f.state.pending.parameters,original);
  }
 });
+test('older monthly reservations without plan metadata remain resumable',async()=>{
+ const f=fixture();assert.equal((await f.handler(request())).status,200);
+ delete f.state.pending.parameters.metadata.plan;
+ assert.equal((await f.handler(request())).status,200);
+ assert.equal(f.state.pending.parameters.metadata.plan,undefined);
+});
 test('freeform attribution is dropped and normal checkout remains possible',async()=>{
  for(const analytics of [{source:'someone@example.com',medium:'organic',ui_locale:'en'},{source:'google',medium:'organic',ui_locale:'en',email:'private@example.invalid'},{source:'google',medium:'organic',ui_locale:'en',campaign:'https://secret.invalid/'},'private',null]){
   const f=fixture();assert.equal((await f.handler(request(undefined,{plan:'monthly',requestId,analytics}))).status,200);

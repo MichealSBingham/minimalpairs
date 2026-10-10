@@ -24,7 +24,15 @@
       ]
     }
   ],
+  "triggers": {
+    "crons": [
+      "*/10 * * * *"
+    ]
+  },
   "vars": {
+    "BUYER_COLLECTOR_ENABLED": "true",
+    "BUYER_SENDING_ENABLED": "true",
+    "BUYER_START_EPOCH": "1790812800",
     "INTAKE_ENABLED": "true",
     "SENDING_ENABLED": "true",
     "PUBLIC_ORIGIN": "https://minimalpairs-email-course.sirmichealbingham.workers.dev",
@@ -35,5 +43,15 @@
     "LAUNCH_BANKS": "en-US-ga,fr",
     "APPROVED_BANKS": "en-US-ga,fr",
     "APPROVED_TEMPLATE_SHA256": "765ac6fb9a56a46e7723b222808be4d892472179374ecc0a9b2f3d61c757b774"
-  }
+  },
+  "services": [
+    {
+      "binding": "REPORTING",
+      "service": "minimalpairs-audio-reports"
+    },
+    {
+      "binding": "BILLING_PURCHASES",
+      "service": "minimalpairs-billing"
+    }
+  ]
 }

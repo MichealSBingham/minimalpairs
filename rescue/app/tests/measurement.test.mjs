@@ -13,7 +13,7 @@ const suggestion = { language_id: 'fr', contrast_id: 'fr-u-y', audio_collection:
 function client(options = {}) {
   const storage = options.storage || new Map(options.choice ? [[CHOICE, options.choice]] : []);
   const session = options.session || new Map();
-  const scripts = [], cookies = [];
+  const scripts = [], cookies = [], aggregates = [];
   const events = new EventTarget();
   const window = {
     location: { origin: 'https://minimalpairs.web.app', hostname: 'minimalpairs.web.app', pathname: '/practice', search: '?email=private@example.invalid', hash: '#secret' },
@@ -36,11 +36,14 @@ function client(options = {}) {
   const navigator = { doNotTrack: options.dnt, globalPrivacyControl: options.gpc, webdriver: options.webdriver };
   const compiled = ts.transpileModule(readFileSync(new URL('../src/lib/measurement.ts', import.meta.url), 'utf8'), { compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 } }).outputText;
   const exports = {};
-  new Function('require', 'exports', 'window', 'document', 'navigator', 'Event', compiled)(name => { assert.equal(name, './measurement-data'); return data; }, exports, window, document, navigator, Event);
+  const reportingCode=ts.transpileModule(readFileSync(new URL('../src/lib/product-reporting.ts',import.meta.url),'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
+  const reporting={};const fetcher=async(url,options)=>{aggregates.push({url,...options,data:JSON.parse(options.body)});return {ok:false};};
+  new Function('require','exports','window','document','navigator','localStorage','fetch',reportingCode)(()=>data,reporting,window,document,navigator,window.localStorage,fetcher);
+  new Function('require', 'exports', 'window', 'document', 'navigator', 'Event', 'fetch', compiled)(name => name==='./product-reporting'?reporting:data, exports, window, document, navigator, Event, fetcher);
   const calls = () => (window.dataLayer || []).map(args => Array.from(args));
   const measured = () => calls().filter(call => call[0] === 'event');
   const storageEvent = key => { const event = new Event('storage'); Object.defineProperty(event, 'key', { value: key }); window.dispatchEvent(event); };
-  return { api: exports, scripts, cookies, window, document, storage, session, calls, measured, storageEvent };
+  return { api: exports, scripts, cookies, window, document, storage, session, calls, measured, storageEvent, aggregates };
 }
 
 test('measurement remains absent before consent and after declining', () => {
@@ -336,18 +339,8 @@ test('business payloads discard words, identity, payment IDs and error text',()=
  for(const event of ['plan_selected','begin_checkout','checkout_error','audio_report_submitted','support_submitted','guide_audio_play','plans_view']){const clean=data.measurementData(event,{plan:'lifetime',language_id:'es',reason:'noise',topic:'billing',email:'private@example.com',word:'cosa',uid:'secret',transaction_id:'secret',error:'secret'});assert.ok(clean);assert.doesNotMatch(JSON.stringify(clean),/private|secret|cosa/);}
 });
 
-test('checkout attribution is coarse, consented, and excluded for owner traffic', () => {
-  const c = client(); assert.equal(c.api.checkoutAttribution(), undefined);
-  c.api.setAnalyticsChoice('allowed');
-  assert.deepEqual(c.api.checkoutAttribution(), {landing_page:'/practice',source:'google',medium:'organic',ui_locale:'en'});
-  c.api.setAnalyticsExcluded(true); assert.equal(c.api.checkoutAttribution(), undefined);
-});
-test('Yahoo acquisition survives billing return without leaking queries', () => {
-  const c = client({choice:'allowed'}); c.document.referrer='https://search.yahoo.com/search?p=secret';
-  assert.equal(c.api.checkoutAttribution().source,'yahoo');
-  c.document.referrer='https://checkout.stripe.com/c/pay/private';
-  assert.deepEqual(c.api.checkoutAttribution(),{landing_page:'/practice',source:'yahoo',medium:'organic',ui_locale:'en'});
-});
+
+
 test('enum payloads cannot smuggle nested free text via string coercion', () => {
   const nested = {toString:()=> 'monthly',email:'private@example.invalid'};
   assert.equal(data.measurementData('begin_checkout',{plan:nested}),null);
@@ -355,7 +348,7 @@ test('enum payloads cannot smuggle nested free text via string coercion', () => 
 });
 
 test('WebDriver browsers never emit analytics even with prior consent', () => {
- const c=client({choice:'allowed',webdriver:true}); c.api.initializeMeasurement(); c.api.startMeasuredPractice(attempt,trial); assert.deepEqual(c.calls(),[]); assert.equal(c.api.checkoutAttribution(),undefined);
+ const c=client({choice:'allowed',webdriver:true}); c.api.initializeMeasurement(); c.api.startMeasuredPractice(attempt,trial); assert.deepEqual(c.calls(),[]);
 });
 
 test('AI discovery uses fixed provider labels, never prompts or referring paths', () => {
@@ -367,7 +360,7 @@ test('AI discovery uses fixed provider labels, never prompts or referring paths'
     assert.equal(c.measured()[0][2].acquisition_channel,'ai_referral');
     assert.equal(c.measured()[0][2].campaign_source,source);
     c.document.referrer='https://minimalpairs.web.app/pricing';
-    assert.deepEqual(c.api.checkoutAttribution(),{landing_page:'/practice',source,medium:'referral',ui_locale:'en'});
+
     assert.doesNotMatch(JSON.stringify(c.calls()),/private-conversation|prompt|secret/);
   }
 });
@@ -379,27 +372,8 @@ test('AI UTM links work without referrers and spoofed domains are not AI', () =>
 });
 
 
-test('landing attribution retains the first consented public page through checkout and strips private URL data', () => {
- const c=client({choice:'allowed'});
- c.window.location.pathname='/fr/learn/fr-u-y'; c.api.initializeMeasurement();
- c.window.location.pathname='/pricing'; c.document.referrer='https://minimalpairs.web.app/fr/learn/fr-u-y';
- assert.equal(c.api.checkoutAttribution().landing_page,'/fr/learn/fr-u-y');
- assert.ok(c.measured().every(call=>call[2].landing_page==='/fr/learn/fr-u-y'));
- c.api.setAnalyticsChoice('declined'); assert.equal(c.session.has('minimalpairs.analytics-landing.v1'),false);
- c.window.location.pathname='/pricing'; c.document.referrer=''; c.api.setAnalyticsChoice('allowed');
- assert.equal(c.api.checkoutAttribution().landing_page,'/pricing');
-});
-test('late consent never reconstructs an earlier landing and malformed or expired storage is discarded', () => {
- const c=client(); c.window.location.pathname='/learn/fr-u-y';c.api.initializeMeasurement();
- assert.equal(c.session.has('minimalpairs.analytics-landing.v1'),false);
- c.window.location.pathname='/pricing';c.api.setAnalyticsChoice('allowed');
- assert.equal(c.api.checkoutAttribution().landing_page,'/pricing');
- for(const stored of [{at:Date.now()-31*60000,page:'/learn/fr-u-y'},{at:Date.now()+10000,page:'/learn/fr-u-y'},{at:Date.now(),page:'/learn/en-private-customer-name'}]) {
-  c.session.set('minimalpairs.analytics-landing.v1',JSON.stringify(stored));
-  assert.equal(c.api.checkoutAttribution().landing_page,'/pricing');
- }
- c.api.setAnalyticsExcluded(true);assert.equal(c.session.has('minimalpairs.analytics-landing.v1'),false);
-});
+
+
 test('fixed landing route allowlist excludes account details, invented guide IDs and external URLs',()=>{
  assert.equal(data.landingPath('/fr/learn/fr-u-y/?email=private@example.com#token'),'/fr/learn/fr-u-y');
  for(const path of ['/account','/restore-access','/learn/en-private-customer-name','https://minimalpairs.co/pricing','//evil.test','/pricing/extra','/learn/en-%40private'])assert.equal(data.landingPath(path),undefined);
@@ -424,9 +398,31 @@ for (const [referrer,source,medium,channel] of [
   assert.equal(config.acquisition_channel,channel);assert.equal(config.page_referrer,'');
   assert.equal(config.acquisition_source,source);assert.equal(config.acquisition_medium,medium);
   c.document.referrer='https://minimalpairs.web.app/french-minimal-pairs';c.window.location.pathname='/practice';
-  const attribution=c.api.checkoutAttribution();
-  assert.equal(attribution.source,source);assert.equal(attribution.medium,medium);
-  assert.equal(attribution.landing_page,'/french-minimal-pairs');
+
   assert.doesNotMatch(JSON.stringify(c.calls()), /q=private|comments\/private|c\/private/);
-  c.api.setAnalyticsChoice('declined');assert.equal(c.api.checkoutAttribution(),undefined);
+  c.api.setAnalyticsChoice('declined');
+});
+
+test('anonymous counters work before a banner choice without sending identifying fields',()=>{
+ const c=client({environment:'production'}); c.api.initializeMeasurement();
+ c.api.startMeasuredPractice(attempt,trial);c.api.startMeasuredPractice(attempt,trial);
+ c.api.completeMeasuredPractice(attempt,{total:12,correct:9});c.api.completeMeasuredPractice(attempt,{total:12});
+ assert.deepEqual(c.aggregates.map(x=>x.data.event),['page_view','practice_start','practice_complete']);
+ assert.equal(c.aggregates.at(-1).data.total,12);
+ assert.doesNotMatch(JSON.stringify(c.aggregates),/private@example|secret/);
+ assert.equal(c.aggregates[0].credentials,'omit');assert.equal(c.aggregates[0].referrerPolicy,'no-referrer');
+ assert.deepEqual(c.calls(),[]);assert.deepEqual(c.scripts,[]);
+});
+test('owner and test exclusions remain separate from Google Analytics choices',()=>{
+ for(const opts of [{webdriver:true}]){
+ const c=client({environment:'production',...opts});c.api.initializeMeasurement();c.api.startMeasuredPractice(attempt,trial);c.api.completeMeasuredPractice(attempt,{total:12});assert.equal(c.aggregates.length,0);
+ }
+ const c=client({environment:'production'});c.api.startMeasuredPractice(attempt,trial);c.api.setAnalyticsChoice('declined');c.api.completeMeasuredPractice(attempt,{total:12});assert.equal(c.aggregates.length,2);
+});
+
+test('first-party partial sessions and checkout operate when Google Analytics is declined',async()=>{
+ const c=client({environment:'production',choice:'declined'});c.api.initializeMeasurement();c.api.startMeasuredPractice(attempt,trial);c.api.measuredFirstAnswer(attempt,false);c.api.measuredPracticeAnswer(attempt,{round:0,correct:1});c.api.trackMeasuredPracticeEvent('practice_exit',{attempt_id:attempt,total:1});
+ const context=await c.api.checkoutAttribution();assert.equal(context.source,'google');assert.equal(context.ui_locale,'en');assert.deepEqual(c.scripts,[]);assert.deepEqual(c.calls(),[]);
+ for(const e of ['page_view','practice_start','practice_first_answer','practice_answer','practice_exit','checkout_context'])assert.ok(c.aggregates.some(x=>x.data.event===e),e);
+ c.api.setAnalyticsExcluded(true);assert.equal(await c.api.checkoutAttribution(),undefined);
 });

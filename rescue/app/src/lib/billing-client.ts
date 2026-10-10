@@ -96,7 +96,7 @@ function destination(result: unknown, kind: 'checkout' | 'portal'): string {
 export async function createMembershipCheckout(plan: MembershipPlan, requestId: string, expectedUserId: string): Promise<string> {
   if (!['monthly', 'annual', 'lifetime'].includes(plan) || !requestIdPattern.test(requestId)) return Promise.reject(failure('billing/invalid-request', 'Choose a membership plan and try again.'));
   let analytics: unknown;
-  try { analytics = (await import('./measurement')).checkoutAttribution(); } catch { /* Optional analytics must never block checkout. */ }
+  try { analytics = await (await import('./measurement')).checkoutAttribution(); } catch { /* Optional analytics must never block checkout. */ }
   return destination(await request('checkout', expectedUserId, { plan, requestId, ...(analytics ? { analytics } : {}) }), 'checkout');
 }
 export async function createMembershipPortal(expectedUserId: string): Promise<string> {
