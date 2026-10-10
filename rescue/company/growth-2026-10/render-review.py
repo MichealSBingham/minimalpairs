@@ -1,4 +1,4 @@
-"""Render exact, unsent outreach payloads and their local approval desk. No network."""
+"""Render exact outreach payloads and their approval/delivery desk. No network."""
 import hashlib
 import html
 import json
@@ -14,6 +14,12 @@ prospects = read('prospects.json')['prospects']
 social = read('social-drafts.json')['posts']
 tracking = read('tracking-status.json') if (ROOT / 'tracking-status.json').exists() else {'summary': 'Click and open tracking setup in progress.'}
 reddit = read('reddit-launch.json') if (ROOT / 'reddit-launch.json').exists() else None
+approval = read('message-approval.json') if (ROOT / 'message-approval.json').exists() else {'outreach': []}
+approved_by_id = {m['id']: m for m in approval['outreach']}
+def delivery_record(message, channel, digest, digest_key):
+    old = approved_by_id.get(message['id'], {})
+    approved = old.get('approved', False) and old.get(digest_key) == digest
+    return {'id': message['id'], 'channel': channel, digest_key: digest, 'approved': approved, 'approvedAt': old.get('approvedAt') if approved else None, 'sent': bool(approved and message.get('sent')), 'deliveryStatus': message.get('deliveryStatus', 'pending') if approved else 'approval required'}
 out = ROOT / 'email-previews'
 out.mkdir(exist_ok=True)
 brand = '<span style="font-family:Georgia,serif;font-size:28px;color:#24231e">Minimal<span style="color:#b7442b;font-style:italic">Pairs</span></span><span style="display:inline-block;font-family:Georgia,serif;font-size:13px;color:#716d63;margin-left:12px;white-space:nowrap">/ˈmɪnɪməl pɛəz/</span>'
@@ -39,7 +45,7 @@ def email_html(body):
 parts = ['''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MinimalPairs growth approval desk</title><style>
 *{box-sizing:border-box}body{font:16px/1.6 system-ui;background:#f3eee3;color:#24231e;margin:0}main{max-width:1000px;margin:auto;padding:36px 22px}h1,h2{font-family:Georgia,serif;font-weight:400}h1{font-size:clamp(32px,5vw,48px);line-height:1.1}a{color:#28588a}details,article{background:#fffdf7;border:1px solid #ded5c6;border-radius:12px;padding:20px;margin:15px 0}summary{cursor:pointer;font-weight:600}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:15px/1.65 system-ui}small,.muted{color:#716d63}table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:12px;border-bottom:1px solid #ddd;text-align:left;vertical-align:top}.scroll{overflow:auto}.notice{padding:20px;background:#e8eee3;border-radius:10px}.metadata{overflow-wrap:anywhere}.frame{max-width:640px;margin:22px auto}.frame.mobile{max-width:375px}iframe{width:100%;height:1100px;border:0;background:#f3eee3;border-radius:12px}button{font:inherit;cursor:pointer;border:1px solid #cfc6b7;background:#fffdf7;padding:8px 14px;border-radius:5px}button[aria-pressed=true]{background:#24231e;color:white}.tabs{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.tag{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#716d63}nav{display:flex;gap:20px;flex-wrap:wrap}
 </style></head><body><main>''', brand,
-        '<h1>Your growth approval desk.</h1><p>The revised emails are ready to inspect. Nothing in this batch has been sent.</p><div class="notice"><strong>Personal emails, with light branding.</strong><p>Email recipients receive the HTML shown below plus a plain-text alternative. Contact forms use plain text. The logo includes your IPA, and each message explains that its challenge is a sample from the wider library.</p><p><strong>Tracking:</strong> ' + esc(tracking['summary']) + '</p><p class="muted">Opens are approximate; clicks can include security scanners. Website links carry campaign tags. Contact-form submissions have no email-open tracking.</p></div><nav><a href="#outreach">10 outreach drafts</a><a href="../email-course/index.html">Course email previews</a><a href="#social">6 social drafts</a><a href="#prospects">Prospects</a></nav><section id="outreach"><h2>Review the exact messages.</h2><p>Approve a draft by its ID, or request edits. This page cannot send emails. The compact postal address and unsubscribe footer apply to promotional emails.</p>']
+        '<h1>Your growth approval desk.</h1><p>The reviewed outreach and English/French listening emails are approved. Delivery status is recorded below.</p><div class="notice"><strong>Personal emails, with light branding.</strong><p>Email recipients receive the HTML shown below plus a plain-text alternative. Contact forms use plain text. The logo includes your IPA, and each message explains that its challenge is a sample from the wider library.</p><p><strong>Tracking:</strong> ' + esc(tracking['summary']) + '</p><p class="muted">Opens are approximate; clicks can include security scanners. Website links carry campaign tags. Contact-form submissions have no email-open tracking.</p></div><nav><a href="#outreach">10 outreach drafts</a><a href="../email-course/index.html">Course email previews</a><a href="#social">6 social drafts</a><a href="#prospects">Prospects</a></nav><section id="outreach"><h2>Review the exact messages.</h2><p>Approval is tied to the exact reviewed wording. This page shows the messages and their delivery status. The compact postal address and unsubscribe footer apply to promotional emails.</p>']
 manifest = []
 for m in drafts['messages']:
     is_email = not m['channel'].startswith('https://')
@@ -47,7 +53,7 @@ for m in drafts['messages']:
     assert '—' not in m['subject']
     assert 'If this is not relevant' not in body
     assert 'minimal-pair' in body.lower() or 'minimal pair' in body.lower()
-    parts.append('<details id="' + m['id'] + '"' + (' open' if m['id'] == 'P05' else '') + '><summary>' + m['id'] + ' · ' + esc(m['recipient']) + '</summary><p class="tag">' + ('Email' if is_email else 'Contact form') + ' · Awaiting approval</p><p class="metadata"><strong>From:</strong> ' + esc(m['fromAddress']) + '<br><strong>To / channel:</strong> ' + esc(m['channel']) + '<br><strong>Subject:</strong> ' + esc(m['subject']) + '</p>')
+    parts.append('<details id="' + m['id'] + '"' + (' open' if m['id'] == 'P05' else '') + '><summary>' + m['id'] + ' · ' + esc(m['recipient']) + '</summary><p class="tag">' + ('Email' if is_email else 'Contact form') + ' · ' + esc(m.get('deliveryStatus', 'Awaiting delivery' if m.get('approved') else 'Awaiting approval')) + '</p><p class="metadata"><strong>From:</strong> ' + esc(m['fromAddress']) + '<br><strong>To / channel:</strong> ' + esc(m['channel']) + '<br><strong>Subject:</strong> ' + esc(m['subject']) + '</p>')
     if is_email:
         text = body + '\n\nMinimalPairs\n' + address + '\nTo unsubscribe, reply "unsubscribe".\n'
         rendered = email_html(body)
@@ -56,16 +62,16 @@ for m in drafts['messages']:
         (out / (m['id'] + '.payload.json')).write_text(raw)
         (out / (m['id'] + '.html')).write_text(rendered)
         (out / (m['id'] + '.txt')).write_text(text)
-        manifest.append({'id': m['id'], 'channel': 'email', 'payloadSha256': hashlib.sha256(raw.encode()).hexdigest(), 'approved': False, 'sent': False})
+        manifest.append(delivery_record(m, 'email', hashlib.sha256(raw.encode()).hexdigest(), 'payloadSha256'))
         parts.append('<div class="tabs"><button type="button" aria-pressed="true" onclick="setWidth(this,false)">Desktop</button><button type="button" aria-pressed="false" onclick="setWidth(this,true)">Phone</button><a href="email-previews/' + m['id'] + '.html" target="_blank">Open email on its own ↗</a></div><div class="frame"><iframe title="Exact email preview for ' + esc(m['recipient']) + '" loading="lazy" sandbox="allow-popups allow-popups-to-escape-sandbox" src="email-previews/' + m['id'] + '.html"></iframe></div><details><summary>Plain-text alternative</summary><pre>' + esc(text) + '</pre></details>')
     else:
         (out / (m['id'] + '.txt')).write_text(body + '\n')
-        manifest.append({'id': m['id'], 'channel': 'contact form', 'textSha256': hashlib.sha256((body + '\n').encode()).hexdigest(), 'approved': False, 'sent': False})
+        manifest.append(delivery_record(m, 'contact form', hashlib.sha256((body + '\n').encode()).hexdigest(), 'textSha256'))
         parts.append('<pre>' + esc(body) + '</pre>')
     parts.append('</details>')
 parts.append('</section><section id="social"><h2>Reddit launch & shareable challenges.</h2>')
 if reddit:
-    parts.append('<p>Reddit is authorized. One challenge post is published and two moderator requests are sent. Email outreach and course delivery still await approval. Reddit follow-up is included in the existing morning run.</p>')
+    parts.append('<p>Reddit is authorized. One challenge post is published and two moderator requests are sent. The separate outreach and English/French course messages are also approved. Reddit follow-up is included in the existing morning run.</p>')
     for action in reddit['actions']:
         parts.append('<details><summary>' + esc(action['id'] + ' · ' + action['community'] + ' · ' + action['status']) + '</summary><p><a href="' + esc(action['url']) + '" target="_blank">Open on Reddit ↗</a></p><strong>' + esc(action['title']) + '</strong><pre>' + esc(action['body']) + '</pre></details>')
     parts.append('<p class="muted">Campaign: reddit / social / listening-challenge. Visits and purchases remain subject to measurement coverage; posting is not proof of sales.</p>')
@@ -75,7 +81,7 @@ for p in social:
 parts.append('</section><section id="prospects"><h2>20 researched prospects.</h2><div class="scroll"><table><tr><th>Prospect</th><th>Why this audience</th><th>Status</th></tr>')
 for p in prospects:
     parts.append('<tr><td>' + p['id'] + ' · <a href="' + esc(p['source']) + '">' + esc(p['name']) + '</a></td><td>' + esc(p['fit']) + '</td><td>' + esc(p['status']) + '</td></tr>')
-parts.append('''</table></div></section><article><h2>Commercial terms.</h2><p>$0 upfront spend. $29 lifetime or $7/month. The proposed referral pilot is 30% of a first attributed purchase excluding tax and refunds; attribution and payout terms must be agreed before promotion. No payouts without owner approval.</p><p>The $99 five-student lifetime pack remains conditional on interest from at least two teachers. Course sending remains paused pending exact-copy approval.</p></article></main><script>function setWidth(button,mobile){const panel=button.closest('details');panel.querySelector('.frame').classList.toggle('mobile',mobile);panel.querySelectorAll('.tabs button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));}</script></body></html>''')
+parts.append('''</table></div></section><article><h2>Commercial terms.</h2><p>$0 upfront spend. $29 lifetime or $7/month. The proposed referral pilot is 30% of a first attributed purchase excluding tax and refunds; attribution and payout terms must be agreed before promotion. No payouts without owner approval.</p><p>The $99 five-student lifetime pack remains conditional on interest from at least two teachers. The approved English/French course is activated with a 20-email daily cap. Other language drafts remain inactive.</p></article></main><script>function setWidth(button,mobile){const panel=button.closest('details');panel.querySelector('.frame').classList.toggle('mobile',mobile);panel.querySelectorAll('.tabs button').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));}</script></body></html>''')
 (ROOT / 'index.html').write_text(''.join(parts))
-(out / 'manifest.json').write_text(json.dumps({'status': 'DRAFT ONLY; exact payload hashes require owner approval before sending', 'messages': manifest}, indent=2) + '\n')
-print(f'Rendered {len(manifest)} unsent drafts, including {sum(m["channel"] == "email" for m in manifest)} HTML emails. No messages sent.')
+(out / 'manifest.json').write_text(json.dumps({'status': 'Exact-copy approvals and delivery state; changed payloads require a new approval', 'messages': manifest}, indent=2) + '\n')
+print(f'Rendered {len(manifest)} message records; {sum(m["sent"] for m in manifest)} sent/submitted. Rendering sends no messages.')

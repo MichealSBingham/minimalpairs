@@ -25,14 +25,15 @@
     }
   ],
   "vars": {
-    "INTAKE_ENABLED": "false",
-    "SENDING_ENABLED": "false",
+    "INTAKE_ENABLED": "true",
+    "SENDING_ENABLED": "true",
     "PUBLIC_ORIGIN": "https://minimalpairs-email-course.sirmichealbingham.workers.dev",
     "FROM_ADDRESS": "Micheal at MinimalPairs <micheal@minimalpairs.co>",
-    "DAILY_SEND_CAP": "0",
+    "DAILY_SEND_CAP": "20",
     "POSTAL_ADDRESS": "140 E 14th St, New York, NY 10003",
-    "WEEKLY_SERIES_READY": "false",
+    "WEEKLY_SERIES_READY": "true",
     "LAUNCH_BANKS": "en-US-ga,fr",
-    "APPROVED_BANKS": ""
+    "APPROVED_BANKS": "en-US-ga,fr",
+    "APPROVED_TEMPLATE_SHA256": "765ac6fb9a56a46e7723b222808be4d892472179374ecc0a9b2f3d61c757b774"
   }
 }
