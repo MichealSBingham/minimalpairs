@@ -13,6 +13,7 @@ drafts = read('outreach-drafts.json')
 prospects = read('prospects.json')['prospects']
 social = read('social-drafts.json')['posts']
 tracking = read('tracking-status.json') if (ROOT / 'tracking-status.json').exists() else {'summary': 'Click and open tracking setup in progress.'}
+reddit = read('reddit-launch.json') if (ROOT / 'reddit-launch.json').exists() else None
 out = ROOT / 'email-previews'
 out.mkdir(exist_ok=True)
 brand = '<span style="font-family:Georgia,serif;font-size:28px;color:#24231e">Minimal<span style="color:#b7442b;font-style:italic">Pairs</span></span><span style="display:inline-block;font-family:Georgia,serif;font-size:13px;color:#716d63;margin-left:12px;white-space:nowrap">/ˈmɪnɪməl pɛəz/</span>'
@@ -62,7 +63,13 @@ for m in drafts['messages']:
         manifest.append({'id': m['id'], 'channel': 'contact form', 'textSha256': hashlib.sha256((body + '\n').encode()).hexdigest(), 'approved': False, 'sent': False})
         parts.append('<pre>' + esc(body) + '</pre>')
     parts.append('</details>')
-parts.append('</section><section id="social"><h2>Six shareable challenges.</h2><p>The links already work. Posting on your behalf requires the chosen account, community and exact post approval. Reddit communities have their own promotion rules.</p>')
+parts.append('</section><section id="social"><h2>Reddit launch & shareable challenges.</h2>')
+if reddit:
+    parts.append('<p>Reddit is authorized. One challenge post is published and two moderator requests are sent. Email outreach and course delivery still await approval. Reddit follow-up is included in the existing morning run.</p>')
+    for action in reddit['actions']:
+        parts.append('<details><summary>' + esc(action['id'] + ' · ' + action['community'] + ' · ' + action['status']) + '</summary><p><a href="' + esc(action['url']) + '" target="_blank">Open on Reddit ↗</a></p><strong>' + esc(action['title']) + '</strong><pre>' + esc(action['body']) + '</pre></details>')
+    parts.append('<p class="muted">Campaign: reddit / social / listening-challenge. Visits and purchases remain subject to measurement coverage; posting is not proof of sales.</p>')
+parts.append('<h3>Six reusable challenge drafts.</h3><p>These captions have not been posted as separate messages. Other social accounts still require destination approval.</p>')
 for p in social:
     parts.append('<details><summary>' + p['id'] + ' · ' + esc(p['body'].splitlines()[0]) + '</summary><pre>' + esc(p['body']) + '</pre></details>')
 parts.append('</section><section id="prospects"><h2>20 researched prospects.</h2><div class="scroll"><table><tr><th>Prospect</th><th>Why this audience</th><th>Status</th></tr>')
