@@ -1,3 +1,4 @@
+import {sealCheckoutContext,queuePlausiblePurchase,plausiblePurchaseStatus} from './plausible-purchases.mjs';
 import {sanitizeAttribution} from '../billing/analytics.mjs';
 import {landingPath} from '../app/src/lib/landing-path.mjs';
 const EVENTS=new Set(['page_view','practice_start','practice_first_answer','practice_answer','practice_complete','practice_exit','practice_audio_error','practice_group_complete','diagnostic_start','diagnostic_complete','diagnostic_results_view','diagnostic_report_preview','diagnostic_report_unlock_click','diagnostic_report_open','plans_view','paywall_view','plan_selected','begin_checkout','checkout_resumed','checkout_error','login','guide_audio_play','challenge_start','challenge_complete','course_signup','checkout_context']);
@@ -29,7 +30,7 @@ export async function productAnalytics(request,storage,env,now=Date.now()){
   if(request.method!=='GET')return new Response(null,{status:405});
   await pruneProductAnalytics(storage,now);
   const attemptSummary={};for(const j of (await storage.list({prefix:'productJourney:',limit:10000})).values())for(const a of Object.values(j.attempts||{})){const key=[j.day,a.language,a.contrast].join('|'),v=attemptSummary[key]||={attempts:0,answeredRounds:0,completed:0,exited:0,inactiveIncomplete:0};v.attempts++;v.answeredRounds+=a.answers||0;if(a.completed)v.completed++;else if(a.exited)v.exited++;else if(now-a.lastAt>30*60000)v.inactiveIncomplete++;}
-  return ok({version:1,attemptSummary,checkedAt:new Date(now).toISOString(),timezone:'UTC',definition:'Daily estimated visitors; no cross-day or cross-device identity. Funnels count ordered stages within a daily estimate. Payments are server-verified; purchase source is observed context, not motivation.',days:Object.fromEntries(await storage.list({prefix:'productDay:',limit:100})),latestVerifiedPurchases:[...(await storage.list({prefix:'productPurchase:',limit:1000})).values()].sort((a,b)=>b.recordedAt.localeCompare(a.recordedAt)).slice(0,50)});
+  return ok({version:1,attemptSummary,plausiblePurchases:await plausiblePurchaseStatus(storage),checkedAt:new Date(now).toISOString(),timezone:'UTC',definition:'Daily estimated visitors; no cross-day or cross-device identity. Funnels count ordered stages within a daily estimate. Payments are server-verified; purchase source is observed context, not motivation.',days:Object.fromEntries(await storage.list({prefix:'productDay:',limit:100})),latestVerifiedPurchases:[...(await storage.list({prefix:'productPurchase:',limit:1000})).values()].sort((a,b)=>b.recordedAt.localeCompare(a.recordedAt)).slice(0,50)});
  }
  if(path==='/internal/purchase'){
   if(!env.REPORTING_TOKEN||request.headers.get('Authorization')!=='Bearer '+env.REPORTING_TOKEN)return new Response(null,{status:401});
@@ -45,6 +46,7 @@ export async function productAnalytics(request,storage,env,now=Date.now()){
    const j=journeyKey&&await tx.get(journeyKey),day=dayOf((Number.isInteger(p.paidAt)&&p.paidAt>=p.created&&p.paidAt*1000<=now+60000?p.paidAt:p.created)*1000),d=await tx.get('productDay:'+day)||emptyDay();
    d.purchases++;increment(d.grossMinor,p.currency,p.amount);const source=(attribution.source&&attribution.source!=='unknown'?attribution.source:null)||(j?.source&&j.source!=='unknown'?j.source:null)||'unattributed',language=attribution.language||j?.language||'unknown';increment(d.purchaseSources,source);increment(d.purchaseLanguages,language);
    if(j&&!j.purchased){j.purchased=true;const jd=day===j.day?d:await tx.get('productDay:'+j.day)||emptyDay();updateFunnel(j,jd);await tx.put(journeyKey,j);if(day!==j.day)await tx.put('productDay:'+j.day,jd);}
+   await queuePlausiblePurchase(tx,env,key,j?.plausibleContext,{domain:'minimalpairs.co',name:'Purchase',url:'https://minimalpairs.co'+(attribution.landing_page||j?.landing||'/pricing'),props:{source,language,contrast:attribution.contrast||j?.contrast||'unknown',plan:['lifetime','monthly'].includes(p.plan)?p.plan:'membership'},revenue:{currency:p.currency.toUpperCase(),amount:p.amount/100}},now);
    await tx.put('productDay:'+day,d);await tx.put(key,{recordedAt:new Date(now).toISOString(),checkoutCreatedAt:new Date(p.created*1000).toISOString(),paymentConfirmedAt:Number.isInteger(p.paidAt)?new Date(p.paidAt*1000).toISOString():null,amount:p.amount,currency:p.currency,source,language,landingPage:attribution.landing_page||j?.landing||'unknown',contrast:attribution.contrast||j?.contrast||'unknown',sessionKind:attribution.session_kind||j?.kind||'unknown',joined:!!j});return ok({recorded:true});
   });
  }
@@ -62,6 +64,7 @@ export async function productAnalytics(request,storage,env,now=Date.now()){
   if(j.events.includes(x.id))return {journey:day+'.'+hash,...context(j)};
   if(j.events.length>=500)return {limited:true};j.events.push(x.id);
   if(x.surface)j.surface=x.surface;
+  if(x.event==='checkout_context')j.plausibleContext=await sealCheckoutContext(request,env,now);
   if(x.event!=='checkout_context')increment(d.events,x.event);
   if(x.language!=='none'){j.language=x.language;j.contrast=x.contrast;if(x.kind)j.kind=x.kind;increment(d.languages,[x.event,x.language,x.contrast].join('|'));}
   const occurred=Number.isSafeInteger(x.occurredAt)&&Math.abs(x.occurredAt-now)<600000?x.occurredAt:now;
@@ -77,7 +80,7 @@ export async function productAnalytics(request,storage,env,now=Date.now()){
 }
 function context(j){return {source:j.source,medium:j.medium,...(j.campaign?{campaign:j.campaign}:{}),surface:j.surface,landing_page:landingPath(j.landing),language:j.language,contrast:j.contrast,session_kind:j.kind};}
 export async function pruneProductAnalytics(storage,now=Date.now()){
- for(const prefix of ['productJourney:','productSalt:','productDay:','productPurchase:']){let cursor;do{const rows=await storage.list({prefix,limit:500,...(cursor?{startAfter:cursor}:{})});if(!rows.size)break;cursor=[...rows.keys()].at(-1);const cutoff=dayOf(now-(prefix==='productDay:'||prefix==='productPurchase:'?90:2)*86400000);for(const [key,row] of rows)if((prefix==='productPurchase:'?row.recordedAt.slice(0,10):key.slice(prefix.length,prefix.length+10))<cutoff)await storage.delete(key);if(rows.size<500)break;}while(cursor);}
+ for(const prefix of ['productJourney:','productSalt:','productDay:','productPurchase:']){let cursor;do{const rows=await storage.list({prefix,limit:500,...(cursor?{startAfter:cursor}:{})});if(!rows.size)break;cursor=[...rows.keys()].at(-1);const cutoff=dayOf(now-(prefix==='productDay:'||prefix==='productPurchase:'?90:2)*86400000);for(const [key,row] of rows){if(prefix==='productJourney:'&&row.plausibleContext?.expires<now){delete row.plausibleContext;await storage.put(key,row);}if((prefix==='productPurchase:'?row.recordedAt.slice(0,10):key.slice(prefix.length,prefix.length+10))<cutoff)await storage.delete(key);}if(rows.size<500)break;}while(cursor);}
 }
 
 function updateFunnel(j,d){

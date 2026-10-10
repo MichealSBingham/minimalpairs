@@ -26,3 +26,17 @@ test('daily rollover does not create a persistent visitor ID; old journeys are d
  const {s,map}=setup();const a=await (await productAnalytics(request(event('page_view')),s,env,now)).json(),b=await (await productAnalytics(request(event('page_view')),s,env,now+86400000)).json();assert.notEqual(a.journey,b.journey);await pruneProductAnalytics(s,now+4*86400000);assert.equal([...map.keys()].filter(k=>k.startsWith('productJourney:')).length,0);assert.ok(map.has('productDay:2026-10-10'));
 });
 test('known automated traffic is excluded and aggregate report is private',async()=>{const {s,map}=setup();const req=request(event('page_view'));req.headers.set('User-Agent','Googlebot');assert.equal((await productAnalytics(req,s,env,now)).status,204);assert.equal(map.size,0);assert.equal((await productAnalytics(new Request('https://local/admin/analytics'),s,env,now)).status,401);});
+test('approved checkout context queues one real revenue event and expires from journeys',async()=>{
+ const {s,map}=setup(),enabled={...env,PLAUSIBLE_ENABLED:'true'};
+ const {journey}=await (await productAnalytics(request(event('checkout_context')),s,enabled,now)).json();
+ assert.ok(!JSON.stringify([...map]).includes('192.0.2.1'));
+ const req=paid(journey);const body=await req.json();body.plan='lifetime';
+ const purchase=()=>new Request(req.url,{method:'POST',headers:req.headers,body:JSON.stringify(body)});
+ await productAnalytics(purchase(),s,enabled,now);await productAnalytics(purchase(),s,enabled,now);
+ const queued=[...map.entries()].filter(([k])=>k.startsWith('plausiblePurchase:'));
+ assert.equal(queued.length,1);assert.equal(queued[0][1].state,'queued');
+ assert.equal(queued[0][1].payload.name,'Purchase');assert.deepEqual(queued[0][1].payload.revenue,{currency:'USD',amount:29});assert.equal(queued[0][1].payload.props.plan,'lifetime');
+ assert.ok(!JSON.stringify(queued[0][1].payload).includes('cs_live_example'));
+ await pruneProductAnalytics(s,now+2*86400000+1);
+ for(const [k,v] of map)if(k.startsWith('productJourney:'))assert.equal(v.plausibleContext,undefined);
+});

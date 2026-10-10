@@ -41,7 +41,7 @@ test('visible offers respect late consent and deduplicate rerenders and visibili
  const document={visibilityState:'visible',addEventListener(){},removeEventListener(){}};
  new Function('require','exports','document','IntersectionObserver',compiled)(name=>imports[name],exports,document,IntersectionObserver);
  const render=()=>{slot=0;exports.useMeasuredExposure(node,'pricing:en','plans_view',{surface:'pricing'});};
- render();observer([{target:node,isIntersecting:true,intersectionRatio:0.2}]);permitted=true;consentListener();assert.equal(events.length,0);
+ render();observer([{target:node,isIntersecting:false,intersectionRatio:0}]);permitted=true;consentListener();assert.equal(events.length,0);
  permitted=false;observer([{target:node,isIntersecting:true,intersectionRatio:0.5}]);assert.equal(events.length,0);
  permitted=true;consentListener();assert.equal(events.length,1);
  consentListener();observer([{target:node,isIntersecting:true,intersectionRatio:1}]);assert.equal(events.length,1);

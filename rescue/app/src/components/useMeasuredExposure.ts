@@ -18,9 +18,9 @@ export function useMeasuredExposure(node: HTMLElement | null, key: string, event
     // No visibility inference when the browser cannot observe the element.
     if (typeof IntersectionObserver === 'undefined') return;
     const observer = new IntersectionObserver(entries => {
-      visible = entries.some(entry => entry.target === node && entry.isIntersecting && entry.intersectionRatio >= 0.5);
+      visible = entries.some(entry => entry.target === node && entry.isIntersecting && entry.intersectionRatio > 0);
       record();
-    }, { threshold: [0, 0.5] });
+    }, { threshold: [0, 0.01] });
     observer.observe(node);
     const stop = watchAnalyticsChoice(record);
     document.addEventListener('visibilitychange', record);

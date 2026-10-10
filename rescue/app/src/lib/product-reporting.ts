@@ -1,7 +1,9 @@
 import {acquisitionDetails,measurementPath,landingPath,type EventData} from './measurement-data';
+import {reportToPlausible} from './plausible-reporting';
 const endpoint='https://minimalpairs-audio-reports.sirmichealbingham.workers.dev/events';
 let context:Record<string,unknown>={},pending:Promise<unknown>=Promise.resolve();
 let pageSent=false;
+const exposures=new Set<string>();
 export function productReportingEnabled(){
  if(typeof window==='undefined'||document.documentElement.dataset.measurementEnvironment!=='production'||/^(localhost|127\.0\.0\.1)$/.test(window.location.hostname)||navigator.webdriver)return false;
  try{return localStorage.getItem('minimalpairs.analytics-excluded.v1')!=='true';}catch{return true;}
@@ -10,6 +12,8 @@ export function productReportingEnabled(){
 export function productEvent(event:string,data:EventData={}){
  if(!productReportingEnabled())return Promise.resolve();
  if(event==='page_view'){if(pageSent)return pending;pageSent=true;}
+ if(['plans_view','paywall_view','diagnostic_report_preview'].includes(event)){const key=JSON.stringify([event,data.surface,data.language_id,data.contrast_id,data.plan]);if(exposures.has(key))return pending;exposures.add(key);}
+ try{reportToPlausible(event,data);}catch{/* A third-party outage must not interrupt first-party reporting. */}
  const a=acquisitionDetails(document.referrer,window.location.origin,window.location.search);
  const source=a.source||(a.channel==='direct'?'direct':'unknown');
  const q=new URLSearchParams(window.location.search);
