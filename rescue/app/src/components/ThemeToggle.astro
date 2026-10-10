@@ -1,0 +1,20 @@
+---
+const {locale='en'}=Astro.props;
+const labels:Record<string,[string,string]>={en:['Dark mode','Light mode'],fr:['Mode sombre','Mode clair'],es:['Modo oscuro','Modo claro'],de:['Dunkelmodus','Hellmodus'],it:['Modalità scura','Modalità chiara'],pt:['Modo escuro','Modo claro'],ru:['Тёмная тема','Светлая тема'],ja:['ダークモード','ライトモード'],zh:['深色模式','浅色模式']};
+const [dark,light]=labels[locale]||labels.en;
+---
+<button class="theme-toggle" type="button" aria-label={dark} title={dark} aria-pressed="false" data-dark-label={dark} data-light-label={light}>
+ <svg class="theme-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.7 13.1A8.7 8.7 0 0 1 10.9 3.3a8.8 8.8 0 1 0 9.8 9.8Z"/></svg>
+ <svg class="theme-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M5 19l1.4-1.4M17.6 6.4 19 5"/></svg>
+</button>
+<style is:global>
+.theme-toggle{position:fixed;right:14px;bottom:65px;z-index:40;width:40px;height:40px;display:grid;place-items:center;border:1px solid #d8d1c3;border-radius:50%;background:#fffdf7;color:#24241f;box-shadow:0 2px 8px #0001;cursor:pointer}.theme-sun{display:none}html[data-theme=dark] .theme-sun{display:block}html[data-theme=dark] .theme-moon{display:none}.theme-toggle:hover{box-shadow:0 3px 12px #0002}.theme-toggle:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+</style>
+<script>
+ const key='minimalpairs.theme';
+ const button=document.querySelector<HTMLButtonElement>('.theme-toggle');
+ function apply(theme:string){const dark=theme==='dark';document.documentElement.dataset.theme=dark?'dark':'light';button?.setAttribute('aria-pressed',String(dark));const label=(dark?button?.dataset.lightLabel:button?.dataset.darkLabel)||'';button?.setAttribute('aria-label',label);button?.setAttribute('title',label);document.querySelector('meta[name="theme-color"]')?.setAttribute('content',dark?'#1c1d1a':'#f3eee3');}
+ apply(document.documentElement.dataset.theme||'light');
+ button?.addEventListener('click',()=>{const next=document.documentElement.dataset.theme==='dark'?'light':'dark';apply(next);try{localStorage.setItem(key,next);}catch{}});
+ window.addEventListener('storage',event=>{if(event.key===key)apply(event.newValue||'light');});
+</script>

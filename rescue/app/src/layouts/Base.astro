@@ -1,6 +1,8 @@
 ---
 import '../styles/global.css';
 import '../styles/product-redesign.css';
+import '../styles/dark-theme.css';
+import ThemeToggle from '../components/ThemeToggle.astro';
 import AnalyticsChoice from '../components/AnalyticsChoice';
 import {locales, localeNames, ogLocales, localPath, unlocalizedPath, hasTranslations} from '../lib/locales';
 interface Props { title: string; description: string; noindex?: boolean; analytics?: boolean; locale?: string; alternates?: {locale: string; path: string}[]; }
@@ -17,6 +19,7 @@ const measurementEnvironment = import.meta.env.PUBLIC_MEASUREMENT_ENVIRONMENT ==
 <html lang={locale} data-measurement-id={measurementId} data-measurement-environment={measurementEnvironment}>
   <head>
     <meta charset="UTF-8" />
+    <script is:inline>try{document.documentElement.dataset.theme=localStorage.getItem('minimalpairs.theme')==='dark'?'dark':'light';}catch{document.documentElement.dataset.theme='light';}</script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#f3eee3" />
     <title>{title}</title>
@@ -34,7 +37,7 @@ const measurementEnvironment = import.meta.env.PUBLIC_MEASUREMENT_ENVIRONMENT ==
     <meta property="og:url" content={canonical} />
     <meta name="twitter:card" content="summary" />
   </head>
-  <body><slot /><details class="interface-language"><summary>🌐 {localeNames[locale] || 'English'}</summary><nav aria-label="Language">{locales.map(language=><a href={localPath(language,hasTranslations(pagePath)?pagePath:'/')} lang={language} hreflang={language} aria-current={language===locale?'page':undefined}>{localeNames[language]}</a>)}</nav></details>{measurementId && <AnalyticsChoice locale={locale} client:load />}</body>
+  <body><slot /><ThemeToggle locale={locale} /><details class="interface-language"><summary>🌐 {localeNames[locale] || 'English'}</summary><nav aria-label="Language">{locales.map(language=><a href={localPath(language,hasTranslations(pagePath)?pagePath:'/')} lang={language} hreflang={language} aria-current={language===locale?'page':undefined}>{localeNames[language]}</a>)}</nav></details>{measurementId && <AnalyticsChoice locale={locale} client:load />}</body>
 </html>
 
 <style is:global>
