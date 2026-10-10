@@ -1,5 +1,5 @@
 {
-  "sourceSha256": "a20abde1054f0d61144f233ce261810a94f8a614d4e512572b474ef7516ce699",
+  "sourceSha256": "765ac6fb9a56a46e7723b222808be4d892472179374ecc0a9b2f3d61c757b774",
   "templates": {
     "course-day0:en-US-ga": {
       "approved": false,
@@ -162,6 +162,96 @@
       "promotional": false,
       "subject": "Find the Japanese sounds to practice next",
       "text": "Hi,\n\nHere's the last email in your Japanese listening course!\n\nIf you haven't tried the free listening diagnostic yet, it's a good next step. You'll see the sounds you matched and examples you missed, so you can pick something specific to work on.\n\nIf you've already taken it, you can try it again. A short check can vary from one attempt to another, so use the examples to choose your next lesson rather than chasing a perfect score.\n\nThanks for giving it a try. If there's a feature or a sound you'd like me to add, let me know!\n\nMicheal\n\nFind my next lesson: https://minimalpairs.co/diagnostic/ja?utm_source=newsletter&utm_medium=email&utm_campaign=diagnostic\n\nYou requested listening emails from MinimalPairs. Unsubscribe anytime: {{unsubscribe_url}}. {{postal_address}}"
+    },
+    "weekly-1:en-US-ga": {
+      "approved": false,
+      "promotional": false,
+      "subject": "Can you hear thin vs sin?",
+      "text": "Hi,\n\nHere's your next American English listening challenge: thin and sin.\n\nListen for /θ/ vs /s/. Start with the examples, then try the practice with text hints hidden. Replay whenever you need.\n\nWhich difference was harder to hear? Hit reply and let me know!\n\nMicheal\n\nHear thin vs sin: https://minimalpairs.co/learn/en-th-s?utm_source=newsletter&utm_medium=email&utm_campaign=sound-guide\n\nYou requested listening emails from MinimalPairs. Unsubscribe anytime: {{unsubscribe_url}}. {{postal_address}}"
+    },
+    "weekly-2:en-US-ga": {
+      "approved": false,
+      "promotional": false,
+      "subject": "Put or putt? One letter is not the clue.",
+      "text": "Hi,\n\nListen to put and putt, then look and luck. The vowel changes even though the spelling gives you little help.\n\nTry a few rounds with text hints hidden. After your answer, compare the feedback and see whether the next voice makes it easier to hear.\n\nIf there’s something you keep mixing up, hit reply and tell me!\n\nMicheal\n\nOpen put and putt: https://minimalpairs.co/learn/en-foot-strut?utm_source=newsletter&utm_medium=email&utm_campaign=sound-guide\n\nYou requested listening emails from MinimalPairs. Unsubscribe anytime: {{unsubscribe_url}}. {{postal_address}}"
+    },
+    "weekly-3:en-US-ga": {
+      "approved": false,
+      "promotional": false,
+      "subject": "Cat vs cut: can you keep them apart?",
+      "text": "Hi,\n\nToday, compare cat with cut and cap with cup. Keep your attention on the vowel in the middle.\n\nTry matching the same vowel when a new word appears. If this one feels clear already, use your listening results to choose another contrast.\n\nIf there’s something you keep mixing up, hit reply and tell me!\n\nMicheal\n\nOpen cat and cut: https://minimalpairs.co/learn/en-ae-strut?utm_source=newsletter&utm_medium=email&utm_campaign=sound-guide\n\nYou requested listening emails from MinimalPairs. Unsubscribe anytime: {{unsubscribe_url}}. {{postal_address}}"
+    },
+    "weekly-4:en-US-ga": {
+      "approved": false,
+      "promotional": false,
+      "subject": "Your English listening check: what changed?",
+      "text": "Hi,\n\nYou have tried several different sound groups now. Take the listening check again and see which examples still deserve another listen.\n\nOne short result can vary. Look for contrasts that keep coming up, then make one of those your next session.\n\nIf there’s something you keep mixing up, hit reply and tell me!\n\nMicheal\n\nOpen your next English listening check: https://minimalpairs.co/diagnostic/en?utm_source=newsletter&utm_medium=email&utm_campaign=diagnostic\n\nYou requested listening emails from MinimalPairs. Unsubscribe anytime: {{unsubscribe_url}}. {{postal_address}}"
+    },
+    "weekly-1:fr": {
+      "approved": false,
+      "promotional": false,
+      "subject": "Can you hear poisson vs poison?",
+      "text": "Hi,\n\nHere's your next French listening challenge: poisson and poison.\n\nListen for /s/ vs /z/. Start with the examples, then try the practice with text hints hidden. Replay whenever you need.\n\nWhich difference was harder to hear? Hit reply and let me know!\n\nMicheal\n\nHear poisson vs poison: https://minimalpairs.co/learn/fr-s-z?utm_source=newsletter&utm_medium=email&utm_campaign=sound-guide\n\nYou requested listening emails from MinimalPairs. Unsubscribe anytime: {{unsubscribe_url}}. {{postal_address}}"
+    },
+    "weekly-2:fr": {
+      "approved": false,
+      "promotional": false,
+      "subject": "French é and è: can you hear the change?",
+      "text": "Hi,\n\nToday, compare the French /e/ and /ɛ/ vowels in the sound guide. Listen to each word before trying to identify the difference in practice.\n\nKeep spelling out of the first attempt. Replay the feedback after each choice, then see whether you recognize the category in another word.\n\nIf there’s something you keep mixing up, hit reply and tell me!\n\nMicheal\n\nOpen French é and è: https://minimalpairs.co/learn/fr-e-e-open?utm_source=newsletter&utm_medium=email&utm_campaign=sound-guide\n\nYou requested listening emails from MinimalPairs. Unsubscribe anytime: {{unsubscribe_url}}. {{postal_address}}"
+    },
+    "weekly-3:fr": {
+      "approved": false,
+      "promotional": false,
+      "subject": "Paume or pomme? Listen to the French o.",
+      "text": "Hi,\n\nPaume and pomme contrast /o/ and /ɔ/. Compare the words in the guide, then listen for that vowel change in the exercise.\n\nAccent matters for this contrast. Keep your attention on the voices in the exercise and use their examples as your references.\n\nIf there’s something you keep mixing up, hit reply and tell me!\n\nMicheal\n\nOpen paume and pomme: https://minimalpairs.co/learn/fr-o-o-open?utm_source=newsletter&utm_medium=email&utm_campaign=sound-guide\n\nYou requested listening emails from MinimalPairs. Unsubscribe anytime: {{unsubscribe_url}}. {{postal_address}}"
+    },
+    "weekly-4:fr": {
+      "approved": false,
+      "promotional": false,
+      "subject": "Your French listening check: what changed?",
+      "text": "Hi,\n\nYou have tried several different sound groups now. Take the listening check again and see which examples still deserve another listen.\n\nOne short result can vary. Look for contrasts that keep coming up, then make one of those your next session.\n\nIf there’s something you keep mixing up, hit reply and tell me!\n\nMicheal\n\nOpen your next French listening check: https://minimalpairs.co/diagnostic/fr?utm_source=newsletter&utm_medium=email&utm_campaign=diagnostic\n\nYou requested listening emails from MinimalPairs. Unsubscribe anytime: {{unsubscribe_url}}. {{postal_address}}"
+    },
+    "weekly-1:de": {
+      "approved": false,
+      "promotional": false,
+      "subject": "Can you hear reißen vs reisen?",
+      "text": "Hi,\n\nHere's your next German listening challenge: reißen and reisen.\n\nListen for /s/ vs /z/. Start with the examples, then try the practice with text hints hidden. Replay whenever you need.\n\nWhich difference was harder to hear? Hit reply and let me know!\n\nMicheal\n\nHear reißen vs reisen: https://minimalpairs.co/learn/de-s-z?utm_source=newsletter&utm_medium=email&utm_campaign=sound-guide\n\nYou requested listening emails from MinimalPairs. Unsubscribe anytime: {{unsubscribe_url}}. {{postal_address}}"
+    },
+    "weekly-1:es": {
+      "approved": false,
+      "promotional": false,
+      "subject": "Can you hear hablo vs habló?",
+      "text": "Hi,\n\nHere's your next Spanish listening challenge: hablo and habló.\n\nListen for /ˈσ.σ/ vs /σ.ˈσ/. Start with the examples, then try the practice with text hints hidden. Replay whenever you need.\n\nWhich difference was harder to hear? Hit reply and let me know!\n\nMicheal\n\nHear hablo vs habló: https://minimalpairs.co/learn/es-stress?utm_source=newsletter&utm_medium=email&utm_campaign=sound-guide\n\nYou requested listening emails from MinimalPairs. Unsubscribe anytime: {{unsubscribe_url}}. {{postal_address}}"
+    },
+    "weekly-1:it": {
+      "approved": false,
+      "promotional": false,
+      "subject": "Can you hear pesca vs pesca?",
+      "text": "Hi,\n\nHere's your next Italian listening challenge: pesca and pesca.\n\nListen for /e/ vs /ɛ/. Start with the examples, then try the practice with text hints hidden. Replay whenever you need.\n\nWhich difference was harder to hear? Hit reply and let me know!\n\nMicheal\n\nHear pesca vs pesca: https://minimalpairs.co/learn/it-e-open-e?utm_source=newsletter&utm_medium=email&utm_campaign=sound-guide\n\nYou requested listening emails from MinimalPairs. Unsubscribe anytime: {{unsubscribe_url}}. {{postal_address}}"
+    },
+    "weekly-1:zh": {
+      "approved": false,
+      "promotional": false,
+      "subject": "Can you hear 妈 vs 麻?",
+      "text": "Hi,\n\nHere's your next Mandarin listening challenge: 妈 and 麻.\n\nListen for /˥/ vs /˧˥/. Start with the examples, then try the practice with text hints hidden. Replay whenever you need.\n\nWhich difference was harder to hear? Hit reply and let me know!\n\nMicheal\n\nHear 妈 vs 麻: https://minimalpairs.co/learn/zh-tone-1-2?utm_source=newsletter&utm_medium=email&utm_campaign=sound-guide\n\nYou requested listening emails from MinimalPairs. Unsubscribe anytime: {{unsubscribe_url}}. {{postal_address}}"
+    },
+    "weekly-1:pt": {
+      "approved": false,
+      "promotional": false,
+      "subject": "Can you hear pata vs bata?",
+      "text": "Hi,\n\nHere's your next Portuguese listening challenge: pata and bata.\n\nListen for /p/ vs /b/. Start with the examples, then try the practice with text hints hidden. Replay whenever you need.\n\nWhich difference was harder to hear? Hit reply and let me know!\n\nMicheal\n\nHear pata vs bata: https://minimalpairs.co/learn/pt-p-b?utm_source=newsletter&utm_medium=email&utm_campaign=sound-guide\n\nYou requested listening emails from MinimalPairs. Unsubscribe anytime: {{unsubscribe_url}}. {{postal_address}}"
+    },
+    "weekly-1:ru": {
+      "approved": false,
+      "promotional": false,
+      "subject": "Can you hear бак vs пар?",
+      "text": "Hi,\n\nHere's your next Russian listening challenge: бак and пар.\n\nListen for /b/ vs /p/. Start with the examples, then try the practice with text hints hidden. Replay whenever you need.\n\nWhich difference was harder to hear? Hit reply and let me know!\n\nMicheal\n\nHear бак vs пар: https://minimalpairs.co/learn/ru-b-p?utm_source=newsletter&utm_medium=email&utm_campaign=sound-guide\n\nYou requested listening emails from MinimalPairs. Unsubscribe anytime: {{unsubscribe_url}}. {{postal_address}}"
+    },
+    "weekly-1:ja": {
+      "approved": false,
+      "promotional": false,
+      "subject": "Can you hear 猫 vs 稽古?",
+      "text": "Hi,\n\nHere's your next Japanese listening challenge: 猫 and 稽古.\n\nListen for /e/ vs /eː/. Start with the examples, then try the practice with text hints hidden. Replay whenever you need.\n\nWhich difference was harder to hear? Hit reply and let me know!\n\nMicheal\n\nHear 猫 vs 稽古: https://minimalpairs.co/learn/ja-e-length?utm_source=newsletter&utm_medium=email&utm_campaign=sound-guide\n\nYou requested listening emails from MinimalPairs. Unsubscribe anytime: {{unsubscribe_url}}. {{postal_address}}"
     }
   }
 }

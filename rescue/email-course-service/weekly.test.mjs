@@ -1,0 +1,16 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {scheduleWeekly} from './weekly.mjs';
+const DAY=86400000,start=Date.parse('2026-10-01T00:00:00Z'),env={SENDING_ENABLED:'true',WEEKLY_SERIES_READY:'true'};
+function setup(){
+ const rows=new Map([['subscriber:abc',{language:'fr',status:'subscribed',course:true,weekly:true,consentVersion:'listening-course-2026-10-09-v3',subscribedAt:new Date(start).toISOString()}]]);
+ const s={get:async k=>structuredClone(rows.get(k)),put:async(k,v)=>rows.set(k,structuredClone(v)),list:async({prefix})=>new Map([...rows].filter(([k])=>k.startsWith(prefix))),transaction:async f=>f(s)};
+ for(const day of [0,3,7])rows.set('outbox:course'+day,{id:'course'+day,subscriberKey:'subscriber:abc',kind:'course',templateId:'course-day'+day,state:'accepted',acceptedAt:start+day*DAY});
+ const opts={now:start+14*DAY,testTemplates:{'weekly-1:fr':{approved:true},'weekly-2:fr':{approved:true}}};
+ return {rows,s,opts};
+}
+test('no weekly job before day 14; one idempotent job when due',async()=>{const {rows,s,opts}=setup();assert.equal((await scheduleWeekly(s,env,{...opts,now:opts.now-1})).queued,0);assert.equal((await scheduleWeekly(s,env,opts)).queued,1);assert.equal((await scheduleWeekly(s,env,opts)).queued,0);assert.equal(rows.get('outbox:weekly_abc_1').templateId,'weekly-1');});
+test('late course acceptance moves weekly date; failed or uncertain course blocks it',async()=>{for(const state of ['queued','sending','uncertain','failed']){const {rows,s,opts}=setup();rows.get('outbox:course7').state=state;assert.equal((await scheduleWeekly(s,env,opts)).queued,0);}const {rows,s,opts}=setup();rows.get('outbox:course7').acceptedAt=start+10*DAY;assert.equal((await scheduleWeekly(s,env,opts)).queued,0);assert.equal((await scheduleWeekly(s,env,{...opts,now:start+17*DAY})).queued,1);});
+test('off, suppressed, unconsented, older consent and unapproved copy cannot enqueue',async()=>{for(const change of [{status:'suppressed'},{weekly:false},{consentVersion:'old'}]){const {rows,s,opts}=setup();Object.assign(rows.get('subscriber:abc'),change);assert.equal((await scheduleWeekly(s,env,opts)).queued,0);}const {s,opts}=setup();assert.equal((await scheduleWeekly(s,{...env,SENDING_ENABLED:'false'},opts)).queued,0);assert.equal((await scheduleWeekly(s,env,{...opts,testTemplates:{}})).queued,0);});
+test('second tip waits a week after first acceptance and unresolved weekly jobs block advance',async()=>{const {rows,s,opts}=setup();await scheduleWeekly(s,env,opts);const job=rows.get('outbox:weekly_abc_1');job.state='uncertain';assert.equal((await scheduleWeekly(s,env,{...opts,now:start+30*DAY})).queued,0);job.state='accepted';job.acceptedAt=start+16*DAY;assert.equal((await scheduleWeekly(s,env,{...opts,now:start+22*DAY})).queued,0);assert.equal((await scheduleWeekly(s,env,{...opts,now:start+23*DAY})).queued,1);});
+test('exhausted templates produce an operator count, never reuse a sent tip',async()=>{const {rows,s,opts}=setup();await scheduleWeekly(s,env,opts);Object.assign(rows.get('outbox:weekly_abc_1'),{state:'accepted',acceptedAt:opts.now});const result=await scheduleWeekly(s,env,{...opts,now:start+30*DAY,testTemplates:{'weekly-1:fr':{approved:true}}});assert.equal(result.queued,0);assert.equal(result.exhausted,1);assert.equal(rows.get('weeklySchedule').exhausted,1);});

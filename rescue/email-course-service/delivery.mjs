@@ -11,7 +11,8 @@ export function brandedHtml(text){
 export function approvedTemplates(env){
  // A short exact-content approval avoids large secrets; no fuzzy/version-only approval.
  if(typeof env.APPROVED_TEMPLATE_SHA256!=='string'||env.APPROVED_TEMPLATE_SHA256!==bundled.sourceSha256)return {};
- return Object.fromEntries(Object.entries(bundled.templates).map(([key,value])=>[key,{...value,approved:true}]));
+ const banks=new Set(String(env.APPROVED_BANKS||'').split(',').map(x=>x.trim()).filter(Boolean));
+ return Object.fromEntries(Object.entries(bundled.templates).filter(([key])=>banks.has(key.split(':')[1])).map(([key,value])=>[key,{...value,approved:true}]));
 }
 export async function enqueue(tx,{id,subscriberKey,templateId,kind='course',dueAt=Date.now()}){
  if(typeof id!=='string'||typeof templateId!=='string'||! /^[a-zA-Z0-9_-]{1,100}$/.test(templateId)||!Number.isSafeInteger(dueAt)||dueAt<0||typeof subscriberKey!=='string'||! /^[a-zA-Z0-9_-]{1,100}$/.test(id)||!['confirmation','course','weekly','neutral'].includes(kind)||!subscriberKey.startsWith('subscriber:'))throw Error('Invalid job');
@@ -59,7 +60,7 @@ export async function deliverOne(storage,env,{now=Date.now(),fetcher=fetch,testT
  try{
   const res=await fetcher('https://api.resend.com/emails',{method:'POST',headers:{Authorization:`Bearer ${env.RESEND_API_KEY}`,'Content-Type':'application/json','Idempotency-Key':'minimalpairs-email-course:'+j.id},body:JSON.stringify({from:env.FROM_ADDRESS,to:[r.email],subject:t.subject,text,html:brandedHtml(text)})});
   if(!res.ok)return mark(res.status>=500?'uncertain':'failed');
-  const data=await res.json();if(typeof data?.id!=='string'||! /^[a-zA-Z0-9_-]{1,200}$/.test(data.id))return mark('uncertain');await storage.transaction(async tx=>{const saved=await tx.get(key);saved.state='accepted';saved.providerId=data.id;await tx.put(key,saved);await tx.put('provider:'+data.id,j.subscriberKey);const current=await tx.get(j.subscriberKey);if(current&&j.kind!=='confirmation'){current.lastMarketingAt=now;await tx.put(j.subscriberKey,current);}});return {state:'accepted'};
+  const data=await res.json();if(typeof data?.id!=='string'||! /^[a-zA-Z0-9_-]{1,200}$/.test(data.id))return mark('uncertain');await storage.transaction(async tx=>{const saved=await tx.get(key);saved.state='accepted';saved.acceptedAt=now;saved.providerId=data.id;await tx.put(key,saved);await tx.put('provider:'+data.id,j.subscriberKey);const current=await tx.get(j.subscriberKey);if(current&&j.kind!=='confirmation'){current.lastMarketingAt=now;await tx.put(j.subscriberKey,current);}});return {state:'accepted'};
  }catch{return mark('uncertain');}
  async function mark(state){await storage.transaction(async tx=>{const saved=await tx.get(key);saved.state=state;await tx.put(key,saved);});return {state};}
 }

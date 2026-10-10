@@ -1,4 +1,6 @@
 ---
+import {challenges} from '../lib/growth-content';
+import '../styles/growth.css';
 import Base from '../layouts/Base.astro';
 import { Header, Footer, Icon } from '../components/ui';
 import { getGuideLanguages as getLanguages, getPracticeLanguages, slugFor } from '../lib/content';
@@ -43,6 +45,8 @@ const schema = { '@context': 'https://schema.org', '@type': 'CollectionPage', na
         <p class="language-chooser-note">{lessonIds.size > 0 ? 'Get a short listening check and a sound-by-sound result, or choose a contrast below. Practice keeps the words hidden until you choose to reveal them.' : 'Explore the sound contrasts and word examples below.'}</p>
 
       </section>
+
+      {['en','fr'].includes(language.id) && <section class="growth-related"><h2>Try a quick listening challenge.</h2><div class="growth-links">{challenges.filter(c=>c.language===language.id).map(c=><a href={`/challenge/${c.slug}`}>{c.title}</a>)}</div><p><a href="/resources/minimal-pairs-after-fluent-forever">Read Fluent Forever? Start practicing →</a> · <a href="/resources/minimal-pairs-without-anki">Practice without building a deck →</a></p></section>}
 
       <section class="language-chooser-catalog" aria-label={`${language.name} sound contrasts`}>
         <div class="language-contrast-grid">{language.contrasts.map(contrast => <article class="language-contrast-card">

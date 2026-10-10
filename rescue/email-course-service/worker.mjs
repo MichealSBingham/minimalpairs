@@ -1,4 +1,5 @@
 import {enqueue,deliverOne,suppressProviderEvent,verifyProviderWebhook} from './delivery.mjs';
+import {scheduleWeekly} from './weekly.mjs';
 // Consent and delivery infrastructure. Intake and sending are OFF until approved activation.
 const randomToken=()=>Array.from(crypto.getRandomValues(new Uint8Array(32)),n=>n.toString(16).padStart(2,'0')).join('');
 const ORIGINS=new Set(['https://minimalpairs.co','https://www.minimalpairs.co','https://minimalpairs.web.app']);
@@ -37,10 +38,16 @@ export class EmailAudience{
    return removed;
   });
  }
- async alarm(){await this.cleanup();await deliverOne(this.ctx.storage,this.env);await this.ctx.storage.setAlarm(Date.now()+3600000);}
+ async alarm(){await this.cleanup();await scheduleWeekly(this.ctx.storage,this.env);await deliverOne(this.ctx.storage,this.env);await this.ctx.storage.setAlarm(Date.now()+3600000);}
 
  async fetch(request){
   const path=new URL(request.url).pathname;
+  if(path==='/admin/status'){
+   if(!this.env.ADMIN_TOKEN||request.headers.get('Authorization')!==`Bearer ${this.env.ADMIN_TOKEN}`)return response({error:'Unauthorized'},401);
+   if(request.method!=='GET')return response({error:'Method not allowed'},405);
+   const states={};for(const job of (await this.ctx.storage.list({prefix:'outbox:',limit:5000})).values())states[job.state]=(states[job.state]||0)+1;
+   return response({sendingEnabled:this.env.SENDING_ENABLED==='true',intakeEnabled:this.env.INTAKE_ENABLED==='true',outbox:states,weekly:await this.ctx.storage.get('weeklySchedule')||null});
+  }
   if(path==='/webhooks/resend'){
    if(request.method!=='POST')return response({error:'Method not allowed'},405);
    let raw;try{raw=await readBody(request,true);}catch{return response({error:'Invalid request'},400);}
@@ -114,6 +121,7 @@ export class EmailAudience{
    });
   }
   const clean=validateSubscription(input);if(!clean)return response({error:'Invalid subscription'},400);
+  if(!String(this.env.LAUNCH_BANKS||'en-US-ga,fr').split(',').includes(clean.language))return response({error:'Choose English or French for the listening email course'},400);
   if(clean.weekly && this.env.WEEKLY_SERIES_READY!=='true')return response({error:'The weekly listening series is not open yet'},503);
   const day=new Date().toISOString().slice(0,10);
   const ipHash=await digest(this.env.RATE_SECRET+'|'+day+'|'+(request.headers.get('CF-Connecting-IP')||'unknown'));

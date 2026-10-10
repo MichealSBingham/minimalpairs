@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro';
+import {Header,Footer} from '../../components/ui';
+import ListeningDemo from '../../components/ListeningDemo';
+import ChallengeShare from '../../components/ChallengeShare';
+import {getPracticeLanguages} from '../../lib/content';
+import {challenges} from '../../lib/growth-content';
+import {safeJsonLd,absoluteUrl} from '../../lib/seo';
+import '../../styles/growth.css';
+export function getStaticPaths(){return challenges.map(challenge=>({params:{slug:challenge.slug},props:{challenge}}));}
+const {challenge}=Astro.props;
+const language=getPracticeLanguages().find(l=>l.id===challenge.language)!;
+const contrast=language.contrasts.find(c=>c.id===challenge.contrast)!;
+const path=`/challenge/${challenge.slug}`;
+---
+<Base title={`${challenge.title} | MinimalPairs`} description={challenge.description}>
+ <Header/><main class="growth-page">
+  <header class="growth-hero"><p class="eyebrow">A LISTENING CHALLENGE · {language.name}</p><h1>{challenge.title}</h1><p class="growth-lede">Hear two examples, then a new word. Which example shares its sound?</p></header>
+  <section class="growth-grid"><div><h2>Let your ears <em>go first.</em></h2><p>The words stay hidden in the challenge. Play A, B and X, then choose. You can replay each sound before deciding.</p><p>{challenge.hint}</p><p class="ipa-text">{contrast.phonemes.map(p=>`/${p}/`).join(' vs ')}</p><ChallengeShare client:load languageId={language.id} path={path}/><a href={`/learn/${contrast.id}`}>Hear the word examples and read the sound guide →</a></div><ListeningDemo client:load language={language} contrastId={contrast.id}/></section>
+  <section class="growth-price"><div><strong>Which sounds should you practice next?</strong><p>Take the free {language.name} listening check and find a starting point.</p></div><a class="button button-dark" href={`/diagnostic/${language.id}`}>Find my starting point →</a></section>
+  <section class="growth-section"><h2>Keep listening.</h2><div class="growth-links">{challenges.filter(c=>c.language===language.id&&c.slug!==challenge.slug).map(c=><a href={`/challenge/${c.slug}`}>{c.title}</a>)}</div><p>Full practice and detailed diagnostic reports are included with Premium. <a href="/pricing">$29 lifetime or $7/month →</a></p></section>
+ </main><Footer/><script type="application/ld+json" set:html={safeJsonLd({'@context':'https://schema.org','@type':'LearningResource',name:challenge.title,description:challenge.description,url:absoluteUrl(path),inLanguage:'en',learningResourceType:'Listening challenge',isAccessibleForFree:true})}/>
+</Base>

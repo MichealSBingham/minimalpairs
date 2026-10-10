@@ -1,6 +1,9 @@
 ---
 import EmailCourseSignup from '../../components/EmailCourseSignup';
 import { courseEnabled } from '../../lib/email-course.mjs';
+import ListeningDemo from '../../components/ListeningDemo';
+import {challenges,entranceGuides} from '../../lib/growth-content';
+import '../../styles/growth.css';
 import Base from '../../layouts/Base.astro';
 import { Header, Footer, Icon } from '../../components/ui';
 import GuideWordAudio from '../../components/GuideWordAudio';
@@ -19,6 +22,8 @@ const practiceLanguage = getPracticeLanguages().find(l => l.id === language.id);
 const hasLesson = Boolean(practiceLanguage?.contrasts.some(c => c.id === contrast.id));
 const lessonUrl = hasLesson ? practiceUrl(language,contrast) : '/practice';
 const copy = guideCopy[contrast.id];
+const entrance=entranceGuides[contrast.id];
+const challenge=challenges.find(c=>c.contrast===contrast.id);
 const abx = abxFor(contrast);
 const audioStatus = guideAudioStatus(language.id, contrast);
 const requiredWords = contrast.pairs.flatMap(pair => pair.words.map(word => word.text));
@@ -33,7 +38,7 @@ const symbolic = (sound: string) => !sound.includes(' ');
 const soundLabel = (sound: string) => symbolic(sound) ? `/${sound}/` : sound;
 const pairTitle = (item: Contrast) => item.pairs[0].words.map(word => word.text).join(' · ');
 const contrastTitle = (item: Contrast) => item.phonemes.map(soundLabel).join(' vs ');
-const description = contrast.id === 'en-zh-j' ? 'Hear English /ʒ/ vs /dʒ/ in lesion and legion. Compare word audio and IPA, learn the sound difference, then practice listening with feedback.' : `${language.name} ${contrastTitle(contrast)}: compare ${contrast.pairs[0].words.map(word => word.text).join(' and ')} and more word pairs. Hear the examples, learn the difference, and try a listening exercise.`;
+const description = entrance?.description || (contrast.id === 'en-zh-j' ? 'Hear English /ʒ/ vs /dʒ/ in lesion and legion. Compare word audio and IPA, learn the sound difference, then practice listening with feedback.' : `${language.name} ${contrastTitle(contrast)}: compare ${contrast.pairs[0].words.map(word => word.text).join(' and ')} and more word pairs. Hear the examples, learn the difference, and try a listening exercise.`);
 const kind = contrast.pairs[0].kind;
 // Broad sound labels explain the notation, while contrast-specific focus, traps,
 // dialect scope and first-language notes below remain the curated source copy.
@@ -93,7 +98,7 @@ const soundCards: Record<string, { title: string; description: string }> = {
 };
 const schema = { '@context': 'https://schema.org', '@type': 'LearningResource', name: `${contrast.label} ${language.name} listening practice`, description: contrast.description, url: absoluteUrl(`/learn/${contrast.id}`), inLanguage: 'en', learningResourceType: 'Listening practice guide', about: { '@type': 'Thing', name: `${language.name}: ${contrast.phonemes.join(' / ')}` }, isPartOf: { '@type': 'CollectionPage', name: `${language.name} minimal pairs`, url: absoluteUrl(`/${slugFor(language)}`) } };
 ---
-<Base title={contrast.id === 'en-zh-j' ? '/ʒ/ vs /dʒ/ Minimal Pairs: Lesion vs Legion + Audio | MinimalPairs' : `${language.name} ${contrastTitle(contrast)} Minimal Pairs ${audioStatus.hasCachedAudio ? '& Audio' : 'Guide'} | MinimalPairs`} description={description.slice(0, 175)}>
+<Base title={entrance ? `${entrance.title} | MinimalPairs` : contrast.id === 'en-zh-j' ? '/ʒ/ vs /dʒ/ Minimal Pairs: Lesion vs Legion + Audio | MinimalPairs' : `${language.name} ${contrastTitle(contrast)} Minimal Pairs ${audioStatus.hasCachedAudio ? '& Audio' : 'Guide'} | MinimalPairs`} description={description.slice(0, 175)}>
   <Header />
   <main class="guide-page">
     <div class="guide-layout">
@@ -107,7 +112,7 @@ const schema = { '@context': 'https://schema.org', '@type': 'LearningResource', 
         <header class="guide-hero">
           <p class="guide-eyebrow">{kindLabel(kind)} · {language.dialect}</p>
           <h1>{language.name} <span class:list={{ 'guide-symbol': symbolic(categories[0]), 'guide-category-text': !symbolic(categories[0]) }}>{soundLabel(categories[0])}</span><span class="guide-versus"> vs </span><span class:list={{ 'guide-symbol': symbolic(categories[1]), 'guide-category-text': !symbolic(categories[1]), 'is-second': true }}>{soundLabel(categories[1])}</span><em>{contrast.label}</em></h1>
-          <div class="guide-intro"><p>{contrast.description}</p><a class="guide-button" href={lessonUrl}>{hasLesson ? 'Practice these sounds' : 'Explore listening lessons'}<Icon name="arrow" size={20} /></a></div>
+          <div class="guide-intro"><p>{entrance?.intro || contrast.description}</p><a class="guide-button" href={lessonUrl}>{hasLesson ? 'Practice these sounds' : 'Explore listening lessons'}<Icon name="arrow" size={20} /></a></div>
           {contrast.id === 'en-zh-j' && <p class="guide-small">Think of the middle sounds in <strong>lesion</strong> and <strong>legion</strong>: /ʒ/ flows continuously; /dʒ/ starts with a brief stop. Listen to the words below, then test the difference in practice.</p>}
         </header>
 
@@ -122,6 +127,8 @@ const schema = { '@context': 'https://schema.org', '@type': 'LearningResource', 
           <p class="guide-example-note">{uniqueWords.reduce((total, words) => total + words.length, 0)} words. Words stay hidden during practice unless you choose to reveal them.</p>
           {!audioStatus.hasCachedAudio && <p class="guide-device-note">This guide is free to read. Recordings for these examples are not available yet.</p>}
         </section>
+
+        {challenge && practiceLanguage && <section class="guide-challenge"><div><p class="guide-eyebrow">TRY IT HERE</p><h2>Can you hear it<br/><em>in a new word?</em></h2><p>Listen to the two examples, then match the sound in X. The words stay hidden while you choose.</p><a class="guide-text-link" href={`/challenge/${challenge.slug}`}>Open the listening challenge →</a></div><ListeningDemo client:visible language={practiceLanguage} contrastId={contrast.id}/></section>}
 
         <section class="guide-practice-banner"><div><h2>Now, let your <em>ears decide.</em></h2><p>Can you hear the difference? Listen to two examples, then decide which sound you hear in a new word. Get feedback after every answer.</p></div><a class="guide-button is-light" href={lessonUrl}>{hasLesson ? 'Practice these sounds' : 'Explore listening lessons'}<Icon name="arrow" size={20} /></a></section>
 

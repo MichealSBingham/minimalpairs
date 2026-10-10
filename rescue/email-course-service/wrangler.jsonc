@@ -31,6 +31,8 @@
     "FROM_ADDRESS": "Micheal at MinimalPairs <micheal@minimalpairs.co>",
     "DAILY_SEND_CAP": "0",
     "POSTAL_ADDRESS": "140 E 14th St, New York, NY 10003",
-    "WEEKLY_SERIES_READY": "false"
+    "WEEKLY_SERIES_READY": "false",
+    "LAUNCH_BANKS": "en-US-ga,fr",
+    "APPROVED_BANKS": ""
   }
 }

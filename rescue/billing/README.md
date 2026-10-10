@@ -1,5 +1,12 @@
 # Membership billing preparation — 28 September 2026
 
+## October 9, 2026 — growth attribution release
+
+The production `minimalpairs-billing` service is enabled. The current offer remains $7/month or $29 lifetime; annual is retained only for historical access and is not sellable. Worker version `8dcb60ef-13db-4297-ac02-d1e4c2c61df3` adds the published growth pages and the `friend` / `listening-challenge` attribution values. It preserves payment, access and messaging settings. The focused attribution, business-metrics and core suite passed 62 tests. This update did not create a charge, refund or payout.
+
+Earlier disabled-service entries below are historical setup records, not current production status.
+
+
 ## Verified sandbox repair — 2 October 2026
 
 The deployed failure was caused by `fetch(..., {redirect: "error"})`: Cloudflare workerd rejects that mode before sending the request. Both Firebase and Stripe adapters now use `manual`; redirects remain rejected rather than followed. Reproduced in workerd: error mode throws, manual mode retrieves Google's public certificates with HTTP 200.

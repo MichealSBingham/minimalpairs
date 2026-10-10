@@ -1,6 +1,15 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {sanitizeAttribution,attributionMetadata,attributionFromMetadata} from '../analytics.mjs';
+import {growthPaths} from '../../app/src/lib/growth-routes.mjs';
+test('published growth entrances and friend referrals survive purchase attribution',()=>{
+ for(const landing_page of growthPaths){
+  const input={source:'friend',medium:'referral',campaign:'listening-challenge',ui_locale:'en',landing_page};
+  assert.deepEqual(attributionFromMetadata(attributionMetadata(input)),input);
+ }
+ assert.equal(sanitizeAttribution({source:'friend@example.com',medium:'referral',ui_locale:'en'}),undefined);
+ assert.equal(sanitizeAttribution({source:'friend',medium:'referral',campaign:'unapproved-campaign',ui_locale:'en'}),undefined);
+});
 test('AI referral attribution survives checkout metadata and remains a fixed allowlist',()=>{
  for(const source of ['chatgpt','claude','perplexity','copilot','gemini']) {
   const input={source,medium:'referral',ui_locale:'en'};

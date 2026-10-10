@@ -1,8 +1,8 @@
 import {landingPath} from '../app/src/lib/landing-path.mjs';
 // Optional, coarse, consented browser attribution. Never authorizes a purchase.
-const sources=new Set(['google','bing','duckduckgo','yahoo','reddit','facebook','instagram','tiktok','linkedin','x','youtube','newsletter','refold','partner','other','direct','chatgpt','claude','perplexity','copilot','gemini']);
+const sources=new Set(['google','bing','duckduckgo','yahoo','reddit','facebook','instagram','tiktok','linkedin','x','youtube','newsletter','refold','partner','friend','other','direct','chatgpt','claude','perplexity','copilot','gemini']);
 const mediums=new Set(['organic','social','email','referral','cpc','none']);
-const campaigns=new Set(['launch','diagnostic','sound-guide','comparison']);
+const campaigns=new Set(['launch','diagnostic','sound-guide','comparison','listening-challenge']);
 const locales=new Set(['en','es','fr','pt','de','it','ru','ja','zh']);
 export function sanitizeAttribution(input){
  if(!input||typeof input!=='object'||Array.isArray(input)||Object.keys(input).some(k=>!['source','medium','campaign','ui_locale','landing_page'].includes(k)))return undefined;

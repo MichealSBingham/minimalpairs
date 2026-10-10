@@ -1,13 +1,14 @@
+import {growthPaths} from './growth-routes.mjs';
 export { landingPath } from './landing-path.mjs';
 export const MEASUREMENT_VERSION = 'business-funnel-v3';
-export const MEASUREMENT_EVENTS = ['page_view', 'practice_start', 'practice_first_answer', 'practice_complete', 'practice_audio_error', 'practice_feedback', 'review_shown', 'review_open', 'review_practice_start', 'review_practice_complete', 'diagnostic_start', 'diagnostic_complete', 'diagnostic_results_view', 'diagnostic_report_preview', 'diagnostic_report_unlock_click', 'diagnostic_report_open', 'paywall_view', 'plans_view', 'plan_selected', 'begin_checkout', 'checkout_resumed', 'checkout_error', 'billing_portal_open', 'login', 'audio_report_submitted', 'support_submitted', 'guide_audio_play', 'practice_group_complete', 'practice_exit', 'return_practice'] as const;
+export const MEASUREMENT_EVENTS = ['page_view', 'challenge_start', 'challenge_complete', 'challenge_share', 'practice_start', 'practice_first_answer', 'practice_complete', 'practice_audio_error', 'practice_feedback', 'review_shown', 'review_open', 'review_practice_start', 'review_practice_complete', 'diagnostic_start', 'diagnostic_complete', 'diagnostic_results_view', 'diagnostic_report_preview', 'diagnostic_report_unlock_click', 'diagnostic_report_open', 'paywall_view', 'plans_view', 'plan_selected', 'begin_checkout', 'checkout_resumed', 'checkout_error', 'billing_portal_open', 'login', 'audio_report_submitted', 'support_submitted', 'guide_audio_play', 'practice_group_complete', 'practice_exit', 'return_practice'] as const;
 export const SESSION_FEEDBACK_CATEGORIES = ['audio_unclear', 'instructions_unclear', 'too_easy', 'too_difficult', 'about_right'] as const;
 export type SessionFeedbackCategory = typeof SESSION_FEEDBACK_CATEGORIES[number];
 export type MeasurementEvent = typeof MEASUREMENT_EVENTS[number];
 export type EventData = Record<string, unknown>;
 const languages = new Set(['en', 'fr', 'de', 'es', 'it', 'zh', 'pt', 'ru', 'ja']);
 const languagePages = new Set(['english', 'british-english', 'french', 'german', 'spanish', 'italian', 'mandarin-chinese', 'portuguese', 'russian', 'japanese'].map(id => `/${id}-minimal-pairs`));
-const publicPages = new Set(['/', '/practice', '/account', '/pricing', '/teachers', '/method', '/privacy', '/terms', '/restore-access', '/human-audio-preview', '/audio-comparison', '/audio-credits', '/support']);
+const publicPages = new Set([...growthPaths, '/', '/practice', '/account', '/pricing', '/teachers', '/method', '/privacy', '/terms', '/restore-access', '/human-audio-preview', '/audio-comparison', '/audio-credits', '/support']);
 const identifier = /^[a-z0-9][a-z0-9_-]{0,63}$/;
 const contrast = /^(en|fr|de|es|it|zh|pt|ru|ja)-[a-z0-9-]{1,55}$/;
 const uuid = /^(?:(?:focused|mixed|diagnostic)-)?[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/;
@@ -97,12 +98,12 @@ export function recommendationAttribution(raw: unknown, target: EventData, now: 
 /** Fixed categories only: never collect a search query, arbitrary UTM value or referring path. */
 export function acquisitionDetails(referrer: string, origin: string, search = ''): {channel:string;source?:string;medium?:string;campaign?:string} {
   const query = new URLSearchParams(search);
-  const sources = ['google','bing','duckduckgo','yahoo','other','reddit','facebook','instagram','tiktok','linkedin','x','youtube','newsletter','refold','partner',...aiSources];
+  const sources = ['google','bing','duckduckgo','yahoo','other','reddit','facebook','instagram','tiktok','linkedin','x','youtube','newsletter','refold','partner','friend',...aiSources];
   const mediums = ['organic','social','email','referral','cpc'];
   const rawSource = (query.get('utm_source') || '').toLowerCase();
   const source = aiReferrers[rawSource] || rawSource, medium = query.get('utm_medium') || (aiSources.has(source) ? 'referral' : '');
   const campaign = query.get('utm_campaign') || '';
-  if (sources.includes(source) && mediums.includes(medium)) return {channel: aiSources.has(source) && medium === 'referral' ? 'ai_referral' : medium === 'organic' ? 'organic_search' : medium === 'cpc' ? 'paid' : medium, source, medium, ...(['launch','diagnostic','sound-guide','comparison'].includes(campaign) ? {campaign} : {})};
+  if (sources.includes(source) && mediums.includes(medium)) return {channel: aiSources.has(source) && medium === 'referral' ? 'ai_referral' : medium === 'organic' ? 'organic_search' : medium === 'cpc' ? 'paid' : medium, source, medium, ...(['launch','diagnostic','sound-guide','comparison','listening-challenge'].includes(campaign) ? {campaign} : {})};
   const channel = acquisitionChannel(referrer, origin);
   if (channel === 'internal' || channel === 'direct' || channel === 'unknown') return {channel};
   try {

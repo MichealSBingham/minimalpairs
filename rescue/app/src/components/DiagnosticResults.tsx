@@ -1,3 +1,4 @@
+import ChallengeShare from './ChallengeShare';
 import DiagnosticReportGate from './DiagnosticReportGate';
 import {useId,useEffect} from 'react';
 import {trackMeasurement} from '../lib/measurement';
@@ -45,6 +46,7 @@ export default function DiagnosticResults({language,attempts,locale='en',fullAcc
         <div className="diagnostic-row-actions"><button className="text-button" onClick={()=>onPractice(group.contrast.id)}>{!fullAccess&&!group.free&&<Icon name="lock" size={14}/>} {t(fullAccess||group.free?5:6)} <span aria-hidden="true">→</span></button></div>
       </article>;
     })}</div>
+    <ChallengeShare languageId={language.id} locale={locale}/>
     {!fullAccess&&<DiagnosticReportGate locale={locale} languageId={language.id}/>}
 
   </section>;
