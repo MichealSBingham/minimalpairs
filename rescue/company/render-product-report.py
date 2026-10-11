@@ -12,6 +12,11 @@ rows=[]
 for day,v in days:
  f=v['funnel'];rows.append([day.split(':')[1],f['visitors'] if v['events'] else 'Not measured',v['events'].get('page_view',0) if v['events'] else 'Not measured',f['practiceStarted'],f['answered'],f['completed'],f['checkout'],v['purchases'],', '.join(f'{k.upper()} {n/100:.2f}' for k,n in v['grossMinor'].items())])
 content='<h1>MinimalPairs business analytics</h1><p>Refreshed '+escape(d['checkedAt'])+' · UTC dates</p><p>First-party reporting is independent of Google Analytics. Daily visitors are estimates; browser data begins with the October 10 release. Historical sales do not imply historical visit coverage.</p><h2>Visits, practice and verified sales</h2>'+table(['Date','Visitors est.','Pageviews','Started','Answered','Completed','Checkout','Purchases','Gross'],rows)
+diagnostic_rows=[]
+for day,v in days:
+ for length,counts in v.get('diagnostics',{}).items():
+  diagnostic_rows.append([day.split(':')[1],length,counts.get('diagnostic_start',0),counts.get('diagnostic_complete',0),counts.get('diagnostic_offer_click',0),counts.get('begin_checkout',0),counts.get('purchases',0)])
+content+='<h2>Short versus full diagnostics</h2><p>New events only. Checkout and purchase use the last observed diagnostic length; this is a comparison of self-selected users, not a randomized experiment.</p>'+table(['UTC date','Version','Started','Completed','Offer clicks','Checkout','Purchases'],diagnostic_rows)
 content+='<h2>Verified purchases</h2>'+table(['Payment confirmed UTC','Amount','Observed source','Language','Landing page','Joined daily visit'],[[p.get('paymentConfirmedAt') or 'Unavailable',f"{p['currency'].upper()} {p['amount']/100:.2f}",p['source'],p['language'],p['landingPage'],'Yes' if p['joined'] else 'No'] for p in d['latestVerifiedPurchases']])
 content+='<h2>Partial and completed practice</h2>'+table(['UTC day · language · sound group','Attempts','Answered rounds','Completed','Exited','Inactive incomplete'],[[k,v['attempts'],v['answeredRounds'],v['completed'],v['exited'],v['inactiveIncomplete']] for k,v in d.get('attemptSummary',{}).items()])
 source_rows=[]

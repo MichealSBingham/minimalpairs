@@ -160,6 +160,10 @@ html[data-theme="dark"] .diagnostic-offer {border:1px solid hsl(96 20% 27%);bord
 }
 html[data-theme="dark"] .diagnostic-offer p {color:hsl(94 9% 70%)
 }
+html[data-theme="dark"] .diagnostic-conversion {border-block:1px solid var(--line)
+}
+html[data-theme="dark"] .diagnostic-conversion span[lang] {color:var(--muted)
+}
 html[data-theme="dark"] .interface-language {background:hsl(45 30% 11%);border:1px solid hsl(40 21% 27%);border-radius:8px;box-shadow:0 2px 8px hsl(0 0% 0% / 0.067)
 }
 html[data-theme="dark"] .interface-language a {color:hsl(60 7% 90%)

@@ -1,7 +1,7 @@
 import {sealCheckoutContext,queuePlausiblePurchase,plausiblePurchaseStatus} from './plausible-purchases.mjs';
 import {sanitizeAttribution} from '../billing/analytics.mjs';
 import {landingPath} from '../app/src/lib/landing-path.mjs';
-const EVENTS=new Set(['page_view','practice_start','practice_first_answer','practice_answer','practice_complete','practice_exit','practice_audio_error','practice_group_complete','diagnostic_start','diagnostic_complete','diagnostic_results_view','diagnostic_report_preview','diagnostic_report_unlock_click','diagnostic_report_open','plans_view','paywall_view','plan_selected','begin_checkout','checkout_resumed','checkout_error','login','guide_audio_play','challenge_start','challenge_complete','course_signup','checkout_context']);
+const EVENTS=new Set(['page_view','practice_start','practice_first_answer','practice_answer','practice_complete','practice_exit','practice_audio_error','practice_group_complete','diagnostic_start','diagnostic_complete','diagnostic_results_view','diagnostic_report_preview','diagnostic_report_unlock_click','diagnostic_report_open','diagnostic_offer_click','plans_view','paywall_view','plan_selected','begin_checkout','checkout_resumed','checkout_error','login','guide_audio_play','challenge_start','challenge_complete','course_signup','checkout_context']);
 const LANG=/^(en|fr|de|es|it|pt|ru|ja|zh|none)$/;
 const hex=bytes=>[...new Uint8Array(bytes)].map(x=>x.toString(16).padStart(2,'0')).join('');
 const digest=async x=>hex(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(x)));
@@ -9,12 +9,12 @@ async function mac(secret,value){const key=await crypto.subtle.importKey('raw',n
 const dayOf=t=>new Date(t).toISOString().slice(0,10);
 const ok=x=>Response.json(x,{headers:{'Cache-Control':'no-store'}});
 export function cleanEvent(x){
- if(!x||typeof x!=='object'||Object.keys(x).some(k=>!['event','occurredAt','id','language','contrast','path','source','medium','campaign','ui_locale','attempt','kind','mode','surface','round','correct','total','duration_ms','plan'].includes(k)))return null;
+ if(!x||typeof x!=='object'||Object.keys(x).some(k=>!['event','occurredAt','id','language','contrast','path','source','medium','campaign','ui_locale','attempt','kind','mode','surface','round','correct','total','duration_ms','plan','diagnostic_length'].includes(k)))return null;
  if(!EVENTS.has(x.event)||! /^[a-f0-9-]{36}$/.test(x.id||''))return null;
  const out={event:x.event,id:x.id,language:LANG.test(x.language||'')?x.language:'none',contrast:/^(en|fr|de|es|it|pt|ru|ja|zh)-[a-z0-9-]{1,60}$/.test(x.contrast||'')?x.contrast:'none',path:landingPath(x.path)||(['/', '/practice','/account','/pricing'].includes(x.path)?x.path:'/other')};
  const a=sanitizeAttribution({source:x.source,medium:x.medium,ui_locale:x.ui_locale,...(x.campaign?{campaign:x.campaign}:{})});
  if(a)Object.assign(out,a);
- for(const [k,values] of Object.entries({kind:['focused','mixed','diagnostic','path'],mode:['abx-cross-word','word-identification'],surface:['practice','pricing','account','diagnostic','guide'],plan:['monthly','lifetime']}))if(values.includes(x[k]))out[k]=x[k];
+ for(const [k,values] of Object.entries({diagnostic_length:['short','full'],kind:['focused','mixed','diagnostic','path'],mode:['abx-cross-word','word-identification'],surface:['practice','pricing','account','diagnostic','guide'],plan:['monthly','lifetime']}))if(values.includes(x[k]))out[k]=x[k];
  if(/^(?:(focused|mixed|diagnostic)-)?[a-f0-9-]{36}$/.test(x.attempt||''))out.attempt=x.attempt;
  for(const k of ['round','correct','total','duration_ms'])if(Number.isInteger(x[k])&&x[k]>=0&&x[k]<=(k==='duration_ms'?86400000:1000))out[k]=x[k];
  if(Number.isSafeInteger(x.occurredAt))out.occurredAt=x.occurredAt;
@@ -22,7 +22,7 @@ export function cleanEvent(x){
 }
 async function boundedBody(request){const reader=request.body?.getReader();if(!reader)throw Error('body');let size=0,s='';const decoder=new TextDecoder();while(true){const {done,value}=await reader.read();if(done)break;size+=value.length;if(size>8192){await reader.cancel();throw Error('size');}s+=decoder.decode(value,{stream:true});}return JSON.parse(s+decoder.decode());}
 function increment(map,key,n=1){if(Object.hasOwn(map,key)||Object.keys(map).length<4000)map[key]=(map[key]||0)+n;}
-function emptyDay(){return {version:1,events:{},languages:{},sources:{},pages:{},funnel:{visitors:0,practiceStarted:0,answered:0,completed:0,checkout:0,purchased:0},purchases:0,grossMinor:{},purchaseSources:{},purchaseLanguages:{},rejectedBots:0};}
+function emptyDay(){return {version:1,events:{},languages:{},sources:{},pages:{},funnel:{visitors:0,practiceStarted:0,answered:0,completed:0,checkout:0,purchased:0},purchases:0,grossMinor:{},purchaseSources:{},purchaseLanguages:{},diagnostics:{},rejectedBots:0};}
 export async function productAnalytics(request,storage,env,now=Date.now()){
  const path=new URL(request.url).pathname;
  if(path==='/admin/analytics'){
@@ -44,10 +44,11 @@ export async function productAnalytics(request,storage,env,now=Date.now()){
   return storage.transaction(async tx=>{
    if(await tx.get(key))return ok({recorded:true,duplicate:true});
    const j=journeyKey&&await tx.get(journeyKey),day=dayOf((Number.isInteger(p.paidAt)&&p.paidAt>=p.created&&p.paidAt*1000<=now+60000?p.paidAt:p.created)*1000),d=await tx.get('productDay:'+day)||emptyDay();
+   const diagnosticLength=attribution.diagnostic_length||j?.diagnosticLength||'unknown';d.diagnostics||={};d.diagnostics[diagnosticLength]||={};increment(d.diagnostics[diagnosticLength],'purchases');
    d.purchases++;increment(d.grossMinor,p.currency,p.amount);const source=(attribution.source&&attribution.source!=='unknown'?attribution.source:null)||(j?.source&&j.source!=='unknown'?j.source:null)||'unattributed',language=attribution.language||j?.language||'unknown';increment(d.purchaseSources,source);increment(d.purchaseLanguages,language);
    if(j&&!j.purchased){j.purchased=true;const jd=day===j.day?d:await tx.get('productDay:'+j.day)||emptyDay();updateFunnel(j,jd);await tx.put(journeyKey,j);if(day!==j.day)await tx.put('productDay:'+j.day,jd);}
-   await queuePlausiblePurchase(tx,env,key,j?.plausibleContext,{domain:'minimalpairs.co',name:'Purchase',url:'https://minimalpairs.co'+(attribution.landing_page||j?.landing||'/pricing'),props:{source,language,contrast:attribution.contrast||j?.contrast||'unknown',plan:['lifetime','monthly'].includes(p.plan)?p.plan:'membership'},revenue:{currency:p.currency.toUpperCase(),amount:p.amount/100}},now);
-   await tx.put('productDay:'+day,d);await tx.put(key,{recordedAt:new Date(now).toISOString(),checkoutCreatedAt:new Date(p.created*1000).toISOString(),paymentConfirmedAt:Number.isInteger(p.paidAt)?new Date(p.paidAt*1000).toISOString():null,amount:p.amount,currency:p.currency,source,language,landingPage:attribution.landing_page||j?.landing||'unknown',contrast:attribution.contrast||j?.contrast||'unknown',sessionKind:attribution.session_kind||j?.kind||'unknown',joined:!!j});return ok({recorded:true});
+   await queuePlausiblePurchase(tx,env,key,j?.plausibleContext,{domain:'minimalpairs.co',name:'Purchase',url:'https://minimalpairs.co'+(attribution.landing_page||j?.landing||'/pricing'),props:{source,language,diagnostic_length:diagnosticLength,contrast:attribution.contrast||j?.contrast||'unknown',plan:['lifetime','monthly'].includes(p.plan)?p.plan:'membership'},revenue:{currency:p.currency.toUpperCase(),amount:p.amount/100}},now);
+   await tx.put('productDay:'+day,d);await tx.put(key,{recordedAt:new Date(now).toISOString(),checkoutCreatedAt:new Date(p.created*1000).toISOString(),paymentConfirmedAt:Number.isInteger(p.paidAt)?new Date(p.paidAt*1000).toISOString():null,amount:p.amount,currency:p.currency,source,language,diagnosticLength,landingPage:attribution.landing_page||j?.landing||'unknown',contrast:attribution.contrast||j?.contrast||'unknown',sessionKind:attribution.session_kind||j?.kind||'unknown',joined:!!j});return ok({recorded:true});
   });
  }
  if(path!=='/events'||request.method!=='POST')return new Response(null,{status:405});
@@ -64,6 +65,9 @@ export async function productAnalytics(request,storage,env,now=Date.now()){
   if(j.events.includes(x.id))return {journey:day+'.'+hash,...context(j)};
   if(j.events.length>=500)return {limited:true};j.events.push(x.id);
   if(x.surface)j.surface=x.surface;
+  if(x.diagnostic_length)j.diagnosticLength=x.diagnostic_length;
+  const dl=x.diagnostic_length||j.diagnosticLength||'unknown';
+  if(x.event.startsWith('diagnostic_')||(['plans_view','begin_checkout'].includes(x.event)&&j.diagnosticLength)){d.diagnostics||={};d.diagnostics[dl]||={};increment(d.diagnostics[dl],x.event);}
   if(x.event==='checkout_context')j.plausibleContext=await sealCheckoutContext(request,env,now);
   if(x.event!=='checkout_context')increment(d.events,x.event);
   if(x.language!=='none'){j.language=x.language;j.contrast=x.contrast;if(x.kind)j.kind=x.kind;increment(d.languages,[x.event,x.language,x.contrast].join('|'));}
@@ -71,14 +75,14 @@ export async function productAnalytics(request,storage,env,now=Date.now()){
   const mark={practice_start:'startAt',practice_first_answer:'answerAt',practice_complete:'completeAt',begin_checkout:'checkoutAt'}[x.event];
   if(mark)j[mark]=Math.min(j[mark]??Infinity,occurred);
   updateFunnel(j,d);
-  if(x.attempt){if(j.attempts[x.attempt]||Object.keys(j.attempts).length<40){const a=j.attempts[x.attempt]||{language:x.language,contrast:x.contrast,startedAt:now,answers:0};if(x.event==='practice_answer'){a.answers++;increment(d.languages,['answered_rounds',x.language,x.contrast].join('|'));if(x.correct===1)increment(d.languages,['correct_rounds',x.language,x.contrast].join('|'));}if(x.event==='practice_complete')a.completed=true;if(x.event==='practice_exit')a.exited=true;if(!a.lastAt||occurred>=a.lastAt){a.lastEvent=x.event;a.lastAt=occurred;};j.attempts[x.attempt]=a;}}
+  if(x.attempt){if(j.attempts[x.attempt]||Object.keys(j.attempts).length<40){const a=j.attempts[x.attempt]||{language:x.language,contrast:x.contrast,startedAt:now,answers:0};if(x.kind)a.kind=x.kind;if(x.diagnostic_length)a.diagnosticLength=x.diagnostic_length;if(x.event==='practice_answer'){a.answers++;increment(d.languages,['answered_rounds',x.language,x.contrast].join('|'));if(x.correct===1)increment(d.languages,['correct_rounds',x.language,x.contrast].join('|'));}if(x.event==='practice_complete')a.completed=true;if(x.event==='practice_exit')a.exited=true;if(!a.lastAt||occurred>=a.lastAt){a.lastEvent=x.event;a.lastAt=occurred;};j.attempts[x.attempt]=a;}}
   await tx.put(key,j);await tx.put('productDay:'+day,d);return {journey:day+'.'+hash,...context(j)};
  });
  if(result.journey)result.journey+='.'+await mac(env.REPORTING_TOKEN,result.journey);
  const alarm=await storage.getAlarm?.();if(!alarm||alarm>now+60000)await storage.setAlarm(now+60000);
  return ok(result);
 }
-function context(j){return {source:j.source,medium:j.medium,...(j.campaign?{campaign:j.campaign}:{}),surface:j.surface,landing_page:landingPath(j.landing),language:j.language,contrast:j.contrast,session_kind:j.kind};}
+function context(j){return {source:j.source,medium:j.medium,...(j.campaign?{campaign:j.campaign}:{}),surface:j.surface,landing_page:landingPath(j.landing),language:j.language,contrast:j.contrast,session_kind:j.kind,diagnostic_length:j.diagnosticLength};}
 export async function pruneProductAnalytics(storage,now=Date.now()){
  for(const prefix of ['productJourney:','productSalt:','productDay:','productPurchase:']){let cursor;do{const rows=await storage.list({prefix,limit:500,...(cursor?{startAfter:cursor}:{})});if(!rows.size)break;cursor=[...rows.keys()].at(-1);const cutoff=dayOf(now-(prefix==='productDay:'||prefix==='productPurchase:'?90:2)*86400000);for(const [key,row] of rows){if(prefix==='productJourney:'&&row.plausibleContext?.expires<now){delete row.plausibleContext;await storage.put(key,row);}if((prefix==='productPurchase:'?row.recordedAt.slice(0,10):key.slice(prefix.length,prefix.length+10))<cutoff)await storage.delete(key);}if(rows.size<500)break;}while(cursor);}
 }

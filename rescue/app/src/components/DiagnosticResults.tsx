@@ -11,9 +11,9 @@ import {diagnosticInsightCopy} from '../lib/diagnostic-insight-copy';
 import './diagnostic-results.css';
 export type {DiagnosticAttempt} from '../lib/diagnostic-report';
 
-export default function DiagnosticResults({language,attempts,locale='en',fullAccess,onPractice}:{language:Language;attempts:DiagnosticAttempt[];locale?:string;fullAccess:boolean;onPractice:(contrastId:string)=>void}) {
+export default function DiagnosticResults({language,attempts,locale='en',fullAccess,onPractice,diagnosticLength}:{diagnosticLength?:'short'|'full';language:Language;attempts:DiagnosticAttempt[];locale?:string;fullAccess:boolean;onPractice:(contrastId:string)=>void}) {
   const reportId=useId();
-  useEffect(()=>{if(fullAccess)trackMeasurement('diagnostic_report_open',{language_id:language.id,surface:'diagnostic',ui_locale:locale,access_tier:'paid'});},[fullAccess,language.id,locale]);
+  useEffect(()=>{if(fullAccess)trackMeasurement('diagnostic_report_open',{language_id:language.id,surface:'diagnostic',ui_locale:locale,access_tier:'paid',diagnostic_length:diagnosticLength});},[fullAccess,language.id,locale,diagnosticLength]);
   const t=(index:number)=>diagnosticResultText(locale,index),copy=diagnosticReportCopy(locale);
   const groups=language.contrasts.map((contrast,index)=>{
     const results=attempts.filter(item=>item.contrastId===contrast.id),correct=results.filter(item=>item.correct).length;
@@ -31,6 +31,7 @@ export default function DiagnosticResults({language,attempts,locale='en',fullAcc
       <div className="diagnostic-donut" role="img" aria-label={`${correct} / ${total} ${copy.matches}`} style={{background:`conic-gradient(#537361 ${percent}%, #e7e1d5 0)`}}><div><strong>{correct}<span>/{total}</span></strong><span>{percent}%</span></div></div>
       <div><span className="eyebrow">{copy.matches}</span><h3>{t(0)}</h3><p>{insight.summary} {focusCount?insight.focus:insight.perfect}</p></div>
     </header>
+    {!fullAccess&&<div className="diagnostic-conversion"><div><strong>{insight.offerTitle}</strong><span lang={language.locale}>{groups.slice(0,2).map(g=>wordLabel(g.contrast)).join(' · ')}</span></div><a className="button button-dark" href={`#${reportId}-plans`} onClick={()=>trackMeasurement('diagnostic_offer_click',{language_id:language.id,surface:'diagnostic',ui_locale:locale,diagnostic_length:diagnosticLength})}>{insight.offerAction}<Icon name="arrow" size={16}/></a></div>}
     {suggested&&<div className="diagnostic-next"><div><span className="eyebrow">{t(fullAccess?2:3)}</span><strong lang={language.locale}>{wordLabel(suggested.contrast)}</strong><span className="diagnostic-secondary-ipa ipa-text">{diagnosticPhonemeLabel(suggested.contrast.phonemes)}</span></div><button className="button button-dark" onClick={()=>onPractice(suggested.contrast.id)}>{t(5)}<Icon name="arrow" size={16}/></button></div>}
     {weakest&&suggested?.contrast.id!==weakest.contrast.id&&<p className="diagnostic-focus">{t(4)}: <strong lang={language.locale}>{wordLabel(weakest.contrast)}</strong></p>}
     <section className="diagnostic-overview" aria-label={t(13)}><h4>{t(13)} <span>{groups.length}</span></h4><nav aria-label={t(13)}>{groups.map(group=><a key={group.contrast.id} href={fullAccess?`#${reportId}-${group.contrast.id}`:undefined}><span className="diagnostic-overview-label"><span className="diagnostic-overview-words" lang={language.locale}>{wordLabel(group.contrast,group.results.find(item=>!item.correct)?.pairId)}</span><span className="diagnostic-secondary-ipa ipa-text">{diagnosticPhonemeLabel(group.contrast.phonemes)}</span></span><span className="diagnostic-overview-bar" aria-hidden="true"><span style={{width:`${group.ratio*100}%`}}/></span><span className="diagnostic-overview-count">{group.correct}/{group.results.length}<span className="diagnostic-report-sr"> {copy.matches}</span></span></a>)}</nav></section>
@@ -47,7 +48,7 @@ export default function DiagnosticResults({language,attempts,locale='en',fullAcc
       </article>;
     })}</div>
     <ChallengeShare languageId={language.id} locale={locale}/>
-    {!fullAccess&&<DiagnosticReportGate locale={locale} languageId={language.id}/>}
+    {!fullAccess&&<DiagnosticReportGate id={`${reportId}-plans`} locale={locale} languageId={language.id} diagnosticLength={diagnosticLength}/>}
 
   </section>;
 }

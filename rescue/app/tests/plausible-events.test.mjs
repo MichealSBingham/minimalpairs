@@ -14,3 +14,4 @@ test('repeat offer visibility callbacks send one first-party and Plausible expos
  assert.equal(events.length,1);assert.equal(requests.length,1);
  excluded=true;await exports.productEvent('begin_checkout',{plan:'lifetime'});assert.equal(events.length,1);
 });
+test('diagnostic length is allowlisted and offer clicks have a separate goal',()=>{assert.equal(plausibleProperties({diagnostic_length:'short'}).diagnostic_length,'short');assert.equal(plausibleProperties({diagnostic_length:'full'}).diagnostic_length,'full');assert.deepEqual(plausibleProperties({diagnostic_length:'unknown-private'}),{});assert.equal(plausibleEvents.diagnostic_offer_click,'Diagnostic offer clicked');});

@@ -40,3 +40,16 @@ test('approved checkout context queues one real revenue event and expires from j
  await pruneProductAnalytics(s,now+2*86400000+1);
  for(const [k,v] of map)if(k.startsWith('productJourney:'))assert.equal(v.plausibleContext,undefined);
 });
+test('diagnostic length survives navigation and attributes verified purchase, unknown stays unknown',async()=>{
+ const {s,map}=setup();let journey;
+ for(const e of ['diagnostic_start','diagnostic_complete','diagnostic_offer_click','begin_checkout','checkout_context']){
+  const data=event(e,{...(e.startsWith('diagnostic_')?{diagnostic_length:'full',kind:'diagnostic'}:{})});
+  const response=await (await productAnalytics(request(data),s,{...env,PLAUSIBLE_ENABLED:'true'},now)).json();journey=response.journey;
+  assert.equal(response.diagnostic_length,'full');
+ }
+ await productAnalytics(paid(journey),s,{...env,PLAUSIBLE_ENABLED:'true'},now);
+ const day=map.get('productDay:2026-10-10');assert.equal(day.diagnostics.full.diagnostic_start,1);assert.equal(day.diagnostics.full.diagnostic_complete,1);assert.equal(day.diagnostics.full.begin_checkout,1);assert.equal(day.diagnostics.full.purchases,1);
+ const purchases=[...map].filter(([k])=>k.startsWith('productPurchase:'));assert.equal(purchases[0][1].diagnosticLength,'full');
+ const queued=[...map].find(([k])=>k.startsWith('plausiblePurchase:'))[1];assert.equal(queued.payload.props.diagnostic_length,'full');
+ assert.equal(cleanEvent(event('diagnostic_start',{diagnostic_length:'invented'})).diagnostic_length,undefined);
+});
