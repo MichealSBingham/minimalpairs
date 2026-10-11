@@ -1,4 +1,5 @@
 ---
+import { searchIntent } from '../../lib/search-intent';
 import EmailCourseSignup from '../../components/EmailCourseSignup';
 import { courseEnabled } from '../../lib/email-course.mjs';
 import ListeningDemo from '../../components/ListeningDemo';
@@ -23,6 +24,7 @@ const hasLesson = Boolean(practiceLanguage?.contrasts.some(c => c.id === contras
 const lessonUrl = hasLesson ? practiceUrl(language,contrast) : '/practice';
 const copy = guideCopy[contrast.id];
 const entrance=entranceGuides[contrast.id];
+const intent=searchIntent[contrast.id];
 const challenge=challenges.find(c=>c.contrast===contrast.id);
 const abx = abxFor(contrast);
 const audioStatus = guideAudioStatus(language.id, contrast);
@@ -98,7 +100,7 @@ const soundCards: Record<string, { title: string; description: string }> = {
 };
 const schema = { '@context': 'https://schema.org', '@type': 'LearningResource', name: `${contrast.label} ${language.name} listening practice`, description: contrast.description, url: absoluteUrl(`/learn/${contrast.id}`), inLanguage: 'en', learningResourceType: 'Listening practice guide', about: { '@type': 'Thing', name: `${language.name}: ${contrast.phonemes.join(' / ')}` }, isPartOf: { '@type': 'CollectionPage', name: `${language.name} minimal pairs`, url: absoluteUrl(`/${slugFor(language)}`) } };
 ---
-<Base title={entrance ? `${entrance.title} | MinimalPairs` : contrast.id === 'en-zh-j' ? '/ʒ/ vs /dʒ/ Minimal Pairs: Lesion vs Legion + Audio | MinimalPairs' : `${language.name} ${contrastTitle(contrast)} Minimal Pairs ${audioStatus.hasCachedAudio ? '& Audio' : 'Guide'} | MinimalPairs`} description={description.slice(0, 175)}>
+<Base title={intent ? `${intent.title} | MinimalPairs` : entrance ? `${entrance.title} | MinimalPairs` : contrast.id === 'en-zh-j' ? '/ʒ/ vs /dʒ/ Minimal Pairs: Lesion vs Legion + Audio | MinimalPairs' : `${language.name} ${contrastTitle(contrast)} Minimal Pairs ${audioStatus.hasCachedAudio ? '& Audio' : 'Guide'} | MinimalPairs`} description={description.slice(0, 175)}>
   <Header />
   <main class="guide-page">
     <div class="guide-layout">
@@ -115,6 +117,7 @@ const schema = { '@context': 'https://schema.org', '@type': 'LearningResource', 
           <div class="guide-intro"><p>{entrance?.intro || contrast.description}</p><a class="guide-button" href={lessonUrl}>{hasLesson ? 'Practice these sounds' : 'Explore listening lessons'}<Icon name="arrow" size={20} /></a></div>
           {contrast.id === 'en-zh-j' && <p class="guide-small">Think of the middle sounds in <strong>lesion</strong> and <strong>legion</strong>: /ʒ/ flows continuously; /dʒ/ starts with a brief stop. Listen to the words below, then test the difference in practice.</p>}
         </header>
+        {intent && <section class="guide-search-answer"><h2>{intent.question}</h2><p>{intent.answer}</p><a class="guide-text-link" href={challenge ? `/challenge/${challenge.slug}` : `/diagnostic/${language.id}`}>{challenge ? 'Try the free listening challenge' : `Check your ${language.name} listening`} <Icon name="arrow" size={16}/></a></section>}
 
         <section class="guide-sound-cards" aria-label="The two sound categories">{categories.map((category, side) => <div class:list={{ 'guide-sound-card': true, 'is-second': side === 1 }}><span class:list={{ 'guide-card-symbol': symbolic(category), 'guide-card-category': !symbolic(category) }}>{soundLabel(category)}</span><h2>{soundCards[category]?.title || `The ${category} category`}</h2><p>{soundCards[category]?.description || abx.targetSoundFocus || contrast.description}</p><div class="guide-card-example"><span>As in</span><strong lang={language.locale}>{contrast.pairs[0].words[side].text}</strong>{readingFor(contrast.pairs[0].words[side]) && <small>{readingFor(contrast.pairs[0].words[side])}</small>}</div></div>)}</section>
 

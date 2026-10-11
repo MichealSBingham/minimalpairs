@@ -28,7 +28,7 @@ const description = entrance?.description || `${language.name} listening practic
 const url = absoluteUrl(`/${slugFor(language)}`);
 const schema = { '@context': 'https://schema.org', '@type': 'CollectionPage', name: `${language.name} minimal pairs`, description, url, inLanguage: 'en', hasPart: language.contrasts.map(contrast => ({ '@type': 'LearningResource', name: contrast.label, url: absoluteUrl(`/learn/${contrast.id}`), learningResourceType: 'Listening practice guide' })) };
 ---
-<Base title={`${language.name} Minimal Pairs & Listening Practice | MinimalPairs`} description={description}>
+<Base title={`${language.name} Minimal Pairs with Audio & Listening Test | MinimalPairs`} description={description}>
   <Header />
   <main class="ed-page language-chooser">
     <div class="ed-wrap">

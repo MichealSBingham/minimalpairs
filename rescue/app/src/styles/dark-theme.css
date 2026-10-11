@@ -1184,6 +1184,8 @@ html[data-theme="dark"] .guide-mobile-contrasts nav a { border-top:1px solid var
 html[data-theme="dark"] .guide-mobile-contrasts nav a[aria-current=page] { background:#343630; color:#f4eee2
 }
 }
+html[data-theme="dark"] .guide-search-answer {border-block:1px solid var(--line,hsl(41 22% 27%))
+}
 html[data-theme="dark"] .redesign-home {--home-rust:hsl(11 60% 72%);--home-blue:hsl(214 55% 72%)
 }
 html[data-theme="dark"] .rd-hero .eyebrow {color:var(--home-rust)
