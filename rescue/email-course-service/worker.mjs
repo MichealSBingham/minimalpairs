@@ -1,3 +1,4 @@
+import {courseAttribution} from '../app/src/lib/course-attribution.mjs';
 import {collectBuyers,deliverBuyer,buyerStatus,seedBuyer} from './buyers.mjs';
 import {enqueue,deliverOne,suppressProviderEvent,verifyProviderWebhook} from './delivery.mjs';
 import {scheduleWeekly} from './weekly.mjs';
@@ -9,10 +10,11 @@ const LANGUAGES=new Set(['en-US-ga','fr','es','de','it','pt','ru','zh','ja']);
 const response=(data,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer'}});
 const digest=async value=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(value))),v=>v.toString(16).padStart(2,'0')).join('');
 export function validateSubscription(x){
- if(!x||typeof x!=='object'||Array.isArray(x)||Object.keys(x).some(k=>!['email','language','course','weekly','consentVersion'].includes(k)))return null;
+ if(!x||typeof x!=='object'||Array.isArray(x)||Object.keys(x).some(k=>!['email','language','course','weekly','consentVersion','attribution'].includes(k)))return null;
  if(typeof x.email!=='string'||x.email.length>254||! /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9.-]*[a-zA-Z0-9])?\.[a-zA-Z]{2,63}$/.test(x.email.trim()))return null;
  if(!LANGUAGES.has(x.language)||typeof x.course!=='boolean'||typeof x.weekly!=='boolean'||! (x.course||x.weekly)||x.consentVersion!==CONSENT_VERSION)return null;
- return {...x,email:x.email.trim().toLowerCase()};
+ const {attribution,...rest}=x;
+ return {...rest,email:x.email.trim().toLowerCase(),...(courseAttribution(attribution)?{attribution:courseAttribution(attribution)}:{})};
 }
 async function readBody(request,raw=false){
  const reader=request.body?.getReader();if(!reader)throw Error('body');let count=0;const parts=[];
@@ -98,7 +100,7 @@ export class EmailAudience{
    if(!this.env.ADMIN_TOKEN||request.headers.get('Authorization')!==`Bearer ${this.env.ADMIN_TOKEN}`)return response({error:'Unauthorized'},401);
    if(request.method!=='GET')return response({error:'Method not allowed'},405);
    const rows=[...(await this.ctx.storage.list({prefix:'subscriber:',limit:5000})).values()];
-   return response({sendingEnabled:this.env.SENDING_ENABLED==='true',subscribers:rows.map(({email,language,course,weekly,status,createdAt,consentVersion,unsubscribedAt})=>({email,language,course,weekly,status,createdAt,consentVersion,unsubscribedAt}))});
+   return response({sendingEnabled:this.env.SENDING_ENABLED==='true',subscribers:rows.map(({email,language,course,weekly,status,createdAt,consentVersion,unsubscribedAt,attribution})=>({email,language,course,weekly,status,createdAt,consentVersion,unsubscribedAt,attribution}))});
   }
   if(!['/subscribe','/unsubscribe','/confirm'].includes(path))return response({error:'Not found'},404);
   // Link scanners and crawlers cannot unsubscribe anyone with GET.

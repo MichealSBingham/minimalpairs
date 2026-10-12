@@ -1,3 +1,4 @@
+import {courseAttribution} from './course-attribution.mjs';
 import {acquisitionDetails,measurementPath,landingPath,type EventData} from './measurement-data';
 import {reportToPlausible} from './plausible-reporting';
 const endpoint='https://minimalpairs-audio-reports.sirmichealbingham.workers.dev/events';
@@ -30,4 +31,12 @@ export async function productCheckoutContext(){
  await productEvent('checkout_context');
  const a=acquisitionDetails(document.referrer,window.location.origin,window.location.search);
  return {source:context.source||a.source||'unknown',medium:context.medium||a.medium||'none',ui_locale:document.documentElement.lang||'en',...(context.journey?{journey:context.journey}:{}),...(landingPath(String(context.landing_page||''))?{landing_page:context.landing_page}:{}),...Object.fromEntries(['language','contrast','session_kind','surface','campaign','diagnostic_length'].filter(k=>context[k]).map(k=>[k,context[k]]))};
+}
+
+export async function productCourseContext(surface?:string){
+ if(!productReportingEnabled())return undefined;
+ // The page-view response restores existing server-side acquisition context.
+ await Promise.race([pending,new Promise(resolve=>setTimeout(resolve,2600))]);
+ const a=acquisitionDetails(document.referrer,location.origin,location.search);
+ return courseAttribution({source:context.source||a.source||(a.channel==='direct'?'direct':'unknown'),medium:context.medium||a.medium||'none',campaign:context.campaign||a.campaign,landing_page:context.landing_page||(a.channel!=='internal'?location.pathname:undefined),signup_page:location.pathname,surface,diagnostic_length:surface==='diagnostic'?context.diagnostic_length:undefined});
 }

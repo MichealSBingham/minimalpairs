@@ -21,3 +21,15 @@ test('legacy pending cleanup still removes stale data',async()=>{const {service,
 test('combined signup held until weekly content readiness is approved',async()=>{assert.equal((await setup({WEEKLY_SERIES_READY:'false'}).service.fetch(req('/subscribe',{...body,weekly:true}))).status,503)});
 test('old consent never gains weekly through duplicate new signup',async()=>{const {service,map}=setup();await service.fetch(req('/subscribe'));const [key,row]=[...map].find(([k])=>k.startsWith('subscriber:'));row.consentVersion='listening-course-2026-10-09-v2';map.set(key,row);await service.fetch(req('/subscribe',{...body,weekly:true}));assert.equal(map.get(key).weekly,false);assert.equal(map.get(key).consentVersion,'listening-course-2026-10-09-v2');});
 test('buyer seeding and tick require admin auth; receipts seed idempotently',async()=>{const {service}=setup();assert.equal((await service.fetch(req('/admin/buyers/seed',{email:'x@example.com',providerId:'sent'}))).status,401);for(let i=0;i<2;i++){const r=await service.fetch(req('/admin/buyers/seed',{email:'x@example.com',providerId:'sent'},{Authorization:'Bearer test-admin'}));assert.equal(r.status,200);assert.equal((await r.json()).seeded,i===0);}const status=await service.fetch(new Request('https://test.invalid/admin/status',{headers:{Authorization:'Bearer test-admin'}}));assert.equal((await status.json()).buyers.states.accepted,1);});
+
+test('signup attribution is minimized, saved, exported and not overwritten by duplicate',async()=>{
+ const {service,map}=setup();
+ const attribution={source:'google',medium:'organic',landing_page:'/learn/fr-u-y?email=private@example.com',signup_page:'/practice',surface:'diagnostic',diagnostic_length:'full',email:'leak@example.com',journey:'private-id',referrer:'https://private.invalid'};
+ await service.fetch(req('/subscribe',{...body,attribution}));
+ const clean={source:'google',medium:'organic',surface:'diagnostic',diagnostic_length:'full',landing_page:'/learn/fr-u-y',signup_page:'/practice'};
+ assert.deepEqual([...map].find(([k])=>k.startsWith('subscriber:'))[1].attribution,clean);
+ await service.fetch(req('/subscribe',{...body,attribution:{source:'reddit'}}));
+ const r=await service.fetch(new Request('https://test.invalid/admin/subscribers',{headers:{Authorization:'Bearer test-admin'}}));
+ assert.deepEqual((await r.json()).subscribers[0].attribution,clean);
+ assert.equal(validateSubscription({...body,attribution:{source:'person@example.com',signup_page:'/secret/123'}}).attribution,undefined);
+});
