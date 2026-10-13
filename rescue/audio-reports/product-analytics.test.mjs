@@ -53,3 +53,10 @@ test('diagnostic length survives navigation and attributes verified purchase, un
  const queued=[...map].find(([k])=>k.startsWith('plausiblePurchase:'))[1];assert.equal(queued.payload.props.diagnostic_length,'full');
  assert.equal(cleanEvent(event('diagnostic_start',{diagnostic_length:'invented'})).diagnostic_length,undefined);
 });
+test('audio failures aggregate by safe category without retaining raw error details',async()=>{
+ const {s,map}=setup();
+ await productAnalytics(request(event('practice_audio_error',{failure_kind:'blocked'})),s,env,now);
+ await productAnalytics(request(event('practice_audio_error')),s,env,now);
+ assert.deepEqual(map.get('productDay:2026-10-10').audioFailures,{'fr|fr-u-y|blocked':1,'fr|fr-u-y|unknown':1});
+ assert.equal(cleanEvent(event('practice_audio_error',{failure_kind:'private error details'})).failure_kind,undefined);
+});

@@ -18,7 +18,10 @@ export default function MembershipPanel({ storefront = false, embedded = false, 
   const t = commerce(locale); const path = (value: string) => commercePath(locale, value);
   const surface = embedded ? 'practice' : storefront ? 'pricing' : 'account';
   const selectPlan = (plan: MembershipPlan) => trackMeasurement('plan_selected',{surface,ui_locale:locale,plan});
+  const signInPlanPath=(plan:MembershipPlan)=>path(`/account?plan=${plan}#account-sign-in`);
   const issueMessage = (_issue: unknown) => t('error');
+  const [selectedPlan,setSelectedPlan]=useState<MembershipPlan|null>(null);
+  useEffect(()=>{const plan=new URLSearchParams(location.search).get('plan');if(plan==='monthly'||plan==='lifetime')setSelectedPlan(plan);},[]);
   const [user, setUser] = useState<SessionUser | null>(null);
   const [identityReady, setIdentityReady] = useState(false);
   const [access, setAccess] = useState<Entitlement | null>(null);
@@ -155,6 +158,7 @@ export default function MembershipPanel({ storefront = false, embedded = false, 
       }
     } finally { requestBusy.current = false; setBusy(null); }
   }
+  useEffect(()=>{if(selectedPlan && user?.email_verified && status==='ready' && !access)document.querySelector('.plan-selected')?.scrollIntoView({block:'center',behavior:'smooth'});},[selectedPlan,user?.id,status,access]);
   if (!billingAvailable) return null;
   const verified = Boolean(user?.email_verified);
   const lifetime = access?.plan === 'lifetime';
@@ -162,7 +166,7 @@ export default function MembershipPanel({ storefront = false, embedded = false, 
   const disabled = Boolean(busy) || status !== 'ready';
   const planCards = <div className="membership-plans">
     {storefront && !embedded && <div className="plan-free"><span className="plan-kicker">{t('explore')}</span><h3>{t('free')}</h3><p className="membership-price">$0</p><p>{t('freePitch')}</p><ul><li>{t('freeDiagnostic')}</li><li>{t('freeExercises')}</li><li>{t('freeUnlimited')}</li><li>{t('voicesHidden')}</li></ul><a className="button button-outline" href={path('/practice')}>{t('startFree')}</a><p className="membership-fine">{t('noCard')}</p></div>}
-    {(['monthly','lifetime'] as MembershipPlan[]).map(plan => <div key={plan} ref={plan === 'monthly' ? setPlanExposureNode : undefined} className={plan === 'lifetime' ? 'plan-lifetime' : 'plan-monthly'}><span className="plan-kicker">{t(plan === 'lifetime' ? 'payOnce' : 'flexible')}</span><h3>{t(plan)}</h3><p className="membership-price">{plan === 'lifetime' ? '$29' : '$7'}<span> USD {plan === 'lifetime' ? t('once') : `/ ${t('month')}`} </span></p><p>{t(plan === 'lifetime' ? 'lifetimeDetail' : 'monthlyDetail')}</p><ul><li>{t('allExercises')}</li><li>{t('unlimited')}</li><li>{t('voices')}</li><li>{t('feedback')}</li></ul>{user?.email_verified ? <button className="button button-dark" disabled={disabled || Boolean(storageError)} onClick={() => void act('checkout',plan)}>{busy === 'checkout' ? t('opening') : pending?.plan === plan ? t('resumeCheckout') : t(plan === 'lifetime' ? 'chooseLifetime' : 'chooseMonthly')}</button> : <a className="button button-dark" onClick={() => selectPlan(plan)} href={path('/account#account-sign-in')}>{t(plan === 'lifetime' ? 'chooseLifetime' : 'chooseMonthly')}</a>}<p className="membership-fine">{t(plan === 'lifetime' ? 'lifetimeCharge' : 'monthlyCharge')}</p></div>)}
+    {(['monthly','lifetime'] as MembershipPlan[]).map(plan => <div key={plan} ref={plan === 'monthly' ? setPlanExposureNode : undefined} className={`${plan === 'lifetime' ? 'plan-lifetime' : 'plan-monthly'} ${selectedPlan===plan?'plan-selected':''}`} style={selectedPlan===plan?{outline:'2px solid var(--blue)',outlineOffset:4}:undefined}><span className="plan-kicker">{t(plan === 'lifetime' ? 'payOnce' : 'flexible')}</span><h3>{t(plan)}</h3><p className="membership-price">{plan === 'lifetime' ? '$29' : '$7'}<span> USD {plan === 'lifetime' ? t('once') : `/ ${t('month')}`} </span></p><p>{t(plan === 'lifetime' ? 'lifetimeDetail' : 'monthlyDetail')}</p><ul><li>{t('allExercises')}</li><li>{t('unlimited')}</li><li>{t('voices')}</li><li>{t('feedback')}</li></ul>{user?.email_verified ? <button className="button button-dark" disabled={disabled || Boolean(storageError)} onClick={() => void act('checkout',plan)}>{busy === 'checkout' ? t('opening') : pending?.plan === plan ? t('resumeCheckout') : t(plan === 'lifetime' ? 'chooseLifetime' : 'chooseMonthly')}</button> : <a className="button button-dark" onClick={() => selectPlan(plan)} href={signInPlanPath(plan)}>{t(plan === 'lifetime' ? 'chooseLifetime' : 'chooseMonthly')}</a>}<p className="membership-fine">{t(plan === 'lifetime' ? 'lifetimeCharge' : 'monthlyCharge')}</p></div>)}
   </div>;
   return <section id="membership" className={`membership-panel ${storefront ? 'membership-storefront' : ''}`} aria-labelledby="membership-heading">
     {!embedded && reportReturn && <p><a className="button button-outline" href={path(reportReturn)}>{diagnosticReturnLabel(locale)} →</a></p>}

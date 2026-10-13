@@ -9,6 +9,7 @@ export const plausibleEvents = Object.freeze({
 });
 export function plausibleProperties(data={}){
  const result={};
+ if(['blocked','network','decode','unsupported','timeout','unknown'].includes(data.failure_kind))result.failure_kind=data.failure_kind;
  if(['short','full'].includes(data.diagnostic_length))result.diagnostic_length=data.diagnostic_length;
  for(const [input,output] of Object.entries({language_id:'language',contrast_id:'contrast',session_kind:'session',activity_mode:'mode',surface:'surface',plan:'plan',ui_locale:'interface_language',access_tier:'access'})){
   const v=data[input];if(typeof v==='string'&&/^[a-zA-Z0-9_-]{1,80}$/.test(v))result[output]=v;

@@ -228,10 +228,10 @@ export function measuredFirstAnswer(attemptId: string, hintsUsed: boolean) {
   const attempt = attempts.get(attemptId); if (!attempt || attempt.firstAnswer) return;
   attempt.firstAnswer = true; trackMeasurement('practice_first_answer', { ...attempt.data, text_hints_used: hintsUsed, duration_ms: Date.now() - attempt.started });
 }
-export function measuredAudioFailure(attemptId: string, round: number) {
-  const stat=statisticalAttempts.get(attemptId); if(stat)countUsage('practice_audio_error',{...stat,round});
+export function measuredAudioFailure(attemptId: string, round: number, failure_kind = 'unknown') {
+  const stat=statisticalAttempts.get(attemptId); if(stat)countUsage('practice_audio_error',{...stat,round,failure_kind});
   const attempt = attempts.get(attemptId); if (!attempt || attempt.errors.has(round)) return;
-  attempt.errors.add(round); trackMeasurement('practice_audio_error', { ...attempt.data, round });
+  attempt.errors.add(round); trackMeasurement('practice_audio_error', { ...attempt.data, round, failure_kind });
 }
 export function completeMeasuredPractice(attemptId: string, result: EventData) {
   const statistical = statisticalAttempts.get(attemptId);

@@ -77,7 +77,7 @@ export function measurementData(event: string, raw: EventData = {}): EventData |
   if (event.startsWith('diagnostic_') && (!clean.language_id || (!event.startsWith('diagnostic_report_') && !clean.attempt_id))) return null;
   if (typeof raw.recommendation_kind === 'string' && ['start', 'explore', 'revisit', 'review-due'].includes(raw.recommendation_kind)) clean.recommendation_kind = raw.recommendation_kind;
   if (typeof raw.recommendation_surface === 'string' && ['completion', 'history'].includes(raw.recommendation_surface)) clean.recommendation_surface = raw.recommendation_surface;
-  if (event === 'practice_audio_error') clean.failure_kind = 'playback_failed';
+  if (event === 'practice_audio_error') clean.failure_kind = ['blocked','network','decode','unsupported','timeout','unknown'].includes(String(raw.failure_kind)) ? raw.failure_kind : 'unknown';
   if (event.startsWith('practice_') && (!clean.attempt_id || !clean.language_id || (!clean.contrast_id && !['mixed','diagnostic'].includes(String(clean.session_kind))))) return null;
   if (event.startsWith('review_') && (!clean.recommendation_id || !clean.language_id || !clean.contrast_id || !clean.audio_collection || !clean.recommendation_kind || !clean.recommendation_surface)) return null;
   if (event.startsWith('review_practice_') && !clean.attempt_id) return null;

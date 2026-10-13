@@ -9,9 +9,10 @@ async function mac(secret,value){const key=await crypto.subtle.importKey('raw',n
 const dayOf=t=>new Date(t).toISOString().slice(0,10);
 const ok=x=>Response.json(x,{headers:{'Cache-Control':'no-store'}});
 export function cleanEvent(x){
- if(!x||typeof x!=='object'||Object.keys(x).some(k=>!['event','occurredAt','id','language','contrast','path','source','medium','campaign','ui_locale','attempt','kind','mode','surface','round','correct','total','duration_ms','plan','diagnostic_length'].includes(k)))return null;
+ if(!x||typeof x!=='object'||Object.keys(x).some(k=>!['failure_kind','event','occurredAt','id','language','contrast','path','source','medium','campaign','ui_locale','attempt','kind','mode','surface','round','correct','total','duration_ms','plan','diagnostic_length'].includes(k)))return null;
  if(!EVENTS.has(x.event)||! /^[a-f0-9-]{36}$/.test(x.id||''))return null;
  const out={event:x.event,id:x.id,language:LANG.test(x.language||'')?x.language:'none',contrast:/^(en|fr|de|es|it|pt|ru|ja|zh)-[a-z0-9-]{1,60}$/.test(x.contrast||'')?x.contrast:'none',path:landingPath(x.path)||(['/', '/practice','/account','/pricing'].includes(x.path)?x.path:'/other')};
+ if(['blocked','network','decode','unsupported','timeout','unknown'].includes(x.failure_kind))out.failure_kind=x.failure_kind;
  const a=sanitizeAttribution({source:x.source,medium:x.medium,ui_locale:x.ui_locale,...(x.campaign?{campaign:x.campaign}:{})});
  if(a)Object.assign(out,a);
  for(const [k,values] of Object.entries({diagnostic_length:['short','full'],kind:['focused','mixed','diagnostic','path'],mode:['abx-cross-word','word-identification'],surface:['practice','pricing','account','diagnostic','guide'],plan:['monthly','lifetime']}))if(values.includes(x[k]))out[k]=x[k];
@@ -70,6 +71,7 @@ export async function productAnalytics(request,storage,env,now=Date.now()){
   if(x.event.startsWith('diagnostic_')||(['plans_view','begin_checkout'].includes(x.event)&&j.diagnosticLength)){d.diagnostics||={};d.diagnostics[dl]||={};increment(d.diagnostics[dl],x.event);}
   if(x.event==='checkout_context')j.plausibleContext=await sealCheckoutContext(request,env,now);
   if(x.event!=='checkout_context')increment(d.events,x.event);
+  if(x.event==='practice_audio_error'){d.audioFailures||={};increment(d.audioFailures,[x.language,x.contrast,x.failure_kind||'unknown'].join('|'));}
   if(x.language!=='none'){j.language=x.language;j.contrast=x.contrast;if(x.kind)j.kind=x.kind;increment(d.languages,[x.event,x.language,x.contrast].join('|'));}
   const occurred=Number.isSafeInteger(x.occurredAt)&&Math.abs(x.occurredAt-now)<600000?x.occurredAt:now;
   const mark={practice_start:'startAt',practice_first_answer:'answerAt',practice_complete:'completeAt',begin_checkout:'checkoutAt'}[x.event];

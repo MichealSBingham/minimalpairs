@@ -27,7 +27,8 @@ async function setup(t, routes = {}, brokenAudio = []) {
     return { ok: response !== undefined, json: async () => structuredClone(response) };
   } });
   Object.defineProperty(globalThis, 'Audio', { configurable: true, writable: true, value: class {
-    constructor(url) { this.url = url; calls.audio.push(url); }
+    constructor() {}
+    set src(url) { this.url = url; calls.audio.push(url); }
     pause() {}
     play() { queueMicrotask(() => brokenAudio.includes(this.url) ? this.onerror?.() : this.onended?.()); return Promise.resolve(); }
   } });
@@ -205,3 +206,20 @@ test('audio coverage: source and review labels use only selected words and eligi
  await audio.playWord('fr','tout','human-one',HUMAN);
  assert.deepEqual(calls.audio,[old,fresh]);assert.equal(calls.fetch.length,2);assert.deepEqual(calls.speak,[]);
  });
+
+test('sequential clips reuse one gesture-authorized player',async t=>{
+ const {audio}=await setup(t,{[HUMAN]:collection()});let constructed=0,plays=0;
+ globalThis.Audio=class{constructor(){constructed++;}pause(){}play(){plays++;queueMicrotask(()=>this.onended?.());return Promise.resolve();}};
+ await audio.playWord('fr','tout','human-one',HUMAN);await audio.playWord('fr','tout','human-one',HUMAN);
+ assert.equal(constructed,1);assert.equal(plays,2);
+});
+test('browser autoplay blocking is classified and not repeatedly retried',async t=>{
+ const {audio}=await setup(t,{[HUMAN]:collection()});let plays=0;
+ globalThis.Audio=class{pause(){}play(){plays++;return Promise.reject(Object.assign(new Error('blocked'),{name:'NotAllowedError'}));}};
+ await assert.rejects(audio.playWord('fr','tout','human-one',HUMAN),e=>audio.audioFailureKind(e)==='blocked');assert.equal(plays,1);
+});
+test('intentional cancellation does not become a recording failure',async t=>{
+ const {audio}=await setup(t,{[HUMAN]:collection()});let started;
+ const ready=new Promise(r=>started=r);globalThis.Audio=class{pause(){}play(){started();return Promise.resolve();}};
+ const playing=audio.playWord('fr','tout','human-one',HUMAN);await ready;audio.stopAudio();await assert.rejects(playing,e=>audio.audioFailureKind(e)==='cancelled');
+});

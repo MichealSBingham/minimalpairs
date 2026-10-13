@@ -9,6 +9,12 @@ const DEFAULT_MANIFEST = '/audio/manifest.json';
 const manifestTimes = new Map<string, number>();
 const manifestPromises = new Map<string, Promise<Manifest>>();
 let currentAudio: HTMLAudioElement | undefined;
+let reusableAudio: HTMLAudioElement | undefined;
+export function audioFailureKind(error: unknown) {
+ const code=(error as {code?:string})?.code;
+ return ['cancelled','blocked','network','decode','unsupported','timeout'].includes(code || '') ? code! : 'unknown';
+}
+const playbackError=(code:string,message:string)=>Object.assign(new Error(message),{code});
 let cancelPlayback: (() => void) | undefined;
 let playbackGeneration = 0;
 const normalize = (text: string) => text.normalize('NFC').trim().toLocaleLowerCase();
@@ -98,26 +104,30 @@ export async function playWord(languageId: string, word: Pick<Word, 'text'> & Pa
   stopAudio();
   const generation = playbackGeneration;
   const data = await manifest(collectionFor(languageId, manifestPath));
-  if (generation !== playbackGeneration) throw new Error('Playback was cancelled.');
+  if (generation !== playbackGeneration) throw playbackError('cancelled','Playback was cancelled.');
   const candidates = data.clips.filter(c => c.languageId === languageId && normalize(c.text) === normalize(text) && (typeof word === 'string' || !word.ipa || c.ipa === word.ipa) && c.status !== 'rejected');
   const clip = voiceId ? candidates.find(c => c.voiceId === voiceId) : candidates[0];
   if (clip) {
     try { await new Promise<void>((resolve, reject) => {
-      const player = new Audio(clip.url);
+      // Reuse the gesture-authorized media element for B, X and automatic feedback.
+      const player = reusableAudio ??= new Audio();
+      player.src = clip.url;
+      let settled=false;
       currentAudio = player;
       const finish = (error?: Error) => {
+        if(settled)return; settled=true;
         clearTimeout(timeout);
         player.onended = null; player.onerror = null;
         if (currentAudio === player) { currentAudio = undefined; cancelPlayback = undefined; }
         error ? reject(error) : resolve();
       };
-      const timeout = window.setTimeout(() => { player.pause(); finish(new Error('Audio timed out. Tap Listen to retry.')); }, 20000);
-      cancelPlayback = () => { player.pause(); finish(new Error('Playback was cancelled.')); };
+      const timeout = window.setTimeout(() => { player.pause(); finish(playbackError('timeout','Audio timed out. Tap Listen to retry.')); }, 20000);
+      cancelPlayback = () => { player.pause(); finish(playbackError('cancelled','Playback was cancelled.')); };
       player.onended = () => finish();
-      player.onerror = () => finish(new Error('That recording could not load. Please try again.'));
-      player.play().catch(() => finish(new Error('Your browser could not play audio. Tap Listen to try again.')));
+      player.onerror = () => finish(playbackError(({2:'network',3:'decode',4:'unsupported'} as Record<number,string>)[player.error?.code || 0] || 'unknown','That recording could not load. Please try again.'));
+      player.play().catch(error => finish(playbackError(error?.name==='NotAllowedError'?'blocked':error?.name==='AbortError'?'cancelled':'unknown','Your browser could not play audio. Tap Listen to try again.')));
     }); } catch (error) {
-      if (!retry || generation !== playbackGeneration) throw error;
+      if (!retry || generation !== playbackGeneration || ['blocked','cancelled'].includes(audioFailureKind(error))) throw error;
       manifestPromises.delete(collectionFor(languageId, manifestPath));
       return playWord(languageId, word, voiceId, manifestPath, false);
     }
@@ -126,7 +136,7 @@ export async function playWord(languageId: string, word: Pick<Word, 'text'> & Pa
   if (manifestPath !== DEFAULT_MANIFEST) throw new Error('That recording is not available in this audio collection.');
   if (voiceId && !voiceId.startsWith('device:')) throw new Error('This voice does not yet have a recording for that word. Choose a different voice.');
   const voices = await deviceVoices();
-  if (generation !== playbackGeneration) throw new Error('Playback was cancelled.');
+  if (generation !== playbackGeneration) throw playbackError('cancelled','Playback was cancelled.');
   const locale = locales[languageId] || languageId;
   const selected = voiceId ? voices.find(v => `device:${v.voiceURI}` === voiceId) : voices.find(v => v.lang.toLowerCase() === locale.toLowerCase()) || voices.find(v => v.lang.toLowerCase().startsWith(locale.split('-')[0]));
   if (!selected) throw new Error('A matching voice is not available on this device. Cached recordings are being prepared.');
@@ -141,8 +151,8 @@ export async function playWord(languageId: string, word: Pick<Word, 'text'> & Pa
       if (generation === playbackGeneration) cancelPlayback = undefined;
       error ? reject(error) : resolve();
     };
-    const timeout = window.setTimeout(() => { speechSynthesis.cancel(); finish(new Error('Audio timed out. Tap Listen to retry.')); }, 20000);
-    cancelPlayback = () => finish(new Error('Playback was cancelled.'));
+    const timeout = window.setTimeout(() => { speechSynthesis.cancel(); finish(playbackError('timeout','Audio timed out. Tap Listen to retry.')); }, 20000);
+    cancelPlayback = () => finish(playbackError('cancelled','Playback was cancelled.'));
     utterance.onend = () => finish();
     utterance.onerror = e => finish(new Error(e.error === 'not-allowed' ? 'Tap Listen to enable audio.' : 'Audio was interrupted. Tap Listen to retry.'));
     speechSynthesis.speak(utterance);

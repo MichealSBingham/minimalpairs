@@ -1,3 +1,4 @@
+import {audioFailureKind} from '../lib/audio';
 import {saveDiagnosticReturn} from '../lib/diagnostic-return';
 import {diagnosticLengthCopy,type DiagnosticLength} from '../lib/diagnostic-length';
 import EmailCourseSignup from './EmailCourseSignup';
@@ -179,7 +180,7 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
     if (!question || busy.current) return;
     busy.current = true; const token = ++playbackGeneration.current; setAudioError('');
     try { await playSample(question, sample, token); }
-    catch { if (token === playbackGeneration.current) { setAudioError(t("{sample} could not play. Try again.", {sample: sample.toUpperCase()})); measuredAudioFailure(attemptId.current, index + 1); } }
+    catch (error) { if (token === playbackGeneration.current && audioFailureKind(error)!=='cancelled') { setAudioError(t("{sample} could not play. Try again.", {sample: sample.toUpperCase()})); measuredAudioFailure(attemptId.current, index + 1, audioFailureKind(error)); } }
     finally { if (token === playbackGeneration.current) { busy.current = false; setPlaying(null); } }
   }
   async function listenSequence(item: Question | undefined = question, round = index + 1) {
@@ -191,7 +192,7 @@ export default function Trainer({ locale = 'en', languages = [], initialLanguage
         await playSample(item, sample, token);
         if (sample !== 'x') await new Promise(resolve => setTimeout(resolve, 350));
       }
-    } catch { if (token === playbackGeneration.current) { setAudioError(t("One of the sounds could not play. Use its play button to try again.")); measuredAudioFailure(attemptId.current, round); } }
+    } catch (error) { if (token === playbackGeneration.current && audioFailureKind(error)!=='cancelled') { setAudioError(t("One of the sounds could not play. Use its play button to try again.")); measuredAudioFailure(attemptId.current, round, audioFailureKind(error)); } }
     finally { if (token === playbackGeneration.current) { busy.current = false; setPlaying(null); setSequencePlaying(false); } }
   }
   function startSession() {
