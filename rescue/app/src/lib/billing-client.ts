@@ -53,7 +53,7 @@ async function boundedResponse(response: Response, signal: AbortSignal): Promise
   catch { throw unavailable(); }
 }
 
-async function request(kind: 'checkout' | 'portal' | 'checkout-status', expectedUserId: string, body: Record<string, unknown>): Promise<unknown> {
+async function request(kind: 'checkout' | 'portal' | 'checkout-status' | 'recovery-offer', expectedUserId: string, body: Record<string, unknown>): Promise<unknown> {
   const origin = apiOrigin();
   if (!billingAvailable || !origin || (kind === 'checkout' && !checkoutAvailable)) throw unavailable();
   const token = await getFreshVerifiedIdToken(expectedUserId);
@@ -93,11 +93,11 @@ function destination(result: unknown, kind: 'checkout' | 'portal'): string {
 }
 
 /** No request occurs on import or page load. A caller must initiate each action. */
-export async function createMembershipCheckout(plan: MembershipPlan, requestId: string, expectedUserId: string): Promise<string> {
+export async function createMembershipCheckout(plan: MembershipPlan, requestId: string, expectedUserId: string, recovery = false): Promise<string> {
   if (!['monthly', 'annual', 'lifetime'].includes(plan) || !requestIdPattern.test(requestId)) return Promise.reject(failure('billing/invalid-request', 'Choose a membership plan and try again.'));
   let analytics: unknown;
   try { analytics = await (await import('./measurement')).checkoutAttribution(); } catch { /* Optional analytics must never block checkout. */ }
-  return destination(await request('checkout', expectedUserId, { plan, requestId, ...(analytics ? { analytics } : {}) }), 'checkout');
+  return destination(await request('checkout', expectedUserId, { plan, requestId, ...(recovery ? {recovery:true} : {}), ...(analytics ? { analytics } : {}) }), 'checkout');
 }
 export async function createMembershipPortal(expectedUserId: string): Promise<string> {
   return destination(await request('portal', expectedUserId, {}), 'portal');
@@ -117,4 +117,11 @@ export async function getMembershipCheckoutStatus(expectedUserId: string): Promi
     || !('createdAt' in result) || typeof result.createdAt !== 'number' || !Number.isSafeInteger(result.createdAt)
     || result.createdAt <= 0 || result.createdAt > Math.floor(Date.now() / 1000) + 300) throw unavailable();
   return result as CheckoutStatus;
+}
+
+export async function getRecoveryOffer(uid:string):Promise<{eligible:boolean;expiresAt?:number}> {
+ const result=await request('recovery-offer',uid,{}) as Record<string,unknown>;
+ if(result?.eligible === false)return {eligible:false};
+ if(result?.eligible !== true || typeof result.expiresAt !== 'number' || !Number.isSafeInteger(result.expiresAt) || result.amount !== 1450 || result.originalAmount !== 2900)throw unavailable();
+ return {eligible:true,expiresAt:result.expiresAt};
 }

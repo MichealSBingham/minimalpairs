@@ -96,7 +96,7 @@ export function checkoutParameters(config, account, customerId, plan, analytics)
     line_items: [{ price: price.id, quantity: 1 }], payment_method_types: ['card'],
     ...(plan === 'lifetime' ? { payment_intent_data: { metadata: { firebaseUid: account.uid, billingSchema: String(BILLING_SCHEMA), plan: 'lifetime' } } } : { subscription_data: { metadata: { firebaseUid: account.uid, billingSchema: String(BILLING_SCHEMA) } } }),
     metadata: { firebaseUid: account.uid, billingSchema: String(BILLING_SCHEMA), plan, ...attributionMetadata(analytics) },
-    success_url: `${config.appOrigin}/account?billing=return`, cancel_url: `${config.appOrigin}/pricing`,
+    success_url: `${config.appOrigin}/account?billing=return`, cancel_url: `${config.appOrigin}/pricing?billing=cancel`,
     allow_promotion_codes: false,
   };
 }
@@ -145,7 +145,7 @@ export function subscriptionEntitlement(snapshot, binding, config, nowSeconds) {
     ) return base;
   if (snapshot.plan === 'lifetime') {
     const price = config.prices?.lifetime;
-    if (!price || snapshot.priceId !== price.id || snapshot.currency !== 'usd' || snapshot.amountPaid !== 2900 || price.unitAmount !== 2900
+    if (!price || snapshot.priceId !== price.id || snapshot.currency !== 'usd' || !(snapshot.amountPaid === 2900 || (snapshot.amountPaid === 1450 && config.recoveryCouponId && snapshot.recoveryCouponId === config.recoveryCouponId)) || price.unitAmount !== 2900
       || !/^cs_(?:test_|live_)?[A-Za-z0-9]+$/.test(snapshot.checkoutSessionId || '') || !/^pi_[A-Za-z0-9]+$/.test(snapshot.paymentIntentId || '')
       || snapshot.successfulCharge !== true || !whole(snapshot.amountRefunded) || snapshot.amountRefunded >= snapshot.amountPaid
       || !['none','won'].includes(snapshot.disputeStatus) || snapshot.adminBlocked === true) return {...base, reason:'no_paid_lifetime_coverage'};
@@ -192,7 +192,7 @@ export function createBillingHandler(config, ports) {
     const origin = request.headers.get('Origin');
     try {
       const path = new URL(request.url).pathname;
-      if (!['/billing/checkout', '/billing/checkout-status', '/billing/portal', '/billing/webhook'].includes(path)) fail('not_found', 404);
+      if (!['/billing/checkout', '/billing/checkout-status', '/billing/recovery-offer', '/billing/portal', '/billing/webhook'].includes(path)) fail('not_found', 404);
       if (request.method === 'OPTIONS' && path !== '/billing/webhook') {
         sameOrigin(config, request);
         return new Response(null, { status: 204, headers: { 'Access-Control-Allow-Origin': config.appOrigin, 'Access-Control-Allow-Methods': 'POST', 'Access-Control-Allow-Headers': 'Authorization, Content-Type', 'Access-Control-Max-Age': '600', 'Vary': 'Origin' } });
@@ -214,9 +214,23 @@ export function createBillingHandler(config, ports) {
       try { account = requireVerifiedAccount(await ports.auth.verifyIdToken(authorization.slice(7))); } catch { fail('verified_account_required', 401); }
       const raw = new TextDecoder('utf-8', { fatal: true }).decode(await boundedBody(request, 2048));
       let body; try { body = JSON.parse(raw || '{}'); } catch { fail('invalid_request'); }
-      bodyKeys(body, path === '/billing/checkout' ? ['plan', 'requestId', 'analytics'] : []);
+      bodyKeys(body, path === '/billing/checkout' ? ['plan', 'requestId', 'analytics', 'recovery'] : []);
       return await ports.billing.runExclusive(account.uid, async () => {
         let customerId = await ports.billing.customerForUid(account.uid);
+        if (path === '/billing/recovery-offer') {
+          if (!config.recoveryCouponId || !customerId || hasLifetimeAccess(await ports.legacyEntitlement(account.email))) return response(200, {eligible:false}, origin);
+          bindCustomer(await ports.stripe.retrieveCustomer(customerId), account, config.expectedLivemode, customerId);
+          const current = await ports.stripe.currentSubscriptionSnapshot({uid:account.uid,customerId});
+          if (subscriptionEntitlement(current,{uid:account.uid,customerId},config,Math.floor(Date.now()/1000)).active) return response(200,{eligible:false},origin);
+          const subscriptions = await ports.stripe.listAllSubscriptions(customerId);
+          if (!Array.isArray(subscriptions) || subscriptions.some(s => !['canceled','incomplete_expired'].includes(s.status))) return response(200,{eligible:false},origin);
+          const offer = await ports.billing.recoveryOffer(account.uid);
+          const pending = await ports.billing.pendingCheckout(account.uid);
+          if (!offer || offer.expiresAt <= Math.floor(Date.now()/1000)+1800 || !pending?.sessionId) return response(200,{eligible:false},origin);
+          const session = await ports.stripe.retrieveCheckoutSession(pending.sessionId);
+          if(session.customer !== customerId || session.client_reference_id !== account.uid || session.livemode !== config.expectedLivemode) fail('checkout_binding_invalid',502);
+          return response(200, session.status === 'complete' ? {eligible:false} : {eligible:true,expiresAt:offer.expiresAt,amount:1450,originalAmount:2900},origin);
+        }
         if (path === '/billing/checkout-status') {
           // Only canonical server state can release a browser's uncertain
           // checkout note. This path never creates/expires a Stripe session,
@@ -262,6 +276,8 @@ export function createBillingHandler(config, ports) {
           const portal = await ports.stripe.createPortalSession({ customer: customerId, configuration: config.portalConfigurationId, return_url: `${config.appOrigin}/account` });
           return response(200, { url: safeStripeUrl(portal.url, 'billing.stripe.com') }, origin);
         }
+        if (body.recovery !== undefined && body.recovery !== true) fail('invalid_request');
+        if (body.recovery && body.plan !== 'lifetime') fail('invalid_request');
         if (!uuid(body.requestId)) fail('request_id_required');
         if (approvedPrice(config, body.plan).sellable === false) fail('plan_not_available', 409);
         if (hasLifetimeAccess(await ports.legacyEntitlement(account.email))) fail('lifetime_access_already_covers_membership', 409);
@@ -282,9 +298,30 @@ export function createBillingHandler(config, ports) {
         const subscriptions = await ports.stripe.listAllSubscriptions(customerId);
         if (!Array.isArray(subscriptions) || subscriptions.some(subscription => !['canceled', 'incomplete_expired'].includes(subscription.status))) fail('existing_subscription_use_portal', 409);
         let pending = await ports.billing.pendingCheckout(account.uid);
+        let recoveryOffer = null;
+        if (body.recovery || pending?.parameters?.metadata?.recoveryOffer === 'lifetime50v1') {
+          recoveryOffer = await ports.billing.recoveryOffer(account.uid);
+          if (!config.recoveryCouponId || !recoveryOffer || recoveryOffer.expiresAt <= Math.floor(Date.now()/1000)+1800) fail('recovery_offer_expired',409);
+          if (!pending?.sessionId && !pending?.parameters?.metadata?.recoveryOffer) fail('recovery_offer_unavailable',409);
+          if (pending?.sessionId && pending.parameters?.metadata?.recoveryOffer !== 'lifetime50v1') {
+            const original = await ports.stripe.retrieveCheckoutSession(pending.sessionId);
+            if(original.customer !== customerId || original.client_reference_id !== account.uid || original.livemode !== config.expectedLivemode) fail('checkout_binding_invalid',502);
+            if(original.status === 'complete') fail('checkout_reconciliation_pending',409);
+            if(original.status === 'open') {
+              const expired = await ports.stripe.expireCheckoutSession(pending.sessionId);
+              if(expired.status !== 'expired' || expired.customer !== customerId || expired.client_reference_id !== account.uid) fail('checkout_reconciliation_pending',409);
+            }
+            // Keep the durable reservation until its discounted replacement is saved.
+            pending = {...pending, sessionId:undefined, requestId:body.requestId, operationId:crypto.randomUUID(),createdAt:Math.floor(Date.now()/1000)};
+            pending.parameters = recoveryParameters(checkoutParameters(config,account,customerId,'lifetime',attributionFromMetadata(pending.parameters?.metadata)),config,recoveryOffer);
+            await ports.billing.savePendingCheckout(account.uid,pending);
+          }
+        }
         // Attribution is a reservation snapshot. A retry keeps the original data
         // (including no data), even after consent, campaign or locale changes.
         let parameters = checkoutParameters(config, account, customerId, body.plan, pending ? attributionFromMetadata(pending.parameters?.metadata) : body.analytics);
+        if (recoveryOffer) parameters = pending?.parameters?.metadata?.recoveryOffer === 'lifetime50v1' ? pending.parameters : recoveryParameters(parameters,config,recoveryOffer);
+        if(pending?.parameters?.cancel_url === `${config.appOrigin}/pricing` && !recoveryOffer) parameters.cancel_url = pending.parameters.cancel_url;
         // Reservations made before monthly plan metadata was introduced retain
         // their exact Stripe idempotency payload until they expire.
         if(pending && body.plan !== 'lifetime' && pending.parameters?.metadata?.plan === undefined) delete parameters.metadata.plan;
@@ -299,6 +336,7 @@ export function createBillingHandler(config, ports) {
           if (existing.status !== 'expired') fail('checkout_reconciliation_pending', 409);
           pending = null;
           parameters = checkoutParameters(config, account, customerId, body.plan, body.analytics);
+          if (recoveryOffer) parameters = recoveryParameters(parameters,config,recoveryOffer);
         }
         if (pending && pending.plan !== body.plan) fail('another_checkout_is_open', 409);
         if (pending && !sameCheckoutParameters(pending.parameters, parameters)) fail('checkout_configuration_changed', 409);
@@ -313,6 +351,7 @@ export function createBillingHandler(config, ports) {
         if (!/^cs_(test_|live_)?[A-Za-z0-9]+$/.test(checkout.id || '') || checkout.livemode !== config.expectedLivemode || checkout.customer !== customerId || checkout.client_reference_id !== account.uid || checkout.status !== 'open') fail('checkout_binding_invalid', 502);
         const url = safeStripeUrl(checkout.url, 'checkout.stripe.com');
         await ports.billing.savePendingCheckout(account.uid, { ...pending, sessionId: checkout.id });
+        if (config.recoveryCouponId && body.plan === 'lifetime' && !recoveryOffer) await ports.billing.reserveRecoveryOffer(account.uid,{createdAt:pending.createdAt,expiresAt:pending.createdAt+48*60*60,sourceSessionId:checkout.id});
         return response(200, { url }, origin);
       });
     } catch (error) {
@@ -380,4 +419,12 @@ export async function processQueuedEvent(eventId, config, ports, nowSeconds = Ma
     await ports.billing.markProcessed(eventId, { processedAt: nowSeconds });
     return result;
   });
+}
+
+/** Server-owned coupon and fixed eligibility window; no browser-supplied price. */
+export function recoveryParameters(parameters,config,offer,now=Math.floor(Date.now()/1000)) {
+  if (!config.recoveryCouponId || parameters.mode !== 'payment' || offer.expiresAt <= now+1800) fail('recovery_offer_expired',409);
+  const result = {...parameters, discounts:[{coupon:config.recoveryCouponId}], expires_at:Math.min(now+23*3600,offer.expiresAt),metadata:{...parameters.metadata,recoveryOffer:'lifetime50v1'}};
+  delete result.allow_promotion_codes;
+  return result;
 }

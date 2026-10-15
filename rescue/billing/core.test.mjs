@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createHmac } from 'node:crypto';
 import { readFile } from 'node:fs/promises';
-import { BillingError, requireVerifiedAccount, checkoutParameters, sameCheckoutParameters, createBillingHandler, verifyStripeEvent, subscriptionEntitlement, processQueuedEvent, reconcileBoundCustomer } from './core.mjs';
+import { recoveryParameters, BillingError, requireVerifiedAccount, checkoutParameters, sameCheckoutParameters, createBillingHandler, verifyStripeEvent, subscriptionEntitlement, processQueuedEvent, reconcileBoundCustomer } from './core.mjs';
 
 const NOW = 1_800_000_000;
 const secret = 'whsec_syntheticOnlyNeverARealSecret';
@@ -553,4 +553,31 @@ test('an expired checkout gets fresh attribution while retaining normal plan val
  assert.equal((await f.handler(request(undefined,{plan:'monthly',requestId:secondRequestId,analytics:{source:'reddit',medium:'social',ui_locale:'fr'}}))).status,200);
  assert.equal(f.state.pending.parameters.metadata.mp_source,'reddit');
  assert.equal(f.state.pending.parameters.metadata.mp_ui_locale,'fr');
+});
+
+test('recovery parameters bind approved coupon and finite expiry, never arbitrary browser pricing',()=>{
+ const cfg={...config(),recoveryCouponId:'recovery50',prices:{...config().prices,lifetime:{id:'price_lifetime',unitAmount:2900,currency:'usd',interval:null,intervalCount:0}}};
+ const base=checkoutParameters(cfg,account,binding.customerId,'lifetime');
+ const out=recoveryParameters(base,cfg,{expiresAt:NOW+4000},NOW);
+ assert.deepEqual(out.discounts,[{coupon:'recovery50'}]);assert.equal(out.expires_at,NOW+4000);assert.equal(out.allow_promotion_codes,undefined);
+ assert.throws(()=>recoveryParameters(base,cfg,{expiresAt:NOW+100},NOW));
+ assert.throws(()=>recoveryParameters(base,{...cfg,recoveryCouponId:null},{expiresAt:NOW+4000},NOW));
+});
+test('recovery expires original before creating replacement and reuses discounted checkout',async()=>{
+ const f=fixture();f.config.recoveryCouponId='recovery50';f.config.prices.lifetime={id:'price_lifetime',unitAmount:2900,currency:'usd',interval:null,intervalCount:0};
+ f.state.customerId=binding.customerId;
+ const now=Math.floor(Date.now()/1000);let offer=null;let expired=false;
+ f.ports.billing.recoveryOffer=async()=>offer;
+ f.ports.billing.reserveRecoveryOffer=async(uid,v)=>offer??=v;
+ f.ports.stripe.currentSubscriptionSnapshot=async()=>({...binding,livemode:false,status:'none'});
+ f.ports.stripe.createCheckoutSession=async(params)=>({...checkout(),mode:'payment',id:params.discounts?'cs_test_discount':'cs_test_synthetic'});
+ f.ports.stripe.retrieveCheckoutSession=async(id)=>({...checkout(),id,mode:'payment',status:expired && id==='cs_test_synthetic'?'expired':'open'});
+ f.ports.stripe.expireCheckoutSession=async(id)=>{expired=true;return {...checkout(),id,mode:'payment',status:'expired'};};
+ let res=await f.handler(request('/billing/checkout',{plan:'lifetime',requestId}));assert.equal(res.status,200);assert.equal(offer.expiresAt,now+172800);
+ res=await f.handler(request('/billing/recovery-offer',{}));assert.equal((await res.json()).eligible,true);
+ res=await f.handler(request('/billing/checkout',{plan:'lifetime',requestId:secondRequestId,recovery:true}));assert.equal(res.status,200);assert.equal(expired,true);assert.equal(f.state.pending.parameters.discounts[0].coupon,'recovery50');
+ const operation=f.state.pending.operationId;
+ res=await f.handler(request('/billing/checkout',{plan:'lifetime',requestId:secondRequestId,recovery:true}));assert.equal(res.status,200);assert.equal(f.state.pending.operationId,operation);
+ offer.expiresAt=now-1;
+ res=await f.handler(request('/billing/checkout',{plan:'lifetime',requestId:secondRequestId,recovery:true}));assert.equal(res.status,409);
 });

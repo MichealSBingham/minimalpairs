@@ -1588,6 +1588,24 @@ html[data-theme="dark"] .report-recording-options {background:hsl(45 30% 11%);bo
 }
 html[data-theme="dark"] .report-recording-options button {border:1px solid hsl(40 21% 27%);border-radius:5px;background:transparent
 }
+html[data-theme="dark"] .recovery-offer {border:1px solid hsl(90 13% 27%);background:hsl(80 23% 12%);border-radius:18px;color:hsl(77 10% 90%)
+}
+html[data-theme="dark"] .recovery-badge {color:hsl(106 14% 70%)
+}
+html[data-theme="dark"] .recovery-offer h2 em {color:hsl(106 14% 70%)
+}
+html[data-theme="dark"] .recovery-benefits {color:hsl(106 14% 70%)
+}
+html[data-theme="dark"] .recovery-purchase {border-left:1px solid hsl(90 13% 27%)
+}
+html[data-theme="dark"] .recovery-price del {color:hsl(90 5% 70%)
+}
+html[data-theme="dark"] .recovery-renewal {color:hsl(87 9% 70%)
+}
+@media (max-width:650px) {
+html[data-theme="dark"] .recovery-purchase {border-left:0;border-top:1px solid hsl(90 13% 27%)
+}
+}
 html[data-theme="dark"] .session-feedback {border-top:1px solid hsl(87 17% 27%)
 }
 html[data-theme="dark"] .session-feedback>summary {color:hsl(146 26% 70%)

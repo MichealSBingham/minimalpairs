@@ -39,9 +39,9 @@ export async function recordBuyer(storage,env,s,{now=Date.now()}={}){
  const digest=await hash(email),key='buyer:'+digest;
  await storage.transaction(async tx=>{
   if(await tx.get(key))return;
-  const existing=await tx.get('subscriber:'+digest);const token=(crypto.randomUUID()+crypto.randomUUID()).replaceAll('-','');
+  const existing=await tx.get('subscriber:'+digest);const recovery=await tx.get('recovery:'+digest);const token=(crypto.randomUUID()+crypto.randomUUID()).replaceAll('-','');
   // Separate identity: a buyer is not silently subscribed to the course or newsletter.
-  await tx.put(key,{email,plan,purchaseId:s.id,state:'queued',createdAt:now,status:existing?.status==='suppressed'?'suppressed':'buyer',unsubscribeToken:token,audit:[]});
+  await tx.put(key,{email,plan,purchaseId:s.id,state:'queued',createdAt:now,status:existing?.status==='suppressed'||recovery?.status==='suppressed'?'suppressed':'buyer',unsubscribeToken:token,audit:[]});
   await tx.put('token:'+await hash(token),key);
  });return true;
 }

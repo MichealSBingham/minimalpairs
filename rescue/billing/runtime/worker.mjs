@@ -13,7 +13,7 @@ export class BillingLedger extends BillingLedgerBase {
       ...firebase(this.env, { expectedLivemode: this.config.expectedLivemode,
         getOperationContext: () => this.getOperationContext() }),
       stripe: createStripeAdapter({ secretKey: this.env.STRIPE_SECRET_KEY, expectedAccountId: this.env.STRIPE_ACCOUNT_ID,
-        expectedLivemode: this.config.expectedLivemode, prices: this.config.prices,
+        expectedLivemode: this.config.expectedLivemode, prices: this.config.prices, recoveryCouponId:this.config.recoveryCouponId,
         getOperationContext: () => this.getOperationContext() }),
     };
   }

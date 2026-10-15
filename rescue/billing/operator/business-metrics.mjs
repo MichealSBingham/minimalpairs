@@ -12,7 +12,7 @@ const scoped=x=>x.livemode===true && x.metadata?.billingSchema==='1' && !!x.meta
 export function summarize({sessions,subscriptions,charges,refunds,prices,start,end}) {
  const plans=Object.fromEntries(Object.entries(prices).map(([plan,p])=>[p.id,plan]));
  const paid={monthly:0,annual:0,lifetime:0,unclassified:0};
- const paidCheckoutByLandingPage={},paidCheckoutBySource={},paidCheckoutGrossMinor={},subStates={},activePlans={monthly:0,annual:0};
+ const paidCheckoutByOffer={},paidCheckoutByLandingPage={},paidCheckoutBySource={},paidCheckoutGrossMinor={},subStates={},activePlans={monthly:0,annual:0};
  const recurringListPriceMonthlyMinor={},scheduledCancellationMonthlyMinor={};
  let scheduledCancellations=0,canceledInWindow=0,unscopedPaidCheckouts=0,excludedActiveItems=0;
  const bySubscription=new Map(subscriptions.map(s=>[s.id,s]));
@@ -24,6 +24,8 @@ export function summarize({sessions,subscriptions,charges,refunds,prices,start,e
   if(!plan && sub?.items?.data?.length===1)plan=plans[id(sub.items.data[0].price)];
   paid[plan??'unclassified']++;
   money(paidCheckoutGrossMinor,s.currency,s.amount_total??0);
+  const offer=s.metadata?.recoveryOffer === 'lifetime50v1'?'lifetime50v1':'standard';
+  const offerGroup=paidCheckoutByOffer[offer]??={purchases:0,grossMinor:{}};offerGroup.purchases++;money(offerGroup.grossMinor,s.currency,s.amount_total??0);
   const attribution=attributionFromMetadata(s.metadata);
   const source=attribution?.source??'unattributed';
   const group=paidCheckoutBySource[source]??={purchases:0,grossMinor:{}};
@@ -51,7 +53,7 @@ export function summarize({sessions,subscriptions,charges,refunds,prices,start,e
  for(const r of refunds)if(r.status==='succeeded'){successfulRefunds++;money(refundedMinor,r.currency,r.amount);}
  return {
   window:{start:new Date(start*1000).toISOString(),endExclusive:new Date(end*1000).toISOString()},
-  currentOffer:{paidCheckoutPurchases:paid,paidCheckoutBySource,paidCheckoutByLandingPage,paidCheckoutGrossMinor,subscriptionStates:subStates,activeSubscriptionItemsByPlan:activePlans,recurringListPriceMonthlyMinor,scheduledCancellations,scheduledCancellationMonthlyMinor,canceledInWindow,excludedActiveItems},
+  currentOffer:{paidCheckoutPurchases:paid,paidCheckoutByOffer,paidCheckoutBySource,paidCheckoutByLandingPage,paidCheckoutGrossMinor,subscriptionStates:subStates,activeSubscriptionItemsByPlan:activePlans,recurringListPriceMonthlyMinor,scheduledCancellations,scheduledCancellationMonthlyMinor,canceledInWindow,excludedActiveItems},
   accountWideCash:{capturedCharges,capturedGrossMinor,successfulRefunds,refundedMinor,unscopedPaidCheckouts},
   definitions:[
    'All money is in the smallest currency unit; currencies are never combined.',

@@ -34,7 +34,7 @@
     "BILLING_SERVICE_ENABLED": "true",
     "BILLING_CHECKOUT_ENABLED": "true",
     "BILLING_COMMUNICATIONS_APPROVED": "true",
-    "BILLING_CONFIG_JSON": "{\"appOrigin\":\"https://minimalpairs.co\",\"expectedLivemode\":true,\"prices\":{\"monthly\":{\"id\":\"price_1UMI7CJ2FK64SYOddWLPIklw\",\"unitAmount\":700,\"currency\":\"usd\",\"interval\":\"month\",\"intervalCount\":1},\"annual\":{\"id\":\"price_1UMI7DJ2FK64SYOdI2GfMwVi\",\"unitAmount\":4900,\"currency\":\"usd\",\"interval\":\"year\",\"intervalCount\":1,\"sellable\":false},\"lifetime\":{\"id\":\"price_1UMw0nJ2FK64SYOdKPwIatzM\",\"unitAmount\":2900,\"currency\":\"usd\",\"interval\":null,\"intervalCount\":0}},\"portalConfigurationId\":\"bpc_1UMI7DJ2FK64SYOd2oFOyhCA\"}",
+    "BILLING_CONFIG_JSON": "{\"appOrigin\":\"https://minimalpairs.co\",\"expectedLivemode\":true,\"recoveryCouponId\":\"minimalpairs_lifetime_recovery_50_v1\",\"prices\":{\"monthly\":{\"id\":\"price_1UMI7CJ2FK64SYOddWLPIklw\",\"unitAmount\":700,\"currency\":\"usd\",\"interval\":\"month\",\"intervalCount\":1},\"annual\":{\"id\":\"price_1UMI7DJ2FK64SYOdI2GfMwVi\",\"unitAmount\":4900,\"currency\":\"usd\",\"interval\":\"year\",\"intervalCount\":1,\"sellable\":false},\"lifetime\":{\"id\":\"price_1UMw0nJ2FK64SYOdKPwIatzM\",\"unitAmount\":2900,\"currency\":\"usd\",\"interval\":null,\"intervalCount\":0}},\"portalConfigurationId\":\"bpc_1UMI7DJ2FK64SYOd2oFOyhCA\"}",
     "FIREBASE_PROJECT_ID": "minimalpairs"
   }
 }

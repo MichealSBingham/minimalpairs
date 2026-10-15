@@ -67,7 +67,7 @@ async function boundedJson(response, maxBytes, signal) {
  * Requests are bounded; a retryable error is handed to the durable coordinator,
  * never hidden by a retry with a new creation key. See stripe.md for the contract.
  */
-export function createStripeAdapter({ secretKey, expectedAccountId, expectedLivemode, prices,
+export function createStripeAdapter({ secretKey, expectedAccountId, expectedLivemode, prices, recoveryCouponId,
   fetchImpl = globalThis.fetch, timeoutMs = 5000, operationTimeoutMs = 20000,
   maxPages = 20, maxRequests = 100, maxResponseBytes = 2_097_152, now = () => Date.now(), getOperationContext = () => null } = {}) {
   demand(typeof expectedLivemode === 'boolean' && typeof secretKey === 'string'
@@ -339,18 +339,22 @@ export function createStripeAdapter({ secretKey, expectedAccountId, expectedLive
         && session.metadata?.firebaseUid === binding.uid && session.metadata?.billingSchema === '1' && session.metadata?.plan === 'lifetime', 'stripe_checkout_scope_invalid');
       if (session.status !== 'complete' || session.payment_status !== 'paid') continue;
       const price = await validatedPrice(ctx, expected.id);
+      const discounted = session.metadata?.recoveryOffer === 'lifetime50v1';
+      const amount = discounted ? 1450 : price.unit_amount;
+      const discount = discounted ? 1450 : 0;
+      demand(!discounted || (recoveryCouponId && session.discounts?.length === 1 && idOf(session.discounts[0].coupon) === recoveryCouponId && !session.discounts[0].promotion_code), 'stripe_lifetime_discount_invalid');
       const lines = await list(ctx,`/v1/checkout/sessions/${session.id}/line_items`);
       demand(lines.length === 1 && lines[0].object === 'item' && idOf(lines[0].price) === price.id && lines[0].quantity === 1
-        && lines[0].currency === price.currency && equalMoney(lines[0].amount_subtotal,lines[0].amount_total,price.unit_amount)
-        && lines[0].amount_discount === 0 && lines[0].amount_tax === 0, 'stripe_lifetime_line_invalid');
-      demand(session.currency === price.currency && equalMoney(session.amount_subtotal,session.amount_total,price.unit_amount)
-        && session.total_details?.amount_discount === 0 && session.total_details?.amount_shipping === 0 && session.total_details?.amount_tax === 0
+        && lines[0].currency === price.currency && lines[0].amount_subtotal === price.unit_amount && lines[0].amount_total === amount
+        && lines[0].amount_discount === discount && lines[0].amount_tax === 0, 'stripe_lifetime_line_invalid');
+      demand(session.currency === price.currency && session.amount_subtotal === price.unit_amount && session.amount_total === amount
+        && session.total_details?.amount_discount === discount && session.total_details?.amount_shipping === 0 && session.total_details?.amount_tax === 0
         && session.automatic_tax?.enabled === false && !session.subscription, 'stripe_lifetime_amount_invalid');
       const paymentIntentId = requireId(idOf(session.payment_intent),'pi');
-      const evidence = await chargeCoverage(ctx,paymentIntentId,price.unit_amount,price.currency,binding,true);
-      if (evidence.amountRefunded < price.unit_amount && ['none','won'].includes(evidence.disputeStatus)) valid = {
+      const evidence = await chargeCoverage(ctx,paymentIntentId,amount,price.currency,binding,true);
+      if (evidence.amountRefunded < amount && ['none','won'].includes(evidence.disputeStatus)) valid = {
         uid:binding.uid,customerId:binding.customerId,livemode:expectedLivemode,plan:'lifetime',priceId:price.id,
-        currency:price.currency,amountPaid:price.unit_amount,successfulCharge:true,...evidence,checkoutSessionId:session.id,paymentIntentId,
+        currency:price.currency,amountPaid:amount,...(discounted ? {recoveryCouponId} : {}),successfulCharge:true,...evidence,checkoutSessionId:session.id,paymentIntentId,
       };
     }
     return valid;
@@ -467,12 +471,14 @@ export function createStripeAdapter({ secretKey, expectedAccountId, expectedLive
         && params.line_items?.length === 1 && approved.has(params.line_items[0].price) && params.line_items[0].quantity === 1
         && params.payment_method_types?.length === 1 && params.payment_method_types[0] === 'card'
         && typeof key === 'string', 'stripe_invalid_parameters');
+      demand(!params.discounts || (params.mode === 'payment' && recoveryCouponId && params.metadata.recoveryOffer === 'lifetime50v1' && params.discounts.length === 1 && params.discounts[0].coupon === recoveryCouponId), 'stripe_invalid_parameters');
       await validatedPrice(ctx, params.line_items[0].price, true);
       const c = normalizeCheckout(await request(ctx, 'POST', '/v1/checkout/sessions', params, key));
       demand(c.mode === params.mode && c.customer === params.customer && c.client_reference_id === params.client_reference_id, 'stripe_checkout_shape_invalid');
       return c;
     }),
     retrieveCheckoutSession: operation(retrieveCheckout),
+    expireCheckoutSession: operation(async(ctx,id)=>{ requireId(id,'cs'); return normalizeCheckout(await request(ctx,'POST',`/v1/checkout/sessions/${id}/expire`,{},`recovery-expire-${id}`)); }),
     createPortalSession: operation(async (ctx, params, key) => {
       demand(idValid(params?.customer, 'cus') && idValid(params.configuration, 'bpc') && typeof params.return_url === 'string', 'stripe_invalid_parameters');
       const portalConfig = scoped(await request(ctx, 'GET', `/v1/billing_portal/configurations/${params.configuration}`), 'billing_portal.configuration', 'bpc', params.configuration);

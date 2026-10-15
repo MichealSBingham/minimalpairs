@@ -477,8 +477,8 @@ test('shared cancellation also cancels a stalled response body after headers arr
 });
 
 const lifetimePrice = {id:'price_lifetime',currency:'usd',interval:null,intervalCount:0,unitAmount:2900};
-function lifetimeFixture(){
- const f=fixture({prices:{...prices,lifetime:lifetimePrice}});
+function lifetimeFixture(options={}){
+ const f=fixture({prices:{...prices,lifetime:lifetimePrice},...options});
  Object.assign(f.data.checkout,{mode:'payment',status:'complete',payment_status:'paid',payment_intent:'pi_synthetic',metadata:{firebaseUid:binding.uid,billingSchema:'1',plan:'lifetime'},currency:'usd',amount_total:2900,amount_subtotal:2900,total_details:{amount_discount:0,amount_shipping:0,amount_tax:0},automatic_tax:{enabled:false}});
  Object.assign(f.data.intent,{amount:2900,amount_received:2900,metadata:{firebaseUid:binding.uid,billingSchema:'1',plan:'lifetime'}});
  Object.assign(f.data.charge,{amount:2900,amount_captured:2900});
@@ -518,4 +518,22 @@ test('lifetime mismatches fail closed across identity, mode, currency, line amou
  for(const mutate of [f=>f.data.checkout.client_reference_id='other',f=>f.data.checkout.customer='cus_other',f=>f.data.checkout.livemode=true,f=>f.data.checkout.amount_total=1,f=>f.data.checkout.currency='eur',f=>f.data.lifetimeLine.price='price_other',f=>f.data.lifetimeLine.quantity=2,f=>f.data.intent.metadata.firebaseUid='other',f=>f.data.intent.status='processing',f=>f.data.charge.amount_captured=1]){
   const f=lifetimeFixture();mutate(f);await assert.rejects(snapshot(f));
  }
+});
+
+function recoveryFixture(){
+ const f=lifetimeFixture({recoveryCouponId:'recovery50'});
+ Object.assign(f.data.checkout,{amount_total:1450,discounts:[{coupon:'recovery50'}]});
+ f.data.checkout.metadata.recoveryOffer='lifetime50v1';f.data.checkout.total_details.amount_discount=1450;
+ Object.assign(f.data.lifetimeLine,{amount_total:1450,amount_discount:1450});
+ Object.assign(f.data.intent,{amount:1450,amount_received:1450});Object.assign(f.data.charge,{amount:1450,amount_captured:1450});return f;
+}
+test('approved recovery coupon grants lifetime only for verified discounted charge',async()=>{
+ const f=recoveryFixture();const paid=await snapshot(f);assert.equal(paid.amountPaid,1450);
+ const conf={...config,recoveryCouponId:'recovery50',prices:{...prices,lifetime:lifetimePrice}};
+ assert.equal(subscriptionEntitlement(paid,binding,conf,NOW).active,true);
+ assert.equal(subscriptionEntitlement(paid,binding,{...conf,recoveryCouponId:'other'},NOW).active,false);
+ assert.equal(subscriptionEntitlement({...paid,recoveryCouponId:undefined},binding,conf,NOW).active,false);
+});
+test('unapproved coupon, wrong amount, missing marker and wrong payment cannot grant recovery access',async()=>{
+ for(const mutate of [f=>f.data.checkout.discounts[0].coupon='other',f=>f.data.checkout.amount_total=1400,f=>delete f.data.checkout.metadata.recoveryOffer,f=>f.data.charge.amount_captured=1400,f=>f.data.checkout.discounts.push({coupon:'recovery50'})]){const f=recoveryFixture();mutate(f);await assert.rejects(snapshot(f));}
 });

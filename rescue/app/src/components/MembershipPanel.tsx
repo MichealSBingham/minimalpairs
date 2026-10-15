@@ -1,9 +1,10 @@
+import RecoveryOffer from './RecoveryOffer';
 import {diagnosticReturnPath, diagnosticReturnLabel} from '../lib/diagnostic-return';
 import { useMeasuredExposure } from './useMeasuredExposure';
 import { trackMeasurement } from '../lib/measurement';
 import { useEffect, useRef, useState } from 'react';
 import { getSession, observeSession, refreshSession, type SessionUser } from '../lib/auth';
-import { billingAvailable, checkoutAvailable, createMembershipCheckout, createMembershipPortal, getMembershipCheckoutStatus, type MembershipPlan, type CheckoutStatus } from '../lib/billing-client';
+import { billingAvailable, checkoutAvailable, getRecoveryOffer, createMembershipCheckout, createMembershipPortal, getMembershipCheckoutStatus, type MembershipPlan, type CheckoutStatus } from '../lib/billing-client';
 import { getEntitlement, type Entitlement } from '../lib/entitlements';
 import { checkoutStorageKey, clearConfirmedCheckout, readPendingCheckout, reserveCheckout, adoptServerCheckout, withCheckoutLock, type PendingCheckout } from '../lib/billing-checkout-state';
 import '../styles/membership.css';
@@ -31,6 +32,7 @@ export default function MembershipPanel({ storefront = false, embedded = false, 
   const [error, setError] = useState('');
   const [busy, setBusy] = useState<'checkout' | 'portal' | 'status' | null>(null);
   const [checkoutStatus, setCheckoutStatus] = useState<CheckoutStatus | null>(null);
+  const [recoveryExpiry,setRecoveryExpiry]=useState<number|null>(null);
   const [returning, setReturning] = useState(false);
   const [reportReturn, setReportReturn] = useState<string | null>(null);
   useEffect(() => { setReportReturn(diagnosticReturnPath(window.localStorage)); }, []);
@@ -91,7 +93,14 @@ export default function MembershipPanel({ storefront = false, embedded = false, 
     return () => window.removeEventListener('storage', onStorage);
   }, [user?.id, user?.email_verified]);
 
-  async function act(kind: 'checkout' | 'portal' | 'status', plan?: MembershipPlan) {
+  useEffect(()=>{
+    setRecoveryExpiry(null);
+    if(!user?.email_verified || status !== 'ready' || access || !returning)return;
+    let active=true;
+    void getRecoveryOffer(user.id).then(offer=>{if(active && offer.eligible)setRecoveryExpiry(offer.expiresAt!);}).catch(()=>{});
+    return()=>{active=false;};
+  },[user?.id,status,access,returning]);
+  async function act(kind: 'checkout' | 'portal' | 'status', plan?: MembershipPlan, recovery=false) {
     if (!billingAvailable || !user?.email_verified || requestBusy.current || status !== 'ready') return;
     if (kind === 'checkout' && (!checkoutAvailable || access || storageError || !plan)) return;
     if (kind === 'checkout' && plan) selectPlan(plan);
@@ -125,6 +134,7 @@ export default function MembershipPanel({ storefront = false, embedded = false, 
         const grant = await getEntitlement({ expectedUserId: expectedId, fresh: true });
         await sameAccount();
         if (grant) { setAccess(grant); throw new Error('Your purchased access is already connected. You do not need another membership.'); }
+        if(recovery) return createMembershipCheckout('lifetime',crypto.randomUUID(),expectedId,true);
         const existing = readPendingCheckout(window.localStorage, expectedId);
         if (existing) {
           const checked = await getMembershipCheckoutStatus(expectedId);
@@ -177,7 +187,7 @@ export default function MembershipPanel({ storefront = false, embedded = false, 
       {error && <p className="membership-error" role="alert">{error} <a href={path('/support')}>{t('support')} →</a></p>}
       {storageError && <p className="membership-error" role="alert">{storageError}</p>}
       {checkoutStatus && <p role="status">{t(checkoutStatus.state === 'none' ? 'checkoutNone' : checkoutStatus.state === 'open' ? 'checkoutOpen' : checkoutStatus.state === 'existing_subscription' ? 'manage' : checkoutStatus.state === 'lifetime' ? 'lifetimeActive' : 'checkoutPending')}</p>}
-      {!lifetime && !membership && status === 'ready' && checkoutAvailable && !portalSuggested && <>{planCards}<p className="membership-fine">{t('secure')}</p></>}
+      {!lifetime && !membership && status === 'ready' && checkoutAvailable && !portalSuggested && <>{recoveryExpiry && <RecoveryOffer expiresAt={recoveryExpiry} disabled={Boolean(busy)} onAccept={()=>void act('checkout','lifetime',true)}/>} {planCards}<p className="membership-fine">{t('secure')}</p></>}
       {!lifetime && !membership && !checkoutAvailable && status === 'ready' && <p>{t('unavailable')}</p>}
       {membership && <button className="button button-outline" disabled={disabled} onClick={() => void act('portal')}>{busy === 'portal' ? t('opening') : t('manage')}</button>}
       <details className="membership-help"><summary>{t('helpAccess')}</summary><div className="membership-actions"><button className="text-button" disabled={Boolean(busy) || status === 'loading'} onClick={() => user && void checkAccess(user, ++generation.current, true)}>{t('recheck')}</button>{!lifetime && !membership && <button className="text-button" disabled={disabled} onClick={() => void act('status')}>{busy === 'status' ? t('loading') : t('checkoutStatus')}</button>}{!lifetime && <button className="text-button" disabled={disabled} onClick={() => void act('portal')}>{busy === 'portal' ? t('opening') : t('manage')}</button>}</div></details>

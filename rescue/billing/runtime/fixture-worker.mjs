@@ -120,6 +120,8 @@ export class FixtureLedger extends BillingLedgerBase {
         case 'reserveCustomer': data = this.reserveCustomer(...args); break;
         case 'bindCustomer': data = await this.bindCustomer(...args); break;
         case 'customerForUid': data = this.customerForUid(...args); break;
+        case 'recoveryOffer': data = this.recoveryOffer(...args); break;
+        case 'reserveRecoveryOffer': data = this.reserveRecoveryOffer(...args); break;
         case 'pendingCheckout': data = this.pendingCheckout(...args); break;
         case 'savePendingCheckout': data = this.savePendingCheckout(...args); break;
         case 'retirePendingCheckout': data = this.retirePendingCheckout(...args); break;

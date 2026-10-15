@@ -1,3 +1,4 @@
+import {collectRecoveries,deliverRecovery} from './recoveries.mjs';
 import {courseAttribution} from '../app/src/lib/course-attribution.mjs';
 import {collectBuyers,deliverBuyer,buyerStatus,seedBuyer} from './buyers.mjs';
 import {enqueue,deliverOne,suppressProviderEvent,verifyProviderWebhook} from './delivery.mjs';
@@ -49,7 +50,7 @@ export class EmailAudience{
    if(!this.env.ADMIN_TOKEN||request.headers.get('Authorization')!==`Bearer ${this.env.ADMIN_TOKEN}`)return response({error:'Unauthorized'},401);
    if(request.method!=='POST')return response({error:'Method not allowed'},405);
    if(path.endsWith('/seed')){try{return response({seeded:await seedBuyer(this.ctx.storage,await readBody(request))});}catch{return response({error:'Invalid receipt'},400);}}
-   await collectBuyers(this.ctx.storage,this.env);await deliverBuyer(this.ctx.storage,this.env);return response(await buyerStatus(this.ctx.storage));
+   await collectBuyers(this.ctx.storage,this.env);await deliverBuyer(this.ctx.storage,this.env);await collectRecoveries(this.ctx.storage,this.env);await deliverRecovery(this.ctx.storage,this.env);return response(await buyerStatus(this.ctx.storage));
   }
   if(path==='/admin/status'){
    if(!this.env.ADMIN_TOKEN||request.headers.get('Authorization')!==`Bearer ${this.env.ADMIN_TOKEN}`)return response({error:'Unauthorized'},401);
@@ -125,7 +126,7 @@ export class EmailAudience{
    if(!input||Object.keys(input).some(k=>k!=='token')||typeof input.token!=='string'||! /^[a-f0-9]{64}$/.test(input.token))return response({error:'Invalid request'},400);
    const hash=await digest(input.token);
    return this.ctx.storage.transaction(async tx=>{
-    const key=await tx.get('token:'+hash);if(key){const row=await tx.get(key);if(row&&row.status!=='suppressed'){if(row.verificationToken){await tx.delete('verify:'+await digest(row.verificationToken));delete row.verificationToken;delete row.verificationExpiresAt;}row.audit.push({event:'unsubscribed',at:new Date().toISOString()});row.status='suppressed';row.course=false;row.weekly=false;row.unsubscribedAt=new Date().toISOString();await tx.put(key,row);const otherKey=key.startsWith('buyer:')?key.replace('buyer:','subscriber:'):key.replace('subscriber:','buyer:');const other=await tx.get(otherKey);if(other){other.status='suppressed';other.course=false;other.weekly=false;other.audit.push({event:'unsubscribed',at:row.unsubscribedAt});await tx.put(otherKey,other);}}}
+    const key=await tx.get('token:'+hash);if(key){const row=await tx.get(key);if(row&&row.status!=='suppressed'){if(row.verificationToken){await tx.delete('verify:'+await digest(row.verificationToken));delete row.verificationToken;delete row.verificationExpiresAt;}row.audit.push({event:'unsubscribed',at:new Date().toISOString()});row.status='suppressed';row.course=false;row.weekly=false;row.unsubscribedAt=new Date().toISOString();await tx.put(key,row);for(const prefix of ['buyer:','subscriber:','recovery:']){const otherKey=prefix+key.slice(key.indexOf(':')+1);if(otherKey===key)continue;const other=await tx.get(otherKey);if(other){other.status='suppressed';other.course=false;other.weekly=false;other.audit.push({event:'unsubscribed',at:row.unsubscribedAt});await tx.put(otherKey,other);}}}}
     return response({unsubscribed:true});
    });
   }

@@ -493,3 +493,12 @@ test('disabled real scheduled handler creates no object and cannot touch existin
   assert.equal(await rt.data('alarmAt'), null);
   assert.equal(await rt.data('read', 'calls_snapshot', 0), 0);
 });
+
+test('recovery window survives restart and cannot be reset by a later checkout',async t=>{
+ const rt=await runtime(t);const now=Math.floor(Date.now()/1000);
+ const offer={createdAt:now,expiresAt:now+172800,sourceSessionId:'cs_test_recovery'};
+ assert.deepEqual(await rt.data('reserveRecoveryOffer',testUid,offer),offer);
+ assert.deepEqual(await rt.data('reserveRecoveryOffer',testUid,{...offer,createdAt:now+60,expiresAt:now+172860}),offer);
+ await rt.restart();assert.deepEqual(await rt.data('recoveryOffer',testUid),offer);
+ for(const path of ['/internal/recovery-offers','/internal/recovery-eligible?uid='+testUid]){const r=await rt.mf.dispatchFetch('https://local.invalid'+path);assert.equal(r.status,401);}
+});
