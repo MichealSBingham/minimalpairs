@@ -42,9 +42,24 @@ const measurementEnvironment = import.meta.env.PUBLIC_MEASUREMENT_ENVIRONMENT ==
 
 <style is:global>
 .interface-language{position:fixed;right:14px;bottom:14px;z-index:40;font:13px/1.4 system-ui;background:#fffdf7;border:1px solid #d8d1c3;border-radius:8px;box-shadow:0 2px 8px #0001}.interface-language summary{padding:9px 12px;cursor:pointer}.interface-language nav{display:grid;max-height:65vh;overflow:auto;padding:4px 10px 10px}.interface-language a{padding:7px 12px;text-decoration:none;color:#24241f}.interface-language a[aria-current=page]{font-weight:700;background:#efe9dc;border-radius:4px}
+@media(max-width:767px){
+  .interface-language,.theme-toggle{opacity:0;pointer-events:none;transition:opacity .2s ease}
+  .mobile-controls-visible .interface-language,.mobile-controls-visible .theme-toggle,
+  .interface-language[open],.interface-language:focus-within,.theme-toggle:focus-visible{opacity:1;pointer-events:auto}
+}
+@media(prefers-reduced-motion:reduce){.interface-language,.theme-toggle{transition:none}}
 </style>
 
 <script>
+  const controls = document.querySelector<HTMLDetailsElement>('.interface-language');
+  let fadeTimer: ReturnType<typeof setTimeout>;
+  const revealControls = () => {
+    document.documentElement.classList.add('mobile-controls-visible');
+    clearTimeout(fadeTimer);
+    fadeTimer = setTimeout(() => document.documentElement.classList.remove('mobile-controls-visible'), 2200);
+  };
+  window.addEventListener('scroll', revealControls, {passive:true});
+  controls?.addEventListener('toggle', () => { if (!controls.open) revealControls(); });
   document.querySelectorAll<HTMLAnchorElement>('.interface-language a').forEach(link=>link.addEventListener('click',()=>{
     const url=new URL(link.href);
     url.search=window.location.search;
