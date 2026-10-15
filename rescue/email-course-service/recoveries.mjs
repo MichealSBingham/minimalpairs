@@ -36,7 +36,7 @@ export async function deliverRecovery(storage,env,{now=Date.now(),fetcher=fetch}
   let state='uncertain',providerId;
   if(await suppressed(storage,hash))state='suppressed';
   else try{
-   const text=recoveryText(row,env),html=brandedHtml(text).replace('$14.50 instead of $29','<strong style="font-size:24px">$14.50</strong> instead of <del>$29</del>');
+   const text=recoveryText(row,env),html=brandedHtml(text).replace('$14.50','<strong style="font-size:24px">$14.50</strong>').replace('$29','<del>$29</del>').replace('almost bought','<em>almost</em> bought');
    const r=await fetcher('https://api.resend.com/emails',{method:'POST',headers:{Authorization:'Bearer '+env.RESEND_API_KEY,'Content-Type':'application/json','Idempotency-Key':'minimalpairs-recovery:'+hash},body:JSON.stringify({from:env.FROM_ADDRESS,reply_to:'micheal@minimalpairs.co',to:[row.email],subject:template.subject,text,html})});
    if(r.ok){const result=await r.json();if(typeof result.id==='string'&&result.id.length<200){state='accepted';providerId=result.id;}}else if(r.status<500)state='failed';
   }catch{}
