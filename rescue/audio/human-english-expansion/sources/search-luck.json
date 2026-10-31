@@ -1,0 +1,64 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "searchinfo": {
+      "totalhits": 6
+    },
+    "search": [
+      {
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Back ache-luck.wav",
+        "pageid": 91894802,
+        "size": 93,
+        "wordcount": 142,
+        "snippet": "DescriptionLL-Q1860 (eng)-Back ache-<span class=\"searchmatch\">luck</span>.<span class=\"searchmatch\">wav</span> Audio pronunciation file from the Lingua Libre project. Language InfoField English Transcription InfoField",
+        "timestamp": "2025-09-23T18:25:29Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Vealhurl-bad luck.wav",
+        "pageid": 179271959,
+        "size": 322,
+        "wordcount": 129,
+        "snippet": "DescriptionLL-Q1860 (eng)-Vealhurl-bad <span class=\"searchmatch\">luck</span>.<span class=\"searchmatch\">wav</span> Audio pronunciation file from the Lingua Libre project. Language InfoField English Transcription InfoField",
+        "timestamp": "2026-03-24T16:17:39Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Grendelkhan-luck.wav",
+        "pageid": 146331672,
+        "size": 88,
+        "wordcount": 12,
+        "snippet": "DescriptionLL-Q1860 (eng)-Grendelkhan-<span class=\"searchmatch\">luck</span>.<span class=\"searchmatch\">wav</span> Audio pronunciation file from the Lingua Libre project. Language InfoField English Transcription InfoField",
+        "timestamp": "2024-08-09T22:25:19Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-StuckInLagToad-bad luck.wav",
+        "pageid": 126499517,
+        "size": 93,
+        "wordcount": 134,
+        "snippet": "DescriptionLL-Q1860 (eng)-StuckInLagToad-bad <span class=\"searchmatch\">luck</span>.<span class=\"searchmatch\">wav</span> Audio pronunciation file from the Lingua Libre project. Language InfoField English Transcription",
+        "timestamp": "2023-03-14T21:33:05Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Nattes à chat-luck.wav",
+        "pageid": 73936858,
+        "size": 93,
+        "wordcount": 144,
+        "snippet": "DescriptionLL-Q1860 (eng)-Nattes à chat-<span class=\"searchmatch\">luck</span>.<span class=\"searchmatch\">wav</span> Audio pronunciation file from the Lingua Libre project. Language InfoField English Transcription InfoField",
+        "timestamp": "2026-01-11T00:55:56Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Wodencafe-luck.wav",
+        "pageid": 143575611,
+        "size": 88,
+        "wordcount": 18,
+        "snippet": "DescriptionLL-Q1860 (eng)-Wodencafe-<span class=\"searchmatch\">luck</span>.<span class=\"searchmatch\">wav</span> Audio pronunciation file from the Lingua Libre project. Language InfoField English Transcription InfoField",
+        "timestamp": "2025-11-25T01:09:29Z"
+      }
+    ]
+  }
+}

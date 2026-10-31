@@ -8,15 +8,16 @@ import {attributionFromMetadata} from '../analytics.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const id=x=>typeof x==='string'?x:x?.id;
 const money=(target,currency,amount)=>{target[currency]=(target[currency]??0)+amount;};
-const scoped=x=>x.livemode===true && x.metadata?.billingSchema==='1' && !!x.metadata?.firebaseUid;
+const scoped=x=>!x.metadata?.operatorTest && x.livemode===true && x.metadata?.billingSchema==='1' && !!x.metadata?.firebaseUid;
 export function summarize({sessions,subscriptions,charges,refunds,prices,start,end}) {
  const plans=Object.fromEntries(Object.entries(prices).map(([plan,p])=>[p.id,plan]));
  const paid={monthly:0,annual:0,lifetime:0,unclassified:0};
- const paidCheckoutByOffer={},paidCheckoutByLandingPage={},paidCheckoutBySource={},paidCheckoutGrossMinor={},subStates={},activePlans={monthly:0,annual:0};
+ const checkoutByMarket={},paidCheckoutByMarket={},paidCheckoutByOffer={},paidCheckoutByLandingPage={},paidCheckoutBySource={},paidCheckoutGrossMinor={},subStates={},activePlans={monthly:0,annual:0};
  const recurringListPriceMonthlyMinor={},scheduledCancellationMonthlyMinor={};
  let scheduledCancellations=0,canceledInWindow=0,unscopedPaidCheckouts=0,excludedActiveItems=0;
  const bySubscription=new Map(subscriptions.map(s=>[s.id,s]));
  for(const s of sessions){
+  if(scoped(s)&&s.metadata?.market_version==='regional-v1'){const key=[s.metadata.market_country||'XX',s.metadata.market_tier||'standard'].join('|');const g=checkoutByMarket[key]??={created:0,open:0,expired:0,paid:0};g.created++;if(s.status==='open')g.open++;if(s.status==='expired')g.expired++;if(s.status==='complete'&&s.payment_status==='paid')g.paid++;}
   if(s.payment_status!=='paid'||s.status!=='complete')continue;
   if(!scoped(s)){unscopedPaidCheckouts++;continue;}
   let plan=s.mode==='payment'&&s.metadata?.plan==='lifetime'?'lifetime':null;
@@ -24,7 +25,9 @@ export function summarize({sessions,subscriptions,charges,refunds,prices,start,e
   if(!plan && sub?.items?.data?.length===1)plan=plans[id(sub.items.data[0].price)];
   paid[plan??'unclassified']++;
   money(paidCheckoutGrossMinor,s.currency,s.amount_total??0);
-  const offer=s.metadata?.recoveryOffer === 'lifetime50v1'?'lifetime50v1':'standard';
+  const marketKey=[s.metadata?.market_version||(s.metadata?.support_offer?'support-offer':'pre-regional'),s.metadata?.market_country||s.customer_details?.address?.country||'unknown',s.metadata?.market_tier||'standard'].join('|');
+  const mg=paidCheckoutByMarket[marketKey]??={purchases:0,grossMinor:{}};mg.purchases++;money(mg.grossMinor,s.currency,s.amount_total??0);
+  const offer=s.metadata?.support_offer?'support_thanks_10':s.metadata?.recoveryOffer === 'lifetime50v1'?'lifetime50v1':'standard';
   const offerGroup=paidCheckoutByOffer[offer]??={purchases:0,grossMinor:{}};offerGroup.purchases++;money(offerGroup.grossMinor,s.currency,s.amount_total??0);
   const attribution=attributionFromMetadata(s.metadata);
   const source=attribution?.source??'unattributed';
@@ -53,7 +56,7 @@ export function summarize({sessions,subscriptions,charges,refunds,prices,start,e
  for(const r of refunds)if(r.status==='succeeded'){successfulRefunds++;money(refundedMinor,r.currency,r.amount);}
  return {
   window:{start:new Date(start*1000).toISOString(),endExclusive:new Date(end*1000).toISOString()},
-  currentOffer:{paidCheckoutPurchases:paid,paidCheckoutByOffer,paidCheckoutBySource,paidCheckoutByLandingPage,paidCheckoutGrossMinor,subscriptionStates:subStates,activeSubscriptionItemsByPlan:activePlans,recurringListPriceMonthlyMinor,scheduledCancellations,scheduledCancellationMonthlyMinor,canceledInWindow,excludedActiveItems},
+  currentOffer:{checkoutByMarket,paidCheckoutByMarket,paidCheckoutPurchases:paid,paidCheckoutByOffer,paidCheckoutBySource,paidCheckoutByLandingPage,paidCheckoutGrossMinor,subscriptionStates:subStates,activeSubscriptionItemsByPlan:activePlans,recurringListPriceMonthlyMinor,scheduledCancellations,scheduledCancellationMonthlyMinor,canceledInWindow,excludedActiveItems},
   accountWideCash:{capturedCharges,capturedGrossMinor,successfulRefunds,refundedMinor,unscopedPaidCheckouts},
   definitions:[
    'All money is in the smallest currency unit; currencies are never combined.',

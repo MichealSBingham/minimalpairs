@@ -1,3 +1,4 @@
+import * as offer from '../src/lib/offer-attribution.mjs';
 import test from 'node:test';import assert from 'node:assert/strict';
 import {plausibleEvents,plausibleProperties} from '../src/lib/plausible-events.mjs';
 test('browser events cannot report paid purchases or raw payment context',()=>{assert.equal(plausibleEvents.purchase,undefined);assert.equal(plausibleEvents.checkout_context,undefined);assert.equal(plausibleEvents.begin_checkout,'Checkout started');assert.equal(plausibleEvents.practice_answer,'Answer submitted');});
@@ -8,7 +9,7 @@ test('repeat offer visibility callbacks send one first-party and Plausible expos
  const compiled=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
  const events=[],requests=[],exports={};let excluded=false;
  const location={hostname:'minimalpairs.co',pathname:'/pricing',origin:'https://minimalpairs.co',search:''};
- const imports={'./plausible-reporting':{reportToPlausible:(...args)=>events.push(args)},'./measurement-data':{acquisitionDetails:()=>({channel:'direct'}),measurementPath:x=>x,landingPath:x=>x}};
+ const imports={'./offer-attribution.mjs':offer,'./plausible-reporting':{reportToPlausible:(...args)=>events.push(args)},'./measurement-data':{acquisitionDetails:()=>({channel:'direct'}),measurementPath:x=>x,landingPath:x=>x}};
  new Function('require','exports','window','document','navigator','localStorage','fetch',compiled)(name=>imports[name],exports,{location},{documentElement:{dataset:{measurementEnvironment:'production'},lang:'en'},referrer:''},{webdriver:false},{getItem:()=>String(excluded)},async(...args)=>{requests.push(args);return {ok:true,status:204};});
  await exports.productEvent('plans_view',{surface:'pricing'});await exports.productEvent('plans_view',{surface:'pricing'});
  assert.equal(events.length,1);assert.equal(requests.length,1);

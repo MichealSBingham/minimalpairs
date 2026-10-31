@@ -1,0 +1,37 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "searchinfo": {
+      "totalhits": 3
+    },
+    "search": [
+      {
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Arlo Barnes-buck.wav",
+        "pageid": 105075419,
+        "size": 88,
+        "wordcount": 14,
+        "snippet": "DescriptionLL-Q1860 (eng)-Arlo Barnes-<span class=\"searchmatch\">buck</span>.<span class=\"searchmatch\">wav</span> Audio pronunciation file from the Lingua Libre project. Language InfoField English Transcription InfoField",
+        "timestamp": "2023-04-08T01:56:55Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Grendelkhan-buck.wav",
+        "pageid": 148570050,
+        "size": 88,
+        "wordcount": 18,
+        "snippet": "DescriptionLL-Q1860 (eng)-Grendelkhan-<span class=\"searchmatch\">buck</span>.<span class=\"searchmatch\">wav</span> Audio pronunciation file from the Lingua Libre project. Language InfoField English Transcription InfoField",
+        "timestamp": "2026-05-30T13:10:56Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Flame, not lame-keep it a buck.wav",
+        "pageid": 152658914,
+        "size": 347,
+        "wordcount": 7,
+        "snippet": "DescriptionLL-Q1860 (eng)-Flame, not lame-keep it a <span class=\"searchmatch\">buck</span>.<span class=\"searchmatch\">wav</span> Audio pronunciation file from the Lingua Libre project. Language InfoField English Transcription",
+        "timestamp": "2025-12-09T01:01:07Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "repository": "https://github.com/MLSpeech/FormantsTracker",
+  "commit": "e8a11b66298593d8925c25733895983e11a4b3d6",
+  "files": {
+    "LICENSE": "34c72bde283734e96d70b7327eb025e8ff923b22f84b3f5ae4234f16ea02ae6b",
+    "README.md": "610d193871709ef3d22fcf7350d32d6f35a3d3ee8573c11329d6a4ef3b07c9d8",
+    "conf/config.yaml": "fc0c4ae52c657522d275b5c1d76e46b09b665de5adba42c581aeaa487a0ff373",
+    "dataloader.py": "0af8f9dd809404cdb591eb9185634db482a744bb72693f020d3ae53fdb648c1a",
+    "model.py": "af7f336154538b86bc8748e2156ce4719043bb0460d65bdce49c985bd65640dd",
+    "solver.py": "0f4134011f5cb19a83bc2088ce8654d7bbb77b682cb419d64321ca8052d51cac",
+    "utils.py": "b53213244c05f407767ebe8e82fef504fea8b38aa8431574bca00c200b29f43a",
+    "requirements.txt": "c88ccdaaa16a8b431d6b6c0963f43ce8559795d2a5f0561eff7b0323492f447c",
+    "saved_ckpts/196_1125.ckpt": "49d0f4cf3e7e5788be476c68200e9bd4a03bc5800284648e2a7c076bda9a9805",
+    "test_dir/sx12.wav": "fad464fa6bc6d3fbbcb7d2d09bafc9892227624f740ff016750ab0912c7edcd1",
+    "predictions/sx12.pred": "8db2a26add0103f47d3d512829945ad4cfb12224fda10c3404c38eae136970c2"
+  }
+}

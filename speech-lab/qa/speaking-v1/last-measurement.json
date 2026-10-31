@@ -1,0 +1,122 @@
+{
+  "schema_version": 1,
+  "method": "burg5500-neural-veto-central60ms-v1",
+  "grade": null,
+  "predicted_word": null,
+  "duration_s": 0.605,
+  "room_check": false,
+  "limitations": [
+    "Experimental acoustic measurements; pronunciation is not graded.",
+    "Filtered or noisy audio can still produce incorrect positions."
+  ],
+  "status": "measured",
+  "reason": null,
+  "title": "A vowel position to compare.",
+  "tip": "Replay the word, then try the other vowel. Different positions do not by themselves mean better pronunciation.",
+  "measurement": {
+    "f1_hz": 508,
+    "f2_hz": 1758,
+    "f1_iqr_hz": [
+      465,
+      514
+    ],
+    "f2_iqr_hz": [
+      1679,
+      1772
+    ]
+  },
+  "sampled_interval_s": [
+    0.265,
+    0.325
+  ],
+  "accepted_frames": 7,
+  "sampled_frames": 7,
+  "observations": [
+    {
+      "t": 0.265,
+      "accepted": true,
+      "burg_hz": [
+        437.51995130809047,
+        1811.6758674266393
+      ],
+      "neural_hz": [
+        373.5408630371094,
+        1789.88330078125
+      ]
+    },
+    {
+      "t": 0.275,
+      "accepted": true,
+      "burg_hz": [
+        450.44932822638043,
+        1785.756934903404
+      ],
+      "neural_hz": [
+        404.6692657470703,
+        1789.88330078125
+      ]
+    },
+    {
+      "t": 0.285,
+      "accepted": true,
+      "burg_hz": [
+        479.7150171197212,
+        1758.2052533883173
+      ],
+      "neural_hz": [
+        435.79766845703136,
+        1774.319091796875
+      ]
+    },
+    {
+      "t": 0.295,
+      "accepted": true,
+      "burg_hz": [
+        509.1401792912977,
+        1757.704932618589
+      ],
+      "neural_hz": [
+        466.92607116699236,
+        1743.1906738281248
+      ]
+    },
+    {
+      "t": 0.305,
+      "accepted": true,
+      "burg_hz": [
+        519.7285975507667,
+        1699.5970079488593
+      ],
+      "neural_hz": [
+        482.4902648925781,
+        1712.0622558593748
+      ]
+    },
+    {
+      "t": 0.315,
+      "accepted": true,
+      "burg_hz": [
+        518.7397542848271,
+        1658.4851363390735
+      ],
+      "neural_hz": [
+        498.05445861816423,
+        1680.9338378906248
+      ]
+    },
+    {
+      "t": 0.325,
+      "accepted": true,
+      "burg_hz": [
+        507.5589767931276,
+        1577.9497851681238
+      ],
+      "neural_hz": [
+        513.61865234375,
+        1649.8054199218748
+      ]
+    }
+  ],
+  "analysis_ms": 303,
+  "input_sample_rate": 44100
+}

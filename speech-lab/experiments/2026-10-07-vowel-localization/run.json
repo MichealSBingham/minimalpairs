@@ -1,0 +1,9 @@
+{
+  "status": "complete",
+  "recordings": 1668,
+  "paid_spend_usd": 0,
+  "wall_seconds": 10.769271041004686,
+  "script_sha256": "7b31f19c30ef7d3b84d838be1b7a3dc6b5992d644f542557acb174d01d869109",
+  "protocol_sha256": "f6627e6c8ab4845125afd96aed55e171e208fbfc4b89811968c9fd7a36937ab4",
+  "archive_sha256": "2560548591e3a726c88549b6dc9d226995616c26874d601c69fee8b9eee9d730"
+}

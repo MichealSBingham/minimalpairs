@@ -1,0 +1,10 @@
+{
+  "created": "2026-10-07",
+  "status": "Post-hoc ablation proposed after observing clean comparison results, before calculating veto-only results",
+  "hypothesis": "The neural estimate is useful to detect doubt but its systematic error may worsen coordinates when averaged. Preserve fixed-5500 Burg coordinates and use neural agreement only as a veto.",
+  "rule": "Exactly the same accepted/rejected points as cross_method_fixed; return burg5500 f1/f2 unchanged. No new thresholds or target labels.",
+  "data": "Saved clean and stress predictions from the five-method comparison, with identical acoustic labels and exclusions",
+  "metrics": "Same coverage, absolute errors, large-error definition and good-measurement yield as original experiment. Compare fixed averaging versus veto on identical points.",
+  "limitations": "Post-hoc exploratory method selection. No independent validation and no evidence of learning. Stress copies reuse speakers and words.",
+  "paid_spend_usd": 0
+}

@@ -1,0 +1,13 @@
+{
+  "python": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 17.0.0 (clang-1700.6.3.2)]",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "packages": {
+    "torch": "2.14.1",
+    "praat-parselmouth": "0.4.7",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "soundfile": "0.14.0"
+  },
+  "timing_conditions": "Local interactive desktop, four Torch CPU threads. Short localization probe overlapped with part of the run; no dedicated-machine or end-to-end latency claim."
+}

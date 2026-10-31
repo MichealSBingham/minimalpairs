@@ -1,0 +1,151 @@
+{
+  "files": [
+    {
+      "path": "sources/bounded-known-profile-file-check.json",
+      "sha256": "7e2636de94e903a83b9a440ba9b381b0b28739b5520ba15134750d36160bb409",
+      "bytes": 66996
+    },
+    {
+      "path": "sources/coverage-discovery.json",
+      "sha256": "be043bb1a97287b67a0c2a1b6fe5754594bb106b6afba315f0af0bdd41d588df",
+      "bytes": 2999
+    },
+    {
+      "path": "sources/current-f-v-combined-search.json",
+      "sha256": "dd8fa2846f670b34b8281349d0576684fa4aa94167bbd7ab02098e2d9e3a162c",
+      "bytes": 109
+    },
+    {
+      "path": "sources/english-dictionary-entries.json",
+      "sha256": "0f4fb34b6279de5cde8f9bb07755dd4dd6a87a1eaa07b2b850e97141adc12f80",
+      "bytes": 188229
+    },
+    {
+      "path": "sources/english-word-audio-map.json",
+      "sha256": "3754c07720e3430e9f5b45f97d4d37a9c5d9a2a767eb0a5a2d40a42d7a61f41b",
+      "bytes": 2792
+    },
+    {
+      "path": "sources/exact-search-balla.json",
+      "sha256": "dd8fa2846f670b34b8281349d0576684fa4aa94167bbd7ab02098e2d9e3a162c",
+      "bytes": 109
+    },
+    {
+      "path": "sources/exact-search-banca.json",
+      "sha256": "f7e47beaabbdfc24df273b4387e37fb8f4d07c1395a906d1eb367c038545ec47",
+      "bytes": 1099
+    },
+    {
+      "path": "sources/exact-search-basta.json",
+      "sha256": "0ad78130ee9a84d67980e694e25f2d730061c7bfe3efc881b48fccbeeefcfbf2",
+      "bytes": 474
+    },
+    {
+      "path": "sources/exact-search-belle.json",
+      "sha256": "dd8fa2846f670b34b8281349d0576684fa4aa94167bbd7ab02098e2d9e3a162c",
+      "bytes": 109
+    },
+    {
+      "path": "sources/exact-search-bollo.json",
+      "sha256": "dd8fa2846f670b34b8281349d0576684fa4aa94167bbd7ab02098e2d9e3a162c",
+      "bytes": 109
+    },
+    {
+      "path": "sources/exact-search-caro.json",
+      "sha256": "72eb0c8694e8a44bd1aa69f4afebe8750230fd98a1e3d6cfe7c36aa1637a0f0d",
+      "bytes": 230
+    },
+    {
+      "path": "sources/exact-search-casa.json",
+      "sha256": "968365aee8dc3c9af639b2159195738e913f862b134c36e7c6ec8fb69e3bef26",
+      "bytes": 968
+    },
+    {
+      "path": "sources/exact-search-coro.json",
+      "sha256": "dd8fa2846f670b34b8281349d0576684fa4aa94167bbd7ab02098e2d9e3a162c",
+      "bytes": 109
+    },
+    {
+      "path": "sources/exact-search-cosa.json",
+      "sha256": "a2ab4dac9f90f199e06cdd7c0ff15a702385678ce89d698bc922a5693daac13e",
+      "bytes": 825
+    },
+    {
+      "path": "sources/exact-search-fato.json",
+      "sha256": "dd8fa2846f670b34b8281349d0576684fa4aa94167bbd7ab02098e2d9e3a162c",
+      "bytes": 109
+    },
+    {
+      "path": "sources/exact-search-fatto.json",
+      "sha256": "fca3d693ad151e4245b9e609d62ce884d6bebaa7f5ee5d7e33b360395c2eda6a",
+      "bytes": 625
+    },
+    {
+      "path": "sources/exact-search-pala.json",
+      "sha256": "602651808011b7475f0b4a1bc509ad122cd37500c1cfa1001e6f33929c713c57",
+      "bytes": 231
+    },
+    {
+      "path": "sources/exact-search-palla.json",
+      "sha256": "3bf6be9886c39adfa7a3b9bf8ba6229e35366ee5217349309e31cf9b45005a56",
+      "bytes": 614
+    },
+    {
+      "path": "sources/exact-search-panca.json",
+      "sha256": "22cd131e5f34a9df9a47037e4244a9924c3cdf241601ff62af845bd7faee4427",
+      "bytes": 232
+    },
+    {
+      "path": "sources/exact-search-pasta.json",
+      "sha256": "ceeb61092dbf31a1d705e093f3fe406fdecd16076b27fcfe200d8d32966eaf3a",
+      "bytes": 231
+    },
+    {
+      "path": "sources/exact-search-pelle.json",
+      "sha256": "87a24ea9783d9254296106d8dd5edd8aba72db5d05cfcbc76d3d89b19560243f",
+      "bytes": 474
+    },
+    {
+      "path": "sources/exact-search-pena.json",
+      "sha256": "005fd881d456fc2240e3e84264db4ede96bdcee4417bfa1a85bf6f59051e84df",
+      "bytes": 361
+    },
+    {
+      "path": "sources/exact-search-penna.json",
+      "sha256": "1b3dff807d0475a84318b47e4fe11af464149ee8332fe9e9231a1bd21b21892a",
+      "bytes": 232
+    },
+    {
+      "path": "sources/exact-search-pollo.json",
+      "sha256": "f63cb06d2e52ba43cc38c228b7d8ace6e6b543aec6e0906d29fadcbb407085e0",
+      "bytes": 249
+    },
+    {
+      "path": "sources/f-v-coverage-discovery.json",
+      "sha256": "ac292f1393165db4f7304edcace1cf7c0725a173f3b10128e289bb8a103f7f6e",
+      "bytes": 569
+    },
+    {
+      "path": "sources/f-v-known-profile-file-check.json",
+      "sha256": "a1067f2b268dba87cf8186c7fb9bd04c63c82040d2eea89ba5ed090ca28a960a",
+      "bytes": 17124
+    },
+    {
+      "path": "sources/italian-dictionary-entries.json",
+      "sha256": "06ab4211d3d3088cb481d899946be056afb6c8f2e55bcd4a4bfff9a866cdec42",
+      "bytes": 59971
+    },
+    {
+      "path": "sources/italian-word-audio-map.json",
+      "sha256": "a3572159dd073d8b00ce87e17e329b98e8b1f5f82d2148266e29eefdb4fb7413",
+      "bytes": 2118
+    },
+    {
+      "path": "sources/strongest-files-mediainfo.json",
+      "sha256": "07c3e306d1f881ff370c2d0c50c69a34cf84fcb535a6fea6f7e9508f8d4171e6",
+      "bytes": 119570
+    }
+  ],
+  "rawSourcesIgnored": true,
+  "note": "Hashes identify saved API evidence, not downloaded audio. No source waveform was acquired."
+}

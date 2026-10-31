@@ -1,0 +1,194 @@
+{
+  "fr:roue:b": {
+    "seed": 4920,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "7c3ff00105a0dae33bd50c48ce07d9fda777882f2dcbea3ded29a2d360f850a3",
+    "selectedCandidateId": "4831b92e8f685b08126de05d1829f7fcd383a48f8f87e0bdc0f6f116946ba9dd"
+  },
+  "fr:rue:b": {
+    "seed": 4920,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "71323893e9c186870bb827d97730944159df08d223372d768d314c9fd6ec028c",
+    "selectedCandidateId": "4be86d81974ceddcf61d0672d3254adb31ce6b8eb2ad61d6457bcba449b2bf39"
+  },
+  "fr:bout:b": {
+    "seed": 4920,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "156df319266fb3c3eb5b10f07fcc224158e4356c8d9c5891a0ba6feee38aa7da",
+    "selectedCandidateId": "3af6921081918c43107b72141a1540e2f7e3ea88dc4e1f68a2eda61e6bfb7746"
+  },
+  "fr:bu:b": {
+    "seed": 4920,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "43adf4dd13aa16b82ce2aad492551461ca43d44de07997811631a947bade0147",
+    "selectedCandidateId": "6d90e5f55487f5555d543c44ad769b1cfca3071e0e25e0cc1572f38f4d7cef88"
+  },
+  "fr:bon:b": {
+    "seed": 4920,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "6f00d515b06d8a8c8affe6c0dd12887345b1e18356d4c9473f23f4be452aec4d",
+    "selectedCandidateId": "327baab3f72a9ab186c29571587811bef3604865ec477dbc88ac96689f91fdb7"
+  },
+  "fr:pan:b": {
+    "seed": 4920,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "fba9ea7285c0e2692f6a6be57dc8a5b051fa2583bf857038b355b2effdedf733",
+    "selectedCandidateId": "19b16b8445880774fcaca62dbea64c45e0b77b726567e12dc4d4db99ff0731c7"
+  },
+  "de:würde:b": {
+    "seed": 4920,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "f0adec7c1a9265dc966771432385c24903989e36f1f1a06651467f63da0b664b",
+    "selectedCandidateId": "d123dcf5258cb26fc9072f4530d17ebfb97527e864412d364c1dd552fd8110e5"
+  },
+  "de:Mütter:a": {
+    "seed": 4919,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "cde28eed1f06d0bcb152d5f909a049ae55b066a532823123d3b0c140552e9f0f",
+    "selectedCandidateId": "1f7da1b19a69c37eac946718cc2cb4696fbcd5deecbcc8aee5a1bda44a3cada3"
+  },
+  "de:Miete:a": {
+    "seed": 4919,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "1d0c259a3d91725272b3a8dd9105325f03eaee63007360df043e1a4d4b0bc67e",
+    "selectedCandidateId": "14f2219f8bb765fbc23de370925ac6fa2d32ee44c1136236522876b5a97553cc"
+  },
+  "de:weise:b": {
+    "seed": 4920,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "5dcb658094608209ff986aae6cbb9ee7f6886b8a6f626bf55df5076b50f8509e",
+    "selectedCandidateId": "3400c7b6272fecdc80a2e4d11ba534cca93724b7014194f362569dd657b86ecd"
+  },
+  "es:coro:b": {
+    "seed": 4920,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "f0db7384024c840da47088d797963280400e4b5f2b340111115f382af6cf218f",
+    "selectedCandidateId": "f6cc34b6c5b3212e772fb026300a19daba90e3f028acefc50fd4f5ae31036e63"
+  },
+  "es:habló:b": {
+    "seed": 5472,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "cebd8438043c38d98520fbfc78718da410dbb5d7dc8db13b286f0f39d2edaa0d",
+    "selectedCandidateId": "4261d3a075ecdf27aeb685363cd3d10a58574e79cbbf74638f3d6a0975f70f55"
+  },
+  "es:canto:a": {
+    "seed": 4919,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "4b9f9f324244e9b8d0a6c546e1fcb2825238379728f0e6b219a118f5d56b1d24",
+    "selectedCandidateId": "b10bc040f5a436dead1bf780570245389e013573b579594c65e0d8e28a6a15cd"
+  },
+  "it:vinto:a": {
+    "seed": 4919,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "6eed2396c880e47dca29766b0657f4356bab44f40dfdfb2bc68d5c7bc5bfa840",
+    "selectedCandidateId": "476ff47347f8e18b42a23b87dc627f5c9d87cb0ceb4bf644b45dd3357d0ef804"
+  },
+  "pt:pata:b": {
+    "seed": 4920,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "ff09855fc2a0926fb675cf7a29b8f06b5685853e887b8914e673b0eb7ae2683e",
+    "selectedCandidateId": "1db35fd55811df3964b5d9ff06d0877b9f483b1dd1a3bea04a48dab6ea1a2be4"
+  },
+  "pt:pala:b": {
+    "seed": 5472,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "7c67af71c96c2af2d5f2bb63cbee967a59b35fb1b1f7daa329fbdeb1faab4931",
+    "selectedCandidateId": "0fb10a68bd7affd05f9bcdfb64f3d58d41d922741fee1f57cb9ee58bbd679502"
+  },
+  "pt:bala:b": {
+    "seed": 4920,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "1eef7c5bb88398c63af05b2260a4327d0090ef325c0f4acaf846861229a8f3d8",
+    "selectedCandidateId": "0535efd3ad5f16e49dc9819d6fe6c596646cb181e1abb5074a8b088b3de46502"
+  },
+  "ru:нос:a": {
+    "seed": 4919,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "66622cfdc5a844e875d286a91da37527b958fee8329b8b867a0e4e795bc67cf5",
+    "selectedCandidateId": "fcf6461e8310b6033415f7487ab026ac91faafe30db56c48af50ce3b1e1f3223"
+  },
+  "ru:нёс:b": {
+    "seed": 4920,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "72e37392aa2e6851605235689e5c231e37e9006beb4a56d47a467c8c1fcfbe72",
+    "selectedCandidateId": "8833e825061e0b36c0fe9c9b5700918f2d9be17bed738c79bdbb1a279aa22f8b"
+  },
+  "ru:том:a": {
+    "seed": 4919,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "144ff3838bbca8c2a47f2015093fa86eb704db0937b7199253091734e0818377",
+    "selectedCandidateId": "723bb1ed19b0d8036c25dfe1ff393d6a2c46912b5f1470f8f7ed888100b5e5d9"
+  },
+  "de:Rohre:b": {
+    "seed": 4920,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "4e4be4976af3ee11615d3e96d08c4568a7d942fdb768fc14be126f397ae9aef5",
+    "selectedCandidateId": "f088cad0bba0b0eed4b9567243405b8edc676f23c8d106b88d329268ff2f0da9"
+  },
+  "de:rote:a": {
+    "seed": 5471,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "d25749e781cb25e486f4214faf64b17e4fb4216c967b24eb031003c8a579249d",
+    "selectedCandidateId": "f727ff0704cf1f0a10dbba026e6f500691972d7439f30a493fcd4b189f0543b6"
+  },
+  "fr:pin:a": {
+    "seed": 4919,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "b08f05f59b6794c2486c6410ef0ac9967573b5eb54e006232f1d205b4b4b5e8f",
+    "selectedCandidateId": "0a97118b2e39b7d7fce78b60f5f708c69e81441872e645f7ea9596cf4ffd16d8"
+  },
+  "fr:temps:a": {
+    "seed": 4919,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "623bc83f42bf768b4742cb3f914b78c9ea1be1a2311ea9937d6df0987dbecac3",
+    "selectedCandidateId": "0df310c45c2a8fc5ede1523dca24a59bf097661886e4402e3058bb85c1941ab3"
+  },
+  "fr:pomme:b": {
+    "seed": 4920,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "5866a6fcd71f48bebf738dde02ebb7830962e389d213eba464c3693a8cab2cb3",
+    "selectedCandidateId": "16fac0acdc31a346de58ad887fb4deeccf111a145915d9063dadfca17405d8f8"
+  },
+  "fr:chou:b": {
+    "seed": 4920,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "d4f3181e1b589166a6479bb61a48ec9c0283f10e7152cee5811af2f26f424e65",
+    "selectedCandidateId": "f8a57a8fbef56d3321cb6897d0683f108233b2cb5fb6ed6e0fbf39b849c58c94"
+  },
+  "fr:cou:a": {
+    "seed": 4919,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "9d3e8094cc9bc3d86286636cdccbacbe4173cb08d5ba5356cd1920e2573cf13a",
+    "selectedCandidateId": "c4d54403881d8867e9c97a5c550698f341f4d8d2fe1a934609000622e9c8ec8b"
+  },
+  "fr:fin:b": {
+    "seed": 4920,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "f3a011c5f281c56d5c69ac485a42e6bab666fd9ddc4abf6057eee82ab5bda9db",
+    "selectedCandidateId": "934ec94c36794d9646fbe734920361a39811f47f5c8e550e6a16deb67a47ee6d"
+  },
+  "fr:ville:a": {
+    "seed": 4919,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "ff9431e8691586547eff2aad19d5488161241ae1d32b0a7e95ad77ba56cebb4c",
+    "selectedCandidateId": "da06f4c46230bd465bb435c36349470cbde633e0ab21827c56a40992e7d7b138"
+  },
+  "fr:saut:b": {
+    "seed": 4920,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "07d7639e94abbed5b68ecaf57bf3c9ffa77eeab1c6b83f3c9001733c82c6c851",
+    "selectedCandidateId": "7a943586d5029617e14824274172ae111d9220670f92712d959d917f136063a9"
+  },
+  "fr:lit:b": {
+    "seed": 4920,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "77d0beab1b34671ff69af099b765508ec2b226663c4dea47dcf48befd529b587",
+    "selectedCandidateId": "dcb1148a5fe01a50879f66a9dc0005d51778f7fe3f383a7b247e9da83bee24a8"
+  },
+  "fr:lait:b": {
+    "seed": 4920,
+    "reason": "Original exceeded isolated-word duration cap",
+    "rejectedCandidateId": "bb508fdd4b57d3ef465a53a81fa3264e9ac468aa33497257ce12a774fe95f78f",
+    "selectedCandidateId": "3d3f00efa3ededd7a678a35ebd46277959efaf7503110a9fbc835b40057b0628"
+  }
+}

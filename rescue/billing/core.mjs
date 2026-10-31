@@ -1,3 +1,4 @@
+import {marketParameters, validRegionalCoverage, validSupportCoverage} from './markets.mjs';
 import {attributionMetadata, attributionFromMetadata} from './analytics.mjs';
 /**
  * Isolated billing policy/HTTP core. No credentials, live adapters, default
@@ -145,7 +146,7 @@ export function subscriptionEntitlement(snapshot, binding, config, nowSeconds) {
     ) return base;
   if (snapshot.plan === 'lifetime') {
     const price = config.prices?.lifetime;
-    if (!price || snapshot.priceId !== price.id || snapshot.currency !== 'usd' || !(snapshot.amountPaid === 2900 || (snapshot.amountPaid === 1450 && config.recoveryCouponId && snapshot.recoveryCouponId === config.recoveryCouponId)) || price.unitAmount !== 2900
+    if (!price || snapshot.priceId !== price.id || snapshot.currency !== 'usd' || !(snapshot.amountPaid === 2900 || validRegionalCoverage(snapshot,config) || validSupportCoverage(snapshot,config) || (snapshot.amountPaid === 1450 && config.recoveryCouponId && snapshot.recoveryCouponId === config.recoveryCouponId)) || price.unitAmount !== 2900
       || !/^cs_(?:test_|live_)?[A-Za-z0-9]+$/.test(snapshot.checkoutSessionId || '') || !/^pi_[A-Za-z0-9]+$/.test(snapshot.paymentIntentId || '')
       || snapshot.successfulCharge !== true || !whole(snapshot.amountRefunded) || snapshot.amountRefunded >= snapshot.amountPaid
       || !['none','won'].includes(snapshot.disputeStatus) || snapshot.adminBlocked === true) return {...base, reason:'no_paid_lifetime_coverage'};
@@ -320,6 +321,10 @@ export function createBillingHandler(config, ports) {
         // Attribution is a reservation snapshot. A retry keeps the original data
         // (including no data), even after consent, campaign or locale changes.
         let parameters = checkoutParameters(config, account, customerId, body.plan, pending ? attributionFromMetadata(pending.parameters?.metadata) : body.analytics);
+        if (!recoveryOffer && !pending) parameters = marketParameters(parameters,config,request.headers.get('X-Internal-Market-Country'));
+        if (!recoveryOffer && pending?.parameters?.metadata?.market_version) {
+          const m=pending.parameters.metadata; parameters={...parameters,metadata:{...parameters.metadata,...Object.fromEntries(Object.entries(m).filter(([k])=>k.startsWith('market_')))},...(pending.parameters.discounts?{discounts:pending.parameters.discounts}:{})};
+        }
         if (recoveryOffer) parameters = pending?.parameters?.metadata?.recoveryOffer === 'lifetime50v1' ? pending.parameters : recoveryParameters(parameters,config,recoveryOffer);
         if(pending?.parameters?.cancel_url === `${config.appOrigin}/pricing` && !recoveryOffer) parameters.cancel_url = pending.parameters.cancel_url;
         // Reservations made before monthly plan metadata was introduced retain
@@ -335,7 +340,7 @@ export function createBillingHandler(config, ports) {
           }
           if (existing.status !== 'expired') fail('checkout_reconciliation_pending', 409);
           pending = null;
-          parameters = checkoutParameters(config, account, customerId, body.plan, body.analytics);
+          parameters = marketParameters(checkoutParameters(config, account, customerId, body.plan, body.analytics),config,request.headers.get('X-Internal-Market-Country'));
           if (recoveryOffer) parameters = recoveryParameters(parameters,config,recoveryOffer);
         }
         if (pending && pending.plan !== body.plan) fail('another_checkout_is_open', 409);
@@ -351,7 +356,7 @@ export function createBillingHandler(config, ports) {
         if (!/^cs_(test_|live_)?[A-Za-z0-9]+$/.test(checkout.id || '') || checkout.livemode !== config.expectedLivemode || checkout.customer !== customerId || checkout.client_reference_id !== account.uid || checkout.status !== 'open') fail('checkout_binding_invalid', 502);
         const url = safeStripeUrl(checkout.url, 'checkout.stripe.com');
         await ports.billing.savePendingCheckout(account.uid, { ...pending, sessionId: checkout.id });
-        if (config.recoveryCouponId && body.plan === 'lifetime' && !recoveryOffer) await ports.billing.reserveRecoveryOffer(account.uid,{createdAt:pending.createdAt,expiresAt:pending.createdAt+48*60*60,sourceSessionId:checkout.id});
+        if (config.recoveryCouponId && body.plan === 'lifetime' && !recoveryOffer && !['middle','value'].includes(pending.parameters?.metadata?.market_tier)) await ports.billing.reserveRecoveryOffer(account.uid,{createdAt:pending.createdAt,expiresAt:pending.createdAt+48*60*60,sourceSessionId:checkout.id});
         return response(200, { url }, origin);
       });
     } catch (error) {
@@ -369,6 +374,8 @@ async function projectCanonicalCustomer(binding, config, ports, nowSeconds) {
   const snapshot = await ports.stripe.currentSubscriptionSnapshot(binding);
   if (!snapshot || snapshot.uid !== binding.uid || snapshot.customerId !== binding.customerId || snapshot.livemode !== config.expectedLivemode) fail('snapshot_binding_invalid', 503);
   const entitlement = subscriptionEntitlement(snapshot, binding, config, nowSeconds);
+  // Inconclusive provider evidence is a retry, never proof that paid access ended.
+  if (entitlement.reason === 'unverified_snapshot') fail('snapshot_unverified', 503);
   // The writer preserves administrative blocks and never writes legacy grants.
   await ports.entitlements.projectSubscription(binding.uid, entitlement);
   const pending = await ports.billing.pendingCheckout(binding.uid);

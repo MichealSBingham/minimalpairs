@@ -1,0 +1,130 @@
+{
+  "recordedAt": "2026-09-28T20:03:30.940952+00:00",
+  "models": [
+    {
+      "purpose": "reference-design",
+      "repo": "mlx-community/Qwen3-TTS-12Hz-1.7B-VoiceDesign-4bit",
+      "revision": "5c390979e4b93af5f2932f90742ca99c7dd04687",
+      "modelCardLicense": "Apache-2.0",
+      "pinnedCardUrl": "https://huggingface.co/mlx-community/Qwen3-TTS-12Hz-1.7B-VoiceDesign-4bit/blob/5c390979e4b93af5f2932f90742ca99c7dd04687/README.md",
+      "retainedMetadata": [
+        {
+          "originalPath": "README.md",
+          "retainedPath": "provenance/reference-design-README.md",
+          "sha256": "40d213ae6ec58c48d4362a66a8e77bc8518b87acf6cd5e54b4aa2352a588a277"
+        },
+        {
+          "originalPath": "config.json",
+          "retainedPath": "provenance/reference-design-config.json",
+          "sha256": "37e4e0d7b2b10b8f9946734ec808eab6045a435b5ec35219b5c07a153444675d"
+        },
+        {
+          "originalPath": "generation_config.json",
+          "retainedPath": "provenance/reference-design-generation_config.json",
+          "sha256": "f1b90b4513f3b34c62851049e2492d7b4c5940daf1276f89c82b8ef04127f3aa"
+        }
+      ],
+      "weights": [
+        {
+          "file": "model.safetensors",
+          "bytes": 1625226859,
+          "sha256": "d8627de7ef411f6775182925059e140a9e1edb1fde8feeb540b4fba0edee1e58"
+        },
+        {
+          "file": "speech_tokenizer/model.safetensors",
+          "bytes": 682293092,
+          "sha256": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258"
+        }
+      ]
+    },
+    {
+      "purpose": "fixed-reference-base",
+      "repo": "mlx-community/Qwen3-TTS-12Hz-0.6B-Base-4bit",
+      "revision": "0d6bb6fe33f92d47a507e23b9148940e8366ab5b",
+      "modelCardLicense": "Apache-2.0",
+      "pinnedCardUrl": "https://huggingface.co/mlx-community/Qwen3-TTS-12Hz-0.6B-Base-4bit/blob/0d6bb6fe33f92d47a507e23b9148940e8366ab5b/README.md",
+      "retainedMetadata": [
+        {
+          "originalPath": "README.md",
+          "retainedPath": "provenance/fixed-reference-base-README.md",
+          "sha256": "a07a52fb57724ce19ec9e89be3a8f58b1edd8211c1330e6fd97b253686c25223"
+        },
+        {
+          "originalPath": "config.json",
+          "retainedPath": "provenance/fixed-reference-base-config.json",
+          "sha256": "ba59b8d2d47746e844f6a96e2232a969d8d89dcc34450fbad94d912bb9ee2e27"
+        },
+        {
+          "originalPath": "generation_config.json",
+          "retainedPath": "provenance/fixed-reference-base-generation_config.json",
+          "sha256": "f1b90b4513f3b34c62851049e2492d7b4c5940daf1276f89c82b8ef04127f3aa"
+        }
+      ],
+      "weights": [
+        {
+          "file": "model.safetensors",
+          "bytes": 1024490700,
+          "sha256": "07dcb37b323614af64624af687876edd5c9a8b442da2a7b549d62f9ba2770ec1"
+        },
+        {
+          "file": "speech_tokenizer/model.safetensors",
+          "bytes": 682293092,
+          "sha256": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258"
+        }
+      ]
+    }
+  ],
+  "runtimeSourceHashes": [
+    {
+      "packagePath": "mlx_audio/tts/models/qwen3_tts/qwen3_tts.py",
+      "sha256": "0d9437e4f08680d7bf8cb7bf3b44c8e3de37ad9edf025f50dba37dface2e6902"
+    },
+    {
+      "packagePath": "mlx_audio/utils.py",
+      "sha256": "a9a6e2c29962949ce0e278d4b923394d81529586feec4599616af292ce64de42"
+    }
+  ],
+  "versions": {
+    "mlx-audio": "0.5.7",
+    "mlx": "0.32.2",
+    "numpy": "2.5.3",
+    "soundfile": "0.14.0",
+    "huggingface-hub": "1.33.0"
+  },
+  "pythonVersion": "3.12.13 (main, Mar  3 2026, 12:39:30) [Clang 17.0.0 (clang-1700.6.3.2)]",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "processor": "arm",
+  "ffmpegVersion": "ffmpeg version 8.0 Copyright (c) 2000-2025 the FFmpeg developers",
+  "conditioning": "Fixed synthetic WAV + its exact supplied synthesis text; Base speaker embedding and reference speech codes are reused. The text is not a listening-confirmed transcript.",
+  "generationDefaultsRecordedAfterInspection": {
+    "topK": 50,
+    "temperature": 0.65,
+    "topP": 0.9,
+    "requestedRepetitionPenalty": 1.05,
+    "effectiveBaseICLRepetitionPenalty": 1.5,
+    "maxWordTokens": 60,
+    "maxReferenceTokens": 260
+  },
+  "sourceReferences": [
+    "https://github.com/QwenLM/Qwen3-TTS#voice-design-then-clone",
+    "https://github.com/QwenLM/Qwen3-TTS#voice-clone",
+    "https://huggingface.co/Qwen/Qwen3-TTS-12Hz-0.6B-Base",
+    "https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign",
+    "https://github.com/Blaizzy/mlx-audio/blob/main/mlx_audio/tts/models/qwen3_tts/qwen3_tts.py"
+  ],
+  "rightsNote": "Apache-2.0 is the checkpoint license shown in retained pinned model cards. This is not a claim that generated waveforms are human recordings, CC-licensed, or approved for any third-party voice impersonation. References use original fictional personas only.",
+  "referenceChange": {
+    "retiredProfile": "qwen-fixed-en-a-64147c4e",
+    "retiredDurationSeconds": 12.56,
+    "acceptedTakesBeforeRetirement": 4,
+    "missingTakesBeforeRetirement": 14,
+    "replacementProfile": "qwen-fixed-en-a-5758a766",
+    "replacementDurationSeconds": 6.24,
+    "reason": "Longer reference repeatedly produced immediate EOS for short words. The complete profile was replaced, never mixed, after one bounded shorter-reference experiment. This is an engineering recovery, not a demonstrated phonetic quality improvement.",
+    "retainedEvidence": "private/retired-en-a-long-reference/"
+  },
+  "status": "generated-unreviewed",
+  "phoneticListeningVerified": false,
+  "speakerConsistencyVerified": false,
+  "publicAudioChanged": false
+}

@@ -1,0 +1,32 @@
+{
+  "status": "automated_checks_passed_physical_retest_pending",
+  "date": "2026-10-07",
+  "spend_usd": 0,
+  "counts": {
+    "live_browser": 16,
+    "word_browser": 14,
+    "backend": 9,
+    "http": 8,
+    "background_guard_assertions": 10,
+    "nonspeech_controls": 15
+  },
+  "hashes": {
+    "speaking/index.html": "d196af007226608b7e83370f0fd21807063ad0f194463e285a6def06213f5d96",
+    "speaking/live-worker.js": "7d4ce3ad59c3ca053ebf3cd8cfd017135b9fdf6e452b350954b9ac0b0c983b1d",
+    "speaking/live-baseline.mjs": "f276a82e369bf7dffbbb2744f00b2191656f6b35d9ea5107d07071b6a4dcb473",
+    "speaking/live-quality.mjs": "f42542d7e572fe4ec06bbe0e2166641fdec6c26504815de0db025d966062cef3",
+    "speaking/style.css": "66af0f857ff81734bbca06f63e7d43cea6c5815d72821f2ae6d8632621b35cd0",
+    "speaking/capture.js": "5026a57d811df3526b117ea232f9f20996e80182127d8a68fd0b80832688161c",
+    "speaking/live-analysis.mjs": "5157288104080bd4968720ec0a4838aab78dc7168b08fac612ff966b1218f410",
+    "speaking/live.js": "78fd1d63699e2ee620b3405d6e31da3e9c3efcc7d5cf250e200d454d688b664c",
+    "speaking/app.js": "ebcf383288939e5a96898c58021fd181212818c87d1d722e155f2326cca67739",
+    "speaking_engine.py": "9f63194d10e256ccb1cd60df3aa4a382c5a0bddc1e36c989a4f46e5e68d27bcd",
+    "speaking_server.py": "c98aa3c2511a41a1bfbd6e32120ad44fc6398ba92c727101308cd4874a06466b",
+    "Open Speaking Lab.command": "0c2f940148abd12781c2ea2b32fbf232a35caa36d86f35f038fbe50c72f43b5e"
+  },
+  "limits": [
+    "No actual phone or physical microphone test by agent",
+    "Original user recordings and tab preserved",
+    "Severe noise and filtered-audio accuracy failures remain; see README"
+  ]
+}

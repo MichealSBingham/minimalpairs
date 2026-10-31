@@ -1,3 +1,4 @@
+import {prepareRecoveryCandidate,discountAvailable} from '../recovery-experiment.mjs';
 import { DurableObject } from 'cloudflare:workers';
 import { AsyncLocalStorage } from 'node:async_hooks';
 import { hasLifetimeAccess, subscriptionEntitlement, BILLING_SCHEMA, BillingError, SUPPORTED_EVENTS, createBillingHandler, processQueuedEvent, reconcileBoundCustomer, sameCheckoutParameters } from '../core.mjs';
@@ -79,6 +80,15 @@ export class BillingLedgerBase extends DurableObject {
     try {
       this.enabled();
       const internalPath=new URL(request.url).pathname;
+      // Read-only operator lookup of the original reservation, including failed checkouts.
+      if(internalPath==='/internal/checkout-attribution') {
+        if(!this.env.PURCHASE_FEED_TOKEN || request.headers.get('Authorization')!=='Bearer '+this.env.PURCHASE_FEED_TOKEN)return new Response(null,{status:401});
+        if(request.method!=='GET')return new Response(null,{status:405});
+        const accountUid=new URL(request.url).searchParams.get('uid');
+        if(!uid(accountUid))return new Response(null,{status:400});
+        const pending=this.pendingCheckout(accountUid);
+        return Response.json({found:!!pending,createdAt:pending?.createdAt,sessionId:pending?.sessionId||null,metadata:pending?.parameters?.metadata||{}},{headers:{'Cache-Control':'no-store'}});
+      }
       if(['/internal/recovery-offers','/internal/recovery-eligible'].includes(internalPath)) {
         if(!this.env.PURCHASE_FEED_TOKEN || request.headers.get('Authorization') !== 'Bearer '+this.env.PURCHASE_FEED_TOKEN)return new Response(null,{status:401});
         if(request.method !== 'GET')return new Response(null,{status:405});
@@ -88,7 +98,7 @@ export class BillingLedgerBase extends DurableObject {
           if(internalPath === '/internal/recovery-eligible'){
             const accountUid=new URL(request.url).searchParams.get('uid');
             if(!uid(accountUid))return new Response(null,{status:400});
-            const offer=this.recoveryOffer(accountUid),customerId=await this.customerForUid(accountUid),pending=await this.pendingCheckout(accountUid);
+            const offer=this.recoveryCandidate(accountUid),customerId=await this.customerForUid(accountUid),pending=await this.pendingCheckout(accountUid);
             if(!offer || offer.expiresAt < now+3600 || !customerId || !pending?.sessionId)return Response.json({eligible:false});
             const row=this.sql.exec('SELECT reservation_json FROM customers WHERE uid=?',accountUid).toArray()[0];
             if(hasLifetimeAccess(await this.ports.legacyEntitlement(JSON.parse(row.reservation_json).email)))return Response.json({eligible:false});
@@ -103,7 +113,7 @@ export class BillingLedgerBase extends DurableObject {
           for(const row of this.sql.exec('SELECT r.uid,r.data_json,c.reservation_json FROM recovery_offers r JOIN customers c ON c.uid=r.uid LIMIT 5000').toArray()){
             const offer=JSON.parse(row.data_json),reservation=JSON.parse(row.reservation_json);
             if(offer.createdAt > now-3600 || offer.expiresAt < now+3600 || !reservation.email)continue;
-            data.push({uid:row.uid,email:reservation.email,expiresAt:offer.expiresAt,sourceSessionId:offer.sourceSessionId});
+            data.push({uid:row.uid,email:reservation.email,expiresAt:offer.expiresAt,sourceSessionId:offer.sourceSessionId,experiment:offer.experiment,arm:offer.arm,assignedAt:offer.assignedAt});
           }
           return Response.json({data},{headers:{'Cache-Control':'no-store'}});
         });
@@ -174,6 +184,9 @@ export class BillingLedgerBase extends DurableObject {
     });
   }
   recoveryOffer(accountUid) {
+    const offer=this.recoveryCandidate(accountUid);return discountAvailable(offer)?offer:null;
+  }
+  recoveryCandidate(accountUid) {
     if (!uid(accountUid)) fail('account_binding_invalid');
     const row=this.sql.exec('SELECT data_json FROM recovery_offers WHERE uid = ?',accountUid).toArray()[0];
     return row ? JSON.parse(row.data_json) : null;
@@ -181,7 +194,7 @@ export class BillingLedgerBase extends DurableObject {
   reserveRecoveryOffer(accountUid,offer) {
     this.enabled();
     if (!uid(accountUid) || !integer(offer.createdAt) || offer.expiresAt !== offer.createdAt+172800 || !/^cs_(?:test_|live_)?[A-Za-z0-9]+$/.test(offer.sourceSessionId)) fail('checkout_reservation_invalid');
-    this.sql.exec('INSERT INTO recovery_offers(uid,data_json) VALUES(?,?) ON CONFLICT(uid) DO NOTHING',accountUid,JSON.stringify(offer));
+    this.sql.exec('INSERT INTO recovery_offers(uid,data_json) VALUES(?,?) ON CONFLICT(uid) DO NOTHING',accountUid,JSON.stringify(prepareRecoveryCandidate(offer,this.env)));
     return this.recoveryOffer(accountUid);
   }
   pendingCheckout(accountUid) {

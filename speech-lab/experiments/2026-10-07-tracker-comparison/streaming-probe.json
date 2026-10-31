@@ -1,0 +1,290 @@
+[
+  {
+    "id": "m48ih",
+    "requested_future_ms": 0.0,
+    "available_future_ms": 0,
+    "cpu_ms": 203.7478749989532,
+    "full_pair_hz": [
+      389.1050720214844,
+      1852.1400146484375
+    ],
+    "prefix_pair_hz": [
+      980.5447387695312,
+      3564.202392578125
+    ],
+    "absolute_change_hz": [
+      591.4396667480469,
+      1712.0623779296875
+    ]
+  },
+  {
+    "id": "m48ih",
+    "requested_future_ms": 100.0,
+    "available_future_ms": 99.99999999999997,
+    "cpu_ms": 230.02633299620356,
+    "full_pair_hz": [
+      389.1050720214844,
+      1852.1400146484375
+    ],
+    "prefix_pair_hz": [
+      389.1050720214844,
+      1852.1400146484375
+    ],
+    "absolute_change_hz": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "m48ih",
+    "requested_future_ms": 250.0,
+    "available_future_ms": 202.3125,
+    "cpu_ms": 295.39920900424477,
+    "full_pair_hz": [
+      389.1050720214844,
+      1852.1400146484375
+    ],
+    "prefix_pair_hz": [
+      389.1050720214844,
+      1852.1400146484375
+    ],
+    "absolute_change_hz": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "m48ih",
+    "requested_future_ms": 450.0,
+    "available_future_ms": 202.3125,
+    "cpu_ms": 277.72708400152624,
+    "full_pair_hz": [
+      389.1050720214844,
+      1852.1400146484375
+    ],
+    "prefix_pair_hz": [
+      389.1050720214844,
+      1852.1400146484375
+    ],
+    "absolute_change_hz": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "w12ih",
+    "requested_future_ms": 0.0,
+    "available_future_ms": 0,
+    "cpu_ms": 244.9118329968769,
+    "full_pair_hz": [
+      451.36187744140625,
+      2412.451416015625
+    ],
+    "prefix_pair_hz": [
+      1634.2412109375,
+      4591.439453125
+    ],
+    "absolute_change_hz": [
+      1182.8793334960938,
+      2178.988037109375
+    ]
+  },
+  {
+    "id": "w12ih",
+    "requested_future_ms": 100.0,
+    "available_future_ms": 99.93750000000001,
+    "cpu_ms": 272.84583399887197,
+    "full_pair_hz": [
+      451.36187744140625,
+      2412.451416015625
+    ],
+    "prefix_pair_hz": [
+      451.36187744140625,
+      2412.451416015625
+    ],
+    "absolute_change_hz": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "w12ih",
+    "requested_future_ms": 250.0,
+    "available_future_ms": 250.0,
+    "cpu_ms": 333.03762499417644,
+    "full_pair_hz": [
+      451.36187744140625,
+      2412.451416015625
+    ],
+    "prefix_pair_hz": [
+      451.36187744140625,
+      2412.451416015625
+    ],
+    "absolute_change_hz": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "w12ih",
+    "requested_future_ms": 450.0,
+    "available_future_ms": 298.18750000000006,
+    "cpu_ms": 324.10304200311657,
+    "full_pair_hz": [
+      451.36187744140625,
+      2412.451416015625
+    ],
+    "prefix_pair_hz": [
+      451.36187744140625,
+      2412.451416015625
+    ],
+    "absolute_change_hz": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "b29ih",
+    "requested_future_ms": 0.0,
+    "available_future_ms": 0,
+    "cpu_ms": 253.16616699274164,
+    "full_pair_hz": [
+      451.36187744140625,
+      2359.53310546875
+    ],
+    "prefix_pair_hz": [
+      6428.015625,
+      3284.046630859375
+    ],
+    "absolute_change_hz": [
+      5976.653747558594,
+      924.5135253906251
+    ]
+  },
+  {
+    "id": "b29ih",
+    "requested_future_ms": 100.0,
+    "available_future_ms": 99.99999999999997,
+    "cpu_ms": 275.69041699462105,
+    "full_pair_hz": [
+      451.36187744140625,
+      2359.53310546875
+    ],
+    "prefix_pair_hz": [
+      821.7898803710938,
+      4059.1438720703127
+    ],
+    "absolute_change_hz": [
+      370.4280029296875,
+      1699.6107666015628
+    ]
+  },
+  {
+    "id": "b29ih",
+    "requested_future_ms": 250.0,
+    "available_future_ms": 250.0,
+    "cpu_ms": 311.1756250000326,
+    "full_pair_hz": [
+      451.36187744140625,
+      2359.53310546875
+    ],
+    "prefix_pair_hz": [
+      451.36187744140625,
+      2359.53310546875
+    ],
+    "absolute_change_hz": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "b29ih",
+    "requested_future_ms": 450.0,
+    "available_future_ms": 387.375,
+    "cpu_ms": 337.3961670004064,
+    "full_pair_hz": [
+      451.36187744140625,
+      2359.53310546875
+    ],
+    "prefix_pair_hz": [
+      451.36187744140625,
+      2359.53310546875
+    ],
+    "absolute_change_hz": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "g06ih",
+    "requested_future_ms": 0.0,
+    "available_future_ms": 0,
+    "cpu_ms": 249.75149999954738,
+    "full_pair_hz": [
+      513.61865234375,
+      2692.60693359375
+    ],
+    "prefix_pair_hz": [
+      1136.186767578125,
+      3408.560302734375
+    ],
+    "absolute_change_hz": [
+      622.568115234375,
+      715.953369140625
+    ]
+  },
+  {
+    "id": "g06ih",
+    "requested_future_ms": 100.0,
+    "available_future_ms": 99.93750000000001,
+    "cpu_ms": 265.8755000011297,
+    "full_pair_hz": [
+      513.61865234375,
+      2692.60693359375
+    ],
+    "prefix_pair_hz": [
+      513.61865234375,
+      2692.60693359375
+    ],
+    "absolute_change_hz": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "g06ih",
+    "requested_future_ms": 250.0,
+    "available_future_ms": 250.0,
+    "cpu_ms": 292.7875830064295,
+    "full_pair_hz": [
+      513.61865234375,
+      2692.60693359375
+    ],
+    "prefix_pair_hz": [
+      513.61865234375,
+      2692.60693359375
+    ],
+    "absolute_change_hz": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "id": "g06ih",
+    "requested_future_ms": 450.0,
+    "available_future_ms": 268.87500000000006,
+    "cpu_ms": 312.45191699417774,
+    "full_pair_hz": [
+      513.61865234375,
+      2692.60693359375
+    ],
+    "prefix_pair_hz": [
+      513.61865234375,
+      2692.60693359375
+    ],
+    "absolute_change_hz": [
+      0.0,
+      0.0
+    ]
+  }
+]

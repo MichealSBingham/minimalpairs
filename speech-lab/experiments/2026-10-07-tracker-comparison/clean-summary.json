@@ -1,0 +1,1069 @@
+{
+  "all": {
+    "burg5500": {
+      "n": 4978,
+      "accepted": 4978,
+      "speakers": 139,
+      "coverage": 1.0,
+      "f1_mae_hz": 16.87424262982482,
+      "f2_mae_hz": 81.30190334895366,
+      "f1_median_hz": 9.977790853538323,
+      "f2_median_hz": 24.892570017466596,
+      "f1_p95_hz": 51.83841996327401,
+      "f2_p95_hz": 302.35843155617454,
+      "large_errors": 263,
+      "large_error_rate": 0.052832462836480514,
+      "good_measurement_yield": 0.9471675371635195,
+      "f2_mae_speaker_bootstrap95_hz": [
+        65.26168901745464,
+        97.79454428082688
+      ]
+    },
+    "burg_two_ceiling": {
+      "n": 4978,
+      "accepted": 3867,
+      "speakers": 139,
+      "coverage": 0.7768179991964644,
+      "f1_mae_hz": 13.970835725832293,
+      "f2_mae_hz": 57.480950211467906,
+      "f1_median_hz": 9.041093192812696,
+      "f2_median_hz": 22.747287796529235,
+      "f1_p95_hz": 41.2663317503656,
+      "f2_p95_hz": 146.86298971202723,
+      "large_errors": 105,
+      "large_error_rate": 0.027152831652443754,
+      "good_measurement_yield": 0.7557251908396947,
+      "f2_mae_speaker_bootstrap95_hz": [
+        46.11275947764333,
+        69.13436415960199
+      ]
+    },
+    "heatmap": {
+      "n": 4978,
+      "accepted": 4978,
+      "speakers": 139,
+      "coverage": 1.0,
+      "f1_mae_hz": 47.12447810625542,
+      "f2_mae_hz": 184.6382474019965,
+      "f1_median_hz": 30.21011901855468,
+      "f2_median_hz": 52.7296142578125,
+      "f1_p95_hz": 115.80406814575186,
+      "f2_p95_hz": 1103.282531738281,
+      "large_errors": 695,
+      "large_error_rate": 0.13961430293290478,
+      "good_measurement_yield": 0.8603856970670952,
+      "f2_mae_speaker_bootstrap95_hz": [
+        155.10847128438266,
+        214.28829354586804
+      ]
+    },
+    "cross_method_fixed": {
+      "n": 4978,
+      "accepted": 4104,
+      "speakers": 139,
+      "coverage": 0.8244274809160306,
+      "f1_mae_hz": 18.218225252553506,
+      "f2_mae_hz": 46.64199264496444,
+      "f1_median_hz": 13.871184325642218,
+      "f2_median_hz": 30.41927666560582,
+      "f1_p95_hz": 45.16856920239345,
+      "f2_p95_hz": 115.54967712890742,
+      "large_errors": 38,
+      "large_error_rate": 0.009259259259259259,
+      "good_measurement_yield": 0.816793893129771,
+      "f2_mae_speaker_bootstrap95_hz": [
+        42.8721118161777,
+        51.08730412247853
+      ]
+    },
+    "cross_method_multiceiling": {
+      "n": 4978,
+      "accepted": 4492,
+      "speakers": 139,
+      "coverage": 0.9023704298915227,
+      "f1_mae_hz": 22.57736697494563,
+      "f2_mae_hz": 86.63457929185171,
+      "f1_median_hz": 16.40126747162222,
+      "f2_median_hz": 36.08737930949712,
+      "f1_p95_hz": 57.13396769959866,
+      "f2_p95_hz": 227.81329112177676,
+      "large_errors": 206,
+      "large_error_rate": 0.0458593054318789,
+      "good_measurement_yield": 0.8609883487344315,
+      "f2_mae_speaker_bootstrap95_hz": [
+        74.51239076707783,
+        101.938114835256
+      ]
+    }
+  },
+  "adults": {
+    "burg5500": {
+      "n": 3341,
+      "accepted": 3341,
+      "speakers": 93,
+      "coverage": 1.0,
+      "f1_mae_hz": 15.003188792777962,
+      "f2_mae_hz": 54.68756002953897,
+      "f1_median_hz": 9.840206989427259,
+      "f2_median_hz": 23.542483227992534,
+      "f1_p95_hz": 44.43945021635585,
+      "f2_p95_hz": 155.03304406654001,
+      "large_errors": 90,
+      "large_error_rate": 0.02693804250224484,
+      "good_measurement_yield": 0.9730619574977551,
+      "f2_mae_speaker_bootstrap95_hz": [
+        44.95671403621499,
+        66.32441592717777
+      ]
+    },
+    "burg_two_ceiling": {
+      "n": 3341,
+      "accepted": 2852,
+      "speakers": 93,
+      "coverage": 0.853636635737803,
+      "f1_mae_hz": 12.747932182860996,
+      "f2_mae_hz": 40.57982666819997,
+      "f1_median_hz": 8.937657943594019,
+      "f2_median_hz": 21.046721781839324,
+      "f1_p95_hz": 36.456522013413874,
+      "f2_p95_hz": 115.80015779858918,
+      "large_errors": 31,
+      "large_error_rate": 0.010869565217391304,
+      "good_measurement_yield": 0.8443579766536965,
+      "f2_mae_speaker_bootstrap95_hz": [
+        34.76630744551164,
+        47.266422748178805
+      ]
+    },
+    "heatmap": {
+      "n": 3341,
+      "accepted": 3341,
+      "speakers": 93,
+      "coverage": 1.0,
+      "f1_mae_hz": 37.70541908819067,
+      "f2_mae_hz": 107.95315364600384,
+      "f1_median_hz": 27.027243652343714,
+      "f2_median_hz": 45.7587890625,
+      "f1_p95_hz": 87.21401367187502,
+      "f2_p95_hz": 365.49797851562516,
+      "large_errors": 224,
+      "large_error_rate": 0.06704579467225381,
+      "good_measurement_yield": 0.9329542053277462,
+      "f2_mae_speaker_bootstrap95_hz": [
+        91.36305037377231,
+        125.93612759738873
+      ]
+    },
+    "cross_method_fixed": {
+      "n": 3341,
+      "accepted": 2997,
+      "speakers": 93,
+      "coverage": 0.8970368153247531,
+      "f1_mae_hz": 17.154438070546497,
+      "f2_mae_hz": 41.584708345258534,
+      "f1_median_hz": 13.313139474814761,
+      "f2_median_hz": 28.589429860220662,
+      "f1_p95_hz": 43.144605926771725,
+      "f2_p95_hz": 107.09384967058992,
+      "large_errors": 14,
+      "large_error_rate": 0.004671338004671338,
+      "good_measurement_yield": 0.8928464531577373,
+      "f2_mae_speaker_bootstrap95_hz": [
+        38.595849917387255,
+        44.59044536139525
+      ]
+    },
+    "cross_method_multiceiling": {
+      "n": 3341,
+      "accepted": 3187,
+      "speakers": 93,
+      "coverage": 0.9539060161628256,
+      "f1_mae_hz": 20.216419011314425,
+      "f2_mae_hz": 61.01140370100453,
+      "f1_median_hz": 15.63295821982922,
+      "f2_median_hz": 33.431563121680256,
+      "f1_p95_hz": 51.359441857062784,
+      "f2_p95_hz": 143.57343887984638,
+      "large_errors": 69,
+      "large_error_rate": 0.02165045497332915,
+      "good_measurement_yield": 0.9332535169111045,
+      "f2_mae_speaker_bootstrap95_hz": [
+        53.64062804884346,
+        68.7836109751951
+      ]
+    }
+  },
+  "ih_iy": {
+    "burg5500": {
+      "n": 834,
+      "accepted": 834,
+      "speakers": 139,
+      "coverage": 1.0,
+      "f1_mae_hz": 11.82964923492897,
+      "f2_mae_hz": 99.82712969620704,
+      "f1_median_hz": 8.661614918905116,
+      "f2_median_hz": 20.453768419648668,
+      "f1_p95_hz": 32.45360943308805,
+      "f2_p95_hz": 585.9265522886567,
+      "large_errors": 60,
+      "large_error_rate": 0.07194244604316546,
+      "good_measurement_yield": 0.9280575539568345,
+      "f2_mae_speaker_bootstrap95_hz": [
+        64.40244283252753,
+        134.0180148650106
+      ]
+    },
+    "burg_two_ceiling": {
+      "n": 834,
+      "accepted": 574,
+      "speakers": 139,
+      "coverage": 0.6882494004796164,
+      "f1_mae_hz": 12.072404195360605,
+      "f2_mae_hz": 76.73848370630236,
+      "f1_median_hz": 8.793073943662904,
+      "f2_median_hz": 20.116054667223352,
+      "f1_p95_hz": 33.03465959793704,
+      "f2_p95_hz": 216.40196544200296,
+      "large_errors": 25,
+      "large_error_rate": 0.04355400696864112,
+      "good_measurement_yield": 0.658273381294964,
+      "f2_mae_speaker_bootstrap95_hz": [
+        49.97060848915458,
+        106.86583251154694
+      ]
+    },
+    "heatmap": {
+      "n": 834,
+      "accepted": 834,
+      "speakers": 139,
+      "coverage": 1.0,
+      "f1_mae_hz": 37.922850667464076,
+      "f2_mae_hz": 369.43544252054414,
+      "f1_median_hz": 30.797653198242188,
+      "f2_median_hz": 63.887246093750036,
+      "f1_p95_hz": 85.72800445556638,
+      "f2_p95_hz": 1579.4490173339843,
+      "large_errors": 254,
+      "large_error_rate": 0.30455635491606714,
+      "good_measurement_yield": 0.6954436450839329,
+      "f2_mae_speaker_bootstrap95_hz": [
+        300.7442541159467,
+        438.7309086716832
+      ]
+    },
+    "cross_method_fixed": {
+      "n": 834,
+      "accepted": 570,
+      "speakers": 139,
+      "coverage": 0.6834532374100719,
+      "f1_mae_hz": 15.712227549143972,
+      "f2_mae_hz": 48.7419922013863,
+      "f1_median_hz": 13.568244910561788,
+      "f2_median_hz": 25.29606182936027,
+      "f1_p95_hz": 36.70160048286427,
+      "f2_p95_hz": 107.58802873848234,
+      "large_errors": 10,
+      "large_error_rate": 0.017543859649122806,
+      "good_measurement_yield": 0.6714628297362111,
+      "f2_mae_speaker_bootstrap95_hz": [
+        38.89958257412332,
+        60.83607261517391
+      ]
+    },
+    "cross_method_multiceiling": {
+      "n": 834,
+      "accepted": 641,
+      "speakers": 139,
+      "coverage": 0.7685851318944844,
+      "f1_mae_hz": 16.781606500936476,
+      "f2_mae_hz": 128.22965286825155,
+      "f1_median_hz": 15.146205108498293,
+      "f2_median_hz": 37.418890845552596,
+      "f1_p95_hz": 38.42193280558621,
+      "f2_p95_hz": 834.329450762817,
+      "large_errors": 59,
+      "large_error_rate": 0.09204368174726989,
+      "good_measurement_yield": 0.697841726618705,
+      "f2_mae_speaker_bootstrap95_hz": [
+        99.90498090160425,
+        162.04474005845117
+      ]
+    }
+  },
+  "adult_ih_iy": {
+    "burg5500": {
+      "n": 558,
+      "accepted": 558,
+      "speakers": 93,
+      "coverage": 1.0,
+      "f1_mae_hz": 11.006455676905896,
+      "f2_mae_hz": 56.2309256924526,
+      "f1_median_hz": 8.31914587568562,
+      "f2_median_hz": 18.60615753979232,
+      "f1_p95_hz": 28.973287691467245,
+      "f2_p95_hz": 142.92363671780038,
+      "large_errors": 18,
+      "large_error_rate": 0.03225806451612903,
+      "good_measurement_yield": 0.967741935483871,
+      "f2_mae_speaker_bootstrap95_hz": [
+        34.118398772034986,
+        83.69719906486098
+      ]
+    },
+    "burg_two_ceiling": {
+      "n": 558,
+      "accepted": 419,
+      "speakers": 93,
+      "coverage": 0.7508960573476703,
+      "f1_mae_hz": 10.882940271369616,
+      "f2_mae_hz": 36.90445169145173,
+      "f1_median_hz": 8.41739951493031,
+      "f2_median_hz": 18.170694029236074,
+      "f1_p95_hz": 28.461147789787372,
+      "f2_p95_hz": 104.16305978055452,
+      "large_errors": 3,
+      "large_error_rate": 0.007159904534606206,
+      "good_measurement_yield": 0.7455197132616488,
+      "f2_mae_speaker_bootstrap95_hz": [
+        27.885490089949855,
+        48.17668320534826
+      ]
+    },
+    "heatmap": {
+      "n": 558,
+      "accepted": 558,
+      "speakers": 93,
+      "coverage": 1.0,
+      "f1_mae_hz": 33.643235847719254,
+      "f2_mae_hz": 208.96694008710307,
+      "f1_median_hz": 27.256805419921875,
+      "f2_median_hz": 47.252890624999964,
+      "f1_p95_hz": 71.36302658081046,
+      "f2_p95_hz": 1117.8062805175778,
+      "large_errors": 85,
+      "large_error_rate": 0.15232974910394265,
+      "good_measurement_yield": 0.8476702508960573,
+      "f2_mae_speaker_bootstrap95_hz": [
+        155.16724781999483,
+        265.1446124706856
+      ]
+    },
+    "cross_method_fixed": {
+      "n": 558,
+      "accepted": 464,
+      "speakers": 93,
+      "coverage": 0.8315412186379928,
+      "f1_mae_hz": 15.279887142966807,
+      "f2_mae_hz": 39.46339737114265,
+      "f1_median_hz": 13.424338254537531,
+      "f2_median_hz": 24.70795356207941,
+      "f1_p95_hz": 35.57863891360284,
+      "f2_p95_hz": 101.37461273987536,
+      "large_errors": 4,
+      "large_error_rate": 0.008620689655172414,
+      "good_measurement_yield": 0.8243727598566308,
+      "f2_mae_speaker_bootstrap95_hz": [
+        32.50655061059204,
+        48.27876537031652
+      ]
+    },
+    "cross_method_multiceiling": {
+      "n": 558,
+      "accepted": 491,
+      "speakers": 93,
+      "coverage": 0.8799283154121864,
+      "f1_mae_hz": 15.998601180830544,
+      "f2_mae_hz": 73.32572658052293,
+      "f1_median_hz": 14.396748044663411,
+      "f2_median_hz": 33.204278965697085,
+      "f1_p95_hz": 36.12584010315436,
+      "f2_p95_hz": 199.5989053366343,
+      "large_errors": 18,
+      "large_error_rate": 0.03665987780040733,
+      "good_measurement_yield": 0.8476702508960573,
+      "f2_mae_speaker_bootstrap95_hz": [
+        57.481193797076514,
+        92.69146229712602
+      ]
+    }
+  },
+  "m": {
+    "burg5500": {
+      "n": 1619,
+      "accepted": 1619,
+      "speakers": 45,
+      "coverage": 1.0,
+      "f1_mae_hz": 14.914130062962206,
+      "f2_mae_hz": 41.186386535229964,
+      "f1_median_hz": 10.083704332308912,
+      "f2_median_hz": 23.528629407765948,
+      "f1_p95_hz": 42.959452508991085,
+      "f2_p95_hz": 127.17497043845677,
+      "large_errors": 18,
+      "large_error_rate": 0.011117974058060531,
+      "good_measurement_yield": 0.9888820259419395,
+      "f2_mae_speaker_bootstrap95_hz": [
+        34.97790677173893,
+        48.565030376202905
+      ]
+    },
+    "burg_two_ceiling": {
+      "n": 1619,
+      "accepted": 1576,
+      "speakers": 45,
+      "coverage": 0.9734403953057443,
+      "f1_mae_hz": 11.517061747801568,
+      "f2_mae_hz": 30.239972803270284,
+      "f1_median_hz": 8.669872717970378,
+      "f2_median_hz": 19.95609575034115,
+      "f1_p95_hz": 30.975316489347477,
+      "f2_p95_hz": 86.87974455166693,
+      "large_errors": 3,
+      "large_error_rate": 0.0019035532994923859,
+      "good_measurement_yield": 0.9715873996294009,
+      "f2_mae_speaker_bootstrap95_hz": [
+        27.419552519298573,
+        33.25318083917536
+      ]
+    },
+    "heatmap": {
+      "n": 1619,
+      "accepted": 1619,
+      "speakers": 45,
+      "coverage": 1.0,
+      "f1_mae_hz": 33.2198789650986,
+      "f2_mae_hz": 57.052511620882626,
+      "f1_median_hz": 26.51751708984375,
+      "f2_median_hz": 40.23734863281243,
+      "f1_p95_hz": 77.71282836914058,
+      "f2_p95_hz": 147.97077978515634,
+      "large_errors": 29,
+      "large_error_rate": 0.017912291537986413,
+      "good_measurement_yield": 0.9820877084620135,
+      "f2_mae_speaker_bootstrap95_hz": [
+        50.38337902148542,
+        64.92646054429201
+      ]
+    },
+    "cross_method_fixed": {
+      "n": 1619,
+      "accepted": 1530,
+      "speakers": 45,
+      "coverage": 0.9450277949351451,
+      "f1_mae_hz": 15.224838319655545,
+      "f2_mae_hz": 35.77291926774485,
+      "f1_median_hz": 12.178651758452872,
+      "f2_median_hz": 26.633828986293906,
+      "f1_p95_hz": 36.11831187879058,
+      "f2_p95_hz": 97.1530521923238,
+      "large_errors": 1,
+      "large_error_rate": 0.00065359477124183,
+      "good_measurement_yield": 0.9444101297096974,
+      "f2_mae_speaker_bootstrap95_hz": [
+        33.5535432314305,
+        38.23209775473771
+      ]
+    },
+    "cross_method_multiceiling": {
+      "n": 1619,
+      "accepted": 1601,
+      "speakers": 45,
+      "coverage": 0.9888820259419395,
+      "f1_mae_hz": 17.730026594891605,
+      "f2_mae_hz": 42.26914174166508,
+      "f1_median_hz": 14.435754147978287,
+      "f2_median_hz": 29.728205898793476,
+      "f1_p95_hz": 43.244423901292976,
+      "f2_p95_hz": 118.94536230286735,
+      "large_errors": 4,
+      "large_error_rate": 0.0024984384759525295,
+      "good_measurement_yield": 0.9864113650401483,
+      "f2_mae_speaker_bootstrap95_hz": [
+        38.379686772425444,
+        46.29615063782636
+      ]
+    }
+  },
+  "w": {
+    "burg5500": {
+      "n": 1722,
+      "accepted": 1722,
+      "speakers": 48,
+      "coverage": 1.0,
+      "f1_mae_hz": 15.086920548626805,
+      "f2_mae_hz": 67.38117204306178,
+      "f1_median_hz": 9.65299746673952,
+      "f2_median_hz": 23.610801714916988,
+      "f1_p95_hz": 44.996883537550254,
+      "f2_p95_hz": 231.36162431068536,
+      "large_errors": 72,
+      "large_error_rate": 0.041811846689895474,
+      "good_measurement_yield": 0.9581881533101045,
+      "f2_mae_speaker_bootstrap95_hz": [
+        49.84260685069514,
+        93.46069511019641
+      ]
+    },
+    "burg_two_ceiling": {
+      "n": 1722,
+      "accepted": 1276,
+      "speakers": 48,
+      "coverage": 0.7409988385598142,
+      "f1_mae_hz": 14.268192218639724,
+      "f2_mae_hz": 53.35068065811311,
+      "f1_median_hz": 9.273153640866838,
+      "f2_median_hz": 22.55893686188483,
+      "f1_p95_hz": 44.08971590545397,
+      "f2_p95_hz": 141.91794519446648,
+      "large_errors": 28,
+      "large_error_rate": 0.0219435736677116,
+      "good_measurement_yield": 0.7247386759581882,
+      "f2_mae_speaker_bootstrap95_hz": [
+        42.01543783129039,
+        72.228870879845
+      ]
+    },
+    "heatmap": {
+      "n": 1722,
+      "accepted": 1722,
+      "speakers": 48,
+      "coverage": 1.0,
+      "f1_mae_hz": 41.922660353745876,
+      "f2_mae_hz": 155.809216037799,
+      "f1_median_hz": 27.61090087890625,
+      "f2_median_hz": 54.095341796875005,
+      "f1_p95_hz": 99.96517486572264,
+      "f2_p95_hz": 965.8099853515623,
+      "large_errors": 195,
+      "large_error_rate": 0.1132404181184669,
+      "good_measurement_yield": 0.8867595818815331,
+      "f2_mae_speaker_bootstrap95_hz": [
+        129.76590967692576,
+        187.88841310115768
+      ]
+    },
+    "cross_method_fixed": {
+      "n": 1722,
+      "accepted": 1467,
+      "speakers": 48,
+      "coverage": 0.8519163763066202,
+      "f1_mae_hz": 19.166904068408225,
+      "f2_mae_hz": 47.646083456775884,
+      "f1_median_hz": 14.872523709163715,
+      "f2_median_hz": 31.45543290627188,
+      "f1_p95_hz": 48.514755819999856,
+      "f2_p95_hz": 117.53161071107722,
+      "large_errors": 13,
+      "large_error_rate": 0.008861622358554875,
+      "good_measurement_yield": 0.8443670150987224,
+      "f2_mae_speaker_bootstrap95_hz": [
+        42.80644923962452,
+        55.25369508592027
+      ]
+    },
+    "cross_method_multiceiling": {
+      "n": 1722,
+      "accepted": 1586,
+      "speakers": 48,
+      "coverage": 0.9210220673635308,
+      "f1_mae_hz": 22.726327118939228,
+      "f2_mae_hz": 79.9309253888371,
+      "f1_median_hz": 17.094458294843662,
+      "f2_median_hz": 38.29243328807593,
+      "f1_p95_hz": 58.46430488118969,
+      "f2_p95_hz": 196.05131199584207,
+      "large_errors": 65,
+      "large_error_rate": 0.040983606557377046,
+      "good_measurement_yield": 0.8832752613240418,
+      "f2_mae_speaker_bootstrap95_hz": [
+        67.26374305216308,
+        95.27060182434884
+      ]
+    }
+  },
+  "b": {
+    "burg5500": {
+      "n": 955,
+      "accepted": 955,
+      "speakers": 27,
+      "coverage": 1.0,
+      "f1_mae_hz": 18.660306982767885,
+      "f2_mae_hz": 100.28550684926087,
+      "f1_median_hz": 9.811145564446974,
+      "f2_median_hz": 26.048035881448868,
+      "f1_p95_hz": 61.7104044711691,
+      "f2_p95_hz": 547.3858595016752,
+      "large_errors": 73,
+      "large_error_rate": 0.07643979057591622,
+      "good_measurement_yield": 0.9235602094240838,
+      "f2_mae_speaker_bootstrap95_hz": [
+        62.34378192361917,
+        156.61855045843038
+      ]
+    },
+    "burg_two_ceiling": {
+      "n": 955,
+      "accepted": 660,
+      "speakers": 27,
+      "coverage": 0.6910994764397905,
+      "f1_mae_hz": 17.296009113787846,
+      "f2_mae_hz": 74.01043228939471,
+      "f1_median_hz": 9.143069173523145,
+      "f2_median_hz": 26.640173857329955,
+      "f1_p95_hz": 61.73848803366423,
+      "f2_p95_hz": 223.90189099938823,
+      "large_errors": 33,
+      "large_error_rate": 0.05,
+      "good_measurement_yield": 0.6565445026178011,
+      "f2_mae_speaker_bootstrap95_hz": [
+        50.211427303017864,
+        111.7668565808371
+      ]
+    },
+    "heatmap": {
+      "n": 955,
+      "accepted": 955,
+      "speakers": 27,
+      "coverage": 1.0,
+      "f1_mae_hz": 49.04210616793807,
+      "f2_mae_hz": 269.90624114319166,
+      "f1_median_hz": 33.86767578125,
+      "f2_median_hz": 68.84434570312487,
+      "f1_p95_hz": 135.52570800781245,
+      "f2_p95_hz": 1332.043206787109,
+      "large_errors": 220,
+      "large_error_rate": 0.23036649214659685,
+      "good_measurement_yield": 0.7696335078534031,
+      "f2_mae_speaker_bootstrap95_hz": [
+        212.585643273814,
+        327.20290352106997
+      ]
+    },
+    "cross_method_fixed": {
+      "n": 955,
+      "accepted": 707,
+      "speakers": 27,
+      "coverage": 0.7403141361256544,
+      "f1_mae_hz": 20.569894995139546,
+      "f2_mae_hz": 51.74999001849951,
+      "f1_median_hz": 14.9130588869632,
+      "f2_median_hz": 34.8245066942568,
+      "f1_p95_hz": 53.995038814372464,
+      "f2_p95_hz": 128.10346284292115,
+      "large_errors": 10,
+      "large_error_rate": 0.014144271570014143,
+      "good_measurement_yield": 0.7298429319371728,
+      "f2_mae_speaker_bootstrap95_hz": [
+        44.93529842929867,
+        62.00811069691468
+      ]
+    },
+    "cross_method_multiceiling": {
+      "n": 955,
+      "accepted": 804,
+      "speakers": 27,
+      "coverage": 0.8418848167539267,
+      "f1_mae_hz": 25.864639305608865,
+      "f2_mae_hz": 116.9801942848307,
+      "f1_median_hz": 18.199178930249644,
+      "f2_median_hz": 41.11700703874544,
+      "f1_p95_hz": 72.61006689960453,
+      "f2_p95_hz": 765.563212892585,
+      "large_errors": 62,
+      "large_error_rate": 0.07711442786069651,
+      "good_measurement_yield": 0.7769633507853403,
+      "f2_mae_speaker_bootstrap95_hz": [
+        87.91120252868068,
+        149.604133027524
+      ]
+    }
+  },
+  "g": {
+    "burg5500": {
+      "n": 682,
+      "accepted": 682,
+      "speakers": 19,
+      "coverage": 1.0,
+      "f1_mae_hz": 23.539197780137037,
+      "f2_mae_hz": 185.0983545034568,
+      "f1_median_hz": 11.446862296359484,
+      "f2_median_hz": 36.310519138637346,
+      "f1_p95_hz": 81.01740883901292,
+      "f2_p95_hz": 1221.3833397827602,
+      "large_errors": 100,
+      "large_error_rate": 0.1466275659824047,
+      "good_measurement_yield": 0.8533724340175953,
+      "f2_mae_speaker_bootstrap95_hz": [
+        128.84042680997504,
+        252.01013520474842
+      ]
+    },
+    "burg_two_ceiling": {
+      "n": 682,
+      "accepted": 355,
+      "speakers": 19,
+      "coverage": 0.5205278592375366,
+      "f1_mae_hz": 17.61338915823645,
+      "f2_mae_hz": 162.53037605363258,
+      "f1_median_hz": 10.22320823158418,
+      "f2_median_hz": 32.84265056896902,
+      "f1_p95_hz": 59.035099634356385,
+      "f2_p95_hz": 1262.5537204054892,
+      "large_errors": 41,
+      "large_error_rate": 0.11549295774647887,
+      "good_measurement_yield": 0.4604105571847507,
+      "f2_mae_speaker_bootstrap95_hz": [
+        99.7126335109462,
+        255.05669747430073
+      ]
+    },
+    "heatmap": {
+      "n": 682,
+      "accepted": 682,
+      "speakers": 19,
+      "coverage": 1.0,
+      "f1_mae_hz": 90.58157690456535,
+      "f2_mae_hz": 440.90505710277387,
+      "f1_median_hz": 41.62451171875,
+      "f2_median_hz": 100.71990966796648,
+      "f1_p95_hz": 502.8110891113278,
+      "f2_p95_hz": 1672.9600976562497,
+      "large_errors": 251,
+      "large_error_rate": 0.3680351906158358,
+      "good_measurement_yield": 0.6319648093841642,
+      "f2_mae_speaker_bootstrap95_hz": [
+        349.79096649749937,
+        534.9841770017301
+      ]
+    },
+    "cross_method_fixed": {
+      "n": 682,
+      "accepted": 400,
+      "speakers": 19,
+      "coverage": 0.5865102639296188,
+      "f1_mae_hz": 22.032074443720166,
+      "f2_mae_hz": 75.50530990278764,
+      "f1_median_hz": 14.957536589657536,
+      "f2_median_hz": 38.37398582036053,
+      "f1_p95_hz": 49.45391265238809,
+      "f2_p95_hz": 166.3761535376714,
+      "large_errors": 14,
+      "large_error_rate": 0.035,
+      "good_measurement_yield": 0.5659824046920822,
+      "f2_mae_speaker_bootstrap95_hz": [
+        53.551764087911316,
+        107.39999671642025
+      ]
+    },
+    "cross_method_multiceiling": {
+      "n": 682,
+      "accepted": 501,
+      "speakers": 19,
+      "coverage": 0.7346041055718475,
+      "f1_mae_hz": 32.32062886364702,
+      "f2_mae_hz": 200.93235604569375,
+      "f1_median_hz": 21.146484303876832,
+      "f2_median_hz": 49.982774291383976,
+      "f1_p95_hz": 106.91477252435106,
+      "f2_p95_hz": 1413.7701000829609,
+      "large_errors": 75,
+      "large_error_rate": 0.1497005988023952,
+      "good_measurement_yield": 0.624633431085044,
+      "f2_mae_speaker_bootstrap95_hz": [
+        139.66510759401157,
+        281.3327704573716
+      ]
+    }
+  },
+  "f0_0_150": {
+    "burg5500": {
+      "n": 1313,
+      "accepted": 1313,
+      "speakers": 43,
+      "coverage": 1.0,
+      "f1_mae_hz": 15.250932622754112,
+      "f2_mae_hz": 42.43529805860169,
+      "f1_median_hz": 10.23824588590486,
+      "f2_median_hz": 23.619219375950934,
+      "f1_p95_hz": 44.00431635341899,
+      "f2_p95_hz": 128.78005557667242,
+      "large_errors": 17,
+      "large_error_rate": 0.012947448591012947,
+      "good_measurement_yield": 0.9870525514089871,
+      "f2_mae_speaker_bootstrap95_hz": [
+        35.39266150272203,
+        51.562838106527124
+      ]
+    },
+    "burg_two_ceiling": {
+      "n": 1313,
+      "accepted": 1276,
+      "speakers": 43,
+      "coverage": 0.9718202589489718,
+      "f1_mae_hz": 11.485840395997158,
+      "f2_mae_hz": 30.09119470662918,
+      "f1_median_hz": 8.738996436403454,
+      "f2_median_hz": 19.64916219023769,
+      "f1_p95_hz": 30.975316489347477,
+      "f2_p95_hz": 87.54812963359296,
+      "large_errors": 3,
+      "large_error_rate": 0.0023510971786833857,
+      "good_measurement_yield": 0.9695354150799695,
+      "f2_mae_speaker_bootstrap95_hz": [
+        26.974866350075647,
+        33.65886459080021
+      ]
+    },
+    "heatmap": {
+      "n": 1313,
+      "accepted": 1313,
+      "speakers": 43,
+      "coverage": 1.0,
+      "f1_mae_hz": 32.089603790259964,
+      "f2_mae_hz": 55.85396859743535,
+      "f1_median_hz": 24.99609375,
+      "f2_median_hz": 38.929931640625,
+      "f1_p95_hz": 76.2801513671875,
+      "f2_p95_hz": 147.4031372070311,
+      "large_errors": 21,
+      "large_error_rate": 0.015993907083015995,
+      "good_measurement_yield": 0.984006092916984,
+      "f2_mae_speaker_bootstrap95_hz": [
+        49.63547383520294,
+        63.76629052460502
+      ]
+    },
+    "cross_method_fixed": {
+      "n": 1313,
+      "accepted": 1238,
+      "speakers": 43,
+      "coverage": 0.9428789032749428,
+      "f1_mae_hz": 14.974747390574457,
+      "f2_mae_hz": 35.154124414625464,
+      "f1_median_hz": 11.997155800844354,
+      "f2_median_hz": 26.60225316472554,
+      "f1_p95_hz": 35.78041942046982,
+      "f2_p95_hz": 96.03130312194145,
+      "large_errors": 0,
+      "large_error_rate": 0.0,
+      "good_measurement_yield": 0.9428789032749428,
+      "f2_mae_speaker_bootstrap95_hz": [
+        32.68974889210275,
+        37.606162487170664
+      ]
+    },
+    "cross_method_multiceiling": {
+      "n": 1313,
+      "accepted": 1300,
+      "speakers": 43,
+      "coverage": 0.9900990099009901,
+      "f1_mae_hz": 17.457370560511066,
+      "f2_mae_hz": 41.91728699768861,
+      "f1_median_hz": 14.106794658442823,
+      "f2_median_hz": 28.726215184584134,
+      "f1_p95_hz": 41.63487705938309,
+      "f2_p95_hz": 118.72269660065933,
+      "large_errors": 2,
+      "large_error_rate": 0.0015384615384615385,
+      "good_measurement_yield": 0.9885757806549885,
+      "f2_mae_speaker_bootstrap95_hz": [
+        37.66450142126142,
+        46.506990699412285
+      ]
+    }
+  },
+  "f0_150_250": {
+    "burg5500": {
+      "n": 3042,
+      "accepted": 3042,
+      "speakers": 111,
+      "coverage": 1.0,
+      "f1_mae_hz": 17.592030179290802,
+      "f2_mae_hz": 84.133423313827,
+      "f1_median_hz": 9.999441563834068,
+      "f2_median_hz": 24.803739872723554,
+      "f1_p95_hz": 56.867720222961715,
+      "f2_p95_hz": 313.33710746240934,
+      "large_errors": 167,
+      "large_error_rate": 0.05489809335963182,
+      "good_measurement_yield": 0.9451019066403682,
+      "f2_mae_speaker_bootstrap95_hz": [
+        65.2377027529505,
+        106.07618063963584
+      ]
+    },
+    "burg_two_ceiling": {
+      "n": 3042,
+      "accepted": 2175,
+      "speakers": 111,
+      "coverage": 0.7149901380670611,
+      "f1_mae_hz": 15.323715023898574,
+      "f2_mae_hz": 64.6455373070426,
+      "f1_median_hz": 9.312830024671143,
+      "f2_median_hz": 23.72448234184685,
+      "f1_p95_hz": 45.93467798893712,
+      "f2_p95_hz": 170.1502394046246,
+      "large_errors": 72,
+      "large_error_rate": 0.03310344827586207,
+      "good_measurement_yield": 0.6913214990138067,
+      "f2_mae_speaker_bootstrap95_hz": [
+        50.48202846113712,
+        83.46164407540759
+      ]
+    },
+    "heatmap": {
+      "n": 3042,
+      "accepted": 3042,
+      "speakers": 111,
+      "coverage": 1.0,
+      "f1_mae_hz": 53.044435032048874,
+      "f2_mae_hz": 209.37669659379685,
+      "f1_median_hz": 30.7742919921875,
+      "f2_median_hz": 57.62259826660147,
+      "f1_p95_hz": 138.7537002563476,
+      "f2_p95_hz": 1198.4830627441384,
+      "large_errors": 510,
+      "large_error_rate": 0.16765285996055226,
+      "good_measurement_yield": 0.8323471400394478,
+      "f2_mae_speaker_bootstrap95_hz": [
+        177.44941330862625,
+        243.80173490105508
+      ]
+    },
+    "cross_method_fixed": {
+      "n": 3042,
+      "accepted": 2430,
+      "speakers": 111,
+      "coverage": 0.7988165680473372,
+      "f1_mae_hz": 19.65705394554185,
+      "f2_mae_hz": 47.56830780400149,
+      "f1_median_hz": 14.582321376378445,
+      "f2_median_hz": 31.602839478185842,
+      "f1_p95_hz": 49.849596661520536,
+      "f2_p95_hz": 116.4617176806834,
+      "large_errors": 23,
+      "large_error_rate": 0.009465020576131687,
+      "good_measurement_yield": 0.7912557527942143,
+      "f2_mae_speaker_bootstrap95_hz": [
+        43.75424097994887,
+        52.77812673329809
+      ]
+    },
+    "cross_method_multiceiling": {
+      "n": 3042,
+      "accepted": 2686,
+      "speakers": 111,
+      "coverage": 0.8829717291255753,
+      "f1_mae_hz": 24.671791558890636,
+      "f2_mae_hz": 97.44499651745579,
+      "f1_median_hz": 17.361726844361925,
+      "f2_median_hz": 38.06646587039245,
+      "f1_p95_hz": 66.4158311718902,
+      "f2_p95_hz": 323.42896047451995,
+      "large_errors": 153,
+      "large_error_rate": 0.056962025316455694,
+      "good_measurement_yield": 0.8326758711374096,
+      "f2_mae_speaker_bootstrap95_hz": [
+        80.64267518135746,
+        114.96193635118979
+      ]
+    }
+  },
+  "f0_250_1000": {
+    "burg5500": {
+      "n": 623,
+      "accepted": 623,
+      "speakers": 44,
+      "coverage": 1.0,
+      "f1_mae_hz": 16.790609104637543,
+      "f2_mae_hz": 149.3891730328822,
+      "f1_median_hz": 9.282033688955607,
+      "f2_median_hz": 31.555358702720696,
+      "f1_p95_hz": 45.68470826882625,
+      "f2_p95_hz": 899.7700467128527,
+      "large_errors": 79,
+      "large_error_rate": 0.12680577849117175,
+      "good_measurement_yield": 0.8731942215088283,
+      "f2_mae_speaker_bootstrap95_hz": [
+        97.34393737756676,
+        203.56728571864988
+      ]
+    },
+    "burg_two_ceiling": {
+      "n": 623,
+      "accepted": 416,
+      "speakers": 44,
+      "coverage": 0.6677367576243981,
+      "f1_mae_hz": 14.519733724811791,
+      "f2_mae_hz": 104.03467879632193,
+      "f1_median_hz": 8.948163264149912,
+      "f2_median_hz": 27.06673121830852,
+      "f1_p95_hz": 45.89613576938443,
+      "f2_p95_hz": 617.6063758836145,
+      "large_errors": 30,
+      "large_error_rate": 0.07211538461538461,
+      "good_measurement_yield": 0.6195826645264848,
+      "f2_mae_speaker_bootstrap95_hz": [
+        67.77515133683526,
+        142.74577227173003
+      ]
+    },
+    "heatmap": {
+      "n": 623,
+      "accepted": 623,
+      "speakers": 44,
+      "coverage": 1.0,
+      "f1_mae_hz": 49.90502547164599,
+      "f2_mae_hz": 335.2632805142471,
+      "f1_median_hz": 38.490264892578125,
+      "f2_median_hz": 76.7587890625,
+      "f1_p95_hz": 141.34085998535147,
+      "f2_p95_hz": 1683.7288061523436,
+      "large_errors": 164,
+      "large_error_rate": 0.26324237560192615,
+      "good_measurement_yield": 0.7367576243980738,
+      "f2_mae_speaker_bootstrap95_hz": [
+        248.81021487189062,
+        424.9771177534066
+      ]
+    },
+    "cross_method_fixed": {
+      "n": 623,
+      "accepted": 436,
+      "speakers": 44,
+      "coverage": 0.6998394863563403,
+      "f1_mae_hz": 19.408757062572697,
+      "f2_mae_hz": 74.09849501354145,
+      "f1_median_hz": 16.1303614289088,
+      "f2_median_hz": 38.24823294789985,
+      "f1_p95_hz": 43.36823315916945,
+      "f2_p95_hz": 183.52261967903905,
+      "large_errors": 15,
+      "large_error_rate": 0.034403669724770644,
+      "good_measurement_yield": 0.6757624398073836,
+      "f2_mae_speaker_bootstrap95_hz": [
+        53.870332788610696,
+        99.05102895146031
+      ]
+    },
+    "cross_method_multiceiling": {
+      "n": 623,
+      "accepted": 506,
+      "speakers": 44,
+      "coverage": 0.812199036918138,
+      "f1_mae_hz": 24.61367311385598,
+      "f2_mae_hz": 144.13596133619856,
+      "f1_median_hz": 19.51933221647556,
+      "f2_median_hz": 45.88932714547332,
+      "f1_p95_hz": 58.83630045538176,
+      "f2_p95_hz": 842.5511261933209,
+      "large_errors": 51,
+      "large_error_rate": 0.1007905138339921,
+      "good_measurement_yield": 0.7303370786516854,
+      "f2_mae_speaker_bootstrap95_hz": [
+        92.26621753704016,
+        193.0547661541382
+      ]
+    }
+  }
+}

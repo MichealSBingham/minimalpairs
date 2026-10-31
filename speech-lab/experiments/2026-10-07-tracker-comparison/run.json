@@ -1,0 +1,31 @@
+{
+  "status": "complete",
+  "verification": {
+    "frames": 232,
+    "max_difference_hz": 0.984375,
+    "mean_difference_hz": 0.49341850719232666,
+    "within_one_bin_fraction": 1.0,
+    "note": "Published file truncates Hz to integer; float differences <1 Hz are expected."
+  },
+  "recordings": 1668,
+  "reference_points": 4978,
+  "latency_ms": {
+    "heatmap_ms": {
+      "p50": 340.6184579944238,
+      "p95": 431.3546932993631
+    },
+    "burg_bank_ms": {
+      "p50": 19.003791494469624,
+      "p95": 25.70766414355603
+    }
+  },
+  "wall_seconds": 668.5477338339988,
+  "paid_spend_usd": 0,
+  "limitations": [
+    "reused corpus, no independent holdout",
+    "oracle vowel boundaries",
+    "noncausal offline neural model",
+    "no expert correctness or learning evaluation",
+    "transformed audio is not independent device data"
+  ]
+}

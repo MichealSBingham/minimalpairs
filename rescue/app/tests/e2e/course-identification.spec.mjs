@@ -2,14 +2,18 @@ import {test,expect} from '@playwright/test';
 test('course advances from audio matching to identification and saves separate progress',async({page})=>{
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto('/practice?language=en&contrast=en-i-ih');
+ await expect(page.getByRole('button',{name:'Start course',exact:true})).toBeEnabled();
  await page.getByText('Session settings',{exact:true}).click();
  await page.getByRole('combobox',{name:'Session length'}).selectOption('6');
+ await expect.poll(()=>page.evaluate(()=>JSON.parse(localStorage.getItem('minimalpairs.session-settings') || '{}').rounds)).toBe(6);
  await page.getByRole('button',{name:'Start course',exact:true}).click();
  for(let round=1;round<=6;round++){
   await expect(page.locator('.round-counter')).toHaveText(`${round} / 6`);
   const answer=page.locator('.answer-card').first();await expect(answer).toBeEnabled();await answer.click();
  }
  await expect(page.getByText('SESSION COMPLETE',{exact:true})).toBeVisible();
+ await expect(page.locator('.completion-plans .plan-monthly')).toContainText('$7');
+ await expect(page.locator('.completion-plans .plan-lifetime')).toContainText('$29');
  await page.getByRole('button',{name:'Continue my path',exact:true}).click();
  for(let round=1;round<=6;round++){
   await expect(page.locator('.round-counter')).toHaveText(`${round} / 6`);

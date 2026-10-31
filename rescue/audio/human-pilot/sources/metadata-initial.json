@@ -1,0 +1,740 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "3045225": {
+        "pageid": 3045225,
+        "ns": 6,
+        "title": "File:Fr-tout.ogg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2007-11-07T22:33:28Z",
+            "size": 11393,
+            "width": 0,
+            "height": 0,
+            "duration": 0.75,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Fr-tout.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:Fr-tout.ogg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=3045225",
+            "sha1": "3e1291cf99861559eb3597230464dc752a4c3f94",
+            "metadata": [
+              {
+                "name": "version",
+                "value": 2
+              },
+              {
+                "name": "streams",
+                "value": [
+                  {
+                    "name": 893253936,
+                    "value": [
+                      {
+                        "name": "serial",
+                        "value": 893253936
+                      },
+                      {
+                        "name": "group",
+                        "value": 0
+                      },
+                      {
+                        "name": "type",
+                        "value": "Vorbis"
+                      },
+                      {
+                        "name": "vendor",
+                        "value": "Xiph.Org libVorbis I 20050304"
+                      },
+                      {
+                        "name": "length",
+                        "value": 0.75
+                      },
+                      {
+                        "name": "size",
+                        "value": 11393
+                      },
+                      {
+                        "name": "header",
+                        "value": [
+                          {
+                            "name": "vorbis_version",
+                            "value": 0
+                          },
+                          {
+                            "name": "audio_channels",
+                            "value": 1
+                          },
+                          {
+                            "name": "audio_sample_rate",
+                            "value": 44000
+                          },
+                          {
+                            "name": "bitrate_maximum",
+                            "value": 0
+                          },
+                          {
+                            "name": "bitrate_nominal",
+                            "value": 80000
+                          },
+                          {
+                            "name": "bitrate_minimum",
+                            "value": 0
+                          },
+                          {
+                            "name": "blocksize_0",
+                            "value": 8
+                          },
+                          {
+                            "name": "blocksize_1",
+                            "value": 11
+                          },
+                          {
+                            "name": "framing_flag",
+                            "value": 0
+                          }
+                        ]
+                      },
+                      {
+                        "name": "comments",
+                        "value": [
+                          {
+                            "name": "TITLE",
+                            "value": "tout\r"
+                          },
+                          {
+                            "name": "COPYRIGHT",
+                            "value": "Copyright� Vion Nicolas 2006\r"
+                          },
+                          {
+                            "name": "DESCRIPTION",
+                            "value": "Base Audio Libre de Mots Fran�ais\r"
+                          },
+                          {
+                            "name": "GENRE",
+                            "value": "Speech\r"
+                          },
+                          {
+                            "name": "LICENSE",
+                            "value": "Creative Commons BY\r"
+                          },
+                          {
+                            "name": "SWAC_LANG",
+                            "value": "fra\r"
+                          },
+                          {
+                            "name": "SWAC_TEXT",
+                            "value": "tout\r"
+                          },
+                          {
+                            "name": "SWAC_ALPHAIDX",
+                            "value": "tout\r"
+                          },
+                          {
+                            "name": "SWAC_SPEAK_NAME",
+                            "value": "Vion Nicolas\r"
+                          },
+                          {
+                            "name": "SWAC_SPEAK_GENDER",
+                            "value": "M\r"
+                          },
+                          {
+                            "name": "SWAC_SPEAK_BIRTH_YEAR",
+                            "value": "1981\r"
+                          },
+                          {
+                            "name": "SWAC_SPEAK_LANG",
+                            "value": "fra\r"
+                          },
+                          {
+                            "name": "SWAC_SPEAK_LANG_COUNTRY",
+                            "value": "FR\r"
+                          },
+                          {
+                            "name": "SWAC_SPEAK_LANG_REGION",
+                            "value": "R�gion Parisienne\r"
+                          },
+                          {
+                            "name": "SWAC_SPEAK_LIV_COUNTRY",
+                            "value": "FR\r"
+                          },
+                          {
+                            "name": "SWAC_SPEAK_LIV_TOWN",
+                            "value": "Paris\r"
+                          },
+                          {
+                            "name": "SWAC_PRON_SPEED",
+                            "value": "1\r"
+                          },
+                          {
+                            "name": "SWAC_COLL_NAME",
+                            "value": "Base Audio Libre de Mots Fran�ais\r"
+                          },
+                          {
+                            "name": "SWAC_COLL_SECTION",
+                            "value": "Vocabulaire\r"
+                          },
+                          {
+                            "name": "SWAC_COLL_DESC",
+                            "value": "Cette collection est essentiellement destin�e aux personnes �tudiant le fran�ais comme langue �trang�re ainsi qu'� la production de mat�riel p�dagogique.\r"
+                          },
+                          {
+                            "name": "SWAC_COLL_ORG",
+                            "value": "Shtooka Project\r"
+                          },
+                          {
+                            "name": "SWAC_COLL_ORG_URL",
+                            "value": "http://shtooka.net/\r"
+                          },
+                          {
+                            "name": "SWAC_COLL_LICENSE",
+                            "value": "Creative Commons BY\r"
+                          },
+                          {
+                            "name": "SWAC_COLL_COPYRIGHT",
+                            "value": "Copyright� Vion Nicolas 2006\r"
+                          },
+                          {
+                            "name": "SWAC_COLL_AUTHORS",
+                            "value": "Vion Nicolas\r"
+                          },
+                          {
+                            "name": "SWAC_COLL_URL",
+                            "value": "http://shtooka.net/audio-base/fra/\r"
+                          },
+                          {
+                            "name": "SWAC_TECH_QLT",
+                            "value": "4\r"
+                          },
+                          {
+                            "name": "SWAC_TECH_DATE",
+                            "value": "2006-07-13\r"
+                          },
+                          {
+                            "name": "SWAC_TECH_SOFT",
+                            "value": "Shtooka TB\r"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "length",
+                "value": 0.75
+              },
+              {
+                "name": "offset",
+                "value": null
+              }
+            ],
+            "extmetadata": {
+              "DateTime": {
+                "value": "2007-11-07 22:33:28",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "Fr-tout",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Paris French pronunciation|Male French pronunciation",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "French pronunciation for \"tout\"  — Speaker from Paris, France. male voice.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2006-07-13",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/Commons:Shtooka\" title=\"Commons:Shtooka\">The Shtooka Project</a>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "Vion Nicolas",
+                "source": "commons-desc-page"
+              },
+              "Permission": {
+                "value": "<a rel=\"nofollow\" class=\"external free\" href=\"http://packs.shtooka.net/fra-balm-voc/readme.txt\">http://packs.shtooka.net/fra-balm-voc/readme.txt</a>",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseShortName": {
+                "value": "CC BY 2.0 fr",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution 2.0 fr",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by/2.0/fr/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-2.0-fr",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "application/ogg"
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 1259337596,
+            "parentid": 732728162,
+            "timestamp": "2026-08-10T14:37:31Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Information\n|Description={{Pronunciation|1=tout|lang=fr|comment={{speaker|Paris, France}}. {{mv}}}}\n|Source=[[Commons:Shtooka|The Shtooka Project]]\n|Date=2006-07-13\n|Author=Vion Nicolas\n|Permission=http://packs.shtooka.net/fra-balm-voc/readme.txt\n|other_versions=\n}}\n\n== {{int:license-header}} ==\n{{cc-by-2.0-fr}}\n\n[[Category:Paris French pronunciation|tout]]\n[[Category:Male French pronunciation]]"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-BY-2.0-FR"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Male French pronunciation"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Paris French pronunciation"
+          }
+        ]
+      },
+      "85500864": {
+        "pageid": 85500864,
+        "ns": 6,
+        "title": "File:LL-Q150 (fra)-LoquaxFR-tout.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2020-01-01T11:16:38Z",
+            "size": 66836,
+            "width": 0,
+            "height": 0,
+            "duration": 0.7572789115646259,
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/4b/LL-Q150_%28fra%29-LoquaxFR-tout.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-LoquaxFR-tout.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=85500864",
+            "sha1": "a33f23fdb6b6384c55945fa1a9fea6687d655a08",
+            "metadata": [
+              {
+                "name": "GETID3_VERSION",
+                "value": "1.9.18-201907240906"
+              },
+              {
+                "name": "filesize",
+                "value": 66836
+              },
+              {
+                "name": "avdataoffset",
+                "value": 44
+              },
+              {
+                "name": "avdataend",
+                "value": 66836
+              },
+              {
+                "name": "fileformat",
+                "value": "wav"
+              },
+              {
+                "name": "audio",
+                "value": [
+                  {
+                    "name": "dataformat",
+                    "value": "wav"
+                  },
+                  {
+                    "name": "bitrate_mode",
+                    "value": "cbr"
+                  },
+                  {
+                    "name": "wformattag",
+                    "value": 1
+                  },
+                  {
+                    "name": "streams",
+                    "value": [
+                      {
+                        "name": 0,
+                        "value": [
+                          {
+                            "name": "codec",
+                            "value": "Pulse Code Modulation (PCM)"
+                          },
+                          {
+                            "name": "channels",
+                            "value": 1
+                          },
+                          {
+                            "name": "sample_rate",
+                            "value": 44100
+                          },
+                          {
+                            "name": "bitrate",
+                            "value": 705600
+                          },
+                          {
+                            "name": "bits_per_sample",
+                            "value": 16
+                          },
+                          {
+                            "name": "wformattag",
+                            "value": 1
+                          },
+                          {
+                            "name": "bitrate_mode",
+                            "value": "cbr"
+                          },
+                          {
+                            "name": "lossless",
+                            "value": true
+                          },
+                          {
+                            "name": "dataformat",
+                            "value": "wav"
+                          },
+                          {
+                            "name": "compression_ratio",
+                            "value": 1
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "codec",
+                    "value": "Pulse Code Modulation (PCM)"
+                  },
+                  {
+                    "name": "channels",
+                    "value": 1
+                  },
+                  {
+                    "name": "sample_rate",
+                    "value": 44100
+                  },
+                  {
+                    "name": "bitrate",
+                    "value": 705600
+                  },
+                  {
+                    "name": "bits_per_sample",
+                    "value": 16
+                  },
+                  {
+                    "name": "lossless",
+                    "value": true
+                  },
+                  {
+                    "name": "channelmode",
+                    "value": "mono"
+                  },
+                  {
+                    "name": "compression_ratio",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "name": "warning",
+                "value": [
+                  {
+                    "name": 0,
+                    "value": "Expecting \"RIFF|JUNK|IDVX\" at 66840, found \"����\" (00 00 00 00 ) - skipping rest of file"
+                  }
+                ]
+              },
+              {
+                "name": "encoding",
+                "value": "UTF-8"
+              },
+              {
+                "name": "mime_type",
+                "value": "audio/wav"
+              },
+              {
+                "name": "riff",
+                "value": [
+                  {
+                    "name": "raw",
+                    "value": [
+                      {
+                        "name": "fmt ",
+                        "value": [
+                          {
+                            "name": "wFormatTag",
+                            "value": 1
+                          },
+                          {
+                            "name": "nChannels",
+                            "value": 1
+                          },
+                          {
+                            "name": "nSamplesPerSec",
+                            "value": 44100
+                          },
+                          {
+                            "name": "nAvgBytesPerSec",
+                            "value": 88200
+                          },
+                          {
+                            "name": "nBlockAlign",
+                            "value": 2
+                          },
+                          {
+                            "name": "wBitsPerSample",
+                            "value": 16
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "audio",
+                    "value": [
+                      {
+                        "name": 0,
+                        "value": [
+                          {
+                            "name": "codec",
+                            "value": "Pulse Code Modulation (PCM)"
+                          },
+                          {
+                            "name": "channels",
+                            "value": 1
+                          },
+                          {
+                            "name": "sample_rate",
+                            "value": 44100
+                          },
+                          {
+                            "name": "bitrate",
+                            "value": 705600
+                          },
+                          {
+                            "name": "bits_per_sample",
+                            "value": 16
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "name": "header_size",
+                    "value": 66824
+                  },
+                  {
+                    "name": "WAVE",
+                    "value": [
+                      {
+                        "name": "fmt ",
+                        "value": [
+                          {
+                            "name": 0,
+                            "value": [
+                              {
+                                "name": "offset",
+                                "value": 12
+                              },
+                              {
+                                "name": "size",
+                                "value": 16
+                              },
+                              {
+                                "name": "data",
+                                "value": "����D����X������"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "name": "data",
+                        "value": [
+                          {
+                            "name": 0,
+                            "value": [
+                              {
+                                "name": "offset",
+                                "value": 36
+                              },
+                              {
+                                "name": "size",
+                                "value": 66792
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "playtime_seconds",
+                "value": 0.7572789115646259
+              },
+              {
+                "name": "bitrate",
+                "value": 705600
+              },
+              {
+                "name": "playtime_string",
+                "value": "0:01"
+              },
+              {
+                "name": "version",
+                "value": 2
+              }
+            ],
+            "extmetadata": {
+              "DateTime": {
+                "value": "2020-01-01 11:16:38",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q150 (fra)-LoquaxFR-tout",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Lingua Libre pronunciation-fra|Lingua Libre pronunciation by LoquaxFR",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2020-01-01",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q235413\" class=\"extiw\" title=\"lingualibre:Q235413\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q215420\" class=\"extiw\" title=\"lingualibre:Q215420\">LoquaxFR</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/w/index.php?title=User:LoquaxFR&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:LoquaxFR (page does not exist)\">LoquaxFR</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            },
+            "mime": "audio/wav"
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 995917835,
+            "parentid": 762723260,
+            "timestamp": "2025-02-09T00:33:56Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-by-sa-4.0}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-BY-SA-4.0"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-fra"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by LoquaxFR"
+          }
+        ]
+      }
+    }
+  }
+}

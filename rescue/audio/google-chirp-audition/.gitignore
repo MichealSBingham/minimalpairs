@@ -1,0 +1,4 @@
+candidate/
+private/
+__pycache__/
+*.log

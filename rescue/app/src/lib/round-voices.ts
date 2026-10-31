@@ -11,7 +11,7 @@ export function referenceVoices(clips: readonly AvailableClip[], languageId: str
 }
 /** Exclude temporarily under-covered words before either game builds its queue. */
 export function playablePairs(pairs: readonly Pair[], clips: readonly AvailableClip[], languageId: string): Pair[] {
-  return pairs.filter(pair => pair.words.every(word => wordVoices(clips, languageId, word).length >= 2));
+  return pairs.filter(pair => pair.words.every(word => wordVoices(clips, languageId, word).length >= 2) && referenceVoices(clips, languageId, pair).length > 0);
 }
 /** Choose only real recordings, without tying voice identity to the answer category. */
 export function assignAvailableVoices(questions: readonly PracticeQuestion[], clips: readonly AvailableClip[], languageId: string, random = Math.random): PracticeQuestion[] {

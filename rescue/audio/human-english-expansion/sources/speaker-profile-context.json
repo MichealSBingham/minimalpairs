@@ -1,0 +1,37 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 2,
+        "title": "User:Grendelkhan",
+        "missing": "",
+        "known": ""
+      },
+      "-2": {
+        "ns": 2,
+        "title": "User:Wodencafe",
+        "missing": ""
+      },
+      "103798": {
+        "pageid": 103798,
+        "ns": 2,
+        "title": "User:Dvortygirl",
+        "revisions": [
+          {
+            "revid": 89900856,
+            "parentid": 88340415,
+            "timestamp": "2026-03-19T23:55:47Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "[[Image:Dictionary_discard2.JPG|thumb|right|Paper dictionaries: a thing of the past?]]\n{{Babel|en|es-3|sv-2|el-1}}\n===Some notes:===\n*I am an [[WT:A|administrator]] and [[Wiktionary:Bureaucrats|bureaucrat]].  \n*When I am around, I am usually reachable on [irc://irc.freenode.net/wiktionary Wiktionary IRC]<sup>([[WT:IRC|help]])</sup>.  So are many other Wiktionary sysops, contributors, and all-around bright, friendly people all over the world.  Drop by sometime and say hello.\n*This page doesn't get updated very often, but I do sometimes write in [http://dvortygirl.blogspot.com/ my blog].\n*I have hugged [[User:Dvortygirl/hugs|several Wiktionarians]], which I note here because I tend to enjoy meeting us, even though we are [http://tools.wikimedia.de/~cmackenzie/frappr.html very spread out].  \n\n===Etymology===\nFrom [[w:Dvorak_Simplified_Keyboard|Dvorak]] (an alternative keyboard layout) + [[w:QWERTY|qwerty]] (a standard keyboard) + [[girl]] (hey, that's me!), because I type on a [[qwerty]] [[keyboard]] with a [[dvorak]] keyboard map in software.\n\n===Background===\n\nI live in [[w:Santa Clara, California|Santa Clara, California]].\n\nI have long been fascinated with language, words and [[meaning]], and more recently, with education, open source, and the [[disseminate|dissemination]] of [[thought]].  May my contributions assist you in your [[quest]] for [[knowledge]] (or simply your [[crossword]] puzzle)!\n\n===Present Preoccupations===\n*Images.  While I don't count myself a great photographer, I do have fun uploading photos and linking others' photos into Wiktionary articles.  We don't lack for space, so there's no reason why articles like [[onomatopoeia]], [[aftermath]], [[train wreck]] and [[handle with kid gloves]] shouldn't include suitable images.\n*[[Wiktionary:Pronunciation_files_requests|Audio]].  English is tremendously variable in the way it assigns sounds to letters, and audio is simply more accurate and more accessible than IPA or SAMPA.  Compare [[beard]], [[bead]], and [[bread]].  More words that don't have obvious pronunciations include [[knight]], [[malign]], [[impugn]], [[indict]], [[pneumonia]], [[psychology]], anything containing \"ough\" ([[through]], [[thorough]], [[cough]], [[slough]], [[bough]], [[hiccough]]) and everything in [[:Category:English heteronyms]].  \n*[[:Category:Idioms by language|Idioms]] and idiomatic usage.  I have worked with a number of new English speakers and this seems to be a [[sticking point]].  Hence, I have tried to catalog idioms with examples in context.  For an example, see related terms section under [[put]].  Idiomatic usage is something native speakers [[take for granted]], that we walk ''over to'' the store or stand ''in'' the rain rather than, say, ''under'' it.  It's another [[stumbling block]], best [[clear]]ed with examples and practice. I hereby dedicate my work in these regards to everyone trying to learn the [[screwball]] language that is English, and especially to C. and V., who would ''never'' have asked me the meaning of [[wishy-washy]] had it been obvious.\n*[[interjection|Interjection]]s.  [[wow|Wow]]!  These words are weird (and therefore interesting).  They are also frustrating to learners, since they are not a particularly regular part of [[grammar]] and they are seldom discussed in classes.  [[oh boy|Oh boy]] is for V, too. \n*[[grandiloquent|Grandiloquent]] words, mainly for my own personal amusement.  I am a verbivore, to borrow a term from author [http://www.verbivore.com/ Richard Lederer].  If you think you know everything, or just like weird words, look up [[omphaloskepsis]], [[defenestrate]], or [[infundibulated]].  Yes, there's a word for ''that''!  Some of my more recent favorites from other Wiktionarians include [[absquatulate]] and [[tergiversate]].  \n*[[offbeat|Offbeat]] or just fun, juicy words.  See [[squelch]], [[kablooie]], and [[cha-ching]].  Also, unusual uses for words and [[euphemism]]s.  \n*[[music|Music]], a language unto itself.\n*Technical [[jargon]].  What can I say?  I am an engineer and live in an engineering community.  The stuff seeps unbidden into the psyche and the conversation.\n\n===Languages Known===\nExcellent [[English]], serviceable [[Spanish]], a very little [[Greek]], and a degenerating, pitiful and rusty tidbit of American Sign Language.\n\n===Known subpages===\n* [[/sandbox|sandbox]]\n* [[/todo|todo]]\n* [[/botonera|botonera]]\n* [[/Gutenberg|Gutenberg]] (audioless most frequent words)"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

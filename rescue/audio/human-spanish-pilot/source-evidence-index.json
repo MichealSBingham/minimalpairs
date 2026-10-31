@@ -1,0 +1,176 @@
+{
+  "retainedAt": "2026-09-28T22:16:20.294773+00:00",
+  "files": [
+    {
+      "path": "sources/alternative-ll-coverage.json",
+      "sha256": "9f6e5c2cbf3907d66778cf2d7104bf879d83a83f1eca4fecaed16cacb9851e30",
+      "bytes": 826
+    },
+    {
+      "path": "sources/alternative-search-cero.json",
+      "sha256": "48bb520c2e21dd3c376cd232449951d59f0a5f769b010ecbfc6e009c6969d73b",
+      "bytes": 581
+    },
+    {
+      "path": "sources/alternative-search-cerro.json",
+      "sha256": "416d26ea190d985e69dce87296fa02961094518300bf378a68ebb1478855862d",
+      "bytes": 583
+    },
+    {
+      "path": "sources/alternative-search-para.json",
+      "sha256": "ef109a14a492030ea7e282897c407cb2f512671a08b2a78f93a30ec3473a0d51",
+      "bytes": 1959
+    },
+    {
+      "path": "sources/alternative-search-parra.json",
+      "sha256": "1309945b4be16df031097c2ef9505b65f79d17927ef8d9b0b7da040b7952cf53",
+      "bytes": 577
+    },
+    {
+      "path": "sources/broad-search-caro.json",
+      "sha256": "f42469035374fd1cee410eaeb5bf0a93ef5f3f6fbf90df2cafa58d4e88892b4d",
+      "bytes": 17603
+    },
+    {
+      "path": "sources/broad-search-carro.json",
+      "sha256": "9b5c36f012ee0e087de69ccd5d5885a53f446ef068513f69325869b899d4a3bb",
+      "bytes": 12371
+    },
+    {
+      "path": "sources/english-wiktionary-spanish-entries.json",
+      "sha256": "6cc45a9b9f1dbe233e46a8eb55a06f615327ebfa4940e0c488ff216b89bbed5f",
+      "bytes": 49812
+    },
+    {
+      "path": "sources/legacy-file-metadata.json",
+      "sha256": "572bb03fe6ef80fbb9f7a9ead1ac15dbaf9a411b31c2bac550c67c7d3f02ccd2",
+      "bytes": 847
+    },
+    {
+      "path": "sources/ll-coverage.json",
+      "sha256": "810013d64289a72dedcfe2bf10df0574643a779b909dd7800fdb5139eec58282",
+      "bytes": 3367
+    },
+    {
+      "path": "sources/pb-ll-coverage.json",
+      "sha256": "81c0c019947dbdf91c84a095ab1ddfe4d8fb43a32438c249e45512e37954bcfc",
+      "bytes": 931
+    },
+    {
+      "path": "sources/pb-search-bala.json",
+      "sha256": "e6536b9e9f85f9766608ccc6131ee5540e6ec837d731ce96d9eba7e94f03e3fe",
+      "bytes": 581
+    },
+    {
+      "path": "sources/pb-search-bata.json",
+      "sha256": "628c52519712ff927ec1eb4eae5ea9b4ccff5d3d97e09e3fc304fb9c423edca6",
+      "bytes": 567
+    },
+    {
+      "path": "sources/pb-search-beso.json",
+      "sha256": "ad668e5cfc07dfee096be715168f01e26a18580800d41b1c39a28f846678e329",
+      "bytes": 572
+    },
+    {
+      "path": "sources/pb-search-pala.json",
+      "sha256": "8be3a4bff579a1474bf0e3857eaed6a00d73ae2d447bae367e37edc01075878d",
+      "bytes": 581
+    },
+    {
+      "path": "sources/pb-search-pata.json",
+      "sha256": "6a06388e4b8c951dbf1825144ed860307a3ee5c6706496ef2fdf386b54b2f72f",
+      "bytes": 581
+    },
+    {
+      "path": "sources/pb-search-peso.json",
+      "sha256": "a500453b22d41a7f45ef345a0475dec854f4a7b1c1240e8985f229184bc6fe40",
+      "bytes": 573
+    },
+    {
+      "path": "sources/pb-spanish-wiktionary-entries.json",
+      "sha256": "b131a0a2d60b16529ca92dcb39d5a96978de5d93f576b8a4ff80cac0f1aa0fea",
+      "bytes": 29599
+    },
+    {
+      "path": "sources/search-caro.json",
+      "sha256": "ddea28e5c6c7ee3dbe3c185fef2d2ee6f7575a189afaa911815e771ee8f8121e",
+      "bytes": 1038
+    },
+    {
+      "path": "sources/search-carro.json",
+      "sha256": "589acd365ef2f233b62ad5b8c5ecfec06b86cf5ad169e48c3893af604e88f8bd",
+      "bytes": 1028
+    },
+    {
+      "path": "sources/search-coro.json",
+      "sha256": "e190ce081bd9f175cdd0bcbe1544395078fcb5ccc6ce0a3a4f3034ede51d1c3e",
+      "bytes": 575
+    },
+    {
+      "path": "sources/search-corro.json",
+      "sha256": "cbbbabd41199c62f2e1d0ec1ff3f6b47344e79d91ba9ad360c9156af3f647bdd",
+      "bytes": 1035
+    },
+    {
+      "path": "sources/search-pero.json",
+      "sha256": "add1cc09cf597eaa5d91006f833d7c6449bb6c530ec538ffc4e216a50f8217ab",
+      "bytes": 1985
+    },
+    {
+      "path": "sources/search-perro.json",
+      "sha256": "41d0da1ed4cbc79f1cf6fc6ab24b0c516a875d6f1f29780c6232b814f9af4e7c",
+      "bytes": 11213
+    },
+    {
+      "path": "sources/spanish-wiktionary-entries.json",
+      "sha256": "988439a66cac3b95fd9f46484378e13f363e2e09265b85abbddc63ba0d5bb610",
+      "bytes": 29507
+    },
+    {
+      "path": "sources/strongest-file-mediainfo.json",
+      "sha256": "00527124b9d1e4919ba70f9d3a2942660f618cc2d8bfab622959cb8fd35626e5",
+      "bytes": 110259
+    },
+    {
+      "path": "sources/strongest-file-metadata.json",
+      "sha256": "e09b5f78d955cb76f37e84a1b9b4fbb2f8c75a9e34ce402f5ff6c74a7e0a1aaa",
+      "bytes": 72647
+    },
+    {
+      "path": "sources/strongest-mediainfo-revisions.json",
+      "sha256": "312149ae5745ed4381b53fc12ff6905975a8517c7e14ec326a1b9c58dd504f81",
+      "bytes": 112415
+    },
+    {
+      "path": "sources/vowel-ll-coverage.json",
+      "sha256": "3dd91d59e31921dafc39752883ca81d8fa21e275a32abacb45d653cc2fe9d09f",
+      "bytes": 1114
+    },
+    {
+      "path": "sources/vowel-search-casa.json",
+      "sha256": "77edb8a31b34a49cbabd381f62ffb2a8a3396cb55d7ac4ea7fdfb9a4f27b8abe",
+      "bytes": 1961
+    },
+    {
+      "path": "sources/vowel-search-cosa.json",
+      "sha256": "d05c50f28ce94c82f8188ab57d2dfedd4f1d20c7598533b3c8d250b40c1c0eb2",
+      "bytes": 581
+    },
+    {
+      "path": "sources/vowel-search-mesa.json",
+      "sha256": "ce11c2988589c7984eca3189b2fb88a4e760f889955041a04b4cc8a735a1aca8",
+      "bytes": 1961
+    },
+    {
+      "path": "sources/vowel-search-misa.json",
+      "sha256": "6a56e5350f7999310fd25693e9e3e969a54b43bf4da11d127cd66ae374b3d69e",
+      "bytes": 575
+    },
+    {
+      "path": "sources/vowel-search-piso.json",
+      "sha256": "dd8fa2846f670b34b8281349d0576684fa4aa94167bbd7ab02098e2d9e3a162c",
+      "bytes": 109
+    }
+  ],
+  "rawCacheIgnored": true
+}

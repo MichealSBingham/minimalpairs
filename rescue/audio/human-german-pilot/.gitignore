@@ -1,0 +1,6 @@
+private/
+manifest.candidate.json
+acquisition-progress.json
+sources/
+__pycache__/
+*.log

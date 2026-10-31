@@ -1,0 +1,281 @@
+{
+  "notice": "Local diagnostics only. No audio or correctness labels.",
+  "device": "Fake Default Audio Input · 44100 Hz",
+  "live": {
+    "method": "experimental-browser-lpc-v1",
+    "frames": 29,
+    "accepted": 2,
+    "stale": 0,
+    "compute_ms": [
+      2.4000000059604645,
+      1.199999988079071,
+      0.9000000059604645,
+      1,
+      0.800000011920929,
+      0.699999988079071,
+      0.5999999940395355,
+      0.7000000178813934,
+      0.6000000238418579,
+      0.6000000238418579,
+      0.5999999940395355,
+      0.5999999940395355,
+      0.699999988079071,
+      0.699999988079071,
+      0.5999999940395355,
+      0.6000000238418579,
+      0.7000000178813934,
+      0.5999999940395355,
+      0.699999988079071,
+      0.5999999940395355,
+      0.5999999940395355,
+      0.5999999940395355,
+      0.7000000178813934,
+      2.2000000178813934,
+      1.300000011920929,
+      1.2000000178813934,
+      3.300000011920929,
+      1.5999999940395355,
+      1.300000011920929
+    ],
+    "reasons": {
+      "Waiting for a steady vowel": 23,
+      "Hold a clear, steady vowel": 4
+    },
+    "observations": [
+      {
+        "at_ms": 106,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Waiting for a steady vowel",
+        "background_margin_db": null
+      },
+      {
+        "at_ms": 153,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Waiting for a steady vowel",
+        "background_margin_db": null
+      },
+      {
+        "at_ms": 199,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Waiting for a steady vowel",
+        "background_margin_db": null
+      },
+      {
+        "at_ms": 246,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Waiting for a steady vowel",
+        "background_margin_db": null
+      },
+      {
+        "at_ms": 292,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Waiting for a steady vowel",
+        "background_margin_db": null
+      },
+      {
+        "at_ms": 339,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Waiting for a steady vowel",
+        "background_margin_db": null
+      },
+      {
+        "at_ms": 385,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Waiting for a steady vowel",
+        "background_margin_db": null
+      },
+      {
+        "at_ms": 431,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Waiting for a steady vowel",
+        "background_margin_db": null
+      },
+      {
+        "at_ms": 478,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Waiting for a steady vowel",
+        "background_margin_db": null
+      },
+      {
+        "at_ms": 524,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Waiting for a steady vowel",
+        "background_margin_db": -40
+      },
+      {
+        "at_ms": 571,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Waiting for a steady vowel",
+        "background_margin_db": -40
+      },
+      {
+        "at_ms": 617,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Waiting for a steady vowel",
+        "background_margin_db": -40
+      },
+      {
+        "at_ms": 664,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Waiting for a steady vowel",
+        "background_margin_db": -40
+      },
+      {
+        "at_ms": 710,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Waiting for a steady vowel",
+        "background_margin_db": -40
+      },
+      {
+        "at_ms": 756,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Waiting for a steady vowel",
+        "background_margin_db": -40
+      },
+      {
+        "at_ms": 803,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Waiting for a steady vowel",
+        "background_margin_db": -40
+      },
+      {
+        "at_ms": 849,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Waiting for a steady vowel",
+        "background_margin_db": -40
+      },
+      {
+        "at_ms": 896,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Waiting for a steady vowel",
+        "background_margin_db": -40
+      },
+      {
+        "at_ms": 942,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Waiting for a steady vowel",
+        "background_margin_db": -40
+      },
+      {
+        "at_ms": 989,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Waiting for a steady vowel",
+        "background_margin_db": -40
+      },
+      {
+        "at_ms": 1035,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Waiting for a steady vowel",
+        "background_margin_db": 46.37923764968064
+      },
+      {
+        "at_ms": 1081,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Waiting for a steady vowel",
+        "background_margin_db": 48.99129724400631
+      },
+      {
+        "at_ms": 1128,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Waiting for a steady vowel",
+        "background_margin_db": 49.811752330948174
+      },
+      {
+        "at_ms": 1174,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Hold a clear, steady vowel",
+        "background_margin_db": 76.49724790257733
+      },
+      {
+        "at_ms": 1221,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Hold a clear, steady vowel",
+        "background_margin_db": 87.54080405605761
+      },
+      {
+        "at_ms": 1267,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Hold a clear, steady vowel",
+        "background_margin_db": 96.50498868164412
+      },
+      {
+        "at_ms": 1314,
+        "accepted": true,
+        "raw_f1_hz": 475.6601280726843,
+        "raw_f2_hz": 1736.7841989360797,
+        "reason": "Following your sound",
+        "background_margin_db": 105.05969687529408
+      },
+      {
+        "at_ms": 1360,
+        "accepted": true,
+        "raw_f1_hz": 503.9876893378381,
+        "raw_f2_hz": 1609.3424402174142,
+        "reason": "Following your sound",
+        "background_margin_db": 104.34309865249028
+      },
+      {
+        "at_ms": 1407,
+        "accepted": false,
+        "raw_f1_hz": null,
+        "raw_f2_hz": null,
+        "reason": "Hold a clear, steady vowel",
+        "background_margin_db": 87.66262874824598
+      }
+    ],
+    "duration_ms": 1455
+  },
+  "word_attempts": []
+}

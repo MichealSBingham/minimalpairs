@@ -3,6 +3,9 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import ts from 'typescript';
 import * as data from '../src/lib/measurement-data.ts';
+import * as offer from '../src/lib/offer-attribution.mjs';
+import * as course from '../src/lib/course-attribution.mjs';
+import * as referrer from '../src/lib/referrer-host.mjs';
 
 const CHOICE = 'minimalpairs.analytics-choice.v1';
 const attempt = '00000000-0000-4000-8000-000000000001';
@@ -27,7 +30,7 @@ function client(options = {}) {
   };
   const document = {
     documentElement: { dataset: { measurementId: options.configured === false ? '' : 'G-TEST123', measurementEnvironment: options.environment || 'preview' } },
-    referrer: 'https://www.google.com/search?q=private',
+    referrer: options.referrer ?? 'https://www.google.com/search?q=private',
     head: { append: script => { if (options.blockScript) throw Error('blocked'); scripts.push(script); } },
     createElement: () => ({ dataset: {} }),
     get cookie() { return '_ga=existing; _ga_TEST123=existing; session=keep'; },
@@ -38,7 +41,7 @@ function client(options = {}) {
   const exports = {};
   const reportingCode=ts.transpileModule(readFileSync(new URL('../src/lib/product-reporting.ts',import.meta.url),'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2022}}).outputText;
   const reporting={};const fetcher=async(url,options)=>{aggregates.push({url,...options,data:JSON.parse(options.body)});return {ok:false};};
-  new Function('require','exports','window','document','navigator','localStorage','fetch',reportingCode)(()=>data,reporting,window,document,navigator,window.localStorage,fetcher);
+  new Function('require','exports','window','document','navigator','localStorage','fetch','location',reportingCode)((name)=>name==='./offer-attribution.mjs'?offer:name==='./course-attribution.mjs'?course:name==='./referrer-host.mjs'?referrer:data,reporting,window,document,navigator,window.localStorage,fetcher,window.location);
   new Function('require', 'exports', 'window', 'document', 'navigator', 'Event', 'fetch', compiled)(name => name==='./product-reporting'?reporting:data, exports, window, document, navigator, Event, fetcher);
   const calls = () => (window.dataLayer || []).map(args => Array.from(args));
   const measured = () => calls().filter(call => call[0] === 'event');
@@ -425,4 +428,8 @@ test('first-party partial sessions and checkout operate when Google Analytics is
  const context=await c.api.checkoutAttribution();assert.equal(context.source,'google');assert.equal(context.ui_locale,'en');assert.deepEqual(c.scripts,[]);assert.deepEqual(c.calls(),[]);
  for(const e of ['page_view','practice_start','practice_first_answer','practice_answer','practice_exit','checkout_context'])assert.ok(c.aggregates.some(x=>x.data.event===e),e);
  c.api.setAnalyticsExcluded(true);assert.equal(await c.api.checkoutAttribution(),undefined);
+});
+
+test('initial internal navigation is reported as unknown without falsely claiming a referral',()=>{
+ const c=client({environment:'production',referrer:'https://minimalpairs.co/practice'});c.api.initializeMeasurement();const e=c.aggregates[0].data;assert.equal(e.source,'unknown');assert.equal(e.medium,'none');assert.equal(e.referrer_kind,'internal');assert.equal(e.referrer_host,undefined);
 });

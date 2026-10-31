@@ -1,0 +1,75 @@
+{
+  "provider": "qwen",
+  "curriculumPairs": 129,
+  "requiredClipsFound": 462,
+  "languages": [
+    {
+      "languageId": "en",
+      "pairs": 9,
+      "uniqueWords": 18,
+      "voiceProfiles": 2,
+      "completePairs": 9
+    },
+    {
+      "languageId": "fr",
+      "pairs": 64,
+      "uniqueWords": 103,
+      "voiceProfiles": 2,
+      "completePairs": 64
+    },
+    {
+      "languageId": "de",
+      "pairs": 12,
+      "uniqueWords": 24,
+      "voiceProfiles": 2,
+      "completePairs": 12
+    },
+    {
+      "languageId": "es",
+      "pairs": 9,
+      "uniqueWords": 18,
+      "voiceProfiles": 2,
+      "completePairs": 9
+    },
+    {
+      "languageId": "it",
+      "pairs": 9,
+      "uniqueWords": 18,
+      "voiceProfiles": 2,
+      "completePairs": 9
+    },
+    {
+      "languageId": "zh",
+      "pairs": 9,
+      "uniqueWords": 16,
+      "voiceProfiles": 2,
+      "completePairs": 9
+    },
+    {
+      "languageId": "pt",
+      "pairs": 9,
+      "uniqueWords": 18,
+      "voiceProfiles": 2,
+      "completePairs": 9
+    },
+    {
+      "languageId": "ru",
+      "pairs": 8,
+      "uniqueWords": 16,
+      "voiceProfiles": 2,
+      "completePairs": 8
+    }
+  ],
+  "missing": [],
+  "duplicates": [],
+  "invalidFiles": [],
+  "ipaMetadataMismatches": [],
+  "durationReviewFlags": [],
+  "statusCounts": {
+    "generated-unreviewed": 462
+  },
+  "audioBytes": 4746408,
+  "decodingChecked": true,
+  "phoneticListeningVerified": false,
+  "complete": true
+}

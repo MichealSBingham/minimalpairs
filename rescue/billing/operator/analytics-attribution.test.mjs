@@ -25,3 +25,9 @@ test('landing metadata accepts only public routes while old source metadata stay
  for(const value of ['/account','/learn/en-customer-private','https://evil.test','x'.repeat(501)]) assert.deepEqual(sanitizeAttribution({...base,landing_page:value}),base);
  assert.deepEqual(attributionFromMetadata(attributionMetadata(base)),base);
 });
+test('next-step experiment survives Stripe metadata round trip',()=>{
+ for(const experiment_variant of ['control','personalized']){
+  const data={source:'google',medium:'organic',ui_locale:'en',experiment_id:'diag-next-step-v1',experiment_variant,offer_placement:'diagnostic-report'};
+  assert.deepEqual(attributionFromMetadata(attributionMetadata(data)),data);
+ }
+});

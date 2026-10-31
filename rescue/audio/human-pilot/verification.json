@@ -1,0 +1,13 @@
+{
+  "files": 12,
+  "speakers": 2,
+  "matchedPairs": 3,
+  "audioBytes": 238784,
+  "sourceSha1Checked": true,
+  "decodedAllFiles": true,
+  "sampleRatesAndChannelsPreserved": true,
+  "durationPreservedWithinSeconds": 0.1,
+  "licensesCheckedPerFile": true,
+  "phoneticListeningVerified": false,
+  "publicAudioChanged": false
+}

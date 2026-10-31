@@ -1,0 +1,47 @@
+{
+  "stage": 1,
+  "status": "local prototype operational; independent validation pending",
+  "date": "2026-10-07",
+  "python_tests_passed": 9,
+  "http_checks_passed": 8,
+  "browser_checks": {
+    "status": "passed",
+    "checks": [
+      "initial load and engine connection",
+      "two real example recordings analyzed and plotted",
+      "audio replay decodes and starts",
+      "explicit export preserves labels and ungraded measurements",
+      "uncertain attempt adds no stale or fabricated point",
+      "clear removes replay controls and chart points",
+      "recorded WAV can be explicitly saved",
+      "AudioWorklet fake-microphone capture auto-stops, flushes, analyzes, releases tracks",
+      "server failure preserves replay audio and recovers controls without a false point",
+      "recordings are not persisted across reload",
+      "denied microphone permission offers working file fallback",
+      "file upload works after microphone denial",
+      "mobile layout has no horizontal overflow and examples work",
+      "no browser JavaScript exceptions"
+    ],
+    "errors": [],
+    "limitations": [
+      "Fake microphone uses existing example audio; no physical microphone test.",
+      "Mobile is an emulated viewport, not a mobile device.",
+      "Playback start verified; no human listening assessment."
+    ]
+  },
+  "files_sha256": {
+    "speaking_engine.py": "e643a80ddc496a17786028449a4e1935d66135e6c53d8b8628ef23ddd8107e9a",
+    "speaking_server.py": "d475dc62e21969487daa116801c26773315f41a7b393c703fdbf32c7094fc982",
+    "speaking/index.html": "0a04c3abb1f084b6e5800af56bf9a0fb4db7033080efa54aec7a1044d7d5b0cd",
+    "speaking/app.js": "b316017235b3c4a5882c7e785fd228558e12f91411f1a80cddae25ab4f9b02c2",
+    "speaking/style.css": "059a7e0f830b218d21f3d6552c8a7ba3ea0a179b2b77ef43e3830275c48d40bc",
+    "speaking/capture.js": "302e976f2a558188b390723c1c76a010d0c568c514bff2a7c3c6c4fcfcc61dfa",
+    "test_speaking.py": "2b6b0cd383df026855417fd972df0c02e49e0b3b60a23090e493f57fab509ba5",
+    "test_speaking_ui.mjs": "7fe04095e0b201fb5652b8b8fc766c1c0d77fcd578018050e8c0d8c30f9e8183",
+    "test_speaking_http.py": "9dfcb3c9b40cd21b36147fa0b507a4d9d3f981f6db1af3d6108e8f9ef65aebad"
+  },
+  "paid_spend_usd": 0,
+  "physical_microphone_tested": false,
+  "mobile_hardware_tested": false,
+  "pronunciation_accuracy_established": false
+}

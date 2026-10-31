@@ -520,10 +520,13 @@ test('lifetime projection rejects missing proof and retains no expiry only for v
 test('coarse attribution is snapshotted before Stripe and retries preserve it', async () => {
  for(const ambiguous of [false,true]){
   const f=fixture();
-  const analytics={source:'google',medium:'organic',campaign:'diagnostic',ui_locale:'fr',landing_page:'/fr/diagnostic/en'};
+  const analytics={source:'google',medium:'organic',campaign:'diagnostic',ui_locale:'fr',landing_page:'/fr/diagnostic/en',experiment_id:'diag-paywall-v1',experiment_variant:'paid',offer_placement:'diagnostic-report'};
   assert.equal((await f.handler(request(undefined,{plan:'monthly',requestId,analytics}))).status,200);
   const original=structuredClone(f.state.pending.parameters);
   assert.equal(original.metadata.mp_source,'google');
+  assert.equal(original.metadata.mp_experiment_id,'diag-paywall-v1');
+  assert.equal(original.metadata.mp_experiment_variant,'paid');
+  assert.equal(original.metadata.mp_offer_placement,'diagnostic-report');
   assert.equal(original.metadata.mp_ui_locale,'fr');
   assert.equal(original.metadata.mp_landing_page,'/fr/diagnostic/en');
   assert.equal(original.subscription_data.metadata.mp_source,undefined);
@@ -580,4 +583,14 @@ test('recovery expires original before creating replacement and reuses discounte
  res=await f.handler(request('/billing/checkout',{plan:'lifetime',requestId:secondRequestId,recovery:true}));assert.equal(res.status,200);assert.equal(f.state.pending.operationId,operation);
  offer.expiresAt=now-1;
  res=await f.handler(request('/billing/checkout',{plan:'lifetime',requestId:secondRequestId,recovery:true}));assert.equal(res.status,409);
+});
+
+test('inconclusive membership snapshot cannot erase an existing paid grant and stays retryable', async () => {
+ const f=await queuedFixture();
+ f.ports.stripe.currentSubscriptionSnapshot=async()=>({...binding,livemode:false,subscriptionId:null,status:'none',paidPeriods:[]});
+ await rejectCode(processQueuedEvent('evt_synthetic',f.config,f.ports,NOW),'snapshot_unverified');
+ assert.equal(f.state.projected.length,0);
+ assert.equal(f.state.queued.get('evt_synthetic').processed,false);
+ f.ports.stripe.currentSubscriptionSnapshot=async()=>snapshot();
+ assert.equal((await processQueuedEvent('evt_synthetic',f.config,f.ports,NOW+1)).active,true);
 });

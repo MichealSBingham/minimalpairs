@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "checks": [
+    "initial load and engine connection",
+    "two real example recordings analyzed and plotted",
+    "audio replay decodes and starts",
+    "explicit export preserves labels and ungraded measurements",
+    "uncertain attempt adds no stale or fabricated point",
+    "clear removes replay controls and chart points",
+    "recorded WAV can be explicitly saved",
+    "AudioWorklet fake-microphone capture auto-stops, flushes, analyzes, releases tracks",
+    "server failure preserves replay audio and recovers controls without a false point",
+    "recordings are not persisted across reload",
+    "denied microphone permission offers working file fallback",
+    "file upload works after microphone denial",
+    "mobile layout has no horizontal overflow and examples work",
+    "no browser JavaScript exceptions"
+  ],
+  "errors": [],
+  "limitations": [
+    "Fake microphone uses existing example audio; no physical microphone test.",
+    "Mobile is an emulated viewport, not a mobile device.",
+    "Playback start verified; no human listening assessment."
+  ]
+}

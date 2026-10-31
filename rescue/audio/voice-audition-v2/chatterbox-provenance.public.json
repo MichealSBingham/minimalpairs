@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-01T19:00:15.292049+00:00",
+  "scope": "Reproducibility record for the 16-word Mandarin audition; not permission for further generation or an audio approval.",
+  "adapter": "chatterbox_candidate.py",
+  "adapterSha256": "4dbf6f11e3f5d6efe9a6846e03f99aa05ddfe3b4ec18c527c7d9b10aa09c4379",
+  "adapterNotes": "Portable wrapper preserves the actual generation settings, seed and clip-ID formulas, float-WAV serialization and technical gates. Adds an opt-in generation flag, new run ID, bounded smoke4/full16 selection and optional immutable reuse. Never expands beyond the pinned audition IDs.",
+  "runtime": {
+    "python": "3.12",
+    "mlxAudio": "0.5.7",
+    "soundfile": "0.14.0",
+    "hardware": "Apple Silicon Metal; numerical output may vary with runtime or hardware"
+  },
+  "model": {
+    "repo": "mlx-community/chatterbox-fp16",
+    "revision": "4923fcca09086356aeab5191a2348c5a17a23694",
+    "downloadedAt": "2026-10-01T18:53:26.950627+00:00",
+    "files": [
+      {
+        "file": "config.json",
+        "bytes": 121,
+        "sha256": "022fb7f8158c59ee2947459404621a1ddf026f2cb300087db03e0f630b4ca299"
+      },
+      {
+        "file": "tokenizer.json",
+        "bytes": 70011,
+        "sha256": "df81a7ca7c31796cbe97f7a7142d5a53b12e88e12417ebe98f66602cafaf0461"
+      },
+      {
+        "file": "Cangjie5_TC.json",
+        "bytes": 1920163,
+        "sha256": "7073fd9de919443ae88e0bd2449917a65fe54898a4413ed1edcc4b67f28bce8c"
+      },
+      {
+        "file": "model.safetensors",
+        "bytes": 2574468060,
+        "sha256": "8455018319208ce1dc9098536187e6439b735fb8f2939709efee2af250689c38"
+      },
+      {
+        "file": "conds.safetensors",
+        "bytes": 105316,
+        "sha256": "709e5a7fa80e010a011c8244f553853aed7a49c106fff54008fbd89a0f5a6148"
+      },
+      {
+        "file": "README.md",
+        "bytes": 2486,
+        "sha256": "34b739a691ce529e53ea2766003090bb567a8885dfbeb61295a043fad84be393"
+      }
+    ]
+  },
+  "tokenizer": {
+    "repo": "mlx-community/S3TokenizerV2",
+    "revision": "e0c9886f0e1c35ae85b1f27277416fb19fc72bec",
+    "downloadedAt": "2026-10-01T18:53:35.300384+00:00",
+    "files": [
+      {
+        "file": "config.json",
+        "bytes": 126,
+        "sha256": "8591fcc0eaae8c2bbfc69cf9d439933ecdf2d58cb9be63d00ce88736c4f2aa9d"
+      },
+      {
+        "file": "model.safetensors",
+        "bytes": 494868984,
+        "sha256": "928726bc1f206a613d36b8f49e297eae9c5593a21bf9b92ddfe2c23f85eb92cc"
+      },
+      {
+        "file": "README.md",
+        "bytes": 459,
+        "sha256": "7114249e13d3487e1b3d7f5f91fefdce746679342dca7afc8e52b1617b66bea5"
+      }
+    ]
+  },
+  "conditioning": {
+    "sourceRepo": "mlx-community/chatterbox-fp16",
+    "sourceRevision": "4923fcca09086356aeab5191a2348c5a17a23694",
+    "file": "conds.safetensors",
+    "sha256": "709e5a7fa80e010a011c8244f553853aed7a49c106fff54008fbd89a0f5a6148",
+    "identity": "packaged-default-not-a-verified-native-speaker"
+  },
+  "licenses": {
+    "upstream": "MIT",
+    "upstreamUrl": "https://github.com/resemble-ai/chatterbox/blob/master/LICENSE",
+    "conversionModelCard": "Apache-2.0",
+    "conversionUrl": "https://huggingface.co/mlx-community/chatterbox-fp16"
+  },
+  "settings": {
+    "lang_code": "zh",
+    "exaggeration": 0.1,
+    "cfg_weight": 0.5,
+    "temperature": 0.8,
+    "repetition_penalty": 1.2,
+    "min_p": 0.05,
+    "top_p": 1.0,
+    "max_new_tokens": 96,
+    "verbose": false,
+    "stream": false
+  },
+  "targetLocale": "cmn-CN",
+  "requestedProviderLanguage": "zh",
+  "textBankId": "text-bank-v2",
+  "wordsetSha256": "b4ed45910487b89ba4fdf25be073f2794c886a0cb306985eedb5552977044509",
+  "auditionWordIds": [
+    "zh-balance-5988-1",
+    "zh-balance-9ebb-2",
+    "zh-balance-9a6c-3",
+    "zh-balance-9a82-4",
+    "zh-balance-8bd7-1",
+    "zh-balance-5341-2",
+    "zh-balance-4f7f-3",
+    "zh-balance-662f-4",
+    "zh-balance-6c64-1",
+    "zh-balance-7cd6-2",
+    "zh-balance-8eba-3",
+    "zh-balance-70eb-4",
+    "zh-balance-9e21-1",
+    "zh-balance-6025-2",
+    "zh-balance-6324-3",
+    "zh-balance-8bb0-4"
+  ],
+  "sourceRunId": "mandarin-chatterbox-full16-20261001",
+  "sourceManifestSha256": "1df90abc32f30e9e8fe22dc245dd81481608992fe76ec931b14991212e221677",
+  "findings": {
+    "clips": 16,
+    "preservedFromSmoke": 4,
+    "newSingleAttempts": 12,
+    "technicalPasses": 16,
+    "blindAsrExactSpellingMatches": 1,
+    "reviewStatus": "pending"
+  },
+  "limitations": [
+    "One bundled synthetic default voice; speaker identity, native accent and Mandarin tone accuracy are unverified.",
+    "Model-card Chinese support is not proof of correct isolated monosyllables.",
+    "MLX community multilingual v2 conversion, not the newer Mandarin-specific V3 finetune.",
+    "Technical checks and later ASR are triage only; every pronunciation review remains pending.",
+    "GenerationResult.token_count in this installed adapter counts input tokens; speech EOS and length are captured separately.",
+    "Input is exactly the selected character followed by a full stop; no carrier phrase, reading hint, crop, speed adjustment or tone manipulation is applied.",
+    "Blind ASR matched only one of sixteen expected spellings; alternative characters, short-clip hallucination and pronunciation errors require listening review. No pronunciation or tone validation is claimed."
+  ]
+}

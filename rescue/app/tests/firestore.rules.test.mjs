@@ -165,8 +165,8 @@ describe('Firestore isolation and server-owned entitlement rules', { skip: !host
   }
   it('preserves diagnostic length metadata and rejects invalid values', async () => {
     const ref=doc(owner,'users','buyer','sessions','diagnostic-length');
-    await assertSucceeds(setDoc(ref,{...abxSession,id:'diagnostic-length',purpose:'diagnostic',diagnosticLength:'full',diagnosticVersion:'diagnostic-v2',diagnosticGroups:32}));
-    for(const [i,patch] of [{diagnosticLength:'bogus'},{diagnosticGroups:0},{diagnosticVersion:'bogus'}].entries()){
+    await assertSucceeds(setDoc(ref,{...abxSession,id:'diagnostic-length',purpose:'diagnostic',diagnosticLength:'full',diagnosticVersion:'diagnostic-v2',diagnosticGroups:32,diagnosticExperimentVariant:'paid'}));
+    for(const [i,patch] of [{diagnosticLength:'bogus'},{diagnosticGroups:0},{diagnosticVersion:'bogus'},{diagnosticExperimentVariant:'bogus'}].entries()){
       const id='invalid-diagnostic-'+i;
       await assertFails(setDoc(doc(owner,'users','buyer','sessions',id),{...abxSession,id,purpose:'diagnostic',...patch}));
     }

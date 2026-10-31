@@ -1,0 +1,171 @@
+{
+  "languageId": "es",
+  "mainLocale": "es-MX",
+  "mainDialect": "Mexican Spanish; starter contrasts also occur widely elsewhere",
+  "curriculumSha256": "9e75f976f8b72d0df1f6b5da4c6afda06074d4f13ae91a533c0a77ebe7fe1db6",
+  "contrast": {
+    "id": "es-tap-trill",
+    "label": "Caro or carro?",
+    "phonemes": [
+      "ɾ",
+      "r"
+    ],
+    "description": "Between vowels, the single tap in caro and the trill in carro can distinguish words. Match the consonant category across different words; no spoken response is required.",
+    "l1Notes": [],
+    "pairs": [
+      {
+        "id": "es-caro-carro",
+        "words": [
+          {
+            "text": "caro",
+            "ipa": "/ˈkaɾo/",
+            "meaning": "expensive",
+            "phonemes": [
+              "k",
+              "a",
+              "ɾ",
+              "o"
+            ]
+          },
+          {
+            "text": "carro",
+            "ipa": "/ˈkaro/",
+            "meaning": "car; cart",
+            "phonemes": [
+              "k",
+              "a",
+              "r",
+              "o"
+            ]
+          }
+        ],
+        "kind": "minimal",
+        "sources": [
+          "https://dle.rae.es/caro",
+          "https://dle.rae.es/carro"
+        ],
+        "validation": {
+          "text": "editor-curated",
+          "audio": "pending-listening-review"
+        },
+        "abx": {
+          "categoryByWordIndex": [
+            0,
+            1
+          ],
+          "targetTokenIndex": 2,
+          "targetPosition": "medial",
+          "trialGroup": "all"
+        }
+      },
+      {
+        "id": "es-pero-perro",
+        "words": [
+          {
+            "text": "pero",
+            "ipa": "/ˈpeɾo/",
+            "meaning": "but",
+            "phonemes": [
+              "p",
+              "e",
+              "ɾ",
+              "o"
+            ]
+          },
+          {
+            "text": "perro",
+            "ipa": "/ˈpero/",
+            "meaning": "dog",
+            "phonemes": [
+              "p",
+              "e",
+              "r",
+              "o"
+            ]
+          }
+        ],
+        "kind": "minimal",
+        "sources": [
+          "https://dle.rae.es/pero",
+          "https://dle.rae.es/perro"
+        ],
+        "validation": {
+          "text": "editor-curated",
+          "audio": "pending-listening-review"
+        },
+        "abx": {
+          "categoryByWordIndex": [
+            0,
+            1
+          ],
+          "targetTokenIndex": 2,
+          "targetPosition": "medial",
+          "trialGroup": "all"
+        }
+      },
+      {
+        "id": "es-coro-corro",
+        "words": [
+          {
+            "text": "coro",
+            "ipa": "/ˈkoɾo/",
+            "meaning": "choir",
+            "phonemes": [
+              "k",
+              "o",
+              "ɾ",
+              "o"
+            ]
+          },
+          {
+            "text": "corro",
+            "ipa": "/ˈkoro/",
+            "meaning": "I run",
+            "phonemes": [
+              "k",
+              "o",
+              "r",
+              "o"
+            ]
+          }
+        ],
+        "kind": "minimal",
+        "sources": [
+          "https://dle.rae.es/coro",
+          "https://dle.rae.es/correr"
+        ],
+        "validation": {
+          "text": "editor-curated",
+          "audio": "pending-listening-review"
+        },
+        "abx": {
+          "categoryByWordIndex": [
+            0,
+            1
+          ],
+          "targetTokenIndex": 2,
+          "targetPosition": "medial",
+          "trialGroup": "all"
+        }
+      }
+    ],
+    "sources": [
+      "https://doi.org/10.1017/S0025100316000232",
+      "https://www.fundeu.es/noticia/la-erre/"
+    ],
+    "targetSoundFocus": "Listen for the tap or trill between the vowels.",
+    "abx": {
+      "matchType": "phoneme",
+      "targetSoundFocus": "Listen for the tap or trill between the vowels.",
+      "prompt": "Which reference shares X’s target sound?",
+      "categoryLabels": [
+        "ɾ",
+        "r"
+      ],
+      "categoryOrder": "words[0] is category 0; words[1] is category 1",
+      "xMustUseDifferentPair": true,
+      "xMustExcludeBothReferenceWordTexts": true,
+      "presentation": "audio-only-until-answer-or-explicit-text-assist"
+    }
+  }
+}

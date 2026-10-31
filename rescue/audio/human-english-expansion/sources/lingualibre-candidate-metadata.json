@@ -1,0 +1,3482 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "146298947": {
+        "pageid": 146298947,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Grendelkhan-book.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-03-11T23:31:48Z",
+            "user": "Grendelkhan",
+            "size": 58156,
+            "width": 0,
+            "height": 0,
+            "duration": 0.6053333333333333,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/44/LL-Q1860_%28eng%29-Grendelkhan-book.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-book.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=146298947",
+            "sha1": "7eb21d07c34214e72727effc43008780be89c5bb",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-03-11 23:31:48",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Grendelkhan-book",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Lingua Libre pronunciation-eng|Lingua Libre pronunciation by Grendelkhan",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-03-11",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q1315672\" class=\"extiw\" title=\"lingualibre:Q1315672\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q929501\" class=\"extiw\" title=\"lingualibre:Q929501\">Grendelkhan</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Grendelkhan\" title=\"User:Grendelkhan\">Grendelkhan</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 935683467,
+            "parentid": 907788599,
+            "timestamp": "2024-10-09T00:43:29Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-zero}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-Zero"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Grendelkhan"
+          }
+        ]
+      },
+      "148570050": {
+        "pageid": 148570050,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Grendelkhan-buck.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-05-20T21:28:31Z",
+            "user": "Grendelkhan",
+            "size": 59436,
+            "width": 0,
+            "height": 0,
+            "duration": 0.6186666666666667,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/LL-Q1860_%28eng%29-Grendelkhan-buck.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-buck.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=148570050",
+            "sha1": "8bf3e9c57b19ea24f1218354a78018195d4b1582",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-05-20 21:28:31",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Grendelkhan-buck",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Lingua Libre pronunciation-eng|Lingua Libre pronunciation by Grendelkhan",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-05-20",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q1340850\" class=\"extiw\" title=\"lingualibre:Q1340850\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q929501\" class=\"extiw\" title=\"lingualibre:Q929501\">Grendelkhan</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Grendelkhan\" title=\"User:Grendelkhan\">Grendelkhan</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 1222872728,
+            "parentid": 907798861,
+            "timestamp": "2026-05-30T13:10:56Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-zero}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-Zero"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Grendelkhan"
+          }
+        ]
+      },
+      "148568683": {
+        "pageid": 148568683,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Grendelkhan-cap.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-05-20T20:56:30Z",
+            "user": "Grendelkhan",
+            "size": 63020,
+            "width": 0,
+            "height": 0,
+            "duration": 0.656,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/45/LL-Q1860_%28eng%29-Grendelkhan-cap.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-cap.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=148568683",
+            "sha1": "c349cf930a8d8517a3de4c9e7cc8df68d6f25229",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-05-20 20:56:30",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Grendelkhan-cap",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Lingua Libre pronunciation-eng|Lingua Libre pronunciation by Grendelkhan",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-05-20",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q1340742\" class=\"extiw\" title=\"lingualibre:Q1340742\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q929501\" class=\"extiw\" title=\"lingualibre:Q929501\">Grendelkhan</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Grendelkhan\" title=\"User:Grendelkhan\">Grendelkhan</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 945838620,
+            "parentid": 907809327,
+            "timestamp": "2024-10-17T23:11:46Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-zero}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-Zero"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Grendelkhan"
+          }
+        ]
+      },
+      "146298941": {
+        "pageid": 146298941,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Grendelkhan-cat.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-03-11T23:31:37Z",
+            "user": "Grendelkhan",
+            "size": 60972,
+            "width": 0,
+            "height": 0,
+            "duration": 0.6346666666666667,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/75/LL-Q1860_%28eng%29-Grendelkhan-cat.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-cat.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=146298941",
+            "sha1": "14221b1347f5e76b6e6ba978664f0705d11b4a46",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-03-11 23:31:37",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Grendelkhan-cat",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Lingua Libre pronunciation-eng|Lingua Libre pronunciation by Grendelkhan",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-03-11",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q1315668\" class=\"extiw\" title=\"lingualibre:Q1315668\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q929501\" class=\"extiw\" title=\"lingualibre:Q929501\">Grendelkhan</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Grendelkhan\" title=\"User:Grendelkhan\">Grendelkhan</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 985468331,
+            "parentid": 907813804,
+            "timestamp": "2025-01-20T08:07:03Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-zero}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-Zero"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Grendelkhan"
+          }
+        ]
+      },
+      "146286868": {
+        "pageid": 146286868,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Grendelkhan-cup.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-03-11T17:59:03Z",
+            "user": "Grendelkhan",
+            "size": 58924,
+            "width": 0,
+            "height": 0,
+            "duration": 0.6133333333333333,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/LL-Q1860_%28eng%29-Grendelkhan-cup.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-cup.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=146286868",
+            "sha1": "e4b0027a7bd1a3d7cf7095108300fff2caab1e4d",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-03-11 17:59:03",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Grendelkhan-cup",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Lingua Libre pronunciation-eng|Lingua Libre pronunciation by Grendelkhan",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-03-11",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q1315229\" class=\"extiw\" title=\"lingualibre:Q1315229\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q929501\" class=\"extiw\" title=\"lingualibre:Q929501\">Grendelkhan</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Grendelkhan\" title=\"User:Grendelkhan\">Grendelkhan</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 910252848,
+            "parentid": 907849741,
+            "timestamp": "2024-08-16T15:04:36Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-zero}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-Zero"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Grendelkhan"
+          }
+        ]
+      },
+      "146476356": {
+        "pageid": 146476356,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Grendelkhan-cut.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-03-17T02:59:51Z",
+            "user": "Grendelkhan",
+            "size": 59180,
+            "width": 0,
+            "height": 0,
+            "duration": 0.616,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/54/LL-Q1860_%28eng%29-Grendelkhan-cut.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-cut.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=146476356",
+            "sha1": "cb6449107e191ef8f3ad1b4ad05ea9d50d764bc2",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-03-17 02:59:51",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Grendelkhan-cut",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Lingua Libre pronunciation-eng|Lingua Libre pronunciation by Grendelkhan",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-03-16",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q1319062\" class=\"extiw\" title=\"lingualibre:Q1319062\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q929501\" class=\"extiw\" title=\"lingualibre:Q929501\">Grendelkhan</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Grendelkhan\" title=\"User:Grendelkhan\">Grendelkhan</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 1252692884,
+            "parentid": 907850749,
+            "timestamp": "2026-07-27T10:46:42Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-zero}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-Zero"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Grendelkhan"
+          }
+        ]
+      },
+      "147569104": {
+        "pageid": 147569104,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Grendelkhan-lack.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-04-20T20:32:05Z",
+            "user": "Grendelkhan",
+            "size": 68652,
+            "width": 0,
+            "height": 0,
+            "duration": 0.7146666666666667,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/LL-Q1860_%28eng%29-Grendelkhan-lack.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-lack.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=147569104",
+            "sha1": "35d4af2df0d1ec465d07a0d0de3af336cf4c76b4",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-04-20 20:32:05",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Grendelkhan-lack",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Lingua Libre pronunciation-eng|Lingua Libre pronunciation by Grendelkhan",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-04-20",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q1331504\" class=\"extiw\" title=\"lingualibre:Q1331504\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q929501\" class=\"extiw\" title=\"lingualibre:Q929501\">Grendelkhan</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Grendelkhan\" title=\"User:Grendelkhan\">Grendelkhan</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 1249104079,
+            "parentid": 908024867,
+            "timestamp": "2026-07-19T08:20:56Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-zero}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-Zero"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Grendelkhan"
+          }
+        ]
+      },
+      "146298938": {
+        "pageid": 146298938,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Grendelkhan-look.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-03-11T23:31:31Z",
+            "user": "Grendelkhan",
+            "size": 60716,
+            "width": 0,
+            "height": 0,
+            "duration": 0.632,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/dc/LL-Q1860_%28eng%29-Grendelkhan-look.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-look.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=146298938",
+            "sha1": "5c0f8faa12f76621c0546e5062ec6f259b37bd89",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-03-11 23:31:31",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Grendelkhan-look",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Lingua Libre pronunciation-eng|Lingua Libre pronunciation by Grendelkhan",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-03-11",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q1315664\" class=\"extiw\" title=\"lingualibre:Q1315664\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q929501\" class=\"extiw\" title=\"lingualibre:Q929501\">Grendelkhan</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Grendelkhan\" title=\"User:Grendelkhan\">Grendelkhan</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 934767553,
+            "parentid": 908045666,
+            "timestamp": "2024-10-07T11:53:28Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-zero}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-Zero"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Grendelkhan"
+          }
+        ]
+      },
+      "146331672": {
+        "pageid": 146331672,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Grendelkhan-luck.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-03-13T00:24:42Z",
+            "user": "Grendelkhan",
+            "size": 62508,
+            "width": 0,
+            "height": 0,
+            "duration": 0.6506666666666666,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/44/LL-Q1860_%28eng%29-Grendelkhan-luck.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-luck.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=146331672",
+            "sha1": "3811171a9cbc576a96b05ef2f1b1fbb120ac051f",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-03-13 00:24:42",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Grendelkhan-luck",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Lingua Libre pronunciation-eng|Lingua Libre pronunciation by Grendelkhan",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-03-12",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q1317188\" class=\"extiw\" title=\"lingualibre:Q1317188\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q929501\" class=\"extiw\" title=\"lingualibre:Q929501\">Grendelkhan</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Grendelkhan\" title=\"User:Grendelkhan\">Grendelkhan</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 908049142,
+            "parentid": 908049116,
+            "timestamp": "2024-08-09T22:25:19Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-zero}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-Zero"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Grendelkhan"
+          }
+        ]
+      },
+      "146299551": {
+        "pageid": 146299551,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Grendelkhan-pleasure.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-03-12T00:09:42Z",
+            "user": "Grendelkhan",
+            "size": 75564,
+            "width": 0,
+            "height": 0,
+            "duration": 0.7866666666666666,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/LL-Q1860_%28eng%29-Grendelkhan-pleasure.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-pleasure.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=146299551",
+            "sha1": "64c0e329346035e700f413881a875994f2432bdb",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-03-12 00:09:42",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Grendelkhan-pleasure",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Lingua Libre pronunciation-eng|Lingua Libre pronunciation by Grendelkhan",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-03-11",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q1315735\" class=\"extiw\" title=\"lingualibre:Q1315735\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q929501\" class=\"extiw\" title=\"lingualibre:Q929501\">Grendelkhan</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Grendelkhan\" title=\"User:Grendelkhan\">Grendelkhan</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 1022258881,
+            "parentid": 908137391,
+            "timestamp": "2025-04-18T12:25:16Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-zero}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-Zero"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Grendelkhan"
+          }
+        ]
+      },
+      "146331748": {
+        "pageid": 146331748,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Grendelkhan-put.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-03-13T00:26:22Z",
+            "user": "Grendelkhan",
+            "size": 59180,
+            "width": 0,
+            "height": 0,
+            "duration": 0.616,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/80/LL-Q1860_%28eng%29-Grendelkhan-put.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-put.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=146331748",
+            "sha1": "1564730d0f008d09e5bad5eb4f8898b33094760c",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-03-13 00:26:22",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Grendelkhan-put",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Lingua Libre pronunciation-eng|Lingua Libre pronunciation by Grendelkhan",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-03-12",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q1317239\" class=\"extiw\" title=\"lingualibre:Q1317239\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q929501\" class=\"extiw\" title=\"lingualibre:Q929501\">Grendelkhan</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Grendelkhan\" title=\"User:Grendelkhan\">Grendelkhan</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 908168504,
+            "parentid": 908168464,
+            "timestamp": "2024-08-10T09:57:41Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-zero}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-Zero"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Grendelkhan"
+          }
+        ]
+      },
+      "148558990": {
+        "pageid": 148558990,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Grendelkhan-version.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-05-20T15:55:57Z",
+            "user": "Grendelkhan",
+            "size": 90156,
+            "width": 0,
+            "height": 0,
+            "duration": 0.9386666666666666,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/LL-Q1860_%28eng%29-Grendelkhan-version.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-version.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=148558990",
+            "sha1": "c22144378a17fd4377569dbec06dc803fcd2229f",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-05-20 15:55:57",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Grendelkhan-version",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Lingua Libre pronunciation-eng|Lingua Libre pronunciation by Grendelkhan",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-05-20",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q1340610\" class=\"extiw\" title=\"lingualibre:Q1340610\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q929501\" class=\"extiw\" title=\"lingualibre:Q929501\">Grendelkhan</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Grendelkhan\" title=\"User:Grendelkhan\">Grendelkhan</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 908964566,
+            "parentid": 908393751,
+            "timestamp": "2024-08-12T20:54:12Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-zero}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-Zero"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Grendelkhan"
+          }
+        ]
+      },
+      "148346064": {
+        "pageid": 148346064,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Grendelkhan-virgin.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-05-14T16:51:59Z",
+            "user": "Grendelkhan",
+            "size": 81196,
+            "width": 0,
+            "height": 0,
+            "duration": 0.8453333333333334,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/LL-Q1860_%28eng%29-Grendelkhan-virgin.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-virgin.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=148346064",
+            "sha1": "e1208e2556c476d782e9531ed6d6a4b35428a377",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-05-14 16:51:59",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Grendelkhan-virgin",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Lingua Libre pronunciation-eng|Lingua Libre pronunciation by Grendelkhan",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-05-14",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q1336724\" class=\"extiw\" title=\"lingualibre:Q1336724\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q929501\" class=\"extiw\" title=\"lingualibre:Q929501\">Grendelkhan</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Grendelkhan\" title=\"User:Grendelkhan\">Grendelkhan</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 1194093359,
+            "parentid": 908963881,
+            "timestamp": "2026-04-08T23:23:50Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-zero}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-Zero"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Grendelkhan"
+          }
+        ]
+      },
+      "128660150": {
+        "pageid": 128660150,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Vealhurl-cup.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2023-02-12T19:30:10Z",
+            "user": "Vealhurl",
+            "size": 68396,
+            "width": 0,
+            "height": 0,
+            "duration": 0.712,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/7/72/LL-Q1860_%28eng%29-Vealhurl-cup.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Vealhurl-cup.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=128660150",
+            "sha1": "e19186b93354e8cdb0d254a2e9607694d08c9fa4",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2023-02-12 19:30:10",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Vealhurl-cup",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Lingua Libre pronunciation by Vealhurl|Lingua Libre pronunciation-eng",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2023-02-12",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q868314\" class=\"extiw\" title=\"lingualibre:Q868314\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q206227\" class=\"extiw\" title=\"lingualibre:Q206227\">Vealhurl</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Vealhurl\" title=\"User:Vealhurl\">Vealhurl</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 739037213,
+            "parentid": 739037212,
+            "timestamp": "2023-03-09T03:14:19Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-by-sa-4.0}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-BY-SA-4.0"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Vealhurl"
+          }
+        ]
+      },
+      "128659999": {
+        "pageid": 128659999,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Vealhurl-cut.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2023-02-12T19:26:01Z",
+            "user": "Vealhurl",
+            "size": 76588,
+            "width": 0,
+            "height": 0,
+            "duration": 0.7973333333333333,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/LL-Q1860_%28eng%29-Vealhurl-cut.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Vealhurl-cut.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=128659999",
+            "sha1": "2f8cbaca2cacfb83b80fb314a6f76c10b8f60caf",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2023-02-12 19:26:01",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Vealhurl-cut",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Lingua Libre pronunciation by Vealhurl|Lingua Libre pronunciation-eng",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2023-02-12",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q868256\" class=\"extiw\" title=\"lingualibre:Q868256\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q206227\" class=\"extiw\" title=\"lingualibre:Q206227\">Vealhurl</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Vealhurl\" title=\"User:Vealhurl\">Vealhurl</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 921440874,
+            "parentid": 739036933,
+            "timestamp": "2024-09-09T04:10:06Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-by-sa-4.0}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-BY-SA-4.0"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Vealhurl"
+          }
+        ]
+      },
+      "128650608": {
+        "pageid": 128650608,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Vealhurl-lack.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2023-02-12T14:04:20Z",
+            "user": "Vealhurl",
+            "size": 76588,
+            "width": 0,
+            "height": 0,
+            "duration": 0.7973333333333333,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/2c/LL-Q1860_%28eng%29-Vealhurl-lack.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Vealhurl-lack.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=128650608",
+            "sha1": "9fbdc95037d39b8e0cb1e2bb537d3a5e58dea83d",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2023-02-12 14:04:20",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Vealhurl-lack",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Lingua Libre pronunciation by Vealhurl|Lingua Libre pronunciation-eng",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2023-02-12",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q867896\" class=\"extiw\" title=\"lingualibre:Q867896\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q206227\" class=\"extiw\" title=\"lingualibre:Q206227\">Vealhurl</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Vealhurl\" title=\"User:Vealhurl\">Vealhurl</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 739209955,
+            "parentid": 739209953,
+            "timestamp": "2023-03-10T00:06:49Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-by-sa-4.0}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-BY-SA-4.0"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Vealhurl"
+          }
+        ]
+      },
+      "98855262": {
+        "pageid": 98855262,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Vealhurl-legion.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2021-01-14T13:08:46Z",
+            "user": "Vealhurl",
+            "size": 109356,
+            "width": 0,
+            "height": 0,
+            "duration": 1.1386666666666667,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/LL-Q1860_%28eng%29-Vealhurl-legion.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Vealhurl-legion.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=98855262",
+            "sha1": "fff00f10f83e44876f58fa04ca8ed461fca8982c",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2021-01-14 13:08:46",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Vealhurl-legion",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Lingua Libre pronunciation by Vealhurl|Lingua Libre pronunciation-eng",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2021-01-14",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q431187\" class=\"extiw\" title=\"lingualibre:Q431187\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q206227\" class=\"extiw\" title=\"lingualibre:Q206227\">Vealhurl</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Vealhurl\" title=\"User:Vealhurl\">Vealhurl</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 748506171,
+            "parentid": 748506170,
+            "timestamp": "2023-04-09T05:00:08Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-by-sa-4.0}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-BY-SA-4.0"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Vealhurl"
+          }
+        ]
+      },
+      "110547296": {
+        "pageid": 110547296,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Vealhurl-lesion.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2021-09-29T10:03:30Z",
+            "user": "Vealhurl",
+            "size": 109356,
+            "width": 0,
+            "height": 0,
+            "duration": 1.1386666666666667,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/22/LL-Q1860_%28eng%29-Vealhurl-lesion.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Vealhurl-lesion.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=110547296",
+            "sha1": "00fc8fad0646e923db7f025db9331512907f017d",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2021-09-29 10:03:30",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Vealhurl-lesion",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Lingua Libre pronunciation by Vealhurl|Lingua Libre pronunciation-eng",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2021-09-29",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q662672\" class=\"extiw\" title=\"lingualibre:Q662672\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q206227\" class=\"extiw\" title=\"lingualibre:Q206227\">Vealhurl</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Vealhurl\" title=\"User:Vealhurl\">Vealhurl</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 748510501,
+            "parentid": 748510499,
+            "timestamp": "2023-04-09T05:18:09Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-by-sa-4.0}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-BY-SA-4.0"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Vealhurl"
+          }
+        ]
+      },
+      "117765932": {
+        "pageid": 117765932,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Vealhurl-look.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2022-05-07T15:39:38Z",
+            "user": "Vealhurl",
+            "size": 92972,
+            "width": 0,
+            "height": 0,
+            "duration": 0.968,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/LL-Q1860_%28eng%29-Vealhurl-look.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Vealhurl-look.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=117765932",
+            "sha1": "05dc3e1789ee5b82384c528f56b16ada7391ef42",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2022-05-07 15:39:38",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Vealhurl-look",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "Lingua Libre pronunciation by Vealhurl|Lingua Libre pronunciation-eng",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2022-05-07",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q774961\" class=\"extiw\" title=\"lingualibre:Q774961\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q206227\" class=\"extiw\" title=\"lingualibre:Q206227\">Vealhurl</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Vealhurl\" title=\"User:Vealhurl\">Vealhurl</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 1090948455,
+            "parentid": 748518595,
+            "timestamp": "2025-09-25T22:17:44Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-by-sa-4.0}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-BY-SA-4.0"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Vealhurl"
+          }
+        ]
+      },
+      "143575553": {
+        "pageid": 143575553,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Wodencafe-book.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-01-06T05:56:55Z",
+            "user": "Wodencafe",
+            "size": 63276,
+            "width": 0,
+            "height": 0,
+            "duration": 0.6586666666666666,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/0d/LL-Q1860_%28eng%29-Wodencafe-book.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Wodencafe-book.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=143575553",
+            "sha1": "db704fd1676ece1f4d29595a20936037b8efe459",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-01-06 05:56:55",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Wodencafe-book",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Lingua Libre pronunciation-eng|Lingua Libre pronunciation by Wodencafe",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-01-05",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q1251163\" class=\"extiw\" title=\"lingualibre:Q1251163\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q1207413\" class=\"extiw\" title=\"lingualibre:Q1207413\">Wodencafe</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Wodencafe\" title=\"User:Wodencafe\">Wodencafe</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 845386736,
+            "parentid": 845386686,
+            "timestamp": "2024-01-25T21:39:25Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-zero}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-Zero"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Wodencafe"
+          }
+        ]
+      },
+      "143577997": {
+        "pageid": 143577997,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Wodencafe-cat.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-01-06T07:49:27Z",
+            "user": "Wodencafe",
+            "size": 65580,
+            "width": 0,
+            "height": 0,
+            "duration": 0.6826666666666666,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/LL-Q1860_%28eng%29-Wodencafe-cat.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Wodencafe-cat.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=143577997",
+            "sha1": "846b996643aea6d799f94c4d20a16a6ec668eb30",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-01-06 07:49:27",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Wodencafe-cat",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Lingua Libre pronunciation-eng|Lingua Libre pronunciation by Wodencafe",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-01-06",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q1251651\" class=\"extiw\" title=\"lingualibre:Q1251651\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q1207413\" class=\"extiw\" title=\"lingualibre:Q1207413\">Wodencafe</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Wodencafe\" title=\"User:Wodencafe\">Wodencafe</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 1083734585,
+            "parentid": 845423513,
+            "timestamp": "2025-09-10T15:02:40Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-zero}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-Zero"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Wodencafe"
+          }
+        ]
+      },
+      "143580251": {
+        "pageid": 143580251,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Wodencafe-cup.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-01-06T09:12:19Z",
+            "user": "Wodencafe",
+            "size": 61740,
+            "width": 0,
+            "height": 0,
+            "duration": 0.6426666666666667,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/5a/LL-Q1860_%28eng%29-Wodencafe-cup.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Wodencafe-cup.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=143580251",
+            "sha1": "545e88cc6b14d5b39f0b06da5c8bb256f7893450",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-01-06 09:12:19",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Wodencafe-cup",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Lingua Libre pronunciation-eng|Lingua Libre pronunciation by Wodencafe",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-01-06",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q1252027\" class=\"extiw\" title=\"lingualibre:Q1252027\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q1207413\" class=\"extiw\" title=\"lingualibre:Q1207413\">Wodencafe</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Wodencafe\" title=\"User:Wodencafe\">Wodencafe</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 1186099274,
+            "parentid": 845509772,
+            "timestamp": "2026-03-24T08:20:17Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-zero}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-Zero"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Wodencafe"
+          }
+        ]
+      },
+      "143575130": {
+        "pageid": 143575130,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Wodencafe-cut.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-01-06T05:41:59Z",
+            "user": "Wodencafe",
+            "size": 72492,
+            "width": 0,
+            "height": 0,
+            "duration": 0.7546666666666667,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/LL-Q1860_%28eng%29-Wodencafe-cut.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Wodencafe-cut.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=143575130",
+            "sha1": "780bddb529d1ed0fbf82290d7b300db57275cecf",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-01-06 05:41:59",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Wodencafe-cut",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Lingua Libre pronunciation-eng|Lingua Libre pronunciation by Wodencafe",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-01-05",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q1251059\" class=\"extiw\" title=\"lingualibre:Q1251059\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q1207413\" class=\"extiw\" title=\"lingualibre:Q1207413\">Wodencafe</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Wodencafe\" title=\"User:Wodencafe\">Wodencafe</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 997738213,
+            "parentid": 845512155,
+            "timestamp": "2025-02-12T21:09:50Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-zero}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-Zero"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Wodencafe"
+          }
+        ]
+      },
+      "143573402": {
+        "pageid": 143573402,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Wodencafe-look.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-01-06T04:04:44Z",
+            "user": "Wodencafe",
+            "size": 68140,
+            "width": 0,
+            "height": 0,
+            "duration": 0.7093333333333334,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/2/2f/LL-Q1860_%28eng%29-Wodencafe-look.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Wodencafe-look.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=143573402",
+            "sha1": "c3a65d3b4f754a4a1449a2ee3a52af73634ae3c5",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-01-06 04:04:44",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Wodencafe-look",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Lingua Libre pronunciation-eng|Lingua Libre pronunciation by Wodencafe",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-01-05",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q1250674\" class=\"extiw\" title=\"lingualibre:Q1250674\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q1207413\" class=\"extiw\" title=\"lingualibre:Q1207413\">Wodencafe</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Wodencafe\" title=\"User:Wodencafe\">Wodencafe</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 866949687,
+            "parentid": 845825679,
+            "timestamp": "2024-04-09T04:58:41Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-zero}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-Zero"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Wodencafe"
+          }
+        ]
+      },
+      "143575611": {
+        "pageid": 143575611,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Wodencafe-luck.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-01-06T05:58:11Z",
+            "user": "Wodencafe",
+            "size": 66092,
+            "width": 0,
+            "height": 0,
+            "duration": 0.688,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/LL-Q1860_%28eng%29-Wodencafe-luck.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Wodencafe-luck.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=143575611",
+            "sha1": "f2dfc0909168abc7924964337b10be14c1f4985e",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-01-06 05:58:11",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Wodencafe-luck",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Lingua Libre pronunciation-eng|Lingua Libre pronunciation by Wodencafe",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-01-05",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q1251202\" class=\"extiw\" title=\"lingualibre:Q1251202\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q1207413\" class=\"extiw\" title=\"lingualibre:Q1207413\">Wodencafe</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Wodencafe\" title=\"User:Wodencafe\">Wodencafe</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 1121042300,
+            "parentid": 845829923,
+            "timestamp": "2025-11-25T01:09:29Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-zero}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-Zero"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Wodencafe"
+          }
+        ]
+      },
+      "143577868": {
+        "pageid": 143577868,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Wodencafe-pleasure.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-01-06T07:47:56Z",
+            "user": "Wodencafe",
+            "size": 81708,
+            "width": 0,
+            "height": 0,
+            "duration": 0.8506666666666667,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/LL-Q1860_%28eng%29-Wodencafe-pleasure.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Wodencafe-pleasure.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=143577868",
+            "sha1": "0e466b968019fb3e60fdeb6ba66c0bccb4f2ac9e",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-01-06 07:47:56",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Wodencafe-pleasure",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Lingua Libre pronunciation-eng|Lingua Libre pronunciation by Wodencafe",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-01-06",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q1251610\" class=\"extiw\" title=\"lingualibre:Q1251610\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q1207413\" class=\"extiw\" title=\"lingualibre:Q1207413\">Wodencafe</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Wodencafe\" title=\"User:Wodencafe\">Wodencafe</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 1114324678,
+            "parentid": 845960380,
+            "timestamp": "2025-11-12T23:14:37Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-zero}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-Zero"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Wodencafe"
+          }
+        ]
+      },
+      "143574229": {
+        "pageid": 143574229,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Wodencafe-put.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-01-06T04:57:11Z",
+            "user": "Wodencafe",
+            "size": 58156,
+            "width": 0,
+            "height": 0,
+            "duration": 0.6053333333333333,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/LL-Q1860_%28eng%29-Wodencafe-put.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Wodencafe-put.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=143574229",
+            "sha1": "3ea12bb6a2ba023a7b0b65b1133c430aa1c8e783",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-01-06 04:57:11",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Wodencafe-put",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Lingua Libre pronunciation-eng|Lingua Libre pronunciation by Wodencafe",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-01-05",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q1250790\" class=\"extiw\" title=\"lingualibre:Q1250790\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q1207413\" class=\"extiw\" title=\"lingualibre:Q1207413\">Wodencafe</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Wodencafe\" title=\"User:Wodencafe\">Wodencafe</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 968046425,
+            "parentid": 866947406,
+            "timestamp": "2024-12-09T12:50:47Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-zero}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-Zero"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Wodencafe"
+          }
+        ]
+      },
+      "148934539": {
+        "pageid": 148934539,
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Wodencafe-putt.wav",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-06-01T01:46:06Z",
+            "user": "Wodencafe",
+            "size": 58156,
+            "width": 0,
+            "height": 0,
+            "duration": 0.6053333333333333,
+            "comment": "",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/a/ab/LL-Q1860_%28eng%29-Wodencafe-putt.wav?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Wodencafe-putt.wav",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=148934539",
+            "sha1": "67dc7625a28c9dc4f5d57a2b5051fbac24b18504",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-06-01 01:46:06",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "LL-Q1860 (eng)-Wodencafe-putt",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "CC-Zero|Lingua Libre pronunciation-eng|Lingua Libre pronunciation by Wodencafe",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation file from the <b><a href=\"//lingualibre.org/wiki/\" class=\"extiw\" title=\"lingualibre:\">Lingua Libre</a></b> <span typeof=\"mw:File\"><a href=\"https://lingualibre.org\" rel=\"nofollow\"><img alt=\"Lingua Libre\" src=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/40px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail\" decoding=\"async\" loading=\"lazy\" width=\"22\" height=\"22\" class=\"mw-file-element\" srcset=\"https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Lingualibre-logo-no-text.svg/60px-Lingualibre-logo-no-text.svg.png?utm_source=commons.wikimedia.org&amp;utm_campaign=parser&amp;utm_content=thumbnail 2x\" data-file-width=\"185\" data-file-height=\"185\"></a></span> project.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-05-31",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span> (<a href=\"//lingualibre.org/wiki/Q1348650\" class=\"extiw\" title=\"lingualibre:Q1348650\">Lingua Libre</a>)",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<ul><li>Speaker: <a href=\"//lingualibre.org/wiki/Q1207413\" class=\"extiw\" title=\"lingualibre:Q1207413\">Wodencafe</a></li>\n<li>Recorder: <a href=\"//commons.wikimedia.org/wiki/User:Wodencafe\" title=\"User:Wodencafe\">Wodencafe</a></li></ul>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 908168920,
+            "parentid": 908168886,
+            "timestamp": "2024-08-10T09:59:18Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Lingua Libre record}}\n\n== {{int:license-header}} ==\n{{cc-zero}}"
+              }
+            }
+          }
+        ],
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:CC-Zero"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation-eng"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Lingua Libre pronunciation by Wodencafe"
+          }
+        ]
+      }
+    }
+  },
+  "limits": {
+    "categories": 500
+  }
+}

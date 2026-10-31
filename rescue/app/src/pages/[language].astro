@@ -1,4 +1,5 @@
 ---
+import ListeningDemo from '../components/ListeningDemo';
 import {challenges} from '../lib/growth-content';
 import '../styles/growth.css';
 import Base from '../layouts/Base.astro';
@@ -23,12 +24,22 @@ const entranceCopy: Record<string, { intro: string; description: string }> = {
   fr: { intro: 'Hear the difference between French words like tu and tout. Explore vowels, nasal vowels and consonants with audio examples, then practice the sounds you find hardest.', description: 'French minimal pairs with audio, IPA and word examples. Compare tu vs tout, nasal vowels and more. Take a free listening diagnostic to find your next lesson.' },
   en: { intro: 'Hear the difference between English words like ship and sheep. Explore vowel and consonant contrasts with audio examples, then practice the sounds you find hardest.', description: 'English minimal pairs with audio, IPA and word examples. Explore American English vowel and consonant contrasts, then try a free listening diagnostic.' },
 };
+entranceCopy.zh={intro:'Hear Mandarin tones in real words. Compare a level first tone with a falling fourth tone, then explore the tone pairs and consonants you find difficult.',description:'Mandarin Chinese minimal pairs with audio: practice tone differences, hear word examples and test your listening. Start with Tone 1 vs Tone 4, then explore more contrasts.'};
+entranceCopy.ja={intro:'Hear the differences that change Japanese words: short and long vowels, single and doubled consonants, and other sound contrasts. Try a listening round before choosing your next lesson.',description:'Japanese minimal pairs and sound contrasts with audio. Practice short and long vowels, doubled consonants and listening discrimination with different words and voices.'};
+const entryDemos:Record<string,{contrast:string;title:string;body:string}>= {
+ fr:{contrast:'fr-u-y',title:'Can you hear French u and ou?',body:'Tu and tout differ in one vowel. Listen to the examples, then match the same vowel in a new word.'},
+ zh:{contrast:'zh-tone-1-4',title:'Same syllable. Different tone. Can you hear it?',body:'Mandarin mā (妈, mother) has a high, level tone. Mà (骂, scold) has a falling tone. Match the tone across different words, without the spelling giving it away.'},
+ ja:{contrast:'ja-i-length',title:'Can you hear a short i and a long ī?',body:'Japanese vowel length matters. Compare the two vowel categories, then hear whether a new word contains the short or long vowel.'}
+};
+const entryDemo=entryDemos[language.id],demoLanguage=getPracticeLanguages().find(l=>l.id===language.id);
 const entrance = entranceCopy[language.id];
+const learnerTitles: Record<string, string> = {fr:'Hear French u vs ou: Listening Practice & Minimal Pairs',en:'Hear Ship vs Sheep: English Listening Practice & Minimal Pairs',ja:'Japanese Long Vowel Listening Practice & Minimal Pairs',zh:'Mandarin Tone Listening Practice & Minimal Pairs'};
+const learnerHeading: Record<string, string> = {fr:'Hear the difference in French.',en:'Hear the difference in English.',ja:'Hear short and long Japanese sounds.',zh:'Learn to hear Mandarin tone differences.'};
 const description = entrance?.description || `${language.name} listening practice with ${count} word pairs, IPA, meanings and focused sound guides. Explore ${language.dialect.toLowerCase()} one contrast at a time.`;
 const url = absoluteUrl(`/${slugFor(language)}`);
 const schema = { '@context': 'https://schema.org', '@type': 'CollectionPage', name: `${language.name} minimal pairs`, description, url, inLanguage: 'en', hasPart: language.contrasts.map(contrast => ({ '@type': 'LearningResource', name: contrast.label, url: absoluteUrl(`/learn/${contrast.id}`), learningResourceType: 'Listening practice guide' })) };
 ---
-<Base title={`${language.name} Minimal Pairs with Audio & Listening Test | MinimalPairs`} description={description}>
+<Base title={`${learnerTitles[language.id] || `${language.name} Listening Practice & Minimal Pairs`} | MinimalPairs`} description={description}>
   <Header />
   <main class="ed-page language-chooser">
     <div class="ed-wrap">
@@ -37,17 +48,20 @@ const schema = { '@context': 'https://schema.org', '@type': 'CollectionPage', na
         {languages.map(item => <a href={`/${slugFor(item)}`} aria-current={item.id === language.id ? 'page' : undefined}>{item.name}</a>)}
       </nav>
       <section class="language-chooser-heading" aria-labelledby="language-title">
-        <p class="ed-eyebrow">CHOOSE A SOUND</p>
-        <h1 id="language-title">{language.name} <em>minimal pairs.</em></h1>
+        <p class="ed-eyebrow">MINIMAL PAIRS · LISTENING PRACTICE</p>
+        <h1 id="language-title">{learnerHeading[language.id] || `Hear the difference in ${language.name}.`}</h1>
         <p class="ed-lede">{entrance?.intro || 'Start with a difference you find hard to hear. Words stay hidden during practice until you choose to show them.'}</p>
         <div class="language-chooser-meta"><span>{language.dialect}</span><span>{language.contrasts.length} sound contrasts</span></div>
-        {lessonIds.size > 0 && <p><a class="ed-text-link" href={`/diagnostic/${language.id}`}>Find your starting point: free listening diagnostic <Icon name="arrow" size={18} /></a></p>}
-        <p class="language-chooser-note">{lessonIds.size > 0 ? 'Get a short listening check and a sound-by-sound result, or choose a contrast below. Practice keeps the words hidden until you choose to reveal them.' : 'Explore the sound contrasts and word examples below.'}</p>
+        {lessonIds.size > 0 && <p><a class="ed-text-link" href={`/diagnostic/${language.id}`}>Find the sounds you find hard to hear <Icon name="arrow" size={18} /></a></p>}
+        <p class="language-chooser-note">{lessonIds.size > 0 ? 'Take a listening test or choose a sound below. You don’t need to read IPA to start.' : 'Explore the sound contrasts and word examples below.'}</p>
 
       </section>
 
       {['en','fr'].includes(language.id) && <section class="growth-related"><h2>Try a quick listening challenge.</h2><div class="growth-links">{challenges.filter(c=>c.language===language.id).map(c=><a href={`/challenge/${c.slug}`}>{c.title}</a>)}</div><p><a href="/resources/minimal-pairs-after-fluent-forever">Read Fluent Forever? Start practicing →</a> · <a href="/resources/minimal-pairs-without-anki">Practice without building a deck →</a></p></section>}
 
+      {entryDemo && demoLanguage && <section class="growth-grid" aria-label="Try a listening exercise"><div><p class="ed-eyebrow">START WITH A LISTEN</p><h2>{entryDemo.title}</h2><p>{entryDemo.body}</p><p>Hear different words and voices. After your answer, the matching sounds replay so you can compare them.</p><div class="growth-links"><a href={`/diagnostic/${language.id}`}>Find which sounds to practice →</a><a href={`/learn/${entryDemo.contrast}`}>Hear the word examples →</a></div></div><ListeningDemo client:visible language={demoLanguage} contrastId={entryDemo.contrast}/></section>}
+
+      {language.id === 'fr' && <p class="growth-related"><a href="/resources/read-french-but-cant-understand">Can read French but miss the words when listening? Try this →</a></p>}
       <section class="language-chooser-catalog" aria-label={`${language.name} sound contrasts`}>
         <div class="language-contrast-grid">{language.contrasts.map(contrast => <article class="language-contrast-card">
           <div class="language-contrast-main">

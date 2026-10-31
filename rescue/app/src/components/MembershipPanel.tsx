@@ -1,10 +1,13 @@
 import RecoveryOffer from './RecoveryOffer';
+import {saveOfferContext} from '../lib/offer-attribution.mjs';
+import {saveCheckoutHandoff,takeCheckoutHandoff} from '../lib/checkout-handoff.mjs';
+export type OfferContext = {experiment_id?:string;experiment_variant?:string;offer_placement?:string;attempt_id?:string;language_id?:string;diagnostic_length?:'short'|'full'};
 import {diagnosticReturnPath, diagnosticReturnLabel} from '../lib/diagnostic-return';
 import { useMeasuredExposure } from './useMeasuredExposure';
 import { trackMeasurement } from '../lib/measurement';
 import { useEffect, useRef, useState } from 'react';
 import { getSession, observeSession, refreshSession, type SessionUser } from '../lib/auth';
-import { billingAvailable, checkoutAvailable, getRecoveryOffer, createMembershipCheckout, createMembershipPortal, getMembershipCheckoutStatus, type MembershipPlan, type CheckoutStatus } from '../lib/billing-client';
+import { getMarketPrice, billingAvailable, checkoutAvailable, getRecoveryOffer, createMembershipCheckout, createMembershipPortal, getMembershipCheckoutStatus, type MembershipPlan, type CheckoutStatus } from '../lib/billing-client';
 import { getEntitlement, type Entitlement } from '../lib/entitlements';
 import { checkoutStorageKey, clearConfirmedCheckout, readPendingCheckout, reserveCheckout, adoptServerCheckout, withCheckoutLock, type PendingCheckout } from '../lib/billing-checkout-state';
 import '../styles/membership.css';
@@ -14,15 +17,27 @@ type AccessState = 'loading' | 'ready' | 'error';
 
 const issueCode = (issue: unknown) => issue && typeof issue === 'object' && 'code' in issue ? issue.code : '';
 
-/** No checkout or portal request occurs on mount, identity change, focus or return. */
-export default function MembershipPanel({ storefront = false, embedded = false, locale = 'en' }: { storefront?: boolean; embedded?: boolean; locale?: string }) {
+/** Checkout requires a plan click, or its fresh single-use sign-in continuation. */
+export default function MembershipPanel({ storefront = false, embedded = false, locale = 'en', practiceContext, offerContext }: { storefront?: boolean; embedded?: boolean; locale?: string; offerContext?:OfferContext; practiceContext?: {language_id:string; contrast_id:string; session_kind:'focused'; attempt_id:string} }) {
   const t = commerce(locale); const path = (value: string) => commercePath(locale, value);
   const surface = embedded ? 'practice' : storefront ? 'pricing' : 'account';
-  const selectPlan = (plan: MembershipPlan) => trackMeasurement('plan_selected',{surface,ui_locale:locale,plan});
+  const handoff = useRef<{plan:MembershipPlan;context:OfferContext}|null>(null);
+  const handoffConsumed = useRef(false);
+  const [market,setMarket]=useState<{country:string;tier:string;lifetime:number;monthly:number;version:string}|null>(null);
+  useEffect(()=>{let active=true;getMarketPrice().then(q=>{if(active)setMarket(q);}).catch(()=>{});return()=>{active=false;};},[]);
+  const marketData=market?{market_country:market.country,market_tier:market.tier}:{};
+  const context = {...marketData,...practiceContext,...offerContext,...handoff.current?.context};
+  const selectPlan = (plan: MembershipPlan) => trackMeasurement('plan_selected',{...context,surface,ui_locale:locale,plan});
+  const guestPlanClick = (event:React.MouseEvent<HTMLAnchorElement>,plan:MembershipPlan) => {
+    if(!market){event.preventDefault();return;}
+    selectPlan(plan);
+    if(event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+    try { const nonce=saveCheckoutHandoff(window.sessionStorage,plan,context); if(nonce)event.currentTarget.href=path(`/account?plan=${plan}&checkout_intent=${encodeURIComponent(nonce)}#account-sign-in`); } catch { /* Storage unavailable: retain explicit account plan selection. */ }
+  };
   const signInPlanPath=(plan:MembershipPlan)=>path(`/account?plan=${plan}#account-sign-in`);
   const issueMessage = (_issue: unknown) => t('error');
   const [selectedPlan,setSelectedPlan]=useState<MembershipPlan|null>(null);
-  useEffect(()=>{const plan=new URLSearchParams(location.search).get('plan');if(plan==='monthly'||plan==='lifetime')setSelectedPlan(plan);},[]);
+  useEffect(()=>{try{handoff.current=takeCheckoutHandoff(window.sessionStorage,location.search);}catch{}const plan=new URLSearchParams(location.search).get('plan');if(plan==='monthly'||plan==='lifetime')setSelectedPlan(plan);},[]);
   const [user, setUser] = useState<SessionUser | null>(null);
   const [identityReady, setIdentityReady] = useState(false);
   const [access, setAccess] = useState<Entitlement | null>(null);
@@ -41,7 +56,7 @@ export default function MembershipPanel({ storefront = false, embedded = false, 
   const requestBusy = useRef(false);
   const currentUid = useRef<string | null>(null);
   const [planExposureNode, setPlanExposureNode] = useState<HTMLDivElement | null>(null);
-  useMeasuredExposure(planExposureNode, `${surface}:${locale}`, 'plans_view', {surface,ui_locale:locale,access_tier:'free'});
+  useMeasuredExposure(market?planExposureNode:null, `${surface}:${locale}:${practiceContext?.attempt_id || ''}`, 'plans_view', {...context,surface,ui_locale:locale,access_tier:'free'});
 
   function readPending(uid: string) {
     try { setPending(readPendingCheckout(window.localStorage, uid)); setStorageError(''); }
@@ -100,10 +115,11 @@ export default function MembershipPanel({ storefront = false, embedded = false, 
     void getRecoveryOffer(user.id).then(offer=>{if(active && offer.eligible)setRecoveryExpiry(offer.expiresAt!);}).catch(()=>{});
     return()=>{active=false;};
   },[user?.id,status,access,returning]);
-  async function act(kind: 'checkout' | 'portal' | 'status', plan?: MembershipPlan, recovery=false) {
+  async function act(kind: 'checkout' | 'portal' | 'status', plan?: MembershipPlan, recovery=false, continuation=false) {
     if (!billingAvailable || !user?.email_verified || requestBusy.current || status !== 'ready') return;
-    if (kind === 'checkout' && (!checkoutAvailable || access || storageError || !plan)) return;
-    if (kind === 'checkout' && plan) selectPlan(plan);
+    if (kind === 'checkout' && (!market || !checkoutAvailable || access || storageError || !plan)) return;
+    if (kind === 'checkout' && plan && !continuation) selectPlan(plan);
+    if (kind === 'checkout')saveOfferContext(window.sessionStorage,context);
     const expectedId = user.id;
     const token = generation.current;
     let checkoutPlan = plan;
@@ -152,14 +168,14 @@ export default function MembershipPanel({ storefront = false, embedded = false, 
       await sameAccount();
       if (destination) {
         if(kind === 'checkout') {
-          trackMeasurement('begin_checkout',{surface,ui_locale:locale,plan:checkoutPlan});
-          if (resumingOpenCheckout) trackMeasurement('checkout_resumed',{surface,ui_locale:locale,plan:checkoutPlan});
+          trackMeasurement('begin_checkout',{...context,surface,ui_locale:locale,plan:checkoutPlan});
+          if (resumingOpenCheckout) trackMeasurement('checkout_resumed',{...context,surface,ui_locale:locale,plan:checkoutPlan});
         }
         if(kind === 'portal') trackMeasurement('billing_portal_open',{surface,ui_locale:locale});
         window.location.assign(destination);
       }
     } catch (issue) {
-      if(kind === 'checkout') trackMeasurement('checkout_error',{surface,ui_locale:locale,plan,outcome:'failed'});
+      if(kind === 'checkout') trackMeasurement('checkout_error',{...context,surface,ui_locale:locale,plan,outcome:'failed'});
       if (generation.current === token) {
         setError(issueMessage(issue));
         if (issueCode(issue) === 'billing/existing_subscription_use_portal') setPortalSuggested(true);
@@ -168,15 +184,22 @@ export default function MembershipPanel({ storefront = false, embedded = false, 
       }
     } finally { requestBusy.current = false; setBusy(null); }
   }
+  useEffect(()=>{
+    if(!handoff.current || handoffConsumed.current || !user?.email_verified || status!=='ready')return;
+    handoffConsumed.current=true;
+    if(!access && !returning && !storageError && checkoutAvailable)void act('checkout',handoff.current.plan,false,true);
+  },[user?.id,user?.email_verified,status,access,returning,storageError]);
   useEffect(()=>{if(selectedPlan && user?.email_verified && status==='ready' && !access)document.querySelector('.plan-selected')?.scrollIntoView({block:'center',behavior:'smooth'});},[selectedPlan,user?.id,status,access]);
   if (!billingAvailable) return null;
   const verified = Boolean(user?.email_verified);
   const lifetime = access?.plan === 'lifetime';
   const membership = access?.source === 'subscription';
-  const disabled = Boolean(busy) || status !== 'ready';
+  const disabled = !market || Boolean(busy) || status !== 'ready';
+  const experimentOffer = embedded && ['diag-paywall-v1','diag-next-step-v1'].includes(offerContext?.experiment_id||'');
+  const planOrder:MembershipPlan[] = ['lifetime','monthly'];
   const planCards = <div className="membership-plans">
     {storefront && !embedded && <div className="plan-free"><span className="plan-kicker">{t('explore')}</span><h3>{t('free')}</h3><p className="membership-price">$0</p><p>{t('freePitch')}</p><ul><li>{t('freeDiagnostic')}</li><li>{t('freeExercises')}</li><li>{t('freeUnlimited')}</li><li>{t('voicesHidden')}</li></ul><a className="button button-outline" href={path('/practice')}>{t('startFree')}</a><p className="membership-fine">{t('noCard')}</p></div>}
-    {(['monthly','lifetime'] as MembershipPlan[]).map(plan => <div key={plan} ref={plan === 'monthly' ? setPlanExposureNode : undefined} className={`${plan === 'lifetime' ? 'plan-lifetime' : 'plan-monthly'} ${selectedPlan===plan?'plan-selected':''}`} style={selectedPlan===plan?{outline:'2px solid var(--blue)',outlineOffset:4}:undefined}><span className="plan-kicker">{t(plan === 'lifetime' ? 'payOnce' : 'flexible')}</span><h3>{t(plan)}</h3><p className="membership-price">{plan === 'lifetime' ? '$29' : '$7'}<span> USD {plan === 'lifetime' ? t('once') : `/ ${t('month')}`} </span></p><p>{t(plan === 'lifetime' ? 'lifetimeDetail' : 'monthlyDetail')}</p><ul><li>{t('allExercises')}</li><li>{t('unlimited')}</li><li>{t('voices')}</li><li>{t('feedback')}</li></ul>{user?.email_verified ? <button className="button button-dark" disabled={disabled || Boolean(storageError)} onClick={() => void act('checkout',plan)}>{busy === 'checkout' ? t('opening') : pending?.plan === plan ? t('resumeCheckout') : t(plan === 'lifetime' ? 'chooseLifetime' : 'chooseMonthly')}</button> : <a className="button button-dark" onClick={() => selectPlan(plan)} href={signInPlanPath(plan)}>{t(plan === 'lifetime' ? 'chooseLifetime' : 'chooseMonthly')}</a>}<p className="membership-fine">{t(plan === 'lifetime' ? 'lifetimeCharge' : 'monthlyCharge')}</p></div>)}
+    {planOrder.map(plan => <div key={plan} ref={plan === planOrder[0] ? setPlanExposureNode : undefined} className={`${plan === 'lifetime' ? 'plan-lifetime' : 'plan-monthly'} ${selectedPlan===plan?'plan-selected':''}`} style={selectedPlan===plan?{outline:'2px solid var(--blue)',outlineOffset:4}:undefined}><span className="plan-kicker">{t(plan === 'lifetime' ? 'payOnce' : 'flexible')}</span><h3>{t(plan)}</h3><p className="membership-price">{plan === 'lifetime' && market && market.lifetime<2900 && <del style={{fontSize:'0.5em',opacity:0.55,marginRight:12}}>$29</del>}{market ? `$${((plan === 'lifetime' ? market.lifetime : market.monthly)/100).toFixed(2).replace(/\.00$/, '')}` : '…'}<span> USD {plan === 'lifetime' ? t('once') : `/ ${t('month')}`} </span></p><p>{t(plan === 'lifetime' ? 'lifetimeDetail' : 'monthlyDetail')}</p><ul><li>{t('allExercises')}</li><li>{t('unlimited')}</li><li>{t('voices')}</li><li>{t('feedback')}</li></ul>{user?.email_verified ? <button className={`button ${experimentOffer && plan==='monthly'?'button-outline':'button-dark'}`} disabled={disabled || Boolean(storageError)} onClick={() => void act('checkout',plan)}>{busy === 'checkout' ? t('opening') : pending?.plan === plan ? t('resumeCheckout') : t(plan === 'lifetime' ? 'chooseLifetime' : 'chooseMonthly')}</button> : <a className={`button ${experimentOffer && plan==='monthly'?'button-outline':'button-dark'}`} onClick={event => guestPlanClick(event,plan)} href={signInPlanPath(plan)}>{t(plan === 'lifetime' ? 'chooseLifetime' : 'chooseMonthly')}</a>}<p className="membership-fine">{market ? t(plan === 'lifetime' ? 'lifetimeCharge' : 'monthlyCharge').replace(/29/g,(market.lifetime/100).toFixed(2).replace(/\.00$/, '')) : '…'}</p></div>)}
   </div>;
   return <section id="membership" className={`membership-panel ${storefront ? 'membership-storefront' : ''}`} aria-labelledby="membership-heading">
     {!embedded && reportReturn && <p><a className="button button-outline" href={path(reportReturn)}>{diagnosticReturnLabel(locale)} →</a></p>}

@@ -1,0 +1,64 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "searchinfo": {
+      "totalhits": 6
+    },
+    "search": [
+      {
+        "ns": 6,
+        "title": "File:De-Pütt.ogg",
+        "pageid": 91531752,
+        "size": 1053,
+        "wordcount": 144,
+        "snippet": "DescriptionDe-<span class=\"searchmatch\">Pütt</span>.ogg English: Pronunciation recording of German noun &quot;<span class=\"searchmatch\">Pütt</span>&quot;, IPA: /pʏt/. Male voice, recorded by native German speaker from Berlin, Germany",
+        "timestamp": "2024-06-28T10:27:44Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Wodencafe-putt.wav",
+        "pageid": 148934539,
+        "size": 88,
+        "wordcount": 12,
+        "snippet": "(eng)-Wodencafe-<span class=\"searchmatch\">putt</span>.wav Audio pronunciation file from the Lingua Libre project. Language InfoField English Transcription InfoField <span class=\"searchmatch\">putt</span> Date 31 May 2024",
+        "timestamp": "2024-08-10T09:59:18Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:En-us-putt from the rough.oga",
+        "pageid": 148257526,
+        "size": 336,
+        "wordcount": 45,
+        "snippet": "hereby publish it under the following license: English pronunciation of &quot;<span class=\"searchmatch\">putt</span> from the rough&quot; in American English author name string: Paul2520 Wikimedia",
+        "timestamp": "2025-02-07T15:11:52Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:En-au-putt.ogg",
+        "pageid": 79218846,
+        "size": 333,
+        "wordcount": 161,
+        "snippet": "DescriptionEn-au-<span class=\"searchmatch\">putt</span>.ogg English: Pronunciation in English of &quot;<span class=\"searchmatch\">putt</span>&quot;. Male, Australian accent. Date 26 May 2019 Source Own work Author Commander Keane",
+        "timestamp": "2026-06-10T15:40:55Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:De-Putt.ogg",
+        "pageid": 91531743,
+        "size": 1132,
+        "wordcount": 144,
+        "snippet": "DescriptionDe-<span class=\"searchmatch\">Putt</span>.ogg English: Pronunciation recording of German noun &quot;<span class=\"searchmatch\">Putt</span>&quot;, IPA: /pat/. Male voice, recorded by native German speaker from Berlin, Germany",
+        "timestamp": "2024-06-28T10:20:00Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:Nl-putt.ogg",
+        "pageid": 41031928,
+        "size": 408,
+        "wordcount": 144,
+        "snippet": "DescriptionNl-<span class=\"searchmatch\">putt</span>.ogg Dutch pronunciation for &quot;<span class=\"searchmatch\">putt</span>&quot; — male voice. Date 17 June 2015 Source Own work Author marcel coenders",
+        "timestamp": "2020-08-19T18:10:58Z"
+      }
+    ]
+  }
+}

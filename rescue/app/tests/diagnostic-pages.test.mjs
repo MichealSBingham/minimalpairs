@@ -10,5 +10,5 @@ test('every practice language has a translated diagnostic route',()=>{
  assert.equal(hasTranslations('/diagnostic/en-GB-ssbe'),false);
 });
 test('diagnostic copy covers all interface languages and explains next steps',()=>{
- for(const locale of locales){const copy=diagnosticCopy(locale);assert.equal(copy.steps.length,3);for(const value of Object.values(copy)) assert.ok(value.length>0);if(locale!=='en')assert.notEqual(copy.title,diagnosticCopy('en').title);}
+ for(const locale of locales){const copy=diagnosticCopy(locale);assert.equal(copy.steps.length,3);for(const [key,value] of Object.entries(copy)) {if(key==='resultsBody')assert.equal(value,'');else assert.ok(value.length>0,key);}if(locale!=='en')assert.notEqual(copy.title,diagnosticCopy('en').title);}
 });

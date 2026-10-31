@@ -17,11 +17,43 @@ for day,v in days:
  for length,counts in v.get('diagnostics',{}).items():
   diagnostic_rows.append([day.split(':')[1],length,counts.get('diagnostic_start',0),counts.get('diagnostic_complete',0),counts.get('diagnostic_offer_click',0),counts.get('begin_checkout',0),counts.get('purchases',0)])
 content+='<h2>Short versus full diagnostics</h2><p>New events only. Checkout and purchase use the last observed diagnostic length; this is a comparison of self-selected users, not a randomized experiment.</p>'+table(['UTC date','Version','Started','Completed','Offer clicks','Checkout','Purchases'],diagnostic_rows)
+offer_rows=[]
+for day,v in days:
+ for key,e in v.get('offers',{}).items():
+  u=e.get('visitorEstimates',{})
+  offer_rows.append([day.split(':')[1],key,u.get('plans_view',0),u.get('plan_selected',0),u.get('begin_checkout',0),e.get('purchases',0),e.get('grossMinor',{}).get('usd',0)/100])
+content+='<h2>Purchase offer placement</h2><p>Explicit placement labels only. Daily visitor estimates are not exact people; an earlier checkout without placement remains unattributed.</p>'+table(['UTC date','Placement','Saw plans','Selected plan','Checkout','Purchases','Gross USD'],offer_rows)
+experiment_rows=[]
+for day,v in days:
+ for key,e in v.get('experiments',{}).items():
+  u=e.get('visitorEstimates',{})
+  experiment_rows.append([day.split(':')[1],key,u.get('experiment_exposure',0),e.get('attempts',0),u.get('diagnostic_complete',0),u.get('plan_selected',0),u.get('login',0),u.get('begin_checkout',0),u.get('checkout_error',0),e.get('purchases',0),e.get('grossMinor',{}).get('usd',0)/100])
+content+='<h2>Diagnostic report experiment</h2><p>Assigned exposures are daily browser estimates, not exact people or distinct visitors across days. Starts count distinct observed attempt IDs. Completion, selection and checkout columns count daily estimates with the explicit variant; purchases use the immutable checkout metadata, not later browsing. Do not sum daily estimates as unique people or infer significance from small samples.</p>'+table(['UTC date','Experiment | variant','Exposed estimates','Attempts started','Completed estimates','Plan-selection estimates','Sign-in estimates','Checkout estimates','Checkout errors','Paid purchases','Gross USD'],experiment_rows)
+experiment_totals={}
+for _,v in days:
+ for key,e in v.get('experiments',{}).items():
+  t=experiment_totals.setdefault(key,{'exposures':0,'purchases':0,'gross':0})
+  t['exposures']+=e.get('visitorEstimates',{}).get('experiment_exposure',0)
+  t['purchases']+=e.get('purchases',0)
+  t['gross']+=e.get('grossMinor',{}).get('usd',0)/100
+content+='<h3>Observed-window revenue comparison</h3><p>Exposure denominator is the sum of daily exposed-browser estimates, not distinct people. Later purchases and repeat-day visits can change this ratio. Gross only; reconcile refunds separately. No significance or winner is implied.</p>'+table(['Variant','Daily exposed estimates summed','Purchases','Gross USD','Gross per exposure estimate USD'],[[k,t['exposures'],t['purchases'],round(t['gross'],2),round(t['gross']/t['exposures'],3) if t['exposures'] else 'Not measurable'] for k,t in experiment_totals.items()])
+conversion_events=['diagnostic_complete','diagnostic_offer_click','diagnostic_report_unlock_click','plan_selected','login','begin_checkout','checkout_error']
+content+='<h2>Where purchase interest stops</h2><p>Offer clicks scroll to the plans. Report unlock clicks select a plan inside diagnostic results. Plan selections, sign-ins and checkout starts below are site-wide event totals, not a joined diagnostic cohort or unique people; do not divide these columns into a conversion rate.</p>'+table(['UTC date','Diagnostics completed','Scrolled to plans','Diagnostic plan clicks','All plan selections','All sign-ins','Checkout starts','Checkout errors'],[[day.split(':')[1],*[v['events'].get(event,0) for event in conversion_events]] for day,v in days])
 content+='<h2>Verified purchases</h2>'+table(['Payment confirmed UTC','Amount','Observed source','Language','Landing page','Joined daily visit'],[[p.get('paymentConfirmedAt') or 'Unavailable',f"{p['currency'].upper()} {p['amount']/100:.2f}",p['source'],p['language'],p['landingPage'],'Yes' if p['joined'] else 'No'] for p in d['latestVerifiedPurchases']])
 content+='<h2>Partial and completed practice</h2>'+table(['UTC day · language · sound group','Attempts','Answered rounds','Completed','Exited','Inactive incomplete'],[[k,v['attempts'],v['answeredRounds'],v['completed'],v['exited'],v['inactiveIncomplete']] for k,v in d.get('attemptSummary',{}).items()])
 source_rows=[]
 for day,v in days:
  for source,n in v['sources'].items():source_rows.append([day.split(':')[1],source,n,v['purchaseSources'].get(source,0)])
+language_rows=[]
+for day,v in days:
+ totals={}
+ for key,n in v.get('languages',{}).items():
+  event,language,*_=key.split('|')
+  if event not in ['practice_start','practice_answer','practice_complete','practice_audio_error']:continue
+  row=totals.setdefault(language,{})
+  row[event]=row.get(event,0)+n
+ for language,row in sorted(totals.items()):language_rows.append([day.split(':')[1],language,row.get('practice_start',0),row.get('practice_answer',0),row.get('practice_complete',0),row.get('practice_audio_error',0)])
+content+='<h2>Practice by language and playback errors</h2><p>Event counts, not distinct learners. Playback errors do not establish a pronunciation defect.</p>'+table(['UTC date','Language','Starts','Answers','Completions','Playback errors'],language_rows)
 content+='<h2>Discovery</h2>'+table(['UTC date','Source','Daily visitors est.','Verified purchases'],source_rows)
 status=root/'private/buyer-automation-status.json'
 if status.exists():

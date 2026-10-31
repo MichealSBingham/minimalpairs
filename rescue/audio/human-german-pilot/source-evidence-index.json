@@ -1,0 +1,271 @@
+{
+  "retainedAt": "2026-09-28T21:50:28.047451+00:00",
+  "files": [
+    {
+      "path": "sources/alternate-bottleneck-search.json",
+      "sha256": "caef67cf39017334de634365176e66c5c2e2027a1684862fb4b9f986d9d57fc6",
+      "bytes": 8855
+    },
+    {
+      "path": "sources/alternate-dictionary-audio-map.json",
+      "sha256": "8133e7818cf475abd8b83263a86f6539f8ab1b4357016b3ed7064e78b37673e6",
+      "bytes": 2280
+    },
+    {
+      "path": "sources/alternate-dictionary-file-metadata-0.json",
+      "sha256": "114f4a876c90d9e2a54c2ce912b8efadffc4e8541d3bc8f92f2b2f38acee7945",
+      "bytes": 98483
+    },
+    {
+      "path": "sources/alternate-german-wiktionary-entries.json",
+      "sha256": "2580be74698f8f4eada32121d8fb4673df20e888d980a266133809c8e9d5c7eb",
+      "bytes": 64757
+    },
+    {
+      "path": "sources/alternate-pair-dictionary-map.json",
+      "sha256": "94346ea4cfe00f7a4c194b4a262849d83d7290bcb0344a2492a5192af8753e75",
+      "bytes": 2711
+    },
+    {
+      "path": "sources/alternate-pair-file-metadata.json",
+      "sha256": "6f2054e072d936840cc8094b646b890e9acff5cf944498dfa4ca4f22f1486adc",
+      "bytes": 110181
+    },
+    {
+      "path": "sources/alternate-pair-german-dictionary.json",
+      "sha256": "1fa6edcede2470fba587d23d1eeaae1bcfcf65c7b05add361fc15098d776ab79",
+      "bytes": 68147
+    },
+    {
+      "path": "sources/alternate-pair-ll-coverage.json",
+      "sha256": "0fdc7453a4188e3dfd297ea2018922e3acc2eaa646116c57e4e8455b1a20126a",
+      "bytes": 1608
+    },
+    {
+      "path": "sources/alternate-pair-search-Lied.json",
+      "sha256": "79bd78390081d546b6c7f49493ca4eff9d9138b306c3145ff48591ccd18c9c31",
+      "bytes": 1044
+    },
+    {
+      "path": "sources/alternate-pair-search-Stil.json",
+      "sha256": "dd8fa2846f670b34b8281349d0576684fa4aa94167bbd7ab02098e2d9e3a162c",
+      "bytes": 109
+    },
+    {
+      "path": "sources/alternate-pair-search-ihm.json",
+      "sha256": "fed2df10f14763eab96ea54fd98f5e311c1a0cef0e355dde0145ca19e02738df",
+      "bytes": 567
+    },
+    {
+      "path": "sources/alternate-pair-search-ihn.json",
+      "sha256": "96bdab46efe5f3aa85aa0c5ac699c1bb511e086b830dc3b51b39def26cd0a4c0",
+      "bytes": 567
+    },
+    {
+      "path": "sources/alternate-pair-search-im.json",
+      "sha256": "dd8fa2846f670b34b8281349d0576684fa4aa94167bbd7ab02098e2d9e3a162c",
+      "bytes": 109
+    },
+    {
+      "path": "sources/alternate-pair-search-in.json",
+      "sha256": "e27db73d384ba3fa8ed03547cc179e646b2a10fb019789e7af750c724bf0fd5d",
+      "bytes": 3339
+    },
+    {
+      "path": "sources/alternate-pair-search-litt.json",
+      "sha256": "4dd0491bff980bcda5e53675f6876da01815dcf80c4cf90cbde2f5bd975b2d55",
+      "bytes": 571
+    },
+    {
+      "path": "sources/alternate-pair-search-still.json",
+      "sha256": "85f126de3ed6fe460576b4f4161f9c04cb78310ca1c808f3341318d824fd1068",
+      "bytes": 567
+    },
+    {
+      "path": "sources/alternate-search-Muße.json",
+      "sha256": "fbfb6a4e8a865f117f6a9589526faa27de08eaa110e49058950bdb458e0a2f0a",
+      "bytes": 6774
+    },
+    {
+      "path": "sources/alternate-search-Rohre.json",
+      "sha256": "ba746c8fc7ca2cba54801d9acd025a96c79e90092de58149197e6e1b8211d4a3",
+      "bytes": 6205
+    },
+    {
+      "path": "sources/alternate-search-rote.json",
+      "sha256": "72262291c6ed3e82bcd637ba9e01de1ae57cbfe1aa1ccedba6d2c33d49e637e2",
+      "bytes": 45167
+    },
+    {
+      "path": "sources/alternate-search-weiße.json",
+      "sha256": "a769187140f9492d1119b71a5b66e9111016b0405bdf57cb23407118b605a004",
+      "bytes": 30956
+    },
+    {
+      "path": "sources/bieten-file-history.json",
+      "sha256": "87c12902dc2b8b6c7fcb0bafbd6d21db040e7137aefa329e799c93ac99e4b353",
+      "bytes": 2349
+    },
+    {
+      "path": "sources/bottleneck-prefix-confirmation.json",
+      "sha256": "71fca8b2c1eb17dda09bc2177ab14b514e5c7af398895a70372241abc7d81faa",
+      "bytes": 1837
+    },
+    {
+      "path": "sources/broad-audio-search-Mutter.json",
+      "sha256": "f2fbb54d8fbd068698a20938e98c8dc04c761d968288891ba36a4c21cecae7ae",
+      "bytes": 26803
+    },
+    {
+      "path": "sources/broad-audio-search-Mütter.json",
+      "sha256": "7dfb879fdbf746ea8343faffbe613e0be634709cd173b639faa452650cae5ad4",
+      "bytes": 5235
+    },
+    {
+      "path": "sources/broad-audio-search-bieten.json",
+      "sha256": "3007f22369534f624bfa382fbc789936aa57f6df95b8189ac3bf16bce9922cc9",
+      "bytes": 6162
+    },
+    {
+      "path": "sources/broad-audio-search-musste.json",
+      "sha256": "6b444224ab8b32704f53c6ab4f42401f5950540670961f91d073899f6f35e772",
+      "bytes": 8476
+    },
+    {
+      "path": "sources/broad-audio-search-müsste.json",
+      "sha256": "db53dba8ae70e7c440b8dc4b1296a2e280b0140a1c06198bdc6f578a97f39e90",
+      "bytes": 4353
+    },
+    {
+      "path": "sources/broad-audio-search-wurde.json",
+      "sha256": "aed2f7d03140f4a521306ff1222a9e80c10d058bda5e2f95d77c85b874e12f4e",
+      "bytes": 11858
+    },
+    {
+      "path": "sources/broad-audio-search-würde.json",
+      "sha256": "0cd017180e7017a8f1360fc2382a04afa28c5d1b87bf9365656938d348243b1b",
+      "bytes": 4289
+    },
+    {
+      "path": "sources/dictionary-audio-map.json",
+      "sha256": "bfd26165e2ea2f1cfef50c28936f5afc515f70816a7a4040ba7dcadd33b41073",
+      "bytes": 4565
+    },
+    {
+      "path": "sources/dictionary-file-metadata-0.json",
+      "sha256": "08bda31b7cd044f6fd7ae2a6799c742cf21c44c7bad43ecf885c42125e1681f2",
+      "bytes": 143276
+    },
+    {
+      "path": "sources/german-wiktionary-entries.json",
+      "sha256": "05001c7477b2496fb4e0d3edabff13b20ce8a021ed52343bbc176df59dc3052f",
+      "bytes": 135392
+    },
+    {
+      "path": "sources/ihnen-innen-dictionary-map.json",
+      "sha256": "8aedc5411568d6f194adf885805d3c29691b29dfa014e742baa99f9c55254faa",
+      "bytes": 373
+    },
+    {
+      "path": "sources/ihnen-innen-dictionary.json",
+      "sha256": "fa3f929a4bb88334d1f53dc511ced22d85b97623f345ea837bdb143a9d119e55",
+      "bytes": 6828
+    },
+    {
+      "path": "sources/ihnen-innen-file-metadata.json",
+      "sha256": "0233b0538271c1e8bc99f134955e4b6466329187d1113c92356ebc4f5389b753",
+      "bytes": 14843
+    },
+    {
+      "path": "sources/innen-prefix-confirmation.json",
+      "sha256": "66d919031366f4e3b37f4c124e6d3be7fc2c3f65cdc2067d92727e59695c1410",
+      "bytes": 823
+    },
+    {
+      "path": "sources/joni-german-wiktionary-profile.json",
+      "sha256": "1b0657867de5e0f27065a9e2369012a36895513dea7b356f289e9853c6f3ea62",
+      "bytes": 598
+    },
+    {
+      "path": "sources/joni-renamed-profile.json",
+      "sha256": "402cf65e146b20f3f408bd255e8c696cc925c36276b3aca3921194f7dac16036",
+      "bytes": 815
+    },
+    {
+      "path": "sources/ll-i-length-coverage.json",
+      "sha256": "3babee5f8ea5b684b8da5d4c6708c310fb72c90c7d7285082d436e3915e000f7",
+      "bytes": 1559
+    },
+    {
+      "path": "sources/partial-lingualibre-mediainfo.json",
+      "sha256": "517c1cd329ecadbafd0bfbb3bc359ee36692ec20b951e1b6792344c8f37ee496",
+      "bytes": 67610
+    },
+    {
+      "path": "sources/partial-lingualibre-metadata.json",
+      "sha256": "6b79e9ee2ba232b8d9b499b8e266450db62a89bbd69ddd8bd7363fe2a6a41cea",
+      "bytes": 47562
+    },
+    {
+      "path": "sources/preferred-coverage-search.json",
+      "sha256": "e6936e0cafdd6d3c9218d8aa1281e50fe5510033bda95232889d2ff983f5c57d",
+      "bytes": 7200
+    },
+    {
+      "path": "sources/prefix-Muße.json",
+      "sha256": "06678e0bdc9a1df28d523d8ff100a946caae7385c85594f4f0f41b40522a1e8e",
+      "bytes": 379
+    },
+    {
+      "path": "sources/prefix-Rohre.json",
+      "sha256": "fe739e01035755cdf6554f14ff98eaaceac6dd5b04837a93e7ab557c3a3eb66c",
+      "bytes": 366
+    },
+    {
+      "path": "sources/prefix-bieten.json",
+      "sha256": "9302ccbda78a0f2e38b040c320828c8ffd7980d8254b6d3e2e211dfc11e64ddf",
+      "bytes": 1522
+    },
+    {
+      "path": "sources/prefix-müsste.json",
+      "sha256": "d730cb37a2fb5f85824d4fe6fb9bd3302d74d3edcfb30b87c012ca283bab17f5",
+      "bytes": 3063
+    },
+    {
+      "path": "sources/search-Miete.json",
+      "sha256": "63d728c0c9c260b6a44b023439cc48f070bb850a9cb78a5bb92446f2f5252efa",
+      "bytes": 1043
+    },
+    {
+      "path": "sources/search-Mitte.json",
+      "sha256": "1fc20b1efb3f118dc71a2359a55b8e3fa7afe0f1c6ea1783a1ec274d5f305ad9",
+      "bytes": 3934
+    },
+    {
+      "path": "sources/search-Schiff.json",
+      "sha256": "4d0788904431a2bfcfabb78d0a7b09e0832aa1f512b2bd30a85f0bd6ba0a3b8c",
+      "bytes": 1041
+    },
+    {
+      "path": "sources/search-bieten.json",
+      "sha256": "dd8fa2846f670b34b8281349d0576684fa4aa94167bbd7ab02098e2d9e3a162c",
+      "bytes": 109
+    },
+    {
+      "path": "sources/search-bitten.json",
+      "sha256": "076fa3acd715e762c6de9d9ac12437c8fb043eaf29551e45284477f53822af8c",
+      "bytes": 569
+    },
+    {
+      "path": "sources/search-schief.json",
+      "sha256": "c467401407d3c040be470ac4e7312da3b4057f23a903a4470dc55b43ea8258a5",
+      "bytes": 570
+    },
+    {
+      "path": "sources/speaker-public-profiles.json",
+      "sha256": "aec16e8b8a5026bdb3607a4a17b56039478849e8c3fd6c6af6928c2d1b9db7ab",
+      "bytes": 3277
+    }
+  ],
+  "note": "Primary API responses and derived search maps; originals kept separately. No listening claim."
+}

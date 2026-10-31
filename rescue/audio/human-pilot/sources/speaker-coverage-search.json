@@ -1,0 +1,492 @@
+{
+  "LoquaxFR": {
+    "tout": "File:LL-Q150 (fra)-LoquaxFR-tout.wav",
+    "tu": "File:LL-Q150 (fra)-LoquaxFR-tu.wav",
+    "vous": "File:LL-Q150 (fra)-LoquaxFR-vous.wav",
+    "vu": "File:LL-Q150 (fra)-LoquaxFR-vu.wav",
+    "roue": "File:LL-Q150 (fra)-LoquaxFR-roue.wav",
+    "rue": "File:LL-Q150 (fra)-LoquaxFR-rue.wav",
+    "bout": "File:LL-Q150 (fra)-LoquaxFR-bout.wav"
+  },
+  "Poslovitch": {
+    "tout": "File:LL-Q150 (fra)-Poslovitch-tout.wav",
+    "tu": "File:LL-Q150 (fra)-Poslovitch-tu.wav",
+    "vous": "File:LL-Q150 (fra)-Poslovitch-vous.wav",
+    "vu": "File:LL-Q150 (fra)-Poslovitch-vu.wav",
+    "roue": "File:LL-Q150 (fra)-Poslovitch-roue.wav",
+    "rue": "File:LL-Q150 (fra)-Poslovitch-rue.wav",
+    "bout": "File:LL-Q150 (fra)-Poslovitch-bout.wav"
+  },
+  "Sartus85": {
+    "tout": "File:LL-Q150 (fra)-Sartus85-tout.wav",
+    "tu": "File:LL-Q150 (fra)-Sartus85-tu.wav",
+    "vous": "File:LL-Q150 (fra)-Sartus85-vous.wav",
+    "vu": "File:LL-Q150 (fra)-Sartus85-vu.wav",
+    "roue": "File:LL-Q150 (fra)-Sartus85-roue.wav",
+    "rue": "File:LL-Q150 (fra)-Sartus85-rue.wav",
+    "bout": "File:LL-Q150 (fra)-Sartus85-bout.wav"
+  },
+  "DSwissK": {
+    "tout": "File:LL-Q150 (fra)-DSwissK-tout.wav",
+    "tu": "File:LL-Q150 (fra)-DSwissK-tu.wav",
+    "vous": "File:LL-Q150 (fra)-DSwissK-vous.wav",
+    "roue": "File:LL-Q150 (fra)-DSwissK-roue.wav",
+    "bout": "File:LL-Q150 (fra)-DSwissK-bout.wav"
+  },
+  "WikiLucas00": {
+    "tout": "File:LL-Q150 (fra)-WikiLucas00-tout.wav",
+    "tu": "File:LL-Q150 (fra)-WikiLucas00-tu.wav",
+    "vous": "File:LL-Q150 (fra)-WikiLucas00-vous.wav",
+    "rue": "File:LL-Q150 (fra)-WikiLucas00-rue.wav",
+    "bout": "File:LL-Q150 (fra)-WikiLucas00-bout.wav"
+  },
+  "DenisdeShawi": {
+    "tout": "File:LL-Q150 (fra)-DenisdeShawi-tout.wav",
+    "vu": "File:LL-Q150 (fra)-DenisdeShawi-vu.wav",
+    "bout": "File:LL-Q150 (fra)-DenisdeShawi-bout.wav",
+    "bu": "File:LL-Q150 (fra)-DenisdeShawi-bu.wav"
+  },
+  "Eihel": {
+    "tout": "File:LL-Q150 (fra)-Eihel-tout.wav",
+    "tu": "File:LL-Q150 (fra)-Eihel-tu.wav",
+    "vous": "File:LL-Q150 (fra)-Eihel-vous.wav",
+    "roue": "File:LL-Q150 (fra)-Eihel-roue.wav"
+  },
+  "Guilhelma": {
+    "tout": "File:LL-Q150 (fra)-Guilhelma-tout.wav",
+    "tu": "File:LL-Q150 (fra)-Guilhelma-tu.wav",
+    "vous": "File:LL-Q150 (fra)-Guilhelma-vous.wav",
+    "vu": "File:LL-Q150 (fra)-Guilhelma-vu.wav"
+  },
+  "Jérémy-Günther-Heinz Jähnick": {
+    "vu": "File:LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-vu.wav",
+    "roue": "File:LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-roue.wav",
+    "rue": "File:LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-rue.wav",
+    "bout": "File:LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-bout.wav"
+  },
+  "T. Le Berre": {
+    "tout": "File:LL-Q150 (fra)-T. Le Berre-tout.wav",
+    "tu": "File:LL-Q150 (fra)-T. Le Berre-tu.wav",
+    "vous": "File:LL-Q150 (fra)-T. Le Berre-vous.wav",
+    "bout": "File:LL-Q150 (fra)-T. Le Berre-bout.wav"
+  },
+  "Ash Crow": {
+    "tout": "File:LL-Q150 (fra)-Ash Crow-tout.wav",
+    "tu": "File:LL-Q150 (fra)-Ash Crow-tu.wav",
+    "vous": "File:LL-Q150 (fra)-Ash Crow-vous.wav"
+  },
+  "Bluerose25": {
+    "tout": "File:LL-Q150 (fra)-Bluerose25-tout.wav",
+    "tu": "File:LL-Q150 (fra)-Bluerose25-tu.wav",
+    "rue": "File:LL-Q150 (fra)-Bluerose25-rue.wav"
+  },
+  "Chavagne": {
+    "tout": "File:LL-Q150 (fra)-Chavagne-tout.wav",
+    "tu": "File:LL-Q150 (fra)-Chavagne-tu.wav",
+    "vous": "File:LL-Q150 (fra)-Chavagne-vous.wav"
+  },
+  "Fabe56": {
+    "tout": "File:LL-Q150 (fra)-Fabe56-tout.wav",
+    "tu": "File:LL-Q150 (fra)-Fabe56-tu.wav",
+    "vous": "File:LL-Q150 (fra)-Fabe56-vous.wav"
+  },
+  "GeoMechain": {
+    "tout": "File:LL-Q150 (fra)-GeoMechain-tout.wav",
+    "tu": "File:LL-Q150 (fra)-GeoMechain-tu.wav",
+    "vous": "File:LL-Q150 (fra)-GeoMechain-vous.wav"
+  },
+  "Johanboss": {
+    "tout": "File:LL-Q150 (fra)-Johanboss-tout.wav",
+    "tu": "File:LL-Q150 (fra)-Johanboss-tu.wav",
+    "vous": "File:LL-Q150 (fra)-Johanboss-vous.wav"
+  },
+  "Kaderousse": {
+    "tout": "File:LL-Q150 (fra)-Kaderousse-tout.wav",
+    "tu": "File:LL-Q150 (fra)-Kaderousse-tu.wav",
+    "vous": "File:LL-Q150 (fra)-Kaderousse-vous.wav"
+  },
+  "Lepticed7": {
+    "tout": "File:LL-Q150 (fra)-Lepticed7-tout.wav",
+    "tu": "File:LL-Q150 (fra)-Lepticed7-tu.wav",
+    "vous": "File:LL-Q150 (fra)-Lepticed7-vous.wav"
+  },
+  "Madehub": {
+    "tout": "File:LL-Q150 (fra)-Madehub-tout.wav",
+    "tu": "File:LL-Q150 (fra)-Madehub-tu.wav",
+    "vous": "File:LL-Q150 (fra)-Madehub-vous.wav"
+  },
+  "Mathieu Kappler": {
+    "tout": "File:LL-Q150 (fra)-Mathieu Kappler-tout.wav",
+    "tu": "File:LL-Q150 (fra)-Mathieu Kappler-tu.wav",
+    "vous": "File:LL-Q150 (fra)-Mathieu Kappler-vous.wav"
+  },
+  "Mecanautes": {
+    "tout": "File:LL-Q150 (fra)-Mecanautes-tout.wav",
+    "tu": "File:LL-Q150 (fra)-Mecanautes-tu.wav",
+    "vous": "File:LL-Q150 (fra)-Mecanautes-vous.wav"
+  },
+  "Nattes à chat": {
+    "tout": "File:LL-Q150 (fra)-Nattes à chat-tout.wav",
+    "tu": "File:LL-Q150 (fra)-Nattes à chat-tu.wav",
+    "vous": "File:LL-Q150 (fra)-Nattes à chat-vous.wav"
+  },
+  "Opsylac": {
+    "tout": "File:LL-Q150 (fra)-Opsylac-tout.wav",
+    "tu": "File:LL-Q150 (fra)-Opsylac-tu.wav",
+    "vous": "File:LL-Q150 (fra)-Opsylac-vous.wav"
+  },
+  "Orion1256987": {
+    "tout": "File:LL-Q150 (fra)-Orion1256987-tout.wav",
+    "tu": "File:LL-Q150 (fra)-Orion1256987-tu.wav",
+    "vous": "File:LL-Q150 (fra)-Orion1256987-vous.wav"
+  },
+  "Roll-Morton": {
+    "tout": "File:LL-Q150 (fra)-Roll-Morton-tout.wav",
+    "tu": "File:LL-Q150 (fra)-Roll-Morton-tu.wav",
+    "vous": "File:LL-Q150 (fra)-Roll-Morton-vous.wav"
+  },
+  "Sagnamadr": {
+    "tout": "File:LL-Q150 (fra)-Sagnamadr-tout.wav",
+    "tu": "File:LL-Q150 (fra)-Sagnamadr-tu.wav",
+    "vous": "File:LL-Q150 (fra)-Sagnamadr-vous.wav"
+  },
+  "Touam": {
+    "tu": "File:LL-Q150 (fra)-Touam-tu.wav",
+    "vous": "File:LL-Q150 (fra)-Touam-vous.wav",
+    "bout": "File:LL-Q150 (fra)-Touam-bout.wav"
+  },
+  "X-Javier": {
+    "tout": "File:LL-Q150 (fra)-X-Javier-tout.wav",
+    "tu": "File:LL-Q150 (fra)-X-Javier-tu.wav",
+    "vous": "File:LL-Q150 (fra)-X-Javier-vous.wav"
+  },
+  "XANA000": {
+    "tout": "File:LL-Q150 (fra)-XANA000-tout.wav",
+    "tu": "File:LL-Q150 (fra)-XANA000-tu.wav",
+    "vous": "File:LL-Q150 (fra)-XANA000-vous.wav"
+  },
+  "Yug": {
+    "tout": "File:LL-Q150 (fra)-Yug-tout.wav",
+    "tu": "File:LL-Q150 (fra)-Yug-tu.wav",
+    "vous": "File:LL-Q150 (fra)-Yug-vous.wav"
+  },
+  "0x010C": {
+    "rue": "File:LL-Q150 (fra)-0x010C-rue.wav",
+    "bout": "File:LL-Q150 (fra)-0x010C-bout.wav"
+  },
+  "Aemines1": {
+    "roue": "File:LL-Q150 (fra)-Aemines1-roue.wav",
+    "rue": "File:LL-Q150 (fra)-Aemines1-rue.wav"
+  },
+  "Aemines2": {
+    "roue": "File:LL-Q150 (fra)-Aemines2-roue.wav",
+    "rue": "File:LL-Q150 (fra)-Aemines2-rue.wav"
+  },
+  "Aemines3": {
+    "roue": "File:LL-Q150 (fra)-Aemines3-roue.wav",
+    "rue": "File:LL-Q150 (fra)-Aemines3-rue.wav"
+  },
+  "Aemines4": {
+    "roue": "File:LL-Q150 (fra)-Aemines4-roue.wav",
+    "rue": "File:LL-Q150 (fra)-Aemines4-rue.wav"
+  },
+  "Aemines5": {
+    "roue": "File:LL-Q150 (fra)-Aemines5-roue.wav",
+    "rue": "File:LL-Q150 (fra)-Aemines5-rue.wav"
+  },
+  "Aemines6": {
+    "roue": "File:LL-Q150 (fra)-Aemines6-roue.wav",
+    "rue": "File:LL-Q150 (fra)-Aemines6-rue.wav"
+  },
+  "Helenou66": {
+    "roue": "File:LL-Q150 (fra)-Helenou66-roue.wav",
+    "rue": "File:LL-Q150 (fra)-Helenou66-rue.wav"
+  },
+  "Loizbec": {
+    "tout": "File:LL-Q150 (fra)-Loizbec-tout.wav",
+    "tu": "File:LL-Q150 (fra)-Loizbec-tu.wav"
+  },
+  "Mendiaktaitsasoa": {
+    "tout": "File:LL-Q150 (fra)-Mendiaktaitsasoa-tout.wav",
+    "tu": "File:LL-Q150 (fra)-Mendiaktaitsasoa-tu.wav"
+  },
+  "Pushkar7077": {
+    "tu": "File:LL-Q150 (fra)-Pushkar7077-tu.wav",
+    "vous": "File:LL-Q150 (fra)-Pushkar7077-vous.wav"
+  },
+  "val (Eavq)": {
+    "tout": "File:LL-Q150 (fra)-val (Eavq)-tout.wav",
+    "vous": "File:LL-Q150 (fra)-val (Eavq)-vous.wav"
+  },
+  "Ʃouer": {
+    "roue": "File:LL-Q150 (fra)-Ʃouer-roue.wav",
+    "rue": "File:LL-Q150 (fra)-Ʃouer-rue.wav"
+  },
+  "Althea81": {
+    "rue": "File:LL-Q150 (fra)-Althea81-rue.wav"
+  },
+  "Antochkat": {
+    "rue": "File:LL-Q150 (fra)-Antochkat-rue.wav"
+  },
+  "Bananax47-feuille d’essuie": {
+    "tout": "File:LL-Q150 (fra)-Bananax47-feuille d’essuie-tout.wav"
+  },
+  "Bananax47-à bouche que veux": {
+    "tu": "File:LL-Q150 (fra)-Bananax47-à bouche que veux-tu.wav"
+  },
+  "Bananax47-à gueule-que-veux": {
+    "tu": "File:LL-Q150 (fra)-Bananax47-à gueule-que-veux-tu.wav"
+  },
+  "Baptiste C. (BiblioCanet66)": {
+    "roue": "File:LL-Q150 (fra)-Baptiste C. (BiblioCanet66)-roue.wav"
+  },
+  "Ben (Mathsou)": {
+    "vu": "File:LL-Q150 (fra)-Ben (Mathsou)-vu.wav"
+  },
+  "CKali": {
+    "rue": "File:LL-Q150 (fra)-CKali-rue.wav"
+  },
+  "CKali-village": {
+    "rue": "File:LL-Q150 (fra)-CKali-village-rue.wav"
+  },
+  "DenisdeShawi-du jamais": {
+    "vu": "File:LL-Q150 (fra)-DenisdeShawi-du jamais-vu.wav"
+  },
+  "DenisdeShawi-voyez": {
+    "vous": "File:LL-Q150 (fra)-DenisdeShawi-voyez-vous.wav"
+  },
+  "Exilexi-pré": {
+    "tout": "File:LL-Q150 (fra)-Exilexi-pré-tout.wav"
+  },
+  "Fabricio Cardenas (Culex)-chasse": {
+    "roue": "File:LL-Q150 (fra)-Fabricio Cardenas (Culex)-chasse-roue.wav"
+  },
+  "GrandCelinien": {
+    "roue": "File:LL-Q150 (fra)-GrandCelinien-roue.wav"
+  },
+  "Justforoc-comment allez": {
+    "vous": "File:LL-Q150 (fra)-Justforoc-comment allez-vous.wav"
+  },
+  "Jérémy-Günther-Heinz Jähnick-attrape": {
+    "tout": "File:LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-attrape-tout.wav"
+  },
+  "Jérémy-Günther-Heinz Jähnick-chasse": {
+    "roue": "File:LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-chasse-roue.wav"
+  },
+  "Jérémy-Günther-Heinz Jähnick-comment allez": {
+    "vous": "File:LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-comment allez-vous.wav"
+  },
+  "Jérémy-Günther-Heinz Jähnick-comment osez": {
+    "vous": "File:LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-comment osez-vous.wav"
+  },
+  "Jérémy-Günther-Heinz Jähnick-comment vas": {
+    "tu": "File:LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-comment vas-tu.wav"
+  },
+  "Jérémy-Günther-Heinz Jähnick-croyez": {
+    "vous": "File:LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-croyez-vous.wav"
+  },
+  "Jérémy-Günther-Heinz Jähnick-grand": {
+    "rue": "File:LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-grand-rue.wav"
+  },
+  "Jérémy-Günther-Heinz Jähnick-jouer son va": {
+    "tout": "File:LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-jouer son va-tout.wav"
+  },
+  "Jérémy-Günther-Heinz Jähnick-mange": {
+    "tout": "File:LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-mange-tout.wav"
+  },
+  "Jérémy-Günther-Heinz Jähnick-micro": {
+    "rue": "File:LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-micro-rue.wav"
+  },
+  "Jérémy-Günther-Heinz Jähnick-pince": {
+    "roue": "File:LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-pince-roue.wav"
+  },
+  "Jérémy-Günther-Heinz Jähnick-pois mange": {
+    "tout": "File:LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-pois mange-tout.wav"
+  },
+  "Jérémy-Günther-Heinz Jähnick-que veux": {
+    "tu": "File:LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-que veux-tu.wav"
+  },
+  "Jérémy-Günther-Heinz Jähnick-que voulez": {
+    "vous": "File:LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-que voulez-vous.wav"
+  },
+  "Jérémy-Günther-Heinz Jähnick-remettez": {
+    "vous": "File:LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-remettez-vous.wav"
+  },
+  "Jérémy-Günther-Heinz Jähnick-va": {
+    "tout": "File:LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-va-tout.wav"
+  },
+  "Jérémy-Günther-Heinz Jähnick-vaque-à": {
+    "tout": "File:LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-vaque-à-tout.wav"
+  },
+  "Lepticed7-chamboule": {
+    "tout": "File:LL-Q150 (fra)-Lepticed7-chamboule-tout.wav"
+  },
+  "Lepticed7-comment vas": {
+    "tu": "File:LL-Q150 (fra)-Lepticed7-comment vas-tu.wav"
+  },
+  "Lepticed7-fait": {
+    "tout": "File:LL-Q150 (fra)-Lepticed7-fait-tout.wav"
+  },
+  "Lepticed7-garde-à": {
+    "vous": "File:LL-Q150 (fra)-Lepticed7-garde-à-vous.wav"
+  },
+  "Lepticed7-grand": {
+    "rue": "File:LL-Q150 (fra)-Lepticed7-grand-rue.wav"
+  },
+  "Lepticed7-micro": {
+    "rue": "File:LL-Q150 (fra)-Lepticed7-micro-rue.wav"
+  },
+  "LoquaxFR-adieu": {
+    "tout": "File:LL-Q150 (fra)-LoquaxFR-adieu-tout.wav"
+  },
+  "LoquaxFR-brise": {
+    "tout": "File:LL-Q150 (fra)-LoquaxFR-brise-tout.wav"
+  },
+  "LoquaxFR-chamboule": {
+    "tout": "File:LL-Q150 (fra)-LoquaxFR-chamboule-tout.wav"
+  },
+  "LoquaxFR-comment allez": {
+    "vous": "File:LL-Q150 (fra)-LoquaxFR-comment allez-vous.wav"
+  },
+  "LoquaxFR-comment vas": {
+    "tu": "File:LL-Q150 (fra)-LoquaxFR-comment vas-tu.wav"
+  },
+  "LoquaxFR-comprends": {
+    "tu": "File:LL-Q150 (fra)-LoquaxFR-comprends-tu.wav"
+  },
+  "LoquaxFR-crois": {
+    "tu": "File:LL-Q150 (fra)-LoquaxFR-crois-tu.wav"
+  },
+  "LoquaxFR-feuille d’essuie": {
+    "tout": "File:LL-Q150 (fra)-LoquaxFR-feuille d’essuie-tout.wav"
+  },
+  "LoquaxFR-fourre": {
+    "tout": "File:LL-Q150 (fra)-LoquaxFR-fourre-tout.wav"
+  },
+  "LoquaxFR-je-sais": {
+    "tout": "File:LL-Q150 (fra)-LoquaxFR-je-sais-tout.wav"
+  },
+  "LoquaxFR-rendez": {
+    "vous": "File:LL-Q150 (fra)-LoquaxFR-rendez-vous.wav"
+  },
+  "LoquaxFR-vois": {
+    "tu": "File:LL-Q150 (fra)-LoquaxFR-vois-tu.wav"
+  },
+  "LoquaxFR-à bouche que veux": {
+    "tu": "File:LL-Q150 (fra)-LoquaxFR-à bouche que veux-tu.wav"
+  },
+  "LoquaxFR-à gueule-que-veux": {
+    "tu": "File:LL-Q150 (fra)-LoquaxFR-à gueule-que-veux-tu.wav"
+  },
+  "LoquaxFR-à main que veux": {
+    "tu": "File:LL-Q150 (fra)-LoquaxFR-à main que veux-tu.wav"
+  },
+  "LoquaxFR-à mouchoir que veux": {
+    "tu": "File:LL-Q150 (fra)-LoquaxFR-à mouchoir que veux-tu.wav"
+  },
+  "LoquaxFR-à pinces que veux": {
+    "tu": "File:LL-Q150 (fra)-LoquaxFR-à pinces que veux-tu.wav"
+  },
+  "LoquaxFR-être au rendez": {
+    "vous": "File:LL-Q150 (fra)-LoquaxFR-être au rendez-vous.wav"
+  },
+  "Ltrlg-fait": {
+    "tout": "File:LL-Q150 (fra)-Ltrlg-fait-tout.wav"
+  },
+  "Lyokoï": {
+    "bout": "File:LL-Q150 (fra)-Lyokoï-bout.wav"
+  },
+  "Mecanautes-à bouche que veux": {
+    "tu": "File:LL-Q150 (fra)-Mecanautes-à bouche que veux-tu.wav"
+  },
+  "Mecanautes-à gueule-que-veux": {
+    "tu": "File:LL-Q150 (fra)-Mecanautes-à gueule-que-veux-tu.wav"
+  },
+  "MrStrelok75-essuie": {
+    "tout": "File:LL-Q150 (fra)-MrStrelok75-essuie-tout.wav"
+  },
+  "Origamimi38": {
+    "rue": "File:LL-Q150 (fra)-Origamimi38-rue.wav"
+  },
+  "Pamputt": {
+    "vu": "File:LL-Q150 (fra)-Pamputt-vu.wav"
+  },
+  "Phmavipe": {
+    "rue": "File:LL-Q150 (fra)-Phmavipe-rue.wav"
+  },
+  "Poslovitch-mange": {
+    "tout": "File:LL-Q150 (fra)-Poslovitch-mange-tout.wav"
+  },
+  "PtiBzh": {
+    "bout": "File:LL-Q150 (fra)-PtiBzh-bout.wav"
+  },
+  "Roptat-rendez": {
+    "vous": "File:LL-Q150 (fra)-Roptat-rendez-vous.wav"
+  },
+  "Sartus85-rendez": {
+    "vous": "File:LL-Q150 (fra)-Sartus85-rendez-vous.wav"
+  },
+  "Vampiro (ClasseNoes)": {
+    "vous": "File:LL-Q150 (fra)-Vampiro (ClasseNoes)-vous.wav"
+  },
+  "VictorDtmtc-adieu": {
+    "tout": "File:LL-Q150 (fra)-VictorDtmtc-adieu-tout.wav"
+  },
+  "Webfil": {
+    "bout": "File:LL-Q150 (fra)-Webfil-bout.wav"
+  },
+  "WikiLucas00-brise": {
+    "tout": "File:LL-Q150 (fra)-WikiLucas00-brise-tout.wav"
+  },
+  "WikiLucas00-du jamais": {
+    "vu": "File:LL-Q150 (fra)-WikiLucas00-du jamais-vu.wav"
+  },
+  "WikiLucas00-déjà": {
+    "vu": "File:LL-Q150 (fra)-WikiLucas00-déjà-vu.wav"
+  },
+  "WikiLucas00-fait": {
+    "tout": "File:LL-Q150 (fra)-WikiLucas00-fait-tout.wav"
+  },
+  "WikiLucas00-fourre": {
+    "tout": "File:LL-Q150 (fra)-WikiLucas00-fourre-tout.wav"
+  },
+  "WikiLucas00-jouer son va": {
+    "tout": "File:LL-Q150 (fra)-WikiLucas00-jouer son va-tout.wav"
+  },
+  "WikiLucas00-lâcher": {
+    "tout": "File:LL-Q150 (fra)-WikiLucas00-lâcher-tout.wav"
+  },
+  "WikiLucas00-risque": {
+    "tout": "File:LL-Q150 (fra)-WikiLucas00-risque-tout.wav"
+  },
+  "WikiLucas00-touche-à": {
+    "tout": "File:LL-Q150 (fra)-WikiLucas00-touche-à-tout.wav"
+  },
+  "WikiLucas00-va": {
+    "tout": "File:LL-Q150 (fra)-WikiLucas00-va-tout.wav"
+  },
+  "WikiLucas00-à bouche que veux": {
+    "tu": "File:LL-Q150 (fra)-WikiLucas00-à bouche que veux-tu.wav"
+  },
+  "WikiLucas00-à gueule-que-veux": {
+    "tu": "File:LL-Q150 (fra)-WikiLucas00-à gueule-que-veux-tu.wav"
+  },
+  "WikiLucas00-à main que veux": {
+    "tu": "File:LL-Q150 (fra)-WikiLucas00-à main que veux-tu.wav"
+  },
+  "WikiLucas00-à mouchoir que veux": {
+    "tu": "File:LL-Q150 (fra)-WikiLucas00-à mouchoir que veux-tu.wav"
+  },
+  "WikiLucas00-à pinces que veux": {
+    "tu": "File:LL-Q150 (fra)-WikiLucas00-à pinces que veux-tu.wav"
+  },
+  "X-Javier-mange": {
+    "tout": "File:LL-Q150 (fra)-X-Javier-mange-tout.wav"
+  },
+  "X-Javier-pois mange": {
+    "tout": "File:LL-Q150 (fra)-X-Javier-pois mange-tout.wav"
+  },
+  "X-Javier-à mouchoir que veux": {
+    "tu": "File:LL-Q150 (fra)-X-Javier-à mouchoir que veux-tu.wav"
+  }
+}

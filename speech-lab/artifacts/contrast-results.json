@@ -1,0 +1,4361 @@
+{
+  "rows": [
+    {
+      "id": "bf74d6dccb98ac3e7ace6daa",
+      "word": "tout",
+      "pair": "tout-tu",
+      "speaker": "Sartus85",
+      "path": "rescue/app/public/audio/human-fr-u-y/clips/bf74d6dccb98ac3e7ace6daa.mp3",
+      "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Sartus85-tout.wav",
+      "license": {
+        "id": "CC-BY-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "attributionRequired": true,
+        "commercialReusePermitted": true,
+        "shareAlike": true
+      },
+      "sha256": "7660912a5f3cf0a17b3b6ae509081866981456e4ff91c5c5f80031bc39c4fed1",
+      "phonetic_listening_verified": false,
+      "clean": {
+        "pair": "tout-tu",
+        "target": "tout",
+        "target_ipa": "t u",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Both vowels have rounded lips. For /y/, start with /i/ and round your lips while keeping the tongue forward.",
+        "duration_s": 0.619,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in tout. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "t",
+          "u"
+        ],
+        "events": [
+          {
+            "phone": "t",
+            "t": 0.212,
+            "posterior": 0.9412
+          },
+          {
+            "phone": "u",
+            "t": 0.273,
+            "posterior": 0.5635
+          }
+        ],
+        "candidate_costs": {
+          "tout": 0.0221,
+          "tu": 0.2241
+        },
+        "margin": 0.202,
+        "candidate_winner": "tout",
+        "formants": [
+          {
+            "t": 0.28,
+            "f1": 286,
+            "f2": 928
+          },
+          {
+            "t": 0.3,
+            "f1": 294,
+            "f2": 886
+          },
+          {
+            "t": 0.32,
+            "f1": 296,
+            "f2": 825
+          },
+          {
+            "t": 0.34,
+            "f1": 286,
+            "f2": 765
+          },
+          {
+            "t": 0.36,
+            "f1": 275,
+            "f2": 776
+          }
+        ],
+        "latency_s": 1.133
+      },
+      "snr20": {
+        "pair": "tout-tu",
+        "target": "tout",
+        "target_ipa": "t u",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Both vowels have rounded lips. For /y/, start with /i/ and round your lips while keeping the tongue forward.",
+        "duration_s": 0.619,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in tout. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "t",
+          "u"
+        ],
+        "events": [
+          {
+            "phone": "t",
+            "t": 0.212,
+            "posterior": 0.9577
+          },
+          {
+            "phone": "u",
+            "t": 0.273,
+            "posterior": 0.448
+          }
+        ],
+        "candidate_costs": {
+          "tout": 0.0307,
+          "tu": 0.2311
+        },
+        "margin": 0.2004,
+        "candidate_winner": "tout",
+        "formants": [],
+        "latency_s": 0.107
+      }
+    },
+    {
+      "id": "ea16e644334cd64bc9a87971",
+      "word": "tu",
+      "pair": "tout-tu",
+      "speaker": "Sartus85",
+      "path": "rescue/app/public/audio/human-fr-u-y/clips/ea16e644334cd64bc9a87971.mp3",
+      "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Sartus85-tu.wav",
+      "license": {
+        "id": "CC-BY-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "attributionRequired": true,
+        "commercialReusePermitted": true,
+        "shareAlike": true
+      },
+      "sha256": "cd02a9a3b06454c0d6833bdaa4d17ada0f50bbff878a36e689aa69f26f25181c",
+      "phonetic_listening_verified": false,
+      "clean": {
+        "pair": "tout-tu",
+        "target": "tu",
+        "target_ipa": "t y",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Both vowels have rounded lips. For /y/, start with /i/ and round your lips while keeping the tongue forward.",
+        "duration_s": 0.635,
+        "status": "uncertain",
+        "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+        "phones": [
+          "tɕ",
+          "i.5"
+        ],
+        "events": [
+          {
+            "phone": "tɕ",
+            "t": 0.233,
+            "posterior": 0.3684
+          },
+          {
+            "phone": "i.5",
+            "t": 0.312,
+            "posterior": 0.092
+          }
+        ],
+        "candidate_costs": {
+          "tout": 0.435,
+          "tu": 0.3224
+        },
+        "margin": 0.1125,
+        "candidate_winner": "tu",
+        "formants": [
+          {
+            "t": 0.3,
+            "f1": 293,
+            "f2": 1801
+          },
+          {
+            "t": 0.32,
+            "f1": 294,
+            "f2": 1894
+          },
+          {
+            "t": 0.34,
+            "f1": 284,
+            "f2": 1872
+          },
+          {
+            "t": 0.36,
+            "f1": 260,
+            "f2": 1812
+          }
+        ],
+        "latency_s": 0.112
+      },
+      "snr20": {
+        "pair": "tout-tu",
+        "target": "tu",
+        "target_ipa": "t y",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Both vowels have rounded lips. For /y/, start with /i/ and round your lips while keeping the tongue forward.",
+        "duration_s": 0.635,
+        "status": "uncertain",
+        "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+        "phones": [
+          "tɕ",
+          "i.5"
+        ],
+        "events": [
+          {
+            "phone": "tɕ",
+            "t": 0.233,
+            "posterior": 0.2272
+          },
+          {
+            "phone": "i.5",
+            "t": 0.312,
+            "posterior": 0.0517
+          }
+        ],
+        "candidate_costs": {
+          "tout": 0.3131,
+          "tu": 0.1899
+        },
+        "margin": 0.1232,
+        "candidate_winner": "tu",
+        "formants": [],
+        "latency_s": 0.131
+      }
+    },
+    {
+      "id": "03a74b0629c80a61da2a3edf",
+      "word": "vous",
+      "pair": "vous-vu",
+      "speaker": "Sartus85",
+      "path": "rescue/app/public/audio/human-fr-u-y/clips/03a74b0629c80a61da2a3edf.mp3",
+      "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Sartus85-vous.wav",
+      "license": {
+        "id": "CC-BY-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "attributionRequired": true,
+        "commercialReusePermitted": true,
+        "shareAlike": true
+      },
+      "sha256": "2173c601cf7a334a63d1cf57e70ecba1339c426cfdb609182203b76e91c7bca1",
+      "phonetic_listening_verified": false,
+      "clean": {
+        "pair": "vous-vu",
+        "target": "vous",
+        "target_ipa": "v u",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Keep the /v/ the same. Explore the contrast between back /u/ and front /y/, with rounded lips for both.",
+        "duration_s": 0.76,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in vous. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "v",
+          "u"
+        ],
+        "events": [
+          {
+            "phone": "v",
+            "t": 0.372,
+            "posterior": 0.9729
+          },
+          {
+            "phone": "u",
+            "t": 0.432,
+            "posterior": 0.6482
+          }
+        ],
+        "candidate_costs": {
+          "vous": 0.0129,
+          "vu": 0.1595
+        },
+        "margin": 0.1466,
+        "candidate_winner": "vous",
+        "formants": [
+          {
+            "t": 0.26,
+            "f1": 341,
+            "f2": 1154
+          },
+          {
+            "t": 0.28,
+            "f1": 315,
+            "f2": 1103
+          },
+          {
+            "t": 0.3,
+            "f1": 486,
+            "f2": 1440
+          },
+          {
+            "t": 0.44,
+            "f1": 312,
+            "f2": 1226
+          },
+          {
+            "t": 0.46,
+            "f1": 283,
+            "f2": 811
+          },
+          {
+            "t": 0.48,
+            "f1": 281,
+            "f2": 725
+          },
+          {
+            "t": 0.5,
+            "f1": 278,
+            "f2": 692
+          },
+          {
+            "t": 0.52,
+            "f1": 281,
+            "f2": 718
+          },
+          {
+            "t": 0.54,
+            "f1": 411,
+            "f2": 1285
+          }
+        ],
+        "latency_s": 0.157
+      },
+      "snr20": {
+        "pair": "vous-vu",
+        "target": "vous",
+        "target_ipa": "v u",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Keep the /v/ the same. Explore the contrast between back /u/ and front /y/, with rounded lips for both.",
+        "duration_s": 0.76,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in vous. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "v",
+          "uː"
+        ],
+        "events": [
+          {
+            "phone": "v",
+            "t": 0.352,
+            "posterior": 0.9624
+          },
+          {
+            "phone": "uː",
+            "t": 0.412,
+            "posterior": 0.4566
+          }
+        ],
+        "candidate_costs": {
+          "vous": 0.0366,
+          "vu": 0.1615
+        },
+        "margin": 0.1249,
+        "candidate_winner": "vous",
+        "formants": [],
+        "latency_s": 0.141
+      }
+    },
+    {
+      "id": "ac11ccbf1e9d2482606037ef",
+      "word": "vu",
+      "pair": "vous-vu",
+      "speaker": "Sartus85",
+      "path": "rescue/app/public/audio/human-fr-u-y/clips/ac11ccbf1e9d2482606037ef.mp3",
+      "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Sartus85-vu.wav",
+      "license": {
+        "id": "CC-BY-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "attributionRequired": true,
+        "commercialReusePermitted": true,
+        "shareAlike": true
+      },
+      "sha256": "ef34650e7d063c32c2355fccb82644700dd1c1712fba0a9d09872fc27f3d7d74",
+      "phonetic_listening_verified": false,
+      "clean": {
+        "pair": "vous-vu",
+        "target": "vu",
+        "target_ipa": "v y",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Keep the /v/ the same. Explore the contrast between back /u/ and front /y/, with rounded lips for both.",
+        "duration_s": 0.742,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in vu. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "v",
+          "y"
+        ],
+        "events": [
+          {
+            "phone": "v",
+            "t": 0.292,
+            "posterior": 0.6587
+          },
+          {
+            "phone": "y",
+            "t": 0.372,
+            "posterior": 0.653
+          }
+        ],
+        "candidate_costs": {
+          "vous": 0.1692,
+          "vu": 0.0241
+        },
+        "margin": 0.145,
+        "candidate_winner": "vu",
+        "formants": [
+          {
+            "t": 0.12,
+            "f1": 383,
+            "f2": 1544
+          },
+          {
+            "t": 0.16,
+            "f1": 253,
+            "f2": 1464
+          },
+          {
+            "t": 0.18,
+            "f1": 288,
+            "f2": 1477
+          },
+          {
+            "t": 0.2,
+            "f1": 273,
+            "f2": 1585
+          },
+          {
+            "t": 0.3,
+            "f1": 239,
+            "f2": 2190
+          },
+          {
+            "t": 0.32,
+            "f1": 269,
+            "f2": 2037
+          },
+          {
+            "t": 0.34,
+            "f1": 273,
+            "f2": 1789
+          },
+          {
+            "t": 0.36,
+            "f1": 272,
+            "f2": 1815
+          },
+          {
+            "t": 0.38,
+            "f1": 281,
+            "f2": 1826
+          },
+          {
+            "t": 0.4,
+            "f1": 286,
+            "f2": 1823
+          },
+          {
+            "t": 0.42,
+            "f1": 278,
+            "f2": 1790
+          },
+          {
+            "t": 0.44,
+            "f1": 281,
+            "f2": 1790
+          },
+          {
+            "t": 0.46,
+            "f1": 267,
+            "f2": 1776
+          },
+          {
+            "t": 0.48,
+            "f1": 237,
+            "f2": 1813
+          },
+          {
+            "t": 0.5,
+            "f1": 226,
+            "f2": 1833
+          },
+          {
+            "t": 0.52,
+            "f1": 219,
+            "f2": 1801
+          }
+        ],
+        "latency_s": 0.139
+      },
+      "snr20": {
+        "pair": "vous-vu",
+        "target": "vu",
+        "target_ipa": "v y",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Keep the /v/ the same. Explore the contrast between back /u/ and front /y/, with rounded lips for both.",
+        "duration_s": 0.742,
+        "status": "uncertain",
+        "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+        "phones": [
+          "v",
+          "i"
+        ],
+        "events": [
+          {
+            "phone": "v",
+            "t": 0.292,
+            "posterior": 0.9389
+          },
+          {
+            "phone": "i",
+            "t": 0.352,
+            "posterior": 0.3882
+          }
+        ],
+        "candidate_costs": {
+          "vous": 0.1548,
+          "vu": 0.0787
+        },
+        "margin": 0.0762,
+        "candidate_winner": "vu",
+        "formants": [],
+        "latency_s": 0.127
+      }
+    },
+    {
+      "id": "1a1867579e9bc763253d516b",
+      "word": "roue",
+      "pair": "roue-rue",
+      "speaker": "Sartus85",
+      "path": "rescue/app/public/audio/human-fr-u-y/clips/1a1867579e9bc763253d516b.mp3",
+      "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Sartus85-roue.wav",
+      "license": {
+        "id": "CC-BY-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "attributionRequired": true,
+        "commercialReusePermitted": true,
+        "shareAlike": true
+      },
+      "sha256": "74ca923e04c89338a1d779fa40b3e197f59aefed05d07ace004cdf5945c42284",
+      "phonetic_listening_verified": false,
+      "clean": {
+        "pair": "roue-rue",
+        "target": "roue",
+        "target_ipa": "ʁ u",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Focus on the vowel. This experiment does not grade the many acceptable French rhotic realizations.",
+        "duration_s": 0.648,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in roue. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "ʁ",
+          "u"
+        ],
+        "events": [
+          {
+            "phone": "ʁ",
+            "t": 0.253,
+            "posterior": 0.7566
+          },
+          {
+            "phone": "u",
+            "t": 0.312,
+            "posterior": 0.7369
+          }
+        ],
+        "candidate_costs": {
+          "roue": 0.0204,
+          "rue": 0.1492
+        },
+        "margin": 0.1289,
+        "candidate_winner": "roue",
+        "formants": [
+          {
+            "t": 0.16,
+            "f1": 444,
+            "f2": 714
+          },
+          {
+            "t": 0.18,
+            "f1": 455,
+            "f2": 673
+          },
+          {
+            "t": 0.26,
+            "f1": 390,
+            "f2": 614
+          },
+          {
+            "t": 0.28,
+            "f1": 406,
+            "f2": 641
+          },
+          {
+            "t": 0.3,
+            "f1": 395,
+            "f2": 660
+          },
+          {
+            "t": 0.32,
+            "f1": 387,
+            "f2": 686
+          },
+          {
+            "t": 0.36,
+            "f1": 309,
+            "f2": 615
+          },
+          {
+            "t": 0.38,
+            "f1": 297,
+            "f2": 587
+          },
+          {
+            "t": 0.4,
+            "f1": 345,
+            "f2": 593
+          },
+          {
+            "t": 0.42,
+            "f1": 406,
+            "f2": 588
+          }
+        ],
+        "latency_s": 0.106
+      },
+      "snr20": {
+        "pair": "roue-rue",
+        "target": "roue",
+        "target_ipa": "ʁ u",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Focus on the vowel. This experiment does not grade the many acceptable French rhotic realizations.",
+        "duration_s": 0.648,
+        "status": "uncertain",
+        "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+        "phones": [
+          "ɹ",
+          "uː"
+        ],
+        "events": [
+          {
+            "phone": "ɹ",
+            "t": 0.233,
+            "posterior": 0.2785
+          },
+          {
+            "phone": "uː",
+            "t": 0.292,
+            "posterior": 0.3666
+          }
+        ],
+        "candidate_costs": {
+          "roue": 0.1532,
+          "rue": 0.2394
+        },
+        "margin": 0.0862,
+        "candidate_winner": "roue",
+        "formants": [],
+        "latency_s": 0.095
+      }
+    },
+    {
+      "id": "a2290e0641c5aff974854e12",
+      "word": "rue",
+      "pair": "roue-rue",
+      "speaker": "Sartus85",
+      "path": "rescue/app/public/audio/human-fr-u-y/clips/a2290e0641c5aff974854e12.mp3",
+      "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Sartus85-rue.wav",
+      "license": {
+        "id": "CC-BY-SA-4.0",
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+        "attributionRequired": true,
+        "commercialReusePermitted": true,
+        "shareAlike": true
+      },
+      "sha256": "bd045e8c4228c4b76be497f35fb01cd6cd00d05465fea814e0e8330f7df5b6a3",
+      "phonetic_listening_verified": false,
+      "clean": {
+        "pair": "roue-rue",
+        "target": "rue",
+        "target_ipa": "ʁ y",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Focus on the vowel. This experiment does not grade the many acceptable French rhotic realizations.",
+        "duration_s": 0.63,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in rue. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "ʁ",
+          "y"
+        ],
+        "events": [
+          {
+            "phone": "ʁ",
+            "t": 0.212,
+            "posterior": 0.8396
+          },
+          {
+            "phone": "y",
+            "t": 0.273,
+            "posterior": 0.4777
+          }
+        ],
+        "candidate_costs": {
+          "roue": 0.1292,
+          "rue": 0.0435
+        },
+        "margin": 0.0856,
+        "candidate_winner": "rue",
+        "formants": [
+          {
+            "t": 0.08,
+            "f1": 335,
+            "f2": 1264
+          },
+          {
+            "t": 0.1,
+            "f1": 433,
+            "f2": 1222
+          },
+          {
+            "t": 0.12,
+            "f1": 411,
+            "f2": 1147
+          },
+          {
+            "t": 0.14,
+            "f1": 393,
+            "f2": 1098
+          },
+          {
+            "t": 0.22,
+            "f1": 378,
+            "f2": 1215
+          },
+          {
+            "t": 0.24,
+            "f1": 367,
+            "f2": 1195
+          },
+          {
+            "t": 0.26,
+            "f1": 365,
+            "f2": 1372
+          },
+          {
+            "t": 0.28,
+            "f1": 355,
+            "f2": 1531
+          },
+          {
+            "t": 0.3,
+            "f1": 323,
+            "f2": 1734
+          },
+          {
+            "t": 0.32,
+            "f1": 302,
+            "f2": 1892
+          },
+          {
+            "t": 0.34,
+            "f1": 302,
+            "f2": 1917
+          },
+          {
+            "t": 0.36,
+            "f1": 300,
+            "f2": 1854
+          }
+        ],
+        "latency_s": 0.101
+      },
+      "snr20": {
+        "pair": "roue-rue",
+        "target": "rue",
+        "target_ipa": "ʁ y",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Focus on the vowel. This experiment does not grade the many acceptable French rhotic realizations.",
+        "duration_s": 0.63,
+        "status": "uncertain",
+        "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+        "phones": [
+          "ʁ",
+          "uː"
+        ],
+        "events": [
+          {
+            "phone": "ʁ",
+            "t": 0.212,
+            "posterior": 0.3094
+          },
+          {
+            "phone": "uː",
+            "t": 0.273,
+            "posterior": 0.1709
+          }
+        ],
+        "candidate_costs": {
+          "roue": 0.1647,
+          "rue": 0.1179
+        },
+        "margin": 0.0468,
+        "candidate_winner": "rue",
+        "formants": [],
+        "latency_s": 0.101
+      }
+    },
+    {
+      "id": "b0d2aa1b975fce387eb4bf9d",
+      "word": "tout",
+      "pair": "tout-tu",
+      "speaker": "Poslovitch",
+      "path": "rescue/app/public/audio/human-fr-u-y/clips/b0d2aa1b975fce387eb4bf9d.mp3",
+      "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Poslovitch-tout.wav",
+      "license": {
+        "id": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false,
+        "commercialReusePermitted": true,
+        "shareAlike": false
+      },
+      "sha256": "bfdc80c6f9bf240c3e1497cec780ebf522bad2134b312e8263a96a2de7663f40",
+      "phonetic_listening_verified": false,
+      "clean": {
+        "pair": "tout-tu",
+        "target": "tout",
+        "target_ipa": "t u",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Both vowels have rounded lips. For /y/, start with /i/ and round your lips while keeping the tongue forward.",
+        "duration_s": 0.85,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in tout. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "t",
+          "uː"
+        ],
+        "events": [
+          {
+            "phone": "t",
+            "t": 0.292,
+            "posterior": 0.9666
+          },
+          {
+            "phone": "uː",
+            "t": 0.352,
+            "posterior": 0.5023
+          }
+        ],
+        "candidate_costs": {
+          "tout": 0.0289,
+          "tu": 0.1496
+        },
+        "margin": 0.1206,
+        "candidate_winner": "tout",
+        "formants": [
+          {
+            "t": 0.44,
+            "f1": 328,
+            "f2": 730
+          },
+          {
+            "t": 0.5,
+            "f1": 239,
+            "f2": 670
+          },
+          {
+            "t": 0.52,
+            "f1": 240,
+            "f2": 714
+          },
+          {
+            "t": 0.54,
+            "f1": 252,
+            "f2": 1291
+          }
+        ],
+        "latency_s": 0.131
+      },
+      "snr20": {
+        "pair": "tout-tu",
+        "target": "tout",
+        "target_ipa": "t u",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Both vowels have rounded lips. For /y/, start with /i/ and round your lips while keeping the tongue forward.",
+        "duration_s": 0.85,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in tout. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "t",
+          "uː"
+        ],
+        "events": [
+          {
+            "phone": "t",
+            "t": 0.292,
+            "posterior": 0.963
+          },
+          {
+            "phone": "uː",
+            "t": 0.352,
+            "posterior": 0.5859
+          }
+        ],
+        "candidate_costs": {
+          "tout": 0.0417,
+          "tu": 0.1672
+        },
+        "margin": 0.1255,
+        "candidate_winner": "tout",
+        "formants": [],
+        "latency_s": 0.127
+      }
+    },
+    {
+      "id": "c6d72d39a7633c4fcd54df31",
+      "word": "tu",
+      "pair": "tout-tu",
+      "speaker": "Poslovitch",
+      "path": "rescue/app/public/audio/human-fr-u-y/clips/c6d72d39a7633c4fcd54df31.mp3",
+      "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Poslovitch-tu.wav",
+      "license": {
+        "id": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false,
+        "commercialReusePermitted": true,
+        "shareAlike": false
+      },
+      "sha256": "8a7a705fc49e5f8f04dca2c609dbd715957339b28759776fb895013dd2b50ed7",
+      "phonetic_listening_verified": false,
+      "clean": {
+        "pair": "tout-tu",
+        "target": "tu",
+        "target_ipa": "t y",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Both vowels have rounded lips. For /y/, start with /i/ and round your lips while keeping the tongue forward.",
+        "duration_s": 0.85,
+        "status": "uncertain",
+        "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+        "phones": [
+          "tʃ",
+          "i.5"
+        ],
+        "events": [
+          {
+            "phone": "tʃ",
+            "t": 0.253,
+            "posterior": 0.2403
+          },
+          {
+            "phone": "i.5",
+            "t": 0.333,
+            "posterior": 0.0669
+          }
+        ],
+        "candidate_costs": {
+          "tout": 0.2562,
+          "tu": 0.1906
+        },
+        "margin": 0.0655,
+        "candidate_winner": "tu",
+        "formants": [
+          {
+            "t": 0.32,
+            "f1": 318,
+            "f2": 1863
+          },
+          {
+            "t": 0.34,
+            "f1": 331,
+            "f2": 1785
+          },
+          {
+            "t": 0.36,
+            "f1": 317,
+            "f2": 1834
+          },
+          {
+            "t": 0.38,
+            "f1": 314,
+            "f2": 1830
+          },
+          {
+            "t": 0.4,
+            "f1": 301,
+            "f2": 1832
+          },
+          {
+            "t": 0.42,
+            "f1": 291,
+            "f2": 1824
+          },
+          {
+            "t": 0.44,
+            "f1": 280,
+            "f2": 1795
+          },
+          {
+            "t": 0.46,
+            "f1": 276,
+            "f2": 1799
+          },
+          {
+            "t": 0.48,
+            "f1": 272,
+            "f2": 1779
+          },
+          {
+            "t": 0.5,
+            "f1": 271,
+            "f2": 1761
+          },
+          {
+            "t": 0.52,
+            "f1": 280,
+            "f2": 1734
+          },
+          {
+            "t": 0.54,
+            "f1": 284,
+            "f2": 1729
+          },
+          {
+            "t": 0.58,
+            "f1": 274,
+            "f2": 1736
+          }
+        ],
+        "latency_s": 0.128
+      },
+      "snr20": {
+        "pair": "tout-tu",
+        "target": "tu",
+        "target_ipa": "t y",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Both vowels have rounded lips. For /y/, start with /i/ and round your lips while keeping the tongue forward.",
+        "duration_s": 0.85,
+        "status": "uncertain",
+        "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+        "phones": [
+          "tʃ",
+          "i.5"
+        ],
+        "events": [
+          {
+            "phone": "tʃ",
+            "t": 0.253,
+            "posterior": 0.2175
+          },
+          {
+            "phone": "i.5",
+            "t": 0.333,
+            "posterior": 0.0668
+          }
+        ],
+        "candidate_costs": {
+          "tout": 0.2387,
+          "tu": 0.173
+        },
+        "margin": 0.0658,
+        "candidate_winner": "tu",
+        "formants": [],
+        "latency_s": 0.121
+      }
+    },
+    {
+      "id": "3fc7ac5606fb6b264f1743b0",
+      "word": "vous",
+      "pair": "vous-vu",
+      "speaker": "Poslovitch",
+      "path": "rescue/app/public/audio/human-fr-u-y/clips/3fc7ac5606fb6b264f1743b0.mp3",
+      "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Poslovitch-vous.wav",
+      "license": {
+        "id": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false,
+        "commercialReusePermitted": true,
+        "shareAlike": false
+      },
+      "sha256": "4111843ea1757e8265031ef0ff6331fe35c8821de5692d6986e77647519cc92f",
+      "phonetic_listening_verified": false,
+      "clean": {
+        "pair": "vous-vu",
+        "target": "vous",
+        "target_ipa": "v u",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Keep the /v/ the same. Explore the contrast between back /u/ and front /y/, with rounded lips for both.",
+        "duration_s": 0.85,
+        "status": "uncertain",
+        "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+        "phones": [
+          "f",
+          "u5"
+        ],
+        "events": [
+          {
+            "phone": "f",
+            "t": 0.233,
+            "posterior": 0.9819
+          },
+          {
+            "phone": "u5",
+            "t": 0.312,
+            "posterior": 0.2367
+          }
+        ],
+        "candidate_costs": {
+          "vous": 0.2168,
+          "vu": 0.3038
+        },
+        "margin": 0.087,
+        "candidate_winner": "vous",
+        "formants": [
+          {
+            "t": 0.26,
+            "f1": 608,
+            "f2": 1600
+          },
+          {
+            "t": 0.28,
+            "f1": 387,
+            "f2": 926
+          },
+          {
+            "t": 0.3,
+            "f1": 374,
+            "f2": 744
+          },
+          {
+            "t": 0.32,
+            "f1": 365,
+            "f2": 730
+          },
+          {
+            "t": 0.34,
+            "f1": 347,
+            "f2": 905
+          },
+          {
+            "t": 0.36,
+            "f1": 338,
+            "f2": 950
+          },
+          {
+            "t": 0.38,
+            "f1": 313,
+            "f2": 873
+          },
+          {
+            "t": 0.4,
+            "f1": 301,
+            "f2": 701
+          },
+          {
+            "t": 0.42,
+            "f1": 317,
+            "f2": 661
+          },
+          {
+            "t": 0.44,
+            "f1": 353,
+            "f2": 642
+          },
+          {
+            "t": 0.46,
+            "f1": 315,
+            "f2": 723
+          },
+          {
+            "t": 0.48,
+            "f1": 431,
+            "f2": 625
+          }
+        ],
+        "latency_s": 0.128
+      },
+      "snr20": {
+        "pair": "vous-vu",
+        "target": "vous",
+        "target_ipa": "v u",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Keep the /v/ the same. Explore the contrast between back /u/ and front /y/, with rounded lips for both.",
+        "duration_s": 0.85,
+        "status": "uncertain",
+        "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+        "phones": [
+          "f"
+        ],
+        "events": [
+          {
+            "phone": "f",
+            "t": 0.233,
+            "posterior": 0.9401
+          }
+        ],
+        "candidate_costs": {
+          "vous": 0.2092,
+          "vu": 0.3159
+        },
+        "margin": 0.1067,
+        "candidate_winner": "vous",
+        "formants": [],
+        "latency_s": 0.139
+      }
+    },
+    {
+      "id": "e771b0b72f4ae95eeb69e72e",
+      "word": "vu",
+      "pair": "vous-vu",
+      "speaker": "Poslovitch",
+      "path": "rescue/app/public/audio/human-fr-u-y/clips/e771b0b72f4ae95eeb69e72e.mp3",
+      "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Poslovitch-vu.wav",
+      "license": {
+        "id": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false,
+        "commercialReusePermitted": true,
+        "shareAlike": false
+      },
+      "sha256": "6eb84d00e1a499918ba1549a7ce6b90ff0ab26b1e18d7491ccbd88bbb0e301d3",
+      "phonetic_listening_verified": false,
+      "clean": {
+        "pair": "vous-vu",
+        "target": "vu",
+        "target_ipa": "v y",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Keep the /v/ the same. Explore the contrast between back /u/ and front /y/, with rounded lips for both.",
+        "duration_s": 0.786,
+        "status": "uncertain",
+        "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+        "phones": [
+          "ʒ",
+          "y"
+        ],
+        "events": [
+          {
+            "phone": "ʒ",
+            "t": 0.253,
+            "posterior": 0.6925
+          },
+          {
+            "phone": "y",
+            "t": 0.312,
+            "posterior": 0.4418
+          }
+        ],
+        "candidate_costs": {
+          "vous": 0.328,
+          "vu": 0.1838
+        },
+        "margin": 0.1442,
+        "candidate_winner": "vu",
+        "formants": [
+          {
+            "t": 0.08,
+            "f1": 317,
+            "f2": 1588
+          },
+          {
+            "t": 0.12,
+            "f1": 304,
+            "f2": 1406
+          },
+          {
+            "t": 0.14,
+            "f1": 287,
+            "f2": 1515
+          },
+          {
+            "t": 0.16,
+            "f1": 276,
+            "f2": 1702
+          },
+          {
+            "t": 0.18,
+            "f1": 262,
+            "f2": 1880
+          },
+          {
+            "t": 0.2,
+            "f1": 751,
+            "f2": 2223
+          },
+          {
+            "t": 0.22,
+            "f1": 1158,
+            "f2": 2724
+          },
+          {
+            "t": 0.26,
+            "f1": 260,
+            "f2": 1778
+          },
+          {
+            "t": 0.28,
+            "f1": 275,
+            "f2": 1732
+          },
+          {
+            "t": 0.3,
+            "f1": 289,
+            "f2": 1743
+          },
+          {
+            "t": 0.32,
+            "f1": 306,
+            "f2": 1688
+          },
+          {
+            "t": 0.34,
+            "f1": 302,
+            "f2": 1654
+          },
+          {
+            "t": 0.36,
+            "f1": 301,
+            "f2": 1659
+          },
+          {
+            "t": 0.38,
+            "f1": 320,
+            "f2": 1647
+          },
+          {
+            "t": 0.4,
+            "f1": 300,
+            "f2": 1642
+          },
+          {
+            "t": 0.42,
+            "f1": 267,
+            "f2": 1649
+          },
+          {
+            "t": 0.44,
+            "f1": 267,
+            "f2": 1664
+          },
+          {
+            "t": 0.46,
+            "f1": 259,
+            "f2": 1665
+          }
+        ],
+        "latency_s": 0.124
+      },
+      "snr20": {
+        "pair": "vous-vu",
+        "target": "vu",
+        "target_ipa": "v y",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Keep the /v/ the same. Explore the contrast between back /u/ and front /y/, with rounded lips for both.",
+        "duration_s": 0.786,
+        "status": "uncertain",
+        "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+        "phones": [
+          "z",
+          "y"
+        ],
+        "events": [
+          {
+            "phone": "z",
+            "t": 0.253,
+            "posterior": 0.9307
+          },
+          {
+            "phone": "y",
+            "t": 0.312,
+            "posterior": 0.4599
+          }
+        ],
+        "candidate_costs": {
+          "vous": 0.3391,
+          "vu": 0.2389
+        },
+        "margin": 0.1002,
+        "candidate_winner": "vu",
+        "formants": [],
+        "latency_s": 0.117
+      }
+    },
+    {
+      "id": "32aa365ec94467fcd31a6f68",
+      "word": "roue",
+      "pair": "roue-rue",
+      "speaker": "Poslovitch",
+      "path": "rescue/app/public/audio/human-fr-u-y/clips/32aa365ec94467fcd31a6f68.mp3",
+      "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Poslovitch-roue.wav",
+      "license": {
+        "id": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false,
+        "commercialReusePermitted": true,
+        "shareAlike": false
+      },
+      "sha256": "103cbe2beb6fca254c2b1a19b4ece69dc3b88ba4cf65b859abe5e80ab35add9c",
+      "phonetic_listening_verified": false,
+      "clean": {
+        "pair": "roue-rue",
+        "target": "roue",
+        "target_ipa": "ʁ u",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Focus on the vowel. This experiment does not grade the many acceptable French rhotic realizations.",
+        "duration_s": 0.943,
+        "status": "uncertain",
+        "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+        "phones": [
+          "a",
+          "z",
+          "u"
+        ],
+        "events": [
+          {
+            "phone": "a",
+            "t": 0.273,
+            "posterior": 0.2287
+          },
+          {
+            "phone": "z",
+            "t": 0.412,
+            "posterior": 0.9468
+          },
+          {
+            "phone": "u",
+            "t": 0.453,
+            "posterior": 0.644
+          }
+        ],
+        "candidate_costs": {
+          "roue": 0.1915,
+          "rue": 0.2912
+        },
+        "margin": 0.0997,
+        "candidate_winner": "roue",
+        "formants": [
+          {
+            "t": 0.26,
+            "f1": 411,
+            "f2": 906
+          },
+          {
+            "t": 0.28,
+            "f1": 406,
+            "f2": 857
+          },
+          {
+            "t": 0.3,
+            "f1": 407,
+            "f2": 695
+          },
+          {
+            "t": 0.32,
+            "f1": 414,
+            "f2": 638
+          },
+          {
+            "t": 0.38,
+            "f1": 465,
+            "f2": 2997
+          },
+          {
+            "t": 0.46,
+            "f1": 378,
+            "f2": 638
+          },
+          {
+            "t": 0.5,
+            "f1": 375,
+            "f2": 631
+          },
+          {
+            "t": 0.58,
+            "f1": 451,
+            "f2": 1160
+          }
+        ],
+        "latency_s": 0.131
+      },
+      "snr20": {
+        "pair": "roue-rue",
+        "target": "roue",
+        "target_ipa": "ʁ u",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Focus on the vowel. This experiment does not grade the many acceptable French rhotic realizations.",
+        "duration_s": 0.943,
+        "status": "uncertain",
+        "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+        "phones": [
+          "z",
+          "i"
+        ],
+        "events": [
+          {
+            "phone": "z",
+            "t": 0.393,
+            "posterior": 0.3275
+          },
+          {
+            "phone": "i",
+            "t": 0.453,
+            "posterior": 0.3319
+          }
+        ],
+        "candidate_costs": {
+          "roue": 0.2728,
+          "rue": 0.3062
+        },
+        "margin": 0.0334,
+        "candidate_winner": "roue",
+        "formants": [],
+        "latency_s": 0.121
+      }
+    },
+    {
+      "id": "f17b942aeec6f65750b35f63",
+      "word": "rue",
+      "pair": "roue-rue",
+      "speaker": "Poslovitch",
+      "path": "rescue/app/public/audio/human-fr-u-y/clips/f17b942aeec6f65750b35f63.mp3",
+      "source": "https://commons.wikimedia.org/wiki/File:LL-Q150_(fra)-Poslovitch-rue.wav",
+      "license": {
+        "id": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false,
+        "commercialReusePermitted": true,
+        "shareAlike": false
+      },
+      "sha256": "b7aedfcae7d03a9ef4de93abe5a2eb2de2b479937c2ed1218c781a2c9f71a3da",
+      "phonetic_listening_verified": false,
+      "clean": {
+        "pair": "roue-rue",
+        "target": "rue",
+        "target_ipa": "ʁ y",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Focus on the vowel. This experiment does not grade the many acceptable French rhotic realizations.",
+        "duration_s": 0.883,
+        "status": "uncertain",
+        "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+        "phones": [
+          "ʁ",
+          "uː"
+        ],
+        "events": [
+          {
+            "phone": "ʁ",
+            "t": 0.372,
+            "posterior": 0.6603
+          },
+          {
+            "phone": "uː",
+            "t": 0.412,
+            "posterior": 0.2646
+          }
+        ],
+        "candidate_costs": {
+          "roue": 0.1138,
+          "rue": 0.1384
+        },
+        "margin": 0.0246,
+        "candidate_winner": "roue",
+        "formants": [
+          {
+            "t": 0.26,
+            "f1": 353,
+            "f2": 1304
+          },
+          {
+            "t": 0.28,
+            "f1": 405,
+            "f2": 1234
+          },
+          {
+            "t": 0.3,
+            "f1": 359,
+            "f2": 1133
+          },
+          {
+            "t": 0.36,
+            "f1": 765,
+            "f2": 2188
+          },
+          {
+            "t": 0.38,
+            "f1": 354,
+            "f2": 1036
+          },
+          {
+            "t": 0.4,
+            "f1": 389,
+            "f2": 1161
+          },
+          {
+            "t": 0.42,
+            "f1": 384,
+            "f2": 1312
+          },
+          {
+            "t": 0.44,
+            "f1": 378,
+            "f2": 1552
+          },
+          {
+            "t": 0.46,
+            "f1": 363,
+            "f2": 1686
+          },
+          {
+            "t": 0.48,
+            "f1": 334,
+            "f2": 1733
+          },
+          {
+            "t": 0.5,
+            "f1": 293,
+            "f2": 1731
+          },
+          {
+            "t": 0.52,
+            "f1": 243,
+            "f2": 1733
+          },
+          {
+            "t": 0.54,
+            "f1": 684,
+            "f2": 1867
+          }
+        ],
+        "latency_s": 0.127
+      },
+      "snr20": {
+        "pair": "roue-rue",
+        "target": "rue",
+        "target_ipa": "ʁ y",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Focus on the vowel. This experiment does not grade the many acceptable French rhotic realizations.",
+        "duration_s": 0.883,
+        "status": "uncertain",
+        "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+        "phones": [
+          "ə",
+          "ʁ",
+          "uː"
+        ],
+        "events": [
+          {
+            "phone": "ə",
+            "t": 0.273,
+            "posterior": 0.2373
+          },
+          {
+            "phone": "ʁ",
+            "t": 0.372,
+            "posterior": 0.3137
+          },
+          {
+            "phone": "uː",
+            "t": 0.412,
+            "posterior": 0.2526
+          }
+        ],
+        "candidate_costs": {
+          "roue": 0.1611,
+          "rue": 0.1787
+        },
+        "margin": 0.0176,
+        "candidate_winner": "roue",
+        "formants": [],
+        "latency_s": 0.122
+      }
+    },
+    {
+      "id": "44ea03486e57c52545c898cc",
+      "word": "ship",
+      "pair": "sheep-ship",
+      "speaker": "Grendelkhan",
+      "path": "rescue/app/public/audio/human-en-i-ih/clips/44ea03486e57c52545c898cc.mp3",
+      "source": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-ship.wav",
+      "license": {
+        "id": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false,
+        "commercialReusePermitted": true,
+        "shareAlike": false
+      },
+      "sha256": "180a5c2ae8054c27b53596790e8912cd6535591f15ac26465e3bcc17066c1327",
+      "phonetic_listening_verified": false,
+      "clean": {
+        "pair": "sheep-ship",
+        "target": "ship",
+        "target_ipa": "ʃ ɪ p",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Listen for vowel quality as well as duration. /ɪ/ is typically more open and central than /iː/.",
+        "duration_s": 0.605,
+        "status": "uncertain",
+        "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+        "phones": [
+          "ʃ",
+          "e",
+          "p"
+        ],
+        "events": [
+          {
+            "phone": "ʃ",
+            "t": 0.212,
+            "posterior": 0.8661
+          },
+          {
+            "phone": "e",
+            "t": 0.292,
+            "posterior": 0.336
+          },
+          {
+            "phone": "p",
+            "t": 0.453,
+            "posterior": 0.9789
+          }
+        ],
+        "candidate_costs": {
+          "sheep": 0.1751,
+          "ship": 0.0808
+        },
+        "margin": 0.0943,
+        "candidate_winner": "ship",
+        "formants": [
+          {
+            "t": 0.26,
+            "f1": 412,
+            "f2": 1796
+          },
+          {
+            "t": 0.28,
+            "f1": 466,
+            "f2": 1750
+          },
+          {
+            "t": 0.3,
+            "f1": 511,
+            "f2": 1684
+          },
+          {
+            "t": 0.32,
+            "f1": 506,
+            "f2": 1581
+          },
+          {
+            "t": 0.34,
+            "f1": 439,
+            "f2": 1495
+          }
+        ],
+        "latency_s": 0.099
+      },
+      "snr20": {
+        "pair": "sheep-ship",
+        "target": "ship",
+        "target_ipa": "ʃ ɪ p",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Listen for vowel quality as well as duration. /ɪ/ is typically more open and central than /iː/.",
+        "duration_s": 0.605,
+        "status": "uncertain",
+        "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+        "phones": [
+          "ʃ",
+          "e",
+          "p"
+        ],
+        "events": [
+          {
+            "phone": "ʃ",
+            "t": 0.212,
+            "posterior": 0.8856
+          },
+          {
+            "phone": "e",
+            "t": 0.292,
+            "posterior": 0.4332
+          },
+          {
+            "phone": "p",
+            "t": 0.412,
+            "posterior": 0.5244
+          }
+        ],
+        "candidate_costs": {
+          "sheep": 0.2096,
+          "ship": 0.172
+        },
+        "margin": 0.0376,
+        "candidate_winner": "ship",
+        "formants": [],
+        "latency_s": 0.099
+      }
+    },
+    {
+      "id": "77b412efdfedb0f8737009ea",
+      "word": "sheep",
+      "pair": "sheep-ship",
+      "speaker": "Grendelkhan",
+      "path": "rescue/app/public/audio/human-en-i-ih/clips/77b412efdfedb0f8737009ea.mp3",
+      "source": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-sheep.wav",
+      "license": {
+        "id": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false,
+        "commercialReusePermitted": true,
+        "shareAlike": false
+      },
+      "sha256": "52fa2d629781878399c7ac805900d0f528ce3be6452e011df36afbc21d5c0337",
+      "phonetic_listening_verified": false,
+      "clean": {
+        "pair": "sheep-ship",
+        "target": "sheep",
+        "target_ipa": "ʃ iː p",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Listen for vowel quality as well as duration. /ɪ/ is typically more open and central than /iː/.",
+        "duration_s": 0.648,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in sheep. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "ʃ",
+          "iː",
+          "p"
+        ],
+        "events": [
+          {
+            "phone": "ʃ",
+            "t": 0.212,
+            "posterior": 0.9041
+          },
+          {
+            "phone": "iː",
+            "t": 0.292,
+            "posterior": 0.8615
+          },
+          {
+            "phone": "p",
+            "t": 0.492,
+            "posterior": 0.9709
+          }
+        ],
+        "candidate_costs": {
+          "sheep": 0.0101,
+          "ship": 0.1408
+        },
+        "margin": 0.1308,
+        "candidate_winner": "sheep",
+        "formants": [
+          {
+            "t": 0.26,
+            "f1": 370,
+            "f2": 1903
+          },
+          {
+            "t": 0.28,
+            "f1": 420,
+            "f2": 1961
+          },
+          {
+            "t": 0.3,
+            "f1": 370,
+            "f2": 2007
+          },
+          {
+            "t": 0.32,
+            "f1": 304,
+            "f2": 2053
+          },
+          {
+            "t": 0.34,
+            "f1": 292,
+            "f2": 2128
+          },
+          {
+            "t": 0.36,
+            "f1": 307,
+            "f2": 2123
+          },
+          {
+            "t": 0.38,
+            "f1": 283,
+            "f2": 2062
+          },
+          {
+            "t": 0.4,
+            "f1": 236,
+            "f2": 2051
+          },
+          {
+            "t": 0.42,
+            "f1": 243,
+            "f2": 2073
+          }
+        ],
+        "latency_s": 0.102
+      },
+      "snr20": {
+        "pair": "sheep-ship",
+        "target": "sheep",
+        "target_ipa": "ʃ iː p",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Listen for vowel quality as well as duration. /ɪ/ is typically more open and central than /iː/.",
+        "duration_s": 0.648,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in sheep. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "ʃ",
+          "iː",
+          "p"
+        ],
+        "events": [
+          {
+            "phone": "ʃ",
+            "t": 0.212,
+            "posterior": 0.906
+          },
+          {
+            "phone": "iː",
+            "t": 0.292,
+            "posterior": 0.807
+          },
+          {
+            "phone": "p",
+            "t": 0.472,
+            "posterior": 0.8771
+          }
+        ],
+        "candidate_costs": {
+          "sheep": 0.0144,
+          "ship": 0.1486
+        },
+        "margin": 0.1342,
+        "candidate_winner": "sheep",
+        "formants": [],
+        "latency_s": 0.095
+      }
+    },
+    {
+      "id": "2da0f649139f0ee653c549da",
+      "word": "fill",
+      "pair": "feel-fill",
+      "speaker": "Grendelkhan",
+      "path": "rescue/app/public/audio/human-en-i-ih/clips/2da0f649139f0ee653c549da.mp3",
+      "source": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-fill.wav",
+      "license": {
+        "id": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false,
+        "commercialReusePermitted": true,
+        "shareAlike": false
+      },
+      "sha256": "4d9560022b7694122fa09f5a231cd0466b3460659d9eebb2853c3fbe6f401539",
+      "phonetic_listening_verified": false,
+      "clean": {
+        "pair": "feel-fill",
+        "target": "fill",
+        "target_ipa": "f ɪ l",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Keep the consonants steady. The final /l/ can change the vowel acoustics, so do not chase a fixed dot.",
+        "duration_s": 0.816,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in fill. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "f",
+          "ɪ",
+          "l"
+        ],
+        "events": [
+          {
+            "phone": "f",
+            "t": 0.233,
+            "posterior": 0.9502
+          },
+          {
+            "phone": "ɪ",
+            "t": 0.292,
+            "posterior": 0.4617
+          },
+          {
+            "phone": "l",
+            "t": 0.453,
+            "posterior": 0.8325
+          }
+        ],
+        "candidate_costs": {
+          "feel": 0.1073,
+          "fill": 0.0257
+        },
+        "margin": 0.0816,
+        "candidate_winner": "fill",
+        "formants": [
+          {
+            "t": 0.26,
+            "f1": 486,
+            "f2": 1531
+          },
+          {
+            "t": 0.28,
+            "f1": 505,
+            "f2": 1556
+          },
+          {
+            "t": 0.3,
+            "f1": 509,
+            "f2": 1499
+          },
+          {
+            "t": 0.32,
+            "f1": 521,
+            "f2": 1487
+          },
+          {
+            "t": 0.34,
+            "f1": 550,
+            "f2": 1402
+          },
+          {
+            "t": 0.36,
+            "f1": 564,
+            "f2": 1230
+          },
+          {
+            "t": 0.38,
+            "f1": 562,
+            "f2": 1110
+          },
+          {
+            "t": 0.4,
+            "f1": 539,
+            "f2": 1027
+          },
+          {
+            "t": 0.42,
+            "f1": 509,
+            "f2": 961
+          },
+          {
+            "t": 0.44,
+            "f1": 490,
+            "f2": 924
+          },
+          {
+            "t": 0.5,
+            "f1": 460,
+            "f2": 836
+          },
+          {
+            "t": 0.52,
+            "f1": 486,
+            "f2": 880
+          },
+          {
+            "t": 0.54,
+            "f1": 499,
+            "f2": 944
+          },
+          {
+            "t": 0.56,
+            "f1": 376,
+            "f2": 961
+          }
+        ],
+        "latency_s": 0.122
+      },
+      "snr20": {
+        "pair": "feel-fill",
+        "target": "fill",
+        "target_ipa": "f ɪ l",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Keep the consonants steady. The final /l/ can change the vowel acoustics, so do not chase a fixed dot.",
+        "duration_s": 0.816,
+        "status": "uncertain",
+        "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+        "phones": [
+          "ɛ",
+          "l"
+        ],
+        "events": [
+          {
+            "phone": "ɛ",
+            "t": 0.292,
+            "posterior": 0.1922
+          },
+          {
+            "phone": "l",
+            "t": 0.472,
+            "posterior": 0.7716
+          }
+        ],
+        "candidate_costs": {
+          "feel": 0.162,
+          "fill": 0.1141
+        },
+        "margin": 0.0479,
+        "candidate_winner": "fill",
+        "formants": [],
+        "latency_s": 0.118
+      }
+    },
+    {
+      "id": "d6378c1f5ae56a6ff7038353",
+      "word": "feel",
+      "pair": "feel-fill",
+      "speaker": "Grendelkhan",
+      "path": "rescue/app/public/audio/human-en-i-ih/clips/d6378c1f5ae56a6ff7038353.mp3",
+      "source": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-feel.wav",
+      "license": {
+        "id": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false,
+        "commercialReusePermitted": true,
+        "shareAlike": false
+      },
+      "sha256": "f3d196aee738b4903be3fb224c3bb2b41bd9c0024b11f93c7a2aee79a3949ddc",
+      "phonetic_listening_verified": false,
+      "clean": {
+        "pair": "feel-fill",
+        "target": "feel",
+        "target_ipa": "f iː l",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Keep the consonants steady. The final /l/ can change the vowel acoustics, so do not chase a fixed dot.",
+        "duration_s": 0.787,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in feel. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "f",
+          "i",
+          "l"
+        ],
+        "events": [
+          {
+            "phone": "f",
+            "t": 0.233,
+            "posterior": 0.9758
+          },
+          {
+            "phone": "i",
+            "t": 0.292,
+            "posterior": 0.4553
+          },
+          {
+            "phone": "l",
+            "t": 0.492,
+            "posterior": 0.7623
+          }
+        ],
+        "candidate_costs": {
+          "feel": 0.0423,
+          "fill": 0.1136
+        },
+        "margin": 0.0713,
+        "candidate_winner": "feel",
+        "formants": [
+          {
+            "t": 0.26,
+            "f1": 393,
+            "f2": 1986
+          },
+          {
+            "t": 0.28,
+            "f1": 380,
+            "f2": 2037
+          },
+          {
+            "t": 0.3,
+            "f1": 366,
+            "f2": 2065
+          },
+          {
+            "t": 0.32,
+            "f1": 355,
+            "f2": 2075
+          },
+          {
+            "t": 0.34,
+            "f1": 387,
+            "f2": 1990
+          },
+          {
+            "t": 0.36,
+            "f1": 449,
+            "f2": 1768
+          },
+          {
+            "t": 0.38,
+            "f1": 487,
+            "f2": 1466
+          },
+          {
+            "t": 0.4,
+            "f1": 508,
+            "f2": 1201
+          },
+          {
+            "t": 0.42,
+            "f1": 510,
+            "f2": 1021
+          },
+          {
+            "t": 0.44,
+            "f1": 473,
+            "f2": 948
+          },
+          {
+            "t": 0.46,
+            "f1": 434,
+            "f2": 893
+          },
+          {
+            "t": 0.48,
+            "f1": 401,
+            "f2": 844
+          },
+          {
+            "t": 0.5,
+            "f1": 384,
+            "f2": 860
+          },
+          {
+            "t": 0.52,
+            "f1": 350,
+            "f2": 856
+          },
+          {
+            "t": 0.54,
+            "f1": 288,
+            "f2": 829
+          }
+        ],
+        "latency_s": 0.122
+      },
+      "snr20": {
+        "pair": "feel-fill",
+        "target": "feel",
+        "target_ipa": "f iː l",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Keep the consonants steady. The final /l/ can change the vowel acoustics, so do not chase a fixed dot.",
+        "duration_s": 0.787,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in feel. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "f",
+          "iː",
+          "l"
+        ],
+        "events": [
+          {
+            "phone": "f",
+            "t": 0.233,
+            "posterior": 0.7843
+          },
+          {
+            "phone": "iː",
+            "t": 0.292,
+            "posterior": 0.4161
+          },
+          {
+            "phone": "l",
+            "t": 0.472,
+            "posterior": 0.7677
+          }
+        ],
+        "candidate_costs": {
+          "feel": 0.0384,
+          "fill": 0.1088
+        },
+        "margin": 0.0703,
+        "candidate_winner": "feel",
+        "formants": [],
+        "latency_s": 0.119
+      }
+    },
+    {
+      "id": "6d6bb877efc7991f46cebb91",
+      "word": "sit",
+      "pair": "seat-sit",
+      "speaker": "Grendelkhan",
+      "path": "rescue/app/public/audio/human-en-i-ih/clips/6d6bb877efc7991f46cebb91.mp3",
+      "source": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-sit.wav",
+      "license": {
+        "id": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false,
+        "commercialReusePermitted": true,
+        "shareAlike": false
+      },
+      "sha256": "96bfccca26e99520ffdee5fafca1024ce3e3ae88eddc282bfed96cd415636039",
+      "phonetic_listening_verified": false,
+      "clean": {
+        "pair": "seat-sit",
+        "target": "sit",
+        "target_ipa": "s ɪ t",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Try the contrast in a new word. Duration alone is not enough to distinguish these vowels.",
+        "duration_s": 0.605,
+        "status": "uncertain",
+        "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+        "phones": [
+          "s",
+          "ɛ",
+          "t"
+        ],
+        "events": [
+          {
+            "phone": "s",
+            "t": 0.233,
+            "posterior": 0.9322
+          },
+          {
+            "phone": "ɛ",
+            "t": 0.292,
+            "posterior": 0.6007
+          },
+          {
+            "phone": "t",
+            "t": 0.432,
+            "posterior": 0.8546
+          }
+        ],
+        "candidate_costs": {
+          "seat": 0.2307,
+          "sit": 0.199
+        },
+        "margin": 0.0318,
+        "candidate_winner": "sit",
+        "formants": [
+          {
+            "t": 0.26,
+            "f1": 459,
+            "f2": 1654
+          },
+          {
+            "t": 0.28,
+            "f1": 484,
+            "f2": 1674
+          },
+          {
+            "t": 0.3,
+            "f1": 477,
+            "f2": 1710
+          },
+          {
+            "t": 0.32,
+            "f1": 473,
+            "f2": 1742
+          },
+          {
+            "t": 0.34,
+            "f1": 454,
+            "f2": 1687
+          },
+          {
+            "t": 0.38,
+            "f1": 418,
+            "f2": 1832
+          }
+        ],
+        "latency_s": 0.107
+      },
+      "snr20": {
+        "pair": "seat-sit",
+        "target": "sit",
+        "target_ipa": "s ɪ t",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Try the contrast in a new word. Duration alone is not enough to distinguish these vowels.",
+        "duration_s": 0.605,
+        "status": "uncertain",
+        "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+        "phones": [
+          "s",
+          "e",
+          "t"
+        ],
+        "events": [
+          {
+            "phone": "s",
+            "t": 0.233,
+            "posterior": 0.7041
+          },
+          {
+            "phone": "e",
+            "t": 0.292,
+            "posterior": 0.4318
+          },
+          {
+            "phone": "t",
+            "t": 0.412,
+            "posterior": 0.6422
+          }
+        ],
+        "candidate_costs": {
+          "seat": 0.2194,
+          "sit": 0.2004
+        },
+        "margin": 0.019,
+        "candidate_winner": "sit",
+        "formants": [],
+        "latency_s": 0.101
+      }
+    },
+    {
+      "id": "a2d8ef93984f9fd3bcedd82f",
+      "word": "seat",
+      "pair": "seat-sit",
+      "speaker": "Grendelkhan",
+      "path": "rescue/app/public/audio/human-en-i-ih/clips/a2d8ef93984f9fd3bcedd82f.mp3",
+      "source": "https://commons.wikimedia.org/wiki/File:LL-Q1860_(eng)-Grendelkhan-seat.wav",
+      "license": {
+        "id": "CC0-1.0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attributionRequired": false,
+        "commercialReusePermitted": true,
+        "shareAlike": false
+      },
+      "sha256": "4e2037c4ff3e8de62f0227016b4f345e39f50e30ed40a634365ea4ccab07b615",
+      "phonetic_listening_verified": false,
+      "clean": {
+        "pair": "seat-sit",
+        "target": "seat",
+        "target_ipa": "s iː t",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Try the contrast in a new word. Duration alone is not enough to distinguish these vowels.",
+        "duration_s": 0.627,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in seat. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "s",
+          "iː",
+          "t"
+        ],
+        "events": [
+          {
+            "phone": "s",
+            "t": 0.212,
+            "posterior": 0.7712
+          },
+          {
+            "phone": "iː",
+            "t": 0.292,
+            "posterior": 0.8385
+          },
+          {
+            "phone": "t",
+            "t": 0.472,
+            "posterior": 0.7757
+          }
+        ],
+        "candidate_costs": {
+          "seat": 0.0269,
+          "sit": 0.1463
+        },
+        "margin": 0.1194,
+        "candidate_winner": "seat",
+        "formants": [
+          {
+            "t": 0.42,
+            "f1": 221,
+            "f2": 1812
+          }
+        ],
+        "latency_s": 0.105
+      },
+      "snr20": {
+        "pair": "seat-sit",
+        "target": "seat",
+        "target_ipa": "s iː t",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Try the contrast in a new word. Duration alone is not enough to distinguish these vowels.",
+        "duration_s": 0.627,
+        "status": "uncertain",
+        "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+        "phones": [
+          "s",
+          "iː"
+        ],
+        "events": [
+          {
+            "phone": "s",
+            "t": 0.212,
+            "posterior": 0.746
+          },
+          {
+            "phone": "iː",
+            "t": 0.273,
+            "posterior": 0.5999
+          }
+        ],
+        "candidate_costs": {
+          "seat": 0.067,
+          "sit": 0.1551
+        },
+        "margin": 0.0881,
+        "candidate_winner": "seat",
+        "formants": [],
+        "latency_s": 0.1
+      }
+    },
+    {
+      "id": "7f447ae66488c340fa0ead9b",
+      "word": "ship",
+      "pair": "sheep-ship",
+      "speaker": "Dvortygirl",
+      "path": "rescue/app/public/audio/human-en-i-ih/clips/7f447ae66488c340fa0ead9b.mp3",
+      "source": "https://commons.wikimedia.org/wiki/File:En-us-ship.ogg",
+      "license": {
+        "id": "CC-BY-SA-3.0",
+        "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "attributionRequired": true,
+        "commercialReusePermitted": true,
+        "shareAlike": true
+      },
+      "sha256": "3c020a9c3bebe2dfd176da951a88916247f4db2d9a0590a3d0fdb3a218cd5ec4",
+      "phonetic_listening_verified": false,
+      "clean": {
+        "pair": "sheep-ship",
+        "target": "ship",
+        "target_ipa": "ʃ ɪ p",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Listen for vowel quality as well as duration. /ɪ/ is typically more open and central than /iː/.",
+        "duration_s": 0.604,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in ship. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "ʃ",
+          "ɪ",
+          "p"
+        ],
+        "events": [
+          {
+            "phone": "ʃ",
+            "t": 0.193,
+            "posterior": 0.8627
+          },
+          {
+            "phone": "ɪ",
+            "t": 0.253,
+            "posterior": 0.7657
+          },
+          {
+            "phone": "p",
+            "t": 0.412,
+            "posterior": 0.9824
+          }
+        ],
+        "candidate_costs": {
+          "sheep": 0.1689,
+          "ship": 0.0153
+        },
+        "margin": 0.1536,
+        "candidate_winner": "ship",
+        "formants": [
+          {
+            "t": 0.24,
+            "f1": 463,
+            "f2": 2184
+          },
+          {
+            "t": 0.26,
+            "f1": 510,
+            "f2": 2174
+          },
+          {
+            "t": 0.28,
+            "f1": 547,
+            "f2": 2112
+          }
+        ],
+        "latency_s": 0.105
+      },
+      "snr20": {
+        "pair": "sheep-ship",
+        "target": "ship",
+        "target_ipa": "ʃ ɪ p",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Listen for vowel quality as well as duration. /ɪ/ is typically more open and central than /iː/.",
+        "duration_s": 0.604,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in ship. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "ʃ",
+          "ɪ",
+          "p"
+        ],
+        "events": [
+          {
+            "phone": "ʃ",
+            "t": 0.193,
+            "posterior": 0.8471
+          },
+          {
+            "phone": "ɪ",
+            "t": 0.253,
+            "posterior": 0.7418
+          },
+          {
+            "phone": "p",
+            "t": 0.412,
+            "posterior": 0.9608
+          }
+        ],
+        "candidate_costs": {
+          "sheep": 0.1634,
+          "ship": 0.0184
+        },
+        "margin": 0.145,
+        "candidate_winner": "ship",
+        "formants": [],
+        "latency_s": 0.1
+      }
+    },
+    {
+      "id": "88a74ae0c7666cf4ca786901",
+      "word": "sheep",
+      "pair": "sheep-ship",
+      "speaker": "Dvortygirl",
+      "path": "rescue/app/public/audio/human-en-i-ih/clips/88a74ae0c7666cf4ca786901.mp3",
+      "source": "https://commons.wikimedia.org/wiki/File:En-us-sheep.ogg",
+      "license": {
+        "id": "CC-BY-SA-3.0",
+        "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "attributionRequired": true,
+        "commercialReusePermitted": true,
+        "shareAlike": true
+      },
+      "sha256": "587c72c40ca6a8a4d4802f9395e864d2778bbeb53620ec86df664da368344190",
+      "phonetic_listening_verified": false,
+      "clean": {
+        "pair": "sheep-ship",
+        "target": "sheep",
+        "target_ipa": "ʃ iː p",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Listen for vowel quality as well as duration. /ɪ/ is typically more open and central than /iː/.",
+        "duration_s": 0.697,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in sheep. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "ʃ",
+          "iː",
+          "p"
+        ],
+        "events": [
+          {
+            "phone": "ʃ",
+            "t": 0.233,
+            "posterior": 0.819
+          },
+          {
+            "phone": "iː",
+            "t": 0.312,
+            "posterior": 0.7813
+          },
+          {
+            "phone": "p",
+            "t": 0.492,
+            "posterior": 0.9858
+          }
+        ],
+        "candidate_costs": {
+          "sheep": 0.0138,
+          "ship": 0.1264
+        },
+        "margin": 0.1126,
+        "candidate_winner": "sheep",
+        "formants": [
+          {
+            "t": 0.3,
+            "f1": 230,
+            "f2": 2452
+          },
+          {
+            "t": 0.32,
+            "f1": 280,
+            "f2": 2676
+          },
+          {
+            "t": 0.34,
+            "f1": 323,
+            "f2": 2771
+          },
+          {
+            "t": 0.36,
+            "f1": 346,
+            "f2": 2788
+          },
+          {
+            "t": 0.38,
+            "f1": 332,
+            "f2": 2731
+          }
+        ],
+        "latency_s": 0.125
+      },
+      "snr20": {
+        "pair": "sheep-ship",
+        "target": "sheep",
+        "target_ipa": "ʃ iː p",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Listen for vowel quality as well as duration. /ɪ/ is typically more open and central than /iː/.",
+        "duration_s": 0.697,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in sheep. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "ʃ",
+          "iː",
+          "p"
+        ],
+        "events": [
+          {
+            "phone": "ʃ",
+            "t": 0.233,
+            "posterior": 0.7912
+          },
+          {
+            "phone": "iː",
+            "t": 0.312,
+            "posterior": 0.7351
+          },
+          {
+            "phone": "p",
+            "t": 0.492,
+            "posterior": 0.9832
+          }
+        ],
+        "candidate_costs": {
+          "sheep": 0.0172,
+          "ship": 0.1326
+        },
+        "margin": 0.1154,
+        "candidate_winner": "sheep",
+        "formants": [],
+        "latency_s": 0.113
+      }
+    },
+    {
+      "id": "75614d9f1e93406211095201",
+      "word": "fill",
+      "pair": "feel-fill",
+      "speaker": "Dvortygirl",
+      "path": "rescue/app/public/audio/human-en-i-ih/clips/75614d9f1e93406211095201.mp3",
+      "source": "https://commons.wikimedia.org/wiki/File:En-us-fill.ogg",
+      "license": {
+        "id": "CC-BY-SA-3.0",
+        "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "attributionRequired": true,
+        "commercialReusePermitted": true,
+        "shareAlike": true
+      },
+      "sha256": "81a2f4abf82901fab3d531d3467864f384d2290993a8c0183edf91cd6643a6c1",
+      "phonetic_listening_verified": false,
+      "clean": {
+        "pair": "feel-fill",
+        "target": "fill",
+        "target_ipa": "f ɪ l",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Keep the consonants steady. The final /l/ can change the vowel acoustics, so do not chase a fixed dot.",
+        "duration_s": 0.85,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in fill. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "f",
+          "ɪ",
+          "l"
+        ],
+        "events": [
+          {
+            "phone": "f",
+            "t": 0.312,
+            "posterior": 0.9826
+          },
+          {
+            "phone": "ɪ",
+            "t": 0.372,
+            "posterior": 0.7538
+          },
+          {
+            "phone": "l",
+            "t": 0.492,
+            "posterior": 0.6564
+          }
+        ],
+        "candidate_costs": {
+          "feel": 0.1056,
+          "fill": 0.0095
+        },
+        "margin": 0.0961,
+        "candidate_winner": "fill",
+        "formants": [
+          {
+            "t": 0.36,
+            "f1": 500,
+            "f2": 2076
+          },
+          {
+            "t": 0.38,
+            "f1": 546,
+            "f2": 1979
+          },
+          {
+            "t": 0.4,
+            "f1": 583,
+            "f2": 1837
+          }
+        ],
+        "latency_s": 0.133
+      },
+      "snr20": {
+        "pair": "feel-fill",
+        "target": "fill",
+        "target_ipa": "f ɪ l",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Keep the consonants steady. The final /l/ can change the vowel acoustics, so do not chase a fixed dot.",
+        "duration_s": 0.85,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in fill. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "f",
+          "ɪ",
+          "l"
+        ],
+        "events": [
+          {
+            "phone": "f",
+            "t": 0.312,
+            "posterior": 0.9768
+          },
+          {
+            "phone": "ɪ",
+            "t": 0.372,
+            "posterior": 0.6215
+          },
+          {
+            "phone": "l",
+            "t": 0.472,
+            "posterior": 0.6396
+          }
+        ],
+        "candidate_costs": {
+          "feel": 0.0874,
+          "fill": 0.0157
+        },
+        "margin": 0.0717,
+        "candidate_winner": "fill",
+        "formants": [],
+        "latency_s": 0.124
+      }
+    },
+    {
+      "id": "9e33a24934367b21d109f9a1",
+      "word": "feel",
+      "pair": "feel-fill",
+      "speaker": "Dvortygirl",
+      "path": "rescue/app/public/audio/human-en-i-ih/clips/9e33a24934367b21d109f9a1.mp3",
+      "source": "https://commons.wikimedia.org/wiki/File:En-us-feel.ogg",
+      "license": {
+        "id": "CC-BY-SA-3.0",
+        "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "attributionRequired": true,
+        "commercialReusePermitted": true,
+        "shareAlike": true
+      },
+      "sha256": "6d99c50761adc18257ac9dc8daf998f95bd2f4331b200958a421cd21bb1316e9",
+      "phonetic_listening_verified": false,
+      "clean": {
+        "pair": "feel-fill",
+        "target": "feel",
+        "target_ipa": "f iː l",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Keep the consonants steady. The final /l/ can change the vowel acoustics, so do not chase a fixed dot.",
+        "duration_s": 0.639,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in feel. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "f",
+          "iː",
+          "l"
+        ],
+        "events": [
+          {
+            "phone": "f",
+            "t": 0.212,
+            "posterior": 0.9765
+          },
+          {
+            "phone": "iː",
+            "t": 0.273,
+            "posterior": 0.7647
+          },
+          {
+            "phone": "l",
+            "t": 0.412,
+            "posterior": 0.5641
+          }
+        ],
+        "candidate_costs": {
+          "feel": 0.0128,
+          "fill": 0.1071
+        },
+        "margin": 0.0944,
+        "candidate_winner": "feel",
+        "formants": [
+          {
+            "t": 0.24,
+            "f1": 317,
+            "f2": 2485
+          },
+          {
+            "t": 0.26,
+            "f1": 328,
+            "f2": 2656
+          },
+          {
+            "t": 0.28,
+            "f1": 359,
+            "f2": 2695
+          },
+          {
+            "t": 0.36,
+            "f1": 506,
+            "f2": 1635
+          },
+          {
+            "t": 0.38,
+            "f1": 540,
+            "f2": 1400
+          },
+          {
+            "t": 0.4,
+            "f1": 525,
+            "f2": 1163
+          },
+          {
+            "t": 0.42,
+            "f1": 531,
+            "f2": 1023
+          },
+          {
+            "t": 0.44,
+            "f1": 483,
+            "f2": 963
+          }
+        ],
+        "latency_s": 0.103
+      },
+      "snr20": {
+        "pair": "feel-fill",
+        "target": "feel",
+        "target_ipa": "f iː l",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Keep the consonants steady. The final /l/ can change the vowel acoustics, so do not chase a fixed dot.",
+        "duration_s": 0.639,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in feel. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "f",
+          "iː",
+          "l"
+        ],
+        "events": [
+          {
+            "phone": "f",
+            "t": 0.212,
+            "posterior": 0.9794
+          },
+          {
+            "phone": "iː",
+            "t": 0.273,
+            "posterior": 0.636
+          },
+          {
+            "phone": "l",
+            "t": 0.412,
+            "posterior": 0.8605
+          }
+        ],
+        "candidate_costs": {
+          "feel": 0.0207,
+          "fill": 0.1065
+        },
+        "margin": 0.0858,
+        "candidate_winner": "feel",
+        "formants": [],
+        "latency_s": 0.1
+      }
+    },
+    {
+      "id": "c0ba98f4c0cb374271146731",
+      "word": "sit",
+      "pair": "seat-sit",
+      "speaker": "Dvortygirl",
+      "path": "rescue/app/public/audio/human-en-i-ih/clips/c0ba98f4c0cb374271146731.mp3",
+      "source": "https://commons.wikimedia.org/wiki/File:En-us-sit.ogg",
+      "license": {
+        "id": "CC-BY-SA-3.0",
+        "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "attributionRequired": true,
+        "commercialReusePermitted": true,
+        "shareAlike": true
+      },
+      "sha256": "8dd1b85fd361b2ca596e1c87163e1245599145d29c526ea1df48c1187bd32715",
+      "phonetic_listening_verified": false,
+      "clean": {
+        "pair": "seat-sit",
+        "target": "sit",
+        "target_ipa": "s ɪ t",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Try the contrast in a new word. Duration alone is not enough to distinguish these vowels.",
+        "duration_s": 0.639,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in sit. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "s",
+          "ɪ",
+          "t"
+        ],
+        "events": [
+          {
+            "phone": "s",
+            "t": 0.212,
+            "posterior": 0.9816
+          },
+          {
+            "phone": "ɪ",
+            "t": 0.273,
+            "posterior": 0.8356
+          },
+          {
+            "phone": "t",
+            "t": 0.453,
+            "posterior": 0.8786
+          }
+        ],
+        "candidate_costs": {
+          "seat": 0.1553,
+          "sit": 0.0093
+        },
+        "margin": 0.146,
+        "candidate_winner": "sit",
+        "formants": [
+          {
+            "t": 0.24,
+            "f1": 665,
+            "f2": 2247
+          },
+          {
+            "t": 0.34,
+            "f1": 537,
+            "f2": 2148
+          },
+          {
+            "t": 0.36,
+            "f1": 557,
+            "f2": 2170
+          }
+        ],
+        "latency_s": 0.103
+      },
+      "snr20": {
+        "pair": "seat-sit",
+        "target": "sit",
+        "target_ipa": "s ɪ t",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Try the contrast in a new word. Duration alone is not enough to distinguish these vowels.",
+        "duration_s": 0.639,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in sit. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "s",
+          "ɪ",
+          "t"
+        ],
+        "events": [
+          {
+            "phone": "s",
+            "t": 0.212,
+            "posterior": 0.9713
+          },
+          {
+            "phone": "ɪ",
+            "t": 0.273,
+            "posterior": 0.8236
+          },
+          {
+            "phone": "t",
+            "t": 0.453,
+            "posterior": 0.9583
+          }
+        ],
+        "candidate_costs": {
+          "seat": 0.1371,
+          "sit": 0.0099
+        },
+        "margin": 0.1272,
+        "candidate_winner": "sit",
+        "formants": [],
+        "latency_s": 0.097
+      }
+    },
+    {
+      "id": "a6c2f3ed66fa1f863f67121f",
+      "word": "seat",
+      "pair": "seat-sit",
+      "speaker": "Dvortygirl",
+      "path": "rescue/app/public/audio/human-en-i-ih/clips/a6c2f3ed66fa1f863f67121f.mp3",
+      "source": "https://commons.wikimedia.org/wiki/File:En-us-seat.ogg",
+      "license": {
+        "id": "CC-BY-SA-3.0",
+        "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+        "attributionRequired": true,
+        "commercialReusePermitted": true,
+        "shareAlike": true
+      },
+      "sha256": "c1909495f00fe9b0b72fdf289c0995ecce42b5120a27201aa798a83a7194e5da",
+      "phonetic_listening_verified": false,
+      "clean": {
+        "pair": "seat-sit",
+        "target": "seat",
+        "target_ipa": "s iː t",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Try the contrast in a new word. Duration alone is not enough to distinguish these vowels.",
+        "duration_s": 0.766,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in seat. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "s",
+          "iː",
+          "t"
+        ],
+        "events": [
+          {
+            "phone": "s",
+            "t": 0.233,
+            "posterior": 0.9842
+          },
+          {
+            "phone": "iː",
+            "t": 0.292,
+            "posterior": 0.7476
+          },
+          {
+            "phone": "t",
+            "t": 0.512,
+            "posterior": 0.9608
+          }
+        ],
+        "candidate_costs": {
+          "seat": 0.0094,
+          "sit": 0.0985
+        },
+        "margin": 0.089,
+        "candidate_winner": "seat",
+        "formants": [
+          {
+            "t": 0.28,
+            "f1": 305,
+            "f2": 2520
+          },
+          {
+            "t": 0.3,
+            "f1": 341,
+            "f2": 2766
+          },
+          {
+            "t": 0.32,
+            "f1": 361,
+            "f2": 2870
+          },
+          {
+            "t": 0.34,
+            "f1": 357,
+            "f2": 2874
+          },
+          {
+            "t": 0.36,
+            "f1": 345,
+            "f2": 2901
+          },
+          {
+            "t": 0.56,
+            "f1": 736,
+            "f2": 2058
+          },
+          {
+            "t": 0.58,
+            "f1": 831,
+            "f2": 2003
+          },
+          {
+            "t": 0.6,
+            "f1": 1101,
+            "f2": 1955
+          }
+        ],
+        "latency_s": 0.127
+      },
+      "snr20": {
+        "pair": "seat-sit",
+        "target": "seat",
+        "target_ipa": "s iː t",
+        "grade": null,
+        "calibrated": false,
+        "accent_classification": null,
+        "tip": "Try the contrast in a new word. Duration alone is not enough to distinguish these vowels.",
+        "duration_s": 0.766,
+        "status": "target-evidence",
+        "message": "The model heard the target pattern in seat. This is encouraging evidence, not a correctness grade.",
+        "phones": [
+          "s",
+          "iː",
+          "t"
+        ],
+        "events": [
+          {
+            "phone": "s",
+            "t": 0.233,
+            "posterior": 0.984
+          },
+          {
+            "phone": "iː",
+            "t": 0.292,
+            "posterior": 0.7805
+          },
+          {
+            "phone": "t",
+            "t": 0.492,
+            "posterior": 0.7149
+          }
+        ],
+        "candidate_costs": {
+          "seat": 0.0099,
+          "sit": 0.1034
+        },
+        "margin": 0.0935,
+        "candidate_winner": "seat",
+        "formants": [],
+        "latency_s": 0.12
+      }
+    }
+  ],
+  "controls": [
+    {
+      "name": "silence",
+      "pair": "tout-tu",
+      "target": "tout",
+      "target_ipa": "t u",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Both vowels have rounded lips. For /y/, start with /i/ and round your lips while keeping the tongue forward.",
+      "duration_s": 1.0,
+      "status": "retry",
+      "message": "Too quiet to analyze. Try again closer to the microphone.",
+      "phones": [],
+      "formants": [],
+      "latency_s": 0.0
+    },
+    {
+      "name": "noise",
+      "pair": "tout-tu",
+      "target": "tout",
+      "target_ipa": "t u",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Both vowels have rounded lips. For /y/, start with /i/ and round your lips while keeping the tongue forward.",
+      "duration_s": 1.0,
+      "status": "retry",
+      "message": "No clear voiced speech found. Try a short, clear word.",
+      "phones": [],
+      "formants": [],
+      "latency_s": 0.004
+    },
+    {
+      "name": "clipping",
+      "pair": "tout-tu",
+      "target": "tout",
+      "target_ipa": "t u",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Both vowels have rounded lips. For /y/, start with /i/ and round your lips while keeping the tongue forward.",
+      "duration_s": 1.0,
+      "status": "retry",
+      "message": "Audio is clipping. Move back and try again.",
+      "phones": [],
+      "formants": [],
+      "latency_s": 0.0
+    },
+    {
+      "name": "tone220",
+      "pair": "tout-tu",
+      "target": "tout",
+      "target_ipa": "t u",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Both vowels have rounded lips. For /y/, start with /i/ and round your lips while keeping the tongue forward.",
+      "duration_s": 1.0,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [],
+      "events": [],
+      "candidate_costs": {
+        "tout": 0.1989,
+        "tu": 0.2984
+      },
+      "margin": 0.0995,
+      "candidate_winner": "tout",
+      "formants": [],
+      "latency_s": 0.134
+    },
+    {
+      "name": "wrong-exercise:bf74d6dccb98ac3e7ace6daa",
+      "pair": "sheep-ship",
+      "target": "sheep",
+      "target_ipa": "ʃ iː p",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Listen for vowel quality as well as duration. /ɪ/ is typically more open and central than /iː/.",
+      "duration_s": 0.619,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [
+        "t",
+        "u"
+      ],
+      "events": [
+        {
+          "phone": "t",
+          "t": 0.212,
+          "posterior": 0.9412
+        },
+        {
+          "phone": "u",
+          "t": 0.273,
+          "posterior": 0.5635
+        }
+      ],
+      "candidate_costs": {
+        "sheep": 0.7422,
+        "ship": 0.8316
+      },
+      "margin": 0.0895,
+      "candidate_winner": "sheep",
+      "formants": [],
+      "latency_s": 0.097
+    },
+    {
+      "name": "wrong-exercise:ea16e644334cd64bc9a87971",
+      "pair": "sheep-ship",
+      "target": "sheep",
+      "target_ipa": "ʃ iː p",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Listen for vowel quality as well as duration. /ɪ/ is typically more open and central than /iː/.",
+      "duration_s": 0.635,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [
+        "tɕ",
+        "i.5"
+      ],
+      "events": [
+        {
+          "phone": "tɕ",
+          "t": 0.233,
+          "posterior": 0.3684
+        },
+        {
+          "phone": "i.5",
+          "t": 0.312,
+          "posterior": 0.092
+        }
+      ],
+      "candidate_costs": {
+        "sheep": 0.7713,
+        "ship": 0.7481
+      },
+      "margin": 0.0232,
+      "candidate_winner": "ship",
+      "formants": [],
+      "latency_s": 0.099
+    },
+    {
+      "name": "wrong-exercise:03a74b0629c80a61da2a3edf",
+      "pair": "sheep-ship",
+      "target": "sheep",
+      "target_ipa": "ʃ iː p",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Listen for vowel quality as well as duration. /ɪ/ is typically more open and central than /iː/.",
+      "duration_s": 0.76,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [
+        "v",
+        "u"
+      ],
+      "events": [
+        {
+          "phone": "v",
+          "t": 0.372,
+          "posterior": 0.9729
+        },
+        {
+          "phone": "u",
+          "t": 0.432,
+          "posterior": 0.6482
+        }
+      ],
+      "candidate_costs": {
+        "sheep": 0.6697,
+        "ship": 0.7194
+      },
+      "margin": 0.0496,
+      "candidate_winner": "sheep",
+      "formants": [],
+      "latency_s": 0.121
+    },
+    {
+      "name": "wrong-exercise:ac11ccbf1e9d2482606037ef",
+      "pair": "sheep-ship",
+      "target": "sheep",
+      "target_ipa": "ʃ iː p",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Listen for vowel quality as well as duration. /ɪ/ is typically more open and central than /iː/.",
+      "duration_s": 0.742,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [
+        "v",
+        "y"
+      ],
+      "events": [
+        {
+          "phone": "v",
+          "t": 0.292,
+          "posterior": 0.6587
+        },
+        {
+          "phone": "y",
+          "t": 0.372,
+          "posterior": 0.653
+        }
+      ],
+      "candidate_costs": {
+        "sheep": 0.643,
+        "ship": 0.5697
+      },
+      "margin": 0.0734,
+      "candidate_winner": "ship",
+      "formants": [],
+      "latency_s": 0.131
+    },
+    {
+      "name": "wrong-exercise:1a1867579e9bc763253d516b",
+      "pair": "sheep-ship",
+      "target": "sheep",
+      "target_ipa": "ʃ iː p",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Listen for vowel quality as well as duration. /ɪ/ is typically more open and central than /iː/.",
+      "duration_s": 0.648,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [
+        "ʁ",
+        "u"
+      ],
+      "events": [
+        {
+          "phone": "ʁ",
+          "t": 0.253,
+          "posterior": 0.7566
+        },
+        {
+          "phone": "u",
+          "t": 0.312,
+          "posterior": 0.7369
+        }
+      ],
+      "candidate_costs": {
+        "sheep": 0.6534,
+        "ship": 0.7177
+      },
+      "margin": 0.0643,
+      "candidate_winner": "sheep",
+      "formants": [],
+      "latency_s": 0.098
+    },
+    {
+      "name": "wrong-exercise:a2290e0641c5aff974854e12",
+      "pair": "sheep-ship",
+      "target": "sheep",
+      "target_ipa": "ʃ iː p",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Listen for vowel quality as well as duration. /ɪ/ is typically more open and central than /iː/.",
+      "duration_s": 0.63,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [
+        "ʁ",
+        "y"
+      ],
+      "events": [
+        {
+          "phone": "ʁ",
+          "t": 0.212,
+          "posterior": 0.8396
+        },
+        {
+          "phone": "y",
+          "t": 0.273,
+          "posterior": 0.4777
+        }
+      ],
+      "candidate_costs": {
+        "sheep": 0.6475,
+        "ship": 0.6149
+      },
+      "margin": 0.0326,
+      "candidate_winner": "ship",
+      "formants": [],
+      "latency_s": 0.099
+    },
+    {
+      "name": "wrong-exercise:b0d2aa1b975fce387eb4bf9d",
+      "pair": "sheep-ship",
+      "target": "sheep",
+      "target_ipa": "ʃ iː p",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Listen for vowel quality as well as duration. /ɪ/ is typically more open and central than /iː/.",
+      "duration_s": 0.85,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [
+        "t",
+        "uː"
+      ],
+      "events": [
+        {
+          "phone": "t",
+          "t": 0.292,
+          "posterior": 0.9666
+        },
+        {
+          "phone": "uː",
+          "t": 0.352,
+          "posterior": 0.5023
+        }
+      ],
+      "candidate_costs": {
+        "sheep": 0.5494,
+        "ship": 0.5961
+      },
+      "margin": 0.0466,
+      "candidate_winner": "sheep",
+      "formants": [],
+      "latency_s": 0.117
+    },
+    {
+      "name": "wrong-exercise:c6d72d39a7633c4fcd54df31",
+      "pair": "sheep-ship",
+      "target": "sheep",
+      "target_ipa": "ʃ iː p",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Listen for vowel quality as well as duration. /ɪ/ is typically more open and central than /iː/.",
+      "duration_s": 0.85,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [
+        "tʃ",
+        "i.5"
+      ],
+      "events": [
+        {
+          "phone": "tʃ",
+          "t": 0.253,
+          "posterior": 0.2403
+        },
+        {
+          "phone": "i.5",
+          "t": 0.333,
+          "posterior": 0.0669
+        }
+      ],
+      "candidate_costs": {
+        "sheep": 0.4712,
+        "ship": 0.4367
+      },
+      "margin": 0.0345,
+      "candidate_winner": "ship",
+      "formants": [],
+      "latency_s": 0.12
+    },
+    {
+      "name": "wrong-exercise:3fc7ac5606fb6b264f1743b0",
+      "pair": "sheep-ship",
+      "target": "sheep",
+      "target_ipa": "ʃ iː p",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Listen for vowel quality as well as duration. /ɪ/ is typically more open and central than /iː/.",
+      "duration_s": 0.85,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [
+        "f",
+        "u5"
+      ],
+      "events": [
+        {
+          "phone": "f",
+          "t": 0.233,
+          "posterior": 0.9819
+        },
+        {
+          "phone": "u5",
+          "t": 0.312,
+          "posterior": 0.2367
+        }
+      ],
+      "candidate_costs": {
+        "sheep": 0.5878,
+        "ship": 0.6258
+      },
+      "margin": 0.0379,
+      "candidate_winner": "sheep",
+      "formants": [],
+      "latency_s": 0.118
+    },
+    {
+      "name": "wrong-exercise:e771b0b72f4ae95eeb69e72e",
+      "pair": "sheep-ship",
+      "target": "sheep",
+      "target_ipa": "ʃ iː p",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Listen for vowel quality as well as duration. /ɪ/ is typically more open and central than /iː/.",
+      "duration_s": 0.786,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [
+        "ʒ",
+        "y"
+      ],
+      "events": [
+        {
+          "phone": "ʒ",
+          "t": 0.253,
+          "posterior": 0.6925
+        },
+        {
+          "phone": "y",
+          "t": 0.312,
+          "posterior": 0.4418
+        }
+      ],
+      "candidate_costs": {
+        "sheep": 0.5024,
+        "ship": 0.4228
+      },
+      "margin": 0.0796,
+      "candidate_winner": "ship",
+      "formants": [],
+      "latency_s": 0.118
+    },
+    {
+      "name": "wrong-exercise:32aa365ec94467fcd31a6f68",
+      "pair": "sheep-ship",
+      "target": "sheep",
+      "target_ipa": "ʃ iː p",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Listen for vowel quality as well as duration. /ɪ/ is typically more open and central than /iː/.",
+      "duration_s": 0.943,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [
+        "a",
+        "z",
+        "u"
+      ],
+      "events": [
+        {
+          "phone": "a",
+          "t": 0.273,
+          "posterior": 0.2287
+        },
+        {
+          "phone": "z",
+          "t": 0.412,
+          "posterior": 0.9468
+        },
+        {
+          "phone": "u",
+          "t": 0.453,
+          "posterior": 0.644
+        }
+      ],
+      "candidate_costs": {
+        "sheep": 0.4864,
+        "ship": 0.5145
+      },
+      "margin": 0.0281,
+      "candidate_winner": "sheep",
+      "formants": [],
+      "latency_s": 0.118
+    },
+    {
+      "name": "wrong-exercise:f17b942aeec6f65750b35f63",
+      "pair": "sheep-ship",
+      "target": "sheep",
+      "target_ipa": "ʃ iː p",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Listen for vowel quality as well as duration. /ɪ/ is typically more open and central than /iː/.",
+      "duration_s": 0.883,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [
+        "ʁ",
+        "uː"
+      ],
+      "events": [
+        {
+          "phone": "ʁ",
+          "t": 0.372,
+          "posterior": 0.6603
+        },
+        {
+          "phone": "uː",
+          "t": 0.412,
+          "posterior": 0.2646
+        }
+      ],
+      "candidate_costs": {
+        "sheep": 0.4782,
+        "ship": 0.5049
+      },
+      "margin": 0.0267,
+      "candidate_winner": "sheep",
+      "formants": [],
+      "latency_s": 0.119
+    },
+    {
+      "name": "wrong-exercise:44ea03486e57c52545c898cc",
+      "pair": "tout-tu",
+      "target": "tout",
+      "target_ipa": "t u",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Both vowels have rounded lips. For /y/, start with /i/ and round your lips while keeping the tongue forward.",
+      "duration_s": 0.605,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [
+        "ʃ",
+        "e",
+        "p"
+      ],
+      "events": [
+        {
+          "phone": "ʃ",
+          "t": 0.212,
+          "posterior": 0.8661
+        },
+        {
+          "phone": "e",
+          "t": 0.292,
+          "posterior": 0.336
+        },
+        {
+          "phone": "p",
+          "t": 0.453,
+          "posterior": 0.9789
+        }
+      ],
+      "candidate_costs": {
+        "tout": 0.6979,
+        "tu": 0.6504
+      },
+      "margin": 0.0475,
+      "candidate_winner": "tu",
+      "formants": [],
+      "latency_s": 0.092
+    },
+    {
+      "name": "wrong-exercise:77b412efdfedb0f8737009ea",
+      "pair": "tout-tu",
+      "target": "tout",
+      "target_ipa": "t u",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Both vowels have rounded lips. For /y/, start with /i/ and round your lips while keeping the tongue forward.",
+      "duration_s": 0.648,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [
+        "ʃ",
+        "iː",
+        "p"
+      ],
+      "events": [
+        {
+          "phone": "ʃ",
+          "t": 0.212,
+          "posterior": 0.9041
+        },
+        {
+          "phone": "iː",
+          "t": 0.292,
+          "posterior": 0.8615
+        },
+        {
+          "phone": "p",
+          "t": 0.492,
+          "posterior": 0.9709
+        }
+      ],
+      "candidate_costs": {
+        "tout": 0.6409,
+        "tu": 0.6647
+      },
+      "margin": 0.0238,
+      "candidate_winner": "tout",
+      "formants": [],
+      "latency_s": 0.093
+    },
+    {
+      "name": "wrong-exercise:2da0f649139f0ee653c549da",
+      "pair": "tout-tu",
+      "target": "tout",
+      "target_ipa": "t u",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Both vowels have rounded lips. For /y/, start with /i/ and round your lips while keeping the tongue forward.",
+      "duration_s": 0.816,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [
+        "f",
+        "ɪ",
+        "l"
+      ],
+      "events": [
+        {
+          "phone": "f",
+          "t": 0.233,
+          "posterior": 0.9502
+        },
+        {
+          "phone": "ɪ",
+          "t": 0.292,
+          "posterior": 0.4617
+        },
+        {
+          "phone": "l",
+          "t": 0.453,
+          "posterior": 0.8325
+        }
+      ],
+      "candidate_costs": {
+        "tout": 0.42,
+        "tu": 0.3582
+      },
+      "margin": 0.0617,
+      "candidate_winner": "tu",
+      "formants": [],
+      "latency_s": 0.114
+    },
+    {
+      "name": "wrong-exercise:d6378c1f5ae56a6ff7038353",
+      "pair": "tout-tu",
+      "target": "tout",
+      "target_ipa": "t u",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Both vowels have rounded lips. For /y/, start with /i/ and round your lips while keeping the tongue forward.",
+      "duration_s": 0.787,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [
+        "f",
+        "i",
+        "l"
+      ],
+      "events": [
+        {
+          "phone": "f",
+          "t": 0.233,
+          "posterior": 0.9758
+        },
+        {
+          "phone": "i",
+          "t": 0.292,
+          "posterior": 0.4553
+        },
+        {
+          "phone": "l",
+          "t": 0.492,
+          "posterior": 0.7623
+        }
+      ],
+      "candidate_costs": {
+        "tout": 0.4357,
+        "tu": 0.4596
+      },
+      "margin": 0.0239,
+      "candidate_winner": "tout",
+      "formants": [],
+      "latency_s": 0.115
+    },
+    {
+      "name": "wrong-exercise:6d6bb877efc7991f46cebb91",
+      "pair": "tout-tu",
+      "target": "tout",
+      "target_ipa": "t u",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Both vowels have rounded lips. For /y/, start with /i/ and round your lips while keeping the tongue forward.",
+      "duration_s": 0.605,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [
+        "s",
+        "ɛ",
+        "t"
+      ],
+      "events": [
+        {
+          "phone": "s",
+          "t": 0.233,
+          "posterior": 0.9322
+        },
+        {
+          "phone": "ɛ",
+          "t": 0.292,
+          "posterior": 0.6007
+        },
+        {
+          "phone": "t",
+          "t": 0.432,
+          "posterior": 0.8546
+        }
+      ],
+      "candidate_costs": {
+        "tout": 0.5969,
+        "tu": 0.5804
+      },
+      "margin": 0.0165,
+      "candidate_winner": "tu",
+      "formants": [],
+      "latency_s": 0.097
+    },
+    {
+      "name": "wrong-exercise:a2d8ef93984f9fd3bcedd82f",
+      "pair": "tout-tu",
+      "target": "tout",
+      "target_ipa": "t u",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Both vowels have rounded lips. For /y/, start with /i/ and round your lips while keeping the tongue forward.",
+      "duration_s": 0.627,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [
+        "s",
+        "iː",
+        "t"
+      ],
+      "events": [
+        {
+          "phone": "s",
+          "t": 0.212,
+          "posterior": 0.7712
+        },
+        {
+          "phone": "iː",
+          "t": 0.292,
+          "posterior": 0.8385
+        },
+        {
+          "phone": "t",
+          "t": 0.472,
+          "posterior": 0.7757
+        }
+      ],
+      "candidate_costs": {
+        "tout": 0.5306,
+        "tu": 0.548
+      },
+      "margin": 0.0175,
+      "candidate_winner": "tout",
+      "formants": [],
+      "latency_s": 0.093
+    },
+    {
+      "name": "wrong-exercise:7f447ae66488c340fa0ead9b",
+      "pair": "tout-tu",
+      "target": "tout",
+      "target_ipa": "t u",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Both vowels have rounded lips. For /y/, start with /i/ and round your lips while keeping the tongue forward.",
+      "duration_s": 0.604,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [
+        "ʃ",
+        "ɪ",
+        "p"
+      ],
+      "events": [
+        {
+          "phone": "ʃ",
+          "t": 0.193,
+          "posterior": 0.8627
+        },
+        {
+          "phone": "ɪ",
+          "t": 0.253,
+          "posterior": 0.7657
+        },
+        {
+          "phone": "p",
+          "t": 0.412,
+          "posterior": 0.9824
+        }
+      ],
+      "candidate_costs": {
+        "tout": 0.7579,
+        "tu": 0.7044
+      },
+      "margin": 0.0535,
+      "candidate_winner": "tu",
+      "formants": [],
+      "latency_s": 0.094
+    },
+    {
+      "name": "wrong-exercise:88a74ae0c7666cf4ca786901",
+      "pair": "tout-tu",
+      "target": "tout",
+      "target_ipa": "t u",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Both vowels have rounded lips. For /y/, start with /i/ and round your lips while keeping the tongue forward.",
+      "duration_s": 0.697,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [
+        "ʃ",
+        "iː",
+        "p"
+      ],
+      "events": [
+        {
+          "phone": "ʃ",
+          "t": 0.233,
+          "posterior": 0.819
+        },
+        {
+          "phone": "iː",
+          "t": 0.312,
+          "posterior": 0.7813
+        },
+        {
+          "phone": "p",
+          "t": 0.492,
+          "posterior": 0.9858
+        }
+      ],
+      "candidate_costs": {
+        "tout": 0.6101,
+        "tu": 0.6487
+      },
+      "margin": 0.0387,
+      "candidate_winner": "tout",
+      "formants": [],
+      "latency_s": 0.114
+    },
+    {
+      "name": "wrong-exercise:75614d9f1e93406211095201",
+      "pair": "tout-tu",
+      "target": "tout",
+      "target_ipa": "t u",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Both vowels have rounded lips. For /y/, start with /i/ and round your lips while keeping the tongue forward.",
+      "duration_s": 0.85,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [
+        "f",
+        "ɪ",
+        "l"
+      ],
+      "events": [
+        {
+          "phone": "f",
+          "t": 0.312,
+          "posterior": 0.9826
+        },
+        {
+          "phone": "ɪ",
+          "t": 0.372,
+          "posterior": 0.7538
+        },
+        {
+          "phone": "l",
+          "t": 0.492,
+          "posterior": 0.6564
+        }
+      ],
+      "candidate_costs": {
+        "tout": 0.4681,
+        "tu": 0.3884
+      },
+      "margin": 0.0797,
+      "candidate_winner": "tu",
+      "formants": [],
+      "latency_s": 0.123
+    },
+    {
+      "name": "wrong-exercise:9e33a24934367b21d109f9a1",
+      "pair": "tout-tu",
+      "target": "tout",
+      "target_ipa": "t u",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Both vowels have rounded lips. For /y/, start with /i/ and round your lips while keeping the tongue forward.",
+      "duration_s": 0.639,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [
+        "f",
+        "iː",
+        "l"
+      ],
+      "events": [
+        {
+          "phone": "f",
+          "t": 0.212,
+          "posterior": 0.9765
+        },
+        {
+          "phone": "iː",
+          "t": 0.273,
+          "posterior": 0.7647
+        },
+        {
+          "phone": "l",
+          "t": 0.412,
+          "posterior": 0.5641
+        }
+      ],
+      "candidate_costs": {
+        "tout": 0.6049,
+        "tu": 0.6049
+      },
+      "margin": 0.0001,
+      "candidate_winner": "tout",
+      "formants": [],
+      "latency_s": 0.099
+    },
+    {
+      "name": "wrong-exercise:c0ba98f4c0cb374271146731",
+      "pair": "tout-tu",
+      "target": "tout",
+      "target_ipa": "t u",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Both vowels have rounded lips. For /y/, start with /i/ and round your lips while keeping the tongue forward.",
+      "duration_s": 0.639,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [
+        "s",
+        "ɪ",
+        "t"
+      ],
+      "events": [
+        {
+          "phone": "s",
+          "t": 0.212,
+          "posterior": 0.9816
+        },
+        {
+          "phone": "ɪ",
+          "t": 0.273,
+          "posterior": 0.8356
+        },
+        {
+          "phone": "t",
+          "t": 0.453,
+          "posterior": 0.8786
+        }
+      ],
+      "candidate_costs": {
+        "tout": 0.6562,
+        "tu": 0.5655
+      },
+      "margin": 0.0907,
+      "candidate_winner": "tu",
+      "formants": [],
+      "latency_s": 0.102
+    },
+    {
+      "name": "wrong-exercise:a6c2f3ed66fa1f863f67121f",
+      "pair": "tout-tu",
+      "target": "tout",
+      "target_ipa": "t u",
+      "grade": null,
+      "calibrated": false,
+      "accent_classification": null,
+      "tip": "Both vowels have rounded lips. For /y/, start with /i/ and round your lips while keeping the tongue forward.",
+      "duration_s": 0.766,
+      "status": "uncertain",
+      "message": "The model cannot confidently resolve this pair. Replay, then try one clear word.",
+      "phones": [
+        "s",
+        "iː",
+        "t"
+      ],
+      "events": [
+        {
+          "phone": "s",
+          "t": 0.233,
+          "posterior": 0.9842
+        },
+        {
+          "phone": "iː",
+          "t": 0.292,
+          "posterior": 0.7476
+        },
+        {
+          "phone": "t",
+          "t": 0.512,
+          "posterior": 0.9608
+        }
+      ],
+      "candidate_costs": {
+        "tout": 0.5294,
+        "tu": 0.5406
+      },
+      "margin": 0.0112,
+      "candidate_winner": "tout",
+      "formants": [],
+      "latency_s": 0.121
+    }
+  ]
+}

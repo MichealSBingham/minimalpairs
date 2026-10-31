@@ -1,0 +1,771 @@
+{
+  "checkedAt": "2026-09-28T23:34:12.038919+00:00",
+  "filePagesChecked": 50,
+  "existingExactTextCreatorLicenseRecords": 15,
+  "missingExactTitles": 35,
+  "records": [
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-fato.wav",
+      "profile": "LangPao",
+      "word": "fato",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-fatto.wav",
+      "profile": "LangPao",
+      "word": "fatto",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-pena.wav",
+      "profile": "LangPao",
+      "word": "pena",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-pasta.wav",
+      "profile": "LangPao",
+      "word": "pasta",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-belle.wav",
+      "profile": "LangPao",
+      "word": "belle",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-balla.wav",
+      "profile": "LangPao",
+      "word": "balla",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-pollo.wav",
+      "profile": "LangPao",
+      "word": "pollo",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-bollo.wav",
+      "profile": "LangPao",
+      "word": "bollo",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-casa.wav",
+      "profile": "LangPao",
+      "word": "casa",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-cosa.wav",
+      "profile": "LangPao",
+      "word": "cosa",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-coro.wav",
+      "profile": "LangPao",
+      "word": "coro",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-pala.wav",
+      "profile": "Happypheasant",
+      "word": "pala",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-fato.wav",
+      "profile": "Happypheasant",
+      "word": "fato",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-fatto.wav",
+      "profile": "Happypheasant",
+      "word": "fatto",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-pena.wav",
+      "profile": "Happypheasant",
+      "word": "pena",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-penna.wav",
+      "profile": "Happypheasant",
+      "word": "penna",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-panca.wav",
+      "profile": "Happypheasant",
+      "word": "panca",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-pasta.wav",
+      "profile": "Happypheasant",
+      "word": "pasta",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-belle.wav",
+      "profile": "Happypheasant",
+      "word": "belle",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-balla.wav",
+      "profile": "Happypheasant",
+      "word": "balla",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-pollo.wav",
+      "profile": "Happypheasant",
+      "word": "pollo",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-bollo.wav",
+      "profile": "Happypheasant",
+      "word": "bollo",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-casa.wav",
+      "profile": "Happypheasant",
+      "word": "casa",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-cosa.wav",
+      "profile": "Happypheasant",
+      "word": "cosa",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-caro.wav",
+      "profile": "Happypheasant",
+      "word": "caro",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-coro.wav",
+      "profile": "Happypheasant",
+      "word": "coro",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-banca.wav",
+      "profile": "Happypheasant",
+      "word": "banca",
+      "exists": true,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:LL-Q652_(ita)-Happypheasant-banca.wav",
+      "sourceRevision": "https://commons.wikimedia.org/w/index.php?title=File%3ALL-Q652+%28ita%29-Happypheasant-banca.wav&oldid=1228246689",
+      "sourceRevisionId": 1228246689,
+      "sourceRevisionTimestamp": "2026-06-09T02:07:41Z",
+      "mediaInfoRevisionId": 1228246689,
+      "exactWordEvidence": {
+        "property": "P9533",
+        "text": "banca",
+        "language": "it"
+      },
+      "creatorAttribution": "Speaker: Happypheasant Recorder: Happypheasant",
+      "credit": "Own work ( Lingua Libre )",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "licenseEvidence": "Exact file template and compiled metadata agree; no extra restriction listed",
+      "sourceSha1": "a6ef27ed72b6d5c24365b9f66ca93d5cb82adad1",
+      "sourceBytes": 107796,
+      "sourceUploadTimestamp": "2020-09-02T09:05:50Z",
+      "sourceRecordingDate": "2020-09-02",
+      "nativeAndRegionalStatus": "not-established",
+      "downloaded": false,
+      "decoded": false,
+      "phoneticListeningVerified": false,
+      "speakerConsistencyVerified": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-basta.wav",
+      "profile": "Happypheasant",
+      "word": "basta",
+      "exists": true,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:LL-Q652_(ita)-Happypheasant-basta.wav",
+      "sourceRevision": "https://commons.wikimedia.org/w/index.php?title=File%3ALL-Q652+%28ita%29-Happypheasant-basta.wav&oldid=1191241797",
+      "sourceRevisionId": 1191241797,
+      "sourceRevisionTimestamp": "2026-04-04T07:59:57Z",
+      "mediaInfoRevisionId": 1191241797,
+      "exactWordEvidence": {
+        "property": "P9533",
+        "text": "basta",
+        "language": "it"
+      },
+      "creatorAttribution": "Speaker: Happypheasant Recorder: Happypheasant",
+      "credit": "Own work ( Lingua Libre )",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "licenseEvidence": "Exact file template and compiled metadata agree; no extra restriction listed",
+      "sourceSha1": "268ba6225b535cb883128a866c52f4e77dc6e915",
+      "sourceBytes": 107796,
+      "sourceUploadTimestamp": "2020-09-02T09:05:56Z",
+      "sourceRecordingDate": "2020-09-02",
+      "nativeAndRegionalStatus": "not-established",
+      "downloaded": false,
+      "decoded": false,
+      "phoneticListeningVerified": false,
+      "speakerConsistencyVerified": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-palla.wav",
+      "profile": "Happypheasant",
+      "word": "palla",
+      "exists": true,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:LL-Q652_(ita)-Happypheasant-palla.wav",
+      "sourceRevision": "https://commons.wikimedia.org/w/index.php?title=File%3ALL-Q652+%28ita%29-Happypheasant-palla.wav&oldid=1213201394",
+      "sourceRevisionId": 1213201394,
+      "sourceRevisionTimestamp": "2026-05-13T08:44:51Z",
+      "mediaInfoRevisionId": 1213201394,
+      "exactWordEvidence": {
+        "property": "P9533",
+        "text": "palla",
+        "language": "it"
+      },
+      "creatorAttribution": "Speaker: Happypheasant Recorder: Happypheasant",
+      "credit": "Own work ( Lingua Libre )",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "licenseEvidence": "Exact file template and compiled metadata agree; no extra restriction listed",
+      "sourceSha1": "9dc184b54d3bc0f6eb4020ce81f11c3f142c3312",
+      "sourceBytes": 99604,
+      "sourceUploadTimestamp": "2020-09-02T09:51:48Z",
+      "sourceRecordingDate": "2020-09-02",
+      "nativeAndRegionalStatus": "not-established",
+      "downloaded": false,
+      "decoded": false,
+      "phoneticListeningVerified": false,
+      "speakerConsistencyVerified": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-pelle.wav",
+      "profile": "Happypheasant",
+      "word": "pelle",
+      "exists": true,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:LL-Q652_(ita)-Happypheasant-pelle.wav",
+      "sourceRevision": "https://commons.wikimedia.org/w/index.php?title=File%3ALL-Q652+%28ita%29-Happypheasant-pelle.wav&oldid=1108933786",
+      "sourceRevisionId": 1108933786,
+      "sourceRevisionTimestamp": "2025-11-04T11:25:53Z",
+      "mediaInfoRevisionId": 1108933786,
+      "exactWordEvidence": {
+        "property": "P9533",
+        "text": "pelle",
+        "language": "it"
+      },
+      "creatorAttribution": "Speaker: Happypheasant Recorder: Happypheasant",
+      "credit": "Own work ( Lingua Libre )",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "licenseEvidence": "Exact file template and compiled metadata agree; no extra restriction listed",
+      "sourceSha1": "b25d455794c8e951eb607c746a3f2704355ad2df",
+      "sourceBytes": 99604,
+      "sourceUploadTimestamp": "2020-09-02T09:54:07Z",
+      "sourceRecordingDate": "2020-09-02",
+      "nativeAndRegionalStatus": "not-established",
+      "downloaded": false,
+      "decoded": false,
+      "phoneticListeningVerified": false,
+      "speakerConsistencyVerified": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-banca.wav",
+      "profile": "LangPao",
+      "word": "banca",
+      "exists": true,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:LL-Q652_(ita)-LangPao-banca.wav",
+      "sourceRevision": "https://commons.wikimedia.org/w/index.php?title=File%3ALL-Q652+%28ita%29-LangPao-banca.wav&oldid=949164730",
+      "sourceRevisionId": 949164730,
+      "sourceRevisionTimestamp": "2024-10-25T16:17:58Z",
+      "mediaInfoRevisionId": 949164730,
+      "exactWordEvidence": {
+        "property": "P9533",
+        "text": "banca",
+        "language": "it"
+      },
+      "creatorAttribution": "Speaker: LangPao Recorder: LangPao",
+      "credit": "Own work ( Lingua Libre )",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "licenseEvidence": "Exact file template and compiled metadata agree; no extra restriction listed",
+      "sourceSha1": "e1188d1a371285e5dbbd91507dbb9e7eb38d866e",
+      "sourceBytes": 101164,
+      "sourceUploadTimestamp": "2021-01-19T22:45:51Z",
+      "sourceRecordingDate": "2021-01-19",
+      "nativeAndRegionalStatus": "not-established",
+      "downloaded": false,
+      "decoded": false,
+      "phoneticListeningVerified": false,
+      "speakerConsistencyVerified": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-basta.wav",
+      "profile": "LangPao",
+      "word": "basta",
+      "exists": true,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:LL-Q652_(ita)-LangPao-basta.wav",
+      "sourceRevision": "https://commons.wikimedia.org/w/index.php?title=File%3ALL-Q652+%28ita%29-LangPao-basta.wav&oldid=764771930",
+      "sourceRevisionId": 764771930,
+      "sourceRevisionTimestamp": "2023-05-18T12:42:02Z",
+      "mediaInfoRevisionId": 764771930,
+      "exactWordEvidence": {
+        "property": "P9533",
+        "text": "basta",
+        "language": "it"
+      },
+      "creatorAttribution": "Speaker: LangPao Recorder: LangPao",
+      "credit": "Own work ( Lingua Libre )",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "licenseEvidence": "Exact file template and compiled metadata agree; no extra restriction listed",
+      "sourceSha1": "0276bc84b98f56330d6d1d2ec182ca6969c211d2",
+      "sourceBytes": 109356,
+      "sourceUploadTimestamp": "2021-01-19T22:45:54Z",
+      "sourceRecordingDate": "2021-01-19",
+      "nativeAndRegionalStatus": "not-established",
+      "downloaded": false,
+      "decoded": false,
+      "phoneticListeningVerified": false,
+      "speakerConsistencyVerified": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-caro.wav",
+      "profile": "LangPao",
+      "word": "caro",
+      "exists": true,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:LL-Q652_(ita)-LangPao-caro.wav",
+      "sourceRevision": "https://commons.wikimedia.org/w/index.php?title=File%3ALL-Q652+%28ita%29-LangPao-caro.wav&oldid=764778983",
+      "sourceRevisionId": 764778983,
+      "sourceRevisionTimestamp": "2023-05-18T13:20:45Z",
+      "mediaInfoRevisionId": 764778983,
+      "exactWordEvidence": {
+        "property": "P9533",
+        "text": "caro",
+        "language": "it"
+      },
+      "creatorAttribution": "Speaker: LangPao Recorder: LangPao",
+      "credit": "Own work ( Lingua Libre )",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "licenseEvidence": "Exact file template and compiled metadata agree; no extra restriction listed",
+      "sourceSha1": "9fe87b86b57ae5f43db57d2a7ffeb90cb105001d",
+      "sourceBytes": 101164,
+      "sourceUploadTimestamp": "2021-02-01T22:51:43Z",
+      "sourceRecordingDate": "2021-02-01",
+      "nativeAndRegionalStatus": "not-established",
+      "downloaded": false,
+      "decoded": false,
+      "phoneticListeningVerified": false,
+      "speakerConsistencyVerified": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-pala.wav",
+      "profile": "LangPao",
+      "word": "pala",
+      "exists": true,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:LL-Q652_(ita)-LangPao-pala.wav",
+      "sourceRevision": "https://commons.wikimedia.org/w/index.php?title=File%3ALL-Q652+%28ita%29-LangPao-pala.wav&oldid=764872373",
+      "sourceRevisionId": 764872373,
+      "sourceRevisionTimestamp": "2023-05-18T20:07:41Z",
+      "mediaInfoRevisionId": 764872373,
+      "exactWordEvidence": {
+        "property": "P9533",
+        "text": "pala",
+        "language": "it"
+      },
+      "creatorAttribution": "Speaker: LangPao Recorder: LangPao",
+      "credit": "Own work ( Lingua Libre )",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "licenseEvidence": "Exact file template and compiled metadata agree; no extra restriction listed",
+      "sourceSha1": "2ce22b15d399c3b63b4edcf9888e34d429fc819f",
+      "sourceBytes": 84780,
+      "sourceUploadTimestamp": "2021-08-30T21:44:05Z",
+      "sourceRecordingDate": "2021-08-30",
+      "nativeAndRegionalStatus": "not-established",
+      "downloaded": false,
+      "decoded": false,
+      "phoneticListeningVerified": false,
+      "speakerConsistencyVerified": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-palla.wav",
+      "profile": "LangPao",
+      "word": "palla",
+      "exists": true,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:LL-Q652_(ita)-LangPao-palla.wav",
+      "sourceRevision": "https://commons.wikimedia.org/w/index.php?title=File%3ALL-Q652+%28ita%29-LangPao-palla.wav&oldid=764871634",
+      "sourceRevisionId": 764871634,
+      "sourceRevisionTimestamp": "2023-05-18T20:02:54Z",
+      "mediaInfoRevisionId": 764871634,
+      "exactWordEvidence": {
+        "property": "P9533",
+        "text": "palla",
+        "language": "it"
+      },
+      "creatorAttribution": "Speaker: LangPao Recorder: LangPao",
+      "credit": "Own work ( Lingua Libre )",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "licenseEvidence": "Exact file template and compiled metadata agree; no extra restriction listed",
+      "sourceSha1": "05c135a68ba7d895064f266f4d99bc99ce2d68a0",
+      "sourceBytes": 101164,
+      "sourceUploadTimestamp": "2021-01-20T18:57:28Z",
+      "sourceRecordingDate": "2021-01-20",
+      "nativeAndRegionalStatus": "not-established",
+      "downloaded": false,
+      "decoded": false,
+      "phoneticListeningVerified": false,
+      "speakerConsistencyVerified": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-panca.wav",
+      "profile": "LangPao",
+      "word": "panca",
+      "exists": true,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:LL-Q652_(ita)-LangPao-panca.wav",
+      "sourceRevision": "https://commons.wikimedia.org/w/index.php?title=File%3ALL-Q652+%28ita%29-LangPao-panca.wav&oldid=1186922982",
+      "sourceRevisionId": 1186922982,
+      "sourceRevisionTimestamp": "2026-03-26T02:38:39Z",
+      "mediaInfoRevisionId": 1186922982,
+      "exactWordEvidence": {
+        "property": "P9533",
+        "text": "panca",
+        "language": "it"
+      },
+      "creatorAttribution": "Speaker: LangPao Recorder: LangPao",
+      "credit": "Own work ( Lingua Libre )",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "licenseEvidence": "Exact file template and compiled metadata agree; no extra restriction listed",
+      "sourceSha1": "80adbceaa7eaf4c4230c2d5b06bbbc3be1f7f056",
+      "sourceBytes": 92972,
+      "sourceUploadTimestamp": "2021-08-30T21:44:10Z",
+      "sourceRecordingDate": "2021-08-30",
+      "nativeAndRegionalStatus": "not-established",
+      "downloaded": false,
+      "decoded": false,
+      "phoneticListeningVerified": false,
+      "speakerConsistencyVerified": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-pelle.wav",
+      "profile": "LangPao",
+      "word": "pelle",
+      "exists": true,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:LL-Q652_(ita)-LangPao-pelle.wav",
+      "sourceRevision": "https://commons.wikimedia.org/w/index.php?title=File%3ALL-Q652+%28ita%29-LangPao-pelle.wav&oldid=764874228",
+      "sourceRevisionId": 764874228,
+      "sourceRevisionTimestamp": "2023-05-18T20:19:57Z",
+      "mediaInfoRevisionId": 764874228,
+      "exactWordEvidence": {
+        "property": "P9533",
+        "text": "pelle",
+        "language": "it"
+      },
+      "creatorAttribution": "Speaker: LangPao Recorder: LangPao",
+      "credit": "Own work ( Lingua Libre )",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "licenseEvidence": "Exact file template and compiled metadata agree; no extra restriction listed",
+      "sourceSha1": "a5eea9aacb65fce63c65b049ab90e80e46008c62",
+      "sourceBytes": 101164,
+      "sourceUploadTimestamp": "2021-01-20T18:58:29Z",
+      "sourceRecordingDate": "2021-01-20",
+      "nativeAndRegionalStatus": "not-established",
+      "downloaded": false,
+      "decoded": false,
+      "phoneticListeningVerified": false,
+      "speakerConsistencyVerified": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-penna.wav",
+      "profile": "LangPao",
+      "word": "penna",
+      "exists": true,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:LL-Q652_(ita)-LangPao-penna.wav",
+      "sourceRevision": "https://commons.wikimedia.org/w/index.php?title=File%3ALL-Q652+%28ita%29-LangPao-penna.wav&oldid=764874707",
+      "sourceRevisionId": 764874707,
+      "sourceRevisionTimestamp": "2023-05-18T20:24:23Z",
+      "mediaInfoRevisionId": 764874707,
+      "exactWordEvidence": {
+        "property": "P9533",
+        "text": "penna",
+        "language": "it"
+      },
+      "creatorAttribution": "Speaker: LangPao Recorder: LangPao",
+      "credit": "Own work ( Lingua Libre )",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "licenseEvidence": "Exact file template and compiled metadata agree; no extra restriction listed",
+      "sourceSha1": "0859c254b54884485348c4bd704674664d26c4ad",
+      "sourceBytes": 92972,
+      "sourceUploadTimestamp": "2021-08-30T21:44:32Z",
+      "sourceRecordingDate": "2021-08-30",
+      "nativeAndRegionalStatus": "not-established",
+      "downloaded": false,
+      "decoded": false,
+      "phoneticListeningVerified": false,
+      "speakerConsistencyVerified": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-fino.wav",
+      "profile": "LangPao",
+      "word": "fino",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-faro.wav",
+      "profile": "LangPao",
+      "word": "faro",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-varo.wav",
+      "profile": "LangPao",
+      "word": "varo",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-finto.wav",
+      "profile": "LangPao",
+      "word": "finto",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-fino.wav",
+      "profile": "Happypheasant",
+      "word": "fino",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-faro.wav",
+      "profile": "Happypheasant",
+      "word": "faro",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-varo.wav",
+      "profile": "Happypheasant",
+      "word": "varo",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-finto.wav",
+      "profile": "Happypheasant",
+      "word": "finto",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-vinto.wav",
+      "profile": "Happypheasant",
+      "word": "vinto",
+      "exists": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-Happypheasant-vino.wav",
+      "profile": "Happypheasant",
+      "word": "vino",
+      "exists": true,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:LL-Q652_(ita)-Happypheasant-vino.wav",
+      "sourceRevision": "https://commons.wikimedia.org/w/index.php?title=File%3ALL-Q652+%28ita%29-Happypheasant-vino.wav&oldid=764906231",
+      "sourceRevisionId": 764906231,
+      "sourceRevisionTimestamp": "2023-05-19T00:36:25Z",
+      "mediaInfoRevisionId": 764906231,
+      "exactWordEvidence": {
+        "property": "P9533",
+        "text": "vino",
+        "language": "it"
+      },
+      "creatorAttribution": "Speaker: Happypheasant Recorder: Happypheasant",
+      "credit": "Own work ( Lingua Libre )",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "licenseEvidence": "Exact file template and compiled metadata agree; no extra restriction listed",
+      "sourceSha1": "f06ef8a4a41864ba8a7e6c0bc35ca2ba0d4a8ed5",
+      "sourceBytes": 99604,
+      "sourceUploadTimestamp": "2020-09-02T14:13:29Z",
+      "sourceRecordingDate": "2020-09-02",
+      "nativeAndRegionalStatus": "not-established",
+      "downloaded": false,
+      "decoded": false,
+      "phoneticListeningVerified": false,
+      "speakerConsistencyVerified": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-vino.wav",
+      "profile": "LangPao",
+      "word": "vino",
+      "exists": true,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:LL-Q652_(ita)-LangPao-vino.wav",
+      "sourceRevision": "https://commons.wikimedia.org/w/index.php?title=File%3ALL-Q652+%28ita%29-LangPao-vino.wav&oldid=764906376",
+      "sourceRevisionId": 764906376,
+      "sourceRevisionTimestamp": "2023-05-19T00:37:50Z",
+      "mediaInfoRevisionId": 764906376,
+      "exactWordEvidence": {
+        "property": "P9533",
+        "text": "vino",
+        "language": "it"
+      },
+      "creatorAttribution": "Speaker: LangPao Recorder: LangPao",
+      "credit": "Own work ( Lingua Libre )",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "licenseEvidence": "Exact file template and compiled metadata agree; no extra restriction listed",
+      "sourceSha1": "3ce1e23c41a4301572cf97ad4300ed91675b2ea1",
+      "sourceBytes": 92972,
+      "sourceUploadTimestamp": "2021-01-20T20:25:38Z",
+      "sourceRecordingDate": "2021-01-20",
+      "nativeAndRegionalStatus": "not-established",
+      "downloaded": false,
+      "decoded": false,
+      "phoneticListeningVerified": false,
+      "speakerConsistencyVerified": false
+    },
+    {
+      "title": "File:LL-Q652 (ita)-LangPao-vinto.wav",
+      "profile": "LangPao",
+      "word": "vinto",
+      "exists": true,
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:LL-Q652_(ita)-LangPao-vinto.wav",
+      "sourceRevision": "https://commons.wikimedia.org/w/index.php?title=File%3ALL-Q652+%28ita%29-LangPao-vinto.wav&oldid=764907087",
+      "sourceRevisionId": 764907087,
+      "sourceRevisionTimestamp": "2023-05-19T00:46:42Z",
+      "mediaInfoRevisionId": 764907087,
+      "exactWordEvidence": {
+        "property": "P9533",
+        "text": "vinto",
+        "language": "it"
+      },
+      "creatorAttribution": "Speaker: LangPao Recorder: LangPao",
+      "credit": "Own work ( Lingua Libre )",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "licenseEvidence": "Exact file template and compiled metadata agree; no extra restriction listed",
+      "sourceSha1": "d59b9ca4657688eba0cdd84b1d96a92e854f3a36",
+      "sourceBytes": 85356,
+      "sourceUploadTimestamp": "2021-07-02T22:50:41Z",
+      "sourceRecordingDate": "2021-07-03",
+      "nativeAndRegionalStatus": "not-established",
+      "downloaded": false,
+      "decoded": false,
+      "phoneticListeningVerified": false,
+      "speakerConsistencyVerified": false
+    }
+  ],
+  "currentContrastCoverage": [
+    {
+      "contrastId": "it-length",
+      "profile": "LangPao",
+      "present": [
+        "pala",
+        "palla",
+        "penna"
+      ],
+      "missing": [
+        "fato",
+        "fatto",
+        "pena"
+      ],
+      "completePairs": [
+        [
+          "pala",
+          "palla"
+        ]
+      ]
+    },
+    {
+      "contrastId": "it-length",
+      "profile": "Happypheasant",
+      "present": [
+        "palla"
+      ],
+      "missing": [
+        "fato",
+        "fatto",
+        "pala",
+        "pena",
+        "penna"
+      ],
+      "completePairs": []
+    },
+    {
+      "contrastId": "it-p-b",
+      "profile": "LangPao",
+      "present": [
+        "banca",
+        "basta",
+        "panca",
+        "pelle"
+      ],
+      "missing": [
+        "belle",
+        "pasta"
+      ],
+      "completePairs": [
+        [
+          "panca",
+          "banca"
+        ]
+      ]
+    },
+    {
+      "contrastId": "it-p-b",
+      "profile": "Happypheasant",
+      "present": [
+        "banca",
+        "basta",
+        "pelle"
+      ],
+      "missing": [
+        "belle",
+        "panca",
+        "pasta"
+      ],
+      "completePairs": []
+    },
+    {
+      "contrastId": "it-f-v",
+      "profile": "LangPao",
+      "present": [
+        "vino",
+        "vinto"
+      ],
+      "missing": [
+        "faro",
+        "fino",
+        "finto",
+        "varo"
+      ],
+      "completePairs": []
+    },
+    {
+      "contrastId": "it-f-v",
+      "profile": "Happypheasant",
+      "present": [
+        "vino"
+      ],
+      "missing": [
+        "faro",
+        "fino",
+        "finto",
+        "varo",
+        "vinto"
+      ],
+      "completePairs": []
+    }
+  ],
+  "limitation": "Missing exact titles apply only to these two profile/filename conventions. Search negatives are bounded evidence, not proof of global absence. No media downloaded."
+}

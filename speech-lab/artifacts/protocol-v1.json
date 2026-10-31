@@ -1,0 +1,15 @@
+{
+  "created": "2026-10-04",
+  "status": "Frozen before aggregate model results; engineering pilot, not product validation",
+  "model": "facebook/wav2vec2-xlsr-53-espeak-cv-ft",
+  "tuning": "No training or threshold tuning on this evaluation. Prior development of the separate JS formant tracker used Hillenbrand; that corpus is exploratory only.",
+  "word_gate": {"minimum_ctc_cost_margin_per_frame":0.03,"requires_exact_normalized_free_decode_context":true,"requires_unique_target_contrast_vowel":true,"raw_model_posterior_is_calibrated":false},
+  "contrast_data": "24 existing Wikimedia human recordings: 12 French u-y, 12 English i-ih; metadata word labels, NOT independently reviewed phonetic labels. 4 credited speakers. Report raw ranking and gated coverage separately.",
+  "learner_data": "SpeechOcean762 official test split, 20 adults and 20 children selected by salted SHA256 order, two utterances per speaker. No local training. Not an assurance of absence from upstream pretraining.",
+  "learner_baseline": "Greedy phoneme recognition, explicit ARPABET-to-IPA mapping, Levenshtein alignment. Sentence similarity versus corpus sentence accuracy; phone mismatch versus <=0.5 incorrect and >=1.5 acceptable labels, middle range excluded and counted. These are diagnostic baselines, not deployed scores.",
+  "uncertainty": "1000 speaker-cluster bootstrap replicates for sentence correlation; sample size limits all conclusions.",
+  "controls": ["silence", "white noise", "clipped periodic signal", "steady 220 Hz tone", "other-language words", "same recordings with seeded 20 dB additive noise"],
+  "success_gate_for_future_product": {"false_correction_rate_upper_95ci":0.05,"error_detection_precision_lower_95ci":0.9,"minimum_coverage":0.6,"blinded_transfer_and_retention_required":true},
+  "spending_limit_usd":100,
+  "planned_paid_spend_this_run_usd":0
+}

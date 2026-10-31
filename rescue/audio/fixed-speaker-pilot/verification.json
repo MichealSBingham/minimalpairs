@@ -1,0 +1,53 @@
+{
+  "checkedAt": "2026-09-28T20:04:47.021712+00:00",
+  "status": "engineering-pass",
+  "referenceCount": 4,
+  "clipCount": 72,
+  "primaryClipCount": 24,
+  "distinctEncodedHashes": 72,
+  "encodedBytes": 1546368,
+  "primaryEncodedBytes": 513696,
+  "durationSeconds": {
+    "min": 0.48,
+    "max": 2.8624583333333335
+  },
+  "acceptedWordGenerationSeconds": {
+    "min": 0.6935017499999958,
+    "median": 0.9796687295020092,
+    "max": 1.6535889999940991,
+    "total": 72.5737719599856
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "kind": "long-isolated-word-review",
+      "id": "ae9fbd8b1df41662f99f470638ef",
+      "text": "vu",
+      "take": 2,
+      "durationSeconds": 2.8624583333333335,
+      "note": "Duration alone cannot prove extra speech; prioritize actual listening."
+    },
+    {
+      "kind": "take-duration-variation-review",
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "text": "sit",
+      "ratio": 2.666666666666667,
+      "note": "Do not normalize blindly; check silence, extra speech and phonetic realization by listening."
+    },
+    {
+      "kind": "take-duration-variation-review",
+      "voiceId": "qwen-fixed-fr-a-01271214",
+      "text": "vu",
+      "ratio": 4.004838521627609,
+      "note": "Do not normalize blindly; check silence, extra speech and phonetic realization by listening."
+    }
+  ],
+  "phoneticListeningVerified": false,
+  "speakerConsistencyVerified": false,
+  "limitations": [
+    "Reference transcript is the synthesis input, not a listening-verified transcription.",
+    "Distinct encoded hashes establish distinct files, not phonetic correctness or independent acoustic realizations.",
+    "Fixed conditioning establishes reuse of an identical reference input, not an acoustic identity guarantee.",
+    "Current public adapter has no multiple-take selection; candidate manifest intentionally exposes one take only."
+  ]
+}

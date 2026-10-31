@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-09-28T20:46:44.342429+00:00",
+  "status": "engineering-pass",
+  "clips": 12,
+  "contributors": 2,
+  "matchedPairs": 3,
+  "completeRequestedContrasts": 1,
+  "requestedContrasts": 3,
+  "distinctRequestedWordsAcquired": 6,
+  "requestedDistinctWords": 17,
+  "bytes": 213044,
+  "distinctHashes": 12,
+  "durationSeconds": {
+    "min": 0.522449,
+    "max": 1.0
+  },
+  "perFileLicenseCounts": {
+    "CC0-1.0": 6,
+    "CC-BY-SA-3.0": 6
+  },
+  "errors": [],
+  "warnings": [],
+  "generalAmericanEvidenceCompleteForBothProfiles": false,
+  "phoneticListeningVerified": false,
+  "speakerConsistencyVerified": false,
+  "publicAudioChanged": false
+}

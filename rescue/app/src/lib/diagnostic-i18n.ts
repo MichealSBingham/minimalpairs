@@ -1,3 +1,4 @@
+import {diagnosticOfferCopy} from './diagnostic-experiment.ts';
 import {diagnosticShortCopy} from './diagnostic-short-copy.ts';
 import type {Locale} from './locales';
 const rows: Record<Locale,string[]> = {
@@ -11,4 +12,4 @@ ru:['Бесплатная проверка слухового восприяти
 ja:['無料の聞き分けチェック','聞き分けにくい音を見つけよう。','自分のスタート地点を見つける','単語を変える音の違いを聞き取りましょう。コース内のすべての音グループを試して、練習するポイントを見つけます。','音グループ','問','スコアは無料','','次に練習することがわかる','おすすめの無料レッスンを試せます。全コースと継続的な個別復習は有料です。','各音の対比を少数の例で確認します。総合的な語学力を測るテストではありません。','音のガイドを見る','チェックする音','使い方','文字のヒントなしで聞く','聞こえた音を対応させる','結果を見て練習する内容を選ぶ'],
 zh:['免费听辨测试','找出你容易混淆的声音。','找到我的起点','听辨改变词义的声音差别。测试本课程的所有声音组，找到练习重点。','组声音','道听辨题','免费查看得分','','明确下一步','尝试推荐的免费课程。完整课程和持续的个性化复习需要付费。','每组声音对比仅测试少量示例，不代表你的整体语言水平。','浏览语音指南','你将测试的声音','使用方法','不看文字提示，仔细听','匹配你听到的声音','查看结果，选择练习内容'],
 };
-export function diagnosticCopy(locale: string='en') {const r=rows[locale as Locale]||rows.en;return {eyebrow:r[0],title:r[1],start:r[2],intro:diagnosticShortCopy(locale).intro,coverage:r[4],rounds:r[5],results:r[6],resultsBody:r[7],practice:r[8],practiceBody:r[9],scope:diagnosticShortCopy(locale).scope,browse:r[11],examples:r[12],how:r[13],steps:r.slice(14)};}
+export function diagnosticCopy(locale: string='en') {const r=rows[locale as Locale]||rows.en;return {eyebrow:r[0],title:r[1],start:r[2],intro:diagnosticShortCopy(locale).intro,coverage:r[4],rounds:r[5],results:diagnosticOfferCopy(locale).results,resultsBody:r[7],practice:r[8],practiceBody:r[9],scope:diagnosticShortCopy(locale).scope,browse:r[11],examples:r[12],how:r[13],steps:r.slice(14)};}

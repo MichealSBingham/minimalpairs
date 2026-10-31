@@ -27,3 +27,10 @@ test('a one-voice word is withheld until another accepted recording restores cov
  assert.deepEqual(playablePairs(pairs,[...withY,clip(x,'B','rejected')],'en'),[pair]);
  assert.deepEqual(playablePairs(pairs,[...withY,clip(x,'B')],'en'),pairs);
 });
+
+test('pairs with disjoint surviving speaker sets are withheld after recording removals',()=>{
+ const clips=[...['A','B'].map(v=>({languageId:'en',text:'cat',ipa:'/kæt/',voiceId:v,url:'/a.wav'})),...['C','D'].map(v=>({languageId:'en',text:'cut',ipa:'/kʌt/',voiceId:v,url:'/b.wav'}))];
+ const p={id:'cat-cut',words:[{text:'cat',ipa:'/kæt/'},{text:'cut',ipa:'/kʌt/'}]};
+ assert.deepEqual(playablePairs([p],clips,'en'),[]);
+ assert.deepEqual(playablePairs([p],[...clips,{...clips[2],voiceId:'A'}],'en'),[p]);
+});

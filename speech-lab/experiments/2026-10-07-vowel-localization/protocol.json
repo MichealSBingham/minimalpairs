@@ -1,0 +1,11 @@
+{
+  "created": "2026-10-07",
+  "status": "Settings fixed before localization run",
+  "question": "Can a simple target-independent periodicity region finder locate the vowel in isolated single-vowel words?",
+  "settings": {"frame_samples":640,"hop_samples":160,"minimum_periodicity":0.65,"minimum_relative_rms":0.1,"pitch_search_hz":[70,600],"minimum_frames":6,"bridge_gap_frames":1},
+  "data": "All matched full Hillenbrand recordings and human timedata.dat start/end labels. Reused exploratory corpus, not independent validation.",
+  "selection": "Longest-energy-weighted sustained periodic region, subject to input gate; no expected vowel or label enters locator",
+  "metrics": ["coverage","signed boundary bias","mean and p95 absolute boundary errors","both boundaries within 30 ms","estimated midpoint inside annotated vowel","fraction of predicted interval overlapping annotated vowel"],
+  "interpretation": "30 ms is a screening threshold, not a pronunciation standard. High midpoint containment does not validate full interval boundaries or general phoneme alignment. /hVd/ words may be easier than ship/sheep.",
+  "paid_spend_usd": 0
+}

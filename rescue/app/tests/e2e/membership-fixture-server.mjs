@@ -22,7 +22,7 @@ export async function startMembershipFixture() {
   const bundles = {};
   for (const enabled of [true, false]) {
     const result = await build({
-      stdin: { contents: `import React from 'react'; import {createRoot} from 'react-dom/client'; import MembershipPanel from './src/components/MembershipPanel'; import './src/styles/global.css'; createRoot(document.getElementById('root')).render(<MembershipPanel storefront={new URLSearchParams(location.search).has('storefront')}/>);`, resolveDir: app, loader: 'tsx' },
+      stdin: { contents: `import React from 'react'; import {createRoot} from 'react-dom/client'; import MembershipPanel from './src/components/MembershipPanel'; import './src/styles/global.css'; createRoot(document.getElementById('root')).render(<MembershipPanel storefront={new URLSearchParams(location.search).has('storefront')} embedded={new URLSearchParams(location.search).has('experiment')} offerContext={new URLSearchParams(location.search).has('experiment')?{experiment_id:'diag-paywall-v1',experiment_variant:'paid',offer_placement:'diagnostic-report'}:undefined}/>);`, resolveDir: app, loader: 'tsx' },
       external: ['/fonts/*'],
       bundle: true, write: false, outdir: '/fixture', format: 'esm', jsx: 'automatic',
       define: { 'import.meta.env': JSON.stringify({ PUBLIC_BILLING_ENABLED: String(enabled), PUBLIC_BILLING_CHECKOUT_ENABLED: 'true', PUBLIC_BILLING_API_ORIGIN: 'https://billing.example.invalid' }) },

@@ -1,0 +1,55 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "searchinfo": {
+      "totalhits": 5
+    },
+    "search": [
+      {
+        "ns": 6,
+        "title": "File:LL-Q150 (fra)-DenisdeShawi-bu.wav",
+        "pageid": 90988207,
+        "size": 93,
+        "wordcount": 140,
+        "snippet": "DescriptionLL-Q150 (fra)-DenisdeShawi-<span class=\"searchmatch\">bu</span>.<span class=\"searchmatch\">wav</span> Audio pronunciation file from the Lingua Libre project. Language InfoField French Transcription InfoField",
+        "timestamp": "2026-03-08T06:01:49Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:LL-Q150 (fra)-Julien Baley-bú.wav",
+        "pageid": 145034369,
+        "size": 93,
+        "wordcount": 136,
+        "snippet": "DescriptionLL-Q150 (fra)-Julien Baley-<span class=\"searchmatch\">bú</span>.<span class=\"searchmatch\">wav</span> Audio pronunciation file from the Lingua Libre project. Language InfoField French Transcription InfoField",
+        "timestamp": "2024-02-17T08:07:11Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:LL-Q150 (fra)-Lepticed7-BU.wav",
+        "pageid": 77311915,
+        "size": 93,
+        "wordcount": 134,
+        "snippet": "DescriptionLL-Q150 (fra)-Lepticed7-<span class=\"searchmatch\">BU</span>.<span class=\"searchmatch\">wav</span> Audio pronunciation file from the Lingua Libre project. Language InfoField French Transcription InfoField BU",
+        "timestamp": "2023-04-20T20:35:29Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:LL-Q150 (fra)-LoquaxFR-avoir trop bu.wav",
+        "pageid": 99037178,
+        "size": 93,
+        "wordcount": 147,
+        "snippet": "DescriptionLL-Q150 (fra)-LoquaxFR-avoir trop <span class=\"searchmatch\">bu</span>.<span class=\"searchmatch\">wav</span> Audio pronunciation file from the Lingua Libre project. Language InfoField French Transcription InfoField",
+        "timestamp": "2026-09-22T10:25:17Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:LL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-avoir trop bu.wav",
+        "pageid": 144210217,
+        "size": 93,
+        "wordcount": 140,
+        "snippet": "DescriptionLL-Q150 (fra)-Jérémy-Günther-Heinz Jähnick-avoir trop <span class=\"searchmatch\">bu</span>.<span class=\"searchmatch\">wav</span> Audio pronunciation file from the Lingua Libre project. Language InfoField French",
+        "timestamp": "2024-02-15T23:21:24Z"
+      }
+    ]
+  }
+}

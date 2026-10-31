@@ -26,12 +26,12 @@ before(async () => {
   bundle = result.outputFiles[0].text;
 });
 
-function options(path, enabled = true, script = bundle, className = 'FixtureLedger') {
+function options(path, enabled = true, script = bundle, className = 'FixtureLedger', config=settings) {
   const opts = convertV4MiniflareOptions({ name: 'billing-local-test', modules: true, script,
     compatibilityDate: '2026-09-26', cf: false, host: '127.0.0.1', log: new Log(LogLevel.ERROR),
     durableObjects: { BILLING_LEDGER: { className, useSQLite: true } }, durableObjectsPersist: path,
     bindings: { BILLING_SERVICE_ENABLED: String(enabled), BILLING_CHECKOUT_ENABLED: 'true', BILLING_COMMUNICATIONS_APPROVED: 'true',
-      BILLING_CONFIG_JSON: JSON.stringify(settings), STRIPE_WEBHOOK_SECRETS_JSON: JSON.stringify([secret]) },
+      PURCHASE_FEED_TOKEN:'fixture-feed', BILLING_CONFIG_JSON: JSON.stringify(config), STRIPE_WEBHOOK_SECRETS_JSON: JSON.stringify([secret]) },
     outboundService: () => { throw new Error('Unexpected external network request in local billing test'); },
   });
   opts.telemetry = { enabled: false };
@@ -501,4 +501,26 @@ test('recovery window survives restart and cannot be reset by a later checkout',
  assert.deepEqual(await rt.data('reserveRecoveryOffer',testUid,{...offer,createdAt:now+60,expiresAt:now+172860}),offer);
  await rt.restart();assert.deepEqual(await rt.data('recoveryOffer',testUid),offer);
  for(const path of ['/internal/recovery-offers','/internal/recovery-eligible?uid='+testUid]){const r=await rt.mf.dispatchFetch('https://local.invalid'+path);assert.equal(r.status,401);}
+});
+test('regional public quote uses edge country, ignores caller country header, and has no cache',async t=>{
+ const result=await build({entryPoints:[join(directory,'worker.mjs')],bundle:true,write:false,format:'esm',platform:'browser',target:'es2022',external:['cloudflare:workers','node:async_hooks']});
+ const path=await mkdtemp(join(tmpdir(),'regional-quotes-'));
+ const conf={...settings,regionalPricingEnabled:true,regionalOffers:{middle:{amount:1900,couponId:'mid'},value:{amount:1450,couponId:'val'}}};
+ const mf=new Miniflare(options(path,true,result.outputFiles[0].text,'BillingLedger',conf));
+ t.after(async()=>{await mf.dispose();await rm(path,{recursive:true,force:true});});
+ for(const [country,amount] of [['US',2900],['ES',1900],['BR',1450],['TR',1450]]){
+  const r=await mf.dispatchFetch('https://local.invalid/billing/market',{cf:{country},headers:{Origin:settings.appOrigin,'X-Internal-Market-Country':'BR'}});
+  assert.equal(r.status,200);assert.equal(r.headers.get('Cache-Control'),'no-store');assert.equal(r.headers.get('Access-Control-Allow-Origin'),settings.appOrigin);
+  const q=await r.json();assert.equal(q.country,country);assert.equal(q.lifetime,amount);
+ }
+});
+
+test('operator checkout attribution requires auth, validates uid, and is read only',async t=>{
+ const rt=await runtime(t);
+ const url='https://local.invalid/internal/checkout-attribution?uid='+testUid;
+ assert.equal((await rt.mf.dispatchFetch(url)).status,401);
+ const headers={Authorization:'Bearer fixture-feed'};
+ assert.equal((await rt.mf.dispatchFetch(url,{method:'POST',headers})).status,405);
+ assert.equal((await rt.mf.dispatchFetch('https://local.invalid/internal/checkout-attribution?uid=!',{headers})).status,400);
+ const r=await rt.mf.dispatchFetch(url,{headers});assert.equal(r.status,200);assert.equal((await r.json()).found,false);
 });

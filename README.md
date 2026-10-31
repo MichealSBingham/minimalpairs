@@ -7,6 +7,7 @@ Private source repository for the rebuilt MinimalPairs listening product.
 - `rescue/billing`: Stripe integration running on Cloudflare Workers.
 - `rescue/audio-reports`: private recording-report and support endpoint.
 - `rescue/audio/studio`: local generation and audio QA tools.
+- `speech-lab`: isolated speaking-feedback research. Start with [the technical roadmap](SPEECH-ROADMAP.md) and [current experiment status](speech-lab/STATUS.md).
 
 ## Local development
 

@@ -1,0 +1,352 @@
+{
+  "languageId": "de",
+  "locale": "de-DE",
+  "dialect": "Standard German as spoken in Germany",
+  "curriculumSha256": "9e75f976f8b72d0df1f6b5da4c6afda06074d4f13ae91a533c0a77ebe7fe1db6",
+  "contrasts": [
+    {
+      "id": "de-u-ue",
+      "label": "Musste or müsste?",
+      "phonemes": [
+        "ʊ",
+        "ʏ"
+      ],
+      "description": "Both vowels are short and rounded. The vowel in müsste is farther forward. The umlaut changes the vowel, not the number of syllables.",
+      "l1Notes": [],
+      "pairs": [
+        {
+          "id": "de-musste-muesste",
+          "words": [
+            {
+              "text": "musste",
+              "ipa": "/ˈmʊstə/",
+              "meaning": "had to",
+              "phonemes": [
+                "m",
+                "ʊ",
+                "s",
+                "t",
+                "ə"
+              ]
+            },
+            {
+              "text": "müsste",
+              "ipa": "/ˈmʏstə/",
+              "meaning": "would have to",
+              "phonemes": [
+                "m",
+                "ʏ",
+                "s",
+                "t",
+                "ə"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.duden.de/rechtschreibung/muessen"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "all"
+          }
+        },
+        {
+          "id": "de-wurde-wuerde",
+          "words": [
+            {
+              "text": "wurde",
+              "ipa": "/ˈvʊʁdə/",
+              "meaning": "became; was",
+              "phonemes": [
+                "v",
+                "ʊ",
+                "ʁ",
+                "d",
+                "ə"
+              ]
+            },
+            {
+              "text": "würde",
+              "ipa": "/ˈvʏʁdə/",
+              "meaning": "would",
+              "phonemes": [
+                "v",
+                "ʏ",
+                "ʁ",
+                "d",
+                "ə"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.duden.de/rechtschreibung/werden_Hilfsverb"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "all"
+          }
+        },
+        {
+          "id": "de-mutter-muetter",
+          "words": [
+            {
+              "text": "Mutter",
+              "ipa": "/ˈmʊtɐ/",
+              "meaning": "mother",
+              "phonemes": [
+                "m",
+                "ʊ",
+                "t",
+                "ɐ"
+              ]
+            },
+            {
+              "text": "Mütter",
+              "ipa": "/ˈmʏtɐ/",
+              "meaning": "mothers",
+              "phonemes": [
+                "m",
+                "ʏ",
+                "t",
+                "ɐ"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.duden.de/rechtschreibung/Mutter_Frau"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "all"
+          }
+        }
+      ],
+      "sources": [
+        "https://doi.org/10.1017/S0025100300004084"
+      ],
+      "targetSoundFocus": "Listen to the stressed vowel in the first syllable.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the stressed vowel in the first syllable.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "ʊ",
+          "ʏ"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "presentation": "audio-only-until-answer-or-explicit-text-assist"
+      }
+    },
+    {
+      "id": "de-i-length",
+      "label": "Bitten or bieten?",
+      "phonemes": [
+        "ɪ",
+        "iː"
+      ],
+      "description": "The vowel changes in quality as well as duration. Compare complete words rather than treating this as a stopwatch exercise.",
+      "l1Notes": [],
+      "pairs": [
+        {
+          "id": "de-bitten-bieten",
+          "words": [
+            {
+              "text": "bitten",
+              "ipa": "/ˈbɪtən/",
+              "meaning": "ask; request",
+              "phonemes": [
+                "b",
+                "ɪ",
+                "t",
+                "ə",
+                "n"
+              ]
+            },
+            {
+              "text": "bieten",
+              "ipa": "/ˈbiːtən/",
+              "meaning": "offer",
+              "phonemes": [
+                "b",
+                "iː",
+                "t",
+                "ə",
+                "n"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.duden.de/rechtschreibung/bitten",
+            "https://www.duden.de/rechtschreibung/bieten"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "note": "Careful citation forms shown. Natural speech may use a syllabic final n in both words.",
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "all"
+          }
+        },
+        {
+          "id": "de-mitte-miete",
+          "words": [
+            {
+              "text": "Mitte",
+              "ipa": "/ˈmɪtə/",
+              "meaning": "middle",
+              "phonemes": [
+                "m",
+                "ɪ",
+                "t",
+                "ə"
+              ]
+            },
+            {
+              "text": "Miete",
+              "ipa": "/ˈmiːtə/",
+              "meaning": "rent",
+              "phonemes": [
+                "m",
+                "iː",
+                "t",
+                "ə"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.duden.de/rechtschreibung/Mitte",
+            "https://www.duden.de/rechtschreibung/Miete_Pacht"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "all"
+          }
+        },
+        {
+          "id": "de-schiff-schief",
+          "words": [
+            {
+              "text": "Schiff",
+              "ipa": "/ʃɪf/",
+              "meaning": "ship",
+              "phonemes": [
+                "ʃ",
+                "ɪ",
+                "f"
+              ]
+            },
+            {
+              "text": "schief",
+              "ipa": "/ʃiːf/",
+              "meaning": "crooked",
+              "phonemes": [
+                "ʃ",
+                "iː",
+                "f"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.duden.de/rechtschreibung/Schiff",
+            "https://www.duden.de/rechtschreibung/schief"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "all"
+          }
+        }
+      ],
+      "sources": [
+        "https://doi.org/10.1017/S0025100300004084"
+      ],
+      "targetSoundFocus": "Listen to the stressed vowel. Its quality and duration both matter.",
+      "abx": {
+        "matchType": "phoneme",
+        "targetSoundFocus": "Listen to the stressed vowel. Its quality and duration both matter.",
+        "prompt": "Which reference shares X’s target sound?",
+        "categoryLabels": [
+          "ɪ",
+          "iː"
+        ],
+        "categoryOrder": "words[0] is category 0; words[1] is category 1",
+        "xMustUseDifferentPair": true,
+        "xMustExcludeBothReferenceWordTexts": true,
+        "presentation": "audio-only-until-answer-or-explicit-text-assist"
+      }
+    }
+  ],
+  "requestedWords": [
+    "musste",
+    "müsste",
+    "wurde",
+    "würde",
+    "Mutter",
+    "Mütter",
+    "bitten",
+    "bieten",
+    "Mitte",
+    "Miete",
+    "Schiff",
+    "schief"
+  ]
+}

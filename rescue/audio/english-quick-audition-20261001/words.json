@@ -1,0 +1,146 @@
+[
+  {
+    "wordId": "en-audition-ship",
+    "bankId": "en-US-ga",
+    "languageId": "en",
+    "text": "ship",
+    "reading": "ship",
+    "ipa": "/ʃɪp/",
+    "meaning": "a large boat"
+  },
+  {
+    "wordId": "en-audition-sheep",
+    "bankId": "en-US-ga",
+    "languageId": "en",
+    "text": "sheep",
+    "reading": "sheep",
+    "ipa": "/ʃip/",
+    "meaning": "a woolly animal"
+  },
+  {
+    "wordId": "en-audition-sit",
+    "bankId": "en-US-ga",
+    "languageId": "en",
+    "text": "sit",
+    "reading": "sit",
+    "ipa": "/sɪt/",
+    "meaning": "be seated"
+  },
+  {
+    "wordId": "en-audition-seat",
+    "bankId": "en-US-ga",
+    "languageId": "en",
+    "text": "seat",
+    "reading": "seat",
+    "ipa": "/sit/",
+    "meaning": "a place to sit"
+  },
+  {
+    "wordId": "en-audition-thin",
+    "bankId": "en-US-ga",
+    "languageId": "en",
+    "text": "thin",
+    "reading": "thin",
+    "ipa": "/θɪn/",
+    "meaning": "not thick"
+  },
+  {
+    "wordId": "en-audition-sin",
+    "bankId": "en-US-ga",
+    "languageId": "en",
+    "text": "sin",
+    "reading": "sin",
+    "ipa": "/sɪn/",
+    "meaning": "a moral wrong"
+  },
+  {
+    "wordId": "en-audition-right",
+    "bankId": "en-US-ga",
+    "languageId": "en",
+    "text": "right",
+    "reading": "right",
+    "ipa": "/ɹaɪt/",
+    "meaning": "correct; opposite of left"
+  },
+  {
+    "wordId": "en-audition-light",
+    "bankId": "en-US-ga",
+    "languageId": "en",
+    "text": "light",
+    "reading": "light",
+    "ipa": "/laɪt/",
+    "meaning": "brightness"
+  },
+  {
+    "wordId": "en-audition-cat",
+    "bankId": "en-US-ga",
+    "languageId": "en",
+    "text": "cat",
+    "reading": "cat",
+    "ipa": "/kæt/",
+    "meaning": "a small feline animal"
+  },
+  {
+    "wordId": "en-audition-cut",
+    "bankId": "en-US-ga",
+    "languageId": "en",
+    "text": "cut",
+    "reading": "cut",
+    "ipa": "/kʌt/",
+    "meaning": "divide with a sharp tool"
+  },
+  {
+    "wordId": "en-audition-cap",
+    "bankId": "en-US-ga",
+    "languageId": "en",
+    "text": "cap",
+    "reading": "cap",
+    "ipa": "/kæp/",
+    "meaning": "a hat; a cover"
+  },
+  {
+    "wordId": "en-audition-cup",
+    "bankId": "en-US-ga",
+    "languageId": "en",
+    "text": "cup",
+    "reading": "cup",
+    "ipa": "/kʌp/",
+    "meaning": "a small drinking vessel"
+  },
+  {
+    "wordId": "en-audition-look",
+    "bankId": "en-US-ga",
+    "languageId": "en",
+    "text": "look",
+    "reading": "look",
+    "ipa": "/lʊk/",
+    "meaning": "direct your eyes toward something"
+  },
+  {
+    "wordId": "en-audition-luck",
+    "bankId": "en-US-ga",
+    "languageId": "en",
+    "text": "luck",
+    "reading": "luck",
+    "ipa": "/lʌk/",
+    "meaning": "chance; good fortune"
+  },
+  {
+    "wordId": "en-audition-book",
+    "bankId": "en-US-ga",
+    "languageId": "en",
+    "text": "book",
+    "reading": "book",
+    "ipa": "/bʊk/",
+    "meaning": "a written work with pages"
+  },
+  {
+    "wordId": "en-audition-buck",
+    "bankId": "en-US-ga",
+    "languageId": "en",
+    "text": "buck",
+    "reading": "buck",
+    "ipa": "/bʌk/",
+    "meaning": "a male deer; a dollar"
+  }
+]

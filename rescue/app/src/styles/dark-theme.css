@@ -54,6 +54,10 @@ html[data-theme="dark"] .diagnostic-preview-value {color:hsl(45 7% 70%)
 }
 html[data-theme="dark"] .diagnostic-preview-sr {border:0
 }
+html[data-theme="dark"] .diagnostic-preview-example {border-top:1px solid var(--line,hsl(41 22% 27%))
+}
+html[data-theme="dark"] .diagnostic-preview-example dt {color:var(--muted,hsl(45 7% 70%))
+}
 html[data-theme="dark"] .crumb {color:hsl(107 9% 70%)
 }
 html[data-theme="dark"] .localized-public p {color:hsl(45 7% 70%)
@@ -81,6 +85,18 @@ html[data-theme="dark"] .word-group :global(.guide-play:focus-visible) {outline:
 html[data-theme="dark"] .word-group small {color:hsl(30 5% 70%)
 }
 html[data-theme="dark"] .related a {border:1px solid hsl(41 22% 27%);border-radius:6px
+}
+html[data-theme="dark"] .owner-audit button,html[data-theme="dark"] .owner-audit select {border:1px solid var(--line,hsl(40 18% 27%));border-radius:9px;background:var(--paper,hsl(45 30% 11%));color:inherit
+}
+html[data-theme="dark"] .audit-card {background:var(--paper,hsl(45 30% 11%));border:1px solid var(--line,hsl(40 18% 27%));border-radius:18px
+}
+html[data-theme="dark"] .audit-actions button:first-child {background:hsl(8 30% 23%);color:hsl(0 0% 70%)
+}
+html[data-theme="dark"] .audit-actions button:last-child {background:hsl(148 29% 23%);color:hsl(0 0% 70%)
+}
+html[data-theme="dark"] .risk-high {color:hsl(7 45% 72%)
+}
+html[data-theme="dark"] .risk-sample {color:hsl(148 29% 70%)
 }
 html[data-theme="dark"] .theme-toggle {border:1px solid hsl(40 21% 27%);border-radius:50%;background:hsl(45 30% 11%);color:hsl(60 7% 90%);box-shadow:0 2px 8px hsl(0 0% 0% / 0.067)
 }

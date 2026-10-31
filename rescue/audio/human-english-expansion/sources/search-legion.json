@@ -1,0 +1,19 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "searchinfo": {
+      "totalhits": 1
+    },
+    "search": [
+      {
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Vealhurl-legion.wav",
+        "pageid": 98855262,
+        "size": 93,
+        "wordcount": 134,
+        "snippet": "DescriptionLL-Q1860 (eng)-Vealhurl-<span class=\"searchmatch\">legion</span>.<span class=\"searchmatch\">wav</span> Audio pronunciation file from the Lingua Libre project. Language InfoField English Transcription InfoField",
+        "timestamp": "2023-04-09T05:00:08Z"
+      }
+    ]
+  }
+}

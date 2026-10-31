@@ -1,0 +1,193 @@
+{
+  "checkedAt": "2026-09-28T21:52:05.144927+00:00",
+  "status": "engineering-pass",
+  "pairCount": 2,
+  "wordCount": 4,
+  "contributors": 2,
+  "clips": 8,
+  "bytes": 195319,
+  "sourceLicenses": {
+    "CC-BY-SA-4.0": 4,
+    "CC-BY-SA-3.0": 4
+  },
+  "durationSeconds": {
+    "min": 0.409252,
+    "max": 1.52
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "kind": "category-correlated-current-file-version-dates",
+      "voiceId": "human-de-jeuwre",
+      "shortVowelDates": [
+        "2020-08-28",
+        "2021-02-19"
+      ],
+      "longVowelDates": [
+        "2023-09-11"
+      ],
+      "limitation": "Metadata association only; actual recording session and audible artifact differences unreviewed."
+    },
+    {
+      "kind": "category-correlated-current-file-version-dates",
+      "voiceId": "human-de-joni",
+      "shortVowelDates": [
+        "2004-12-03"
+      ],
+      "longVowelDates": [
+        "2004-12-06"
+      ],
+      "limitation": "Metadata association only; actual recording session and audible artifact differences unreviewed."
+    }
+  ],
+  "signalMeasurements": [
+    {
+      "voiceId": "human-de-jeuwre",
+      "text": "in",
+      "signals": [
+        {
+          "format": "original",
+          "decodedSamples": 63945,
+          "rms": 0.12965391582182215,
+          "peak": 0.9880504608154297
+        },
+        {
+          "format": "mp3",
+          "decodedSamples": 63945,
+          "rms": 0.1257646886271575,
+          "peak": 0.9575150609016418
+        }
+      ]
+    },
+    {
+      "voiceId": "human-de-jeuwre",
+      "text": "ihn",
+      "signals": [
+        {
+          "format": "original",
+          "decodedSamples": 64827,
+          "rms": 0.13844081808103062,
+          "peak": 0.9792659282684326
+        },
+        {
+          "format": "mp3",
+          "decodedSamples": 64827,
+          "rms": 0.1342405034344293,
+          "peak": 0.9493958353996277
+        }
+      ]
+    },
+    {
+      "voiceId": "human-de-jeuwre",
+      "text": "im",
+      "signals": [
+        {
+          "format": "original",
+          "decodedSamples": 67032,
+          "rms": 0.17975039454746286,
+          "peak": 1.0249605178833008
+        },
+        {
+          "format": "mp3",
+          "decodedSamples": 67032,
+          "rms": 0.17436451839257386,
+          "peak": 0.9943976402282715
+        }
+      ]
+    },
+    {
+      "voiceId": "human-de-jeuwre",
+      "text": "ihm",
+      "signals": [
+        {
+          "format": "original",
+          "decodedSamples": 61740,
+          "rms": 0.1364505738342742,
+          "peak": 1.000496745109558
+        },
+        {
+          "format": "mp3",
+          "decodedSamples": 61740,
+          "rms": 0.13231951482442994,
+          "peak": 0.9721750020980835
+        }
+      ]
+    },
+    {
+      "voiceId": "human-de-joni",
+      "text": "in",
+      "signals": [
+        {
+          "format": "original",
+          "decodedSamples": 18048,
+          "rms": 0.08655543905271904,
+          "peak": 0.6090985536575317
+        },
+        {
+          "format": "mp3",
+          "decodedSamples": 18048,
+          "rms": 0.08396231084718095,
+          "peak": 0.5938705205917358
+        }
+      ]
+    },
+    {
+      "voiceId": "human-de-joni",
+      "text": "ihn",
+      "signals": [
+        {
+          "format": "original",
+          "decodedSamples": 21184,
+          "rms": 0.07179901575088216,
+          "peak": 0.4575348496437073
+        },
+        {
+          "format": "mp3",
+          "decodedSamples": 21184,
+          "rms": 0.06962895495031654,
+          "peak": 0.4428114891052246
+        }
+      ]
+    },
+    {
+      "voiceId": "human-de-joni",
+      "text": "im",
+      "signals": [
+        {
+          "format": "original",
+          "decodedSamples": 20608,
+          "rms": 0.07531798266380424,
+          "peak": 0.5461156368255615
+        },
+        {
+          "format": "mp3",
+          "decodedSamples": 20608,
+          "rms": 0.07306946240185806,
+          "peak": 0.5296118259429932
+        }
+      ]
+    },
+    {
+      "voiceId": "human-de-joni",
+      "text": "ihm",
+      "signals": [
+        {
+          "format": "original",
+          "decodedSamples": 18176,
+          "rms": 0.06456897718837921,
+          "peak": 0.3167884647846222
+        },
+        {
+          "format": "mp3",
+          "decodedSamples": 18176,
+          "rms": 0.06263630315821461,
+          "peak": 0.30645954608917236
+        }
+      ]
+    }
+  ],
+  "phoneticListeningVerified": false,
+  "speakerConsistencyVerified": false,
+  "mainCurriculumEdited": false,
+  "publicAudioChanged": false
+}

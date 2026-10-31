@@ -1,0 +1,1268 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "-1": {
+        "ns": 6,
+        "title": "File:En-us-lesion.ogg",
+        "missing": "",
+        "imagerepository": ""
+      },
+      "-2": {
+        "ns": 6,
+        "title": "File:En-us-legion.ogg",
+        "missing": "",
+        "imagerepository": ""
+      },
+      "-3": {
+        "ns": 6,
+        "title": "File:En-us-pledger.ogg",
+        "missing": "",
+        "imagerepository": ""
+      },
+      "-4": {
+        "ns": 6,
+        "title": "File:En-us-putt.ogg",
+        "missing": "",
+        "imagerepository": ""
+      },
+      "-5": {
+        "ns": 6,
+        "title": "File:En-us-look.ogg",
+        "missing": "",
+        "imagerepository": ""
+      },
+      "-6": {
+        "ns": 6,
+        "title": "File:En-us-buck.ogg",
+        "missing": "",
+        "imagerepository": ""
+      },
+      "380110": {
+        "pageid": 380110,
+        "ns": 6,
+        "title": "File:En-us-book.ogg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2006-09-13T05:29:10Z",
+            "user": "Dvortygirl",
+            "size": 10603,
+            "width": 0,
+            "height": 0,
+            "duration": 0.592108843537415,
+            "comment": "[[Category:English pronunciation|book]]\nPronunciation of the term in US English, recorded by [[User:Dvortygirl|Dvortygirl]], 12 September 2006",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/3/3d/En-us-book.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:En-us-book.ogg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=380110",
+            "sha1": "802d90e2acb8c5448b464d8a143fe5d59d16c13b",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2006-09-13 05:29:10",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "En-us-book",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "U.S. English pronunciation|GFDL|Audiobooks|CC-BY-SA-3.0,2.5,2.0,1.0|License migration redundant|Self-published work",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Pronunciation of the term in US English",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2006-09-12",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:Dvortygirl\" title=\"User:Dvortygirl\">Dvortygirl</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 3.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 3.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/licenses/by-sa/3.0/",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-3.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 876987808,
+            "parentid": 863347533,
+            "timestamp": "2024-05-17T05:02:50Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Information\n|Description={{en|1=Pronunciation of the term in US English}}\n|Source={{own}}\n|Author=[[User:Dvortygirl|Dvortygirl]]\n|Date=2006-09-12\n|Permission=\n|other_versions=\n}}\n\n== {{int:license-header}} ==\n{{self|GFDL|cc-by-sa-3.0-migrated|cc-by-sa-3.0,2.5,2.0,1.0}}\n\n[[Category:U.S. English pronunciation|book]]\n[[Category:Audiobooks]]"
+              }
+            }
+          }
+        ]
+      },
+      "424726": {
+        "pageid": 424726,
+        "ns": 6,
+        "title": "File:En-us-cap.ogg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2005-11-16T06:32:15Z",
+            "user": "Dvortygirl",
+            "size": 10898,
+            "width": 0,
+            "height": 0,
+            "duration": 0.626938775510204,
+            "comment": "[[Category:English pronunciation|cap]]\nPronunciation of the term in US English, recorded by [[User:Dvortygirl|Dvortygirl]], 15 November 2005\n",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/0/05/En-us-cap.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:En-us-cap.ogg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=424726",
+            "sha1": "f67ef633c17acbdcf50f3aef9b0ad0f6ba349e9e",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2005-11-16 06:32:15",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "En-us-cap",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Pronunciation of the term in US English",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2005-11-15",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:Dvortygirl\" title=\"User:Dvortygirl\">Dvortygirl</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 3.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 3.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/licenses/by-sa/3.0/",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-3.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 1229121858,
+            "parentid": 605065203,
+            "timestamp": "2026-06-10T18:45:35Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Information\n |description    = {{en|1=Pronunciation of the term in US English}}\n |date           =2005-11-15\n |source         = {{own}}\n |author         = [[User:Dvortygirl|Dvortygirl]]\n |permission     =\n |other_versions =\n}}\n\n=={{int:license-header}}==\n[[Category:U.S. English pronunciation|cap]]\n{{self|GFDL|Cc-by-sa-3.0-migrated|Cc-by-sa-2.5,2.0,1.0}}"
+              }
+            }
+          }
+        ]
+      },
+      "187316": {
+        "pageid": 187316,
+        "ns": 6,
+        "title": "File:En-us-cat.ogg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2005-06-15T06:12:41Z",
+            "user": "Dvortygirl",
+            "size": 9550,
+            "width": 0,
+            "height": 0,
+            "duration": 0.5224489795918368,
+            "comment": "{{gfdl}}\n[[Category:English pronunciation|cat]]\nPronunciation of the word 'cat' in US English, recorded by [[User:Dvortygirl|Dvortygirl]], 14 June 2005",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/4/46/En-us-cat.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:En-us-cat.ogg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=187316",
+            "sha1": "dd8366cc15e33dbf376db99ded74ec45bfd75bae",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2005-06-15 06:12:41",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "En-us-cat",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "U.S. English pronunciation|GFDL|License migration completed|Audio files of 2005|Audio files of Felis silvestris catus",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Pronunciation of the word 'cat' in US English",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2005-06-14",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:Dvortygirl\" title=\"User:Dvortygirl\">Dvortygirl</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 3.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 3.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/licenses/by-sa/3.0/",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-3.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 1229122106,
+            "parentid": 896746093,
+            "timestamp": "2026-06-10T18:46:36Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Information\n |description    = {{en|Pronunciation of the word 'cat' in US English}}\n |date           = 2005-06-14\n |source         = {{own}}\n |author         = [[User:Dvortygirl|Dvortygirl]]\n |permission     =\n |other_versions =\n}}\n\n=={{int:license-header}}==\n{{GFDL|migration=relicense}}\n[[Category:U.S. English pronunciation|cat]]\n[[Category:Audio files of Felis silvestris catus]]\n[[Category:Audio files of 2005]]"
+              }
+            }
+          }
+        ]
+      },
+      "840689": {
+        "pageid": 840689,
+        "ns": 6,
+        "title": "File:En-us-cup.ogg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2006-06-05T07:20:06Z",
+            "user": "Dvortygirl",
+            "size": 15602,
+            "width": 0,
+            "height": 0,
+            "duration": 0.7198185941043084,
+            "comment": "[[Category:English pronunciation|cup]]\nPronunciation of the term in US English, recorded by [[User:Dvortygirl|Dvortygirl]], 4 March 2006",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/57/En-us-cup.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:En-us-cup.ogg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=840689",
+            "sha1": "ba617e6f7c4e994c1227de6e1765ce6767447c1b",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2006-06-05 07:20:06",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "En-us-cup",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Pronunciation of the term in US English",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2006-03-04",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:Dvortygirl\" title=\"User:Dvortygirl\">Dvortygirl</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 3.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 3.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/licenses/by-sa/3.0/",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-3.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 1229125832,
+            "parentid": 605237349,
+            "timestamp": "2026-06-10T18:58:50Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Information\n |description    = {{en|Pronunciation of the term in US English}}\n |date           = 2006-03-04\n |source         = {{own}}\n |author         = [[User:Dvortygirl|Dvortygirl]]\n |permission     =\n |other_versions =\n}}\n\n=={{int:license-header}}==\n[[Category:U.S. English pronunciation|cup]]\n{{self|GFDL|Cc-by-sa-3.0-migrated|Cc-by-sa-2.5,2.0,1.0}}"
+              }
+            }
+          }
+        ]
+      },
+      "1227599": {
+        "pageid": 1227599,
+        "ns": 6,
+        "title": "File:En-us-cut.ogg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2006-09-30T05:01:19Z",
+            "user": "Dvortygirl",
+            "size": 10730,
+            "width": 0,
+            "height": 0,
+            "duration": 0.615328798185941,
+            "comment": "[[Category:English pronunciation|cut]]\nPronunciation of the term in US English, recorded by [[User:Dvortygirl|Dvortygirl]], {{subst:CURRENTDAY}} {{subst:CURRENTMONTHNAME}} {{subst:CURRENTYEAR}}",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/5/53/En-us-cut.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:En-us-cut.ogg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1227599",
+            "sha1": "577d3e3d86f5cdccfb0a979f0732f6987fa15a62",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2006-09-30 05:01:19",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "En-us-cut",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Pronunciation of the term in US English",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2006-09-30",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:Dvortygirl\" title=\"User:Dvortygirl\">Dvortygirl</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 3.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 3.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/licenses/by-sa/3.0/",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-3.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 1229125915,
+            "parentid": 605379445,
+            "timestamp": "2026-06-10T18:59:09Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Information\n |description    = {{en|Pronunciation of the term in US English}}\n |date           =2006-09-30\n |source         = {{own}}\n |author         = [[User:Dvortygirl|Dvortygirl]]\n |permission     =\n |other_versions =\n}}\n\n=={{int:license-header}}==\n[[Category:U.S. English pronunciation|cut]]\n{{self|GFDL|Cc-by-sa-3.0-migrated|Cc-by-sa-2.5,2.0,1.0}}"
+              }
+            }
+          }
+        ]
+      },
+      "1684655": {
+        "pageid": 1684655,
+        "ns": 6,
+        "title": "File:En-us-lack.ogg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2007-02-17T09:00:13Z",
+            "user": "Dvortybot",
+            "size": 12617,
+            "width": 0,
+            "height": 0,
+            "duration": 1,
+            "comment": "\n{{Information\n|Description= Audio pronunciation of the term 'lack' in United States English.\n|Source= Self, recorded using the program 'Sktooka'.\n|Date= {{subst:CURRENTDAY}} {{subst:CURRENTMONTHNAME}} {{subst:CURRENTYEAR}}\n|Author= [[User:Dvortygirl|Dvor",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/6/62/En-us-lack.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:En-us-lack.ogg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1684655",
+            "sha1": "f2a7f82114188b9befa07def0341fef1f9a52ebf",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2007-02-17 09:00:13",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "En-us-lack",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation of the term 'lack' in United States English.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2007-02-17",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "Self, recorded using the program <a href=\"//commons.wikimedia.org/wiki/Commons:Shtooka\" title=\"Commons:Shtooka\">Shtooka</a>.",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:Dvortygirl\" title=\"User:Dvortygirl\">Dvortygirl</a>",
+                "source": "commons-desc-page"
+              },
+              "Permission": {
+                "value": "Dual licensed per GFDL Version 1.2 or later / Creative Commons Attribution ShareAlike license versions 2.5, 2.0, and 1.0 as noted.",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 3.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 3.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/licenses/by-sa/3.0/",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-3.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 957177241,
+            "parentid": 651653157,
+            "timestamp": "2024-11-15T00:17:04Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n\n{{Information\n|Description= Audio pronunciation of the term 'lack' in United States English.\n|Source= Self, recorded using the program [[Commons:Shtooka|Shtooka]].\n|Date= 2007-02-17\n|Author= [[User:Dvortygirl|Dvortygirl]]\n|Permission=Dual licensed per GFDL Version 1.2 or later / Creative Commons Attribution ShareAlike license versions 2.5, 2.0, and 1.0 as noted.\n}}\n\n== {{int:license-header}} ==\n{{self|GFDL|Cc-by-sa-3.0-migrated|Cc-by-sa-2.5,2.0,1.0}}\n\n[[Category:U.S. English pronunciation|lack]]"
+              }
+            }
+          }
+        ]
+      },
+      "1230410": {
+        "pageid": 1230410,
+        "ns": 6,
+        "title": "File:En-us-luck.ogg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2006-09-30T20:02:44Z",
+            "user": "Dvortygirl",
+            "size": 12153,
+            "width": 0,
+            "height": 0,
+            "duration": 0.3903854875283447,
+            "comment": "[[Category:English pronunciation|luck]]\nPronunciation of the term in US English, recorded by [[User:Dvortygirl|Dvortygirl]], {{subst:CURRENTDAY}} {{subst:CURRENTMONTHNAME}} {{subst:CURRENTYEAR}}",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/En-us-luck.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:En-us-luck.ogg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1230410",
+            "sha1": "ef8d87fd1a3783b0b558d15e62d95016b023e68f",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2006-09-30 20:02:44",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "En-us-luck",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|Luck|License migration redundant|Self-published work",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Pronunciation of the term in US English",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2006-09-30",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:Dvortygirl\" title=\"User:Dvortygirl\">Dvortygirl</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 3.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 3.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/licenses/by-sa/3.0/",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-3.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 1229143173,
+            "parentid": 605381421,
+            "timestamp": "2026-06-10T19:48:46Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Information\n |description    = {{en|Pronunciation of the term in US English}}\n |date           =2006-09-30\n |source         = {{own}}\n |author         = [[User:Dvortygirl|Dvortygirl]]\n |permission     =\n |other_versions =\n}}\n\n=={{int:license-header}}==\n\n{{self|GFDL|Cc-by-sa-3.0-migrated|Cc-by-sa-2.5,2.0,1.0}}\n\n[[Category:U.S. English pronunciation|luck]]\n[[Category:Luck]]"
+              }
+            }
+          }
+        ]
+      },
+      "1118861": {
+        "pageid": 1118861,
+        "ns": 6,
+        "title": "File:En-us-pleasure.ogg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2006-08-31T04:23:47Z",
+            "user": "Dvortygirl",
+            "size": 12224,
+            "width": 0,
+            "height": 0,
+            "duration": 0.7546485260770975,
+            "comment": "[[Category:English pronunciation|pleasure]]\nPronunciation of the term in US English, recorded by [[User:Dvortygirl|Dvortygirl]], 29 August 2006",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/En-us-pleasure.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:En-us-pleasure.ogg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1118861",
+            "sha1": "ff99ef242653fb84b0aa5d3b74425dbfc4a047b9",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2006-08-31 04:23:47",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "En-us-pleasure",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Pronunciation of the term in US English",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2006-08-29",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:Dvortygirl\" title=\"User:Dvortygirl\">Dvortygirl</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 3.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 3.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/licenses/by-sa/3.0/",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-3.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 1163736155,
+            "parentid": 605352743,
+            "timestamp": "2026-02-11T13:43:44Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Information\n |description    = {{en|Pronunciation of the term in US English}}\n |date           = 2006-08-29\n |source         = {{own}}\n |author         = [[User:Dvortygirl|Dvortygirl]]\n |permission     =\n |other_versions =\n}}\n\n=={{int:license-header}}==\n[[Category:U.S. English pronunciation|pleasure]]\n{{self|GFDL|Cc-by-sa-3.0-migrated|Cc-by-sa-2.5,2.0,1.0}}"
+              }
+            }
+          }
+        ]
+      },
+      "711211": {
+        "pageid": 711211,
+        "ns": 6,
+        "title": "File:En-us-put.ogg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2006-04-17T03:29:59Z",
+            "user": "Dvortygirl",
+            "size": 13581,
+            "width": 0,
+            "height": 0,
+            "duration": 0.5471201814058957,
+            "comment": "[[Category:English pronunciation|put]]\nPronunciation of the term in US English, recorded by [[User:Dvortygirl|Dvortygirl]], 16 March 2006",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/En-us-put.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:En-us-put.ogg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=711211",
+            "sha1": "600a0dde90f83d9f00ad65a0d7df295b3e2910d5",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2006-04-17 03:29:59",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "En-us-put",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Pronunciation of the term in US English",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2006-03-16",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:Dvortygirl\" title=\"User:Dvortygirl\">Dvortygirl</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 3.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 3.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/licenses/by-sa/3.0/",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-3.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 1229156371,
+            "parentid": 605183048,
+            "timestamp": "2026-06-10T20:18:00Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n{{Information\n |description    = {{en|Pronunciation of the term in US English}}\n |date           = 2006-03-16\n |source         = {{own}}\n |author         = [[User:Dvortygirl|Dvortygirl]]\n |permission     =\n |other_versions =\n}}\n\n=={{int:license-header}}==\n[[Category:U.S. English pronunciation|put]]\n{{self|GFDL|Cc-by-sa-3.0-migrated|Cc-by-sa-2.5,2.0,1.0}}"
+              }
+            }
+          }
+        ]
+      },
+      "1750051": {
+        "pageid": 1750051,
+        "ns": 6,
+        "title": "File:En-us-version.ogg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2007-03-06T06:41:58Z",
+            "user": "Dvortybot",
+            "size": 13054,
+            "width": 0,
+            "height": 0,
+            "duration": 1.05,
+            "comment": "\n{{Information\n|Description= Audio pronunciation of the term 'version' in United States English.\n|Source= Self, recorded using the program 'Sktooka'.\n|Date= {{subst:CURRENTDAY}} {{subst:CURRENTMONTHNAME}} {{subst:CURRENTYEAR}}\n|Author= [[User:Dvortygirl|D",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/En-us-version.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:En-us-version.ogg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1750051",
+            "sha1": "6cf5b848e4c2866d24a1fcbd3b6993fc900d2aab",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2007-03-06 06:41:58",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "En-us-version",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation of the term 'version' in United States English.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2007-03-06",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "Self, recorded using the program <a href=\"//commons.wikimedia.org/wiki/Commons:Shtooka\" title=\"Commons:Shtooka\">Shtooka</a>.",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:Dvortygirl\" title=\"User:Dvortygirl\">Dvortygirl</a>",
+                "source": "commons-desc-page"
+              },
+              "Permission": {
+                "value": "Dual licensed per GFDL Version 1.2 or later / Creative Commons Attribution ShareAlike license versions 2.5, 2.0, and 1.0 as noted.",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 3.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 3.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/licenses/by-sa/3.0/",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-3.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 1229171147,
+            "parentid": 651666823,
+            "timestamp": "2026-06-10T20:57:18Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n\n{{Information\n|Description= Audio pronunciation of the term 'version' in United States English.\n|Source= Self, recorded using the program [[Commons:Shtooka|Shtooka]].\n|Date= 2007-03-06\n|Author= [[User:Dvortygirl|Dvortygirl]]\n|Permission=Dual licensed per GFDL Version 1.2 or later / Creative Commons Attribution ShareAlike license versions 2.5, 2.0, and 1.0 as noted.\n}}\n\n== {{int:license-header}} ==\n{{self|GFDL|Cc-by-sa-3.0-migrated|Cc-by-sa-2.5,2.0,1.0}}\n\n[[Category:U.S. English pronunciation|version]]"
+              }
+            }
+          }
+        ]
+      },
+      "1780478": {
+        "pageid": 1780478,
+        "ns": 6,
+        "title": "File:En-us-virgin.ogg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2007-03-13T09:34:18Z",
+            "user": "Dvortybot",
+            "size": 13760,
+            "width": 0,
+            "height": 0,
+            "duration": 1.1,
+            "comment": "\n{{Information\n|Description= Audio pronunciation of the term 'virgin' in United States English.\n|Source= Self, recorded using the program 'Sktooka'.\n|Date= {{subst:CURRENTDAY}} {{subst:CURRENTMONTHNAME}} {{subst:CURRENTYEAR}}\n|Author= [[User:Dvortygirl|Dv",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/c/c0/En-us-virgin.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:En-us-virgin.ogg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=1780478",
+            "sha1": "522e0ed40164c53ba95ade2147705ba7cbe51d91",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2007-03-13 09:34:18",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "En-us-virgin",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "U.S. English pronunciation|GFDL|CC-BY-SA-2.5,2.0,1.0|License migration redundant|Self-published work",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation of the term 'virgin' in United States English.",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2007-03-13",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "Self, recorded using the program <a href=\"//commons.wikimedia.org/wiki/Commons:Shtooka\" title=\"Commons:Shtooka\">Shtooka</a>.",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:Dvortygirl\" title=\"User:Dvortygirl\">Dvortygirl</a>",
+                "source": "commons-desc-page"
+              },
+              "Permission": {
+                "value": "Dual licensed per GFDL Version 1.2 or later / Creative Commons Attribution ShareAlike license versions 2.5, 2.0, and 1.0 as noted.",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 3.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 3.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/licenses/by-sa/3.0/",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-3.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 1229171438,
+            "parentid": 651687929,
+            "timestamp": "2026-06-10T20:57:57Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "== {{int:filedesc}} ==\n\n{{Information\n|Description= Audio pronunciation of the term 'virgin' in United States English.\n|Source= Self, recorded using the program [[Commons:Shtooka|Shtooka]].\n|Date= 2007-03-13\n|Author= [[User:Dvortygirl|Dvortygirl]]\n|Permission=Dual licensed per GFDL Version 1.2 or later / Creative Commons Attribution ShareAlike license versions 2.5, 2.0, and 1.0 as noted.\n}}\n\n== {{int:license-header}} ==\n{{self|GFDL|Cc-by-sa-3.0-migrated|Cc-by-sa-2.5,2.0,1.0}}\n\n[[Category:U.S. English pronunciation|virgin]]"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

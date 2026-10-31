@@ -1,0 +1,21 @@
+{
+  "completedAt": "2026-09-28T20:01:32.642051+00:00",
+  "elapsedSeconds": 25.3165211250016,
+  "referenceCount": 4,
+  "plannedClips": 72,
+  "clipCount": 72,
+  "primaryCount": 24,
+  "audioBytes": 1546368,
+  "primaryAudioBytes": 513696,
+  "unavailable": [],
+  "runtimeVersions": {
+    "mlx-audio": "0.5.7",
+    "mlx": "0.32.2",
+    "numpy": "2.5.3",
+    "soundfile": "0.14.0",
+    "huggingface-hub": "1.33.0"
+  },
+  "publicAudioChanged": false,
+  "phoneticListeningVerified": false,
+  "speakerConsistencyVerified": false
+}

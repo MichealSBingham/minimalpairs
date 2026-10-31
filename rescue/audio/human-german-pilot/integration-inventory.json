@@ -1,0 +1,92 @@
+{
+  "collectionId": "human-de-i-length-pronouns-v1",
+  "pairCount": 2,
+  "files": [
+    {
+      "path": "clips/acc0f7d0978eb04a7828cc2d.mp3",
+      "url": "/audio/human-de-i-length/clips/acc0f7d0978eb04a7828cc2d.mp3",
+      "text": "in",
+      "voiceId": "human-de-jeuwre",
+      "sha256": "f658c8ec27490765cb0e0e28aa8a164315a613dd4bd56618842f8b83514fc8f5",
+      "bytes": 36405,
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "path": "clips/a0a8a7b46748dce82af6977f.mp3",
+      "url": "/audio/human-de-i-length/clips/a0a8a7b46748dce82af6977f.mp3",
+      "text": "ihn",
+      "voiceId": "human-de-jeuwre",
+      "sha256": "33da2a1140d55d0d973fcb4a63322473188a9644412817f419fb7fa2529007ec",
+      "bytes": 37032,
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "path": "clips/b52e1c35bf1ab635827db09e.mp3",
+      "url": "/audio/human-de-i-length/clips/b52e1c35bf1ab635827db09e.mp3",
+      "text": "im",
+      "voiceId": "human-de-jeuwre",
+      "sha256": "cd6759a9da2d94844289f47b0078e1b9388f2bc313e5fead6fdb8a5ebd2590aa",
+      "bytes": 38286,
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "path": "clips/864801352d922a09ca537d51.mp3",
+      "url": "/audio/human-de-i-length/clips/864801352d922a09ca537d51.mp3",
+      "text": "ihm",
+      "voiceId": "human-de-jeuwre",
+      "sha256": "9a5764da6b11d01519aad193068d6f043b39c4ca92bbf24690d955f6f9033d37",
+      "bytes": 35151,
+      "license": "CC-BY-SA-4.0"
+    },
+    {
+      "path": "clips/a7ee3e8c7894ec4b213c246e.mp3",
+      "url": "/audio/human-de-i-length/clips/a7ee3e8c7894ec4b213c246e.mp3",
+      "text": "in",
+      "voiceId": "human-de-joni",
+      "sha256": "7199d7814b7f189afd95bcfcb3899a04668263af09674e20130ef2b16d78a1bf",
+      "bytes": 11328,
+      "license": "CC-BY-SA-3.0"
+    },
+    {
+      "path": "clips/20a309a4660349693d451771.mp3",
+      "url": "/audio/human-de-i-length/clips/20a309a4660349693d451771.mp3",
+      "text": "ihn",
+      "voiceId": "human-de-joni",
+      "sha256": "ee713d47636d3898df2efbd9bf75ca5d2a6ea13aa5174712a0bcc9e132bfac7b",
+      "bytes": 13208,
+      "license": "CC-BY-SA-3.0"
+    },
+    {
+      "path": "clips/53288f9519e77ef27e9e698f.mp3",
+      "url": "/audio/human-de-i-length/clips/53288f9519e77ef27e9e698f.mp3",
+      "text": "im",
+      "voiceId": "human-de-joni",
+      "sha256": "b3ea82695dfe3307a2a7f24210a6690e8120dcfbf427708cca1a37a4cffdd51c",
+      "bytes": 12581,
+      "license": "CC-BY-SA-3.0"
+    },
+    {
+      "path": "clips/0fc3b3a948acad57eaaf5a5d.mp3",
+      "url": "/audio/human-de-i-length/clips/0fc3b3a948acad57eaaf5a5d.mp3",
+      "text": "ihm",
+      "voiceId": "human-de-joni",
+      "sha256": "24e475cd9e081c5e2f5a719e2176aa08918c4432bf8b1d7049227900d6464baa",
+      "bytes": 11328,
+      "license": "CC-BY-SA-3.0"
+    }
+  ],
+  "requiredMetadata": [
+    "manifest.preview.json",
+    "curriculum.candidate.json",
+    "attribution.json",
+    "ATTRIBUTION.md"
+  ],
+  "excluded": [
+    "private/",
+    "manifest.candidate.json",
+    "acquisition-progress.json",
+    "sources/"
+  ],
+  "publicDeploymentApproved": false,
+  "defaultReplacementApproved": false
+}

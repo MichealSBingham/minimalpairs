@@ -1,0 +1,47 @@
+[
+  {
+    "name": "silence",
+    "eligible": false,
+    "reason": "near_silence",
+    "raw_neural_midpoint_hz": [
+      482.4902648925781,
+      1447.4708251953125
+    ]
+  },
+  {
+    "name": "white_noise",
+    "eligible": false,
+    "reason": "weak_periodicity",
+    "raw_neural_midpoint_hz": [
+      420.23345947265625,
+      1540.8560791015625
+    ]
+  },
+  {
+    "name": "220Hz_sine",
+    "eligible": false,
+    "reason": "narrowband_tone",
+    "raw_neural_midpoint_hz": [
+      264.5914306640625,
+      2007.7821044921875
+    ]
+  },
+  {
+    "name": "440Hz_sine",
+    "eligible": false,
+    "reason": "narrowband_tone",
+    "raw_neural_midpoint_hz": [
+      451.36187744140625,
+      1042.801513671875
+    ]
+  },
+  {
+    "name": "clipped_periodic",
+    "eligible": false,
+    "reason": "clipping",
+    "raw_neural_midpoint_hz": [
+      295.7198486328125,
+      1042.801513671875
+    ]
+  }
+]

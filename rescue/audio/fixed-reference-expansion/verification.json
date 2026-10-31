@@ -1,0 +1,42 @@
+{
+  "checkedAt": "2026-09-28T21:27:19.391461+00:00",
+  "status": "engineering-pass",
+  "clips": 46,
+  "bytes": 957704,
+  "languages": {
+    "en": {
+      "distinctWords": 17,
+      "clips": 34,
+      "voiceProfiles": 2
+    },
+    "fr": {
+      "distinctWords": 6,
+      "clips": 12,
+      "voiceProfiles": 2
+    }
+  },
+  "completeSourceScopes": [
+    "en-zh-j",
+    "en-foot-strut",
+    "en-ae-strut",
+    "fr-a-an"
+  ],
+  "distinctEncodedHashes": 46,
+  "durationSeconds": {
+    "min": 0.4,
+    "max": 1.92
+  },
+  "acceptedGenerationSeconds": {
+    "min": 0.5876497919962276,
+    "median": 0.8463753130017722,
+    "max": 5.098635624999588,
+    "total": 45.459398250997765
+  },
+  "rejectedAttempts": 4,
+  "missing": [],
+  "errors": [],
+  "warnings": [],
+  "phoneticListeningVerified": false,
+  "speakerConsistencyVerified": false,
+  "publicAudioChanged": false
+}

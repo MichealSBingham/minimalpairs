@@ -1,0 +1,29 @@
+{
+  "hypothesis": "Capitalization and sentence punctuation may prevent immediate EOS while intended spoken content remains lesion.",
+  "originalTtsText": "lesion",
+  "ttsText": "Lesion.",
+  "voiceId": "qwen-fixed-en-b-fc29c14c",
+  "referenceSha256": "fc29c14cc88bbb38b476ae33ea860498efff6fb98a4e5d3bc95f23878a447eb1",
+  "maxAttempts": 2,
+  "startedAt": "2026-09-28T21:22:00.894276+00:00",
+  "attempts": [
+    {
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "text": "lesion",
+      "ttsText": "Lesion.",
+      "seed": 2320000,
+      "attempt": 0,
+      "attemptSeries": "lesion-capitalization-punctuation-repair",
+      "generationSeconds": 5.098635624999588,
+      "durationSeconds": 0.96,
+      "tokenCount": 12,
+      "acceptedEngineering": true,
+      "reasons": []
+    }
+  ],
+  "completed": true,
+  "accepted": true,
+  "clipId": "0eab4550dfac495acdc586100824",
+  "completedAt": "2026-09-28T21:22:09.675253+00:00",
+  "elapsedSeconds": 8.470319749998453
+}

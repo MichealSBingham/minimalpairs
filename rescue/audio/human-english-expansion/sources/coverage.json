@@ -1,0 +1,253 @@
+{
+  "retrievedAt": "2026-09-28T20:29:49.483221+00:00",
+  "exactWords": [
+    "lesion",
+    "legion",
+    "pleasure",
+    "pledger",
+    "version",
+    "virgin",
+    "put",
+    "putt",
+    "look",
+    "luck",
+    "book",
+    "buck",
+    "cat",
+    "cut",
+    "cap",
+    "cup",
+    "lack"
+  ],
+  "boundedSearchTotals": {
+    "lesion": {
+      "totalHits": 1,
+      "retrieved": 1,
+      "limit": 100
+    },
+    "legion": {
+      "totalHits": 1,
+      "retrieved": 1,
+      "limit": 100
+    },
+    "pleasure": {
+      "totalHits": 7,
+      "retrieved": 7,
+      "limit": 100
+    },
+    "pledger": {
+      "totalHits": 0,
+      "retrieved": 0,
+      "limit": 100
+    },
+    "version": {
+      "totalHits": 2,
+      "retrieved": 2,
+      "limit": 100
+    },
+    "virgin": {
+      "totalHits": 2,
+      "retrieved": 2,
+      "limit": 100
+    },
+    "put": {
+      "totalHits": 11,
+      "retrieved": 11,
+      "limit": 100
+    },
+    "putt": {
+      "totalHits": 1,
+      "retrieved": 1,
+      "limit": 100
+    },
+    "look": {
+      "totalHits": 11,
+      "retrieved": 11,
+      "limit": 100
+    },
+    "luck": {
+      "totalHits": 6,
+      "retrieved": 6,
+      "limit": 100
+    },
+    "book": {
+      "totalHits": 26,
+      "retrieved": 26,
+      "limit": 100
+    },
+    "buck": {
+      "totalHits": 3,
+      "retrieved": 3,
+      "limit": 100
+    },
+    "cat": {
+      "totalHits": 27,
+      "retrieved": 27,
+      "limit": 100
+    },
+    "cut": {
+      "totalHits": 24,
+      "retrieved": 24,
+      "limit": 100
+    },
+    "cap": {
+      "totalHits": 17,
+      "retrieved": 17,
+      "limit": 100
+    },
+    "cup": {
+      "totalHits": 18,
+      "retrieved": 18,
+      "limit": 100
+    },
+    "lack": {
+      "totalHits": 2,
+      "retrieved": 2,
+      "limit": 100
+    }
+  },
+  "speakers": {
+    "Grendelkhan": {
+      "pleasure": "File:LL-Q1860 (eng)-Grendelkhan-pleasure.wav",
+      "version": "File:LL-Q1860 (eng)-Grendelkhan-version.wav",
+      "virgin": "File:LL-Q1860 (eng)-Grendelkhan-virgin.wav",
+      "put": "File:LL-Q1860 (eng)-Grendelkhan-put.wav",
+      "look": "File:LL-Q1860 (eng)-Grendelkhan-look.wav",
+      "luck": "File:LL-Q1860 (eng)-Grendelkhan-luck.wav",
+      "book": "File:LL-Q1860 (eng)-Grendelkhan-book.wav",
+      "buck": "File:LL-Q1860 (eng)-Grendelkhan-buck.wav",
+      "cat": "File:LL-Q1860 (eng)-Grendelkhan-cat.wav",
+      "cut": "File:LL-Q1860 (eng)-Grendelkhan-cut.wav",
+      "cap": "File:LL-Q1860 (eng)-Grendelkhan-cap.wav",
+      "cup": "File:LL-Q1860 (eng)-Grendelkhan-cup.wav",
+      "lack": "File:LL-Q1860 (eng)-Grendelkhan-lack.wav"
+    },
+    "Wodencafe": {
+      "pleasure": "File:LL-Q1860 (eng)-Wodencafe-pleasure.wav",
+      "put": "File:LL-Q1860 (eng)-Wodencafe-put.wav",
+      "putt": "File:LL-Q1860 (eng)-Wodencafe-putt.wav",
+      "look": "File:LL-Q1860 (eng)-Wodencafe-look.wav",
+      "luck": "File:LL-Q1860 (eng)-Wodencafe-luck.wav",
+      "book": "File:LL-Q1860 (eng)-Wodencafe-book.wav",
+      "cat": "File:LL-Q1860 (eng)-Wodencafe-cat.wav",
+      "cut": "File:LL-Q1860 (eng)-Wodencafe-cut.wav",
+      "cup": "File:LL-Q1860 (eng)-Wodencafe-cup.wav"
+    },
+    "Nattes à chat": {
+      "put": "File:LL-Q1860 (eng)-Nattes à chat-put.wav",
+      "look": "File:LL-Q1860 (eng)-Nattes à chat-look.wav",
+      "luck": "File:LL-Q1860 (eng)-Nattes à chat-luck.wav",
+      "book": "File:LL-Q1860 (eng)-Nattes à chat-book.wav",
+      "cat": "File:LL-Q1860 (eng)-Nattes à chat-cat.wav",
+      "cut": "File:LL-Q1860 (eng)-Nattes à chat-cut.wav",
+      "cap": "File:LL-Q1860 (eng)-Nattes à chat-cap.wav",
+      "cup": "File:LL-Q1860 (eng)-Nattes à chat-cup.wav"
+    },
+    "Back ache": {
+      "virgin": "File:LL-Q1860 (eng)-Back ache-Virgin.wav",
+      "put": "File:LL-Q1860 (eng)-Back ache-put.wav",
+      "look": "File:LL-Q1860 (eng)-Back ache-look.wav",
+      "luck": "File:LL-Q1860 (eng)-Back ache-luck.wav",
+      "book": "File:LL-Q1860 (eng)-Back ache-book.wav",
+      "cut": "File:LL-Q1860 (eng)-Back ache-cut.wav",
+      "cup": "File:LL-Q1860 (eng)-Back ache-cup.wav"
+    },
+    "Naomi Persephone Amethyst (NaomiAmethyst)": {
+      "pleasure": "File:LL-Q1860 (eng)-Naomi Persephone Amethyst (NaomiAmethyst)-pleasure.wav",
+      "put": "File:LL-Q1860 (eng)-Naomi Persephone Amethyst (NaomiAmethyst)-put.wav",
+      "look": "File:LL-Q1860 (eng)-Naomi Persephone Amethyst (NaomiAmethyst)-look.wav",
+      "book": "File:LL-Q1860 (eng)-Naomi Persephone Amethyst (NaomiAmethyst)-book.wav",
+      "cat": "File:LL-Q1860 (eng)-Naomi Persephone Amethyst (NaomiAmethyst)-cat.wav",
+      "cut": "File:LL-Q1860 (eng)-Naomi Persephone Amethyst (NaomiAmethyst)-cut.wav",
+      "cup": "File:LL-Q1860 (eng)-Naomi Persephone Amethyst (NaomiAmethyst)-cup.wav"
+    },
+    "Vealhurl": {
+      "lesion": "File:LL-Q1860 (eng)-Vealhurl-lesion.wav",
+      "legion": "File:LL-Q1860 (eng)-Vealhurl-legion.wav",
+      "look": "File:LL-Q1860 (eng)-Vealhurl-look.wav",
+      "cut": "File:LL-Q1860 (eng)-Vealhurl-cut.wav",
+      "cup": "File:LL-Q1860 (eng)-Vealhurl-cup.wav",
+      "lack": "File:LL-Q1860 (eng)-Vealhurl-lack.wav"
+    },
+    "Samuel Muldoon (Muldoonsamuel55)": {
+      "put": "File:LL-Q1860 (eng)-Samuel Muldoon (Muldoonsamuel55)-put.wav",
+      "book": "File:LL-Q1860 (eng)-Samuel Muldoon (Muldoonsamuel55)-book.wav",
+      "cut": "File:LL-Q1860 (eng)-Samuel Muldoon (Muldoonsamuel55)-cut.wav"
+    },
+    "GonFreeaks": {
+      "put": "File:LL-Q1860 (eng)-GonFreeaks-put.wav",
+      "look": "File:LL-Q1860 (eng)-GonFreeaks-look.wav"
+    },
+    "Robust Footman": {
+      "pleasure": "File:LL-Q1860 (eng)-Robust Footman-pleasure.wav",
+      "look": "File:LL-Q1860 (eng)-Robust Footman-look.wav"
+    },
+    "She animates": {
+      "put": "File:LL-Q1860 (eng)-She animates-put.wav",
+      "look": "File:LL-Q1860 (eng)-She animates-look.wav"
+    },
+    "Adélaïde Calais WMFr": {
+      "cat": "File:LL-Q1860 (eng)-Adélaïde Calais WMFr-cat.wav"
+    },
+    "Arlo Barnes": {
+      "buck": "File:LL-Q1860 (eng)-Arlo Barnes-buck.wav"
+    },
+    "Dev Jadiya": {
+      "cat": "File:LL-Q1860 (eng)-Dev Jadiya-cat.wav"
+    },
+    "Flame, not lame-clear": {
+      "cut": "File:LL-Q1860 (eng)-Flame, not lame-clear-cut.wav"
+    },
+    "Flame, not lame-fraidy": {
+      "cat": "File:LL-Q1860 (eng)-Flame, not lame-fraidy-cat.wav"
+    },
+    "Flame, not lame-kitty": {
+      "cat": "File:LL-Q1860 (eng)-Flame, not lame-kitty-cat.wav"
+    },
+    "Flame, not lame-low": {
+      "cut": "File:LL-Q1860 (eng)-Flame, not lame-low-cut.wav"
+    },
+    "Flame, not lame-scaredy": {
+      "cat": "File:LL-Q1860 (eng)-Flame, not lame-scaredy-cat.wav"
+    },
+    "Flame, not lame-self": {
+      "pleasure": "File:LL-Q1860 (eng)-Flame, not lame-self-pleasure.wav"
+    },
+    "John.d.new77": {
+      "cat": "File:LL-Q1860 (eng)-John.d.new77-Cat.wav"
+    },
+    "Lepticed7-e": {
+      "book": "File:LL-Q1860 (eng)-Lepticed7-e-book.wav"
+    },
+    "LetsgoLeeLee": {
+      "look": "File:LL-Q1860 (eng)-LetsgoLeeLee-look.wav"
+    },
+    "Muldoonsamuel55": {
+      "cat": "File:LL-Q1860 (eng)-Muldoonsamuel55-Cat.wav"
+    },
+    "Ov3for": {
+      "look": "File:LL-Q1860 (eng)-Ov3for-look.wav"
+    },
+    "Persent101-absey": {
+      "book": "File:LL-Q1860 (eng)-Persent101-absey-book.wav"
+    },
+    "Simplificationalizer": {
+      "book": "File:LL-Q1860 (eng)-Simplificationalizer-book.wav"
+    },
+    "Status 401": {
+      "cup": "File:LL-Q1860 (eng)-Status 401-Cup.wav"
+    },
+    "Vealhurl-block": {
+      "book": "File:LL-Q1860 (eng)-Vealhurl-block-book.wav"
+    },
+    "Vealhurl-e": {
+      "book": "File:LL-Q1860 (eng)-Vealhurl-e-book.wav"
+    },
+    "Vealhurl-pussy": {
+      "cat": "File:LL-Q1860 (eng)-Vealhurl-pussy-cat.wav"
+    },
+    "Vealhurl-she": {
+      "cat": "File:LL-Q1860 (eng)-Vealhurl-she-cat.wav"
+    }
+  }
+}

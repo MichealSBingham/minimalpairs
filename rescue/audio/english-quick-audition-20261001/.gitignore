@@ -1,0 +1,5 @@
+clips/
+*.log
+*.pid
+__pycache__/
+chatterbox/

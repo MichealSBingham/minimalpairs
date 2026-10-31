@@ -1,0 +1,382 @@
+{
+  "schemaVersion": 1,
+  "collectionId": "owner-fixed-reference-english-v1",
+  "status": "isolated-owner-validation-candidate",
+  "sourceManifest": "rescue/audio/fixed-reference-expansion/manifest.preview.json",
+  "sourceManifestSha256": "fb446120ec0693bc6fd1cf96e06329b9c0443189eb292ab026511aa0830d49a5",
+  "manifestPath": "rescue/audio/fixed-reference-expansion/owner-validation-handoff-2026-09-28/manifest.preview.json",
+  "manifestSha256": "a40e8c6e85e2dbc535d18735a4cde04171c479541bf1cb85333ef8ae2e919b33",
+  "scope": [
+    {
+      "languageId": "en",
+      "contrastId": "en-zh-j",
+      "pairIds": [
+        "en-lesion-legion",
+        "en-pleasure-pledger",
+        "en-version-virgin"
+      ],
+      "pairCount": 3,
+      "profileCount": 2,
+      "clipMappings": 12,
+      "crossWordCombinations": 12,
+      "completeFileCoverage": true,
+      "pronunciationApproved": false
+    },
+    {
+      "languageId": "en",
+      "contrastId": "en-foot-strut",
+      "pairIds": [
+        "en-put-putt",
+        "en-look-luck",
+        "en-book-buck"
+      ],
+      "pairCount": 3,
+      "profileCount": 2,
+      "clipMappings": 12,
+      "crossWordCombinations": 12,
+      "completeFileCoverage": true,
+      "pronunciationApproved": false
+    },
+    {
+      "languageId": "en",
+      "contrastId": "en-ae-strut",
+      "pairIds": [
+        "en-cat-cut",
+        "en-cap-cup",
+        "en-lack-luck"
+      ],
+      "pairCount": 3,
+      "profileCount": 2,
+      "clipMappings": 12,
+      "crossWordCombinations": 12,
+      "completeFileCoverage": true,
+      "pronunciationApproved": false
+    }
+  ],
+  "clips": 34,
+  "bytes": 687896,
+  "copyAllowlist": [
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/61c3ae59abe5ab677f6a7af86f01.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/61c3ae59abe5ab677f6a7af86f01.mp3",
+      "languageId": "en",
+      "text": "lesion",
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "sha256": "451f40bc0e1318bff19e72b388294080a9c94befd54bb9ec49c779ff5b62120c",
+      "bytes": 28844
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/de4d6538f7c12f527f10783bb44c.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/de4d6538f7c12f527f10783bb44c.mp3",
+      "languageId": "en",
+      "text": "legion",
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "sha256": "81bcaf4559ad0d1988f6b277b262d5a17bb843e30f27ba7066cefb275d26821b",
+      "bytes": 22604
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/364f5ad8e01c87f33966fb78bf25.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/364f5ad8e01c87f33966fb78bf25.mp3",
+      "languageId": "en",
+      "text": "pleasure",
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "sha256": "8b4369b61991aeaf11ae5ba7893fcc248c29f48eed17fdc0d226b172aa9dea51",
+      "bytes": 22604
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/7afad0275079460ba9f84d34bbad.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/7afad0275079460ba9f84d34bbad.mp3",
+      "languageId": "en",
+      "text": "pledger",
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "sha256": "5a228fd31efdf884f25f3cf54cdcca69e47cf30695b66a7e221052c8fb8335b8",
+      "bytes": 20684
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/ab46f1d97ddde360200adf920c7e.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/ab46f1d97ddde360200adf920c7e.mp3",
+      "languageId": "en",
+      "text": "version",
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "sha256": "a4ea1eb986b15d7beb4fe84f55746da5a446228295667090b06e9a0219e08633",
+      "bytes": 20684
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/89b7c2c0c3e8815e825bbc8de978.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/89b7c2c0c3e8815e825bbc8de978.mp3",
+      "languageId": "en",
+      "text": "virgin",
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "sha256": "e68c6094a01542434d2bbc573266d1c9d4f2c794a8db06b021e3d8c392afdbff",
+      "bytes": 17804
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/6bf1b03652dbd85ddfde9a295c0a.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/6bf1b03652dbd85ddfde9a295c0a.mp3",
+      "languageId": "en",
+      "text": "put",
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "sha256": "10fdb3f2d082752593bd1dc34e23fc268833d4509300c7a5dabf703a3cfa5674",
+      "bytes": 15884
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/5f0151b098a24566e94fe13cf5e9.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/5f0151b098a24566e94fe13cf5e9.mp3",
+      "languageId": "en",
+      "text": "putt",
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "sha256": "b5fb18137c5eefb33e5f4bdfd6a47d333227f1ecb0208602a6a7cc9e0db98b3c",
+      "bytes": 14444
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/0bbe6a9211e795439bc2cadb2f63.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/0bbe6a9211e795439bc2cadb2f63.mp3",
+      "languageId": "en",
+      "text": "look",
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "sha256": "c4f2a0890c899a3a4891f57c0eaecf1dc97f4a070720a37edb95af5cee830678",
+      "bytes": 19244
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/7a31fd8600be923ae3824f8d04bd.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/7a31fd8600be923ae3824f8d04bd.mp3",
+      "languageId": "en",
+      "text": "luck",
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "sha256": "cbf1013dc8368584717a48131bb3c7b0c4cf8e7cf3d96e5ddaf18e02b91a4a17",
+      "bytes": 20684
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/5399594f5e12212519f9c701a819.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/5399594f5e12212519f9c701a819.mp3",
+      "languageId": "en",
+      "text": "book",
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "sha256": "d9332a7d8641b9d6d5502f5215b49e3d6578ada54a5f6c6c717a8b522f7e0326",
+      "bytes": 19244
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/dd150cd059bd1132fff46b753573.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/dd150cd059bd1132fff46b753573.mp3",
+      "languageId": "en",
+      "text": "buck",
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "sha256": "7685582fe3bdcc51a3d78a8d1ffe3226d6f477612a96b2103c16a8c4780c001f",
+      "bytes": 19244
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/76d447b0f39e772a91c32bac45bf.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/76d447b0f39e772a91c32bac45bf.mp3",
+      "languageId": "en",
+      "text": "cat",
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "sha256": "0e232631d29b88ebe48fde82c5c4e54a2cae91030b7bf5151cdd4d074fda02c5",
+      "bytes": 22604
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/95c3c95856ba7ff153040f80bfc0.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/95c3c95856ba7ff153040f80bfc0.mp3",
+      "languageId": "en",
+      "text": "cut",
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "sha256": "6e35169d9bf565089e87ae481f60b4b555ac03c14b1b740f41b8f123d84b7ff3",
+      "bytes": 19244
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/52805156362f2693e4c1a0b3c5ed.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/52805156362f2693e4c1a0b3c5ed.mp3",
+      "languageId": "en",
+      "text": "cap",
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "sha256": "249efdde77496a5cf42cad1d0e267775037eb86ff7dc447b5430bf56f9206b49",
+      "bytes": 25484
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/257d89287d978e60496a195dcc7f.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/257d89287d978e60496a195dcc7f.mp3",
+      "languageId": "en",
+      "text": "cup",
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "sha256": "4f38b5747fd19ed2cdfd643fbacae27bf803c60816aaf009a32e3f97f9f4cacf",
+      "bytes": 15884
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/dbcdcd63cc1187c0d6570d6097a3.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/dbcdcd63cc1187c0d6570d6097a3.mp3",
+      "languageId": "en",
+      "text": "lack",
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "sha256": "1d49d10df55247b37b508c8a8d0c251a1e4c604931edb84c62effb9743c861ab",
+      "bytes": 22604
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/6fc8cdb3ee0486260bee3b4febf2.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/6fc8cdb3ee0486260bee3b4febf2.mp3",
+      "languageId": "en",
+      "text": "legion",
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "sha256": "ca9644227a9ac36ed4ce16a3d42ff90243b9497a6379569a3dfec19f02e2221c",
+      "bytes": 22604
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/2f4b5aec29c7946063f8709998dd.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/2f4b5aec29c7946063f8709998dd.mp3",
+      "languageId": "en",
+      "text": "pleasure",
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "sha256": "b937bd915cb4db840a04ebfb2f9e23949300404a23bba39e79126f85a0bcbacc",
+      "bytes": 39884
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/8cee19367e6b557e234dbfe8d6d0.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/8cee19367e6b557e234dbfe8d6d0.mp3",
+      "languageId": "en",
+      "text": "pledger",
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "sha256": "eb207c514da9e50af8a465c47697f2d1a90b4a489e6a8bb0df453d27b9aa0b9c",
+      "bytes": 14444
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/8035bb13a618c73e66cc907feb98.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/8035bb13a618c73e66cc907feb98.mp3",
+      "languageId": "en",
+      "text": "version",
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "sha256": "7f92150a848995e439c4e5d0e7b2de25465998a15f712bea862c931eabfc7123",
+      "bytes": 17804
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/d4c10541df686fa1a68eb76b49e0.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/d4c10541df686fa1a68eb76b49e0.mp3",
+      "languageId": "en",
+      "text": "virgin",
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "sha256": "0e8f1851462bedad512f56f0d208c04f6f57a0477e01595776b7afff82f8953e",
+      "bytes": 17804
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/61328ef00e05ea3151059d8bbb72.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/61328ef00e05ea3151059d8bbb72.mp3",
+      "languageId": "en",
+      "text": "put",
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "sha256": "dd79b78068c2632df102e50206d348e1c1839d7da358510796cbd03da1546c96",
+      "bytes": 15884
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/79f4f1d60378b82d243ba308d8ff.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/79f4f1d60378b82d243ba308d8ff.mp3",
+      "languageId": "en",
+      "text": "putt",
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "sha256": "7fa904eae3f5a59e1f5f37444fab136e5bed84d9b1b2cfcb4c8f42e90afb65a0",
+      "bytes": 22604
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/8beab03f9c09cbe84626865c809e.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/8beab03f9c09cbe84626865c809e.mp3",
+      "languageId": "en",
+      "text": "look",
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "sha256": "92f99e531624c9799cc80c235acb3cbe5d1e91a518e8b693d084106585c4377a",
+      "bytes": 24044
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/fd4fe214f9f17ff905f2893d17e2.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/fd4fe214f9f17ff905f2893d17e2.mp3",
+      "languageId": "en",
+      "text": "luck",
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "sha256": "6c4885235a07745253c26e815baaed7faa0baaf29f9f6b53c4219091c8885e44",
+      "bytes": 33644
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/82e7d39a229cdebb234b398ebc9c.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/82e7d39a229cdebb234b398ebc9c.mp3",
+      "languageId": "en",
+      "text": "book",
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "sha256": "107eba54d6b25f4aecf0c6594b5607f52ab7c285a4b2e7bb7c516d9d9b18f14d",
+      "bytes": 9644
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/e75310095125e6c1c24f2fde9901.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/e75310095125e6c1c24f2fde9901.mp3",
+      "languageId": "en",
+      "text": "buck",
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "sha256": "71f4413f72d26ad9250173441861ae7a99e02e91991a111c3f6717bfb65fdb57",
+      "bytes": 19244
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/f4d797c28f1ef4efa914ba1233bc.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/f4d797c28f1ef4efa914ba1233bc.mp3",
+      "languageId": "en",
+      "text": "cat",
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "sha256": "5fbb15e9eb91259453cf633965189295b176265894659eed592905ea11aff373",
+      "bytes": 15884
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/327ffd045defb950c61caca8ce95.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/327ffd045defb950c61caca8ce95.mp3",
+      "languageId": "en",
+      "text": "cut",
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "sha256": "1167c0d8292f1d9a7416963051c8931e56be6e179e9519da9f55c8a82bdf5cd6",
+      "bytes": 9644
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/001fdde83f7f8726c7e7e02a6080.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/001fdde83f7f8726c7e7e02a6080.mp3",
+      "languageId": "en",
+      "text": "cap",
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "sha256": "773edf69ee71dbb7029bd5638a598c186b76ae25715cdc5d8d8a537e5bc01e69",
+      "bytes": 11084
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/5873a342173cc432ad97337b584a.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/5873a342173cc432ad97337b584a.mp3",
+      "languageId": "en",
+      "text": "cup",
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "sha256": "8fd0b7f56688360f88a1e75e63eb1491351c6784f579cc851b53a0655cf72d3d",
+      "bytes": 27404
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/4b41107492066b7aa3615719194a.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/4b41107492066b7aa3615719194a.mp3",
+      "languageId": "en",
+      "text": "lack",
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "sha256": "6a8138b70d09c52221a268e9efd0019b96ba70e5b90c5e83bd4347a493dac3ca",
+      "bytes": 17804
+    },
+    {
+      "sourcePath": "rescue/audio/fixed-reference-expansion/clips/0eab4550dfac495acdc586100824.mp3",
+      "destinationUrl": "/audio/fixed-reference-expansion/clips/0eab4550dfac495acdc586100824.mp3",
+      "languageId": "en",
+      "text": "lesion",
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "sha256": "f2ece1b01b89d07d977c469691aee7b742b095de23644ad51703d7f2c4578194",
+      "bytes": 20684
+    }
+  ],
+  "excluded": [
+    "French clips",
+    "raw anchors",
+    "original WAVs",
+    "rejected or alternate takes",
+    "private source manifests",
+    "source snapshots"
+  ],
+  "defaultReplacementApproved": false,
+  "assessmentApproved": false,
+  "integrationRequirements": [
+    "Use a distinct owner-review source and preserve source ID in progress/history.",
+    "Use all three exact English scopes; no browser/default fallback or voice-profile mixing.",
+    "Display synthetic/unreviewed status and the conditional version/virgin plus repaired lesion notes.",
+    "Copy only the explicit 34-file allowlist and public-safe metadata; retain source artifacts untouched."
+  ]
+}

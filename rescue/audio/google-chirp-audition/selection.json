@@ -1,0 +1,773 @@
+{
+  "schemaVersion": 1,
+  "source": "rescue/content/curriculum.json",
+  "sourceSha256": "9e75f976f8b72d0df1f6b5da4c6afda06074d4f13ae91a533c0a77ebe7fe1db6",
+  "capturedAt": "2026-09-28",
+  "note": "Frozen audition subset; intended IPA is curriculum metadata, not listening verification. No pronunciation overrides are sent to Google.",
+  "scopes": [
+    {
+      "languageId": "en",
+      "curriculumLocale": "en-US",
+      "contrastId": "en-i-ih",
+      "pairs": [
+        {
+          "id": "en-ship-sheep",
+          "words": [
+            {
+              "text": "ship",
+              "ipa": "/ʃɪp/",
+              "meaning": "a large boat",
+              "phonemes": [
+                "ʃ",
+                "ɪ",
+                "p"
+              ]
+            },
+            {
+              "text": "sheep",
+              "ipa": "/ʃip/",
+              "meaning": "a woolly animal",
+              "phonemes": [
+                "ʃ",
+                "i",
+                "p"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://dictionary.cambridge.org/dictionary/english/ship",
+            "https://dictionary.cambridge.org/dictionary/english/sheep"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "all"
+          }
+        },
+        {
+          "id": "en-fill-feel",
+          "words": [
+            {
+              "text": "fill",
+              "ipa": "/fɪl/",
+              "meaning": "make full",
+              "phonemes": [
+                "f",
+                "ɪ",
+                "l"
+              ]
+            },
+            {
+              "text": "feel",
+              "ipa": "/fil/",
+              "meaning": "sense or experience",
+              "phonemes": [
+                "f",
+                "i",
+                "l"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://dictionary.cambridge.org/dictionary/english/fill",
+            "https://dictionary.cambridge.org/dictionary/english/feel"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "all"
+          }
+        }
+      ]
+    },
+    {
+      "languageId": "fr",
+      "curriculumLocale": "fr-FR",
+      "contrastId": "fr-u-y",
+      "pairs": [
+        {
+          "id": "fr-tout-tu",
+          "words": [
+            {
+              "text": "tout",
+              "ipa": "/tu/",
+              "meaning": "all; everything",
+              "phonemes": [
+                "t",
+                "u"
+              ]
+            },
+            {
+              "text": "tu",
+              "ipa": "/ty/",
+              "meaning": "you, informal singular",
+              "phonemes": [
+                "t",
+                "y"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.cnrtl.fr/definition/tout",
+            "https://www.cnrtl.fr/definition/tu"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "final",
+            "trialGroup": "all"
+          }
+        },
+        {
+          "id": "fr-vous-vu",
+          "words": [
+            {
+              "text": "vous",
+              "ipa": "/vu/",
+              "meaning": "you, formal or plural",
+              "phonemes": [
+                "v",
+                "u"
+              ]
+            },
+            {
+              "text": "vu",
+              "ipa": "/vy/",
+              "meaning": "seen",
+              "phonemes": [
+                "v",
+                "y"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.cnrtl.fr/definition/vous",
+            "https://www.cnrtl.fr/definition/voir"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "final",
+            "trialGroup": "all"
+          }
+        }
+      ]
+    },
+    {
+      "languageId": "de",
+      "curriculumLocale": "de-DE",
+      "contrastId": "de-u-ue",
+      "pairs": [
+        {
+          "id": "de-musste-muesste",
+          "words": [
+            {
+              "text": "musste",
+              "ipa": "/ˈmʊstə/",
+              "meaning": "had to",
+              "phonemes": [
+                "m",
+                "ʊ",
+                "s",
+                "t",
+                "ə"
+              ]
+            },
+            {
+              "text": "müsste",
+              "ipa": "/ˈmʏstə/",
+              "meaning": "would have to",
+              "phonemes": [
+                "m",
+                "ʏ",
+                "s",
+                "t",
+                "ə"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.duden.de/rechtschreibung/muessen"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "all"
+          }
+        },
+        {
+          "id": "de-wurde-wuerde",
+          "words": [
+            {
+              "text": "wurde",
+              "ipa": "/ˈvʊʁdə/",
+              "meaning": "became; was",
+              "phonemes": [
+                "v",
+                "ʊ",
+                "ʁ",
+                "d",
+                "ə"
+              ]
+            },
+            {
+              "text": "würde",
+              "ipa": "/ˈvʏʁdə/",
+              "meaning": "would",
+              "phonemes": [
+                "v",
+                "ʏ",
+                "ʁ",
+                "d",
+                "ə"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.duden.de/rechtschreibung/werden_Hilfsverb"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 1,
+            "targetPosition": "medial",
+            "trialGroup": "all"
+          }
+        }
+      ]
+    },
+    {
+      "languageId": "es",
+      "curriculumLocale": "es-MX",
+      "contrastId": "es-tap-trill",
+      "pairs": [
+        {
+          "id": "es-caro-carro",
+          "words": [
+            {
+              "text": "caro",
+              "ipa": "/ˈkaɾo/",
+              "meaning": "expensive",
+              "phonemes": [
+                "k",
+                "a",
+                "ɾ",
+                "o"
+              ]
+            },
+            {
+              "text": "carro",
+              "ipa": "/ˈkaro/",
+              "meaning": "car; cart",
+              "phonemes": [
+                "k",
+                "a",
+                "r",
+                "o"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://dle.rae.es/caro",
+            "https://dle.rae.es/carro"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 2,
+            "targetPosition": "medial",
+            "trialGroup": "all"
+          }
+        },
+        {
+          "id": "es-pero-perro",
+          "words": [
+            {
+              "text": "pero",
+              "ipa": "/ˈpeɾo/",
+              "meaning": "but",
+              "phonemes": [
+                "p",
+                "e",
+                "ɾ",
+                "o"
+              ]
+            },
+            {
+              "text": "perro",
+              "ipa": "/ˈpero/",
+              "meaning": "dog",
+              "phonemes": [
+                "p",
+                "e",
+                "r",
+                "o"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://dle.rae.es/pero",
+            "https://dle.rae.es/perro"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 2,
+            "targetPosition": "medial",
+            "trialGroup": "all"
+          }
+        }
+      ]
+    },
+    {
+      "languageId": "it",
+      "curriculumLocale": "it-IT",
+      "contrastId": "it-length",
+      "pairs": [
+        {
+          "id": "it-pala-palla",
+          "words": [
+            {
+              "text": "pala",
+              "ipa": "/ˈpala/",
+              "meaning": "shovel",
+              "phonemes": [
+                "p",
+                "a",
+                "l",
+                "a"
+              ]
+            },
+            {
+              "text": "palla",
+              "ipa": "/ˈpalːa/",
+              "meaning": "ball",
+              "phonemes": [
+                "p",
+                "a",
+                "lː",
+                "a"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.treccani.it/vocabolario/pala1/",
+            "https://www.treccani.it/vocabolario/palla1/"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 2,
+            "targetPosition": "medial",
+            "trialGroup": "all"
+          }
+        },
+        {
+          "id": "it-fato-fatto",
+          "words": [
+            {
+              "text": "fato",
+              "ipa": "/ˈfato/",
+              "meaning": "fate",
+              "phonemes": [
+                "f",
+                "a",
+                "t",
+                "o"
+              ]
+            },
+            {
+              "text": "fatto",
+              "ipa": "/ˈfatːo/",
+              "meaning": "fact; done",
+              "phonemes": [
+                "f",
+                "a",
+                "tː",
+                "o"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://www.treccani.it/vocabolario/fato/",
+            "https://www.treccani.it/vocabolario/fatto2/",
+            "https://ricerca.sns.it/retrieve/bf9bc2cf-6ebc-4f8b-a0fc-6f081b2d64e4/98_Bertinetto%26Loporcaro_Italian_JIPA_post%20review.pdf"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 2,
+            "targetPosition": "medial",
+            "trialGroup": "all"
+          }
+        }
+      ]
+    },
+    {
+      "languageId": "zh",
+      "curriculumLocale": "zh-CN",
+      "contrastId": "zh-tone-1-4",
+      "pairs": [
+        {
+          "id": "zh-ma1-ma4",
+          "words": [
+            {
+              "text": "妈",
+              "ipa": "/ma˥/",
+              "meaning": "mother",
+              "phonemes": [
+                "m",
+                "a",
+                "T1"
+              ],
+              "romanization": "mā"
+            },
+            {
+              "text": "骂",
+              "ipa": "/ma˥˩/",
+              "meaning": "scold",
+              "phonemes": [
+                "m",
+                "a",
+                "T4"
+              ],
+              "romanization": "mà"
+            }
+          ],
+          "kind": "tone",
+          "sources": [
+            "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E5%A6%88",
+            "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E9%AA%82",
+            "https://assets.cambridge.org/97805216/03980/excerpt/9780521603980_excerpt.htm"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 2,
+            "targetPosition": "whole-syllable",
+            "trialGroup": "all"
+          }
+        },
+        {
+          "id": "zh-shu1-shu4",
+          "words": [
+            {
+              "text": "书",
+              "ipa": "/ʂu˥/",
+              "meaning": "book",
+              "phonemes": [
+                "ʂ",
+                "u",
+                "T1"
+              ],
+              "romanization": "shū"
+            },
+            {
+              "text": "树",
+              "ipa": "/ʂu˥˩/",
+              "meaning": "tree",
+              "phonemes": [
+                "ʂ",
+                "u",
+                "T4"
+              ],
+              "romanization": "shù"
+            }
+          ],
+          "kind": "tone",
+          "sources": [
+            "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E4%B9%A6",
+            "https://www.mdbg.net/chinese/dictionary?page=worddict&wdrst=0&wdqb=%E6%A0%91"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 2,
+            "targetPosition": "whole-syllable",
+            "trialGroup": "all"
+          }
+        }
+      ]
+    },
+    {
+      "languageId": "pt",
+      "curriculumLocale": "pt-BR",
+      "contrastId": "pt-f-v",
+      "pairs": [
+        {
+          "id": "pt-faca-vaca",
+          "words": [
+            {
+              "text": "faca",
+              "ipa": "/ˈfaka/",
+              "meaning": "knife",
+              "phonemes": [
+                "f",
+                "a",
+                "k",
+                "a"
+              ]
+            },
+            {
+              "text": "vaca",
+              "ipa": "/ˈvaka/",
+              "meaning": "cow",
+              "phonemes": [
+                "v",
+                "a",
+                "k",
+                "a"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://dicionario.priberam.org/faca",
+            "https://dicionario.priberam.org/vaca"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "all"
+          }
+        },
+        {
+          "id": "pt-fila-vila",
+          "words": [
+            {
+              "text": "fila",
+              "ipa": "/ˈfila/",
+              "meaning": "queue; line",
+              "phonemes": [
+                "f",
+                "i",
+                "l",
+                "a"
+              ]
+            },
+            {
+              "text": "vila",
+              "ipa": "/ˈvila/",
+              "meaning": "small town",
+              "phonemes": [
+                "v",
+                "i",
+                "l",
+                "a"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://dicionario.priberam.org/fila",
+            "https://dicionario.priberam.org/vila"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "all"
+          }
+        }
+      ]
+    },
+    {
+      "languageId": "ru",
+      "curriculumLocale": "ru-RU",
+      "contrastId": "ru-hard-soft",
+      "pairs": [
+        {
+          "id": "ru-luk-lyuk",
+          "words": [
+            {
+              "text": "лук",
+              "ipa": "/luk/",
+              "meaning": "onion; bow",
+              "phonemes": [
+                "l",
+                "u",
+                "k"
+              ]
+            },
+            {
+              "text": "люк",
+              "ipa": "/lʲuk/",
+              "meaning": "hatch",
+              "phonemes": [
+                "lʲ",
+                "u",
+                "k"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://gramota.ru/poisk?query=%D0%BB%D1%83%D0%BA&mode=slovari",
+            "https://gramota.ru/poisk?query=%D0%BB%D1%8E%D0%BA&mode=slovari"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial"
+          }
+        },
+        {
+          "id": "ru-nos-nyos",
+          "words": [
+            {
+              "text": "нос",
+              "ipa": "/nos/",
+              "meaning": "nose",
+              "phonemes": [
+                "n",
+                "o",
+                "s"
+              ]
+            },
+            {
+              "text": "нёс",
+              "ipa": "/nʲos/",
+              "meaning": "carried, masculine past",
+              "phonemes": [
+                "nʲ",
+                "o",
+                "s"
+              ]
+            }
+          ],
+          "kind": "minimal",
+          "sources": [
+            "https://gramota.ru/poisk?query=%D0%BD%D0%BE%D1%81&mode=slovari",
+            "https://gramota.ru/poisk?query=%D0%BD%D0%B5%D1%81%D1%82%D0%B8&mode=slovari"
+          ],
+          "validation": {
+            "text": "editor-curated",
+            "audio": "pending-listening-review"
+          },
+          "abx": {
+            "categoryByWordIndex": [
+              0,
+              1
+            ],
+            "targetTokenIndex": 0,
+            "targetPosition": "initial",
+            "trialGroup": "initial"
+          }
+        }
+      ]
+    }
+  ]
+}

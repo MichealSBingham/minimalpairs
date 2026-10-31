@@ -1,0 +1,285 @@
+{
+  "wordSearches": [
+    {
+      "word": "pala",
+      "total": 1,
+      "retrieved": 1,
+      "exactTitles": [
+        "File:LL-Q652 (ita)-LangPao-pala.wav"
+      ]
+    },
+    {
+      "word": "palla",
+      "total": 4,
+      "retrieved": 4,
+      "exactTitles": [
+        "File:LL-Q652 (ita)-Happypheasant-palla.wav",
+        "File:LL-Q652 (ita)-LangPao-palla.wav"
+      ]
+    },
+    {
+      "word": "fato",
+      "total": 0,
+      "retrieved": 0,
+      "exactTitles": []
+    },
+    {
+      "word": "fatto",
+      "total": 4,
+      "retrieved": 4,
+      "exactTitles": []
+    },
+    {
+      "word": "pena",
+      "total": 2,
+      "retrieved": 2,
+      "exactTitles": [
+        "File:LL-Q652 (ita)-DivoLetto-pena.wav"
+      ]
+    },
+    {
+      "word": "penna",
+      "total": 1,
+      "retrieved": 1,
+      "exactTitles": [
+        "File:LL-Q652 (ita)-LangPao-penna.wav"
+      ]
+    },
+    {
+      "word": "panca",
+      "total": 1,
+      "retrieved": 1,
+      "exactTitles": [
+        "File:LL-Q652 (ita)-LangPao-panca.wav"
+      ]
+    },
+    {
+      "word": "banca",
+      "total": 8,
+      "retrieved": 8,
+      "exactTitles": [
+        "File:LL-Q652 (ita)-XANA000-banca.wav",
+        "File:LL-Q652 (ita)-Cerchia G-banca.wav",
+        "File:LL-Q652 (ita)-LangPao-banca.wav",
+        "File:LL-Q652 (ita)-Ciampix-banca.wav",
+        "File:LL-Q652 (ita)-Happypheasant-banca.wav",
+        "File:LL-Q652 (ita)-Cypress7-banca.wav"
+      ]
+    },
+    {
+      "word": "pasta",
+      "total": 1,
+      "retrieved": 1,
+      "exactTitles": [
+        "File:LL-Q652 (ita)-Jennum-pasta.wav"
+      ]
+    },
+    {
+      "word": "basta",
+      "total": 3,
+      "retrieved": 3,
+      "exactTitles": [
+        "File:LL-Q652 (ita)-XANA000-basta.wav",
+        "File:LL-Q652 (ita)-LangPao-basta.wav",
+        "File:LL-Q652 (ita)-Happypheasant-basta.wav"
+      ]
+    },
+    {
+      "word": "pelle",
+      "total": 3,
+      "retrieved": 3,
+      "exactTitles": [
+        "File:LL-Q652 (ita)-Happypheasant-pelle.wav",
+        "File:LL-Q652 (ita)-LangPao-pelle.wav",
+        "File:LL-Q652 (ita)-Ciampix-pelle.wav"
+      ]
+    },
+    {
+      "word": "belle",
+      "total": 0,
+      "retrieved": 0,
+      "exactTitles": []
+    },
+    {
+      "word": "balla",
+      "total": 0,
+      "retrieved": 0,
+      "exactTitles": []
+    },
+    {
+      "word": "pollo",
+      "total": 1,
+      "retrieved": 1,
+      "exactTitles": [
+        "File:LL-Q652 (ita)-Crunchy Cloaky Crackdown-pollo.wav"
+      ]
+    },
+    {
+      "word": "bollo",
+      "total": 0,
+      "retrieved": 0,
+      "exactTitles": []
+    },
+    {
+      "word": "casa",
+      "total": 7,
+      "retrieved": 7,
+      "exactTitles": [
+        "File:LL-Q652 (ita)-Ciampix-casa.wav"
+      ]
+    },
+    {
+      "word": "cosa",
+      "total": 6,
+      "retrieved": 6,
+      "exactTitles": [
+        "File:LL-Q652 (ita)-Jtorquy-cosa.wav",
+        "File:LL-Q652 (ita)-XANA000-cosa.wav",
+        "File:LL-Q652 (ita)-Ciampix-cosa.wav",
+        "File:LL-Q652 (ita)-Maupao70-cosa.wav",
+        "File:LL-Q652 (ita)-Iopensa-cosa.wav"
+      ]
+    },
+    {
+      "word": "caro",
+      "total": 1,
+      "retrieved": 1,
+      "exactTitles": [
+        "File:LL-Q652 (ita)-LangPao-caro.wav"
+      ]
+    },
+    {
+      "word": "coro",
+      "total": 0,
+      "retrieved": 0,
+      "exactTitles": []
+    }
+  ],
+  "truncatedQueries": 0,
+  "filenameMatchesNotAllSourceVerified": true,
+  "combinedFvQueryRejected": "A combined OR query returned zero despite three directly confirmed files. It is not used as evidence of absence.",
+  "knownProfiles": {
+    "LangPao": [
+      "banca",
+      "basta",
+      "caro",
+      "pala",
+      "palla",
+      "panca",
+      "pelle",
+      "penna",
+      "vino",
+      "vinto"
+    ],
+    "Happypheasant": [
+      "banca",
+      "basta",
+      "palla",
+      "pelle",
+      "vino"
+    ]
+  },
+  "currentContrastCoverage": [
+    {
+      "contrastId": "it-length",
+      "profile": "LangPao",
+      "present": [
+        "pala",
+        "palla",
+        "penna"
+      ],
+      "missing": [
+        "fato",
+        "fatto",
+        "pena"
+      ],
+      "completePairs": [
+        [
+          "pala",
+          "palla"
+        ]
+      ]
+    },
+    {
+      "contrastId": "it-length",
+      "profile": "Happypheasant",
+      "present": [
+        "palla"
+      ],
+      "missing": [
+        "fato",
+        "fatto",
+        "pala",
+        "pena",
+        "penna"
+      ],
+      "completePairs": []
+    },
+    {
+      "contrastId": "it-p-b",
+      "profile": "LangPao",
+      "present": [
+        "banca",
+        "basta",
+        "panca",
+        "pelle"
+      ],
+      "missing": [
+        "belle",
+        "pasta"
+      ],
+      "completePairs": [
+        [
+          "panca",
+          "banca"
+        ]
+      ]
+    },
+    {
+      "contrastId": "it-p-b",
+      "profile": "Happypheasant",
+      "present": [
+        "banca",
+        "basta",
+        "pelle"
+      ],
+      "missing": [
+        "belle",
+        "panca",
+        "pasta"
+      ],
+      "completePairs": []
+    },
+    {
+      "contrastId": "it-f-v",
+      "profile": "LangPao",
+      "present": [
+        "vino",
+        "vinto"
+      ],
+      "missing": [
+        "faro",
+        "fino",
+        "finto",
+        "varo"
+      ],
+      "completePairs": []
+    },
+    {
+      "contrastId": "it-f-v",
+      "profile": "Happypheasant",
+      "present": [
+        "vino"
+      ],
+      "missing": [
+        "faro",
+        "fino",
+        "finto",
+        "varo",
+        "vinto"
+      ],
+      "completePairs": []
+    }
+  ],
+  "proposedAlternativeStatus": "No recording-complete alternative; no candidate curriculum or IPA approval issued."
+}

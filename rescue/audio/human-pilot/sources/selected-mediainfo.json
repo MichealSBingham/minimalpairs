@@ -1,0 +1,2077 @@
+{
+  "entities": {
+    "M91026777": {
+      "pageid": 91026777,
+      "ns": 6,
+      "title": "File:LL-Q150 (fra)-Poslovitch-roue.wav",
+      "lastrevid": 761422713,
+      "modified": "2023-05-10T09:47:49Z",
+      "type": "mediainfo",
+      "id": "M91026777",
+      "labels": {},
+      "descriptions": {},
+      "statements": {
+        "P275": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P275",
+              "hash": "28a6efcc224656589c283263e9efa1effe56d682",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 6938433,
+                  "id": "Q6938433"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M91026777$47F11553-78D5-4982-ACDD-B0FB53A6CCBF",
+            "rank": "normal"
+          }
+        ],
+        "P6216": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P6216",
+              "hash": "f88a8b9472789ca66067ed50ce20dc2650af5744",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 88088423,
+                  "id": "Q88088423"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M91026777$17299399-DD1E-452D-8A8A-4AF8029C6275",
+            "rank": "normal"
+          }
+        ],
+        "P407": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P407",
+              "hash": "d197d0a5efa4b4c23a302a829dd3ef43684fe002",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 150,
+                  "id": "Q150"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M91026777$ee29ab9e-4078-d3cc-05a7-4e13e4cdc21f",
+            "rank": "normal"
+          }
+        ],
+        "P31": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P31",
+              "hash": "ea121edceb9f865460bdf51a6b0ea5460c7f33cd",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 108167708,
+                  "id": "Q108167708"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M91026777$05ECC7E2-E68B-4380-9516-C0C0C38C4D69",
+            "rank": "normal"
+          }
+        ],
+        "P9533": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P9533",
+              "hash": "f19d3d36769505a59c38a08ce2a438bcc6471386",
+              "datavalue": {
+                "value": {
+                  "text": "roue",
+                  "language": "fr"
+                },
+                "type": "monolingualtext"
+              }
+            },
+            "type": "statement",
+            "id": "M91026777$3152CA50-AE45-4777-B489-B2DED113CC6C",
+            "rank": "normal"
+          }
+        ],
+        "P10369": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P10369",
+              "hash": "c7fe21c7e4c8e32e827ba574a8f346e97eafc3c4",
+              "datavalue": {
+                "value": "Q322153",
+                "type": "string"
+              }
+            },
+            "type": "statement",
+            "id": "M91026777$29B849F3-E053-4BBC-B34C-5A13BFC1911A",
+            "rank": "normal"
+          }
+        ],
+        "P10135": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P10135",
+              "hash": "b6419ebeb15e517c2aee824edeed226a4e20dae3",
+              "datavalue": {
+                "value": {
+                  "time": "+2020-06-07T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 11,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                },
+                "type": "time"
+              }
+            },
+            "type": "statement",
+            "id": "M91026777$F82949CB-81A4-4DB7-A2FD-741594E880DC",
+            "rank": "normal"
+          }
+        ],
+        "P10893": [
+          {
+            "mainsnak": {
+              "snaktype": "somevalue",
+              "property": "P10893",
+              "hash": "ba348c7c20e84bd0d037f86c525a7a56ec7c92e0"
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P4174": [
+                {
+                  "snaktype": "value",
+                  "property": "P4174",
+                  "hash": "088de7c62b019bc9699df6235349e9870e4a5f81",
+                  "datavalue": {
+                    "value": "Poslovitch",
+                    "type": "string"
+                  }
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P4174"
+            ],
+            "id": "M91026777$CFF34230-F3AB-4592-93E5-282635EB0453",
+            "rank": "normal"
+          }
+        ],
+        "P10894": [
+          {
+            "mainsnak": {
+              "snaktype": "somevalue",
+              "property": "P10894",
+              "hash": "c1e8360599474248ad0dc834f6ed9831d866cf41"
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P10369": [
+                {
+                  "snaktype": "value",
+                  "property": "P10369",
+                  "hash": "79eb2e748258da43c477f916cb6c90066962af29",
+                  "datavalue": {
+                    "value": "Q142683",
+                    "type": "string"
+                  }
+                }
+              ],
+              "P2093": [
+                {
+                  "snaktype": "value",
+                  "property": "P2093",
+                  "hash": "af8f906a2a94658de8523f29c04febae4bbddaeb",
+                  "datavalue": {
+                    "value": "Poslovitch",
+                    "type": "string"
+                  }
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P10369",
+              "P2093"
+            ],
+            "id": "M91026777$E7E48D3E-7551-42AE-90A4-C98897816D16",
+            "rank": "normal"
+          }
+        ]
+      }
+    },
+    "M127140880": {
+      "pageid": 127140880,
+      "ns": 6,
+      "title": "File:LL-Q150 (fra)-Poslovitch-rue.wav",
+      "lastrevid": 742335626,
+      "modified": "2023-03-21T09:44:15Z",
+      "type": "mediainfo",
+      "id": "M127140880",
+      "labels": {},
+      "descriptions": {},
+      "statements": {
+        "P275": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P275",
+              "hash": "28a6efcc224656589c283263e9efa1effe56d682",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 6938433,
+                  "id": "Q6938433"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M127140880$498FD8F4-EAC3-4304-9176-E435F173835C",
+            "rank": "normal"
+          }
+        ],
+        "P6216": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P6216",
+              "hash": "f88a8b9472789ca66067ed50ce20dc2650af5744",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 88088423,
+                  "id": "Q88088423"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M127140880$E45D4DC8-D55A-4AFC-B876-30CFC694DD7D",
+            "rank": "normal"
+          }
+        ],
+        "P31": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P31",
+              "hash": "ea121edceb9f865460bdf51a6b0ea5460c7f33cd",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 108167708,
+                  "id": "Q108167708"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M127140880$360F7FB7-49BB-4796-831C-9B5FC0CC9A8A",
+            "rank": "normal"
+          }
+        ],
+        "P407": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P407",
+              "hash": "d197d0a5efa4b4c23a302a829dd3ef43684fe002",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 150,
+                  "id": "Q150"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M127140880$2F512D86-8382-4901-9360-B41BE2DC35D0",
+            "rank": "normal"
+          }
+        ],
+        "P9533": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P9533",
+              "hash": "8118099c64ef3063291cbef3677e5c95d5b9874d",
+              "datavalue": {
+                "value": {
+                  "text": "rue",
+                  "language": "fr"
+                },
+                "type": "monolingualtext"
+              }
+            },
+            "type": "statement",
+            "id": "M127140880$A1714D49-E64D-4C89-A0EC-02A337786FEA",
+            "rank": "normal"
+          }
+        ],
+        "P10135": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P10135",
+              "hash": "e1c09dd60ea3c7e9a4069fdcbe4509a3e3e00000",
+              "datavalue": {
+                "value": {
+                  "time": "+2022-12-29T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 11,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                },
+                "type": "time"
+              }
+            },
+            "type": "statement",
+            "id": "M127140880$7716DC7F-9DB9-4C96-9E65-854D0E55FAC8",
+            "rank": "normal"
+          }
+        ],
+        "P10893": [
+          {
+            "mainsnak": {
+              "snaktype": "somevalue",
+              "property": "P10893",
+              "hash": "ba348c7c20e84bd0d037f86c525a7a56ec7c92e0"
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P4174": [
+                {
+                  "snaktype": "value",
+                  "property": "P4174",
+                  "hash": "088de7c62b019bc9699df6235349e9870e4a5f81",
+                  "datavalue": {
+                    "value": "Poslovitch",
+                    "type": "string"
+                  }
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P4174"
+            ],
+            "id": "M127140880$2EE60680-B7B5-4E30-868F-B4DAA239CFBC",
+            "rank": "normal"
+          }
+        ],
+        "P10894": [
+          {
+            "mainsnak": {
+              "snaktype": "somevalue",
+              "property": "P10894",
+              "hash": "c1e8360599474248ad0dc834f6ed9831d866cf41"
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P10369": [
+                {
+                  "snaktype": "value",
+                  "property": "P10369",
+                  "hash": "79eb2e748258da43c477f916cb6c90066962af29",
+                  "datavalue": {
+                    "value": "Q142683",
+                    "type": "string"
+                  }
+                }
+              ],
+              "P2093": [
+                {
+                  "snaktype": "value",
+                  "property": "P2093",
+                  "hash": "af8f906a2a94658de8523f29c04febae4bbddaeb",
+                  "datavalue": {
+                    "value": "Poslovitch",
+                    "type": "string"
+                  }
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P10369",
+              "P2093"
+            ],
+            "id": "M127140880$59377560-F5A4-40E8-BE00-052CF1C44683",
+            "rank": "normal"
+          }
+        ],
+        "P10369": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P10369",
+              "hash": "474099399f300f21ab9689a0fe5ae5b6022d7b2f",
+              "datavalue": {
+                "value": "Q830968",
+                "type": "string"
+              }
+            },
+            "type": "statement",
+            "id": "M127140880$0ECF0D1C-DC71-4C97-ABE7-8C5526575E3B",
+            "rank": "normal"
+          }
+        ]
+      }
+    },
+    "M79205144": {
+      "pageid": 79205144,
+      "ns": 6,
+      "title": "File:LL-Q150 (fra)-Poslovitch-tout.wav",
+      "lastrevid": 1018753966,
+      "modified": "2025-04-08T01:19:27Z",
+      "type": "mediainfo",
+      "id": "M79205144",
+      "labels": {},
+      "descriptions": {},
+      "statements": {
+        "P275": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P275",
+              "hash": "28a6efcc224656589c283263e9efa1effe56d682",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 6938433,
+                  "id": "Q6938433"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M79205144$A87397DA-3D57-4B27-A64D-E78022C6669F",
+            "rank": "normal"
+          }
+        ],
+        "P6216": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P6216",
+              "hash": "f88a8b9472789ca66067ed50ce20dc2650af5744",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 88088423,
+                  "id": "Q88088423"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M79205144$B2463E4D-C188-48D6-AA9D-902673A52620",
+            "rank": "normal"
+          }
+        ],
+        "P407": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P407",
+              "hash": "d197d0a5efa4b4c23a302a829dd3ef43684fe002",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 150,
+                  "id": "Q150"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M79205144$c64cc8c3-4726-4cc3-70b8-087e8ea38513",
+            "rank": "normal"
+          }
+        ],
+        "P31": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P31",
+              "hash": "ea121edceb9f865460bdf51a6b0ea5460c7f33cd",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 108167708,
+                  "id": "Q108167708"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M79205144$F89B13DA-9901-4729-8CC7-08A196901E00",
+            "rank": "normal"
+          }
+        ],
+        "P9533": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P9533",
+              "hash": "74266073ad65665c97d2c5df312919558d8dea13",
+              "datavalue": {
+                "value": {
+                  "text": "tout",
+                  "language": "fr"
+                },
+                "type": "monolingualtext"
+              }
+            },
+            "type": "statement",
+            "id": "M79205144$639C9066-7F41-44A3-8BE0-97F7AB07D74C",
+            "rank": "normal"
+          }
+        ],
+        "P10369": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P10369",
+              "hash": "d221853150140a4b304572e1c8878edf751e2ec2",
+              "datavalue": {
+                "value": "Q144000",
+                "type": "string"
+              }
+            },
+            "type": "statement",
+            "id": "M79205144$8D06F3D9-E48F-4E3A-A186-BF3A64DC135C",
+            "rank": "normal"
+          }
+        ],
+        "P1163": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P1163",
+              "hash": "dd8572d4245e5e6c2c5a2c4110de83fca2a87574",
+              "datavalue": {
+                "value": "audio/wav",
+                "type": "string"
+              }
+            },
+            "type": "statement",
+            "id": "M79205144$824C8687-F8C8-422A-BDA4-69592A329D8E",
+            "rank": "normal"
+          }
+        ],
+        "P10135": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P10135",
+              "hash": "00e9c9fff729405a835b4d3a127f4e021fbd7e50",
+              "datavalue": {
+                "value": {
+                  "time": "+2019-05-25T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 11,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                },
+                "type": "time"
+              }
+            },
+            "type": "statement",
+            "id": "M79205144$87C44D54-5941-4E0D-AFAB-10F3976F0BFD",
+            "rank": "normal"
+          }
+        ],
+        "P10893": [
+          {
+            "mainsnak": {
+              "snaktype": "somevalue",
+              "property": "P10893",
+              "hash": "ba348c7c20e84bd0d037f86c525a7a56ec7c92e0"
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P4174": [
+                {
+                  "snaktype": "value",
+                  "property": "P4174",
+                  "hash": "088de7c62b019bc9699df6235349e9870e4a5f81",
+                  "datavalue": {
+                    "value": "Poslovitch",
+                    "type": "string"
+                  }
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P4174"
+            ],
+            "id": "M79205144$20DC9EBA-664F-4156-BD84-19BADB16B9E2",
+            "rank": "normal"
+          }
+        ],
+        "P10894": [
+          {
+            "mainsnak": {
+              "snaktype": "somevalue",
+              "property": "P10894",
+              "hash": "c1e8360599474248ad0dc834f6ed9831d866cf41"
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P10369": [
+                {
+                  "snaktype": "value",
+                  "property": "P10369",
+                  "hash": "79eb2e748258da43c477f916cb6c90066962af29",
+                  "datavalue": {
+                    "value": "Q142683",
+                    "type": "string"
+                  }
+                }
+              ],
+              "P2093": [
+                {
+                  "snaktype": "value",
+                  "property": "P2093",
+                  "hash": "af8f906a2a94658de8523f29c04febae4bbddaeb",
+                  "datavalue": {
+                    "value": "Poslovitch",
+                    "type": "string"
+                  }
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P10369",
+              "P2093"
+            ],
+            "id": "M79205144$3814EE44-EDC1-4888-921B-8480D91586B1",
+            "rank": "normal"
+          }
+        ],
+        "P3575": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P3575",
+              "hash": "59a23d0114d8d265c201ae94e77dee7fac86f89a",
+              "datavalue": {
+                "value": {
+                  "amount": "+75028",
+                  "unit": "http://www.wikidata.org/entity/Q8799"
+                },
+                "type": "quantity"
+              }
+            },
+            "type": "statement",
+            "id": "M79205144$F442F987-C5F4-4B34-89F7-2B2BB45E6892",
+            "rank": "normal"
+          }
+        ],
+        "P2047": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P2047",
+              "hash": "41162bfb2fd046b06b73306aefd28f7a19d3b9bb",
+              "datavalue": {
+                "value": {
+                  "amount": "+0.85015873015873",
+                  "unit": "http://www.wikidata.org/entity/Q11574"
+                },
+                "type": "quantity"
+              }
+            },
+            "type": "statement",
+            "id": "M79205144$3919DA9A-916F-4C71-9791-69510EAE9475",
+            "rank": "normal"
+          }
+        ],
+        "P4092": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P4092",
+              "hash": "55b565d4e59a5fde87e30cdbcc1fa069b4110d0c",
+              "datavalue": {
+                "value": "c1cfe5b19102382de0c350499c3dfb0eccb5d7f9",
+                "type": "string"
+              }
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P459": [
+                {
+                  "snaktype": "value",
+                  "property": "P459",
+                  "hash": "75dff03c151b13fbab93742164121c16a6aa0de1",
+                  "datavalue": {
+                    "value": {
+                      "entity-type": "item",
+                      "numeric-id": 13414952,
+                      "id": "Q13414952"
+                    },
+                    "type": "wikibase-entityid"
+                  }
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P459"
+            ],
+            "id": "M79205144$BD21E60E-99B6-46A6-951D-155481BD6B3E",
+            "rank": "normal"
+          }
+        ]
+      }
+    },
+    "M79205088": {
+      "pageid": 79205088,
+      "ns": 6,
+      "title": "File:LL-Q150 (fra)-Poslovitch-tu.wav",
+      "lastrevid": 1069390488,
+      "modified": "2025-08-10T05:31:33Z",
+      "type": "mediainfo",
+      "id": "M79205088",
+      "labels": {},
+      "descriptions": {},
+      "statements": {
+        "P275": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P275",
+              "hash": "28a6efcc224656589c283263e9efa1effe56d682",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 6938433,
+                  "id": "Q6938433"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M79205088$E42E9F8C-B2AE-47F4-98D5-FFA78927FA42",
+            "rank": "normal"
+          }
+        ],
+        "P6216": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P6216",
+              "hash": "f88a8b9472789ca66067ed50ce20dc2650af5744",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 88088423,
+                  "id": "Q88088423"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M79205088$BC27E954-1109-4F95-B146-31AB246969D6",
+            "rank": "normal"
+          }
+        ],
+        "P407": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P407",
+              "hash": "d197d0a5efa4b4c23a302a829dd3ef43684fe002",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 150,
+                  "id": "Q150"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M79205088$629a616d-4f4d-89e8-2140-d50692f47170",
+            "rank": "normal"
+          }
+        ],
+        "P31": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P31",
+              "hash": "ea121edceb9f865460bdf51a6b0ea5460c7f33cd",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 108167708,
+                  "id": "Q108167708"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M79205088$DA2EE517-1F6F-4CDB-91E9-3D2DDBD8B1ED",
+            "rank": "normal"
+          }
+        ],
+        "P9533": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P9533",
+              "hash": "b7ecb1d006c12120f17e53d40e82de3c8615f9bb",
+              "datavalue": {
+                "value": {
+                  "text": "tu",
+                  "language": "fr"
+                },
+                "type": "monolingualtext"
+              }
+            },
+            "type": "statement",
+            "id": "M79205088$207F196D-A6AD-4618-BE7E-1619A7FB0C75",
+            "rank": "normal"
+          }
+        ],
+        "P10369": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P10369",
+              "hash": "9e256c94441d88f8bf1ecfe6b555cecfcc844610",
+              "datavalue": {
+                "value": "Q143965",
+                "type": "string"
+              }
+            },
+            "type": "statement",
+            "id": "M79205088$213ED755-00BA-4304-8BB2-EDB075CFC0CF",
+            "rank": "normal"
+          }
+        ],
+        "P10135": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P10135",
+              "hash": "00e9c9fff729405a835b4d3a127f4e021fbd7e50",
+              "datavalue": {
+                "value": {
+                  "time": "+2019-05-25T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 11,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                },
+                "type": "time"
+              }
+            },
+            "type": "statement",
+            "id": "M79205088$DA654D33-B471-4C9D-A16B-114BBB411628",
+            "rank": "normal"
+          }
+        ],
+        "P10893": [
+          {
+            "mainsnak": {
+              "snaktype": "somevalue",
+              "property": "P10893",
+              "hash": "ba348c7c20e84bd0d037f86c525a7a56ec7c92e0"
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P4174": [
+                {
+                  "snaktype": "value",
+                  "property": "P4174",
+                  "hash": "088de7c62b019bc9699df6235349e9870e4a5f81",
+                  "datavalue": {
+                    "value": "Poslovitch",
+                    "type": "string"
+                  }
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P4174"
+            ],
+            "id": "M79205088$474BAB45-AC37-4294-B551-C9E142DBC24E",
+            "rank": "normal"
+          }
+        ],
+        "P10894": [
+          {
+            "mainsnak": {
+              "snaktype": "somevalue",
+              "property": "P10894",
+              "hash": "c1e8360599474248ad0dc834f6ed9831d866cf41"
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P10369": [
+                {
+                  "snaktype": "value",
+                  "property": "P10369",
+                  "hash": "79eb2e748258da43c477f916cb6c90066962af29",
+                  "datavalue": {
+                    "value": "Q142683",
+                    "type": "string"
+                  }
+                }
+              ],
+              "P2093": [
+                {
+                  "snaktype": "value",
+                  "property": "P2093",
+                  "hash": "af8f906a2a94658de8523f29c04febae4bbddaeb",
+                  "datavalue": {
+                    "value": "Poslovitch",
+                    "type": "string"
+                  }
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P10369",
+              "P2093"
+            ],
+            "id": "M79205088$28C76E61-1A42-4DC9-B14C-2ED0C15D16C7",
+            "rank": "normal"
+          }
+        ],
+        "P1163": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P1163",
+              "hash": "dd8572d4245e5e6c2c5a2c4110de83fca2a87574",
+              "datavalue": {
+                "value": "audio/wav",
+                "type": "string"
+              }
+            },
+            "type": "statement",
+            "id": "M79205088$300619B7-E0E4-4F46-928E-71B6198A344B",
+            "rank": "normal"
+          }
+        ],
+        "P3575": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P3575",
+              "hash": "59a23d0114d8d265c201ae94e77dee7fac86f89a",
+              "datavalue": {
+                "value": {
+                  "amount": "+75028",
+                  "unit": "http://www.wikidata.org/entity/Q8799"
+                },
+                "type": "quantity"
+              }
+            },
+            "type": "statement",
+            "id": "M79205088$B133CF7D-E123-4334-9F27-1CDC1A4F25C5",
+            "rank": "normal"
+          }
+        ],
+        "P2047": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P2047",
+              "hash": "41162bfb2fd046b06b73306aefd28f7a19d3b9bb",
+              "datavalue": {
+                "value": {
+                  "amount": "+0.85015873015873",
+                  "unit": "http://www.wikidata.org/entity/Q11574"
+                },
+                "type": "quantity"
+              }
+            },
+            "type": "statement",
+            "id": "M79205088$4AFDE3C9-2451-41E1-8BB7-2D746E5E2E9E",
+            "rank": "normal"
+          }
+        ],
+        "P4092": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P4092",
+              "hash": "2baf09f011151177e4d75eb91b1d374d2e395a4a",
+              "datavalue": {
+                "value": "09f8a2d60b5c7e5a284b016ef1478624cd094844",
+                "type": "string"
+              }
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P459": [
+                {
+                  "snaktype": "value",
+                  "property": "P459",
+                  "hash": "75dff03c151b13fbab93742164121c16a6aa0de1",
+                  "datavalue": {
+                    "value": {
+                      "entity-type": "item",
+                      "numeric-id": 13414952,
+                      "id": "Q13414952"
+                    },
+                    "type": "wikibase-entityid"
+                  }
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P459"
+            ],
+            "id": "M79205088$76F3C178-5F22-4276-958B-2A695FF1FB12",
+            "rank": "normal"
+          }
+        ]
+      }
+    },
+    "M79205095": {
+      "pageid": 79205095,
+      "ns": 6,
+      "title": "File:LL-Q150 (fra)-Poslovitch-vous.wav",
+      "lastrevid": 763687008,
+      "modified": "2023-05-16T00:47:27Z",
+      "type": "mediainfo",
+      "id": "M79205095",
+      "labels": {},
+      "descriptions": {},
+      "statements": {
+        "P275": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P275",
+              "hash": "28a6efcc224656589c283263e9efa1effe56d682",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 6938433,
+                  "id": "Q6938433"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M79205095$C6E46996-0C18-4589-BB3D-ED392200D233",
+            "rank": "normal"
+          }
+        ],
+        "P6216": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P6216",
+              "hash": "f88a8b9472789ca66067ed50ce20dc2650af5744",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 88088423,
+                  "id": "Q88088423"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M79205095$5D833A32-5F63-4E54-A6FF-41C383595E80",
+            "rank": "normal"
+          }
+        ],
+        "P407": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P407",
+              "hash": "d197d0a5efa4b4c23a302a829dd3ef43684fe002",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 150,
+                  "id": "Q150"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M79205095$71201c75-4134-598d-171b-75310217485f",
+            "rank": "normal"
+          }
+        ],
+        "P31": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P31",
+              "hash": "ea121edceb9f865460bdf51a6b0ea5460c7f33cd",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 108167708,
+                  "id": "Q108167708"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M79205095$78E1BAC6-1563-443F-AAF8-6B7909935D00",
+            "rank": "normal"
+          }
+        ],
+        "P9533": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P9533",
+              "hash": "64993c0a3dd48568f0091536dfbb73f669554bc6",
+              "datavalue": {
+                "value": {
+                  "text": "vous",
+                  "language": "fr"
+                },
+                "type": "monolingualtext"
+              }
+            },
+            "type": "statement",
+            "id": "M79205095$7DC96AA3-6E49-417F-BC42-F50E237DC519",
+            "rank": "normal"
+          }
+        ],
+        "P10369": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P10369",
+              "hash": "a180d441d90e356d328e8d1c9dd272f31df21993",
+              "datavalue": {
+                "value": "Q143971",
+                "type": "string"
+              }
+            },
+            "type": "statement",
+            "id": "M79205095$38A60256-3F29-4A74-AE35-1F9EC67A846E",
+            "rank": "normal"
+          }
+        ],
+        "P10135": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P10135",
+              "hash": "00e9c9fff729405a835b4d3a127f4e021fbd7e50",
+              "datavalue": {
+                "value": {
+                  "time": "+2019-05-25T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 11,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                },
+                "type": "time"
+              }
+            },
+            "type": "statement",
+            "id": "M79205095$7DDA1F46-36F7-4A53-8427-F8D8272FB88D",
+            "rank": "normal"
+          }
+        ],
+        "P10893": [
+          {
+            "mainsnak": {
+              "snaktype": "somevalue",
+              "property": "P10893",
+              "hash": "ba348c7c20e84bd0d037f86c525a7a56ec7c92e0"
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P4174": [
+                {
+                  "snaktype": "value",
+                  "property": "P4174",
+                  "hash": "088de7c62b019bc9699df6235349e9870e4a5f81",
+                  "datavalue": {
+                    "value": "Poslovitch",
+                    "type": "string"
+                  }
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P4174"
+            ],
+            "id": "M79205095$C652E2C7-D6D5-4628-8BBD-12553FBABC8B",
+            "rank": "normal"
+          }
+        ],
+        "P10894": [
+          {
+            "mainsnak": {
+              "snaktype": "somevalue",
+              "property": "P10894",
+              "hash": "c1e8360599474248ad0dc834f6ed9831d866cf41"
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P10369": [
+                {
+                  "snaktype": "value",
+                  "property": "P10369",
+                  "hash": "79eb2e748258da43c477f916cb6c90066962af29",
+                  "datavalue": {
+                    "value": "Q142683",
+                    "type": "string"
+                  }
+                }
+              ],
+              "P2093": [
+                {
+                  "snaktype": "value",
+                  "property": "P2093",
+                  "hash": "af8f906a2a94658de8523f29c04febae4bbddaeb",
+                  "datavalue": {
+                    "value": "Poslovitch",
+                    "type": "string"
+                  }
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P10369",
+              "P2093"
+            ],
+            "id": "M79205095$F2461E06-E28C-4293-9D31-CFE08866D811",
+            "rank": "normal"
+          }
+        ]
+      }
+    },
+    "M90980661": {
+      "pageid": 90980661,
+      "ns": 6,
+      "title": "File:LL-Q150 (fra)-Poslovitch-vu.wav",
+      "lastrevid": 1225230668,
+      "modified": "2026-06-03T13:37:21Z",
+      "type": "mediainfo",
+      "id": "M90980661",
+      "labels": {},
+      "descriptions": {},
+      "statements": {
+        "P275": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P275",
+              "hash": "28a6efcc224656589c283263e9efa1effe56d682",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 6938433,
+                  "id": "Q6938433"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M90980661$1F8C058C-3366-4305-A33D-06CBDE3ED228",
+            "rank": "normal"
+          }
+        ],
+        "P6216": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P6216",
+              "hash": "f88a8b9472789ca66067ed50ce20dc2650af5744",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 88088423,
+                  "id": "Q88088423"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M90980661$8CFEA4E4-4AC1-4393-9132-FA7ACB8D418A",
+            "rank": "normal"
+          }
+        ],
+        "P407": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P407",
+              "hash": "d197d0a5efa4b4c23a302a829dd3ef43684fe002",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 150,
+                  "id": "Q150"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M90980661$0745eea3-4960-d119-60d1-2bf613ff890b",
+            "rank": "normal"
+          }
+        ],
+        "P1163": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P1163",
+              "hash": "dd8572d4245e5e6c2c5a2c4110de83fca2a87574",
+              "datavalue": {
+                "value": "audio/wav",
+                "type": "string"
+              }
+            },
+            "type": "statement",
+            "id": "M90980661$4CB106B1-AD89-405E-AC64-4D782B7F6D2C",
+            "rank": "normal"
+          }
+        ],
+        "P31": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P31",
+              "hash": "ea121edceb9f865460bdf51a6b0ea5460c7f33cd",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 108167708,
+                  "id": "Q108167708"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M90980661$69A75040-50DA-47A2-A509-D84E841B9DC6",
+            "rank": "normal"
+          }
+        ],
+        "P9533": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P9533",
+              "hash": "c57614fcb187451a402ae90340df92f1e1487547",
+              "datavalue": {
+                "value": {
+                  "text": "vu",
+                  "language": "fr"
+                },
+                "type": "monolingualtext"
+              }
+            },
+            "type": "statement",
+            "id": "M90980661$1BE52CFE-1515-41D4-8B2A-74DD7184FA0C",
+            "rank": "normal"
+          }
+        ],
+        "P10369": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P10369",
+              "hash": "615fa8e3d36bd60984e856bb7d8a62f84ac3c8d0",
+              "datavalue": {
+                "value": "Q318261",
+                "type": "string"
+              }
+            },
+            "type": "statement",
+            "id": "M90980661$5269C995-DE3E-48CF-A45F-F230B43F7CDC",
+            "rank": "normal"
+          }
+        ],
+        "P10135": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P10135",
+              "hash": "c12dd8e0d4357cb0a61e0f97a248be17fdc24fd5",
+              "datavalue": {
+                "value": {
+                  "time": "+2020-06-06T00:00:00Z",
+                  "timezone": 0,
+                  "before": 0,
+                  "after": 0,
+                  "precision": 11,
+                  "calendarmodel": "http://www.wikidata.org/entity/Q1985727"
+                },
+                "type": "time"
+              }
+            },
+            "type": "statement",
+            "id": "M90980661$58FE63D2-B2A6-4617-933B-9C19C726F71E",
+            "rank": "normal"
+          }
+        ],
+        "P10893": [
+          {
+            "mainsnak": {
+              "snaktype": "somevalue",
+              "property": "P10893",
+              "hash": "ba348c7c20e84bd0d037f86c525a7a56ec7c92e0"
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P4174": [
+                {
+                  "snaktype": "value",
+                  "property": "P4174",
+                  "hash": "088de7c62b019bc9699df6235349e9870e4a5f81",
+                  "datavalue": {
+                    "value": "Poslovitch",
+                    "type": "string"
+                  }
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P4174"
+            ],
+            "id": "M90980661$220CA6CB-6AD3-45F4-B072-B562D44A93DC",
+            "rank": "normal"
+          }
+        ],
+        "P10894": [
+          {
+            "mainsnak": {
+              "snaktype": "somevalue",
+              "property": "P10894",
+              "hash": "c1e8360599474248ad0dc834f6ed9831d866cf41"
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P10369": [
+                {
+                  "snaktype": "value",
+                  "property": "P10369",
+                  "hash": "79eb2e748258da43c477f916cb6c90066962af29",
+                  "datavalue": {
+                    "value": "Q142683",
+                    "type": "string"
+                  }
+                }
+              ],
+              "P2093": [
+                {
+                  "snaktype": "value",
+                  "property": "P2093",
+                  "hash": "af8f906a2a94658de8523f29c04febae4bbddaeb",
+                  "datavalue": {
+                    "value": "Poslovitch",
+                    "type": "string"
+                  }
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P10369",
+              "P2093"
+            ],
+            "id": "M90980661$250D1446-ADB9-4928-95D2-EE9576D18917",
+            "rank": "normal"
+          }
+        ],
+        "P3575": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P3575",
+              "hash": "a43aa134b0fb71a120d702bbeab0f6d3f749a172",
+              "datavalue": {
+                "value": {
+                  "amount": "+69362",
+                  "unit": "http://www.wikidata.org/entity/Q8799"
+                },
+                "type": "quantity"
+              }
+            },
+            "type": "statement",
+            "id": "M90980661$252F8E12-D318-4361-9699-6FF35F900544",
+            "rank": "normal"
+          }
+        ],
+        "P2047": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P2047",
+              "hash": "37ac276b74e2d2cf2bd24cb62864a510e383f3e8",
+              "datavalue": {
+                "value": {
+                  "amount": "+0.785918367346939",
+                  "unit": "http://www.wikidata.org/entity/Q11574"
+                },
+                "type": "quantity"
+              }
+            },
+            "type": "statement",
+            "id": "M90980661$A4F18FAA-7624-4C6C-9FE9-50A3804D90AE",
+            "rank": "normal"
+          }
+        ],
+        "P4092": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P4092",
+              "hash": "e98835fc8edd04d8242d0217d975c50d25264234",
+              "datavalue": {
+                "value": "b34b7adb423f547e3ce55ecf2558da25c18307b5",
+                "type": "string"
+              }
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P459": [
+                {
+                  "snaktype": "value",
+                  "property": "P459",
+                  "hash": "75dff03c151b13fbab93742164121c16a6aa0de1",
+                  "datavalue": {
+                    "value": {
+                      "entity-type": "item",
+                      "numeric-id": 13414952,
+                      "id": "Q13414952"
+                    },
+                    "type": "wikibase-entityid"
+                  }
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P459"
+            ],
+            "id": "M90980661$A385DB33-1478-4A9B-AA82-2A9871C24E71",
+            "rank": "normal"
+          }
+        ]
+      }
+    },
+    "M156965164": {
+      "pageid": 156965164,
+      "ns": 6,
+      "title": "File:LL-Q150 (fra)-Sartus85-roue.wav",
+      "lastrevid": 1136103979,
+      "modified": "2025-12-24T18:52:23Z",
+      "type": "mediainfo",
+      "id": "M156965164",
+      "labels": {},
+      "descriptions": {},
+      "statements": {
+        "P275": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P275",
+              "hash": "ec6e754c5042e13b53376139e505ebd6708745a4",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 18199165,
+                  "id": "Q18199165"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M156965164$5B439B24-F04B-4717-A2FD-DF11BB2260F9",
+            "rank": "normal"
+          }
+        ],
+        "P6216": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P6216",
+              "hash": "5570347fdc76d2a80732f51ea10ee4b144a084e0",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 50423863,
+                  "id": "Q50423863"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M156965164$96A4177B-8D8B-4715-A2AE-A182518CF838",
+            "rank": "normal"
+          }
+        ],
+        "P1163": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P1163",
+              "hash": "dd8572d4245e5e6c2c5a2c4110de83fca2a87574",
+              "datavalue": {
+                "value": "audio/wav",
+                "type": "string"
+              }
+            },
+            "type": "statement",
+            "id": "M156965164$D2129A9F-D4AD-4082-AE55-C18D7037B931",
+            "rank": "normal"
+          }
+        ]
+      }
+    },
+    "M157124770": {
+      "pageid": 157124770,
+      "ns": 6,
+      "title": "File:LL-Q150 (fra)-Sartus85-rue.wav",
+      "lastrevid": 1028191550,
+      "modified": "2025-05-05T03:28:16Z",
+      "type": "mediainfo",
+      "id": "M157124770",
+      "labels": {},
+      "descriptions": {},
+      "statements": {
+        "P275": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P275",
+              "hash": "ec6e754c5042e13b53376139e505ebd6708745a4",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 18199165,
+                  "id": "Q18199165"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M157124770$F051C162-4BE0-415D-98C0-C4E6F11707EC",
+            "rank": "normal"
+          }
+        ],
+        "P6216": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P6216",
+              "hash": "5570347fdc76d2a80732f51ea10ee4b144a084e0",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 50423863,
+                  "id": "Q50423863"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M157124770$1B3DEBA2-82E5-444B-92EE-178AEBC5E2AD",
+            "rank": "normal"
+          }
+        ],
+        "P3575": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P3575",
+              "hash": "daaaddda5b5864b425be47726fb28eaa4fb8e934",
+              "datavalue": {
+                "value": {
+                  "amount": "+60524",
+                  "unit": "http://www.wikidata.org/entity/Q8799"
+                },
+                "type": "quantity"
+              }
+            },
+            "type": "statement",
+            "id": "M157124770$019178C6-CD6F-4C21-AA0F-481BC3A8C840",
+            "rank": "normal"
+          }
+        ],
+        "P2047": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P2047",
+              "hash": "3e145e3097e340acc205dbd7c8637cab93df73d8",
+              "datavalue": {
+                "value": {
+                  "amount": "+0.63",
+                  "unit": "http://www.wikidata.org/entity/Q11574"
+                },
+                "type": "quantity"
+              }
+            },
+            "type": "statement",
+            "id": "M157124770$11EE29F5-2773-4193-863A-03E5D316C67C",
+            "rank": "normal"
+          }
+        ],
+        "P1163": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P1163",
+              "hash": "dd8572d4245e5e6c2c5a2c4110de83fca2a87574",
+              "datavalue": {
+                "value": "audio/wav",
+                "type": "string"
+              }
+            },
+            "type": "statement",
+            "id": "M157124770$C7AC679D-F622-4FD5-ACFE-F88CAE399D3A",
+            "rank": "normal"
+          }
+        ],
+        "P4092": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P4092",
+              "hash": "6f631d992043cbef6f52145e52b9df4a2eae3e5f",
+              "datavalue": {
+                "value": "5e3a24b782cfc1d2102f6c30ed2a5c7b06a62d6b",
+                "type": "string"
+              }
+            },
+            "type": "statement",
+            "qualifiers": {
+              "P459": [
+                {
+                  "snaktype": "value",
+                  "property": "P459",
+                  "hash": "75dff03c151b13fbab93742164121c16a6aa0de1",
+                  "datavalue": {
+                    "value": {
+                      "entity-type": "item",
+                      "numeric-id": 13414952,
+                      "id": "Q13414952"
+                    },
+                    "type": "wikibase-entityid"
+                  }
+                }
+              ]
+            },
+            "qualifiers-order": [
+              "P459"
+            ],
+            "id": "M157124770$F496C6BB-F705-4F61-A82E-0895EAEB5F37",
+            "rank": "normal"
+          }
+        ]
+      }
+    },
+    "M157158273": {
+      "pageid": 157158273,
+      "ns": 6,
+      "title": "File:LL-Q150 (fra)-Sartus85-tout.wav",
+      "lastrevid": 1067948640,
+      "modified": "2025-08-07T15:46:50Z",
+      "type": "mediainfo",
+      "id": "M157158273",
+      "labels": {},
+      "descriptions": {},
+      "statements": {
+        "P275": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P275",
+              "hash": "ec6e754c5042e13b53376139e505ebd6708745a4",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 18199165,
+                  "id": "Q18199165"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M157158273$D6B71896-3F90-4336-A0C1-EC36730092C0",
+            "rank": "normal"
+          }
+        ],
+        "P6216": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P6216",
+              "hash": "5570347fdc76d2a80732f51ea10ee4b144a084e0",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 50423863,
+                  "id": "Q50423863"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M157158273$DBF8CC3D-7E1A-490B-B2AF-61FF713FA8CB",
+            "rank": "normal"
+          }
+        ],
+        "P1163": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P1163",
+              "hash": "dd8572d4245e5e6c2c5a2c4110de83fca2a87574",
+              "datavalue": {
+                "value": "audio/wav",
+                "type": "string"
+              }
+            },
+            "type": "statement",
+            "id": "M157158273$6425D80C-13B5-47BD-A10C-77E191DD547D",
+            "rank": "normal"
+          }
+        ]
+      }
+    },
+    "M157364782": {
+      "pageid": 157364782,
+      "ns": 6,
+      "title": "File:LL-Q150 (fra)-Sartus85-tu.wav",
+      "lastrevid": 1100764046,
+      "modified": "2025-10-17T09:29:00Z",
+      "type": "mediainfo",
+      "id": "M157364782",
+      "labels": {},
+      "descriptions": {},
+      "statements": {
+        "P275": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P275",
+              "hash": "ec6e754c5042e13b53376139e505ebd6708745a4",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 18199165,
+                  "id": "Q18199165"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M157364782$78FA98DB-5D02-4589-8325-D127DDED1809",
+            "rank": "normal"
+          }
+        ],
+        "P6216": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P6216",
+              "hash": "5570347fdc76d2a80732f51ea10ee4b144a084e0",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 50423863,
+                  "id": "Q50423863"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M157364782$890840EA-D9E1-4631-8FCE-12AD70E378D4",
+            "rank": "normal"
+          }
+        ],
+        "P1163": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P1163",
+              "hash": "dd8572d4245e5e6c2c5a2c4110de83fca2a87574",
+              "datavalue": {
+                "value": "audio/wav",
+                "type": "string"
+              }
+            },
+            "type": "statement",
+            "id": "M157364782$EFC41CA4-2470-4CB3-923A-26EAB27C7ABE",
+            "rank": "normal"
+          }
+        ]
+      }
+    },
+    "M157158494": {
+      "pageid": 157158494,
+      "ns": 6,
+      "title": "File:LL-Q150 (fra)-Sartus85-vous.wav",
+      "lastrevid": 1067945282,
+      "modified": "2025-08-07T15:37:20Z",
+      "type": "mediainfo",
+      "id": "M157158494",
+      "labels": {},
+      "descriptions": {},
+      "statements": {
+        "P275": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P275",
+              "hash": "ec6e754c5042e13b53376139e505ebd6708745a4",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 18199165,
+                  "id": "Q18199165"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M157158494$51EF9159-1943-4EC3-8817-BD3B08DAF566",
+            "rank": "normal"
+          }
+        ],
+        "P6216": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P6216",
+              "hash": "5570347fdc76d2a80732f51ea10ee4b144a084e0",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 50423863,
+                  "id": "Q50423863"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M157158494$8B7A5F7F-B592-45E8-BDFF-F0535F8DFF37",
+            "rank": "normal"
+          }
+        ],
+        "P1163": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P1163",
+              "hash": "dd8572d4245e5e6c2c5a2c4110de83fca2a87574",
+              "datavalue": {
+                "value": "audio/wav",
+                "type": "string"
+              }
+            },
+            "type": "statement",
+            "id": "M157158494$EC895C32-2033-4C93-9F28-7403FA88F8B0",
+            "rank": "normal"
+          }
+        ]
+      }
+    },
+    "M157160010": {
+      "pageid": 157160010,
+      "ns": 6,
+      "title": "File:LL-Q150 (fra)-Sartus85-vu.wav",
+      "lastrevid": 1067945537,
+      "modified": "2025-08-07T15:38:03Z",
+      "type": "mediainfo",
+      "id": "M157160010",
+      "labels": {},
+      "descriptions": {},
+      "statements": {
+        "P275": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P275",
+              "hash": "ec6e754c5042e13b53376139e505ebd6708745a4",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 18199165,
+                  "id": "Q18199165"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M157160010$98452856-D3B5-4A29-AAAB-7741AC7EEFBC",
+            "rank": "normal"
+          }
+        ],
+        "P6216": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P6216",
+              "hash": "5570347fdc76d2a80732f51ea10ee4b144a084e0",
+              "datavalue": {
+                "value": {
+                  "entity-type": "item",
+                  "numeric-id": 50423863,
+                  "id": "Q50423863"
+                },
+                "type": "wikibase-entityid"
+              }
+            },
+            "type": "statement",
+            "id": "M157160010$00E56F61-597F-4985-BE79-1A1A5FDFD4AA",
+            "rank": "normal"
+          }
+        ],
+        "P1163": [
+          {
+            "mainsnak": {
+              "snaktype": "value",
+              "property": "P1163",
+              "hash": "dd8572d4245e5e6c2c5a2c4110de83fca2a87574",
+              "datavalue": {
+                "value": "audio/wav",
+                "type": "string"
+              }
+            },
+            "type": "statement",
+            "id": "M157160010$9AB0799D-0951-4EAC-BF77-E114FBDB48B1",
+            "rank": "normal"
+          }
+        ]
+      }
+    }
+  },
+  "success": 1
+}

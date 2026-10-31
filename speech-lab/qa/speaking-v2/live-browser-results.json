@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "checks": [
+    "real credited speech through fake microphone produces a live dot before stopping",
+    "input device shown and word recorder cannot overlap live microphone",
+    "chart, instructions and controls do not overlap",
+    "dot and trail clear when speech becomes uncertain or silent",
+    "pause releases tracks, removes live point, stores no attempt and uploads no audio",
+    "diagnostic export includes measured tracking counts without audio",
+    "live tracker still runs when the word-analysis API is unavailable",
+    "permission denial gives an actionable message and restores controls",
+    "cancelled permission request stops late-arriving streams",
+    "connected but silent processing failure times out with a device-specific recovery message",
+    "stalled worker times out rather than accumulating audio or leaving a frozen dot",
+    "suspended audio startup times out and releases microphone",
+    "mobile initial viewport includes the whole chart and start button without horizontal overflow",
+    "live dot also works in a mobile-sized touch viewport",
+    "noise observed before speech suppresses a misleading dot with an explicit background-level message",
+    "no browser JavaScript exceptions"
+  ],
+  "errors": [],
+  "limitations": [
+    "Fake audio devices; no physical microphone or actual phone.",
+    "No pronunciation correctness or learning validation."
+  ]
+}

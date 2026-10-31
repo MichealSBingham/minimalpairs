@@ -32,6 +32,14 @@ def main():
         reports=get_json('reports');support=get_json('support');notifications=get_json('notifications')
         save(ROOT/'audio/studio/private/customer-reports.json',reports)
         save(ROOT/'audio-reports/private/support-inbox.json',support)
+    cloud_reviews={'fresh':False}
+    if not args.cached:
+        result=subprocess.run(['node',str(ROOT/'app/scripts/sync-owner-reviews.mjs')],capture_output=True,text=True,timeout=60)
+        cloud_reviews={'fresh':result.returncode==0}
+        if result.returncode==0:
+            cloud_reviews.update(json.loads(result.stdout))
+        else:
+            cloud_reviews['error']='Cloud audio reviews could not be synchronized; inspect Firebase CLI access.'
     state_path=PRIVATE/'intake-state.json'
     state=json.loads(state_path.read_text()) if state_path.exists() else {'items':{}}
     db=sqlite3.connect(f"file:{ROOT/'audio/studio/private/audio.sqlite3'}?mode=ro",uri=True);db.row_factory=sqlite3.Row
@@ -63,9 +71,9 @@ def main():
             item['resolution']=old['resolution']
             item['status']=old['status']
         state['items'][item['key']]=item
-    state.update(checkedAt=now,remoteFresh=not args.cached,notifications=notifications)
+    state.update(checkedAt=now,remoteFresh=not args.cached,notifications=notifications,cloudAudioReviews=cloud_reviews)
     save(state_path,state)
-    summary={'checkedAt':now,'remoteFresh':not args.cached,'reports':len(reports['reports']),'supportTickets':len(support['tickets']),'newOrUpdatedItems':len(changed),'openItems':sum(x.get('disposition')=='open' for x in state['items'].values()),'notifications':{k:notifications.get(k) for k in ['enabled','pending','sent','held']},'privateQueue':str(state_path)}
+    summary={'cloudAudioReviews':cloud_reviews,'checkedAt':now,'remoteFresh':not args.cached,'reports':len(reports['reports']),'supportTickets':len(support['tickets']),'newOrUpdatedItems':len(changed),'openItems':sum(x.get('disposition')=='open' for x in state['items'].values()),'notifications':{k:notifications.get(k) for k in ['enabled','pending','sent','held']},'privateQueue':str(state_path)}
     save(PRIVATE/'intake-summary.json',summary);print(json.dumps(summary,indent=2))
 if __name__=='__main__':
     try: main()

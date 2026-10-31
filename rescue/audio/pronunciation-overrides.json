@@ -1,0 +1,6 @@
+{
+  "zh:雨": {
+    "instruction": "The single character is the noun meaning rain, pronounced yǔ in Mandarin third tone. Produce only this one syllable in its isolated citation form, not the alternative fourth-tone verb reading.",
+    "reason": "The curriculum specifies noun rain, yǔ, third tone; 雨 has alternative readings in some verb/compound uses. This instruction attempts disambiguation and still requires listening review."
+  }
+}

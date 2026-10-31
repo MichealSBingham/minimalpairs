@@ -33,8 +33,15 @@ export async function collectBuyers(storage,env,{now=Date.now()}={}){
 export async function recordBuyer(storage,env,s,{now=Date.now()}={}){
  if(!s||s.livemode!==true||s.status!=='complete'||s.payment_status!=='paid'||!(s.amount_total>0)||s.metadata?.billingSchema!=='1'||!s.metadata.firebaseUid)return false;
  const plan=s.metadata.plan||(s.mode==='subscription'?'membership':null);if(!['monthly','lifetime','membership'].includes(plan))return false;
- const metadata={};for(const k of ['mp_ui_locale','mp_journey','mp_source','mp_medium','mp_campaign','mp_landing_page','mp_language','mp_contrast','mp_session_kind','mp_surface'])if(typeof s.metadata[k]==='string')metadata[k]=s.metadata[k].slice(0,500);
+ const metadata={};for(const k of ['mp_ui_locale','mp_journey','mp_source','mp_medium','mp_campaign','mp_landing_page','mp_language','mp_contrast','mp_session_kind','mp_surface','mp_diagnostic_length','mp_experiment_id','mp_experiment_variant','mp_offer_placement'])if(typeof s.metadata[k]==='string')metadata[k]=s.metadata[k].slice(0,500);
  if(!await storage.get('buyerPurchase:'+s.id))await storage.put('buyerPurchase:'+s.id,{reported:false,payload:{purchaseId:s.id,created:s.created,...(Number.isInteger(s.paid_event_at)?{paidAt:s.paid_event_at}:{}),amount:s.amount_total,currency:s.currency,plan,metadata}});
+ // Private purchase join stays outside payload forwarded to analytics. Replays backfill it safely.
+ const purchaseKey='buyerPurchase:'+s.id,purchaseRecord=await storage.get(purchaseKey);
+ if(purchaseRecord){
+  const privateHash=typeof s.accountHash==='string'&&/^[a-f0-9]{64}$/.test(s.accountHash)?s.accountHash:null;
+  if(privateHash){purchaseRecord.accountHash=privateHash;await storage.put(purchaseKey,purchaseRecord);}
+  else if(purchaseRecord.accountHash===await hash('verified')){delete purchaseRecord.accountHash;await storage.put(purchaseKey,purchaseRecord);}
+ }
  const email=(s.customer_details?.email||s.customer_email||'').trim().toLowerCase();if(!email.includes('@'))return true;
  const digest=await hash(email),key='buyer:'+digest;
  await storage.transaction(async tx=>{

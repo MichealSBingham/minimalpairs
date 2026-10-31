@@ -1,0 +1,94 @@
+{
+  "retrievedAt": "2026-09-28T19:30:19.403273+00:00",
+  "exactWords": [
+    "ship",
+    "sheep",
+    "fill",
+    "feel",
+    "sit",
+    "seat"
+  ],
+  "searchTotals": {
+    "ship": {
+      "totalHits": 15,
+      "retrieved": 15,
+      "boundedAt": 100
+    },
+    "sheep": {
+      "totalHits": 6,
+      "retrieved": 6,
+      "boundedAt": 100
+    },
+    "fill": {
+      "totalHits": 4,
+      "retrieved": 4,
+      "boundedAt": 100
+    },
+    "feel": {
+      "totalHits": 9,
+      "retrieved": 9,
+      "boundedAt": 100
+    },
+    "sit": {
+      "totalHits": 14,
+      "retrieved": 14,
+      "boundedAt": 100
+    },
+    "seat": {
+      "totalHits": 9,
+      "retrieved": 9,
+      "boundedAt": 100
+    }
+  },
+  "speakers": {
+    "Grendelkhan": {
+      "ship": "File:LL-Q1860 (eng)-Grendelkhan-ship.wav",
+      "sheep": "File:LL-Q1860 (eng)-Grendelkhan-sheep.wav",
+      "fill": "File:LL-Q1860 (eng)-Grendelkhan-fill.wav",
+      "feel": "File:LL-Q1860 (eng)-Grendelkhan-feel.wav",
+      "sit": "File:LL-Q1860 (eng)-Grendelkhan-sit.wav",
+      "seat": "File:LL-Q1860 (eng)-Grendelkhan-seat.wav"
+    },
+    "Nattes à chat": {
+      "ship": "File:LL-Q1860 (eng)-Nattes à chat-ship.wav",
+      "sheep": "File:LL-Q1860 (eng)-Nattes à chat-sheep.wav",
+      "fill": "File:LL-Q1860 (eng)-Nattes à chat-fill.wav",
+      "feel": "File:LL-Q1860 (eng)-Nattes à chat-feel.wav",
+      "sit": "File:LL-Q1860 (eng)-Nattes à chat-sit.wav",
+      "seat": "File:LL-Q1860 (eng)-Nattes à chat-seat.wav"
+    },
+    "Wodencafe": {
+      "ship": "File:LL-Q1860 (eng)-Wodencafe-ship.wav",
+      "fill": "File:LL-Q1860 (eng)-Wodencafe-fill.wav",
+      "feel": "File:LL-Q1860 (eng)-Wodencafe-feel.wav",
+      "sit": "File:LL-Q1860 (eng)-Wodencafe-sit.wav",
+      "seat": "File:LL-Q1860 (eng)-Wodencafe-seat.wav"
+    },
+    "Back ache": {
+      "ship": "File:LL-Q1860 (eng)-Back ache-ship.wav",
+      "fill": "File:LL-Q1860 (eng)-Back ache-fill.wav",
+      "feel": "File:LL-Q1860 (eng)-Back ache-feel.wav",
+      "sit": "File:LL-Q1860 (eng)-Back ache-sit.wav"
+    },
+    "GonFreeaks": {
+      "feel": "File:LL-Q1860 (eng)-GonFreeaks-feel.wav",
+      "sit": "File:LL-Q1860 (eng)-GonFreeaks-sit.wav"
+    },
+    "Naomi Persephone Amethyst (NaomiAmethyst)": {
+      "ship": "File:LL-Q1860 (eng)-Naomi Persephone Amethyst (NaomiAmethyst)-ship.wav",
+      "sheep": "File:LL-Q1860 (eng)-Naomi Persephone Amethyst (NaomiAmethyst)-sheep.wav"
+    },
+    "Flame, not lame-face": {
+      "sit": "File:LL-Q1860 (eng)-Flame, not lame-face-sit.wav"
+    },
+    "NaomiAmethyst-": {
+      "ship": "File:LL-Q1860 (eng)-NaomiAmethyst--ship.wav"
+    },
+    "She animates": {
+      "feel": "File:LL-Q1860 (eng)-She animates-feel.wav"
+    },
+    "Vealhurl": {
+      "feel": "File:LL-Q1860 (eng)-Vealhurl-feel.wav"
+    }
+  }
+}

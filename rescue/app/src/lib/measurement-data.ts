@@ -1,7 +1,7 @@
 import {growthPaths} from './growth-routes.mjs';
 export { landingPath } from './landing-path.mjs';
 export const MEASUREMENT_VERSION = 'business-funnel-v3';
-export const MEASUREMENT_EVENTS = ['page_view', 'challenge_start', 'challenge_complete', 'challenge_share', 'practice_start', 'practice_first_answer', 'practice_complete', 'practice_audio_error', 'practice_feedback', 'review_shown', 'review_open', 'review_practice_start', 'review_practice_complete', 'diagnostic_start', 'diagnostic_complete', 'diagnostic_results_view', 'diagnostic_report_preview', 'diagnostic_report_unlock_click', 'diagnostic_offer_click', 'diagnostic_report_open', 'paywall_view', 'plans_view', 'plan_selected', 'begin_checkout', 'checkout_resumed', 'checkout_error', 'billing_portal_open', 'login', 'audio_report_submitted', 'support_submitted', 'guide_audio_play', 'practice_group_complete', 'practice_exit', 'return_practice'] as const;
+export const MEASUREMENT_EVENTS = ['experiment_exposure', 'page_view', 'challenge_start', 'challenge_complete', 'challenge_share', 'practice_start', 'practice_first_answer', 'practice_complete', 'practice_audio_error', 'practice_feedback', 'review_shown', 'review_open', 'review_practice_start', 'review_practice_complete', 'diagnostic_start', 'diagnostic_complete', 'diagnostic_results_view', 'diagnostic_report_preview', 'diagnostic_report_unlock_click', 'diagnostic_offer_click', 'diagnostic_report_open', 'paywall_view', 'plans_view', 'plan_selected', 'begin_checkout', 'checkout_resumed', 'checkout_error', 'billing_portal_open', 'login', 'audio_report_submitted', 'support_submitted', 'guide_audio_play', 'practice_group_complete', 'practice_exit', 'return_practice'] as const;
 export const SESSION_FEEDBACK_CATEGORIES = ['audio_unclear', 'instructions_unclear', 'too_easy', 'too_difficult', 'about_right'] as const;
 export type SessionFeedbackCategory = typeof SESSION_FEEDBACK_CATEGORIES[number];
 export type MeasurementEvent = typeof MEASUREMENT_EVENTS[number];
@@ -61,7 +61,10 @@ export function measurementData(event: string, raw: EventData = {}): EventData |
   for (const [key, max] of [['correct', 1000], ['total', 1000], ['round', 1000], ['duration_ms', 86_400_000], ['groups_count', 200], ['days_since_previous', 3650]] as const) {
     const n = raw[key]; if (Number.isInteger(n) && Number(n) >= 0 && Number(n) <= max) clean[key] = n;
   }
+  if(typeof raw.market_country==='string' && /^[A-Z]{2}$/.test(raw.market_country))clean.market_country=raw.market_country;
   const enums: Record<string, readonly string[]> = {
+    market_tier:['standard','middle','value'],
+    experiment_id:['diag-paywall-v1','diag-next-step-v1'], experiment_variant:['preview','paid','control','personalized'], offer_placement:['diagnostic-report','post-lesson','locked-lesson'],
     diagnostic_length:['short','full'], diagnostic_version:['diagnostic-v2'],
     activity_mode: ['abx-cross-word','word-identification'], session_kind:['focused','mixed','diagnostic'],
     plan:['monthly','lifetime'], surface:['pricing','practice','account','diagnostic','guide','support'],

@@ -1,0 +1,407 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "pages": {
+      "76012646": {
+        "pageid": 76012646,
+        "ns": 6,
+        "title": "File:En-look.ogg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2019-01-21T18:43:14Z",
+            "user": "Aren Elliott",
+            "size": 18995,
+            "width": 0,
+            "height": 0,
+            "duration": 1.7880045351473923,
+            "comment": "User created page with UploadWizard",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/f/f6/En-look.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:En-look.ogg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=76012646",
+            "sha1": "bebcc9edff2e11231fa987631749a69475b6ffd6",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2019-01-21 18:43:14",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "En-look",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "English pronunciation|Self-published work",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "I say \"look\"",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2019-01-21",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/w/index.php?title=User:Aren_Elliott&amp;action=edit&amp;redlink=1\" class=\"new\" title=\"User:Aren Elliott (page does not exist)\">Aren Elliott</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC BY-SA 4.0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Attribution-Share Alike 4.0",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "true",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "https://creativecommons.org/licenses/by-sa/4.0",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc-by-sa-4.0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 1229073375,
+            "parentid": 855414201,
+            "timestamp": "2026-06-10T16:38:23Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=I say \"look\"}}\n|date=2019-01-21\n|source={{own}}\n|author=[[User:Aren Elliott|Aren Elliott]]\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{self|cc-by-sa-4.0}}\n\n[[Category:English pronunciation]]"
+              }
+            }
+          }
+        ]
+      },
+      "112437798": {
+        "pageid": 112437798,
+        "ns": 6,
+        "title": "File:En-us-look (2).ogg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2009-10-23T23:50:14Z",
+            "user": "Dvortygirl",
+            "size": 11136,
+            "width": 0,
+            "height": 0,
+            "duration": 0.7198185941043084,
+            "comment": "Recorded and uploaded new version. Old version appears to have been empty.\n",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/9b/En-us-look_%282%29.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:En-us-look_(2).ogg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=112437798",
+            "sha1": "c3359bd44a6b89c4ce949c64728c10d844d155c3",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2009-10-23 23:50:14",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "En-us-look (2)",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "U.S. English pronunciation|Files with no machine-readable author|Files with no machine-readable source|Media missing infobox template|Self-published work|PD-self",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "LicenseShortName": {
+                "value": "Public domain",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Public domain",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Copyrighted": {
+                "value": "False",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "pd",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 1229143002,
+            "parentid": 606908649,
+            "timestamp": "2026-06-10T19:48:11Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "{{PD-self}}Pronunciation of \"look\" in US English, recorded by [[User:Dvortygirl|Dvortygirl]], 20 October 2005\n\n[[Category:U.S. English pronunciation|look]]\n[[Category:Media missing infobox template]]"
+              }
+            }
+          }
+        ]
+      },
+      "380154": {
+        "pageid": 380154,
+        "ns": 6,
+        "title": "File:En-us-look (3).ogg",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2018-03-16T13:32:28Z",
+            "user": "Dsm.wiki",
+            "size": 7775,
+            "width": 0,
+            "height": 0,
+            "duration": 0.4812698412698413,
+            "comment": "[[Category:English pronunciation|look]] – Pronunciation of the term in US English, recorded by [[User:Dsm.wiki|Dsm.wiki]], 16 March 2018.",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/d/d8/En-us-look_%283%29.ogg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:En-us-look_(3).ogg",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=380154",
+            "sha1": "9ff251b4968ca688e14d3abb6d109165d2b161ea",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2018-03-16 13:32:28",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "En-us-look (3)",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "U.S. English pronunciation|Files with no machine-readable author|Files with no machine-readable source|Media missing infobox template|Self-published work|PD-self",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "LicenseShortName": {
+                "value": "Public domain",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Public domain",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Copyrighted": {
+                "value": "False",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "pd",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 901088751,
+            "parentid": 606644347,
+            "timestamp": "2024-07-20T09:43:22Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "{{PD-self}}Pronunciation of \"look\" in US English, recorded by [[User:Dvortygirl|Dvortygirl]], 20 October 2005\n\n[[Category:U.S. English pronunciation|look]]\n[[Category:Media missing infobox template]]"
+              }
+            }
+          }
+        ]
+      },
+      "148257526": {
+        "pageid": 148257526,
+        "ns": 6,
+        "title": "File:En-us-putt from the rough.oga",
+        "imagerepository": "local",
+        "imageinfo": [
+          {
+            "timestamp": "2024-05-11T15:21:49Z",
+            "user": "Paul2520",
+            "size": 39639,
+            "width": 0,
+            "height": 0,
+            "duration": 1.230657596371882,
+            "comment": "Uploaded own work with UploadWizard",
+            "url": "https://upload.wikimedia.org/wikipedia/commons/9/91/En-us-putt_from_the_rough.oga?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+            "descriptionurl": "https://commons.wikimedia.org/wiki/File:En-us-putt_from_the_rough.oga",
+            "descriptionshorturl": "https://commons.wikimedia.org/w/index.php?curid=148257526",
+            "sha1": "10f2dfe14630d69a0cf3784b390214d8055b1213",
+            "extmetadata": {
+              "DateTime": {
+                "value": "2024-05-11 15:21:49",
+                "source": "mediawiki-metadata",
+                "hidden": ""
+              },
+              "ObjectName": {
+                "value": "En-us-putt from the rough",
+                "source": "mediawiki-metadata"
+              },
+              "CommonsMetadataExtension": {
+                "value": 1.2,
+                "source": "extension",
+                "hidden": ""
+              },
+              "Categories": {
+                "value": "U.S. English pronunciation|CC-Zero|Self-published work",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "Assessments": {
+                "value": "",
+                "source": "commons-categories",
+                "hidden": ""
+              },
+              "ImageDescription": {
+                "value": "Audio pronunciation of the phrase \"putt from the rough\" in U.S. English (Midwestern accent).",
+                "source": "commons-desc-page"
+              },
+              "DateTimeOriginal": {
+                "value": "2024-05-11",
+                "source": "commons-desc-page"
+              },
+              "Credit": {
+                "value": "<span class=\"int-own-work\" lang=\"en\">Own work</span>",
+                "source": "commons-desc-page"
+              },
+              "Artist": {
+                "value": "<a href=\"//commons.wikimedia.org/wiki/User:Paul2520\" title=\"User:Paul2520\">Paul2520</a>",
+                "source": "commons-desc-page"
+              },
+              "LicenseShortName": {
+                "value": "CC0",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "UsageTerms": {
+                "value": "Creative Commons Zero, Public Domain Dedication",
+                "source": "commons-desc-page"
+              },
+              "AttributionRequired": {
+                "value": "false",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "LicenseUrl": {
+                "value": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+                "source": "commons-desc-page"
+              },
+              "Copyrighted": {
+                "value": "True",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "Restrictions": {
+                "value": "",
+                "source": "commons-desc-page",
+                "hidden": ""
+              },
+              "License": {
+                "value": "cc0",
+                "source": "commons-templates",
+                "hidden": ""
+              }
+            }
+          }
+        ],
+        "revisions": [
+          {
+            "revid": 995095633,
+            "parentid": 875809792,
+            "timestamp": "2025-02-07T15:11:52Z",
+            "slots": {
+              "main": {
+                "contentmodel": "wikitext",
+                "contentformat": "text/x-wiki",
+                "*": "=={{int:filedesc}}==\n{{Information\n|description={{en|1=Audio pronunciation of the phrase \"putt from the rough\" in U.S. English (Midwestern accent).}}\n|date=2024-05-11\n|source={{own}}\n|author=[[User:Paul2520|Paul2520]]\n|permission=\n|other versions=\n}}\n\n=={{int:license-header}}==\n{{self|cc-zero}}\n\n[[Category:U.S. English pronunciation]]"
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

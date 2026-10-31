@@ -1,0 +1,550 @@
+{
+  "completedAt": "2026-09-28T21:22:09.684844+00:00",
+  "elapsedSeconds": 62.71777204200043,
+  "plannedClips": 46,
+  "clipCount": 46,
+  "bytes": 957704,
+  "unavailable": [],
+  "attemptsThisInvocation": [
+    {
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "text": "lesion",
+      "ttsText": "Lesion.",
+      "seed": 2320000,
+      "attempt": 0,
+      "attemptSeries": "lesion-capitalization-punctuation-repair",
+      "generationSeconds": 5.098635624999588,
+      "durationSeconds": 0.96,
+      "tokenCount": 12,
+      "acceptedEngineering": true,
+      "reasons": []
+    }
+  ],
+  "runtimeVersions": {
+    "mlx-audio": "0.5.7",
+    "mlx": "0.32.2",
+    "numpy": "2.5.3",
+    "soundfile": "0.14.0",
+    "huggingface-hub": "1.33.0"
+  },
+  "model": "mlx-community/Qwen3-TTS-12Hz-0.6B-Base-4bit",
+  "modelRevision": "0d6bb6fe33f92d47a507e23b9148940e8366ab5b",
+  "publicAudioChanged": false,
+  "phoneticListeningVerified": false,
+  "speakerConsistencyVerified": false,
+  "initialBatchElapsedSeconds": 54.24745229200198,
+  "repairElapsedSeconds": 8.470319749998453,
+  "elapsedNote": "Sum of measured initial and repair invocations; excludes time between them.",
+  "allAttempts": [
+    {
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "text": "lesion",
+      "seed": 2280000,
+      "attempt": 0,
+      "generationSeconds": 1.6490918330018758,
+      "durationSeconds": 1.36,
+      "tokenCount": 17,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "text": "legion",
+      "seed": 2280100,
+      "attempt": 0,
+      "generationSeconds": 0.7623434580018511,
+      "durationSeconds": 1.04,
+      "tokenCount": 13,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "text": "pleasure",
+      "seed": 2280200,
+      "attempt": 0,
+      "generationSeconds": 0.722849750003661,
+      "durationSeconds": 1.04,
+      "tokenCount": 13,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "text": "pledger",
+      "seed": 2280300,
+      "attempt": 0,
+      "generationSeconds": 0.699231457998394,
+      "durationSeconds": 0.96,
+      "tokenCount": 12,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "text": "version",
+      "seed": 2280400,
+      "attempt": 0,
+      "generationSeconds": 0.6880907500017202,
+      "durationSeconds": 0.96,
+      "tokenCount": 12,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "text": "virgin",
+      "seed": 2280500,
+      "attempt": 0,
+      "generationSeconds": 0.6516961660017841,
+      "durationSeconds": 0.8,
+      "tokenCount": 10,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "text": "put",
+      "seed": 2280600,
+      "attempt": 0,
+      "generationSeconds": 0.6073997920029797,
+      "durationSeconds": 0.72,
+      "tokenCount": 9,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "text": "putt",
+      "seed": 2280700,
+      "attempt": 0,
+      "generationSeconds": 0.5876497919962276,
+      "durationSeconds": 0.64,
+      "tokenCount": 8,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "text": "look",
+      "seed": 2280800,
+      "attempt": 0,
+      "generationSeconds": 0.6888037499957136,
+      "durationSeconds": 0.88,
+      "tokenCount": 11,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "text": "luck",
+      "seed": 2280900,
+      "attempt": 0,
+      "generationSeconds": 0.6760517500006245,
+      "durationSeconds": 0.96,
+      "tokenCount": 12,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "text": "book",
+      "seed": 2281000,
+      "attempt": 0,
+      "generationSeconds": 0.6818779579989496,
+      "durationSeconds": 0.88,
+      "tokenCount": 11,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "text": "buck",
+      "seed": 2281100,
+      "attempt": 0,
+      "generationSeconds": 0.663790833998064,
+      "durationSeconds": 0.88,
+      "tokenCount": 11,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "text": "cat",
+      "seed": 2281200,
+      "attempt": 0,
+      "generationSeconds": 0.6960866660010652,
+      "durationSeconds": 1.04,
+      "tokenCount": 13,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "text": "cut",
+      "seed": 2281300,
+      "attempt": 0,
+      "generationSeconds": 0.665702667000005,
+      "durationSeconds": 0.88,
+      "tokenCount": 11,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "text": "cap",
+      "seed": 2281400,
+      "attempt": 0,
+      "generationSeconds": 0.7387978330007172,
+      "durationSeconds": 1.2,
+      "tokenCount": 15,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "text": "cup",
+      "seed": 2281500,
+      "attempt": 0,
+      "generationSeconds": 0.630114625004353,
+      "durationSeconds": 0.72,
+      "tokenCount": 9,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-a-5758a766",
+      "text": "lack",
+      "seed": 2281600,
+      "attempt": 0,
+      "generationSeconds": 0.7103176669988898,
+      "durationSeconds": 1.04,
+      "tokenCount": 13,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "text": "lesion",
+      "seed": 2290000,
+      "attempt": 0,
+      "generationSeconds": 0.15531058299529832,
+      "acceptedEngineering": false,
+      "reasons": [
+        "No waveform returned (immediate EOS)"
+      ]
+    },
+    {
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "text": "lesion",
+      "seed": 2290001,
+      "attempt": 1,
+      "generationSeconds": 0.08576462500059279,
+      "acceptedEngineering": false,
+      "reasons": [
+        "No waveform returned (immediate EOS)"
+      ]
+    },
+    {
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "text": "lesion",
+      "seed": 2290002,
+      "attempt": 2,
+      "generationSeconds": 0.09269412499997998,
+      "acceptedEngineering": false,
+      "reasons": [
+        "No waveform returned (immediate EOS)"
+      ]
+    },
+    {
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "text": "legion",
+      "seed": 2290100,
+      "attempt": 0,
+      "generationSeconds": 1.5735694589966442,
+      "durationSeconds": 1.04,
+      "tokenCount": 13,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "text": "pleasure",
+      "seed": 2290200,
+      "attempt": 0,
+      "generationSeconds": 1.4145872089939076,
+      "durationSeconds": 1.92,
+      "tokenCount": 24,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "text": "pledger",
+      "seed": 2290300,
+      "attempt": 0,
+      "generationSeconds": 0.976392249998753,
+      "durationSeconds": 0.64,
+      "tokenCount": 8,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "text": "version",
+      "seed": 2290400,
+      "attempt": 0,
+      "generationSeconds": 1.040535624997574,
+      "durationSeconds": 0.8,
+      "tokenCount": 10,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "text": "virgin",
+      "seed": 2290500,
+      "attempt": 0,
+      "generationSeconds": 0.9982647500000894,
+      "durationSeconds": 0.8,
+      "tokenCount": 10,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "text": "put",
+      "seed": 2290600,
+      "attempt": 0,
+      "generationSeconds": 0.9859346249941154,
+      "durationSeconds": 0.72,
+      "tokenCount": 9,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "text": "putt",
+      "seed": 2290700,
+      "attempt": 0,
+      "generationSeconds": 1.0782903750005062,
+      "durationSeconds": 1.04,
+      "tokenCount": 13,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "text": "look",
+      "seed": 2290800,
+      "attempt": 0,
+      "generationSeconds": 1.1394615829995018,
+      "durationSeconds": 1.12,
+      "tokenCount": 14,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "text": "luck",
+      "seed": 2290900,
+      "attempt": 0,
+      "generationSeconds": 1.2447549999997136,
+      "durationSeconds": 1.6,
+      "tokenCount": 20,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "text": "book",
+      "seed": 2291000,
+      "attempt": 0,
+      "generationSeconds": 0.9309721250028815,
+      "durationSeconds": 0.4,
+      "tokenCount": 5,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "text": "buck",
+      "seed": 2291100,
+      "attempt": 0,
+      "generationSeconds": 1.0060394169995561,
+      "durationSeconds": 0.88,
+      "tokenCount": 11,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "text": "cat",
+      "seed": 2291200,
+      "attempt": 0,
+      "generationSeconds": 0.9844114580046153,
+      "durationSeconds": 0.72,
+      "tokenCount": 9,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "text": "cut",
+      "seed": 2291300,
+      "attempt": 0,
+      "generationSeconds": 0.9088729159993818,
+      "durationSeconds": 0.4,
+      "tokenCount": 5,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "text": "cap",
+      "seed": 2291400,
+      "attempt": 0,
+      "generationSeconds": 0.8045795829966664,
+      "durationSeconds": 0.16,
+      "tokenCount": 2,
+      "acceptedEngineering": false,
+      "reasons": [
+        "Near-silent waveform"
+      ]
+    },
+    {
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "text": "cap",
+      "seed": 2291401,
+      "attempt": 1,
+      "generationSeconds": 0.8962097080002422,
+      "durationSeconds": 0.48,
+      "tokenCount": 6,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "text": "cup",
+      "seed": 2291500,
+      "attempt": 0,
+      "generationSeconds": 1.1437252500036266,
+      "durationSeconds": 1.28,
+      "tokenCount": 16,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "text": "lack",
+      "seed": 2291600,
+      "attempt": 0,
+      "generationSeconds": 1.0678073750023032,
+      "durationSeconds": 0.8,
+      "tokenCount": 10,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-fr-a-01271214",
+      "text": "chat",
+      "seed": 2300000,
+      "attempt": 0,
+      "generationSeconds": 0.9715141249980661,
+      "durationSeconds": 1.032625,
+      "tokenCount": 13,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-fr-a-01271214",
+      "text": "chant",
+      "seed": 2300100,
+      "attempt": 0,
+      "generationSeconds": 1.0546847919977154,
+      "durationSeconds": 1.5892083333333333,
+      "tokenCount": 20,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-fr-a-01271214",
+      "text": "rat",
+      "seed": 2300200,
+      "attempt": 0,
+      "generationSeconds": 0.8461626670032274,
+      "durationSeconds": 0.7942083333333333,
+      "tokenCount": 10,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-fr-a-01271214",
+      "text": "rang",
+      "seed": 2300300,
+      "attempt": 0,
+      "generationSeconds": 0.8173852079999051,
+      "durationSeconds": 0.71475,
+      "tokenCount": 9,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-fr-a-01271214",
+      "text": "plat",
+      "seed": 2300400,
+      "attempt": 0,
+      "generationSeconds": 0.8465879590003169,
+      "durationSeconds": 0.8737083333333333,
+      "tokenCount": 11,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-fr-a-01271214",
+      "text": "plan",
+      "seed": 2300500,
+      "attempt": 0,
+      "generationSeconds": 0.8382151670011808,
+      "durationSeconds": 0.7942083333333333,
+      "tokenCount": 10,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-fr-b-bfba8e30",
+      "text": "chat",
+      "seed": 2310000,
+      "attempt": 0,
+      "generationSeconds": 0.8565291659979266,
+      "durationSeconds": 1.04,
+      "tokenCount": 13,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-fr-b-bfba8e30",
+      "text": "chant",
+      "seed": 2310100,
+      "attempt": 0,
+      "generationSeconds": 0.9300186250038678,
+      "durationSeconds": 1.36,
+      "tokenCount": 17,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-fr-b-bfba8e30",
+      "text": "rat",
+      "seed": 2310200,
+      "attempt": 0,
+      "generationSeconds": 0.7984185839959537,
+      "durationSeconds": 0.96,
+      "tokenCount": 12,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-fr-b-bfba8e30",
+      "text": "rang",
+      "seed": 2310300,
+      "attempt": 0,
+      "generationSeconds": 0.8258583330025431,
+      "durationSeconds": 1.04,
+      "tokenCount": 13,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-fr-b-bfba8e30",
+      "text": "plat",
+      "seed": 2310400,
+      "attempt": 0,
+      "generationSeconds": 0.830393666998134,
+      "durationSeconds": 1.12,
+      "tokenCount": 14,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-fr-b-bfba8e30",
+      "text": "plan",
+      "seed": 2310500,
+      "attempt": 0,
+      "generationSeconds": 0.8352684589990531,
+      "durationSeconds": 1.12,
+      "tokenCount": 14,
+      "acceptedEngineering": true
+    },
+    {
+      "voiceId": "qwen-fixed-en-b-fc29c14c",
+      "text": "lesion",
+      "ttsText": "Lesion.",
+      "seed": 2320000,
+      "attempt": 0,
+      "attemptSeries": "lesion-capitalization-punctuation-repair",
+      "generationSeconds": 5.098635624999588,
+      "durationSeconds": 0.96,
+      "tokenCount": 12,
+      "acceptedEngineering": true,
+      "reasons": []
+    }
+  ],
+  "repairResult": "repair-lesion-result.json"
+}

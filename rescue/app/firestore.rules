@@ -4,6 +4,19 @@ service cloud.firestore {
     function verified() {
       return request.auth != null && request.auth.token.email_verified == true;
     }
+    match /ownerAudioReviews/{reviewId} {
+      function owner() { return verified() && request.auth.token.email.lower() == 'sirmichealbingham@gmail.com'; }
+      allow read: if owner();
+      allow create, update: if owner()
+        && request.resource.data.keys().hasOnly(['clipId','sha256','bank','decision','updatedAt'])
+        && request.resource.data.clipId.matches('^[a-f0-9]{64}$')
+        && request.resource.data.sha256.matches('^[a-f0-9]{64}$')
+        && reviewId == request.resource.data.clipId + '_' + request.resource.data.sha256
+        && request.resource.data.bank in ['en-US-ga','fr','es','de','it','pt','ru','zh','ja']
+        && request.resource.data.decision in ['pass','reject','unreviewed']
+        && request.resource.data.updatedAt == request.time;
+      allow delete: if false;
+    }
     match /legacyEntitlements/{email} {
       allow get: if verified() && request.auth.token.email.lower() == email;
       allow list, create, update, delete: if false;
@@ -16,7 +29,7 @@ service cloud.firestore {
       allow read, delete: if verified() && request.auth.uid == uid;
       allow create, update: if verified() && request.auth.uid == uid
         && (request.method == 'create' || request.resource.data == resource.data)
-        && request.resource.data.keys().hasOnly(['id', 'completedAt', 'languageId', 'contrastId', 'correct', 'total', 'mistakes', 'mode', 'schemaVersion', 'textHintsUsed', 'audioCollectionId', 'purpose', 'diagnosticLength', 'diagnosticVersion', 'diagnosticGroups'])
+        && request.resource.data.keys().hasOnly(['id', 'completedAt', 'languageId', 'contrastId', 'correct', 'total', 'mistakes', 'mode', 'schemaVersion', 'textHintsUsed', 'audioCollectionId', 'purpose', 'diagnosticLength', 'diagnosticVersion', 'diagnosticGroups', 'diagnosticExperimentVariant'])
         && request.resource.data.get('textHintsUsed', false) is bool
         && request.resource.data.get('audioCollectionId', 'legacy-unspecified') is string
         && request.resource.data.get('audioCollectionId', 'legacy-unspecified').matches('^[A-Za-z0-9_-]{1,160}$')
@@ -26,6 +39,7 @@ service cloud.firestore {
         && request.resource.data.get('purpose', 'focused') in ['focused', 'mixed', 'diagnostic']
         && request.resource.data.get('diagnosticLength', 'short') in ['short','full']
         && request.resource.data.get('diagnosticVersion', 'diagnostic-v2') == 'diagnostic-v2'
+        && request.resource.data.get('diagnosticExperimentVariant', 'preview') in ['preview','paid']
         && request.resource.data.get('diagnosticGroups', 1) is int
         && request.resource.data.get('diagnosticGroups', 1) >= 1 && request.resource.data.get('diagnosticGroups', 1) <= 200
         && request.resource.data.id == sessionId

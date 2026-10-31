@@ -2,6 +2,8 @@
 import Base from '../../layouts/Base.astro';
 import {Header,Footer} from '../../components/ui';
 import ListeningDemo from '../../components/ListeningDemo';
+import EmailCourseSignup from '../../components/EmailCourseSignup';
+import {courseEnabled} from '../../lib/email-course.mjs';
 import ChallengeShare from '../../components/ChallengeShare';
 import {getPracticeLanguages} from '../../lib/content';
 import {challenges} from '../../lib/growth-content';
@@ -19,5 +21,6 @@ const path=`/challenge/${challenge.slug}`;
   <section class="growth-grid"><div><h2>Let your ears <em>go first.</em></h2><p>The words stay hidden in the challenge. Play A, B and X, then choose. You can replay each sound before deciding.</p><p>{challenge.hint}</p><p class="ipa-text">{contrast.phonemes.map(p=>`/${p}/`).join(' vs ')}</p><ChallengeShare client:load languageId={language.id} path={path}/><a href={`/learn/${contrast.id}`}>Hear the word examples and read the sound guide →</a></div><ListeningDemo client:load language={language} contrastId={contrast.id}/></section>
   <section class="growth-price"><div><strong>Which sounds should you practice next?</strong><p>Take the free {language.name} listening check and find a starting point.</p></div><a class="button button-dark" href={`/diagnostic/${language.id}`}>Find my starting point →</a></section>
   <section class="growth-section"><h2>Keep listening.</h2><div class="growth-links">{challenges.filter(c=>c.language===language.id&&c.slug!==challenge.slug).map(c=><a href={`/challenge/${c.slug}`}>{c.title}</a>)}</div><p>Full practice and detailed diagnostic reports are included with Premium. <a href="/pricing">$29 lifetime or $7/month →</a></p></section>
+ {['en','fr'].includes(language.id) && courseEnabled(import.meta.env.PUBLIC_EMAIL_COURSE_APPROVED,import.meta.env.PUBLIC_EMAIL_COURSE_ENDPOINT) && <EmailCourseSignup endpoint={import.meta.env.PUBLIC_EMAIL_COURSE_ENDPOINT} defaultLanguage={language.id === 'en' ? 'en-US-ga' : 'fr'} surface="guide" client:visible/>}
  </main><Footer/><script type="application/ld+json" set:html={safeJsonLd({'@context':'https://schema.org','@type':'LearningResource',name:challenge.title,description:challenge.description,url:absoluteUrl(path),inLanguage:'en',learningResourceType:'Listening challenge',isAccessibleForFree:true})}/>
 </Base>

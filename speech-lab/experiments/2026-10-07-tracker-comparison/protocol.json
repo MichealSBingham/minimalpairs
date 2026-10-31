@@ -1,0 +1,79 @@
+{
+  "created": "2026-10-07",
+  "stage": 1,
+  "status": "Settings fixed before new model comparison results",
+  "purpose": "Compare target-independent acoustic measurement, not pronunciation correctness or learning",
+  "data": "Previously used Hillenbrand full recordings; bigdata.dat references at 20, 50, 80 percent of annotated vowel duration; zeros excluded and counted. Reference boundaries are oracle annotations, not automatic segmentation.",
+  "population": "All recordings with matching annotation and audio. Adults reported separately from child stress cases. Entire corpus is exploratory because previous development used its midpoint clips.",
+  "methods": [
+    "burg5500",
+    "burg_two_ceiling",
+    "heatmap",
+    "cross_method_fixed",
+    "cross_method_multiceiling"
+  ],
+  "burg": {
+    "ceilings_hz": [
+      4500,
+      5000,
+      5500,
+      6000,
+      6500,
+      7000
+    ],
+    "time_step_s": 0.01,
+    "window_length_s": 0.025,
+    "formants": 5,
+    "preemphasis_hz": 50
+  },
+  "heatmap": {
+    "repository": "https://github.com/MLSpeech/FormantsTracker",
+    "commit": "e8a11b66298593d8925c25733895983e11a4b3d6",
+    "weights": "saved_ckpts/196_1125.ckpt",
+    "sample_rate": 16000,
+    "preemphasis": 0.97,
+    "fft": 512,
+    "hop": 160,
+    "power_normalization": "Hann-window energy",
+    "smoothing": "upstream Gaussian 7x7 sigma 1",
+    "output": "upstream bin convention; interpolated at reference time; full-utterance noncausal inference",
+    "right_padding": "64 zero spectral frames, cropped after inference; deterministic equivalent of upstream batch padding. Selected using published example before corpus comparison."
+  },
+  "agreement_thresholds_hz": [
+    120,
+    220
+  ],
+  "multiceiling_selection": "Minimum squared distance to neural estimate scaled by [120,220]; no target, reference, speaker sex or corpus label enters estimator. Average chosen Burg and neural estimates only when both differences satisfy thresholds.",
+  "metrics": [
+    "coverage",
+    "F1 and F2 mean/median/p95 error",
+    "large_error_rate among accepted",
+    "good_measurement_yield among all",
+    "speaker-cluster bootstrap of F2 MAE",
+    "adult and child subgroup results",
+    "ih-iy subset",
+    "reference pitch subgroups",
+    "actual CPU inference runtime"
+  ],
+  "large_error_definition": "F1 absolute error >150 Hz OR F2 absolute error >300 Hz; engineering threshold, not pronunciation acceptability",
+  "controls": [
+    "silence",
+    "white_noise",
+    "220Hz_sine",
+    "440Hz_sine",
+    "clipped_periodic"
+  ],
+  "stress_conditions": [
+    "gain_0.1",
+    "seeded_white_noise_snr20",
+    "roundtrip_44100",
+    "roundtrip_48000",
+    "telephone_band_300_3400"
+  ],
+  "stress_selection": "First three ih and three iy IDs within each corpus group under salted SHA256 ordering; all copies stay linked to original speaker",
+  "streaming_probe": "One frozen ih or iy recording per group; midpoint estimates using only prefix through reference time plus 0,100,250,450 ms; compare with full recording; explicit context and CPU time",
+  "independence": "No fine tuning; no holdout or external validity claim. Paper includes both VTR-only and combined-corpus training including Hillenbrand; exact published checkpoint training split is unverified. Treat overlap as possible. Stress copies are not new speakers. Synthetic signals do not validate real learners.",
+  "spend_limit_usd": 100,
+  "paid_spend_this_experiment_usd": 0,
+  "reference_audit": "bigdata.dat midpoint differs from prior vowdata.dat at four IDs: b02iy, b13er, g08iy, w49eh. Use bigdata consistently for every method and all three times; do not compare headline values directly with old midpoint-only benchmark."
+}

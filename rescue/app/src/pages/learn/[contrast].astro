@@ -131,7 +131,7 @@ const schema = { '@context': 'https://schema.org', '@type': 'LearningResource', 
           {!audioStatus.hasCachedAudio && <p class="guide-device-note">This guide is free to read. Recordings for these examples are not available yet.</p>}
         </section>
 
-        {challenge && practiceLanguage && <section class="guide-challenge"><div><p class="guide-eyebrow">TRY IT HERE</p><h2>Can you hear it<br/><em>in a new word?</em></h2><p>Listen to the two examples, then match the sound in X. The words stay hidden while you choose.</p><a class="guide-text-link" href={`/challenge/${challenge.slug}`}>Open the listening challenge →</a></div><ListeningDemo client:visible language={practiceLanguage} contrastId={contrast.id}/></section>}
+        {entrance && practiceLanguage?.contrasts.some(c=>c.id===contrast.id) && <section class="guide-challenge"><div><p class="guide-eyebrow">TRY IT HERE</p><h2>Can you hear it<br/><em>in a new word?</em></h2><p>Listen to the two examples, then match the sound in X. The words stay hidden while you choose.</p><a class="guide-text-link" href={challenge?`/challenge/${challenge.slug}`:`/diagnostic/${language.id}`}>{challenge?'Open the listening challenge →':'Check my other sounds →'}</a></div><ListeningDemo client:visible language={practiceLanguage} contrastId={contrast.id}/></section>}
 
         <section class="guide-practice-banner"><div><h2>Now, let your <em>ears decide.</em></h2><p>Can you hear the difference? Listen to two examples, then decide which sound you hear in a new word. Get feedback after every answer.</p></div><a class="guide-button is-light" href={lessonUrl}>{hasLesson ? 'Practice these sounds' : 'Explore listening lessons'}<Icon name="arrow" size={20} /></a></section>
 

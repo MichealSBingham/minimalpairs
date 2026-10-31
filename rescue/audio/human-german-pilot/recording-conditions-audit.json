@@ -1,0 +1,88 @@
+{
+  "status": "metadata-only; audible cues unreviewed",
+  "records": [
+    {
+      "voiceId": "human-de-jeuwre",
+      "text": "in",
+      "targetCategory": 0,
+      "sourceRecordingDate": "2021-02-18",
+      "currentVersionUploaded": "2021-02-19T08:03:09Z",
+      "sourceDurationSeconds": 1.45,
+      "sourceSampleRate": 44100,
+      "sourceChannels": 1
+    },
+    {
+      "voiceId": "human-de-jeuwre",
+      "text": "ihn",
+      "targetCategory": 1,
+      "sourceRecordingDate": "2021-02-18",
+      "currentVersionUploaded": "2023-09-11T09:42:50Z",
+      "sourceDurationSeconds": 1.47,
+      "sourceSampleRate": 44100,
+      "sourceChannels": 1
+    },
+    {
+      "voiceId": "human-de-jeuwre",
+      "text": "im",
+      "targetCategory": 0,
+      "sourceRecordingDate": "2020-08-28",
+      "currentVersionUploaded": "2020-08-28T12:09:03Z",
+      "sourceDurationSeconds": 1.52,
+      "sourceSampleRate": 44100,
+      "sourceChannels": 1
+    },
+    {
+      "voiceId": "human-de-jeuwre",
+      "text": "ihm",
+      "targetCategory": 1,
+      "sourceRecordingDate": "2021-02-18",
+      "currentVersionUploaded": "2023-09-11T09:44:04Z",
+      "sourceDurationSeconds": 1.4,
+      "sourceSampleRate": 44100,
+      "sourceChannels": 1
+    },
+    {
+      "voiceId": "human-de-joni",
+      "text": "in",
+      "targetCategory": 0,
+      "sourceRecordingDate": "December 2004 (upload date)",
+      "currentVersionUploaded": "2004-12-03T17:22:42Z",
+      "sourceDurationSeconds": 0.409252,
+      "sourceSampleRate": 44100,
+      "sourceChannels": 1
+    },
+    {
+      "voiceId": "human-de-joni",
+      "text": "ihn",
+      "targetCategory": 1,
+      "sourceRecordingDate": "December 2004 (upload date)",
+      "currentVersionUploaded": "2004-12-06T16:47:44Z",
+      "sourceDurationSeconds": 0.480363,
+      "sourceSampleRate": 44100,
+      "sourceChannels": 1
+    },
+    {
+      "voiceId": "human-de-joni",
+      "text": "im",
+      "targetCategory": 0,
+      "sourceRecordingDate": "December 2004 (upload date)",
+      "currentVersionUploaded": "2004-12-03T17:22:29Z",
+      "sourceDurationSeconds": 0.467302,
+      "sourceSampleRate": 44100,
+      "sourceChannels": 1
+    },
+    {
+      "voiceId": "human-de-joni",
+      "text": "ihm",
+      "targetCategory": 1,
+      "sourceRecordingDate": "",
+      "currentVersionUploaded": "2004-12-06T16:47:11Z",
+      "sourceDurationSeconds": 0.412154,
+      "sourceSampleRate": 44100,
+      "sourceChannels": 1
+    }
+  ],
+  "materialLimitation": "Source/upload versions correlate with vowel category within both contributors. Date labels are not proof of different actual recording sessions or audible artifacts. They prevent a controlled-same-session claim.",
+  "speakerIdentityVerified": false,
+  "phoneticListeningVerified": false
+}

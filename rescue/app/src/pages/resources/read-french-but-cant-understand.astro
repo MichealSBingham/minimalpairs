@@ -1,0 +1,32 @@
+---
+import Base from '../../layouts/Base.astro';
+import {Header,Footer} from '../../components/ui';
+import ListeningDemo from '../../components/ListeningDemo';
+import EmailCourseSignup from '../../components/EmailCourseSignup';
+import {courseEnabled} from '../../lib/email-course.mjs';
+import {getPracticeLanguages} from '../../lib/content';
+import {safeJsonLd,absoluteUrl} from '../../lib/seo';
+import '../../styles/growth.css';
+const language=getPracticeLanguages().find(l=>l.id==='fr')!;
+const endpoint=import.meta.env.PUBLIC_EMAIL_COURSE_ENDPOINT || '';
+const title='You Can Read French. Why Can’t You Understand It When Spoken?';
+const description='Try French listening exercises for tu/tout, banc/bon and poisson/poison. Learn how minimal pairs help you practice sound differences that spelling can hide.';
+const path='/resources/read-french-but-cant-understand';
+---
+<Base title={`${title} | MinimalPairs`} description={description}>
+ <Header/><main class="growth-page">
+  <header class="growth-hero"><p class="eyebrow">FRENCH LISTENING · MINIMAL PAIR TRAINING</p><h1>You can read French.<br/><em>Why can’t you hear the words?</em></h1><p class="growth-lede">You recognize a word in a textbook. Someone says it, and you miss it. Before adding another vocabulary list, try listening for the sounds inside the words you already know.</p><a class="button button-dark" href="#listen">Try it with your ears →</a></header>
+  <section class="growth-grid" id="listen"><div><h2>Listen before<br/><em>you look.</em></h2><p>Play the three sounds. The first two give you something to compare. The third is a different word: which of the first two shares its vowel?</p><p>The exercise keeps the spelling hidden so you can concentrate on what you hear. Try a round before reading the examples below.</p></div><ListeningDemo client:visible language={language} contrastId="fr-u-y"/></section>
+  <section class="growth-section"><h2>Knowing a word and recognizing its sound are different tasks.</h2><p>Written French gives you time to recognize letters, remember meanings and look back. Speech keeps moving. Similar sounds, unfamiliar vocabulary, connected speech and speed can all make listening difficult.</p><p>One manageable place to start is a single sound difference. In <strong>tu</strong> /ty/ and <strong>tout</strong> /tu/, the consonant stays the same while the vowel changes. These are <strong>minimal pairs</strong>: words separated by one sound difference.</p><p>Practicing that difference gives you a precise listening task. You don’t need to memorize a phonetic alphabet before you begin.</p></section>
+  <section class="growth-section"><h2>Three French differences to try.</h2><div class="growth-steps">
+   <article><h3>Tu or tout?</h3><p class="ipa-text">/y/ vs /u/</p><p>Both vowels use rounded lips, but they are different sounds. Hear the contrast across several words.</p><a href="/challenge/tu-vs-tout">Try the vowel challenge →</a><p><a href="/learn/fr-u-y">Word examples and IPA →</a></p></article>
+   <article><h3>Banc or bon?</h3><p class="ipa-text">/ɑ̃/ vs /ɔ̃/</p><p>French nasal vowels can be hard to separate when your first language groups them differently.</p><a href="/challenge/banc-vs-bon">Try the nasal vowel challenge →</a><p><a href="/learn/fr-an-on">Word examples and IPA →</a></p></article>
+   <article><h3>Poisson or poison?</h3><p class="ipa-text">/s/ vs /z/</p><p>A consonant difference separates “fish” from “poison.” Listen without relying on the doubled letter.</p><a href="/challenge/poisson-vs-poison">Try the consonant challenge →</a><p><a href="/learn/fr-s-z">Word examples and IPA →</a></p></article>
+  </div></section>
+  <section class="growth-section"><h2>Don’t memorize one recording.</h2><p>A familiar recording can become easy to recognize. The more useful challenge is hearing the same sound in a different word or voice. MinimalPairs changes the examples and speakers, then replays the correct sounds after your answer.</p><p>Research on high-variability phonetic training studies this kind of practice with multiple speakers and feedback. A <a href="https://escholarship.org/uc/item/1dg5n862">review by Ron Thomson</a> explains the approach and its application to language learning.</p><p>Use focused sound practice alongside conversations, stories and other French listening. Sound contrasts are one part of understanding speech; vocabulary, rhythm and context matter too.</p></section>
+  <section class="growth-price"><div><strong>Which French sounds should you work on?</strong><p>Take a listening diagnostic, then practice the contrasts you find difficult.</p></div><a class="button button-dark" href="/diagnostic/fr">Check my French listening →</a></section>
+  {courseEnabled(import.meta.env.PUBLIC_EMAIL_COURSE_APPROVED,endpoint) && <EmailCourseSignup endpoint={endpoint} defaultLanguage="fr" surface="guide" client:visible/>}
+  <section class="growth-section"><h2>Make your next listen more focused.</h2><p>Pick one contrast. Listen, answer, compare the feedback, then try another example. Once it feels easier, return to a French conversation or recording and listen for those sounds in context.</p><div class="growth-links"><a href="/french-minimal-pairs">Explore French minimal pairs →</a><a href="/resources/minimal-pairs-after-fluent-forever">Practice after reading Fluent Forever →</a><a href="/resources/minimal-pairs-without-anki">Use listening practice alongside Anki →</a></div></section>
+ </main><Footer/>
+ <script type="application/ld+json" set:html={safeJsonLd({'@context':'https://schema.org','@type':'Article',headline:title,description,url:absoluteUrl(path),inLanguage:'en',author:{'@type':'Organization',name:'MinimalPairs',url:absoluteUrl('/')},mainEntityOfPage:absoluteUrl(path)})}/>
+</Base>

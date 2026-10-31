@@ -1,3 +1,4 @@
+const accountHash=async value=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(value))),v=>v.toString(16).padStart(2,'0')).join('');
 /** Narrow internal feed. The Stripe credential never leaves the billing service. */
 export async function purchaseFeed(request,env,{fetcher=fetch,now=Date.now()}={}){
  if(!env.PURCHASE_FEED_TOKEN||request.headers.get('Authorization')!=='Bearer '+env.PURCHASE_FEED_TOKEN)return new Response(null,{status:401});
@@ -8,8 +9,8 @@ export async function purchaseFeed(request,env,{fetcher=fetch,now=Date.now()}={}
  const r=await fetcher(url,{headers:{Authorization:'Bearer '+env.STRIPE_SECRET_KEY}});if(!r.ok)return Response.json({error:'purchase_feed_unavailable'},{status:502});
  const body=await r.json();if(!Array.isArray(body.data))return new Response(null,{status:502});
  // Preserve every event ID for pagination; unpaid/unrelated events carry no customer payload.
- const data=body.data.map(e=>{const s=e.data?.object;if(!e.livemode||s?.livemode!==true||s.status!=='complete'||s.payment_status!=='paid'||s.metadata?.billingSchema!=='1'||!s.metadata.firebaseUid)return {id:e.id,data:{object:null}};
- const metadata={billingSchema:'1',firebaseUid:'verified',...(s.metadata.plan?{plan:s.metadata.plan}:{})};for(const k of ['journey','source','medium','campaign','ui_locale','landing_page','language','contrast','session_kind','surface'])if(typeof s.metadata['mp_'+k]==='string')metadata['mp_'+k]=s.metadata['mp_'+k].slice(0,500);
- return {id:e.id,data:{object:{id:s.id,livemode:true,status:s.status,payment_status:s.payment_status,amount_total:s.amount_total,currency:s.currency,created:s.created,paid_event_at:e.created,mode:s.mode,metadata,customer_email:s.customer_details?.email||s.customer_email||null}}};});
+ const data=await Promise.all(body.data.map(async e=>{const s=e.data?.object;if(!e.livemode||s?.livemode!==true||s.status!=='complete'||s.payment_status!=='paid'||s.metadata?.billingSchema!=='1'||typeof s.metadata.firebaseUid!=='string'||!s.metadata.firebaseUid)return {id:e.id,data:{object:null}};
+ const metadata={billingSchema:'1',firebaseUid:'verified',...(s.metadata.plan?{plan:s.metadata.plan}:{})};for(const k of ['journey','source','medium','campaign','ui_locale','landing_page','language','contrast','session_kind','surface','diagnostic_length','experiment_id','experiment_variant','offer_placement'])if(typeof s.metadata['mp_'+k]==='string')metadata['mp_'+k]=s.metadata['mp_'+k].slice(0,500);
+ return {id:e.id,data:{object:{accountHash:await accountHash(s.metadata.firebaseUid),id:s.id,livemode:true,status:s.status,payment_status:s.payment_status,amount_total:s.amount_total,currency:s.currency,created:s.created,paid_event_at:e.created,mode:s.mode,metadata,customer_email:s.customer_details?.email||s.customer_email||null}}};}));
  return Response.json({data,has_more:body.has_more===true},{headers:{'Cache-Control':'no-store'}});
 }

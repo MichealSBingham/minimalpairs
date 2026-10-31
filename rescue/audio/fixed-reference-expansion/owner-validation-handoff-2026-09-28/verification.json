@@ -1,0 +1,75 @@
+{
+  "checkedAt": "2026-09-29T01:59:24.611939+00:00",
+  "status": "engineering-pass-owner-listening-unreviewed",
+  "expansionClipsDecoded": 46,
+  "priorPublishedPilotClipsDecoded": 24,
+  "newEnglishPreviewClips": 34,
+  "newEnglishPreviewBytes": 687896,
+  "scope": [
+    {
+      "languageId": "en",
+      "contrastId": "en-zh-j",
+      "pairIds": [
+        "en-lesion-legion",
+        "en-pleasure-pledger",
+        "en-version-virgin"
+      ],
+      "pairCount": 3,
+      "profileCount": 2,
+      "clipMappings": 12,
+      "crossWordCombinations": 12,
+      "completeFileCoverage": true,
+      "pronunciationApproved": false
+    },
+    {
+      "languageId": "en",
+      "contrastId": "en-foot-strut",
+      "pairIds": [
+        "en-put-putt",
+        "en-look-luck",
+        "en-book-buck"
+      ],
+      "pairCount": 3,
+      "profileCount": 2,
+      "clipMappings": 12,
+      "crossWordCombinations": 12,
+      "completeFileCoverage": true,
+      "pronunciationApproved": false
+    },
+    {
+      "languageId": "en",
+      "contrastId": "en-ae-strut",
+      "pairIds": [
+        "en-cat-cut",
+        "en-cap-cup",
+        "en-lack-luck"
+      ],
+      "pairCount": 3,
+      "profileCount": 2,
+      "clipMappings": 12,
+      "crossWordCombinations": 12,
+      "completeFileCoverage": true,
+      "pronunciationApproved": false
+    }
+  ],
+  "reservedTextCollisions": [],
+  "reservedEnglishIPACollisions": [],
+  "sourceArtifactsUnchanged": true,
+  "inputHashes": {
+    "rescue/audio/fixed-reference-expansion/manifest.preview.json": "fb446120ec0693bc6fd1cf96e06329b9c0443189eb292ab026511aa0830d49a5",
+    "rescue/audio/fixed-reference-expansion/manifest.candidate.json": "d275600147e6195561c3836f7093f00fb99edc17b559f7a052c236adf0582b7d",
+    "rescue/audio/fixed-reference-expansion/references.json": "996173d8b695fae94d73417ed5b0a9b0d8376439715d743746852586beb60456",
+    "rescue/audio/fixed-reference-expansion/reference-provenance.public.json": "2796111915685be98445bec44ca2765f348aa6dd699d11eb6b6b4afed6f223d2",
+    "rescue/audio/fixed-reference-expansion/scope-snapshot.json": "d31c869d590ef1c1920f6762541a82c5dfa8d5f82ab57520118df947465d4599",
+    "rescue/audio/fixed-reference-expansion/provenance.json": "394a7510fc0e843be31d762948c39f7c77ac01639cdfa2d497489fa4dbae3c4b",
+    "rescue/audio/fixed-reference-expansion/integration-inventory.json": "84fdcdb77f88d276aadb99eea93f9b30b825d188a511b02d49641e8922fe634b",
+    "rescue/audio/fixed-reference-expansion/repair-lesion-result.json": "796bcbc4f2f95f2ede2625c74892ca08cf84422747e2eb104fe59ded4ad8b1e9",
+    "rescue/content/curriculum.json": "9e75f976f8b72d0df1f6b5da4c6afda06074d4f13ae91a533c0a77ebe7fe1db6",
+    "rescue/content/transfer-candidates.json": "14e960285239b919d5f48bddfc1d6b2a59fb5a9cfecc5789b17df4e965e9bea5"
+  },
+  "phoneticListeningVerified": false,
+  "speakerConsistencyVerified": false,
+  "audioGenerated": 0,
+  "publishedFilesWritten": 0,
+  "errors": []
+}

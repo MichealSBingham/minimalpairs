@@ -1,0 +1,73 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "searchinfo": {
+      "totalhits": 7
+    },
+    "search": [
+      {
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Wodencafe-pleasure.wav",
+        "pageid": 143577868,
+        "size": 88,
+        "wordcount": 18,
+        "snippet": "DescriptionLL-Q1860 (eng)-Wodencafe-<span class=\"searchmatch\">pleasure</span>.<span class=\"searchmatch\">wav</span> Audio pronunciation file from the Lingua Libre project. Language InfoField English Transcription InfoField",
+        "timestamp": "2025-11-12T23:14:37Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Grendelkhan-pleasure.wav",
+        "pageid": 146299551,
+        "size": 88,
+        "wordcount": 12,
+        "snippet": "DescriptionLL-Q1860 (eng)-Grendelkhan-<span class=\"searchmatch\">pleasure</span>.<span class=\"searchmatch\">wav</span> Audio pronunciation file from the Lingua Libre project. Language InfoField English Transcription InfoField",
+        "timestamp": "2025-04-18T12:25:16Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Robust Footman-pleasure.wav",
+        "pageid": 153139401,
+        "size": 336,
+        "wordcount": 1,
+        "snippet": "DescriptionLL-Q1860 (eng)-Robust Footman-<span class=\"searchmatch\">pleasure</span>.<span class=\"searchmatch\">wav</span> Audio pronunciation file from the Lingua Libre project. Language InfoField English Transcription",
+        "timestamp": "2025-12-09T00:27:53Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Flame, not lame-self-pleasure.wav",
+        "pageid": 156043875,
+        "size": 346,
+        "wordcount": 1,
+        "snippet": "DescriptionLL-Q1860 (eng)-Flame, not lame-self-<span class=\"searchmatch\">pleasure</span>.<span class=\"searchmatch\">wav</span> Audio pronunciation file from the Lingua Libre project. Language InfoField English Transcription",
+        "timestamp": "2025-05-30T16:49:45Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Vealhurl-to what do I owe the pleasure.wav",
+        "pageid": 153758553,
+        "size": 343,
+        "wordcount": 129,
+        "snippet": "DescriptionLL-Q1860 (eng)-Vealhurl-to what do I owe the <span class=\"searchmatch\">pleasure</span>.<span class=\"searchmatch\">wav</span> Audio pronunciation file from the Lingua Libre project. Language InfoField English",
+        "timestamp": "2025-05-29T10:58:52Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Naomi Persephone Amethyst (NaomiAmethyst)-pleasure.wav",
+        "pageid": 181138194,
+        "size": 337,
+        "wordcount": 138,
+        "snippet": "DescriptionLL-Q1860 (eng)-Naomi Persephone Amethyst (NaomiAmethyst)-<span class=\"searchmatch\">pleasure</span>.<span class=\"searchmatch\">wav</span> Audio pronunciation file from the Lingua Libre project. Language InfoField",
+        "timestamp": "2026-01-03T03:20:42Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Sapaa-my pleasure.wav",
+        "pageid": 157594672,
+        "size": 313,
+        "wordcount": 1,
+        "snippet": "DescriptionLL-Q1860 (eng)-Sapaa-my <span class=\"searchmatch\">pleasure</span>.<span class=\"searchmatch\">wav</span> Audio pronunciation file from the Lingua Libre project. Language InfoField English Transcription InfoField",
+        "timestamp": "2025-12-08T20:10:29Z"
+      }
+    ]
+  }
+}

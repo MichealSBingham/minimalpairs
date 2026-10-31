@@ -1,3 +1,4 @@
+import {recoveryExperimentStatus} from './recovery-experiment.mjs';
 import {collectRecoveries,deliverRecovery} from './recoveries.mjs';
 import {courseAttribution} from '../app/src/lib/course-attribution.mjs';
 import {collectBuyers,deliverBuyer,buyerStatus,seedBuyer} from './buyers.mjs';
@@ -56,7 +57,7 @@ export class EmailAudience{
    if(!this.env.ADMIN_TOKEN||request.headers.get('Authorization')!==`Bearer ${this.env.ADMIN_TOKEN}`)return response({error:'Unauthorized'},401);
    if(request.method!=='GET')return response({error:'Method not allowed'},405);
    const states={};for(const job of (await this.ctx.storage.list({prefix:'outbox:',limit:5000})).values())states[job.state]=(states[job.state]||0)+1;
-   return response({sendingEnabled:this.env.SENDING_ENABLED==='true',intakeEnabled:this.env.INTAKE_ENABLED==='true',outbox:states,buyers:await buyerStatus(this.ctx.storage),weekly:await this.ctx.storage.get('weeklySchedule')||null});
+   return response({sendingEnabled:this.env.SENDING_ENABLED==='true',intakeEnabled:this.env.INTAKE_ENABLED==='true',outbox:states,buyers:await buyerStatus(this.ctx.storage),recoveryExperiment:await recoveryExperimentStatus(this.ctx.storage,this.env),weekly:await this.ctx.storage.get('weeklySchedule')||null});
   }
   if(path==='/webhooks/resend'){
    if(request.method!=='POST')return response({error:'Method not allowed'},405);

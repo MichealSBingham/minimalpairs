@@ -129,7 +129,9 @@ test('return and cancellation markers never grant access; only fresh confirmed r
   await page.evaluate(() => window.billingFixture.setAccess({ active: true, plan: 'annual', source: 'subscription' }));
   await page.getByRole('button', { name: 'Check again' }).click();
   await expect(page.getByRole('heading', { name: 'Your membership is active.' })).toBeVisible();
-  await expect(page.getByRole('button', { name: 'Choose lifetime' })).toHaveCount(0); expect(calls).toEqual([]);
+  await expect(page.getByRole('button', { name: 'Choose lifetime' })).toHaveCount(0);
+  // Recovery eligibility is read-only; checkout must still require a click.
+  expect(calls.every(call => call.path === '/billing/recovery-offer')).toBe(true);
   await page.goto(`${fixture.origin}/enabled?billing=cancel`);
   await expect(page.locator('.plan-monthly').getByRole('button')).toBeEnabled();
   await expect(page.getByRole('heading', { name: 'Your membership is active.' })).toHaveCount(0);
@@ -215,5 +217,35 @@ test('selected plan survives account handoff without automatic checkout',async({
 test('guest plan links preserve monthly and lifetime choices',async({page})=>{
  const calls=await open(page,'?user=guest&storefront=1');
  for(const plan of ['monthly','lifetime'])await expect(page.locator('.plan-'+plan+' a.button')).toHaveAttribute('href','/account?plan='+plan+'#account-sign-in');
+ expect(calls).toEqual([]);
+});
+
+test('fresh selected-plan handoff continues once after sign-in and never replays on reload',async({page})=>{
+ const calls=await open(page,'?user=guest');
+ await page.evaluate(()=>sessionStorage.setItem('minimalpairs.checkout-handoff.v1',JSON.stringify({plan:'lifetime',nonce:'fixture-intent',createdAt:Date.now(),context:{offer_placement:'diagnostic-report'}})));
+ await page.goto(`${fixture.origin}/enabled?user=guest&plan=lifetime&checkout_intent=fixture-intent`);
+ await page.waitForFunction(()=>Boolean(window.billingFixture));
+ expect(calls).toHaveLength(0);
+ await page.evaluate(()=>window.billingFixture.switchAccount('fixture-buyer'));
+ await expect(page.getByRole('alert')).toBeVisible();
+ expect(calls.filter(c=>c.path.endsWith('/checkout'))).toHaveLength(1);
+ expect(calls[0].body.plan).toBe('lifetime');
+ await page.reload();await page.waitForFunction(()=>Boolean(window.billingFixture));
+ await page.evaluate(()=>window.billingFixture.switchAccount('fixture-buyer'));
+ await expect(page.locator('.plan-lifetime').getByRole('button')).toBeEnabled();
+ expect(calls.filter(c=>c.path.endsWith('/checkout'))).toHaveLength(1);
+});
+test('fresh handoff never starts another sale for a paid account',async({page})=>{
+ const calls=await open(page,'?user=guest');
+ await page.evaluate(()=>sessionStorage.setItem('minimalpairs.checkout-handoff.v1',JSON.stringify({plan:'lifetime',nonce:'fixture-paid',createdAt:Date.now(),context:{}})));
+ await page.goto(`${fixture.origin}/enabled?access=lifetime&plan=lifetime&checkout_intent=fixture-paid`);
+ await expect(page.getByRole('heading',{name:'Your lifetime access is connected.'})).toBeVisible();
+ expect(calls).toEqual([]);
+});
+test('diagnostic experiment leads with lifetime and keeps monthly secondary',async({page})=>{
+ const calls=await open(page,'?experiment=1&storefront=1');
+ await expect(page.locator('.membership-plans > div').first()).toHaveClass(/plan-lifetime/);
+ await expect(page.locator('.plan-lifetime button')).toHaveClass(/button-dark/);
+ await expect(page.locator('.plan-monthly button')).toHaveClass(/button-outline/);
  expect(calls).toEqual([]);
 });

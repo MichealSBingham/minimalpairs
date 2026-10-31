@@ -1,0 +1,153 @@
+{
+  "status": "not-reviewed",
+  "instructions": "Listen to every whole file. Source labels, dictionary IPA and successful decoding are not pronunciation approval. Review exact word, category contrast, speaker identity, artifacts and naturalness separately.",
+  "clips": [
+    {
+      "text": "in",
+      "voiceId": "human-de-jeuwre",
+      "targetIPA": "/ɪn/",
+      "localPath": "clips/acc0f7d0978eb04a7828cc2d.mp3",
+      "sha256": "f658c8ec27490765cb0e0e28aa8a164315a613dd4bd56618842f8b83514fc8f5",
+      "exactWord": null,
+      "targetVowel": null,
+      "glottalOnsetAndCodaMatchPair": null,
+      "speakerIdentityConsistent": null,
+      "clippingOrExtraSpeech": null,
+      "categoryLinkedRecordingArtifacts": null,
+      "naturalness": null,
+      "notes": ""
+    },
+    {
+      "text": "ihn",
+      "voiceId": "human-de-jeuwre",
+      "targetIPA": "/iːn/",
+      "localPath": "clips/a0a8a7b46748dce82af6977f.mp3",
+      "sha256": "33da2a1140d55d0d973fcb4a63322473188a9644412817f419fb7fa2529007ec",
+      "exactWord": null,
+      "targetVowel": null,
+      "glottalOnsetAndCodaMatchPair": null,
+      "speakerIdentityConsistent": null,
+      "clippingOrExtraSpeech": null,
+      "categoryLinkedRecordingArtifacts": null,
+      "naturalness": null,
+      "notes": ""
+    },
+    {
+      "text": "im",
+      "voiceId": "human-de-jeuwre",
+      "targetIPA": "/ɪm/",
+      "localPath": "clips/b52e1c35bf1ab635827db09e.mp3",
+      "sha256": "cd6759a9da2d94844289f47b0078e1b9388f2bc313e5fead6fdb8a5ebd2590aa",
+      "exactWord": null,
+      "targetVowel": null,
+      "glottalOnsetAndCodaMatchPair": null,
+      "speakerIdentityConsistent": null,
+      "clippingOrExtraSpeech": null,
+      "categoryLinkedRecordingArtifacts": null,
+      "naturalness": null,
+      "notes": ""
+    },
+    {
+      "text": "ihm",
+      "voiceId": "human-de-jeuwre",
+      "targetIPA": "/iːm/",
+      "localPath": "clips/864801352d922a09ca537d51.mp3",
+      "sha256": "9a5764da6b11d01519aad193068d6f043b39c4ca92bbf24690d955f6f9033d37",
+      "exactWord": null,
+      "targetVowel": null,
+      "glottalOnsetAndCodaMatchPair": null,
+      "speakerIdentityConsistent": null,
+      "clippingOrExtraSpeech": null,
+      "categoryLinkedRecordingArtifacts": null,
+      "naturalness": null,
+      "notes": ""
+    },
+    {
+      "text": "in",
+      "voiceId": "human-de-joni",
+      "targetIPA": "/ɪn/",
+      "localPath": "clips/a7ee3e8c7894ec4b213c246e.mp3",
+      "sha256": "7199d7814b7f189afd95bcfcb3899a04668263af09674e20130ef2b16d78a1bf",
+      "exactWord": null,
+      "targetVowel": null,
+      "glottalOnsetAndCodaMatchPair": null,
+      "speakerIdentityConsistent": null,
+      "clippingOrExtraSpeech": null,
+      "categoryLinkedRecordingArtifacts": null,
+      "naturalness": null,
+      "notes": ""
+    },
+    {
+      "text": "ihn",
+      "voiceId": "human-de-joni",
+      "targetIPA": "/iːn/",
+      "localPath": "clips/20a309a4660349693d451771.mp3",
+      "sha256": "ee713d47636d3898df2efbd9bf75ca5d2a6ea13aa5174712a0bcc9e132bfac7b",
+      "exactWord": null,
+      "targetVowel": null,
+      "glottalOnsetAndCodaMatchPair": null,
+      "speakerIdentityConsistent": null,
+      "clippingOrExtraSpeech": null,
+      "categoryLinkedRecordingArtifacts": null,
+      "naturalness": null,
+      "notes": ""
+    },
+    {
+      "text": "im",
+      "voiceId": "human-de-joni",
+      "targetIPA": "/ɪm/",
+      "localPath": "clips/53288f9519e77ef27e9e698f.mp3",
+      "sha256": "b3ea82695dfe3307a2a7f24210a6690e8120dcfbf427708cca1a37a4cffdd51c",
+      "exactWord": null,
+      "targetVowel": null,
+      "glottalOnsetAndCodaMatchPair": null,
+      "speakerIdentityConsistent": null,
+      "clippingOrExtraSpeech": null,
+      "categoryLinkedRecordingArtifacts": null,
+      "naturalness": null,
+      "notes": ""
+    },
+    {
+      "text": "ihm",
+      "voiceId": "human-de-joni",
+      "targetIPA": "/iːm/",
+      "localPath": "clips/0fc3b3a948acad57eaaf5a5d.mp3",
+      "sha256": "24e475cd9e081c5e2f5a719e2176aa08918c4432bf8b1d7049227900d6464baa",
+      "exactWord": null,
+      "targetVowel": null,
+      "glottalOnsetAndCodaMatchPair": null,
+      "speakerIdentityConsistent": null,
+      "clippingOrExtraSpeech": null,
+      "categoryLinkedRecordingArtifacts": null,
+      "naturalness": null,
+      "notes": ""
+    }
+  ],
+  "pairChecks": [
+    {
+      "pairId": "de-in-ihn",
+      "voiceId": "human-de-jeuwre",
+      "onlyTargetContrastDiffers": null,
+      "notes": ""
+    },
+    {
+      "pairId": "de-in-ihn",
+      "voiceId": "human-de-joni",
+      "onlyTargetContrastDiffers": null,
+      "notes": ""
+    },
+    {
+      "pairId": "de-im-ihm",
+      "voiceId": "human-de-jeuwre",
+      "onlyTargetContrastDiffers": null,
+      "notes": ""
+    },
+    {
+      "pairId": "de-im-ihm",
+      "voiceId": "human-de-joni",
+      "onlyTargetContrastDiffers": null,
+      "notes": ""
+    }
+  ],
+  "approvedForAssessment": false
+}

@@ -1,0 +1,12 @@
+{
+  "status": "complete",
+  "paid_spend_usd": 0,
+  "source_hashes": {
+    "clean-rows.jsonl": "714d74c43734905b4f825352955d8a867fc9cdce85f12c6abeb1012c7c5b6b8f",
+    "stress-rows.json": "6a00c6533f69948f3c23076c5b5261679d3dad7b951563b36204f993d22b8a69",
+    "run.json": "6aafde2a7a27fcf93d4b109400b7e0ac6d30546491f1f806bca25eb86760e312"
+  },
+  "script_sha256": "dfb4be2a752b866b6e36bb76cdabf777604f1b366c531b792f7f43b14f7a529c",
+  "protocol_sha256": "77d60389b1ffbabd42dc3a4c10b3383de141242e3edaae605c99968fd70544bc",
+  "scope": "post-hoc ablation; same previously evaluated audio; no additional independent evidence"
+}

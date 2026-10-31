@@ -1,0 +1,10 @@
+{
+  "status": "passed-source-evidence-consistency-only",
+  "exactFilePages": 50,
+  "sourceTextCreatorLicenseChecks": 15,
+  "searchQueries": 19,
+  "completeTwoPairTwoProfilePools": 0,
+  "downloaded": 0,
+  "decoded": 0,
+  "publicChanges": 0
+}

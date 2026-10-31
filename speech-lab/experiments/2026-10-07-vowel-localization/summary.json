@@ -1,0 +1,44 @@
+{
+  "all": {
+    "n": 1668,
+    "accepted": 1668,
+    "coverage": 1.0,
+    "onset_bias_ms": -4.25275779376499,
+    "offset_bias_ms": 48.58135491606714,
+    "onset_mae_ms": 10.463788968824941,
+    "offset_mae_ms": 50.23243405275779,
+    "onset_absolute_p95_ms": 25.000000000000004,
+    "offset_absolute_p95_ms": 125.64999999999986,
+    "both_boundaries_within_30ms": 0.3147482014388489,
+    "predicted_midpoint_inside_vowel": 1.0,
+    "mean_interval_purity": 0.8318995373556235
+  },
+  "adults": {
+    "n": 1116,
+    "accepted": 1116,
+    "coverage": 1.0,
+    "onset_bias_ms": -4.138530465949824,
+    "offset_bias_ms": 42.32231182795699,
+    "onset_mae_ms": 10.855376344086022,
+    "offset_mae_ms": 44.481810035842294,
+    "onset_absolute_p95_ms": 25.999999999999996,
+    "offset_absolute_p95_ms": 122.0,
+    "both_boundaries_within_30ms": 0.38082437275985664,
+    "predicted_midpoint_inside_vowel": 1.0,
+    "mean_interval_purity": 0.8437924198223087
+  },
+  "adult_ih_iy": {
+    "n": 186,
+    "accepted": 186,
+    "coverage": 1.0,
+    "onset_bias_ms": -6.406989247311828,
+    "offset_bias_ms": 53.95376344086022,
+    "onset_mae_ms": 11.794086021505375,
+    "offset_mae_ms": 54.40537634408603,
+    "onset_absolute_p95_ms": 21.000000000000014,
+    "offset_absolute_p95_ms": 138.99999999999994,
+    "both_boundaries_within_30ms": 0.3010752688172043,
+    "predicted_midpoint_inside_vowel": 1.0,
+    "mean_interval_purity": 0.804447054039719
+  }
+}

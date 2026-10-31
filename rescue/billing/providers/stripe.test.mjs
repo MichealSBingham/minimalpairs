@@ -537,3 +537,59 @@ test('approved recovery coupon grants lifetime only for verified discounted char
 test('unapproved coupon, wrong amount, missing marker and wrong payment cannot grant recovery access',async()=>{
  for(const mutate of [f=>f.data.checkout.discounts[0].coupon='other',f=>f.data.checkout.amount_total=1400,f=>delete f.data.checkout.metadata.recoveryOffer,f=>f.data.charge.amount_captured=1400,f=>f.data.checkout.discounts.push({coupon:'recovery50'})]){const f=recoveryFixture();mutate(f);await assert.rejects(snapshot(f));}
 });
+
+function regionalFixture(amount=1900,country='ES',tier='middle') {
+ const offers={middle:{amount:1900,couponId:'regional19'},value:{amount:1450,couponId:'regional1450'}};
+ const f=lifetimeFixture({regionalOffers:offers});const coupon=offers[tier].couponId;
+ Object.assign(f.data.checkout,{amount_total:amount,discounts:[{coupon}]});
+ Object.assign(f.data.checkout.metadata,{market_version:'regional-v1',market_country:country,market_tier:tier});
+ f.data.checkout.total_details.amount_discount=2900-amount;
+ Object.assign(f.data.lifetimeLine,{amount_total:amount,amount_discount:2900-amount});
+ Object.assign(f.data.intent,{amount,amount_received:amount});Object.assign(f.data.charge,{amount,amount_captured:amount});
+ return {f,conf:{...config,regionalOffers:offers,prices:{...prices,lifetime:lifetimePrice}}};
+}
+test('both regional payments grant durable lifetime access with exact canonical payment evidence',async()=>{
+ for(const args of [[1900,'ES','middle'],[1450,'BR','value']]){
+  const {f,conf}=regionalFixture(...args);const paid=await snapshot(f);
+  assert.equal(subscriptionEntitlement(paid,binding,conf,NOW).active,true);
+  assert.equal(subscriptionEntitlement({...paid,regionalCouponId:'wrong'},binding,conf,NOW).active,false);
+ }
+});
+test('regional mismatch or stacking cannot grant lifetime',async()=>{
+ for(const mutate of [f=>f.data.checkout.metadata.market_country='US',f=>f.data.checkout.discounts[0].coupon='other',f=>f.data.checkout.metadata.recoveryOffer='lifetime50v1',f=>f.data.charge.amount_captured=1]){
+  const {f}=regionalFixture();mutate(f);await assert.rejects(snapshot(f));
+ }
+});
+
+ test('discounted checkouts omit conflicting promotion flag even for saved legacy reservations',async()=>{
+  for(const kind of ['regional','recovery']) {
+   const offers={value:{amount:1450,couponId:'regional1450'}};
+   const f=lifetimeFixture({regionalOffers:offers,recoveryCouponId:'recovery50'});
+   f.data.checkout.status='open';f.data.checkout.url='https://checkout.stripe.com/c/pay/synthetic';
+   const p=checkoutParameters({...config,prices:{...prices,lifetime:lifetimePrice}},{uid:binding.uid},binding.customerId,'lifetime');
+   if(kind==='regional')Object.assign(p.metadata,{market_version:'regional-v1',market_country:'BR',market_tier:'value'});
+   else p.metadata.recoveryOffer='lifetime50v1';
+   p.discounts=[{coupon:kind==='regional'?'regional1450':'recovery50'}];
+   const before=clone(p);
+   f.routes.set('POST /v1/checkout/sessions',r=>{assert.equal(r.body.has('allow_promotion_codes'),false);assert.equal(r.body.get('discounts[0][coupon]'),p.discounts[0].coupon);return f.data.checkout;});
+   await f.adapter.createCheckoutSession(p,'regression-discount');assert.deepEqual(p,before);
+  }
+ });
+function supportFixture(){
+ const supportOffers={thanks10:{uid:binding.uid,couponId:'support10',amount:1305}};
+ const f=lifetimeFixture({supportOffers});
+ Object.assign(f.data.checkout.metadata,{support_offer:'thanks10'});f.data.checkout.discounts=[{coupon:'support10'}];
+ f.data.checkout.amount_total=1305;f.data.checkout.total_details.amount_discount=1595;
+ f.data.lifetimeLine.amount_total=1305;f.data.lifetimeLine.amount_discount=1595;
+ f.data.intent.amount=f.data.intent.amount_received=1305;f.data.charge.amount=f.data.charge.amount_captured=1305;
+ return {f,conf:{...config,supportOffers,prices:{...prices,lifetime:lifetimePrice}}};
+}
+test('customer-specific support discount grants verified lifetime only to the bound account',async()=>{
+ const {f,conf}=supportFixture();const paid=await snapshot(f);assert.equal(subscriptionEntitlement(paid,binding,conf,NOW).active,true);
+ assert.equal(subscriptionEntitlement({...paid,supportMetadata:{...paid.supportMetadata,firebaseUid:'someoneElse'}},binding,conf,NOW).active,false);
+ assert.equal(subscriptionEntitlement({...paid,amountPaid:100},binding,conf,NOW).active,false);
+});
+test('support coupon mismatch, unknown offer, wrong owner and stacking are rejected',async()=>{
+ for(const mutate of [f=>f.data.checkout.discounts[0].coupon='wrong',f=>f.data.checkout.metadata.support_offer='unknown',f=>f.data.checkout.metadata.firebaseUid='someoneElse',f=>f.data.checkout.metadata.recoveryOffer='lifetime50v1']){
+ const {f}=supportFixture();mutate(f);await assert.rejects(snapshot(f));}
+});

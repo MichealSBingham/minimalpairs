@@ -1,3 +1,4 @@
+import {regionalOffer, supportOffer} from '../markets.mjs';
 /** Stripe HTTP boundary only. No credentials, deployment, or network activity at import/factory time. */
 import { SUPPORTED_EVENTS } from '../core.mjs';
 
@@ -67,7 +68,7 @@ async function boundedJson(response, maxBytes, signal) {
  * Requests are bounded; a retryable error is handed to the durable coordinator,
  * never hidden by a retry with a new creation key. See stripe.md for the contract.
  */
-export function createStripeAdapter({ secretKey, expectedAccountId, expectedLivemode, prices, recoveryCouponId,
+export function createStripeAdapter({ secretKey, expectedAccountId, expectedLivemode, prices, recoveryCouponId, regionalOffers, supportOffers,
   fetchImpl = globalThis.fetch, timeoutMs = 5000, operationTimeoutMs = 20000,
   maxPages = 20, maxRequests = 100, maxResponseBytes = 2_097_152, now = () => Date.now(), getOperationContext = () => null } = {}) {
   demand(typeof expectedLivemode === 'boolean' && typeof secretKey === 'string'
@@ -340,8 +341,15 @@ export function createStripeAdapter({ secretKey, expectedAccountId, expectedLive
       if (session.status !== 'complete' || session.payment_status !== 'paid') continue;
       const price = await validatedPrice(ctx, expected.id);
       const discounted = session.metadata?.recoveryOffer === 'lifetime50v1';
-      const amount = discounted ? 1450 : price.unit_amount;
-      const discount = discounted ? 1450 : 0;
+      const regional = regionalOffer({regionalOffers},session.metadata);
+      const support = supportOffer({supportOffers},session.metadata);
+      demand(!session.metadata?.support_offer || !!support,'stripe_support_offer_invalid');
+      demand(!support || (!regional && !discounted),'stripe_lifetime_discount_invalid');
+      demand(!(regional && discounted),'stripe_lifetime_discount_invalid');
+      const amount = support ? support.amount : regional ? regional.amount : discounted ? 1450 : price.unit_amount;
+      const discount = price.unit_amount - amount;
+      demand(!support || (session.discounts?.length === 1 && idOf(session.discounts[0].coupon) === support.couponId && !session.discounts[0].promotion_code),'stripe_lifetime_discount_invalid');
+      demand(!regional || (session.discounts?.length === 1 && idOf(session.discounts[0].coupon) === regional.couponId && !session.discounts[0].promotion_code),'stripe_lifetime_discount_invalid');
       demand(!discounted || (recoveryCouponId && session.discounts?.length === 1 && idOf(session.discounts[0].coupon) === recoveryCouponId && !session.discounts[0].promotion_code), 'stripe_lifetime_discount_invalid');
       const lines = await list(ctx,`/v1/checkout/sessions/${session.id}/line_items`);
       demand(lines.length === 1 && lines[0].object === 'item' && idOf(lines[0].price) === price.id && lines[0].quantity === 1
@@ -354,7 +362,7 @@ export function createStripeAdapter({ secretKey, expectedAccountId, expectedLive
       const evidence = await chargeCoverage(ctx,paymentIntentId,amount,price.currency,binding,true);
       if (evidence.amountRefunded < amount && ['none','won'].includes(evidence.disputeStatus)) valid = {
         uid:binding.uid,customerId:binding.customerId,livemode:expectedLivemode,plan:'lifetime',priceId:price.id,
-        currency:price.currency,amountPaid:amount,...(discounted ? {recoveryCouponId} : {}),successfulCharge:true,...evidence,checkoutSessionId:session.id,paymentIntentId,
+        currency:price.currency,amountPaid:amount,...(support ? {supportCouponId:support.couponId,supportMetadata:session.metadata} : {}),...(regional ? {regionalCouponId:regional.couponId,regionalMetadata:session.metadata} : {}),...(discounted ? {recoveryCouponId} : {}),successfulCharge:true,...evidence,checkoutSessionId:session.id,paymentIntentId,
       };
     }
     return valid;
@@ -471,9 +479,16 @@ export function createStripeAdapter({ secretKey, expectedAccountId, expectedLive
         && params.line_items?.length === 1 && approved.has(params.line_items[0].price) && params.line_items[0].quantity === 1
         && params.payment_method_types?.length === 1 && params.payment_method_types[0] === 'card'
         && typeof key === 'string', 'stripe_invalid_parameters');
-      demand(!params.discounts || (params.mode === 'payment' && recoveryCouponId && params.metadata.recoveryOffer === 'lifetime50v1' && params.discounts.length === 1 && params.discounts[0].coupon === recoveryCouponId), 'stripe_invalid_parameters');
+      const regional = regionalOffer({regionalOffers},params.metadata);
+      const support = supportOffer({supportOffers},params.metadata);
+      demand(!params.metadata?.support_offer || !!support,'stripe_support_offer_invalid');
+      demand(!params.discounts || (params.mode === 'payment' && support && !regional && !params.metadata.recoveryOffer && params.discounts.length === 1 && params.discounts[0].coupon === support.couponId) || (params.mode === 'payment' && regional && params.discounts.length === 1 && params.discounts[0].coupon === regional.couponId && !params.metadata.recoveryOffer) || (params.mode === 'payment' && recoveryCouponId && params.metadata.recoveryOffer === 'lifetime50v1' && params.discounts.length === 1 && params.discounts[0].coupon === recoveryCouponId), 'stripe_invalid_parameters');
       await validatedPrice(ctx, params.line_items[0].price, true);
-      const c = normalizeCheckout(await request(ctx, 'POST', '/v1/checkout/sessions', params, key));
+      // Stripe treats even false as a supplied promotion-code parameter.
+      // Normalize at the transport boundary so saved checkout reservations remain retryable.
+      const wireParams = {...params};
+      if (wireParams.discounts?.length && wireParams.allow_promotion_codes === false) delete wireParams.allow_promotion_codes;
+      const c = normalizeCheckout(await request(ctx, 'POST', '/v1/checkout/sessions', wireParams, key));
       demand(c.mode === params.mode && c.customer === params.customer && c.client_reference_id === params.client_reference_id, 'stripe_checkout_shape_invalid');
       return c;
     }),

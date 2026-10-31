@@ -1,0 +1,13 @@
+{
+  "note": "Engineering probes, not pronunciation-certified lesson audio. Each pair is synthesized separately in two voice profiles.",
+  "items": [
+    {"languageId":"en","text":"ship"}, {"languageId":"en","text":"sheep"},
+    {"languageId":"fr","text":"tout"}, {"languageId":"fr","text":"tu"},
+    {"languageId":"de","text":"musste"}, {"languageId":"de","text":"müsste"},
+    {"languageId":"es","text":"caro"}, {"languageId":"es","text":"carro"},
+    {"languageId":"it","text":"pala"}, {"languageId":"it","text":"palla"},
+    {"languageId":"zh","text":"妈"}, {"languageId":"zh","text":"骂"},
+    {"languageId":"pt","text":"faca"}, {"languageId":"pt","text":"vaca"},
+    {"languageId":"ru","text":"лук"}, {"languageId":"ru","text":"люк"}
+  ]
+}

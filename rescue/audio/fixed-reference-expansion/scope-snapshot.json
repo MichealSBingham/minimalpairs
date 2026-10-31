@@ -1,0 +1,551 @@
+{
+  "words": {
+    "en": [
+      {
+        "text": "lesion",
+        "targetIPA": "/ˈliʒən/",
+        "meaning": "an area of damaged tissue",
+        "pairIds": [
+          "en-lesion-legion"
+        ],
+        "contrastIds": [
+          "en-zh-j"
+        ],
+        "sources": [
+          "https://dictionary.cambridge.org/dictionary/english/lesion",
+          "https://dictionary.cambridge.org/dictionary/english/legion"
+        ],
+        "reviewInstruction": "General American. Version /ˈvɝʒən/ and virgin /ˈvɝdʒən/ MUST share final schwa; an /ɪ/ ending in virgin or /ʃ/ in version invalidates this authored pair. The shared-schwa readings are attested in Webster’s New World American entries; other US pronunciations are not learner errors. Pledger /ˈplɛdʒɚ/ is a real noun and must retain the affricate. Do not pronounce put as putt or merge /ʊ–ʌ/.",
+        "conditionalReadingRequired": false
+      },
+      {
+        "text": "legion",
+        "targetIPA": "/ˈlidʒən/",
+        "meaning": "a large group; a military unit",
+        "pairIds": [
+          "en-lesion-legion"
+        ],
+        "contrastIds": [
+          "en-zh-j"
+        ],
+        "sources": [
+          "https://dictionary.cambridge.org/dictionary/english/lesion",
+          "https://dictionary.cambridge.org/dictionary/english/legion"
+        ],
+        "reviewInstruction": "General American. Version /ˈvɝʒən/ and virgin /ˈvɝdʒən/ MUST share final schwa; an /ɪ/ ending in virgin or /ʃ/ in version invalidates this authored pair. The shared-schwa readings are attested in Webster’s New World American entries; other US pronunciations are not learner errors. Pledger /ˈplɛdʒɚ/ is a real noun and must retain the affricate. Do not pronounce put as putt or merge /ʊ–ʌ/.",
+        "conditionalReadingRequired": false
+      },
+      {
+        "text": "pleasure",
+        "targetIPA": "/ˈplɛʒɚ/",
+        "meaning": "enjoyment",
+        "pairIds": [
+          "en-pleasure-pledger"
+        ],
+        "contrastIds": [
+          "en-zh-j"
+        ],
+        "sources": [
+          "https://dictionary.cambridge.org/dictionary/english/pleasure",
+          "https://www.collinsdictionary.com/us/dictionary/english/pledger",
+          "https://www.merriam-webster.com/dictionary/pledger"
+        ],
+        "reviewInstruction": "General American. Version /ˈvɝʒən/ and virgin /ˈvɝdʒən/ MUST share final schwa; an /ɪ/ ending in virgin or /ʃ/ in version invalidates this authored pair. The shared-schwa readings are attested in Webster’s New World American entries; other US pronunciations are not learner errors. Pledger /ˈplɛdʒɚ/ is a real noun and must retain the affricate. Do not pronounce put as putt or merge /ʊ–ʌ/.",
+        "conditionalReadingRequired": false
+      },
+      {
+        "text": "pledger",
+        "targetIPA": "/ˈplɛdʒɚ/",
+        "meaning": "someone who gives a pledge",
+        "pairIds": [
+          "en-pleasure-pledger"
+        ],
+        "contrastIds": [
+          "en-zh-j"
+        ],
+        "sources": [
+          "https://dictionary.cambridge.org/dictionary/english/pleasure",
+          "https://www.collinsdictionary.com/us/dictionary/english/pledger",
+          "https://www.merriam-webster.com/dictionary/pledger"
+        ],
+        "reviewInstruction": "General American. Version /ˈvɝʒən/ and virgin /ˈvɝdʒən/ MUST share final schwa; an /ɪ/ ending in virgin or /ʃ/ in version invalidates this authored pair. The shared-schwa readings are attested in Webster’s New World American entries; other US pronunciations are not learner errors. Pledger /ˈplɛdʒɚ/ is a real noun and must retain the affricate. Do not pronounce put as putt or merge /ʊ–ʌ/.",
+        "conditionalReadingRequired": false
+      },
+      {
+        "text": "version",
+        "targetIPA": "/ˈvɝʒən/",
+        "meaning": "a particular form or account of something",
+        "pairIds": [
+          "en-version-virgin"
+        ],
+        "contrastIds": [
+          "en-zh-j"
+        ],
+        "sources": [
+          "https://www.collinsdictionary.com/us/dictionary/english/version",
+          "https://www.collinsdictionary.com/us/dictionary/english/virgin"
+        ],
+        "reviewInstruction": "General American. Version /ˈvɝʒən/ and virgin /ˈvɝdʒən/ MUST share final schwa; an /ɪ/ ending in virgin or /ʃ/ in version invalidates this authored pair. The shared-schwa readings are attested in Webster’s New World American entries; other US pronunciations are not learner errors. Pledger /ˈplɛdʒɚ/ is a real noun and must retain the affricate. Do not pronounce put as putt or merge /ʊ–ʌ/.",
+        "conditionalReadingRequired": true
+      },
+      {
+        "text": "virgin",
+        "targetIPA": "/ˈvɝdʒən/",
+        "meaning": "unused; untouched",
+        "pairIds": [
+          "en-version-virgin"
+        ],
+        "contrastIds": [
+          "en-zh-j"
+        ],
+        "sources": [
+          "https://www.collinsdictionary.com/us/dictionary/english/version",
+          "https://www.collinsdictionary.com/us/dictionary/english/virgin"
+        ],
+        "reviewInstruction": "General American. Version /ˈvɝʒən/ and virgin /ˈvɝdʒən/ MUST share final schwa; an /ɪ/ ending in virgin or /ʃ/ in version invalidates this authored pair. The shared-schwa readings are attested in Webster’s New World American entries; other US pronunciations are not learner errors. Pledger /ˈplɛdʒɚ/ is a real noun and must retain the affricate. Do not pronounce put as putt or merge /ʊ–ʌ/.",
+        "conditionalReadingRequired": true
+      },
+      {
+        "text": "put",
+        "targetIPA": "/pʊt/",
+        "meaning": "place something",
+        "pairIds": [
+          "en-put-putt"
+        ],
+        "contrastIds": [
+          "en-foot-strut"
+        ],
+        "sources": [
+          "https://dictionary.cambridge.org/dictionary/english/put",
+          "https://dictionary.cambridge.org/dictionary/english/putt"
+        ],
+        "reviewInstruction": "General American. Version /ˈvɝʒən/ and virgin /ˈvɝdʒən/ MUST share final schwa; an /ɪ/ ending in virgin or /ʃ/ in version invalidates this authored pair. The shared-schwa readings are attested in Webster’s New World American entries; other US pronunciations are not learner errors. Pledger /ˈplɛdʒɚ/ is a real noun and must retain the affricate. Do not pronounce put as putt or merge /ʊ–ʌ/.",
+        "conditionalReadingRequired": false
+      },
+      {
+        "text": "putt",
+        "targetIPA": "/pʌt/",
+        "meaning": "a short golf stroke",
+        "pairIds": [
+          "en-put-putt"
+        ],
+        "contrastIds": [
+          "en-foot-strut"
+        ],
+        "sources": [
+          "https://dictionary.cambridge.org/dictionary/english/put",
+          "https://dictionary.cambridge.org/dictionary/english/putt"
+        ],
+        "reviewInstruction": "General American. Version /ˈvɝʒən/ and virgin /ˈvɝdʒən/ MUST share final schwa; an /ɪ/ ending in virgin or /ʃ/ in version invalidates this authored pair. The shared-schwa readings are attested in Webster’s New World American entries; other US pronunciations are not learner errors. Pledger /ˈplɛdʒɚ/ is a real noun and must retain the affricate. Do not pronounce put as putt or merge /ʊ–ʌ/.",
+        "conditionalReadingRequired": false
+      },
+      {
+        "text": "look",
+        "targetIPA": "/lʊk/",
+        "meaning": "direct your eyes toward something",
+        "pairIds": [
+          "en-look-luck"
+        ],
+        "contrastIds": [
+          "en-foot-strut"
+        ],
+        "sources": [
+          "https://dictionary.cambridge.org/dictionary/english/look",
+          "https://dictionary.cambridge.org/dictionary/english/luck"
+        ],
+        "reviewInstruction": "General American. Version /ˈvɝʒən/ and virgin /ˈvɝdʒən/ MUST share final schwa; an /ɪ/ ending in virgin or /ʃ/ in version invalidates this authored pair. The shared-schwa readings are attested in Webster’s New World American entries; other US pronunciations are not learner errors. Pledger /ˈplɛdʒɚ/ is a real noun and must retain the affricate. Do not pronounce put as putt or merge /ʊ–ʌ/.",
+        "conditionalReadingRequired": false
+      },
+      {
+        "text": "luck",
+        "targetIPA": "/lʌk/",
+        "meaning": "chance; good fortune",
+        "pairIds": [
+          "en-look-luck",
+          "en-lack-luck"
+        ],
+        "contrastIds": [
+          "en-foot-strut",
+          "en-ae-strut"
+        ],
+        "sources": [
+          "https://dictionary.cambridge.org/dictionary/english/look",
+          "https://dictionary.cambridge.org/dictionary/english/luck"
+        ],
+        "reviewInstruction": "General American. Version /ˈvɝʒən/ and virgin /ˈvɝdʒən/ MUST share final schwa; an /ɪ/ ending in virgin or /ʃ/ in version invalidates this authored pair. The shared-schwa readings are attested in Webster’s New World American entries; other US pronunciations are not learner errors. Pledger /ˈplɛdʒɚ/ is a real noun and must retain the affricate. Do not pronounce put as putt or merge /ʊ–ʌ/.",
+        "conditionalReadingRequired": false
+      },
+      {
+        "text": "book",
+        "targetIPA": "/bʊk/",
+        "meaning": "a written work with pages",
+        "pairIds": [
+          "en-book-buck"
+        ],
+        "contrastIds": [
+          "en-foot-strut"
+        ],
+        "sources": [
+          "https://dictionary.cambridge.org/dictionary/english/book",
+          "https://dictionary.cambridge.org/dictionary/english/buck"
+        ],
+        "reviewInstruction": "General American. Version /ˈvɝʒən/ and virgin /ˈvɝdʒən/ MUST share final schwa; an /ɪ/ ending in virgin or /ʃ/ in version invalidates this authored pair. The shared-schwa readings are attested in Webster’s New World American entries; other US pronunciations are not learner errors. Pledger /ˈplɛdʒɚ/ is a real noun and must retain the affricate. Do not pronounce put as putt or merge /ʊ–ʌ/.",
+        "conditionalReadingRequired": false
+      },
+      {
+        "text": "buck",
+        "targetIPA": "/bʌk/",
+        "meaning": "a male deer; a dollar",
+        "pairIds": [
+          "en-book-buck"
+        ],
+        "contrastIds": [
+          "en-foot-strut"
+        ],
+        "sources": [
+          "https://dictionary.cambridge.org/dictionary/english/book",
+          "https://dictionary.cambridge.org/dictionary/english/buck"
+        ],
+        "reviewInstruction": "General American. Version /ˈvɝʒən/ and virgin /ˈvɝdʒən/ MUST share final schwa; an /ɪ/ ending in virgin or /ʃ/ in version invalidates this authored pair. The shared-schwa readings are attested in Webster’s New World American entries; other US pronunciations are not learner errors. Pledger /ˈplɛdʒɚ/ is a real noun and must retain the affricate. Do not pronounce put as putt or merge /ʊ–ʌ/.",
+        "conditionalReadingRequired": false
+      },
+      {
+        "text": "cat",
+        "targetIPA": "/kæt/",
+        "meaning": "a small feline animal",
+        "pairIds": [
+          "en-cat-cut"
+        ],
+        "contrastIds": [
+          "en-ae-strut"
+        ],
+        "sources": [
+          "https://dictionary.cambridge.org/dictionary/english/cat",
+          "https://dictionary.cambridge.org/dictionary/english/cut"
+        ],
+        "reviewInstruction": "General American. Version /ˈvɝʒən/ and virgin /ˈvɝdʒən/ MUST share final schwa; an /ɪ/ ending in virgin or /ʃ/ in version invalidates this authored pair. The shared-schwa readings are attested in Webster’s New World American entries; other US pronunciations are not learner errors. Pledger /ˈplɛdʒɚ/ is a real noun and must retain the affricate. Do not pronounce put as putt or merge /ʊ–ʌ/.",
+        "conditionalReadingRequired": false
+      },
+      {
+        "text": "cut",
+        "targetIPA": "/kʌt/",
+        "meaning": "divide with a sharp tool",
+        "pairIds": [
+          "en-cat-cut"
+        ],
+        "contrastIds": [
+          "en-ae-strut"
+        ],
+        "sources": [
+          "https://dictionary.cambridge.org/dictionary/english/cat",
+          "https://dictionary.cambridge.org/dictionary/english/cut"
+        ],
+        "reviewInstruction": "General American. Version /ˈvɝʒən/ and virgin /ˈvɝdʒən/ MUST share final schwa; an /ɪ/ ending in virgin or /ʃ/ in version invalidates this authored pair. The shared-schwa readings are attested in Webster’s New World American entries; other US pronunciations are not learner errors. Pledger /ˈplɛdʒɚ/ is a real noun and must retain the affricate. Do not pronounce put as putt or merge /ʊ–ʌ/.",
+        "conditionalReadingRequired": false
+      },
+      {
+        "text": "cap",
+        "targetIPA": "/kæp/",
+        "meaning": "a hat; a cover",
+        "pairIds": [
+          "en-cap-cup"
+        ],
+        "contrastIds": [
+          "en-ae-strut"
+        ],
+        "sources": [
+          "https://dictionary.cambridge.org/dictionary/english/cap",
+          "https://dictionary.cambridge.org/dictionary/english/cup"
+        ],
+        "reviewInstruction": "General American. Version /ˈvɝʒən/ and virgin /ˈvɝdʒən/ MUST share final schwa; an /ɪ/ ending in virgin or /ʃ/ in version invalidates this authored pair. The shared-schwa readings are attested in Webster’s New World American entries; other US pronunciations are not learner errors. Pledger /ˈplɛdʒɚ/ is a real noun and must retain the affricate. Do not pronounce put as putt or merge /ʊ–ʌ/.",
+        "conditionalReadingRequired": false
+      },
+      {
+        "text": "cup",
+        "targetIPA": "/kʌp/",
+        "meaning": "a small drinking vessel",
+        "pairIds": [
+          "en-cap-cup"
+        ],
+        "contrastIds": [
+          "en-ae-strut"
+        ],
+        "sources": [
+          "https://dictionary.cambridge.org/dictionary/english/cap",
+          "https://dictionary.cambridge.org/dictionary/english/cup"
+        ],
+        "reviewInstruction": "General American. Version /ˈvɝʒən/ and virgin /ˈvɝdʒən/ MUST share final schwa; an /ɪ/ ending in virgin or /ʃ/ in version invalidates this authored pair. The shared-schwa readings are attested in Webster’s New World American entries; other US pronunciations are not learner errors. Pledger /ˈplɛdʒɚ/ is a real noun and must retain the affricate. Do not pronounce put as putt or merge /ʊ–ʌ/.",
+        "conditionalReadingRequired": false
+      },
+      {
+        "text": "lack",
+        "targetIPA": "/læk/",
+        "meaning": "not have enough of something",
+        "pairIds": [
+          "en-lack-luck"
+        ],
+        "contrastIds": [
+          "en-ae-strut"
+        ],
+        "sources": [
+          "https://dictionary.cambridge.org/dictionary/english/lack",
+          "https://dictionary.cambridge.org/dictionary/english/luck"
+        ],
+        "reviewInstruction": "General American. Version /ˈvɝʒən/ and virgin /ˈvɝdʒən/ MUST share final schwa; an /ɪ/ ending in virgin or /ʃ/ in version invalidates this authored pair. The shared-schwa readings are attested in Webster’s New World American entries; other US pronunciations are not learner errors. Pledger /ˈplɛdʒɚ/ is a real noun and must retain the affricate. Do not pronounce put as putt or merge /ʊ–ʌ/.",
+        "conditionalReadingRequired": false
+      }
+    ],
+    "fr": [
+      {
+        "text": "chat",
+        "targetIPA": "/ʃa/",
+        "meaning": "cat; masculine form",
+        "pairIds": [
+          "fr-chat-chant"
+        ],
+        "contrastIds": [
+          "fr-a-an"
+        ],
+        "sources": [
+          "https://www.portail-lexical.fr/definition/tlfi/chat/nom",
+          "https://www.portail-lexical.fr/definition/tlfi/chant/nom"
+        ],
+        "reviewInstruction": "Check isolated-word final vowel category, naturalness, and voice consistency; do not add a final consonant or schwa.",
+        "conditionalReadingRequired": false
+      },
+      {
+        "text": "chant",
+        "targetIPA": "/ʃɑ̃/",
+        "meaning": "singing; song",
+        "pairIds": [
+          "fr-chat-chant"
+        ],
+        "contrastIds": [
+          "fr-a-an"
+        ],
+        "sources": [
+          "https://www.portail-lexical.fr/definition/tlfi/chat/nom",
+          "https://www.portail-lexical.fr/definition/tlfi/chant/nom"
+        ],
+        "reviewInstruction": "Check isolated-word final vowel category, naturalness, and voice consistency; do not add a final consonant or schwa.",
+        "conditionalReadingRequired": false
+      },
+      {
+        "text": "rat",
+        "targetIPA": "/ʁa/",
+        "meaning": "rat",
+        "pairIds": [
+          "fr-rat-rang"
+        ],
+        "contrastIds": [
+          "fr-a-an"
+        ],
+        "sources": [
+          "https://www.portail-lexical.fr/definition/tlfi/rat/nom",
+          "https://www.portail-lexical.fr/definition/tlfi/rang/nom"
+        ],
+        "reviewInstruction": "Check isolated-word final vowel category, naturalness, and voice consistency; do not add a final consonant or schwa. Select /ʁa/, not the attested alternate /ʁɑ/.",
+        "conditionalReadingRequired": true
+      },
+      {
+        "text": "rang",
+        "targetIPA": "/ʁɑ̃/",
+        "meaning": "row; rank",
+        "pairIds": [
+          "fr-rat-rang"
+        ],
+        "contrastIds": [
+          "fr-a-an"
+        ],
+        "sources": [
+          "https://www.portail-lexical.fr/definition/tlfi/rat/nom",
+          "https://www.portail-lexical.fr/definition/tlfi/rang/nom"
+        ],
+        "reviewInstruction": "Check isolated-word final vowel category, naturalness, and voice consistency; do not add a final consonant or schwa.",
+        "conditionalReadingRequired": false
+      },
+      {
+        "text": "plat",
+        "targetIPA": "/pla/",
+        "meaning": "flat; masculine singular",
+        "pairIds": [
+          "fr-plat-plan"
+        ],
+        "contrastIds": [
+          "fr-a-an"
+        ],
+        "sources": [
+          "https://www.portail-lexical.fr/definition/tlfi/plat/adjectif",
+          "https://www.portail-lexical.fr/definition/tlfi/plan/nom"
+        ],
+        "reviewInstruction": "Check isolated-word final vowel category, naturalness, and voice consistency; do not add a final consonant or schwa.",
+        "conditionalReadingRequired": false
+      },
+      {
+        "text": "plan",
+        "targetIPA": "/plɑ̃/",
+        "meaning": "plan; drawing of a layout",
+        "pairIds": [
+          "fr-plat-plan"
+        ],
+        "contrastIds": [
+          "fr-a-an"
+        ],
+        "sources": [
+          "https://www.portail-lexical.fr/definition/tlfi/plat/adjectif",
+          "https://www.portail-lexical.fr/definition/tlfi/plan/nom"
+        ],
+        "reviewInstruction": "Check isolated-word final vowel category, naturalness, and voice consistency; do not add a final consonant or schwa.",
+        "conditionalReadingRequired": false
+      }
+    ]
+  },
+  "contrasts": [
+    {
+      "languageId": "en",
+      "contrastId": "en-zh-j",
+      "pairIds": [
+        "en-lesion-legion",
+        "en-pleasure-pledger",
+        "en-version-virgin"
+      ],
+      "pairs": [
+        {
+          "id": "en-lesion-legion",
+          "words": [
+            "lesion",
+            "legion"
+          ]
+        },
+        {
+          "id": "en-pleasure-pledger",
+          "words": [
+            "pleasure",
+            "pledger"
+          ]
+        },
+        {
+          "id": "en-version-virgin",
+          "words": [
+            "version",
+            "virgin"
+          ]
+        }
+      ]
+    },
+    {
+      "languageId": "en",
+      "contrastId": "en-foot-strut",
+      "pairIds": [
+        "en-put-putt",
+        "en-look-luck",
+        "en-book-buck"
+      ],
+      "pairs": [
+        {
+          "id": "en-put-putt",
+          "words": [
+            "put",
+            "putt"
+          ]
+        },
+        {
+          "id": "en-look-luck",
+          "words": [
+            "look",
+            "luck"
+          ]
+        },
+        {
+          "id": "en-book-buck",
+          "words": [
+            "book",
+            "buck"
+          ]
+        }
+      ]
+    },
+    {
+      "languageId": "en",
+      "contrastId": "en-ae-strut",
+      "pairIds": [
+        "en-cat-cut",
+        "en-cap-cup",
+        "en-lack-luck"
+      ],
+      "pairs": [
+        {
+          "id": "en-cat-cut",
+          "words": [
+            "cat",
+            "cut"
+          ]
+        },
+        {
+          "id": "en-cap-cup",
+          "words": [
+            "cap",
+            "cup"
+          ]
+        },
+        {
+          "id": "en-lack-luck",
+          "words": [
+            "lack",
+            "luck"
+          ]
+        }
+      ]
+    },
+    {
+      "languageId": "fr",
+      "contrastId": "fr-a-an",
+      "pairIds": [
+        "fr-chat-chant",
+        "fr-rat-rang",
+        "fr-plat-plan"
+      ],
+      "pairs": [
+        {
+          "id": "fr-chat-chant",
+          "words": [
+            "chat",
+            "chant"
+          ]
+        },
+        {
+          "id": "fr-rat-rang",
+          "words": [
+            "rat",
+            "rang"
+          ]
+        },
+        {
+          "id": "fr-plat-plan",
+          "words": [
+            "plat",
+            "plan"
+          ]
+        }
+      ]
+    }
+  ],
+  "frenchCurriculumStatus": "Source-checked isolated batch3 candidate; not live curriculum at generation preflight",
+  "inputHashes": {
+    "english-legacy-batch1-audio-request.json": "cd3ca909565d45bcdc3172229159bca2820b3f5ea679930388277d8d8f0ac88a",
+    "french-legacy-batch3-audio-request.json": "c6b05fc3eb28807649c59459e920513de35468167789d858992927943c490150",
+    "french-legacy-batch3-candidates.json": "268b8670d88691292119751c270619d79b8a58805ad82b847cb2408995c425c4",
+    "curriculum.json": "cc3d926b744379a8d9e6535c8cb06ce30cd3795cd871398f40540861eb58b752"
+  },
+  "conditionalPairs": [
+    {
+      "pairId": "en-version-virgin",
+      "requiredReadings": [
+        "ˈvɝʒən",
+        "ˈvɝdʒən"
+      ],
+      "reviewFailureAction": "Exclude failed clips from assessed trials; two independent medial pairs remain available if this pair cannot be recorded consistently."
+    }
+  ],
+  "targetIPAMechanism": "Target IPA is an annotation and review target; only the unchanged orthographic word is supplied to Base synthesis."
+}

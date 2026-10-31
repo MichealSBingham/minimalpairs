@@ -1,0 +1,232 @@
+{
+  "created": "2026-10-04",
+  "paid_spend_usd": 0,
+  "budget_usd": 100,
+  "contrast": {
+    "clean": {
+      "n": 24,
+      "ranking_correct": 23,
+      "gated_n": 16,
+      "gated_wrong": 0,
+      "coverage": 0.6666666666666666,
+      "accepted_error_wilson95": [
+        0,
+        0.19361341827271994
+      ]
+    },
+    "snr20": {
+      "n": 24,
+      "ranking_correct": 23,
+      "gated_n": 11,
+      "gated_wrong": 0,
+      "coverage": 0.4583333333333333,
+      "accepted_error_wilson95": [
+        2.7755575615628914e-17,
+        0.2588400172488141
+      ]
+    }
+  },
+  "by_language": {
+    "French": {
+      "n": 12,
+      "ranking_correct": 11,
+      "gated_n": 6,
+      "gated_wrong": 0,
+      "coverage": 0.5,
+      "accepted_error_wilson95": [
+        0,
+        0.3903430336530645
+      ]
+    },
+    "English": {
+      "n": 12,
+      "ranking_correct": 12,
+      "gated_n": 10,
+      "gated_wrong": 0,
+      "coverage": 0.8333333333333334,
+      "accepted_error_wilson95": [
+        0,
+        0.2775401687666166
+      ]
+    }
+  },
+  "controls": {
+    "n": 28,
+    "withheld": 28
+  },
+  "learner": {
+    "n": 80,
+    "speakers": 40,
+    "sentence_similarity_pearson": 0.3663258542919391,
+    "speaker_bootstrap_95ci": [
+      0.23614507797169082,
+      0.5036803632473223
+    ],
+    "phone_counts": {
+      "tp": 24,
+      "fp": 504,
+      "tn": 973,
+      "fn": 1,
+      "middle": 60,
+      "insertions": 98
+    },
+    "phone_error_precision": 0.045454545454545456,
+    "phone_error_recall": 0.96,
+    "phone_false_correction_rate": 0.3412322274881517,
+    "latency_p50_s": 0.2515,
+    "latency_p95_s": 0.3902499999999999,
+    "limitations": "Small fixed test sample; naive diagnostic mapping/alignment, not a trained assessor. No tuning on results. One L1, read English. Not independent of unknown upstream training overlap."
+  },
+  "formants": {
+    "5000": {
+      "all": {
+        "n": 1655,
+        "accepted": 1655,
+        "coverage": 1.0,
+        "f1_mae": 20.555871398328456,
+        "f2_mae": 225.83814896376123,
+        "f1_p95": 68.97483664463262,
+        "f2_p95": 1287.8505757353184
+      },
+      "m": {
+        "n": 539,
+        "accepted": 539,
+        "coverage": 1.0,
+        "f1_mae": 10.179538607628905,
+        "f2_mae": 38.87526991809994,
+        "f1_p95": 24.14376170241837,
+        "f2_p95": 98.94979381417676
+      },
+      "w": {
+        "n": 572,
+        "accepted": 572,
+        "coverage": 1.0,
+        "f1_mae": 20.23531921470745,
+        "f2_mae": 258.0016299770996,
+        "f1_p95": 55.0446444810405,
+        "f2_p95": 1285.024300181143
+      },
+      "b": {
+        "n": 317,
+        "accepted": 317,
+        "coverage": 1.0,
+        "f1_mae": 23.12934547272085,
+        "f2_mae": 290.68093174112937,
+        "f1_p95": 91.49926826724815,
+        "f2_p95": 1471.2319899415081
+      },
+      "g": {
+        "n": 227,
+        "accepted": 227,
+        "coverage": 1.0,
+        "f1_mae": 42.40788876236319,
+        "f2_mae": 498.1743539221588,
+        "f1_p95": 199.2818611327525,
+        "f2_p95": 1694.4232688230256
+      }
+    },
+    "5500": {
+      "all": {
+        "n": 1655,
+        "accepted": 1655,
+        "coverage": 1.0,
+        "f1_mae": 17.18843822370388,
+        "f2_mae": 79.77692895144352,
+        "f1_p95": 52.50050370993267,
+        "f2_p95": 311.8460486257998
+      },
+      "m": {
+        "n": 539,
+        "accepted": 539,
+        "coverage": 1.0,
+        "f1_mae": 14.775825205818451,
+        "f2_mae": 41.58980616329269,
+        "f1_p95": 41.95856034379699,
+        "f2_p95": 121.22834841760015
+      },
+      "w": {
+        "n": 572,
+        "accepted": 572,
+        "coverage": 1.0,
+        "f1_mae": 14.81895566336889,
+        "f2_mae": 64.13407349919301,
+        "f1_p95": 42.98582781617264,
+        "f2_p95": 218.4253470251929
+      },
+      "b": {
+        "n": 317,
+        "accepted": 317,
+        "coverage": 1.0,
+        "f1_mae": 17.20968822466452,
+        "f2_mae": 79.37647213004516,
+        "f1_p95": 59.03076240651971,
+        "f2_p95": 300.0358282571357
+      },
+      "g": {
+        "n": 227,
+        "accepted": 227,
+        "coverage": 1.0,
+        "f1_mae": 28.85806902038816,
+        "f2_mae": 210.42678495974246,
+        "f1_p95": 120.63554495380261,
+        "f2_p95": 1204.4505790846565
+      }
+    },
+    "consensus": {
+      "all": {
+        "n": 1655,
+        "accepted": 1308,
+        "coverage": 0.7903323262839879,
+        "f1_mae": 13.698014532628378,
+        "f2_mae": 49.42101146771327,
+        "f1_p95": 38.158864453196344,
+        "f2_p95": 122.58552905824847
+      },
+      "m": {
+        "n": 539,
+        "accepted": 526,
+        "coverage": 0.9758812615955473,
+        "f1_mae": 11.20170646785103,
+        "f2_mae": 29.330205221617184,
+        "f1_p95": 30.814353367191842,
+        "f2_p95": 81.51960956520657
+      },
+      "w": {
+        "n": 572,
+        "accepted": 430,
+        "coverage": 0.7517482517482518,
+        "f1_mae": 13.813905152843786,
+        "f2_mae": 48.72069318534086,
+        "f1_p95": 40.84365583917759,
+        "f2_p95": 123.04925267221071
+      },
+      "b": {
+        "n": 317,
+        "accepted": 224,
+        "coverage": 0.7066246056782335,
+        "f1_mae": 16.67897726796527,
+        "f2_mae": 49.62051982078035,
+        "f1_p95": 49.679142666106955,
+        "f2_p95": 138.09388645689663
+      },
+      "g": {
+        "n": 227,
+        "accepted": 128,
+        "coverage": 0.5638766519823789,
+        "f1_mae": 18.35027564719711,
+        "f2_mae": 133.98516049724182,
+        "f1_p95": 66.84383507427896,
+        "f2_p95": 846.9071846713863
+      }
+    }
+  },
+  "decision": "No-go for automatic correctness grading. Go for private evidence/replay prototype and dedicated scorer comparison. No regional accent classifier trained.",
+  "limitations": [
+    "Word-label metadata is not a phonetic correctness label.",
+    "24 recordings are only four speakers; Wilson intervals assume independent trials and are optimistic here.",
+    "80 learner utterances contain only 25 clearly incorrect aligned reference phones under the stated label threshold.",
+    "Raw two-choice ranking is not open-set recognition.",
+    "SNR20 uses the same recordings, not new independent observations.",
+    "No live microphone or learning-outcome validation."
+  ]
+}

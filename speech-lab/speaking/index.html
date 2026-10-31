@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Live vowel view · MinimalPairs</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header><a class="brand" href="/">minimalpairs<span>speaking lab</span></a><span class="local"><i></i> On this Mac</span></header>
+<main>
+  <div class="intro"><div><p class="eyebrow">FROM LISTENING TO SPEAKING</p><h1>Make the difference.</h1><p>Watch your vowel move as you speak. Then compare a recorded word.</p></div><span class="stage">Early speaking experiment</span></div>
+  <div class="workspace">
+    <section class="practice card" aria-labelledby="practice-title">
+      <p class="eyebrow">RECORD A WORD · OPTIONAL</p><h2 id="practice-title">Pick your word.</h2>
+      <div class="word-choice" role="group" aria-label="Word to practise"><button data-word="ship" aria-pressed="true" disabled>ship<span>/ɪ/</span></button><button data-word="sheep" aria-pressed="false" disabled>sheep<span>/i/</span></button></div>
+      <div class="reference-row"><button id="listen" class="text-button" disabled><span aria-hidden="true">▷</span> Hear <span id="listen-word">ship</span></button><label class="sr-only" for="speaker">Example speaker</label><select id="speaker" aria-label="Example speaker" disabled></select></div>
+      <div class="record-area">
+        <div id="mic-orb" class="mic-orb" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="12" y="4" width="8" height="15" rx="4"/><path d="M8 14v2a8 8 0 0 0 16 0v-2M16 24v5M11 29h10"/></svg></div>
+        <h3 id="cue">Say “ship”.</h3><p id="capture-tip">One natural word. No need to stretch the vowel.</p>
+        <div class="level" aria-label="Microphone level"><span id="level-fill"></span></div><p id="timer" class="timer">A brief quiet check comes first</p>
+        <button id="record" class="primary" disabled>Record ship</button>
+        <label class="upload">or choose a short recording<input id="upload" type="file" accept="audio/*" disabled></label>
+      </div>
+      <p id="status" role="status" aria-live="polite">Connecting to the local measurement engine…</p>
+      <button id="demo" class="example-button" disabled>Try it with example audio <span aria-hidden="true">↗</span></button>
+      <p class="privacy">Live audio stays in your browser. Word recordings go only to this local Mac and remain replayable in the tab until you leave or clear it.</p>
+    </section>
+    <section class="comparison card" aria-labelledby="comparison-title">
+      <div class="section-head"><div><p class="eyebrow">LIVE VOWEL EXPLORER</p><h2 id="comparison-title">See your voice.</h2></div><span id="count" class="count">No attempts yet</span></div>
+      <p class="live-instruction">Start the live view. Hold the vowel in <strong>ship</strong> (“ih”), then <strong>sheep</strong> (“ee”). Watch where your own sounds land.</p>
+      <div class="map-wrap"><svg id="map" viewBox="0 0 650 360" role="img" aria-labelledby="map-title map-desc"><title id="map-title">Vowel sound map</title><desc id="map-desc">A comparison of measured vowel resonances. Higher F2 is to the left; higher F1 is lower on the chart. Positions are not correctness scores.</desc></svg></div>
+      <div class="live-controls">
+        <button id="live-toggle" class="primary" disabled>Start live view</button>
+        <div class="live-meter"><div class="level"><span id="live-level"></span></div><span id="input-status">Microphone is off</span></div>
+        <p id="live-status" role="status" aria-live="polite">Live estimates are approximate. No quiet check. No audio saved.</p>
+        <details class="input-details"><summary>Microphone &amp; troubleshooting</summary>
+          <label for="device">Input</label><select id="device"><option value="">System default</option></select>
+          <p id="device-info">Your microphone name appears after you allow access.</p>
+          <p>If the meter moves but the dot does not, the sound is unclear to the tracker. Try a held vowel, a closer microphone or a quieter room. Other voices and device processing can mislead it.</p>
+          <button id="diagnostics" class="text-button">Save diagnostics (no audio)</button>
+        </details>
+      </div>
+      <div class="map-caption"><span><i class="dot"></i> Saved attempts · Blue: live</span><span id="map-scope">Compare your own voice</span></div>
+      <div class="feedback" id="feedback"><p class="eyebrow">START WITH YOUR EARS</p><h3>Listen, then make it yours.</h3><p>The blue dot follows a short window of sound and disappears when the tracker loses it. Use the separate word recorder for replay and a slower measurement.</p></div>
+      <p class="limits">This map shows sound measurements, not tongue position or a right/wrong grade. Noise and audio processing can still mislead it.</p>
+    </section>
+  </div>
+  <section class="attempts-section" aria-labelledby="attempt-title"><div class="section-head"><div><p class="eyebrow">YOUR SESSION</p><h2 id="attempt-title">Listen to the difference.</h2></div><div class="actions"><button id="export" class="text-button" disabled>Export measurements</button><button id="clear" class="text-button" disabled>Clear session</button></div></div><p id="empty-history" class="empty-history">Your recordings and replay controls will appear here. Nothing is saved automatically.</p><div id="attempts" class="attempts"></div></section>
+  <details class="about"><summary>How to read the map</summary><div class="explanation"><p>Each point describes a short, central part of the recorded sound. The chart uses two vowel resonances, F1 and F2. Points closer together have more similar measurements, but that alone cannot tell us whether the word was pronounced correctly.</p><p>Compare your own attempts using the same microphone. Example recordings are labelled separately: another speaker naturally has a different vowel space. The displayed word is the prompt you selected, not a word the system detected.</p><p>If the measurements disagree, no point is shown for that attempt. The background check helps reject noisy microphone recordings; uploaded files and examples do not have that check. Some processed or noisy audio can still pass.</p><p>Recording asks the browser to turn off echo cancellation, noise suppression and automatic gain. Devices may still process audio. The blue live dot uses a faster, less reliable tracker than the after-recording measurement. It does not classify the sound as ship or sheep. Live practice pauses after one minute or when the page is hidden.</p></div></details>
+  <details class="about"><summary>Example recordings & credits</summary><div id="credits" class="explanation"></div></details>
+  <footer><span>MinimalPairs · Speaking research</span><span>Local experiment · Stage 1</span></footer>
+</main><script type="module" src="/app.js"></script>
+</body></html>

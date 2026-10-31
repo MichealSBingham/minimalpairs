@@ -1,0 +1,301 @@
+{
+  "checkedAt": "2026-09-28T21:50:28.034996+00:00",
+  "selected": [
+    {
+      "word": "in",
+      "voiceId": "human-de-jeuwre",
+      "creator": "Jeuwre",
+      "sourceTitle": "File:De-in2.ogg",
+      "sourcePageRevision": 892151272,
+      "sourcePageRevisionTimestamp": "2024-07-04T19:47:54Z",
+      "sourceSha1": "082830b9f658e506df7fb12658d5a90649633695",
+      "sourceBytes": 15032,
+      "originalUploadTimestamp": "2021-02-19T08:03:09Z",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "exactWordEvidence": {
+        "kind": "Explicit file transcription field",
+        "text": "in",
+        "sourceLine": "|transcription = in"
+      },
+      "dictionaryIPA": "ɪn",
+      "dictionaryRevision": 10613734,
+      "nativeDialectEvidenceStatus": "source-declares-native-German-from-Berlin",
+      "phoneticListeningVerified": false
+    },
+    {
+      "word": "ihn",
+      "voiceId": "human-de-jeuwre",
+      "creator": "Jeuwre",
+      "sourceTitle": "File:De-ihn2.ogg",
+      "sourcePageRevision": 892143712,
+      "sourcePageRevisionTimestamp": "2024-07-04T19:22:23Z",
+      "sourceSha1": "b12f0668167b2541b6d680b506318a7f624681cb",
+      "sourceBytes": 14985,
+      "originalUploadTimestamp": "2023-09-11T09:42:50Z",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "exactWordEvidence": {
+        "kind": "Explicit file transcription field",
+        "text": "ihn",
+        "sourceLine": "|transcription = ihn"
+      },
+      "dictionaryIPA": "iːn",
+      "dictionaryRevision": 10709714,
+      "nativeDialectEvidenceStatus": "source-declares-native-German-from-Berlin",
+      "phoneticListeningVerified": false
+    },
+    {
+      "word": "im",
+      "voiceId": "human-de-jeuwre",
+      "creator": "Jeuwre",
+      "sourceTitle": "File:De-im2.ogg",
+      "sourcePageRevision": 892146050,
+      "sourcePageRevisionTimestamp": "2024-07-04T19:30:01Z",
+      "sourceSha1": "abd611c125220c2d382ec27eecdce0ceff482406",
+      "sourceBytes": 15965,
+      "originalUploadTimestamp": "2020-08-28T12:09:03Z",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "exactWordEvidence": {
+        "kind": "Literal word in exact file description",
+        "text": "im",
+        "description": "Pronunciation recording of German contraction \"im\", IPA: /ɪm/. Male voice, recorded by native German speaker from Berlin, Germany."
+      },
+      "dictionaryIPA": "ɪm",
+      "dictionaryRevision": 10616357,
+      "nativeDialectEvidenceStatus": "source-declares-native-German-from-Berlin",
+      "phoneticListeningVerified": false
+    },
+    {
+      "word": "ihm",
+      "voiceId": "human-de-jeuwre",
+      "creator": "Jeuwre",
+      "sourceTitle": "File:De-ihm2.ogg",
+      "sourcePageRevision": 892143699,
+      "sourcePageRevisionTimestamp": "2024-07-04T19:22:21Z",
+      "sourceSha1": "7f99ac670229310b9cd81c8db94bb3a5e8d76395",
+      "sourceBytes": 14356,
+      "originalUploadTimestamp": "2023-09-11T09:44:04Z",
+      "license": "CC-BY-SA-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "exactWordEvidence": {
+        "kind": "Explicit file transcription field",
+        "text": "ihm",
+        "sourceLine": "|transcription = ihm"
+      },
+      "dictionaryIPA": "iːm",
+      "dictionaryRevision": 10102014,
+      "nativeDialectEvidenceStatus": "source-declares-native-German-from-Berlin",
+      "phoneticListeningVerified": false
+    },
+    {
+      "word": "in",
+      "voiceId": "human-de-joni",
+      "creator": "joni",
+      "sourceTitle": "File:De-in.ogg",
+      "sourcePageRevision": 892151265,
+      "sourcePageRevisionTimestamp": "2024-07-04T19:47:53Z",
+      "sourceSha1": "e3b627d55c68799397ec6d40a04eb595d7b13107",
+      "sourceBytes": 9872,
+      "originalUploadTimestamp": "2004-12-03T17:22:42Z",
+      "license": "CC-BY-SA-3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "exactWordEvidence": {
+        "kind": "German dictionary exact-word audio link plus exact file German pronunciation category sort key and own-work creator credit",
+        "text": "in",
+        "dictionaryTitle": "in",
+        "dictionaryRevisionId": 10613734,
+        "sourceCategoryLines": [
+          "[[Category:German pronunciation of prepositions|in]]"
+        ]
+      },
+      "dictionaryIPA": "ɪn",
+      "dictionaryRevision": 10613734,
+      "nativeDialectEvidenceStatus": "native-and-regional-status-unestablished",
+      "phoneticListeningVerified": false
+    },
+    {
+      "word": "ihn",
+      "voiceId": "human-de-joni",
+      "creator": "joni",
+      "sourceTitle": "File:De-ihn.ogg",
+      "sourcePageRevision": 892143708,
+      "sourcePageRevisionTimestamp": "2024-07-04T19:22:22Z",
+      "sourceSha1": "ac1881dd3ed5638f7cdaee74db88f4e08f6fc8a5",
+      "sourceBytes": 11114,
+      "originalUploadTimestamp": "2004-12-06T16:47:44Z",
+      "license": "CC-BY-SA-3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "exactWordEvidence": {
+        "kind": "German dictionary exact-word audio link plus exact file German pronunciation category sort key and own-work creator credit",
+        "text": "ihn",
+        "dictionaryTitle": "ihn",
+        "dictionaryRevisionId": 10709714,
+        "sourceCategoryLines": [
+          "[[Category:German pronunciation of pronouns|ihn]]"
+        ]
+      },
+      "dictionaryIPA": "iːn",
+      "dictionaryRevision": 10709714,
+      "nativeDialectEvidenceStatus": "native-and-regional-status-unestablished",
+      "phoneticListeningVerified": false
+    },
+    {
+      "word": "im",
+      "voiceId": "human-de-joni",
+      "creator": "joni",
+      "sourceTitle": "File:De-im.ogg",
+      "sourcePageRevision": 892146048,
+      "sourcePageRevisionTimestamp": "2024-07-04T19:30:00Z",
+      "sourceSha1": "be9ce72bf62de44a7188d666009f87459dde6c1b",
+      "sourceBytes": 9972,
+      "originalUploadTimestamp": "2004-12-03T17:22:29Z",
+      "license": "CC-BY-SA-3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "exactWordEvidence": {
+        "kind": "German dictionary exact-word audio link plus exact file German pronunciation category sort key and own-work creator credit",
+        "text": "im",
+        "dictionaryTitle": "im",
+        "dictionaryRevisionId": 10616357,
+        "sourceCategoryLines": [
+          "[[Category:German pronunciation of contractions|im]]"
+        ]
+      },
+      "dictionaryIPA": "ɪm",
+      "dictionaryRevision": 10616357,
+      "nativeDialectEvidenceStatus": "native-and-regional-status-unestablished",
+      "phoneticListeningVerified": false
+    },
+    {
+      "word": "ihm",
+      "voiceId": "human-de-joni",
+      "creator": "joni",
+      "sourceTitle": "File:De-ihm.ogg",
+      "sourcePageRevision": 892143694,
+      "sourcePageRevisionTimestamp": "2024-07-04T19:22:20Z",
+      "sourceSha1": "dc84fa491bbe181a2a11d1c25262cc7864712101",
+      "sourceBytes": 10022,
+      "originalUploadTimestamp": "2004-12-06T16:47:11Z",
+      "license": "CC-BY-SA-3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "exactWordEvidence": {
+        "kind": "German dictionary exact-word audio link plus exact file German pronunciation category sort key and own-work creator credit",
+        "text": "ihm",
+        "dictionaryTitle": "ihm",
+        "dictionaryRevisionId": 10102014,
+        "sourceCategoryLines": [
+          "[[Category:German pronunciation of pronouns|ihm]]"
+        ]
+      },
+      "dictionaryIPA": "iːm",
+      "dictionaryRevision": 10102014,
+      "nativeDialectEvidenceStatus": "native-and-regional-status-unestablished",
+      "phoneticListeningVerified": false
+    }
+  ],
+  "currentPairCoverageGaps": [
+    {
+      "contrastId": "de-u-ue",
+      "completeContributor": "Jeuwre",
+      "nearestPartialProfiles": [
+        {
+          "name": "Dinock90",
+          "present": [
+            "wurde",
+            "würde",
+            "Mutter"
+          ],
+          "missing": [
+            "musste",
+            "müsste",
+            "Mütter"
+          ]
+        },
+        {
+          "name": "Natschoba",
+          "present": [
+            "musste",
+            "wurde",
+            "Mütter"
+          ],
+          "missing": [
+            "müsste",
+            "würde",
+            "Mutter"
+          ]
+        }
+      ],
+      "decisiveGap": "No second exact isolated müsste found; phrase recordings do not count. Natschoba die Mutter is not Mutter.",
+      "prefixEvidence": "sources/prefix-müsste.json"
+    },
+    {
+      "contrastId": "de-i-length",
+      "completeContributor": "Jeuwre",
+      "nearestPartialProfiles": [
+        {
+          "name": "Sebastian Wallroth",
+          "present": [
+            "Mitte",
+            "Miete",
+            "Schiff"
+          ],
+          "missing": [
+            "bitten",
+            "bieten",
+            "schief"
+          ]
+        },
+        {
+          "name": "Natschoba",
+          "present": [
+            "bitten",
+            "schief"
+          ],
+          "missing": [
+            "bieten",
+            "Mitte",
+            "Miete",
+            "Schiff"
+          ]
+        }
+      ],
+      "decisiveGap": "No second exact isolated bieten found. All three checked historical versions of De-bieten are uploaded by Jeuwre.",
+      "prefixEvidence": "sources/prefix-bieten.json"
+    },
+    {
+      "contrastId": "de-s-z",
+      "completeContributor": "Jeuwre",
+      "decisiveGap": "No second exact Muße found in focused audio/prefix search.",
+      "prefixEvidence": "sources/prefix-Muße.json"
+    },
+    {
+      "contrastId": "de-o-oe",
+      "completeContributor": "Jeuwre",
+      "decisiveGap": "No second exact Rohre found in focused audio/prefix search. Broad rote search capped at 100 of 114 results; not claimed exhaustive.",
+      "prefixEvidence": "sources/prefix-Rohre.json"
+    }
+  ],
+  "alternatePairDecision": {
+    "acceptedTwoPairs": [
+      "in/ihn",
+      "im/ihm"
+    ],
+    "contributors": [
+      "Jeuwre",
+      "joni"
+    ],
+    "thirdPairMissing": "ihnen/innen: both contributors have ihnen; only Jeuwre innen was located. No numbered De-innen alternate in complete prefix listing.",
+    "otherCandidateGaps": {
+      "Lied/litt": "Jeuwre both; Lingua Libre Lied credited to Sebastian Wallroth, litt to Natschoba; not one shared second contributor.",
+      "Stil/still": "Jeuwre both; no exact Lingua Libre Stil found. De-Stil uses /ʃt/ while De-Stil2 uses /st/; only /ʃt/ version aligns with still."
+    },
+    "dictionaryEvidence": [
+      "sources/alternate-pair-dictionary-map.json",
+      "sources/ihnen-innen-dictionary-map.json"
+    ],
+    "preservedMinimumDecision": "Root explicitly authorized a complete two-pair/eight-file optional collection after the three-pair search failed."
+  },
+  "searchLimit": "Focused current-pair searches plus four suggested alternate pairs and one targeted third-pair candidate. Absence is limited to checked sources, not all possible recordings.",
+  "mainCurriculumEdited": false
+}

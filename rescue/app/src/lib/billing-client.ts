@@ -125,3 +125,11 @@ export async function getRecoveryOffer(uid:string):Promise<{eligible:boolean;exp
  if(result?.eligible !== true || typeof result.expiresAt !== 'number' || !Number.isSafeInteger(result.expiresAt) || result.amount !== 1450 || result.originalAmount !== 2900)throw unavailable();
  return {eligible:true,expiresAt:result.expiresAt};
 }
+
+export async function getMarketPrice(): Promise<{country:string;tier:string;lifetime:number;monthly:number;version:string}> {
+ const origin=apiOrigin(); if(!origin)throw unavailable();
+ const r=await fetch(origin+'/billing/market',{credentials:'omit',cache:'no-store',signal:AbortSignal.timeout(8000)});
+ if(!r.ok)throw unavailable(); const q=await r.json();
+ if(![1450,1900,2900].includes(q.lifetime)||q.monthly!==700||!['value','middle','standard'].includes(q.tier)||! /^[A-Z]{2}$/.test(q.country))throw unavailable();
+ return q;
+}

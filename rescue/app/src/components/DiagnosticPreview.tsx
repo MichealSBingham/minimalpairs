@@ -5,13 +5,14 @@ import {diagnosticShortCopy} from '../lib/diagnostic-short-copy';
 import {diagnosticReportCopy} from '../lib/diagnostic-report-copy';
 import {diagnosticExamplePair,diagnosticPhonemeLabel} from '../lib/diagnostic-report';
 import './DiagnosticPreview.css';
-type Props={language:Language;locale?:Locale;nativeLanguage?:string};
+type Props={language:Language;locale?:Locale;nativeLanguage?:string;compact?:boolean};
 /** Static illustration, deliberately separate from stored personal results. */
-export default function DiagnosticPreview({language,locale='en',nativeLanguage}:Props) {
+export default function DiagnosticPreview({language,locale='en',nativeLanguage,compact=false}:Props) {
   const t=diagnosticShortCopy(locale),copy=diagnosticReportCopy(locale);
-  const contrasts=selectDiagnosticContrasts(language.contrasts,language.id,nativeLanguage);
+  const contrasts=selectDiagnosticContrasts(language.contrasts,language.id,nativeLanguage).slice(0,compact?3:6);
   const sampleCorrect=[2,1,0,2,1,1],total=contrasts.length*2,correct=contrasts.reduce((sum,_,i)=>sum+sampleCorrect[i%sampleCorrect.length],0);
   const percent=total?Math.round(correct/total*100):0;
+  const example=contrasts[1]&&diagnosticExamplePair(contrasts[1]);
   return <figure className="diagnostic-preview" aria-label={t.chartLabel}>
     <figcaption><span className="diagnostic-preview-label">{t.sampleLabel}</span><h2>{t.previewTitle}</h2></figcaption>
     <div className="diagnostic-preview-overview"><div className="diagnostic-preview-donut" role="img" aria-label={`${copy.example}: ${correct}/${total} ${copy.matches}`} style={{background:`conic-gradient(#537361 ${percent}%, #e7e1d5 0)`}}><div><strong>{correct}<span>/{total}</span></strong><span>{percent}%</span></div></div><p>{t.previewBody}</p></div>
@@ -19,5 +20,6 @@ export default function DiagnosticPreview({language,locale='en',nativeLanguage}:
       const count=sampleCorrect[index%sampleCorrect.length],pair=diagnosticExamplePair(contrast);
       return <li key={contrast.id}><span className="diagnostic-preview-sound"><strong lang={language.locale}>{pair?.words.map(word=>word.text.normalize('NFC')).join(' / ')||contrast.label}</strong><span className="ipa-text">{diagnosticPhonemeLabel(contrast.phonemes)}</span></span><span className="diagnostic-preview-track" aria-hidden="true"><span style={{width:`${count/2*100}%`}}/></span><span className="diagnostic-preview-value">{count}/2<span className="diagnostic-preview-sr"> {copy.matches}</span></span></li>;
     })}</ul>
+    {compact&&example&&<div className="diagnostic-preview-example"><span className="diagnostic-preview-label">{copy.example}</span><dl>{[{label:copy.heard,word:example.words[1]},{label:copy.chosen,word:example.words[0]},{label:copy.correctMatch,word:example.words[1]}].map((cell,i)=><div key={i}><dt>{cell.label}</dt><dd><strong lang={language.locale}>{cell.word.text}</strong><span className="ipa-text">{cell.word.ipa}</span></dd></div>)}</dl></div>}
   </figure>;
 }

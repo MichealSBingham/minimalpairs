@@ -33,3 +33,4 @@ test('signup attribution is minimized, saved, exported and not overwritten by du
  assert.deepEqual((await r.json()).subscribers[0].attribution,clean);
  assert.equal(validateSubscription({...body,attribution:{source:'person@example.com',signup_page:'/secret/123'}}).attribution,undefined);
 });
+test('recovery experiment reporting is private and defaults inactive',async()=>{const {service}=setup();assert.equal((await service.fetch(new Request('https://test.invalid/admin/status'))).status,401);const r=await service.fetch(new Request('https://test.invalid/admin/status',{headers:{Authorization:'Bearer test-admin'}}));const data=await r.json();assert.equal(data.recoveryExperiment.enrollmentEnabled,false);assert.equal(data.recoveryExperiment.refundsAvailable,false);assert.equal(data.recoveryExperiment.arms.standard.matureAssigned,0);});

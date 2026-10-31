@@ -1,0 +1,73 @@
+{
+  "batchcomplete": "",
+  "query": {
+    "searchinfo": {
+      "totalhits": 7
+    },
+    "search": [
+      {
+        "ns": 6,
+        "title": "File:LL-Q150 (fra)-VictorDtmtc-lésion.wav",
+        "pageid": 100022884,
+        "size": 93,
+        "wordcount": 140,
+        "snippet": "(fra)-VictorDtmtc-<span class=\"searchmatch\">lésion</span>.wav Audio pronunciation file from the Lingua Libre project. Language InfoField French Transcription InfoField <span class=\"searchmatch\">lésion</span> Date 18 February",
+        "timestamp": "2024-07-22T02:54:48Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:LL-Q1321 (spa)-Emanuelps27-lesión.wav",
+        "pageid": 149795565,
+        "size": 90,
+        "wordcount": 109,
+        "snippet": "(spa)-Emanuelps27-<span class=\"searchmatch\">lesión</span>.wav Audio pronunciation file from the Lingua Libre project. Language InfoField Spanish Transcription InfoField <span class=\"searchmatch\">lesión</span> Date 28 June",
+        "timestamp": "2026-06-20T09:22:07Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:LL-Q117707514 (oci-whistled)-Univòc64-lesion.wav",
+        "pageid": 163522874,
+        "size": 324,
+        "wordcount": 7,
+        "snippet": "<span class=\"searchmatch\">lesion</span>.wav Audio pronunciation file from the Lingua Libre project. Language InfoField Occitan whistled from Aas Transcription InfoField <span class=\"searchmatch\">lesion</span> Date",
+        "timestamp": "2025-11-26T00:56:23Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:LL-Q150 (fra)-LoquaxFR-lésion.wav",
+        "pageid": 85728877,
+        "size": 93,
+        "wordcount": 134,
+        "snippet": "(fra)-LoquaxFR-<span class=\"searchmatch\">lésion</span>.wav Audio pronunciation file from the Lingua Libre project. Language InfoField French Transcription InfoField <span class=\"searchmatch\">lésion</span> Date 8 January",
+        "timestamp": "2023-05-02T11:35:40Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:LL-Q150 (fra)-Vaulque-lésion de jet.wav",
+        "pageid": 167455009,
+        "size": 323,
+        "wordcount": 129,
+        "snippet": "(fra)-Vaulque-<span class=\"searchmatch\">lésion</span> de jet.wav Audio pronunciation file from the Lingua Libre project. Language InfoField French Transcription InfoField <span class=\"searchmatch\">lésion</span> de jet Date",
+        "timestamp": "2025-10-03T10:52:52Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:LL-Q14185 (oci)-Davidgrosclaude-lesion.wav",
+        "pageid": 71004308,
+        "size": 93,
+        "wordcount": 134,
+        "snippet": "(oci)-Davidgrosclaude-<span class=\"searchmatch\">lesion</span>.wav Audio pronunciation file from the Lingua Libre project. Language InfoField Occitan Transcription InfoField <span class=\"searchmatch\">lesion</span> Date 20 July",
+        "timestamp": "2024-07-17T20:20:44Z"
+      },
+      {
+        "ns": 6,
+        "title": "File:LL-Q1860 (eng)-Vealhurl-lesion.wav",
+        "pageid": 110547296,
+        "size": 93,
+        "wordcount": 134,
+        "snippet": "(eng)-Vealhurl-<span class=\"searchmatch\">lesion</span>.wav Audio pronunciation file from the Lingua Libre project. Language InfoField English Transcription InfoField <span class=\"searchmatch\">lesion</span> Date 29 September",
+        "timestamp": "2023-04-09T05:18:09Z"
+      }
+    ]
+  }
+}

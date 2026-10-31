@@ -1,0 +1,453 @@
+{
+  "checkedAt": "2026-09-28T20:38:27.516739+00:00",
+  "requestFile": "rescue/content/english-legacy-batch1-audio-request.json",
+  "scope": "17 exact forms across three requested English contrasts; no substitutions or phrase cropping",
+  "matrix": [
+    {
+      "contrastId": "en-zh-j",
+      "requestedPairs": [
+        [
+          "lesion",
+          "legion"
+        ],
+        [
+          "pleasure",
+          "pledger"
+        ],
+        [
+          "version",
+          "virgin"
+        ]
+      ],
+      "requestedWords": [
+        "legion",
+        "lesion",
+        "pleasure",
+        "pledger",
+        "version",
+        "virgin"
+      ],
+      "contributors": [
+        {
+          "name": "Grendelkhan",
+          "sourceIdentifiedWords": [
+            "pleasure",
+            "version",
+            "virgin"
+          ],
+          "missingWordsInBoundedSearch": [
+            "legion",
+            "lesion",
+            "pledger"
+          ],
+          "completeWordCoverage": false
+        },
+        {
+          "name": "Wodencafe",
+          "sourceIdentifiedWords": [
+            "pleasure"
+          ],
+          "missingWordsInBoundedSearch": [
+            "legion",
+            "lesion",
+            "pledger",
+            "version",
+            "virgin"
+          ],
+          "completeWordCoverage": false
+        },
+        {
+          "name": "Vealhurl",
+          "sourceIdentifiedWords": [
+            "legion",
+            "lesion"
+          ],
+          "missingWordsInBoundedSearch": [
+            "pleasure",
+            "pledger",
+            "version",
+            "virgin"
+          ],
+          "completeWordCoverage": false
+        },
+        {
+          "name": "Dvortygirl",
+          "sourceIdentifiedWords": [
+            "pleasure",
+            "version",
+            "virgin"
+          ],
+          "missingWordsInBoundedSearch": [
+            "legion",
+            "lesion",
+            "pledger"
+          ],
+          "completeWordCoverage": false
+        }
+      ]
+    },
+    {
+      "contrastId": "en-foot-strut",
+      "requestedPairs": [
+        [
+          "put",
+          "putt"
+        ],
+        [
+          "look",
+          "luck"
+        ],
+        [
+          "book",
+          "buck"
+        ]
+      ],
+      "requestedWords": [
+        "book",
+        "buck",
+        "look",
+        "luck",
+        "put",
+        "putt"
+      ],
+      "contributors": [
+        {
+          "name": "Grendelkhan",
+          "sourceIdentifiedWords": [
+            "book",
+            "buck",
+            "look",
+            "luck",
+            "put"
+          ],
+          "missingWordsInBoundedSearch": [
+            "putt"
+          ],
+          "completeWordCoverage": false
+        },
+        {
+          "name": "Wodencafe",
+          "sourceIdentifiedWords": [
+            "book",
+            "look",
+            "luck",
+            "put",
+            "putt"
+          ],
+          "missingWordsInBoundedSearch": [
+            "buck"
+          ],
+          "completeWordCoverage": false
+        },
+        {
+          "name": "Vealhurl",
+          "sourceIdentifiedWords": [
+            "look"
+          ],
+          "missingWordsInBoundedSearch": [
+            "book",
+            "buck",
+            "luck",
+            "put",
+            "putt"
+          ],
+          "completeWordCoverage": false
+        },
+        {
+          "name": "Dvortygirl",
+          "sourceIdentifiedWords": [
+            "book",
+            "luck",
+            "put"
+          ],
+          "missingWordsInBoundedSearch": [
+            "buck",
+            "look",
+            "putt"
+          ],
+          "completeWordCoverage": false
+        }
+      ]
+    },
+    {
+      "contrastId": "en-ae-strut",
+      "requestedPairs": [
+        [
+          "cat",
+          "cut"
+        ],
+        [
+          "cap",
+          "cup"
+        ],
+        [
+          "lack",
+          "luck"
+        ]
+      ],
+      "requestedWords": [
+        "cap",
+        "cat",
+        "cup",
+        "cut",
+        "lack",
+        "luck"
+      ],
+      "contributors": [
+        {
+          "name": "Grendelkhan",
+          "sourceIdentifiedWords": [
+            "cap",
+            "cat",
+            "cup",
+            "cut",
+            "lack",
+            "luck"
+          ],
+          "missingWordsInBoundedSearch": [],
+          "completeWordCoverage": true
+        },
+        {
+          "name": "Wodencafe",
+          "sourceIdentifiedWords": [
+            "cat",
+            "cup",
+            "cut",
+            "luck"
+          ],
+          "missingWordsInBoundedSearch": [
+            "cap",
+            "lack"
+          ],
+          "completeWordCoverage": false
+        },
+        {
+          "name": "Vealhurl",
+          "sourceIdentifiedWords": [
+            "cup",
+            "cut",
+            "lack"
+          ],
+          "missingWordsInBoundedSearch": [
+            "cap",
+            "cat",
+            "luck"
+          ],
+          "completeWordCoverage": false
+        },
+        {
+          "name": "Dvortygirl",
+          "sourceIdentifiedWords": [
+            "cap",
+            "cat",
+            "cup",
+            "cut",
+            "lack",
+            "luck"
+          ],
+          "missingWordsInBoundedSearch": [],
+          "completeWordCoverage": true
+        }
+      ]
+    }
+  ],
+  "boundedLinguaLibreQueries": {
+    "lesion": {
+      "totalHits": 1,
+      "retrieved": 1,
+      "limit": 100
+    },
+    "legion": {
+      "totalHits": 1,
+      "retrieved": 1,
+      "limit": 100
+    },
+    "pleasure": {
+      "totalHits": 7,
+      "retrieved": 7,
+      "limit": 100
+    },
+    "pledger": {
+      "totalHits": 0,
+      "retrieved": 0,
+      "limit": 100
+    },
+    "version": {
+      "totalHits": 2,
+      "retrieved": 2,
+      "limit": 100
+    },
+    "virgin": {
+      "totalHits": 2,
+      "retrieved": 2,
+      "limit": 100
+    },
+    "put": {
+      "totalHits": 11,
+      "retrieved": 11,
+      "limit": 100
+    },
+    "putt": {
+      "totalHits": 1,
+      "retrieved": 1,
+      "limit": 100
+    },
+    "look": {
+      "totalHits": 11,
+      "retrieved": 11,
+      "limit": 100
+    },
+    "luck": {
+      "totalHits": 6,
+      "retrieved": 6,
+      "limit": 100
+    },
+    "book": {
+      "totalHits": 26,
+      "retrieved": 26,
+      "limit": 100
+    },
+    "buck": {
+      "totalHits": 3,
+      "retrieved": 3,
+      "limit": 100
+    },
+    "cat": {
+      "totalHits": 27,
+      "retrieved": 27,
+      "limit": 100
+    },
+    "cut": {
+      "totalHits": 24,
+      "retrieved": 24,
+      "limit": 100
+    },
+    "cap": {
+      "totalHits": 17,
+      "retrieved": 17,
+      "limit": 100
+    },
+    "cup": {
+      "totalHits": 18,
+      "retrieved": 18,
+      "limit": 100
+    },
+    "lack": {
+      "totalHits": 2,
+      "retrieved": 2,
+      "limit": 100
+    }
+  },
+  "broaderAudioQueries": {
+    "pledger": {
+      "totalHits": 0,
+      "retrieved": 0
+    },
+    "putt": {
+      "totalHits": 6,
+      "retrieved": 6
+    },
+    "buck": {
+      "totalHits": 40,
+      "retrieved": 40
+    },
+    "look": {
+      "totalHits": 103,
+      "retrieved": 100
+    },
+    "lesion": {
+      "totalHits": 7,
+      "retrieved": 7
+    }
+  },
+  "sourcePhoneticContext": [
+    {
+      "word": "version",
+      "url": "https://en.wiktionary.org/w/index.php?title=version&oldid=92757418",
+      "revisionId": 92757418,
+      "relevantDeclarations": [
+        "* {{IPA|en|/ˈvɝʒən/|a=GA}}",
+        "** {{audio|en|en-us-version.ogg|a=US}}"
+      ],
+      "audioListeningPerformed": false
+    },
+    {
+      "word": "virgin",
+      "url": "https://en.wiktionary.org/w/index.php?title=virgin&oldid=92505318",
+      "revisionId": 92505318,
+      "relevantDeclarations": [
+        "* {{IPA|en|/ˈvɝd͡ʒɪn/|a=GA}}",
+        "** {{audio|en|en-us-virgin.ogg|a=US}}"
+      ],
+      "audioListeningPerformed": false
+    }
+  ],
+  "holds": [
+    {
+      "word": "virgin",
+      "file": "File:En-us-virgin.ogg",
+      "reason": "The source places the US audio beneath GA /ˈvɝd͡ʒɪn/, not the required /ˈvɝdʒən/. Do not mark it a matching stimulus without a contrary listening review. It was not acquired or included."
+    },
+    {
+      "word": "pledger",
+      "reason": "No exact Lingua Libre hit; broader Commons audio search returned zero; Wiktionary entry contains no audio declaration. This is bounded search evidence, not proof no recording exists anywhere."
+    },
+    {
+      "word": "putt",
+      "file": "File:En-us-putt from the rough.oga",
+      "reason": "Source explicitly identifies an entire phrase. It was not downloaded, cropped or relabeled as an isolated putt."
+    },
+    {
+      "words": [
+        "lesion",
+        "legion"
+      ],
+      "speaker": "Vealhurl",
+      "reason": "Exact Wiktionary audio references label the recordings Southern England; no matched two-speaker General American set was located."
+    },
+    {
+      "word": "look",
+      "files": [
+        "File:En-us-look (2).ogg",
+        "File:En-us-look (3).ogg"
+      ],
+      "reason": "Alternate US files exist, but they do not complete either selected contributor profile; no substitution into Dvortygirl or Grendelkhan identity."
+    }
+  ],
+  "dialectEvidence": {
+    "Dvortygirl": "US in exact Commons file descriptions; relevant Wiktionary files labeled GA or US; native English self-declaration. Acoustic suitability not verified.",
+    "Grendelkhan": "Native English self-declaration on Commons; English Q1860 and credited contributor in exact files. No regional-accent declaration established.",
+    "Wodencafe": "Exact files identify English and contributor; reviewed public profiles do not establish native or regional accent.",
+    "Vealhurl": "The consulted Wiktionary entries label relevant files Southern England. This is source evidence, not a new listening judgment."
+  },
+  "selectedAcquisition": {
+    "contrastId": "en-ae-strut",
+    "pairs": [
+      [
+        "cat",
+        "cut"
+      ],
+      [
+        "cap",
+        "cup"
+      ],
+      [
+        "lack",
+        "luck"
+      ]
+    ],
+    "contributors": [
+      "Grendelkhan",
+      "Dvortygirl"
+    ],
+    "plannedClips": 12,
+    "completeSourceWordCoverage": true,
+    "generalAmericanEvidenceCompleteForBothProfiles": false
+  },
+  "limitations": [
+    "Source-identified word coverage is not phonetic approval.",
+    "The sources do not establish identical recording conditions within a credited speaker.",
+    "Searches were bounded; look broader search had 103 total hits and retained the first100. Other exact Lingua Libre word queries were below the100 result cap.",
+    "No humans were contacted, no paid services used, no human voice cloned, no app/default manifest modified."
+  ]
+}
