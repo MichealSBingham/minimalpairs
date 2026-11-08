@@ -35,3 +35,13 @@
 /rescue/migration/
 /rescue/qa/*
 !/rescue/qa/legacy-sitemap-paths.json
+
+# Private operating records and customer-support incident material
+/rescue/company/**/*.md
+/rescue/company/**/*.json
+/rescue/company/**/*.jsonl
+/rescue/company/**/*.html
+/rescue/company/**/*.txt
+/rescue/company/**/*.csv
+/rescue/company/**/*.tsv
+/rescue/company/checkout-incident-*/
