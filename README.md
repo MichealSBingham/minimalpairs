@@ -23,7 +23,9 @@ Deployment is manual. This repository has no automatic production publishing or 
 `node scripts/deploy-preview.mjs --production --build-only` builds and audits the production release without publishing.
 The same command without `--build-only` publishes; use only after the domain, authentication and billing configuration are ready.
 
-The initial GitHub commit is a clean source snapshot. Earlier local Git history remains on the owner's Mac and was not uploaded.
+## Development history
+
+MinimalPairs rescue development began September 28, 2026. The current GitHub branch began October 4 from the rebuilt application. The earlier development branch contains 33 commits from September 28 through October 1 and is archived separately.
 
 ## License
 
