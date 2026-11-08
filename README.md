@@ -20,9 +20,6 @@ Run `npm test` and `npm run check` for application checks.
 `node scripts/deploy-preview.mjs --production --build-only` builds and audits the production release without publishing.
 The same command without `--build-only` publishes; use only after the domain, authentication and billing configuration are ready.
 
-## Development history
-
-MinimalPairs rescue development began September 28, 2026. The current GitHub branch began October 4 from the rebuilt application. The earlier development branch contains 33 commits from September 28 through October 1 and is archived separately.
 
 ## License
 
